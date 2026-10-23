@@ -1,77 +1,54 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Hong Kong Film Award for Best Actress: The Hong Kong Film Award for Best Actress is an award presented annually at the Hong Kong Film Awards (HKFA).  It is given to honour an actress who has delivered an outstanding performance in a Hong Kong film.  The 1st Hong Kong Film Awards ceremony was held in 1982, with no formal nomination procedure established; the award was given to Kara Hui for her role in "My Young Auntie".  After the first award ceremony, a nomination system was put in place whereby no more than five nominations are made for each category and each entry is selected through two rounds of voting.  Firstly, prospective nominees are marked with a weight of 50% each from HKFA voters and a hundred professional adjudicators, contributing towards a final score with which the top five nominees advance to the second round of voting.  The winner is then selected via a scoring process where 55% of the vote comes from 55 professional adjudicators, 25% from representatives of the Hong Kong Performing Artistes Guild and 20% from all other HKFA Executive Committee Members.
-
-Hong Kong Film Award for Best Art Direction: The Hong Kong Film Award for Best Art Direction is an award presented annually at the Hong Kong Film Awards for the best art direction in a Hong Kong film.  As of 2016 the current winners are William Chang and Alfred Yau for "Office".
-
-Always Be the Winners: Always Be the Winners is a 1994 Hong Kong comedy film directed by Jacky Pang and starring Tony Leung Chiu-Wai, Tony Leung Ka-fai, Eric Tsang, Sandra Ng, Ekin Cheng and Charine Chan.  The film was released during the Chinese New Year period of 1994 to celebrate the holidays.
-
-To Be Number One (film): To Be Number One () is a 1991 Hong Kong crime film directed by Poon Man-kit, and produced by Stephen Shiu.  The film is based on the rise and fall of a real life gangster Ng Sek-ho (), who is portrayed in the film by Ray Lui.  "To Be Number One" was a critical and box office success, grossing HK$38,703,363 at the Hong Kong box office and winning the Hong Kong Film Award for Best Film at the 11th Hong Kong Film Awards.
-
-Hong Kong Film Award for Best Director: The Hong Kong Film Award for Best Director is an award presented annually at the Hong Kong Film Awards (HKFA).  It is given to honour the best director of a Hong Kong film.  The 1st Hong Kong Film Awards ceremony was held in 1982, with no formal nomination procedure established; the award was given to Allen Fong for his direction of "Father and Son."  After the first award ceremony, a nomination system was put in place whereby no more than five nominations are made for each category and each entry is selected through two rounds of voting.  Firstly, prospective nominees are marked with a weight of 50% each from HKFA voters and a hundred professional adjudicators, contributing towards a final score with which the top five nominees advance to the second round of voting.  The winner is then selected via a scoring process where 55% of the vote comes from 55 professional adjudicators, 25% from representatives of the Hong Kong Film Directors' Guild and 20% from all other HKFA Executive Committee Members.
-
-Hong Kong Film Award for Best Editing: The Hong Kong Film Award for Best Editing is an award presented annually at the Hong Kong Film Awards for best editing in a Hong Kong film.  As of 2016 the current holder is Nick Cheung for "Ip Man 3".
-
-Tony Leung Ka-fai: Tony Leung Ka-fai (; born 1 February 1958) is a Hong Kong actor who is a four-time winner of the Hong Kong Film Award.
-
-Nick Cheung: Nick Cheung Ka-fai (; born 2 December 1964) is a Hong Kong actor.  He is a former Royal Hong Kong Police officer for four years, but he left the job after his request to be transferred to the criminal investigation department was turned down.  He then worked for Danny Lee's film production company.  His film debut is ""Thank you, Sir!"" , as a student at the Royal Hong Kong Cadet School.  From 1989 to 1994, he worked at the television station ATV World.  Later, he left ATV and joined another station, TVB.  He left TVB in 2004, and worked mainly on films.  His fame was built on Wong Jing's comedy at first, but he has changed his acting style for more sombre roles since 2003.  He was nominated for his first Hong Kong film award in 1999, and won his first award in 2009 for his role in "Beast Stalker".  He has been nominated many times at the Hong Kong Film Awards and other Chinese film awards since then.
-
-92 Legendary La Rose Noire: 92 Legendary La Rose Noire is a 1992 Hong Kong comedy film written and directed by Jeffrey Lau and starring Tony Leung, Maggie Shiu, Teresa Mo, Wong Wan-sze and Fung Bo Bo.  The film was nominated for eight awards at the 12th Hong Kong Film Awards, where Leung won his second Hong Kong Film Award for Best Actor and Fung won her first Hong Kong Film Award for Best Supporting Actress.  "92 Legendary La Rose Noire" was ranked number 75 of the Best 100 Chinese Motion Pictures at the 24th Hong Kong Film Awards.  The film was followed two sequels, one released in 1993 titled "Rose Rose I Love You", where Leung reprises his role but features a new storyline, and another released in 1997 confusingly titled "Black Rose II", also featuring a new storyline and different cast.
-
-21st Hong Kong Film Awards: Ceremony for the 21st Hong Kong Film Awards was held on 21 April 2002 in the Hong Kong Cultural Centre and hosted by Eric Tsang, Cecilia Yip, Jacqueline Pang and Cheung Tat-Ming.  Twenty-three winners in eighteen categories were unveiled.  The year's biggest winner was "Shaolin Soccer", winning six awards in total.  Its director and leading actor Stephen Chow clinched Best Director and a long-awaited Best Actor title after being nominated for the award seven times since 1991.  The 21st Hong Kong Film Awards also saw the establishment of the Best Asian Film category, open to all non-Hong Kong films commercially released in Hong Kong within the previous calendar year.  The first winner for this category is the Japanese animated feature "Spirited Away".
-
-Question: How many times did one of the actors of Always Be The Winners win the Hong Kong Film Award?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film being referenced."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "actors_with_awards": {
-      "type": "array",
-      "description": "List of actors from the film who have won Hong Kong Film Awards, along with their award count.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "actor_name": {
-            "type": "string",
-            "description": "The name of the actor."
+    {
+      "role": "user",
+      "content": "Context:\nHong Kong Film Award for Best Actress: The Hong Kong Film Award for Best Actress is an award presented annually at the Hong Kong Film Awards (HKFA).  It is given to honour an actress who has delivered an outstanding performance in a Hong Kong film.  The 1st Hong Kong Film Awards ceremony was held in 1982, with no formal nomination procedure established; the award was given to Kara Hui for her role in \"My Young Auntie\".  After the first award ceremony, a nomination system was put in place whereby no more than five nominations are made for each category and each entry is selected through two rounds of voting.  Firstly, prospective nominees are marked with a weight of 50% each from HKFA voters and a hundred professional adjudicators, contributing towards a final score with which the top five nominees advance to the second round of voting.  The winner is then selected via a scoring process where 55% of the vote comes from 55 professional adjudicators, 25% from representatives of the Hong Kong Performing Artistes Guild and 20% from all other HKFA Executive Committee Members.\n\nHong Kong Film Award for Best Art Direction: The Hong Kong Film Award for Best Art Direction is an award presented annually at the Hong Kong Film Awards for the best art direction in a Hong Kong film.  As of 2016 the current winners are William Chang and Alfred Yau for \"Office\".\n\nAlways Be the Winners: Always Be the Winners is a 1994 Hong Kong comedy film directed by Jacky Pang and starring Tony Leung Chiu-Wai, Tony Leung Ka-fai, Eric Tsang, Sandra Ng, Ekin Cheng and Charine Chan.  The film was released during the Chinese New Year period of 1994 to celebrate the holidays.\n\nTo Be Number One (film): To Be Number One () is a 1991 Hong Kong crime film directed by Poon Man-kit, and produced by Stephen Shiu.  The film is based on the rise and fall of a real life gangster Ng Sek-ho (), who is portrayed in the film by Ray Lui.  \"To Be Number One\" was a critical and box office success, grossing HK$38,703,363 at the Hong Kong box office and winning the Hong Kong Film Award for Best Film at the 11th Hong Kong Film Awards.\n\nHong Kong Film Award for Best Director: The Hong Kong Film Award for Best Director is an award presented annually at the Hong Kong Film Awards (HKFA).  It is given to honour the best director of a Hong Kong film.  The 1st Hong Kong Film Awards ceremony was held in 1982, with no formal nomination procedure established; the award was given to Allen Fong for his direction of \"Father and Son.\"  After the first award ceremony, a nomination system was put in place whereby no more than five nominations are made for each category and each entry is selected through two rounds of voting.  Firstly, prospective nominees are marked with a weight of 50% each from HKFA voters and a hundred professional adjudicators, contributing towards a final score with which the top five nominees advance to the second round of voting.  The winner is then selected via a scoring process where 55% of the vote comes from 55 professional adjudicators, 25% from representatives of the Hong Kong Film Directors' Guild and 20% from all other HKFA Executive Committee Members.\n\nHong Kong Film Award for Best Editing: The Hong Kong Film Award for Best Editing is an award presented annually at the Hong Kong Film Awards for best editing in a Hong Kong film.  As of 2016 the current holder is Nick Cheung for \"Ip Man 3\".\n\nTony Leung Ka-fai: Tony Leung Ka-fai (; born 1 February 1958) is a Hong Kong actor who is a four-time winner of the Hong Kong Film Award.\n\nNick Cheung: Nick Cheung Ka-fai (; born 2 December 1964) is a Hong Kong actor.  He is a former Royal Hong Kong Police officer for four years, but he left the job after his request to be transferred to the criminal investigation department was turned down.  He then worked for Danny Lee's film production company.  His film debut is \"\"Thank you, Sir!\"\" , as a student at the Royal Hong Kong Cadet School.  From 1989 to 1994, he worked at the television station ATV World.  Later, he left ATV and joined another station, TVB.  He left TVB in 2004, and worked mainly on films.  His fame was built on Wong Jing's comedy at first, but he has changed his acting style for more sombre roles since 2003.  He was nominated for his first Hong Kong film award in 1999, and won his first award in 2009 for his role in \"Beast Stalker\".  He has been nominated many times at the Hong Kong Film Awards and other Chinese film awards since then.\n\n92 Legendary La Rose Noire: 92 Legendary La Rose Noire is a 1992 Hong Kong comedy film written and directed by Jeffrey Lau and starring Tony Leung, Maggie Shiu, Teresa Mo, Wong Wan-sze and Fung Bo Bo.  The film was nominated for eight awards at the 12th Hong Kong Film Awards, where Leung won his second Hong Kong Film Award for Best Actor and Fung won her first Hong Kong Film Award for Best Supporting Actress.  \"92 Legendary La Rose Noire\" was ranked number 75 of the Best 100 Chinese Motion Pictures at the 24th Hong Kong Film Awards.  The film was followed two sequels, one released in 1993 titled \"Rose Rose I Love You\", where Leung reprises his role but features a new storyline, and another released in 1997 confusingly titled \"Black Rose II\", also featuring a new storyline and different cast.\n\n21st Hong Kong Film Awards: Ceremony for the 21st Hong Kong Film Awards was held on 21 April 2002 in the Hong Kong Cultural Centre and hosted by Eric Tsang, Cecilia Yip, Jacqueline Pang and Cheung Tat-Ming.  Twenty-three winners in eighteen categories were unveiled.  The year's biggest winner was \"Shaolin Soccer\", winning six awards in total.  Its director and leading actor Stephen Chow clinched Best Director and a long-awaited Best Actor title after being nominated for the award seven times since 1991.  The 21st Hong Kong Film Awards also saw the establishment of the Best Asian Film category, open to all non-Hong Kong films commercially released in Hong Kong within the previous calendar year.  The first winner for this category is the Japanese animated feature \"Spirited Away\".\n\nQuestion: How many times did one of the actors of Always Be The Winners win the Hong Kong Film Award?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film being referenced.\"\n    },\n    \"actors_with_awards\": {\n      \"type\": \"array\",\n      \"description\": \"List of actors from the film who have won Hong Kong Film Awards, along with their award count.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"actor_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the actor.\"\n          },\n          \"number_of_awards_won\": {\n            \"type\": \"integer\",\n            \"description\": \"The number of Hong Kong Film Awards won by this actor.\"\n          }\n        },\n        \"required\": [\n          \"actor_name\",\n          \"number_of_awards_won\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"total_awards_by_film_actors\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of Hong Kong Film Awards won by all actors from the specified film.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"actors_with_awards\",\n    \"total_awards_by_film_actors\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film being referenced."
+      },
+      "actors_with_awards": {
+        "type": "array",
+        "description": "List of actors from the film who have won Hong Kong Film Awards, along with their award count.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "actor_name": {
+              "type": "string",
+              "description": "The name of the actor."
+            },
+            "number_of_awards_won": {
+              "type": "integer",
+              "description": "The number of Hong Kong Film Awards won by this actor."
+            }
           },
-          "number_of_awards_won": {
-            "type": "integer",
-            "description": "The number of Hong Kong Film Awards won by this actor."
-          }
-        },
-        "required": [
-          "actor_name",
-          "number_of_awards_won"
-        ],
-        "additionalProperties": false
+          "required": [
+            "actor_name",
+            "number_of_awards_won"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "total_awards_by_film_actors": {
+        "type": "integer",
+        "description": "The total number of Hong Kong Film Awards won by all actors from the specified film."
       }
     },
-    "total_awards_by_film_actors": {
-      "type": "integer",
-      "description": "The total number of Hong Kong Film Awards won by all actors from the specified film."
-    }
+    "required": [
+      "film_title",
+      "actors_with_awards",
+      "total_awards_by_film_actors"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "film_title",
-    "actors_with_awards",
-    "total_awards_by_film_actors"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

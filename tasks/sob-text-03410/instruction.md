@@ -1,80 +1,57 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Mike Fraser (record producer): Mike Fraser is a Canadian record producer, engineer, and mixer.  Fraser has recorded and mixed five records for AC/DC, namely the releases The Razors Edge, Ballbreaker, Stiff Upper Lip, Black Ice and Rock Or Bust.  Fraser recorded and mixed the classic AC/DC anthem "Thunderstruck".
-
-Eureka (Mother Mother album): Eureka is the third album by Vancouver-based indie rock band Mother Mother.  It was produced by band member Ryan Guldemond and mixed by Mike Fraser (AC/DC, Metallica, Aerosmith, Joe Satriani).
-
-Live (Thunder album): Live is the second live album by English hard rock band Thunder, and the first released outside of Japan.  Recorded over four shows in November 1997 at Wulfrun Hall in Wolverhampton and Shepherd's Bush Empire in London, it was produced by the band's lead guitarist Luke Morley and engineered and mixed by Mike Fraser.  The album was released by Eagle Rock Entertainment on 16 February 1998.  An accompanying video was released by Eagle Vision on 28 March 1998.
-
-Backstreet Symphony: Backstreet Symphony is the debut studio album by English hard rock band Thunder.  Recorded in 1989 at Great Linford Manor Studios in Milton Keynes, it was produced by former Duran Duran and The Power Station guitarist Andy Taylor, then mixed by Mike Fraser at AIR Studios in London.  The album was initially released on 5 March 1990 by EMI Records in the UK and Capitol Records in the US, and was later re-released the following year in the US by Geffen Records.
-
-Horsehead (band): Horsehead were an Australian hard rock band which formed in late 1991 by Scott Kingman on guitar (ex-Cattletruck), Cameron McKenzie on guitar, Andy McLean on vocals (both ex-21 Guns), Mick Vallance on bass guitar (Serious Young Insects, Boom Crash Opera) and Craig Waugh on drums (Uncanny X-Men).  They toured nationally and internationally as well as supporting United States group, Metallica, on the Australian leg of their April 1998 tour.  The band issued three albums, "Horsehead" (1993), "Onism" (1996) and "Goodbye Mothership" (1999) before disbanding in 2000.  According to Australian rock music historian, Ian McFarlane, their style of "stadium rock mixed a Led Zeppelinesque bottom-end kick with gut-thumping Faith No More-styled riffs.  Nothing subtle or innovative, but everything delivered with great force and conviction".
-
-AC/DC: AC/DC are an Australian hard rock band, formed in Sydney in 1973 by brothers Malcolm and Angus Young.  A hard rock/blues rock band, they have also been considered a heavy metal band, although they have always dubbed their music simply "rock and roll".
-
-Faction Punk: Faction With Jason Ellis is an uncensored hard rock, punk, hip hop, and heavy metal music mixed channel on Siruis XM Satellite Radio.  Until mid-July 2017, Faction appeared on Sirius XM channel 41.  In mid-July 2017, Faction was temporarily replaced by Guns N Roses radio.  After August 16, 2017, channel 41 was rebranded to Turbo, Sirius XM's channel for hard rock from the 1990s and 2000s.  Faction moved to channel 314, Turbo's previous channel.  Faction is currently available on select Sirius XM radios, Sirius XM streaming, and the Sirius XM smartphone app.
-
-Behind Closed Doors (Thunder album): Behind Closed Doors is the third studio album by English hard rock band Thunder.  Recorded between May and August 1994 at various studios, primarily Southern Tracks in Atlanta, Georgia, it was produced the band's lead guitarist Luke Morley and Mike Fraser, the latter of whom also mixed the album at the Record Plant in Los Angeles, California.  The album was released on 23 January 1995 by EMI Records in Europe and Japan, and was not released in the United States.
-
-Pocket Full of Holes: Pocket Full of Holes was an album independently released in Canada on December 1, 2008, in hopes of a big follow up to the Brandon Paris Band's breakthrough album "On My Own".  On November 3, 2008, Brandon Paris Band independently released their first single, "Say Goodbye" from the album to radio.  "Say Goodbye", mixed by Mike Fraser (AC/DC; Hedley) and mastered by Adam Ayan.
-
-Noiseworks: Noiseworks are an Australian hard rock band formed in Sydney in 1986 with bass guitarist Steve Balbi, guitarist Stuart Fraser, drummer Kevin Nicol, keyboardist Justin Stanley and lead vocalist Jon Stevens.  They had four Australian Top 10 albums, "Noiseworks" (No. 6, 1987), "Touch" (No. 5, 1988), "Love Versus Money" (No. 1, 1991) and "Greatest Hits" (No. 4, 1992).  They produced three Top 10 singles, "Take Me Back", "Touch" and "Hot Chilli Woman" before disbanding in 1992.  Reunion tours occurred in 1999, 2004, 2007–2008 and 2011.
-
-Question: What Australian hard rock band had their music mixed by Mike Fraser?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "band_name": {
-      "type": "string",
-      "description": "The name of the Australian hard rock band."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "band_origin": {
-      "type": "string",
-      "description": "The country of origin of the band."
-    },
-    "genre": {
-      "type": "string",
-      "description": "The primary music genre of the band."
-    },
-    "mixer_name": {
-      "type": "string",
-      "description": "The name of the person who mixed the band's music."
-    },
-    "mixed_albums": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of album titles mixed by Mike Fraser for the band."
-    },
-    "mixed_songs": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of song titles mixed by Mike Fraser for the band."
+    {
+      "role": "user",
+      "content": "Context:\nMike Fraser (record producer): Mike Fraser is a Canadian record producer, engineer, and mixer.  Fraser has recorded and mixed five records for AC/DC, namely the releases The Razors Edge, Ballbreaker, Stiff Upper Lip, Black Ice and Rock Or Bust.  Fraser recorded and mixed the classic AC/DC anthem \"Thunderstruck\".\n\nEureka (Mother Mother album): Eureka is the third album by Vancouver-based indie rock band Mother Mother.  It was produced by band member Ryan Guldemond and mixed by Mike Fraser (AC/DC, Metallica, Aerosmith, Joe Satriani).\n\nLive (Thunder album): Live is the second live album by English hard rock band Thunder, and the first released outside of Japan.  Recorded over four shows in November 1997 at Wulfrun Hall in Wolverhampton and Shepherd's Bush Empire in London, it was produced by the band's lead guitarist Luke Morley and engineered and mixed by Mike Fraser.  The album was released by Eagle Rock Entertainment on 16 February 1998.  An accompanying video was released by Eagle Vision on 28 March 1998.\n\nBackstreet Symphony: Backstreet Symphony is the debut studio album by English hard rock band Thunder.  Recorded in 1989 at Great Linford Manor Studios in Milton Keynes, it was produced by former Duran Duran and The Power Station guitarist Andy Taylor, then mixed by Mike Fraser at AIR Studios in London.  The album was initially released on 5 March 1990 by EMI Records in the UK and Capitol Records in the US, and was later re-released the following year in the US by Geffen Records.\n\nHorsehead (band): Horsehead were an Australian hard rock band which formed in late 1991 by Scott Kingman on guitar (ex-Cattletruck), Cameron McKenzie on guitar, Andy McLean on vocals (both ex-21 Guns), Mick Vallance on bass guitar (Serious Young Insects, Boom Crash Opera) and Craig Waugh on drums (Uncanny X-Men).  They toured nationally and internationally as well as supporting United States group, Metallica, on the Australian leg of their April 1998 tour.  The band issued three albums, \"Horsehead\" (1993), \"Onism\" (1996) and \"Goodbye Mothership\" (1999) before disbanding in 2000.  According to Australian rock music historian, Ian McFarlane, their style of \"stadium rock mixed a Led Zeppelinesque bottom-end kick with gut-thumping Faith No More-styled riffs.  Nothing subtle or innovative, but everything delivered with great force and conviction\".\n\nAC/DC: AC/DC are an Australian hard rock band, formed in Sydney in 1973 by brothers Malcolm and Angus Young.  A hard rock/blues rock band, they have also been considered a heavy metal band, although they have always dubbed their music simply \"rock and roll\".\n\nFaction Punk: Faction With Jason Ellis is an uncensored hard rock, punk, hip hop, and heavy metal music mixed channel on Siruis XM Satellite Radio.  Until mid-July 2017, Faction appeared on Sirius XM channel 41.  In mid-July 2017, Faction was temporarily replaced by Guns N Roses radio.  After August 16, 2017, channel 41 was rebranded to Turbo, Sirius XM's channel for hard rock from the 1990s and 2000s.  Faction moved to channel 314, Turbo's previous channel.  Faction is currently available on select Sirius XM radios, Sirius XM streaming, and the Sirius XM smartphone app.\n\nBehind Closed Doors (Thunder album): Behind Closed Doors is the third studio album by English hard rock band Thunder.  Recorded between May and August 1994 at various studios, primarily Southern Tracks in Atlanta, Georgia, it was produced the band's lead guitarist Luke Morley and Mike Fraser, the latter of whom also mixed the album at the Record Plant in Los Angeles, California.  The album was released on 23 January 1995 by EMI Records in Europe and Japan, and was not released in the United States.\n\nPocket Full of Holes: Pocket Full of Holes was an album independently released in Canada on December 1, 2008, in hopes of a big follow up to the Brandon Paris Band's breakthrough album \"On My Own\".  On November 3, 2008, Brandon Paris Band independently released their first single, \"Say Goodbye\" from the album to radio.  \"Say Goodbye\", mixed by Mike Fraser (AC/DC; Hedley) and mastered by Adam Ayan.\n\nNoiseworks: Noiseworks are an Australian hard rock band formed in Sydney in 1986 with bass guitarist Steve Balbi, guitarist Stuart Fraser, drummer Kevin Nicol, keyboardist Justin Stanley and lead vocalist Jon Stevens.  They had four Australian Top 10 albums, \"Noiseworks\" (No. 6, 1987), \"Touch\" (No. 5, 1988), \"Love Versus Money\" (No. 1, 1991) and \"Greatest Hits\" (No. 4, 1992).  They produced three Top 10 singles, \"Take Me Back\", \"Touch\" and \"Hot Chilli Woman\" before disbanding in 1992.  Reunion tours occurred in 1999, 2004, 2007–2008 and 2011.\n\nQuestion: What Australian hard rock band had their music mixed by Mike Fraser?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Australian hard rock band.\"\n    },\n    \"band_origin\": {\n      \"type\": \"string\",\n      \"description\": \"The country of origin of the band.\"\n    },\n    \"genre\": {\n      \"type\": \"string\",\n      \"description\": \"The primary music genre of the band.\"\n    },\n    \"mixer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person who mixed the band's music.\"\n    },\n    \"mixed_albums\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of album titles mixed by Mike Fraser for the band.\"\n    },\n    \"mixed_songs\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of song titles mixed by Mike Fraser for the band.\"\n    }\n  },\n  \"required\": [\n    \"band_name\",\n    \"band_origin\",\n    \"genre\",\n    \"mixer_name\",\n    \"mixed_albums\",\n    \"mixed_songs\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "band_name",
-    "band_origin",
-    "genre",
-    "mixer_name",
-    "mixed_albums",
-    "mixed_songs"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "band_name": {
+        "type": "string",
+        "description": "The name of the Australian hard rock band."
+      },
+      "band_origin": {
+        "type": "string",
+        "description": "The country of origin of the band."
+      },
+      "genre": {
+        "type": "string",
+        "description": "The primary music genre of the band."
+      },
+      "mixer_name": {
+        "type": "string",
+        "description": "The name of the person who mixed the band's music."
+      },
+      "mixed_albums": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of album titles mixed by Mike Fraser for the band."
+      },
+      "mixed_songs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of song titles mixed by Mike Fraser for the band."
+      }
+    },
+    "required": [
+      "band_name",
+      "band_origin",
+      "genre",
+      "mixer_name",
+      "mixed_albums",
+      "mixed_songs"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

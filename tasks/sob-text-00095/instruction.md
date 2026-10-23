@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Craigslist: Craigslist (stylized as craigslist) is an American classified advertisements website with sections devoted to jobs, housing, personals, for sale, items wanted, services, community, gigs, résumés, and discussion forums.
-
-Murder of Katherine Ann Olson: Michael John Anderson (born 1988), a resident of Savage, Minnesota, was convicted of having murdered Katherine Ann Olson in October 2007.  Because Anderson met Olson through Craigslist, a popular classified advertising website, the media dubbed him a Craigslist Killer, a generic term for murderers who find victims by placing or responding to ads in Craigslist.  Anderson was the first killer given this title in news accounts.
-
-ERowz: eRowz (formerly trading as BC.Net) is a vertical search engine, with a specialisation of classified advertising in sectors such as cars, product sales and real estate.  The businesses strength is in its range of websites (e.g. for-sale. co.uk and for-sale. com), which provide niche country specific offerings for the sale of second hand goods via online classified advertising, reaching around reach around 7 million visits per month.
-
-Craigslist (song): "Craigslist" is a song and single by "Weird Al" Yankovic.  It is a style parody of The Doors, and contains lyrics inspired by postings at the online classified advertising service, Craigslist.  Yankovic described the idea of the song coming about thinking how it would be "anachronistically weird" for Jim Morrison to scream about Craigslist.  Yankovic opted to use Craigslist as an example of something big in both the popular culture and his own life, and spent time exploring its listings to compose the lyrics.  The song was released shortly after the closure of the Michael John Anderson (Craigslist Killer) case, a factor Yankovic considered "unfortunate timing".
-
-Link exchange: A link exchange is a confederation of websites that operates similarly to a web ring.  Webmasters register their web sites with a central organization, that runs the exchange, and in turn receive from the exchange HTML code which they insert into their web pages.  In contrast to a web ring, where the HTML code simply comprises simple circular ring navigation hyperlinks, in a link exchange the HTML code causes the display of banner advertisements, for the sites of other members of the exchange, on the member web sites, and webmasters have to create such banner advertisements for their own web sites.
-
-SkillSlate: SkillSlate or SkillSlate.com is a New York City-based start–up firm with the purpose of matching up individual service providers with customers via the Internet.  The firm raised $1.1 million in capital in October 2010 with investments from Canaan Partners and First Round Capital.  It helps small individual service providers, such as dog walkers, DJs, handymen, tutors and movers, market themselves on the web as well as help customers find them.  According to a website description, SkillSlate helps the pages of service providers surface more prominently in search engine results.  At present SkillSlate serves the New York metropolitan area but there are plans to roll out service nationally.  Competitors include Craigslist, Geotoko, FoundTown, Closely, Proposable, Resource Nation, Flowtown, Buzzuka, Spoke, GoBuzz, Traindom, Hooray, Thumbtack, and others, as well as classified advertising in newspapers.  According to "Fortune Magazine", the idea for the site was conceived by venture capitalist Barkek Ringwelski while working at Canaan Partners when he found he could not find a cleaning person; he raised $50,000 from family and friends in May 2009 and launched the firm.
-
-Social classifieds: Social classifieds is a form of classified advertising in the online medium on social networking websites.  Most of such advertisements are free for the use of members of the respective social network.  Various social networks such as Facebook, MySpace, Orkut and Friendster offer social classified advertisement platforms to allow private individuals to solicit sales for products and services.
-
-Backpage: Backpage is a classified advertising website launched in 2004.  It offers classified listings for a wide variety of products and services including automotive, jobs listings, and real estate.  In 2011, Backpage was the second largest classified ad listing service on the Internet in the United States after Craigslist.
-
-Link-richness: Link richness is the quality, possessed by some websites, of having many hyperlinks. Classified advertising sites like Craigslist tend to be very link-rich, sometimes with hundreds of links on their main page.  They help users find the links they are looking for by grouping links into clusters.  Inadequate link richness has been described as frustrating to readers, as it reduces transparency of site content from the main page.  Students new to wiki collaboration were found to need guidance in how to take full advantage of the medium's potential for creating link-rich content.
-
-Samsung Corby Speed: The Samsung Corby Speed is a mobile phone developed by Samsung Telecommunications. This is the Code division multiple access(CDMA) version of the popular Corby series.  The phone has direct access to many social networking sites like Facebook, Twitter, orkut and sites like picasa and photobucket.  It also allows users to access net at a speed of 2.4Mbit/s through its Open Market Handset system(OMH). The new Samsung Corby Speed complements the company’s existing touch strategy of a mobile for every lifestyle strategy.  The phone has been launched in the open market and it supports full Service (Voice + Data) across all CDMA operators OMH SIM Cards like Tata Indicom, Reliance Mobile, MTS and Virgin Mobile.
-
-Question: Link richness is the quality, possessed by some websites, of having many hyperlinks, classified advertising sites like Craigslist, of which nationality?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "website_name": {
-      "type": "string",
-      "description": "The name of the website."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "website_type": {
-      "type": "string",
-      "description": "The type of website, e.g., classified advertisements."
-    },
-    "nationality": {
-      "type": "string",
-      "description": "The nationality of the website."
-    },
-    "notable_quality": {
-      "type": "string",
-      "description": "A significant quality or characteristic of the website mentioned in the context."
+    {
+      "role": "user",
+      "content": "Context:\nCraigslist: Craigslist (stylized as craigslist) is an American classified advertisements website with sections devoted to jobs, housing, personals, for sale, items wanted, services, community, gigs, résumés, and discussion forums.\n\nMurder of Katherine Ann Olson: Michael John Anderson (born 1988), a resident of Savage, Minnesota, was convicted of having murdered Katherine Ann Olson in October 2007.  Because Anderson met Olson through Craigslist, a popular classified advertising website, the media dubbed him a Craigslist Killer, a generic term for murderers who find victims by placing or responding to ads in Craigslist.  Anderson was the first killer given this title in news accounts.\n\nERowz: eRowz (formerly trading as BC.Net) is a vertical search engine, with a specialisation of classified advertising in sectors such as cars, product sales and real estate.  The businesses strength is in its range of websites (e.g. for-sale. co.uk and for-sale. com), which provide niche country specific offerings for the sale of second hand goods via online classified advertising, reaching around reach around 7 million visits per month.\n\nCraigslist (song): \"Craigslist\" is a song and single by \"Weird Al\" Yankovic.  It is a style parody of The Doors, and contains lyrics inspired by postings at the online classified advertising service, Craigslist.  Yankovic described the idea of the song coming about thinking how it would be \"anachronistically weird\" for Jim Morrison to scream about Craigslist.  Yankovic opted to use Craigslist as an example of something big in both the popular culture and his own life, and spent time exploring its listings to compose the lyrics.  The song was released shortly after the closure of the Michael John Anderson (Craigslist Killer) case, a factor Yankovic considered \"unfortunate timing\".\n\nLink exchange: A link exchange is a confederation of websites that operates similarly to a web ring.  Webmasters register their web sites with a central organization, that runs the exchange, and in turn receive from the exchange HTML code which they insert into their web pages.  In contrast to a web ring, where the HTML code simply comprises simple circular ring navigation hyperlinks, in a link exchange the HTML code causes the display of banner advertisements, for the sites of other members of the exchange, on the member web sites, and webmasters have to create such banner advertisements for their own web sites.\n\nSkillSlate: SkillSlate or SkillSlate.com is a New York City-based start–up firm with the purpose of matching up individual service providers with customers via the Internet.  The firm raised $1.1 million in capital in October 2010 with investments from Canaan Partners and First Round Capital.  It helps small individual service providers, such as dog walkers, DJs, handymen, tutors and movers, market themselves on the web as well as help customers find them.  According to a website description, SkillSlate helps the pages of service providers surface more prominently in search engine results.  At present SkillSlate serves the New York metropolitan area but there are plans to roll out service nationally.  Competitors include Craigslist, Geotoko, FoundTown, Closely, Proposable, Resource Nation, Flowtown, Buzzuka, Spoke, GoBuzz, Traindom, Hooray, Thumbtack, and others, as well as classified advertising in newspapers.  According to \"Fortune Magazine\", the idea for the site was conceived by venture capitalist Barkek Ringwelski while working at Canaan Partners when he found he could not find a cleaning person; he raised $50,000 from family and friends in May 2009 and launched the firm.\n\nSocial classifieds: Social classifieds is a form of classified advertising in the online medium on social networking websites.  Most of such advertisements are free for the use of members of the respective social network.  Various social networks such as Facebook, MySpace, Orkut and Friendster offer social classified advertisement platforms to allow private individuals to solicit sales for products and services.\n\nBackpage: Backpage is a classified advertising website launched in 2004.  It offers classified listings for a wide variety of products and services including automotive, jobs listings, and real estate.  In 2011, Backpage was the second largest classified ad listing service on the Internet in the United States after Craigslist.\n\nLink-richness: Link richness is the quality, possessed by some websites, of having many hyperlinks. Classified advertising sites like Craigslist tend to be very link-rich, sometimes with hundreds of links on their main page.  They help users find the links they are looking for by grouping links into clusters.  Inadequate link richness has been described as frustrating to readers, as it reduces transparency of site content from the main page.  Students new to wiki collaboration were found to need guidance in how to take full advantage of the medium's potential for creating link-rich content.\n\nSamsung Corby Speed: The Samsung Corby Speed is a mobile phone developed by Samsung Telecommunications. This is the Code division multiple access(CDMA) version of the popular Corby series.  The phone has direct access to many social networking sites like Facebook, Twitter, orkut and sites like picasa and photobucket.  It also allows users to access net at a speed of 2.4Mbit/s through its Open Market Handset system(OMH). The new Samsung Corby Speed complements the company’s existing touch strategy of a mobile for every lifestyle strategy.  The phone has been launched in the open market and it supports full Service (Voice + Data) across all CDMA operators OMH SIM Cards like Tata Indicom, Reliance Mobile, MTS and Virgin Mobile.\n\nQuestion: Link richness is the quality, possessed by some websites, of having many hyperlinks, classified advertising sites like Craigslist, of which nationality?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"website_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the website.\"\n    },\n    \"website_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of website, e.g., classified advertisements.\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the website.\"\n    },\n    \"notable_quality\": {\n      \"type\": \"string\",\n      \"description\": \"A significant quality or characteristic of the website mentioned in the context.\"\n    }\n  },\n  \"required\": [\n    \"website_name\",\n    \"website_type\",\n    \"nationality\",\n    \"notable_quality\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "website_name",
-    "website_type",
-    "nationality",
-    "notable_quality"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "website_name": {
+        "type": "string",
+        "description": "The name of the website."
+      },
+      "website_type": {
+        "type": "string",
+        "description": "The type of website, e.g., classified advertisements."
+      },
+      "nationality": {
+        "type": "string",
+        "description": "The nationality of the website."
+      },
+      "notable_quality": {
+        "type": "string",
+        "description": "A significant quality or characteristic of the website mentioned in the context."
+      }
+    },
+    "required": [
+      "website_name",
+      "website_type",
+      "nationality",
+      "notable_quality"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

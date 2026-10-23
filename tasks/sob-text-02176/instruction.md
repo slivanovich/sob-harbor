@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Wish That You Were Here: "Wish That You Were Here" is a song by the English indie rock band Florence and the Machine, written by Florence Welch, Andrew Wyatt, and Emilie Haynie, and was released on Island Records on 26 August 2016.  The song was made available via digital download, and is featured on the soundtrack of the film "Miss Peregrine's Home for Peculiar Children" which was directed by Tim Burton.  Welch — a long-time fan of Burton's work — had expressed interest in collaborating with him long before the recording of "Wish That You Were Here" as they shared similar artistic themes.  Upon release, the composition was positively received by music critics and reached number 128 on the UK Singles Chart.
-
-What the Water Gave Me (song): "What the Water Gave Me" is a song by English indie rock band Florence and the Machine from their second studio album "Ceremonials" (2011).  The song was written by lead singer Florence Welch and Francis "Eg" White, and produced by Paul Epworth.  It was released on 23 August 2011 as the first promotional single from "Ceremonials".  After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website.  Welch decided to name the song "What the Water Gave Me" after seeing a Frida Kahlo painting of the same name.  During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.
-
-No Light, No Light: No Light, No Light is a song by English indie rock band Florence and the Machine from their second studio album, "Ceremonials" (2011).  The song was written by band members Florence Welch and Isabella Summers while the production was handled by Paul Epworth.  Island Records released the song as the second single from the album on 16 January 2012.  The song was the first one written for the album in the band's tour bus in Amsterdam.  Lyrically, in the song, Welch is expressing frustration about the state of her fragile relationship and she further tries to keep it together.  "No Light, No Light" received positive reviews by music critics who generally praised Welch's vocals and the drum-led instrumentation.  It was also placed on several critics' year-end lists of best singles.  The song peaked at number fifty on the UK Singles Chart, the Irish Singles Chart and number thirty nine on the US "Billboard" Alternative Songs chart.
-
-Floor Jansen: Floor Jansen (] ; born 21 February 1981 in Goirle) is a Dutch singer, songwriter, and vocal coach.  She is the lead vocalist of Finnish symphonic metal band Nightwish.
-
-Shake It Out: "Shake It Out" is a song by English indie rock band Florence and the Machine, released as the first official single from their second studio album, "Ceremonials" (2011).  It was written by Florence Welch and Paul Epworth, while production was handled by Epworth.  The song was digitally released in Australia on 14 September 2011, and it was available in the United States on 19 October.  It had its radio debut on XFM on 14 September 2011 in the United Kingdom.  Welch revealed that the song was written within an hour and according to her it talked about shaking the regrets and the things that were haunting her.
-
-Florence Welch: Florence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.
-
-Lungs (album): Lungs is the debut studio album by English indie rock band Florence and the Machine, released on 3 July 2009 on Island Records.  Frontwoman Florence Welch experimented with and honed the album's sound with bandmate Isabella Summers, while also collaborating with five record producers including James Ford, Paul Epworth, Steve Mackey.  The music on "Lungs" established Florence and the Machine as an internationally successful rock act, and also featured the group's successful mix of string arrangements centered around Welch's vocal prowess.
-
-Spectrum (Say My Name): "Spectrum" is a song by English indie rock band Florence and the Machine from their second studio album "Ceremonials" (2011).  It was written by lead singer Florence Welch and Paul Epworth with production being handled by Epworth.  The band premiered the song during a concert at Brooklyn's Creators Project on 15 October 2011, prior to the release of the album.  The album version of "Spectrum" is a downtempo orchestral pop, R&B, krautrock and disco song.  The accompanying music video for the song premiered on 30 May 2012.  It was directed by David LaChapelle and John Byrne.
-
-Ceremonials Tour: The Ceremonials Tour was the second concert tour by English indie rock band Florence and the Machine.  The tour included performances at Music festivals because it is lead singer Florence Welch's favourite way to perform live.  Welch had originally planned to spend over one year touring for "Ceremonials" (their previous tour lasted almost three and a half years) before announcing that the December 2012 dates would be the final performances of the tour.  On 25 February 2013 it was announced that Florence and the Machine would be playing at the Coke Live Music Festival in Poland on 10 August 2013, and on 26 March 2013 it was announced that the band would be playing at Chime for Change's "The Sound of Change Live" concert at London's Twickenham Stadium alongside Beyoncé, Ellie Goulding and Haim, amongst others.
-
-What Kind of Man (Florence and the Machine song): "What Kind of Man" is a song by English indie rock band Florence and the Machine from their third studio album, "How Big, How Blue, How Beautiful" (2015).  It was written by Florence Welch, Kid Harpoon and John Hill, produced by Markus Dravs and co-produced by Hill.  The song was released on 12 February 2015 as the album's lead single.  "What Kind of Man" received Grammy Award nominations for Best Rock Performance and Best Rock Song.
-
-Question: Who is best known as the vocalist of indie rock band Florence and the Machine, Florence Welch or Floor Jansen ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "vocalist_name": {
-      "type": "string",
-      "description": "The name of the person who is the vocalist of the specified band."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "band_name": {
-      "type": "string",
-      "description": "The name of the band for which the vocalist is known."
-    },
-    "other_candidate_name": {
-      "type": "string",
-      "description": "The name of the other person mentioned in the question."
-    },
-    "other_candidate_band": {
-      "type": "string",
-      "description": "The band the other candidate is known for being the vocalist of."
-    },
-    "is_correct_vocalist": {
-      "type": "boolean",
-      "description": "True if the identified vocalist is indeed the vocalist of Florence and the Machine."
+    {
+      "role": "user",
+      "content": "Context:\nWish That You Were Here: \"Wish That You Were Here\" is a song by the English indie rock band Florence and the Machine, written by Florence Welch, Andrew Wyatt, and Emilie Haynie, and was released on Island Records on 26 August 2016.  The song was made available via digital download, and is featured on the soundtrack of the film \"Miss Peregrine's Home for Peculiar Children\" which was directed by Tim Burton.  Welch — a long-time fan of Burton's work — had expressed interest in collaborating with him long before the recording of \"Wish That You Were Here\" as they shared similar artistic themes.  Upon release, the composition was positively received by music critics and reached number 128 on the UK Singles Chart.\n\nWhat the Water Gave Me (song): \"What the Water Gave Me\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).  The song was written by lead singer Florence Welch and Francis \"Eg\" White, and produced by Paul Epworth.  It was released on 23 August 2011 as the first promotional single from \"Ceremonials\".  After the band performed the song in Berkeley, California on 12 June 2011, the studio version premiered on Florence and the Machine's official website.  Welch decided to name the song \"What the Water Gave Me\" after seeing a Frida Kahlo painting of the same name.  During an interview, she confirmed that the song was inspired by English writer Virginia Woolf.\n\nNo Light, No Light: No Light, No Light is a song by English indie rock band Florence and the Machine from their second studio album, \"Ceremonials\" (2011).  The song was written by band members Florence Welch and Isabella Summers while the production was handled by Paul Epworth.  Island Records released the song as the second single from the album on 16 January 2012.  The song was the first one written for the album in the band's tour bus in Amsterdam.  Lyrically, in the song, Welch is expressing frustration about the state of her fragile relationship and she further tries to keep it together.  \"No Light, No Light\" received positive reviews by music critics who generally praised Welch's vocals and the drum-led instrumentation.  It was also placed on several critics' year-end lists of best singles.  The song peaked at number fifty on the UK Singles Chart, the Irish Singles Chart and number thirty nine on the US \"Billboard\" Alternative Songs chart.\n\nFloor Jansen: Floor Jansen (] ; born 21 February 1981 in Goirle) is a Dutch singer, songwriter, and vocal coach.  She is the lead vocalist of Finnish symphonic metal band Nightwish.\n\nShake It Out: \"Shake It Out\" is a song by English indie rock band Florence and the Machine, released as the first official single from their second studio album, \"Ceremonials\" (2011).  It was written by Florence Welch and Paul Epworth, while production was handled by Epworth.  The song was digitally released in Australia on 14 September 2011, and it was available in the United States on 19 October.  It had its radio debut on XFM on 14 September 2011 in the United Kingdom.  Welch revealed that the song was written within an hour and according to her it talked about shaking the regrets and the things that were haunting her.\n\nFlorence Welch: Florence Leontine Mary Welch (born 28 August 1986) is an English musician, singer and songwriter, best known as the vocalist of indie rock band Florence and the Machine.\n\nLungs (album): Lungs is the debut studio album by English indie rock band Florence and the Machine, released on 3 July 2009 on Island Records.  Frontwoman Florence Welch experimented with and honed the album's sound with bandmate Isabella Summers, while also collaborating with five record producers including James Ford, Paul Epworth, Steve Mackey.  The music on \"Lungs\" established Florence and the Machine as an internationally successful rock act, and also featured the group's successful mix of string arrangements centered around Welch's vocal prowess.\n\nSpectrum (Say My Name): \"Spectrum\" is a song by English indie rock band Florence and the Machine from their second studio album \"Ceremonials\" (2011).  It was written by lead singer Florence Welch and Paul Epworth with production being handled by Epworth.  The band premiered the song during a concert at Brooklyn's Creators Project on 15 October 2011, prior to the release of the album.  The album version of \"Spectrum\" is a downtempo orchestral pop, R&B, krautrock and disco song.  The accompanying music video for the song premiered on 30 May 2012.  It was directed by David LaChapelle and John Byrne.\n\nCeremonials Tour: The Ceremonials Tour was the second concert tour by English indie rock band Florence and the Machine.  The tour included performances at Music festivals because it is lead singer Florence Welch's favourite way to perform live.  Welch had originally planned to spend over one year touring for \"Ceremonials\" (their previous tour lasted almost three and a half years) before announcing that the December 2012 dates would be the final performances of the tour.  On 25 February 2013 it was announced that Florence and the Machine would be playing at the Coke Live Music Festival in Poland on 10 August 2013, and on 26 March 2013 it was announced that the band would be playing at Chime for Change's \"The Sound of Change Live\" concert at London's Twickenham Stadium alongside Beyoncé, Ellie Goulding and Haim, amongst others.\n\nWhat Kind of Man (Florence and the Machine song): \"What Kind of Man\" is a song by English indie rock band Florence and the Machine from their third studio album, \"How Big, How Blue, How Beautiful\" (2015).  It was written by Florence Welch, Kid Harpoon and John Hill, produced by Markus Dravs and co-produced by Hill.  The song was released on 12 February 2015 as the album's lead single.  \"What Kind of Man\" received Grammy Award nominations for Best Rock Performance and Best Rock Song.\n\nQuestion: Who is best known as the vocalist of indie rock band Florence and the Machine, Florence Welch or Floor Jansen ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"vocalist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person who is the vocalist of the specified band.\"\n    },\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the band for which the vocalist is known.\"\n    },\n    \"other_candidate_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the other person mentioned in the question.\"\n    },\n    \"other_candidate_band\": {\n      \"type\": \"string\",\n      \"description\": \"The band the other candidate is known for being the vocalist of.\"\n    },\n    \"is_correct_vocalist\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if the identified vocalist is indeed the vocalist of Florence and the Machine.\"\n    }\n  },\n  \"required\": [\n    \"vocalist_name\",\n    \"band_name\",\n    \"other_candidate_name\",\n    \"other_candidate_band\",\n    \"is_correct_vocalist\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "vocalist_name",
-    "band_name",
-    "other_candidate_name",
-    "other_candidate_band",
-    "is_correct_vocalist"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "vocalist_name": {
+        "type": "string",
+        "description": "The name of the person who is the vocalist of the specified band."
+      },
+      "band_name": {
+        "type": "string",
+        "description": "The name of the band for which the vocalist is known."
+      },
+      "other_candidate_name": {
+        "type": "string",
+        "description": "The name of the other person mentioned in the question."
+      },
+      "other_candidate_band": {
+        "type": "string",
+        "description": "The band the other candidate is known for being the vocalist of."
+      },
+      "is_correct_vocalist": {
+        "type": "boolean",
+        "description": "True if the identified vocalist is indeed the vocalist of Florence and the Machine."
+      }
+    },
+    "required": [
+      "vocalist_name",
+      "band_name",
+      "other_candidate_name",
+      "other_candidate_band",
+      "is_correct_vocalist"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

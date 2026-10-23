@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Surachai Danwattananusorn: Surachai Danwattananusorn or Surachai Saedan (born 24 December 1942 in Nakhon Si Thammarat Province) is a political activist in exile abroad, last prisoner about Communism and former committee in Thai Rak Thai Party, Nakhon Si Thammarat Province.  Now he is leader in Red Siam.
-
-Parole bond: A parole bond is a deposit of money or property made to the government as surety that a paroled prisoner will not violate the terms of his release.  The prisoner may fund the bond himself; or he may borrow from friends or family; or he may obtain the services of a bondsman, in exchange for a fee.  Part of the theory behind it is that those who are asked to put up the money or cosign the loan have an incentive to verify that the parolee does not represent an unacceptably high risk prior to helping with his release; and they have an incentive to help him stay out of trouble after his release.  The prisoner has an incentive to be on good behavior during his incarceration in order to demonstrate he has reformed and thus would not be at high risk of violating parole.  While on parole, the prisoner has an incentive not to violate the terms, lest the bond be forfeited, which would likely cause difficulties in obtaining the surety of family, friends, or bondsmen in the future.  Parole bonds are sometimes used as a way of relieving overcrowded prisons.  It is based on the very similar concept of bail bonds; and just as with bail bonds, some statutes allow the bondsman to get back all or a portion of the bond by surrendering the prisoner to the authorities.  This may require the use of bounty hunters to locate and capture him.  Organizations like the National Association of Bail Insurance Companies and the American Legislative Exchange Council (ALEC), a national bipartisan group of conservative legislators, have pressed the idea that financially secured postconviction release works far better than unsecured release.
-
-Margot Knight: Margot Knight is an Australian actress, best known for playing two roles in two highly popular television serials.  In "Prisoner", she played inmate Sharon Gilmour in 1980 and junior prison officer Terri Malone in 1985.  In "Neighbours", she played Jean Richards in 1986 and Tracey Cox in 1997.  Her "Prisoner" appearances are notable because in addition to being one of the few cast members to play both a prisoner and a prison warder in the series, both of her roles were as the lesbian love interest to the show's main lesbian character at the time.  Sharon Gilmour was the scheming girlfriend of long-term inmate Judy Bryant (Judy's long stay in prison actually began because she deliberately had herself imprisoned to be with Sharon), and Terri Malone was a young prison officer who moved in with warder Joan Ferguson.
-
-Prisoner 489: Prisoner 489 is a horror novella written by American author Joe R. Lansdale.  It tells the story of prison workers who help staff a fictional island prison where only the worst of the worst are housed.  Most are on death row scheduled to be executed in the electric chair.  In the potter's field graveyard the headstones are only marked with numbers in the order in which they were put to death.  So prisoner 489 is the four hundred and eighty-ninth to be executed.  The workers are only maintenance employees and have little contact with the inmates.  They have only heard wild rumors about prisoner 489, some quite unbelievable.  However, on the night of the execution, things go very wrong and the men find themselves to be terrorized and have to fight for their very lives.
-
-Spandau Prison: Spandau Prison was located in the borough of Spandau in western Berlin.  It was constructed in 1876 and demolished in 1987 after the death of its last prisoner, Rudolf Hess, to prevent it from becoming a neo-Nazi shrine.  The site was later rebuilt as a shopping centre for the British forces stationed in Germany.
-
-Harold Lawton: Harold Walter Lawton (27 July 1899 – 24 December 2005, Greetham, Rutland) was an English scholar of French literature and, prior to his death, one of the last surviving veterans and the last prisoner of war of World War I in Britain.
-
-Murder of Michael Donald: The murder of Michael Donald in Mobile, Alabama in 1981 was the last recorded lynching in the United States.  Several Ku Klux Klan (KKK) members beat and killed Michael Donald, a young African-American man, and hung his body from a tree.  One perpetrator, Henry Hays, was sentenced to death and executed in 1997, while another, James Knowles, was sentenced to life in prison after pleading guilty and testifying against Hays.  A third man was convicted as an accomplice, and a fourth indicted but he died before his case could be completed at trial.
-
-Prisoner support: Prisoner support encompasses a variety of activities aimed a providing assistance to prisoners, particularly political prisoners.  Many programs devoted to this purpose have quite limited resources; for instance, Nottingham Black Prisoner Support, with one staff worker, had 297 active cases in 1999.  Black Prisoner Support groups such as Partners of Prisoners have sought to establish productive working relationships with prison staff.  South Carolina's Alston Wilkes Society is the largest statewide prison support organization in the United States, with a budget of $918,000 and a staff of 50.  It operates two halfway houses, arbitrates prisoner grievances, maintains a youth home, helps ex-inmates find work, and provides social services to prisoners' families.  There are many special-interest prison support groups such as the Out of Control Lesbian Committee to Support Women in Prison.  Some political movements find it to be in their interests to provide prisoner supports; Break the Chains argues, "Any movement that does not support its political internees is a movement destined to fail.  When power is challenged, it inevitably turns to violent repression and imprisonment to maintain itself.  In order to avoid defeat, movements must become organized and capable of combating the repression of the state apparatus, and they must be able to support their comrades and allies in the event that they are arrested or imprisoned.  Few would commit themselves to a movement that would leave them behind prison walls, or a movement that is incapable of sustaining itself in the face of state intimidation."  Ratner writes that the prisoner support movement has been hampered by "particularly strong public antipathy toward offenders who would deny culpability by assigning blame to the 'system'.  This compromises the efforts of prisoner-support groups, who must rally public support in order to procure government funds.  Such groups face the dilemma of rapidly losing their own legitimacy should they draw too closely to the very offenders whom they seek to help — offenders who are not perceived by the public as victims of injustice.  Thus, many 'outside' groups are forced to shun the support of inmates who are in prison for violent offences, a serious ideological fracture of inside-outside alliances which limits the possibilities for prisoner politicization."
-
-Rudolf Hess: Rudolf Walter Richard Hess (Heß in German; 26 April 1894 – 17 August 1987), was a prominent politician in Nazi Germany.  Appointed Deputy Führer to Adolf Hitler in 1933, he served in this position until 1941, when he flew solo to Scotland in an attempt to negotiate peace with the United Kingdom during World War II.  He was taken prisoner and eventually was convicted of crimes against peace, serving a life sentence until his suicide.
-
-András Toma: András Toma (Újfehértó, Hungary, December 5, 1925 – Nyíregyháza, March 30, 2004) was a Hungarian soldier who was taken prisoner by the Red Army in 1945, then discovered living in a Russian psychiatric hospital in 2000.  He was probably the last prisoner of war from the Second World War to be repatriated.
-
-Question: What was the cause of death for the last prisoner in Spandu Prison?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "prison_name": {
-      "type": "string",
-      "description": "The name of the prison."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "last_prisoner": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the last prisoner."
-        },
-        "role_in_nazi_germany": {
-          "type": "string",
-          "description": "The political role of the prisoner in Nazi Germany."
-        }
-      },
-      "required": [
-        "name",
-        "role_in_nazi_germany"
-      ],
-      "additionalProperties": false
-    },
-    "cause_of_death": {
-      "type": "string",
-      "description": "The cause of death for the last prisoner."
-    },
-    "death_year": {
-      "type": "integer",
-      "description": "The year the last prisoner died."
+    {
+      "role": "user",
+      "content": "Context:\nSurachai Danwattananusorn: Surachai Danwattananusorn or Surachai Saedan (born 24 December 1942 in Nakhon Si Thammarat Province) is a political activist in exile abroad, last prisoner about Communism and former committee in Thai Rak Thai Party, Nakhon Si Thammarat Province.  Now he is leader in Red Siam.\n\nParole bond: A parole bond is a deposit of money or property made to the government as surety that a paroled prisoner will not violate the terms of his release.  The prisoner may fund the bond himself; or he may borrow from friends or family; or he may obtain the services of a bondsman, in exchange for a fee.  Part of the theory behind it is that those who are asked to put up the money or cosign the loan have an incentive to verify that the parolee does not represent an unacceptably high risk prior to helping with his release; and they have an incentive to help him stay out of trouble after his release.  The prisoner has an incentive to be on good behavior during his incarceration in order to demonstrate he has reformed and thus would not be at high risk of violating parole.  While on parole, the prisoner has an incentive not to violate the terms, lest the bond be forfeited, which would likely cause difficulties in obtaining the surety of family, friends, or bondsmen in the future.  Parole bonds are sometimes used as a way of relieving overcrowded prisons.  It is based on the very similar concept of bail bonds; and just as with bail bonds, some statutes allow the bondsman to get back all or a portion of the bond by surrendering the prisoner to the authorities.  This may require the use of bounty hunters to locate and capture him.  Organizations like the National Association of Bail Insurance Companies and the American Legislative Exchange Council (ALEC), a national bipartisan group of conservative legislators, have pressed the idea that financially secured postconviction release works far better than unsecured release.\n\nMargot Knight: Margot Knight is an Australian actress, best known for playing two roles in two highly popular television serials.  In \"Prisoner\", she played inmate Sharon Gilmour in 1980 and junior prison officer Terri Malone in 1985.  In \"Neighbours\", she played Jean Richards in 1986 and Tracey Cox in 1997.  Her \"Prisoner\" appearances are notable because in addition to being one of the few cast members to play both a prisoner and a prison warder in the series, both of her roles were as the lesbian love interest to the show's main lesbian character at the time.  Sharon Gilmour was the scheming girlfriend of long-term inmate Judy Bryant (Judy's long stay in prison actually began because she deliberately had herself imprisoned to be with Sharon), and Terri Malone was a young prison officer who moved in with warder Joan Ferguson.\n\nPrisoner 489: Prisoner 489 is a horror novella written by American author Joe R. Lansdale.  It tells the story of prison workers who help staff a fictional island prison where only the worst of the worst are housed.  Most are on death row scheduled to be executed in the electric chair.  In the potter's field graveyard the headstones are only marked with numbers in the order in which they were put to death.  So prisoner 489 is the four hundred and eighty-ninth to be executed.  The workers are only maintenance employees and have little contact with the inmates.  They have only heard wild rumors about prisoner 489, some quite unbelievable.  However, on the night of the execution, things go very wrong and the men find themselves to be terrorized and have to fight for their very lives.\n\nSpandau Prison: Spandau Prison was located in the borough of Spandau in western Berlin.  It was constructed in 1876 and demolished in 1987 after the death of its last prisoner, Rudolf Hess, to prevent it from becoming a neo-Nazi shrine.  The site was later rebuilt as a shopping centre for the British forces stationed in Germany.\n\nHarold Lawton: Harold Walter Lawton (27 July 1899 – 24 December 2005, Greetham, Rutland) was an English scholar of French literature and, prior to his death, one of the last surviving veterans and the last prisoner of war of World War I in Britain.\n\nMurder of Michael Donald: The murder of Michael Donald in Mobile, Alabama in 1981 was the last recorded lynching in the United States.  Several Ku Klux Klan (KKK) members beat and killed Michael Donald, a young African-American man, and hung his body from a tree.  One perpetrator, Henry Hays, was sentenced to death and executed in 1997, while another, James Knowles, was sentenced to life in prison after pleading guilty and testifying against Hays.  A third man was convicted as an accomplice, and a fourth indicted but he died before his case could be completed at trial.\n\nPrisoner support: Prisoner support encompasses a variety of activities aimed a providing assistance to prisoners, particularly political prisoners.  Many programs devoted to this purpose have quite limited resources; for instance, Nottingham Black Prisoner Support, with one staff worker, had 297 active cases in 1999.  Black Prisoner Support groups such as Partners of Prisoners have sought to establish productive working relationships with prison staff.  South Carolina's Alston Wilkes Society is the largest statewide prison support organization in the United States, with a budget of $918,000 and a staff of 50.  It operates two halfway houses, arbitrates prisoner grievances, maintains a youth home, helps ex-inmates find work, and provides social services to prisoners' families.  There are many special-interest prison support groups such as the Out of Control Lesbian Committee to Support Women in Prison.  Some political movements find it to be in their interests to provide prisoner supports; Break the Chains argues, \"Any movement that does not support its political internees is a movement destined to fail.  When power is challenged, it inevitably turns to violent repression and imprisonment to maintain itself.  In order to avoid defeat, movements must become organized and capable of combating the repression of the state apparatus, and they must be able to support their comrades and allies in the event that they are arrested or imprisoned.  Few would commit themselves to a movement that would leave them behind prison walls, or a movement that is incapable of sustaining itself in the face of state intimidation.\"  Ratner writes that the prisoner support movement has been hampered by \"particularly strong public antipathy toward offenders who would deny culpability by assigning blame to the 'system'.  This compromises the efforts of prisoner-support groups, who must rally public support in order to procure government funds.  Such groups face the dilemma of rapidly losing their own legitimacy should they draw too closely to the very offenders whom they seek to help — offenders who are not perceived by the public as victims of injustice.  Thus, many 'outside' groups are forced to shun the support of inmates who are in prison for violent offences, a serious ideological fracture of inside-outside alliances which limits the possibilities for prisoner politicization.\"\n\nRudolf Hess: Rudolf Walter Richard Hess (Heß in German; 26 April 1894 – 17 August 1987), was a prominent politician in Nazi Germany.  Appointed Deputy Führer to Adolf Hitler in 1933, he served in this position until 1941, when he flew solo to Scotland in an attempt to negotiate peace with the United Kingdom during World War II.  He was taken prisoner and eventually was convicted of crimes against peace, serving a life sentence until his suicide.\n\nAndrás Toma: András Toma (Újfehértó, Hungary, December 5, 1925 – Nyíregyháza, March 30, 2004) was a Hungarian soldier who was taken prisoner by the Red Army in 1945, then discovered living in a Russian psychiatric hospital in 2000.  He was probably the last prisoner of war from the Second World War to be repatriated.\n\nQuestion: What was the cause of death for the last prisoner in Spandu Prison?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"prison_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the prison.\"\n    },\n    \"last_prisoner\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the last prisoner.\"\n        },\n        \"role_in_nazi_germany\": {\n          \"type\": \"string\",\n          \"description\": \"The political role of the prisoner in Nazi Germany.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"role_in_nazi_germany\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"cause_of_death\": {\n      \"type\": \"string\",\n      \"description\": \"The cause of death for the last prisoner.\"\n    },\n    \"death_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the last prisoner died.\"\n    }\n  },\n  \"required\": [\n    \"prison_name\",\n    \"last_prisoner\",\n    \"cause_of_death\",\n    \"death_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "prison_name",
-    "last_prisoner",
-    "cause_of_death",
-    "death_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "prison_name": {
+        "type": "string",
+        "description": "The name of the prison."
+      },
+      "last_prisoner": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the last prisoner."
+          },
+          "role_in_nazi_germany": {
+            "type": "string",
+            "description": "The political role of the prisoner in Nazi Germany."
+          }
+        },
+        "required": [
+          "name",
+          "role_in_nazi_germany"
+        ],
+        "additionalProperties": false
+      },
+      "cause_of_death": {
+        "type": "string",
+        "description": "The cause of death for the last prisoner."
+      },
+      "death_year": {
+        "type": "integer",
+        "description": "The year the last prisoner died."
+      }
+    },
+    "required": [
+      "prison_name",
+      "last_prisoner",
+      "cause_of_death",
+      "death_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

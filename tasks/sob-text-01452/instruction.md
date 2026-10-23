@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Black Russian Terrier: The Black Russian Terrier (abbreviated as BRT), also known as the Tchiorny Terrier ("tchiorny" being Russian for black) is a breed of dog created in USSR in Red Star (Krasnaya Zvezda) Kennel during the late 1940s and the early 1950s for use as military/working dogs.  At the present time, the Black Russian Terrier is a breed recognized by the FCI (FCI's from September 1983), AKC (AKC's from July 2004), CKC, KC, ANKC, NZKC and other cynological organizations.  The contemporary Black Russian Terrier is a working dog, guarding dog, sporting and companion dog.
-
-Ameri-Indian Alaskan Husky: The Ameri-Indian Alaskan Husky is a sub-type of the Alaskan Husky, a type, or a category of dog.  This sub-type is reminiscent of the more family oriented Native American or Trap-line dogs, noted for strong family/human ties and strong, enduring body type suited to the ever-changing temperatures.  The native dogs were utilized not only as hunting dogs but as family companion/protector and beast of burden (pulling a travois or carrying like a pack animal).  The effort to return to and to improve sound bodies and minds, the Ameri-Indian type are a calmer, more focused type of Alaskan Husky.  Easier to work with and train, they are notable family dogs who adapt easily to different living environments.
-
-Airedale Terrier: The Airedale Terrier (often shortened to "Airedale"), also called Bingley Terrier and Waterside Terrier, is a dog breed of the terrier type that originated in the valley ("dale") of the River Aire, in the West Riding of Yorkshire, England.  It is traditionally called the "King of Terriers" because it is the largest of the terrier breeds.  The Airedale was bred from the Old English Black and Tan Terrier (now extinct), the Bull Terrier, the Otterhound and probably some other Terrier breeds, originally to serve as an all around working farm dog.  In Britain this breed has also been used as a war dog, guide dog and police dog.  In the United States, this breed has been used to hunt big game, upland birds, and water fowl, and serve in many other working capacities.
-
-Yorkshire Terrier: The Yorkshire Terrier is a small dog breed of terrier type, developed during the 19th century in Yorkshire, England, to catch rats in clothing mills.  The defining feature of the breed is its maximum size of 7 lb , although some may exceed this and grow up to 15 lb .  It is placed in the Toy Terrier section of the Terrier Group by the Fédération Cynologique Internationale and in the Toy Group or Companion Group by other kennel clubs, including the American Kennel Club.  A popular companion dog, the Yorkshire Terrier has also been part of the development of other breeds, such as the Australian Silky Terrier.  It has a grey, black, and tan coat, and the breed's nickname is "Yorkie".
-
-Alaskan husky: The Alaskan husky is not considered a pure breed.  It is defined only by its purpose, which is that of a highly efficient sled dog.  The husky is a blend of various Northern breeds, chosen particularly for skills such as pulling.  Specializations in type exist within the category, such as freighting dogs (Mackenzie River husky, Malamute), sprint Alaskans (Eurohound), and distance Alaskans.
-
-Australian Staghound: The Australian Staghound is a type of dog used in Australia for various kind of hunting, for example hunting for boars or kangaroo.  They are also used for rabbits if needed.  The Staghound is not regarded a race as much as a type of dog much like the Alaskan Husky, as is the case with several other native 'breeds' of Australia, and some other 'breeds' in the rest of the world.  I.e, the Staghound have not been recognized as a distinct regarded breed, nor is there efforts of trying to make it recognized as such.
-
-Tamaskan Dog: The Tamaskan dogs are a crossbreed, specifically designed by dog fanciers, beginning in Finland, to morphologically resemble a wolfdog.  It is a cross of several standardized breeds of the sled dog type like the Siberian Husky and the Alaskan Malamute, and its bloodlines may sometimes include a small amount of wolfdog stock.  s of 2013, Tamaskans have not been recognized as a breed in its own right by any major breed registries or kennel clubs, only being recognized by two minor registries, the American Rare Breed Association, and the related Kennel Club of the United States of America, and by Tamaskan-specific breeder clubs.  It is a highly versatile dog that can excel in agility, obedience and working trials.  Although there are a little over 600 Tamaskans worldwide registered in these organizations, increasing interest has resulted in their spread throughout continental Europe, the UK, United States, Canada, and Australia.
-
-Eurohound: A Eurohound (also known as a Eurodog or Scandinavian hound) is a type of dog bred for sled dog racing.  The Eurohound is typically crossbred from the Alaskan husky group and any of a number of pointing breeds ("pointers").
-
-Alaskan Klee Kai: The Alaskan Klee Kai is a spitz type breed of dog, developed in the 1970s to create a companion sized dog resembling the Alaskan Husky (a mixed breed of dog used for sled racing).  It is an energetic, intelligent, dog with an appearance that reflects its northern heritage.
-
-Moscow Water Dog: The Moscow Water Dog, also known as the Moscow Diver, Moscow Retriever or Moskovsky Vodolaz, is a little-known dog breed derived from the Newfoundland, Caucasian Shepherd Dog and East European Shepherd.  It is now extinct, but was used in the development of the  Black Russian Terrier.  The Moscow Water Dog was produced only by the Red Star Kennels, the state operated organization chartered to provide working dogs for the armed services.
-
-Question: Which dog breed is a crossbreed from the Alaskan husky group and pointing breeds: Black Russian Terrier or Eurohound?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "breed_name": {
-      "type": "string",
-      "description": "The name of the dog breed that fits the description."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "is_crossbreed": {
-      "type": "boolean",
-      "description": "Indicates if the identified breed is a crossbreed."
-    },
-    "parent_breeds_description": {
-      "type": "string",
-      "description": "A description of the parent breeds or types involved in the crossbreeding."
-    },
-    "primary_use": {
-      "type": "string",
-      "description": "The primary purpose or use of the identified breed."
+    {
+      "role": "user",
+      "content": "Context:\nBlack Russian Terrier: The Black Russian Terrier (abbreviated as BRT), also known as the Tchiorny Terrier (\"tchiorny\" being Russian for black) is a breed of dog created in USSR in Red Star (Krasnaya Zvezda) Kennel during the late 1940s and the early 1950s for use as military/working dogs.  At the present time, the Black Russian Terrier is a breed recognized by the FCI (FCI's from September 1983), AKC (AKC's from July 2004), CKC, KC, ANKC, NZKC and other cynological organizations.  The contemporary Black Russian Terrier is a working dog, guarding dog, sporting and companion dog.\n\nAmeri-Indian Alaskan Husky: The Ameri-Indian Alaskan Husky is a sub-type of the Alaskan Husky, a type, or a category of dog.  This sub-type is reminiscent of the more family oriented Native American or Trap-line dogs, noted for strong family/human ties and strong, enduring body type suited to the ever-changing temperatures.  The native dogs were utilized not only as hunting dogs but as family companion/protector and beast of burden (pulling a travois or carrying like a pack animal).  The effort to return to and to improve sound bodies and minds, the Ameri-Indian type are a calmer, more focused type of Alaskan Husky.  Easier to work with and train, they are notable family dogs who adapt easily to different living environments.\n\nAiredale Terrier: The Airedale Terrier (often shortened to \"Airedale\"), also called Bingley Terrier and Waterside Terrier, is a dog breed of the terrier type that originated in the valley (\"dale\") of the River Aire, in the West Riding of Yorkshire, England.  It is traditionally called the \"King of Terriers\" because it is the largest of the terrier breeds.  The Airedale was bred from the Old English Black and Tan Terrier (now extinct), the Bull Terrier, the Otterhound and probably some other Terrier breeds, originally to serve as an all around working farm dog.  In Britain this breed has also been used as a war dog, guide dog and police dog.  In the United States, this breed has been used to hunt big game, upland birds, and water fowl, and serve in many other working capacities.\n\nYorkshire Terrier: The Yorkshire Terrier is a small dog breed of terrier type, developed during the 19th century in Yorkshire, England, to catch rats in clothing mills.  The defining feature of the breed is its maximum size of 7 lb , although some may exceed this and grow up to 15 lb .  It is placed in the Toy Terrier section of the Terrier Group by the Fédération Cynologique Internationale and in the Toy Group or Companion Group by other kennel clubs, including the American Kennel Club.  A popular companion dog, the Yorkshire Terrier has also been part of the development of other breeds, such as the Australian Silky Terrier.  It has a grey, black, and tan coat, and the breed's nickname is \"Yorkie\".\n\nAlaskan husky: The Alaskan husky is not considered a pure breed.  It is defined only by its purpose, which is that of a highly efficient sled dog.  The husky is a blend of various Northern breeds, chosen particularly for skills such as pulling.  Specializations in type exist within the category, such as freighting dogs (Mackenzie River husky, Malamute), sprint Alaskans (Eurohound), and distance Alaskans.\n\nAustralian Staghound: The Australian Staghound is a type of dog used in Australia for various kind of hunting, for example hunting for boars or kangaroo.  They are also used for rabbits if needed.  The Staghound is not regarded a race as much as a type of dog much like the Alaskan Husky, as is the case with several other native 'breeds' of Australia, and some other 'breeds' in the rest of the world.  I.e, the Staghound have not been recognized as a distinct regarded breed, nor is there efforts of trying to make it recognized as such.\n\nTamaskan Dog: The Tamaskan dogs are a crossbreed, specifically designed by dog fanciers, beginning in Finland, to morphologically resemble a wolfdog.  It is a cross of several standardized breeds of the sled dog type like the Siberian Husky and the Alaskan Malamute, and its bloodlines may sometimes include a small amount of wolfdog stock.  s of 2013, Tamaskans have not been recognized as a breed in its own right by any major breed registries or kennel clubs, only being recognized by two minor registries, the American Rare Breed Association, and the related Kennel Club of the United States of America, and by Tamaskan-specific breeder clubs.  It is a highly versatile dog that can excel in agility, obedience and working trials.  Although there are a little over 600 Tamaskans worldwide registered in these organizations, increasing interest has resulted in their spread throughout continental Europe, the UK, United States, Canada, and Australia.\n\nEurohound: A Eurohound (also known as a Eurodog or Scandinavian hound) is a type of dog bred for sled dog racing.  The Eurohound is typically crossbred from the Alaskan husky group and any of a number of pointing breeds (\"pointers\").\n\nAlaskan Klee Kai: The Alaskan Klee Kai is a spitz type breed of dog, developed in the 1970s to create a companion sized dog resembling the Alaskan Husky (a mixed breed of dog used for sled racing).  It is an energetic, intelligent, dog with an appearance that reflects its northern heritage.\n\nMoscow Water Dog: The Moscow Water Dog, also known as the Moscow Diver, Moscow Retriever or Moskovsky Vodolaz, is a little-known dog breed derived from the Newfoundland, Caucasian Shepherd Dog and East European Shepherd.  It is now extinct, but was used in the development of the  Black Russian Terrier.  The Moscow Water Dog was produced only by the Red Star Kennels, the state operated organization chartered to provide working dogs for the armed services.\n\nQuestion: Which dog breed is a crossbreed from the Alaskan husky group and pointing breeds: Black Russian Terrier or Eurohound?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"breed_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the dog breed that fits the description.\"\n    },\n    \"is_crossbreed\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the identified breed is a crossbreed.\"\n    },\n    \"parent_breeds_description\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the parent breeds or types involved in the crossbreeding.\"\n    },\n    \"primary_use\": {\n      \"type\": \"string\",\n      \"description\": \"The primary purpose or use of the identified breed.\"\n    }\n  },\n  \"required\": [\n    \"breed_name\",\n    \"is_crossbreed\",\n    \"parent_breeds_description\",\n    \"primary_use\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "breed_name",
-    "is_crossbreed",
-    "parent_breeds_description",
-    "primary_use"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "breed_name": {
+        "type": "string",
+        "description": "The name of the dog breed that fits the description."
+      },
+      "is_crossbreed": {
+        "type": "boolean",
+        "description": "Indicates if the identified breed is a crossbreed."
+      },
+      "parent_breeds_description": {
+        "type": "string",
+        "description": "A description of the parent breeds or types involved in the crossbreeding."
+      },
+      "primary_use": {
+        "type": "string",
+        "description": "The primary purpose or use of the identified breed."
+      }
+    },
+    "required": [
+      "breed_name",
+      "is_crossbreed",
+      "parent_breeds_description",
+      "primary_use"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

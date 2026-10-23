@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Going Upriver: Going Upriver: The Long War of John Kerry is a documentary film on U.S. Senator John Kerry's military service during the Vietnam War and his subsequent participation in the peace movement.  There is significant emphasis on Kerry's famous speech before a Senate committee, historical footage from the Winter Soldier Investigations, and coverage of the Dewey Canyon III anti-war demonstrations in Washington, D.C. The majority of the film is composed of archival footage, with much of it in the original black-and-white format.
-
-Zhou Bing: Zhou Bing (simplified Chinese: 周兵; pinyin: Zhōu Bing , Zhoubing ; born 1 April 1968), famous Chinese documentary director, a PhD from History College of Nankai University, have successively served as the column scenarist and special program production manager of the program titled with “Oriental Biography” and director of special program division of CND Film Group.  Zhou Bing was titled with annual director of Chinese documentary film for three times, and the documentary films created and produced by him amounts to 100 hundred units.  His masterpieces including Palace, Dun Huang and "Road of Millenia Bodhi were" aired on CCTV, National Geographic, SKY TV, History Channel, Arte, and NDR.  Currently he establishes Beijing Oriental Elites Culture Development Co Ltd and works with Tiong Hiew King, the datuk of Tan Sri, Malaysia to setup Sun Media International Co. Ltd and Zero Media International Co. Ltd.  Zhou Bing attempted to join in the development of industrialization process of documentary films with the identity of independent directors.  Zhou Bing is also a Adjunct Professor in the Department of Media and Communication of City University of Hong Kong.  It is art dream of Mr Zhou who has been desiring to realize through images to broadcast Chinese culture and to build oriental aesthetic approach with the images recognized by the world.
-
-Tsipi Reibenbach: Tsipi (Tsipora) Reibenbach (born 1950) is an Israeli Film director, producer and screenwriter.  Most of her work consists of documentary films dealing with painful issues in the Israeli society such as The Holocaust and Bereavement.  Recipient of the Science and Arts Minister of Israel prize (1996) for directors and screenwriters.  Her film "Choice and Destiny" is one of the most decorated documentary films made by the Israeli industry, among the notable prizes the film won are the Grand Prize in the Yamagata International Documentary Film Festival 1995, two Prizes in the International Documentary Film Festival Amsterdam 1994, and the Scam award (1994) in Cinéma du Réel festival in Paris, France.  She received the DAAD scholarship in 2006 as a distinguished Israeli filmmaker.
-
-Captain America: The Winter Soldier: Captain America: The Winter Soldier is a 2014 American superhero film based on the Marvel Comics character Captain America, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.  It is the sequel to 2011's "" and the ninth film in the Marvel Cinematic Universe (MCU).  The film was directed by Anthony and Joe Russo, with a screenplay by Christopher Markus & Stephen McFeely, who had also written "The First Avenger".  It stars Chris Evans as Captain America, leading an ensemble cast that includes Scarlett Johansson, Sebastian Stan, Anthony Mackie, Cobie Smulders, Frank Grillo, Emily VanCamp, Hayley Atwell, Robert Redford, and Samuel L. Jackson.  In "Captain America: The Winter Soldier", Captain America, Black Widow, and Falcon join forces to uncover a conspiracy within S.H.I.E.L.D. while facing a mysterious assassin known as the Winter Soldier.
-
-Yair Qedar: Yair Qedar (Hebrew: יאיר קדר‎ ‎ , born June 13, 1969) is an Israeli filmmaker and a civil-rights activist.His academic training on 20th-century Hebrew literature (Tel Aviv University), propelled him into to The Hebrews — a trans media project on the Hebrew literary canon, centered on filmic portraits of the Hebrew writers.  Eight documentary films were made in this framwork and six others are currently shot.  The documentary films which he produced, wrote and directed are —"Bialik - King of the Jews", "The 5 Houses of Lea Goldberg" and "The Seven Tapes of Yona Wallach", 'the Awakener - the story of Y.H Brener' and 'Simple Woman -Zelda'— as well as the three films which he produced in the project - "Song of loves, Rabbi David Bouzaglo", "the Raven, Zeev Jabotinki" and "Mrs Rachel Bluestein" – aired on Israeli TV, circulated far and wide in cinematheques, community and cultural centers, in Israel and around the world (USA and Canada, Europe, Australia and Russia) earning 10 awards (2016: first prize for filmmaking in the field of Jewish culture by the ministry of Education in Israel, 2015: the "Hebrews" films won the prize for best television project in the Israeli Documentary competition).  The project, both digital and print, offers altogether eight documentary films, a video archive and several books.
-
-Winter Soldier (film): Winter Soldier is a 1972 documentary film chronicling the Winter Soldier Investigation which took place in Detroit, Michigan, from January 31 to February 2, 1971.  The film documents the accounts of American soldiers who returned from the War in Vietnam, and participated in this war crimes hearing.
-
-3 Generations (nonprofit): 3 Generations is a non-profit film production company that concentrates on documentary films about oppressed peoples.  Founded in 2007 by Jane I. Wells, its mission is "to support survivors of genocide and victims of crimes against humanity by helping them share their stories."  It tells these stories in the belief that it "fosters the healing process and illuminates our common humanity."  3 Generations has produced several films, most notably: "The Devil Came on Horseback", "Tricked, A Different American Dream", the short films "Native Silence", "A System of Justice, "and most recently "Lost in Lebanon" (2017), a documentary about Syrian refugees in Lebanon. "
-
-Jane I. Wells: Jane I. Wells is a documentary filmmaker and activist whose films focus on global human rights and social justice issues.  In 2007, she founded 3 Generations, a non-profit organization that uses film to document stories of witness to crimes against humanity.  She has produced over 40 short films including the award-winning shorts "I'm a Victim, Not a Criminal" (2010), "Lost Hope" (2012) and "Native Silence" (2013).  She is also a producer of the feature documentary films "The Devil Came on Horseback" (2007), "Tricked" (2013), "A Different American Dream" (2016), and "Lost in Lebanon" (2017).
-
-Winter Soldier: Iraq &amp; Afghanistan: Winter Soldier: Iraq and Afghanistan was an event at which more than 200 U.S. military veterans and active duty soldiers, as well as Iraqi and Afghan civilians, provided accounts of their experiences in Iraq and Afghanistan.  The event was inspired by the Winter Soldier Investigation of 1971.  It was organized by Iraq Veterans Against the War, and held from March 13 to March 16, 2008, timed for the fifth anniversary of the 2003 invasion of Iraq, at the National Labor College in Silver Spring, Maryland.
-
-Land of Silence and Darkness: Land of Silence and Darkness (German: Land des Schweigens und der Dunkelheit ) is a 1971 documentary film about deaf-blind people and their experience of life.  The film was written, directed, and produced by Werner Herzog.  Rolf Illig provided narration.
-
-Question: Are both Winter Soldier and Land of Silence and Darkness documentary films?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_1_name": {
-      "type": "string",
-      "description": "The name of the first film mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_1_is_documentary": {
-      "type": "boolean",
-      "description": "True if the first film is a documentary, false otherwise."
-    },
-    "film_2_name": {
-      "type": "string",
-      "description": "The name of the second film mentioned in the question."
-    },
-    "film_2_is_documentary": {
-      "type": "boolean",
-      "description": "True if the second film is a documentary, false otherwise."
-    },
-    "both_are_documentaries": {
-      "type": "boolean",
-      "description": "True if both films are documentaries, false otherwise."
+    {
+      "role": "user",
+      "content": "Context:\nGoing Upriver: Going Upriver: The Long War of John Kerry is a documentary film on U.S. Senator John Kerry's military service during the Vietnam War and his subsequent participation in the peace movement.  There is significant emphasis on Kerry's famous speech before a Senate committee, historical footage from the Winter Soldier Investigations, and coverage of the Dewey Canyon III anti-war demonstrations in Washington, D.C. The majority of the film is composed of archival footage, with much of it in the original black-and-white format.\n\nZhou Bing: Zhou Bing (simplified Chinese: 周兵; pinyin: Zhōu Bing , Zhoubing ; born 1 April 1968), famous Chinese documentary director, a PhD from History College of Nankai University, have successively served as the column scenarist and special program production manager of the program titled with “Oriental Biography” and director of special program division of CND Film Group.  Zhou Bing was titled with annual director of Chinese documentary film for three times, and the documentary films created and produced by him amounts to 100 hundred units.  His masterpieces including Palace, Dun Huang and \"Road of Millenia Bodhi were\" aired on CCTV, National Geographic, SKY TV, History Channel, Arte, and NDR.  Currently he establishes Beijing Oriental Elites Culture Development Co Ltd and works with Tiong Hiew King, the datuk of Tan Sri, Malaysia to setup Sun Media International Co. Ltd and Zero Media International Co. Ltd.  Zhou Bing attempted to join in the development of industrialization process of documentary films with the identity of independent directors.  Zhou Bing is also a Adjunct Professor in the Department of Media and Communication of City University of Hong Kong.  It is art dream of Mr Zhou who has been desiring to realize through images to broadcast Chinese culture and to build oriental aesthetic approach with the images recognized by the world.\n\nTsipi Reibenbach: Tsipi (Tsipora) Reibenbach (born 1950) is an Israeli Film director, producer and screenwriter.  Most of her work consists of documentary films dealing with painful issues in the Israeli society such as The Holocaust and Bereavement.  Recipient of the Science and Arts Minister of Israel prize (1996) for directors and screenwriters.  Her film \"Choice and Destiny\" is one of the most decorated documentary films made by the Israeli industry, among the notable prizes the film won are the Grand Prize in the Yamagata International Documentary Film Festival 1995, two Prizes in the International Documentary Film Festival Amsterdam 1994, and the Scam award (1994) in Cinéma du Réel festival in Paris, France.  She received the DAAD scholarship in 2006 as a distinguished Israeli filmmaker.\n\nCaptain America: The Winter Soldier: Captain America: The Winter Soldier is a 2014 American superhero film based on the Marvel Comics character Captain America, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.  It is the sequel to 2011's \"\" and the ninth film in the Marvel Cinematic Universe (MCU).  The film was directed by Anthony and Joe Russo, with a screenplay by Christopher Markus & Stephen McFeely, who had also written \"The First Avenger\".  It stars Chris Evans as Captain America, leading an ensemble cast that includes Scarlett Johansson, Sebastian Stan, Anthony Mackie, Cobie Smulders, Frank Grillo, Emily VanCamp, Hayley Atwell, Robert Redford, and Samuel L. Jackson.  In \"Captain America: The Winter Soldier\", Captain America, Black Widow, and Falcon join forces to uncover a conspiracy within S.H.I.E.L.D. while facing a mysterious assassin known as the Winter Soldier.\n\nYair Qedar: Yair Qedar (Hebrew: יאיר קדר‎ ‎ , born June 13, 1969) is an Israeli filmmaker and a civil-rights activist.His academic training on 20th-century Hebrew literature (Tel Aviv University), propelled him into to The Hebrews — a trans media project on the Hebrew literary canon, centered on filmic portraits of the Hebrew writers.  Eight documentary films were made in this framwork and six others are currently shot.  The documentary films which he produced, wrote and directed are —\"Bialik - King of the Jews\", \"The 5 Houses of Lea Goldberg\" and \"The Seven Tapes of Yona Wallach\", 'the Awakener - the story of Y.H Brener' and 'Simple Woman -Zelda'— as well as the three films which he produced in the project - \"Song of loves, Rabbi David Bouzaglo\", \"the Raven, Zeev Jabotinki\" and \"Mrs Rachel Bluestein\" – aired on Israeli TV, circulated far and wide in cinematheques, community and cultural centers, in Israel and around the world (USA and Canada, Europe, Australia and Russia) earning 10 awards (2016: first prize for filmmaking in the field of Jewish culture by the ministry of Education in Israel, 2015: the \"Hebrews\" films won the prize for best television project in the Israeli Documentary competition).  The project, both digital and print, offers altogether eight documentary films, a video archive and several books.\n\nWinter Soldier (film): Winter Soldier is a 1972 documentary film chronicling the Winter Soldier Investigation which took place in Detroit, Michigan, from January 31 to February 2, 1971.  The film documents the accounts of American soldiers who returned from the War in Vietnam, and participated in this war crimes hearing.\n\n3 Generations (nonprofit): 3 Generations is a non-profit film production company that concentrates on documentary films about oppressed peoples.  Founded in 2007 by Jane I. Wells, its mission is \"to support survivors of genocide and victims of crimes against humanity by helping them share their stories.\"  It tells these stories in the belief that it \"fosters the healing process and illuminates our common humanity.\"  3 Generations has produced several films, most notably: \"The Devil Came on Horseback\", \"Tricked, A Different American Dream\", the short films \"Native Silence\", \"A System of Justice, \"and most recently \"Lost in Lebanon\" (2017), a documentary about Syrian refugees in Lebanon. \"\n\nJane I. Wells: Jane I. Wells is a documentary filmmaker and activist whose films focus on global human rights and social justice issues.  In 2007, she founded 3 Generations, a non-profit organization that uses film to document stories of witness to crimes against humanity.  She has produced over 40 short films including the award-winning shorts \"I'm a Victim, Not a Criminal\" (2010), \"Lost Hope\" (2012) and \"Native Silence\" (2013).  She is also a producer of the feature documentary films \"The Devil Came on Horseback\" (2007), \"Tricked\" (2013), \"A Different American Dream\" (2016), and \"Lost in Lebanon\" (2017).\n\nWinter Soldier: Iraq &amp; Afghanistan: Winter Soldier: Iraq and Afghanistan was an event at which more than 200 U.S. military veterans and active duty soldiers, as well as Iraqi and Afghan civilians, provided accounts of their experiences in Iraq and Afghanistan.  The event was inspired by the Winter Soldier Investigation of 1971.  It was organized by Iraq Veterans Against the War, and held from March 13 to March 16, 2008, timed for the fifth anniversary of the 2003 invasion of Iraq, at the National Labor College in Silver Spring, Maryland.\n\nLand of Silence and Darkness: Land of Silence and Darkness (German: Land des Schweigens und der Dunkelheit ) is a 1971 documentary film about deaf-blind people and their experience of life.  The film was written, directed, and produced by Werner Herzog.  Rolf Illig provided narration.\n\nQuestion: Are both Winter Soldier and Land of Silence and Darkness documentary films?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_1_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the first film mentioned in the question.\"\n    },\n    \"film_1_is_documentary\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if the first film is a documentary, false otherwise.\"\n    },\n    \"film_2_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the second film mentioned in the question.\"\n    },\n    \"film_2_is_documentary\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if the second film is a documentary, false otherwise.\"\n    },\n    \"both_are_documentaries\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if both films are documentaries, false otherwise.\"\n    }\n  },\n  \"required\": [\n    \"film_1_name\",\n    \"film_1_is_documentary\",\n    \"film_2_name\",\n    \"film_2_is_documentary\",\n    \"both_are_documentaries\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_1_name",
-    "film_1_is_documentary",
-    "film_2_name",
-    "film_2_is_documentary",
-    "both_are_documentaries"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_1_name": {
+        "type": "string",
+        "description": "The name of the first film mentioned in the question."
+      },
+      "film_1_is_documentary": {
+        "type": "boolean",
+        "description": "True if the first film is a documentary, false otherwise."
+      },
+      "film_2_name": {
+        "type": "string",
+        "description": "The name of the second film mentioned in the question."
+      },
+      "film_2_is_documentary": {
+        "type": "boolean",
+        "description": "True if the second film is a documentary, false otherwise."
+      },
+      "both_are_documentaries": {
+        "type": "boolean",
+        "description": "True if both films are documentaries, false otherwise."
+      }
+    },
+    "required": [
+      "film_1_name",
+      "film_1_is_documentary",
+      "film_2_name",
+      "film_2_is_documentary",
+      "both_are_documentaries"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

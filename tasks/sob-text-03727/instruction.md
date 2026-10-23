@@ -1,72 +1,49 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Bob Mould: Robert Arthur Mould (born October 16, 1960) is an American musician, principally known for his work as guitarist, vocalist and songwriter for alternative rock bands Hüsker Dü in the 1980s and Sugar in the 1990s.
-
-Poison Years: Poison Years is a compilation album by Bob Mould, who had been the guitarist and co-vocalist of the influential American rock band Hüsker Dü.  It is essentially a condensed version of Mould's first two solo albums on Virgin Records, "Workbook" (1989) and "Black Sheets of Rain" (1990), and was released in mid-1994 after Mould had achieved considerable success with his new band Sugar.  It contains 6 (out of 11) studio tracks from "Black Sheets" and 5 (out of 11) tracks from "Workbook", of which 3 are previously unreleased live versions.  In addition, the album contains a studio outtake from the "Workbook" period, "All Those People Know", a live version of another non-album track, "If You're True", and a live cover version of "Shoot Out The Lights" from the eponymous 1982 album by Richard and Linda Thompson.
-
-Circle of Friends (Bob Mould video): Circle of Friends is a DVD by Bob Mould of a live concert recorded in 2005 at the in Washington, D.C.  The performance included songs from Mould's earlier bands Hüsker Dü and Sugar, as well as his solo work.  This particular show was part of the "Body of Song" tour, Mould's first non-solo tour for over a decade and the first one in which Hüsker Dü material was played in a band format since the band broke up in 1988.
-
-Hüsker Dü: Hüsker Dü was an American rock band formed in Saint Paul, Minnesota, in 1979.  The band's continual members were guitarist/vocalist Bob Mould, bassist Greg Norton, and drummer/vocalist Grant Hart.  Hüsker Dü first gained notability as a hardcore punk band, later crossing over into alternative rock.  Mould and Hart were the principal songwriters for Hüsker Dü, with Hart's higher-pitched vocals and Mould's baritone taking the lead in alternating songs.
-
-Copper Blue: Copper Blue is the debut studio album by American alternative rock band Sugar.  It was voted 1992 Album of the Year by the NME.  All of the songs were written by guitarist/vocalist Bob Mould, who also co-produced with Lou Giordano.  The song "The Slim" is about losing someone to AIDS.  Musically, the band continues the thick punk guitar of Mould's previous band, Hüsker Dü, while slowing the tempo and emphasizing melody even more.
-
-Warehouse: Songs and Stories: Warehouse: Songs and Stories (1987) is the sixth and final studio album by alternative rock band Hüsker Dü, originally released by Warner Bros.  Records as a double album on two vinyl LPs.  The band dissolved following the tour in support of its release, in part due to disagreements between songwriters Bob Mould and Grant Hart over the latter's drug use.  This album, along with "Candy Apple Grey", showcases the increasing maturity of Mould and Hart's writing—a change which alienated some long-time fans.  This album is also known for its battle between the two songwriters, with Mould famously telling Hart that he would never have more than half of the songs on a Hüsker Dü album.
-
-Metal Circus: Metal Circus is an EP by Hüsker Dü, released in 1983.  As one of their early records, it was largely rooted in the band's initial hardcore punk style.  However, signs of a new, poppier influence emerge on "Metal Circus", particularly in the songs sung by Grant Hart ("It's Not Funny Anymore" and "Diane").  It also features some of Bob Mould's most passionate singing and shows further development in his guitar playing.  Harmonic, chorus-type effects applied to Mould's guitar are more prominent.  The change from the furious hardcore moments of "Land Speed Record" and "Everything Falls Apart" towards increasing melodicism hints at the groundbreaking new approach that was to be seen on the band's next release, "Zen Arcade".
-
-Workbook (album): Workbook is the 1989 debut solo album by American guitarist and singer Bob Mould, following the breakup of the influential rock band Hüsker Dü.  The album has a strong folk influence and lighter overall sound than he had been known for up to that point, although heavy guitar still features occasionally.  Drummer Anton Fier and bassist Tony Maimone, both of Pere Ubu fame, served as Mould's rhythm section on the album and on the subsequent live shows.  The single "See a Little Light" was a hit on the US Modern Rock chart.
-
-Bob Mould (album): Bob Mould (sometimes referred to as Hubcap) is the third solo album by former Hüsker Dü and Sugar guitarist and singer Bob Mould.  It was recorded and mixed between September & November 1995 and released in April 1996.  Mould played all of the instruments on the album himself, and the sleeve notes declare, "This one is for me."  In the place of traditional band credits, the sleeve states, "Bob Mould is Bob Mould."
-
-Aaroh: Aaroh (Urdu: آروح, literal English translation: "the ascending scale in eastern classical music") is an alternative rock band from Karachi, Sindh, Pakistan, formed in 1998.  The band was founded by keyboardist Kamran Khan and lead guitarist Nabeel Nihal .  (This name was given to them by Shoaib Mansoor), who were joined by, Vocalist Farooq Ahmed, Bassist Khalid Khan and Drummer Adnan Hussain.
-
-Question: What kind of songs written by  Bob Mould would be used by the band, Aaroh?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "band_name": {
-      "type": "string",
-      "description": "The name of the band in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "band_genre": {
-      "type": "string",
-      "description": "The musical genre of the band."
-    },
-    "songwriter_name": {
-      "type": "string",
-      "description": "The name of the songwriter."
-    },
-    "songwriter_associated_genres": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of genres Bob Mould is known for writing in."
-    },
-    "matching_song_genre": {
-      "type": "string",
-      "description": "The genre of songs by Bob Mould that would be suitable for Aaroh."
+    {
+      "role": "user",
+      "content": "Context:\nBob Mould: Robert Arthur Mould (born October 16, 1960) is an American musician, principally known for his work as guitarist, vocalist and songwriter for alternative rock bands Hüsker Dü in the 1980s and Sugar in the 1990s.\n\nPoison Years: Poison Years is a compilation album by Bob Mould, who had been the guitarist and co-vocalist of the influential American rock band Hüsker Dü.  It is essentially a condensed version of Mould's first two solo albums on Virgin Records, \"Workbook\" (1989) and \"Black Sheets of Rain\" (1990), and was released in mid-1994 after Mould had achieved considerable success with his new band Sugar.  It contains 6 (out of 11) studio tracks from \"Black Sheets\" and 5 (out of 11) tracks from \"Workbook\", of which 3 are previously unreleased live versions.  In addition, the album contains a studio outtake from the \"Workbook\" period, \"All Those People Know\", a live version of another non-album track, \"If You're True\", and a live cover version of \"Shoot Out The Lights\" from the eponymous 1982 album by Richard and Linda Thompson.\n\nCircle of Friends (Bob Mould video): Circle of Friends is a DVD by Bob Mould of a live concert recorded in 2005 at the in Washington, D.C.  The performance included songs from Mould's earlier bands Hüsker Dü and Sugar, as well as his solo work.  This particular show was part of the \"Body of Song\" tour, Mould's first non-solo tour for over a decade and the first one in which Hüsker Dü material was played in a band format since the band broke up in 1988.\n\nHüsker Dü: Hüsker Dü was an American rock band formed in Saint Paul, Minnesota, in 1979.  The band's continual members were guitarist/vocalist Bob Mould, bassist Greg Norton, and drummer/vocalist Grant Hart.  Hüsker Dü first gained notability as a hardcore punk band, later crossing over into alternative rock.  Mould and Hart were the principal songwriters for Hüsker Dü, with Hart's higher-pitched vocals and Mould's baritone taking the lead in alternating songs.\n\nCopper Blue: Copper Blue is the debut studio album by American alternative rock band Sugar.  It was voted 1992 Album of the Year by the NME.  All of the songs were written by guitarist/vocalist Bob Mould, who also co-produced with Lou Giordano.  The song \"The Slim\" is about losing someone to AIDS.  Musically, the band continues the thick punk guitar of Mould's previous band, Hüsker Dü, while slowing the tempo and emphasizing melody even more.\n\nWarehouse: Songs and Stories: Warehouse: Songs and Stories (1987) is the sixth and final studio album by alternative rock band Hüsker Dü, originally released by Warner Bros.  Records as a double album on two vinyl LPs.  The band dissolved following the tour in support of its release, in part due to disagreements between songwriters Bob Mould and Grant Hart over the latter's drug use.  This album, along with \"Candy Apple Grey\", showcases the increasing maturity of Mould and Hart's writing—a change which alienated some long-time fans.  This album is also known for its battle between the two songwriters, with Mould famously telling Hart that he would never have more than half of the songs on a Hüsker Dü album.\n\nMetal Circus: Metal Circus is an EP by Hüsker Dü, released in 1983.  As one of their early records, it was largely rooted in the band's initial hardcore punk style.  However, signs of a new, poppier influence emerge on \"Metal Circus\", particularly in the songs sung by Grant Hart (\"It's Not Funny Anymore\" and \"Diane\").  It also features some of Bob Mould's most passionate singing and shows further development in his guitar playing.  Harmonic, chorus-type effects applied to Mould's guitar are more prominent.  The change from the furious hardcore moments of \"Land Speed Record\" and \"Everything Falls Apart\" towards increasing melodicism hints at the groundbreaking new approach that was to be seen on the band's next release, \"Zen Arcade\".\n\nWorkbook (album): Workbook is the 1989 debut solo album by American guitarist and singer Bob Mould, following the breakup of the influential rock band Hüsker Dü.  The album has a strong folk influence and lighter overall sound than he had been known for up to that point, although heavy guitar still features occasionally.  Drummer Anton Fier and bassist Tony Maimone, both of Pere Ubu fame, served as Mould's rhythm section on the album and on the subsequent live shows.  The single \"See a Little Light\" was a hit on the US Modern Rock chart.\n\nBob Mould (album): Bob Mould (sometimes referred to as Hubcap) is the third solo album by former Hüsker Dü and Sugar guitarist and singer Bob Mould.  It was recorded and mixed between September & November 1995 and released in April 1996.  Mould played all of the instruments on the album himself, and the sleeve notes declare, \"This one is for me.\"  In the place of traditional band credits, the sleeve states, \"Bob Mould is Bob Mould.\"\n\nAaroh: Aaroh (Urdu: آروح, literal English translation: \"the ascending scale in eastern classical music\") is an alternative rock band from Karachi, Sindh, Pakistan, formed in 1998.  The band was founded by keyboardist Kamran Khan and lead guitarist Nabeel Nihal .  (This name was given to them by Shoaib Mansoor), who were joined by, Vocalist Farooq Ahmed, Bassist Khalid Khan and Drummer Adnan Hussain.\n\nQuestion: What kind of songs written by  Bob Mould would be used by the band, Aaroh?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the band in question.\"\n    },\n    \"band_genre\": {\n      \"type\": \"string\",\n      \"description\": \"The musical genre of the band.\"\n    },\n    \"songwriter_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the songwriter.\"\n    },\n    \"songwriter_associated_genres\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of genres Bob Mould is known for writing in.\"\n    },\n    \"matching_song_genre\": {\n      \"type\": \"string\",\n      \"description\": \"The genre of songs by Bob Mould that would be suitable for Aaroh.\"\n    }\n  },\n  \"required\": [\n    \"band_name\",\n    \"band_genre\",\n    \"songwriter_name\",\n    \"songwriter_associated_genres\",\n    \"matching_song_genre\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "band_name",
-    "band_genre",
-    "songwriter_name",
-    "songwriter_associated_genres",
-    "matching_song_genre"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "band_name": {
+        "type": "string",
+        "description": "The name of the band in question."
+      },
+      "band_genre": {
+        "type": "string",
+        "description": "The musical genre of the band."
+      },
+      "songwriter_name": {
+        "type": "string",
+        "description": "The name of the songwriter."
+      },
+      "songwriter_associated_genres": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of genres Bob Mould is known for writing in."
+      },
+      "matching_song_genre": {
+        "type": "string",
+        "description": "The genre of songs by Bob Mould that would be suitable for Aaroh."
+      }
+    },
+    "required": [
+      "band_name",
+      "band_genre",
+      "songwriter_name",
+      "songwriter_associated_genres",
+      "matching_song_genre"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Woh Rehne Waali Mehlon Ki: Woh Rehne Waali Mehlon Ki (Hindi:वह रहने वाली महलों की) is a Hindi language Indian television series that airs on Sahara One channel.  The series premiered on 30 May 2005, and airs every Monday to Friday at 9pm IST.  The show completed 1000 episodes on 17 June 2009.  Also it is India's one of the longest running serial.  It is Sahara One's most successful show.  It dubbed in Tamil as "Periya Idattu Penn".
-
-Ek Mahal Ho Sapno Ka (TV series): Ek Mahal Ho Sapno Ka is a Hindi language Indian soap opera that aired on Sony TV.  It was the first Hindi fiction series to reach 1000 episodes and is one of the longest television serials of Indian television.  The show was originally aired in Gujarati on ETV Gujarati called as Sapna Na Vavetar.
-
-Miit (TV series): Miit is a Hindi language Indian television series that aired on Zee TV channel in 2003, Monday through Thursday evenings.  The show is based on the novel "Noukadubi", written by the Indian poet Rabindranath Tagore in 1905.  It follows the concept of mistaken identities, where a woman is thought to be someone who died in a train mishap.
-
-Everest (Indian TV series): Everest is a Hindi language Indian telenovela which began airing on STAR Plus on 3 November 2014.  Directed by Glenn Baretto and Ankush Mohla and touted as "the most ambitious project on Indian television", "Everest" was created by Ashutosh Gowariker and produced by Ashutosh Gowariker Productions Private Limited (AGPPL).  The show was broadcast at the 10pm time slot.  The music of the telenovela, which is Gowariker's television debut as a producer, was composed by A. R. Rahman.  "Everest" is also the television debut of A. R. Rahman as a music composer and was shot in its entirety in India and Nepal.  The shooting locations included Everest Base Camp (in Nepal) and the Dokriani Glacier (in India), which are located at a height of 17590 ft and 12000 ft above sea level, respectively.
-
-Smriti Irani: Smriti Zubin Irani (born Smriti Malhotra; 23 March 1976) is an Indian politician, former model, television actress and producer.  Irani is a Member of Parliament, being elected to the Rajya Sabha from the state of Gujarat.  She is the current Information and Broadcasting and Textiles Minister in the Government of India.
-
-Kuch... Diiil Se: Kuch... Diiil Se is a Hindi language Indian television talk show series hosted by Smriti Irani, which premiered on SAB TV on June 23, 2003.  The series is a discussion based show which primarily focuses on social issues where lawyers, cops, psychiatrists, doctors, social workers and celebrities answer viewer queries.
-
-Hum Pardesi Ho Gaye: Hum Pardesi Ho Gaye was a Hindi language Indian television series that aired on Sony TV, which premiered on 4 March 2001.  The series was produced by Shobhana Desai, and starred Kartika Rane, Aashish Chaudhary, and Perizaad Zorabian in the main lead.  The series was nominated for numerous award categories at the time it was on-air, such as Prasoon Joshi was nominated for "TV Lyricist of the Year" award and Sanjay Upadhyay was nominated for "TV Director of the Year" award at the Indian Telly Awards in 2002.
-
-Woh: Woh was a Hindi language Indian television horror-thriller series which aired on Zee TV in 1998.  The series starred Indian film director Ashutosh Gowarikar in an important role.
-
-Sangam (TV series): Sangam was a Hindi language Indian soap opera that broadcast on one of the most popular Indian television channel, STAR Plus.  The series premiered on 20 August 2007 along with another tv serial santaan, these two serials airs in new slot of 7pm and 7.30pm & Sangam airs every Monday to Thursday at 7:00PM IST.  Sangam is produced by Fox Television Studios India .  It stars Jennifer Winget as the protagonist Ganga, and Chaitanya Choudhury as Sagar in the main lead, who both fall in love when they first meet in a small town of "Kundanpur".
-
-Phool Khile Hain Gulshan Gulshan (TV series): Phool Khile Hain Gulshan Gulshan (Hindi: फूल खिलें हैं गुलशन गुलशन) was a popular Indian television talk show that was aired by National broadcaster Doordarshan from 1972 to 1993.  It was the first talkshow of Indian television, and featured child actress-turned-host Tabassum interviewing famous Bollywood movie and television personalities.  The format consisted of conversation interspersed with film scenes.  In the 1980s, this was one of the main avenues for television advertisers to reach a broad Indian audience.
-
-Question: What Indian politician hosted a Hindi language Indian television talk show?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "politician_name": {
-      "type": "string",
-      "description": "The name of the Indian politician."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "hosted_show_name": {
-      "type": "string",
-      "description": "The name of the television talk show hosted by the politician."
-    },
-    "show_language": {
-      "type": "string",
-      "description": "The language of the television talk show."
-    },
-    "politician_roles": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of roles held by the politician."
+    {
+      "role": "user",
+      "content": "Context:\nWoh Rehne Waali Mehlon Ki: Woh Rehne Waali Mehlon Ki (Hindi:वह रहने वाली महलों की) is a Hindi language Indian television series that airs on Sahara One channel.  The series premiered on 30 May 2005, and airs every Monday to Friday at 9pm IST.  The show completed 1000 episodes on 17 June 2009.  Also it is India's one of the longest running serial.  It is Sahara One's most successful show.  It dubbed in Tamil as \"Periya Idattu Penn\".\n\nEk Mahal Ho Sapno Ka (TV series): Ek Mahal Ho Sapno Ka is a Hindi language Indian soap opera that aired on Sony TV.  It was the first Hindi fiction series to reach 1000 episodes and is one of the longest television serials of Indian television.  The show was originally aired in Gujarati on ETV Gujarati called as Sapna Na Vavetar.\n\nMiit (TV series): Miit is a Hindi language Indian television series that aired on Zee TV channel in 2003, Monday through Thursday evenings.  The show is based on the novel \"Noukadubi\", written by the Indian poet Rabindranath Tagore in 1905.  It follows the concept of mistaken identities, where a woman is thought to be someone who died in a train mishap.\n\nEverest (Indian TV series): Everest is a Hindi language Indian telenovela which began airing on STAR Plus on 3 November 2014.  Directed by Glenn Baretto and Ankush Mohla and touted as \"the most ambitious project on Indian television\", \"Everest\" was created by Ashutosh Gowariker and produced by Ashutosh Gowariker Productions Private Limited (AGPPL).  The show was broadcast at the 10pm time slot.  The music of the telenovela, which is Gowariker's television debut as a producer, was composed by A. R. Rahman.  \"Everest\" is also the television debut of A. R. Rahman as a music composer and was shot in its entirety in India and Nepal.  The shooting locations included Everest Base Camp (in Nepal) and the Dokriani Glacier (in India), which are located at a height of 17590 ft and 12000 ft above sea level, respectively.\n\nSmriti Irani: Smriti Zubin Irani (born Smriti Malhotra; 23 March 1976) is an Indian politician, former model, television actress and producer.  Irani is a Member of Parliament, being elected to the Rajya Sabha from the state of Gujarat.  She is the current Information and Broadcasting and Textiles Minister in the Government of India.\n\nKuch... Diiil Se: Kuch... Diiil Se is a Hindi language Indian television talk show series hosted by Smriti Irani, which premiered on SAB TV on June 23, 2003.  The series is a discussion based show which primarily focuses on social issues where lawyers, cops, psychiatrists, doctors, social workers and celebrities answer viewer queries.\n\nHum Pardesi Ho Gaye: Hum Pardesi Ho Gaye was a Hindi language Indian television series that aired on Sony TV, which premiered on 4 March 2001.  The series was produced by Shobhana Desai, and starred Kartika Rane, Aashish Chaudhary, and Perizaad Zorabian in the main lead.  The series was nominated for numerous award categories at the time it was on-air, such as Prasoon Joshi was nominated for \"TV Lyricist of the Year\" award and Sanjay Upadhyay was nominated for \"TV Director of the Year\" award at the Indian Telly Awards in 2002.\n\nWoh: Woh was a Hindi language Indian television horror-thriller series which aired on Zee TV in 1998.  The series starred Indian film director Ashutosh Gowarikar in an important role.\n\nSangam (TV series): Sangam was a Hindi language Indian soap opera that broadcast on one of the most popular Indian television channel, STAR Plus.  The series premiered on 20 August 2007 along with another tv serial santaan, these two serials airs in new slot of 7pm and 7.30pm & Sangam airs every Monday to Thursday at 7:00PM IST.  Sangam is produced by Fox Television Studios India .  It stars Jennifer Winget as the protagonist Ganga, and Chaitanya Choudhury as Sagar in the main lead, who both fall in love when they first meet in a small town of \"Kundanpur\".\n\nPhool Khile Hain Gulshan Gulshan (TV series): Phool Khile Hain Gulshan Gulshan (Hindi: फूल खिलें हैं गुलशन गुलशन) was a popular Indian television talk show that was aired by National broadcaster Doordarshan from 1972 to 1993.  It was the first talkshow of Indian television, and featured child actress-turned-host Tabassum interviewing famous Bollywood movie and television personalities.  The format consisted of conversation interspersed with film scenes.  In the 1980s, this was one of the main avenues for television advertisers to reach a broad Indian audience.\n\nQuestion: What Indian politician hosted a Hindi language Indian television talk show?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"politician_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Indian politician.\"\n    },\n    \"hosted_show_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the television talk show hosted by the politician.\"\n    },\n    \"show_language\": {\n      \"type\": \"string\",\n      \"description\": \"The language of the television talk show.\"\n    },\n    \"politician_roles\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of roles held by the politician.\"\n    }\n  },\n  \"required\": [\n    \"politician_name\",\n    \"hosted_show_name\",\n    \"show_language\",\n    \"politician_roles\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "politician_name",
-    "hosted_show_name",
-    "show_language",
-    "politician_roles"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "politician_name": {
+        "type": "string",
+        "description": "The name of the Indian politician."
+      },
+      "hosted_show_name": {
+        "type": "string",
+        "description": "The name of the television talk show hosted by the politician."
+      },
+      "show_language": {
+        "type": "string",
+        "description": "The language of the television talk show."
+      },
+      "politician_roles": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of roles held by the politician."
+      }
+    },
+    "required": [
+      "politician_name",
+      "hosted_show_name",
+      "show_language",
+      "politician_roles"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

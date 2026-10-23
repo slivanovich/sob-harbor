@@ -1,73 +1,50 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Conference app: A conference app, also known as an event app or meeting app, is a mobile app developed to help attendees and meeting planners manage their conference experience.  It typically includes conference proceedings and venue information, allowing users to create personalized schedules and engage with other users.  A conference app can be a native app or web-based.  In recent years, conference apps have gained in popularity as a sustainable solution for event management by reducing paper produced by printed materials.
-
-Tencent: Tencent Holdings Limited (; ) is a Chinese investment holding company whose subsidiaries provide media, entertainment, payment systems, smartphones, internet mobile phone value-added services and operate online advertising services in China.  Its headquarters are in Nanshan District, Shenzhen.
-
-Miitomo: Miitomo (ミートモ , Mītomo ) is a freemium social networking mobile app developed by Nintendo for iOS and Android devices.  The app, Nintendo's first, allows users to converse with friends by answering various questions, and features Twitter and Facebook integration.  The app was released in March 2016, launching alongside their My Nintendo service.  The app can only be used when connected to Nintendo's servers.  Over 10 million users have downloaded "Miitomo" since release.
-
-Files (Apple): Files is a file management app developed by Apple Inc. for devices that run iOS 11.  Discovered as a placeholder title in the App Store just prior to the company's 2017 Worldwide Developers Conference, the app was officially announced at the conference shortly thereafter.  Files allows users to browse local files stored on their device, as well as files stored in cloud storage services, including iCloud, Dropbox, Google Drive, and OneDrive.  It allows for the saving, opening and organization of files, including placement into structured folders and sub-folders.  iPads running iOS 11 will be able to drag-and-drop files between Files and other apps, while iPhone users will be limited to drag-and-drop inside Files itself.  Further organization can be done through the use of color-coded or custom-named tags, and a persistent search bar allows for finding files inside folders, though not inside other apps.  A list view enables different sorting options.  The app offers the exclusive playback of high-quality FLAC audio files, and also offers support for viewing text files, images, "Music Memos", and Zip archives, as well as limited support for video.
-
-The Orchestra (app): "The Orchestra" is an iPad app developed and published by Touch Press in partnership with the Music Sales Group, Esa-Pekka Salonen and the Philharmonia Orchestra.  The app features performances of eight works representing three centuries of symphonic music.  It allows real-time selection of multiple video and audio tracks, along with an automatically synchronized score and graphical note-by-note visualization of each piece as it is played.  The result is an immersive environment for exploring the music and every instrument in the orchestra.  The app was chosen as Editors’ Choice in the App Store (iOS), and critics praised its scope and design.  It was recently included in Apple’s “Your Verse” campaign, a global promotional campaign for the iPad featuring Esa-Pekka Salonen.
-
-HIR (mobile app): HIR is a medical image and medical record app developed by Columbus, Ohio-based technology company Olah Healthcare.  The app allows people to consolidate and manage their medical history regardless of which computer system a hospital or practice uses.  People can manage their medical records on the platform they want: their smartphone.  The app has over 90% patient engagement and download rate since its soft-launch in October, 2015.
-
-WeChat: WeChat () is a Chinese social media (instant messaging, commerce and payment services) mobile application software developed by Tencent.  It was first released in 2011 and by 2017 it was one of the largest standalone messaging apps by monthly active users, with over 963 million monthly active users.  It is widely known as one of the world's most innovative and versatile app, as well as China's "App For Everything", with numerous unique functions and platforms ranging from 'payment' to 'social media' to 'services' to 'shopping' and more, that are equivalent to multiple Google Play or App Store's apps, but merged into one.
-
-Manga Box: Manga Box (マンガボックス) is a manga magazine mobile app developed by DeNA.  It was launched on December 4, 2013 as free app for iOS and Android devices and as a website platform.  The app hosts manga by Kodansha, Shogakukan, and other manga publishers.  Mangaka Shin Kibayashi serves as editor-in-chief of the app and pens several of the app's titles under his numerous pseudonyms.  In addition to the original manga series run on Manga Box, several of the titles on the app are based on existing works, including Ghost in the Shell, Kindaichi Case Files, Attack on Titan, The Knight in the Area, Space Dandy, Fatal Frame, and Ultraman.
-
-PewDiePie's Tuber Simulator: PewDiePie's Tuber Simulator is a 2016 freemium simulation mobile app developed by Outerminds Inc. and featuring YouTube personality PewDiePie, who voices himself.  The game's premise focuses on the player creating online videos for views and subscribers, the former of which they can use to purchase goods that can increase performance.  "PewDiePie's Tuber Simulator" was released on September 29, 2016 on iOS and Android.  The game became the Apple App Store's top download on its release day and on the following day Kjellberg reported that the app had been downloaded over one million times.
-
-My Talking Tom: My Talking Tom is a virtual pet app developed by Outfit7 in November 2013.  This one is similar to the same 2D-game as Pou and is a fourteenth of the Talking Tom and Friends series.  There is also a similar app called "My Talking Angela" released in December 3, 2014.  Another similar app, called "My Talking Hank", was released in January 12, 2017.
-
-Question: WeChat was an app developed by the company headquartered in what city?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "app_name": {
-      "type": "string",
-      "description": "The name of the mobile application."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "developer_company": {
-      "type": "string",
-      "description": "The name of the company that developed the app."
-    },
-    "headquarters_location": {
-      "type": "object",
-      "properties": {
-        "district": {
-          "type": "string",
-          "description": "The district where the developer company's headquarters are located."
-        },
-        "city": {
-          "type": "string",
-          "description": "The city where the developer company's headquarters are located."
-        }
-      },
-      "required": [
-        "district",
-        "city"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nConference app: A conference app, also known as an event app or meeting app, is a mobile app developed to help attendees and meeting planners manage their conference experience.  It typically includes conference proceedings and venue information, allowing users to create personalized schedules and engage with other users.  A conference app can be a native app or web-based.  In recent years, conference apps have gained in popularity as a sustainable solution for event management by reducing paper produced by printed materials.\n\nTencent: Tencent Holdings Limited (; ) is a Chinese investment holding company whose subsidiaries provide media, entertainment, payment systems, smartphones, internet mobile phone value-added services and operate online advertising services in China.  Its headquarters are in Nanshan District, Shenzhen.\n\nMiitomo: Miitomo (ミートモ , Mītomo ) is a freemium social networking mobile app developed by Nintendo for iOS and Android devices.  The app, Nintendo's first, allows users to converse with friends by answering various questions, and features Twitter and Facebook integration.  The app was released in March 2016, launching alongside their My Nintendo service.  The app can only be used when connected to Nintendo's servers.  Over 10 million users have downloaded \"Miitomo\" since release.\n\nFiles (Apple): Files is a file management app developed by Apple Inc. for devices that run iOS 11.  Discovered as a placeholder title in the App Store just prior to the company's 2017 Worldwide Developers Conference, the app was officially announced at the conference shortly thereafter.  Files allows users to browse local files stored on their device, as well as files stored in cloud storage services, including iCloud, Dropbox, Google Drive, and OneDrive.  It allows for the saving, opening and organization of files, including placement into structured folders and sub-folders.  iPads running iOS 11 will be able to drag-and-drop files between Files and other apps, while iPhone users will be limited to drag-and-drop inside Files itself.  Further organization can be done through the use of color-coded or custom-named tags, and a persistent search bar allows for finding files inside folders, though not inside other apps.  A list view enables different sorting options.  The app offers the exclusive playback of high-quality FLAC audio files, and also offers support for viewing text files, images, \"Music Memos\", and Zip archives, as well as limited support for video.\n\nThe Orchestra (app): \"The Orchestra\" is an iPad app developed and published by Touch Press in partnership with the Music Sales Group, Esa-Pekka Salonen and the Philharmonia Orchestra.  The app features performances of eight works representing three centuries of symphonic music.  It allows real-time selection of multiple video and audio tracks, along with an automatically synchronized score and graphical note-by-note visualization of each piece as it is played.  The result is an immersive environment for exploring the music and every instrument in the orchestra.  The app was chosen as Editors’ Choice in the App Store (iOS), and critics praised its scope and design.  It was recently included in Apple’s “Your Verse” campaign, a global promotional campaign for the iPad featuring Esa-Pekka Salonen.\n\nHIR (mobile app): HIR is a medical image and medical record app developed by Columbus, Ohio-based technology company Olah Healthcare.  The app allows people to consolidate and manage their medical history regardless of which computer system a hospital or practice uses.  People can manage their medical records on the platform they want: their smartphone.  The app has over 90% patient engagement and download rate since its soft-launch in October, 2015.\n\nWeChat: WeChat () is a Chinese social media (instant messaging, commerce and payment services) mobile application software developed by Tencent.  It was first released in 2011 and by 2017 it was one of the largest standalone messaging apps by monthly active users, with over 963 million monthly active users.  It is widely known as one of the world's most innovative and versatile app, as well as China's \"App For Everything\", with numerous unique functions and platforms ranging from 'payment' to 'social media' to 'services' to 'shopping' and more, that are equivalent to multiple Google Play or App Store's apps, but merged into one.\n\nManga Box: Manga Box (マンガボックス) is a manga magazine mobile app developed by DeNA.  It was launched on December 4, 2013 as free app for iOS and Android devices and as a website platform.  The app hosts manga by Kodansha, Shogakukan, and other manga publishers.  Mangaka Shin Kibayashi serves as editor-in-chief of the app and pens several of the app's titles under his numerous pseudonyms.  In addition to the original manga series run on Manga Box, several of the titles on the app are based on existing works, including Ghost in the Shell, Kindaichi Case Files, Attack on Titan, The Knight in the Area, Space Dandy, Fatal Frame, and Ultraman.\n\nPewDiePie's Tuber Simulator: PewDiePie's Tuber Simulator is a 2016 freemium simulation mobile app developed by Outerminds Inc. and featuring YouTube personality PewDiePie, who voices himself.  The game's premise focuses on the player creating online videos for views and subscribers, the former of which they can use to purchase goods that can increase performance.  \"PewDiePie's Tuber Simulator\" was released on September 29, 2016 on iOS and Android.  The game became the Apple App Store's top download on its release day and on the following day Kjellberg reported that the app had been downloaded over one million times.\n\nMy Talking Tom: My Talking Tom is a virtual pet app developed by Outfit7 in November 2013.  This one is similar to the same 2D-game as Pou and is a fourteenth of the Talking Tom and Friends series.  There is also a similar app called \"My Talking Angela\" released in December 3, 2014.  Another similar app, called \"My Talking Hank\", was released in January 12, 2017.\n\nQuestion: WeChat was an app developed by the company headquartered in what city?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"app_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the mobile application.\"\n    },\n    \"developer_company\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the company that developed the app.\"\n    },\n    \"headquarters_location\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"district\": {\n          \"type\": \"string\",\n          \"description\": \"The district where the developer company's headquarters are located.\"\n        },\n        \"city\": {\n          \"type\": \"string\",\n          \"description\": \"The city where the developer company's headquarters are located.\"\n        }\n      },\n      \"required\": [\n        \"district\",\n        \"city\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"app_name\",\n    \"developer_company\",\n    \"headquarters_location\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "app_name",
-    "developer_company",
-    "headquarters_location"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "app_name": {
+        "type": "string",
+        "description": "The name of the mobile application."
+      },
+      "developer_company": {
+        "type": "string",
+        "description": "The name of the company that developed the app."
+      },
+      "headquarters_location": {
+        "type": "object",
+        "properties": {
+          "district": {
+            "type": "string",
+            "description": "The district where the developer company's headquarters are located."
+          },
+          "city": {
+            "type": "string",
+            "description": "The city where the developer company's headquarters are located."
+          }
+        },
+        "required": [
+          "district",
+          "city"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "app_name",
+      "developer_company",
+      "headquarters_location"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

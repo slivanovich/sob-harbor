@@ -1,83 +1,60 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Enrique Iglesias (album): Enrique Iglesias is the eponymous debut studio album recorded by Spanish singer-songwriter Enrique Iglesias, It was released by Fonovisa on November 21, 1995 (see 1995 in music).  Also his Italian Version of this album: "Canta Italiano" was released on September 3, 1996.  The album was produced by Spanish songwriter and record producer Rafael Pérez-Botija.  The album was a big success and topped Latin charts, and was also recorded in Portuguese and Italian.  It also won for the Grammy Award for Best Latin Pop Album at the 39th Annual Grammy Awards on February 26, 1997.  The album received a Gold certification in Portugal after a weeks of sales, and has sold more than 8 million copies worldwide.  In the United States it was certified gold on June 11, 1996 and Platinum on November 18, 1996, Five singles from this album hit the number-one spot in the" Billboard" Hot Latin Tracks chart: "Si Tú Te Vas", "Experiencia Religiosa", "Por Amarte", was also featured as the opening theme for the Mexican telenovela "Marisol" (1996), produced by Juan Osorio starring Erika Buenfil and Eduardo Santamarina, "No Llores Por Mí" and "Trapecista", the most for any Latin album, together Selena and beating Jon Secada with four chart toppers.  The track "Invéntame" was re-recorded in 1998 by writer Marco Antonio Solís and was included on the album "Trozos de Mi Alma" (1999).  This version peaked at number 36 in the Hot Latin Tracks chart.
-
-El Camino del Alma: El camino del alma (The soul of journey) is the third studio album released by Mexican Latin pop singer Cristian Castro.  It was released on August 15, 1994.  Its major hit was the cover Juan Gabriel's "Mañana, Mañana".  The album was nominated in 1996 for Best Latin Pop Album in the Grammy Awards and a Lo Nuestro Award for Pop Album of the Year.
-
-José Feliciano: José Montserrate Feliciano García (born September 10, 1945), better known simply as José Feliciano ] , is a Puerto Rican guitarist, singer, and songwriter, best known for many international hits, including his rendition of The Doors' "Light My Fire" and the best-selling Christmas single, "Feliz Navidad".  His music is known for having a mix of styles, for example including both flamenco music and mellow easy listening influences in many songs.
-
-Quién Como Tú (song): "Quién Como Tú" (English: ""Who Like You"" ) is a song written and performed by Mexican singer-songwriter Ana Gabriel.  It was produced by Óscar Gómez for Gabriel's fifth studio album of the same title (1989).  Released as the second single from the album, the song became the third number-one single for the singer in the "Billboard" Top Latin Songs chart in May of the same year.  Live performances of the song can be found on the albums "En Vivo" and "...En la Plaza de Toros México".
-
-Mi Corazón: Mi Corazón is the second Spanish album recorded by American Latin pop and contemporary Christian singer Jaci Velasquez.  It was released by Sony Music Latin on May 8, 2001.  The album charted in the top 10 on both the Latin Pop Albums and Top Latin Albums charts.  lead single, "Cómo Se Cura Una Herida", charted at No. 1 on the "Billboard" Hot Latin Tracks chart.  The album received a nomination for a Grammy Award for Best Latin Pop Album in the 44th Annual Grammy Awards on February 27, 2002, and it won a Dove Award for Best Spanish language album of the year.
-
-Manuel Turizo: Manuel Turizo Zapata better known as Manuel Turizo and by the acronym MTZ is a Colombian singer songwriter.  He is best known for his song "Una Lady Como Tú" (2016) which granted him widespread popularity in Latin America.  This hit was followed by "Bésame" (2017) in which he collaborated with Puerto Rican reggaeton singer Valentino.  His first hit "Una Lady Como Tú" was nominated for Kids' Choice Award Colombia for Favorite Song in 2017.
-
-Loco de Amor (album): Loco de Amor (English: "Crazy in Love") is the sixth studio album by Colombian recording artist Juanes, released on March 11, 2014 by Universal Music Latino.  It is his first studio album since "P.A.R.C.E." (2010).  At the Latin Grammy Awards of 2014, the album received won the award Best Pop/Rock Album.  "Loco de Amor" was nominated for Lo Nuestro Award for Pop Album of the Year.  It was nominated for a Grammy Award for Best Latin Pop Album in 2015.
-
-Amar Sin Mentiras: Amar Sin Mentiras (English: Love Without Lies ) is the seventh studio album recorded by American singer-songwriter Marc Anthony.  It was released by Sony Music Latin and Columbia Records en June 8, 2004.  The album was produced by Colombian singer-songwriter Estéfano.  It also features the vocals of Jennifer López.  It won Grammy Award for Best Latin Pop Album at 47th Annual Grammy Awards on February 13, 2005. " ¿Ahora Quién?"  reached #1 on Hot Latin Tracks in 2004.
-
-Quién como tú: Quién como tú (English Who like you) is the 5th studio album by Mexican pop singer Ana Gabriel.  It was released on November 17, 1989.  This material was nominated to the Grammy Award for Best Latin Pop Album in 1990, but lost to José Feliciano's ¿Por Qué Te Tengo Que Olvidar?  ("Why do I have to forget you?") .  The album was awarded "Pop Album of the Year" at the 1991 Lo Nuestro awards.  This album reached #1 in the Billboard Latin Pop Albums staying in the chart for 48 weeks.  It sold 3,5 million worldwide.
-
-Es Demasiado Tarde: "Es Demasiado Tarde" ("It's Too Late") is a song written and performed by Mexican singer-songwriter Ana Gabriel.  It was released in 1990 by CBS Records and first included on the compilation album "México, Voz y Sentimiento" which also featured songs performed by Luis Angel, Vikki Carr, Aida Cuevas, Lorenzo de Monteclaro, Antonio De Jesús, Pedro Fernández, Hermanas Huerta, Tania Libertad, Angelica Maria, Lucía Méndez, Angeles Ochoa, Gilberto Parra, Gerardo Reyes, Cuco Sánchez, Cecilia Toussaint, Yuri and Flor Yvon.  The song became Gabriel's fourth number-one single in the "Billboard" Top Latin Songs chart, after "Ay Amor", "Simplemente Amigos" and "Quién Como Tú". ""  was the first Gabriel album to include the song.  "Es Demasiado Tarde" is a song about a woman who refuses to take her lover back after the end of their relationship.  Gabriel also addressed this issue in her song "Tú lo Decidiste" ("You Made the Decision") in 1994.  The song earned the Lo Nuestro Award for Best Pop Song.
-
-Question: "Quién como tú" was beaten to the Grammy for Best Latin Pop Album by an album made by an artist born in which year?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "nominated_album": {
-      "type": "string",
-      "description": "The name of the album that was nominated for the Grammy Award."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "grammy_award_year": {
-      "type": "integer",
-      "description": "The year the Grammy Award was presented."
-    },
-    "award_category": {
-      "type": "string",
-      "description": "The category of the Grammy Award."
-    },
-    "winning_artist": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the artist who won the Grammy Award."
-        },
-        "birth_year": {
-          "type": "integer",
-          "description": "The birth year of the winning artist."
-        }
-      },
-      "required": [
-        "name",
-        "birth_year"
-      ],
-      "additionalProperties": false
-    },
-    "winning_album": {
-      "type": "string",
-      "description": "The name of the album that won the Grammy Award."
+    {
+      "role": "user",
+      "content": "Context:\nEnrique Iglesias (album): Enrique Iglesias is the eponymous debut studio album recorded by Spanish singer-songwriter Enrique Iglesias, It was released by Fonovisa on November 21, 1995 (see 1995 in music).  Also his Italian Version of this album: \"Canta Italiano\" was released on September 3, 1996.  The album was produced by Spanish songwriter and record producer Rafael Pérez-Botija.  The album was a big success and topped Latin charts, and was also recorded in Portuguese and Italian.  It also won for the Grammy Award for Best Latin Pop Album at the 39th Annual Grammy Awards on February 26, 1997.  The album received a Gold certification in Portugal after a weeks of sales, and has sold more than 8 million copies worldwide.  In the United States it was certified gold on June 11, 1996 and Platinum on November 18, 1996, Five singles from this album hit the number-one spot in the\" Billboard\" Hot Latin Tracks chart: \"Si Tú Te Vas\", \"Experiencia Religiosa\", \"Por Amarte\", was also featured as the opening theme for the Mexican telenovela \"Marisol\" (1996), produced by Juan Osorio starring Erika Buenfil and Eduardo Santamarina, \"No Llores Por Mí\" and \"Trapecista\", the most for any Latin album, together Selena and beating Jon Secada with four chart toppers.  The track \"Invéntame\" was re-recorded in 1998 by writer Marco Antonio Solís and was included on the album \"Trozos de Mi Alma\" (1999).  This version peaked at number 36 in the Hot Latin Tracks chart.\n\nEl Camino del Alma: El camino del alma (The soul of journey) is the third studio album released by Mexican Latin pop singer Cristian Castro.  It was released on August 15, 1994.  Its major hit was the cover Juan Gabriel's \"Mañana, Mañana\".  The album was nominated in 1996 for Best Latin Pop Album in the Grammy Awards and a Lo Nuestro Award for Pop Album of the Year.\n\nJosé Feliciano: José Montserrate Feliciano García (born September 10, 1945), better known simply as José Feliciano ] , is a Puerto Rican guitarist, singer, and songwriter, best known for many international hits, including his rendition of The Doors' \"Light My Fire\" and the best-selling Christmas single, \"Feliz Navidad\".  His music is known for having a mix of styles, for example including both flamenco music and mellow easy listening influences in many songs.\n\nQuién Como Tú (song): \"Quién Como Tú\" (English: \"\"Who Like You\"\" ) is a song written and performed by Mexican singer-songwriter Ana Gabriel.  It was produced by Óscar Gómez for Gabriel's fifth studio album of the same title (1989).  Released as the second single from the album, the song became the third number-one single for the singer in the \"Billboard\" Top Latin Songs chart in May of the same year.  Live performances of the song can be found on the albums \"En Vivo\" and \"...En la Plaza de Toros México\".\n\nMi Corazón: Mi Corazón is the second Spanish album recorded by American Latin pop and contemporary Christian singer Jaci Velasquez.  It was released by Sony Music Latin on May 8, 2001.  The album charted in the top 10 on both the Latin Pop Albums and Top Latin Albums charts.  lead single, \"Cómo Se Cura Una Herida\", charted at No. 1 on the \"Billboard\" Hot Latin Tracks chart.  The album received a nomination for a Grammy Award for Best Latin Pop Album in the 44th Annual Grammy Awards on February 27, 2002, and it won a Dove Award for Best Spanish language album of the year.\n\nManuel Turizo: Manuel Turizo Zapata better known as Manuel Turizo and by the acronym MTZ is a Colombian singer songwriter.  He is best known for his song \"Una Lady Como Tú\" (2016) which granted him widespread popularity in Latin America.  This hit was followed by \"Bésame\" (2017) in which he collaborated with Puerto Rican reggaeton singer Valentino.  His first hit \"Una Lady Como Tú\" was nominated for Kids' Choice Award Colombia for Favorite Song in 2017.\n\nLoco de Amor (album): Loco de Amor (English: \"Crazy in Love\") is the sixth studio album by Colombian recording artist Juanes, released on March 11, 2014 by Universal Music Latino.  It is his first studio album since \"P.A.R.C.E.\" (2010).  At the Latin Grammy Awards of 2014, the album received won the award Best Pop/Rock Album.  \"Loco de Amor\" was nominated for Lo Nuestro Award for Pop Album of the Year.  It was nominated for a Grammy Award for Best Latin Pop Album in 2015.\n\nAmar Sin Mentiras: Amar Sin Mentiras (English: Love Without Lies ) is the seventh studio album recorded by American singer-songwriter Marc Anthony.  It was released by Sony Music Latin and Columbia Records en June 8, 2004.  The album was produced by Colombian singer-songwriter Estéfano.  It also features the vocals of Jennifer López.  It won Grammy Award for Best Latin Pop Album at 47th Annual Grammy Awards on February 13, 2005. \" ¿Ahora Quién?\"  reached #1 on Hot Latin Tracks in 2004.\n\nQuién como tú: Quién como tú (English Who like you) is the 5th studio album by Mexican pop singer Ana Gabriel.  It was released on November 17, 1989.  This material was nominated to the Grammy Award for Best Latin Pop Album in 1990, but lost to José Feliciano's ¿Por Qué Te Tengo Que Olvidar?  (\"Why do I have to forget you?\") .  The album was awarded \"Pop Album of the Year\" at the 1991 Lo Nuestro awards.  This album reached #1 in the Billboard Latin Pop Albums staying in the chart for 48 weeks.  It sold 3,5 million worldwide.\n\nEs Demasiado Tarde: \"Es Demasiado Tarde\" (\"It's Too Late\") is a song written and performed by Mexican singer-songwriter Ana Gabriel.  It was released in 1990 by CBS Records and first included on the compilation album \"México, Voz y Sentimiento\" which also featured songs performed by Luis Angel, Vikki Carr, Aida Cuevas, Lorenzo de Monteclaro, Antonio De Jesús, Pedro Fernández, Hermanas Huerta, Tania Libertad, Angelica Maria, Lucía Méndez, Angeles Ochoa, Gilberto Parra, Gerardo Reyes, Cuco Sánchez, Cecilia Toussaint, Yuri and Flor Yvon.  The song became Gabriel's fourth number-one single in the \"Billboard\" Top Latin Songs chart, after \"Ay Amor\", \"Simplemente Amigos\" and \"Quién Como Tú\". \"\"  was the first Gabriel album to include the song.  \"Es Demasiado Tarde\" is a song about a woman who refuses to take her lover back after the end of their relationship.  Gabriel also addressed this issue in her song \"Tú lo Decidiste\" (\"You Made the Decision\") in 1994.  The song earned the Lo Nuestro Award for Best Pop Song.\n\nQuestion: \"Quién como tú\" was beaten to the Grammy for Best Latin Pop Album by an album made by an artist born in which year?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"nominated_album\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the album that was nominated for the Grammy Award.\"\n    },\n    \"grammy_award_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the Grammy Award was presented.\"\n    },\n    \"award_category\": {\n      \"type\": \"string\",\n      \"description\": \"The category of the Grammy Award.\"\n    },\n    \"winning_artist\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the artist who won the Grammy Award.\"\n        },\n        \"birth_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The birth year of the winning artist.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"birth_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"winning_album\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the album that won the Grammy Award.\"\n    }\n  },\n  \"required\": [\n    \"nominated_album\",\n    \"grammy_award_year\",\n    \"award_category\",\n    \"winning_artist\",\n    \"winning_album\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "nominated_album",
-    "grammy_award_year",
-    "award_category",
-    "winning_artist",
-    "winning_album"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "nominated_album": {
+        "type": "string",
+        "description": "The name of the album that was nominated for the Grammy Award."
+      },
+      "grammy_award_year": {
+        "type": "integer",
+        "description": "The year the Grammy Award was presented."
+      },
+      "award_category": {
+        "type": "string",
+        "description": "The category of the Grammy Award."
+      },
+      "winning_artist": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the artist who won the Grammy Award."
+          },
+          "birth_year": {
+            "type": "integer",
+            "description": "The birth year of the winning artist."
+          }
+        },
+        "required": [
+          "name",
+          "birth_year"
+        ],
+        "additionalProperties": false
+      },
+      "winning_album": {
+        "type": "string",
+        "description": "The name of the album that won the Grammy Award."
+      }
+    },
+    "required": [
+      "nominated_album",
+      "grammy_award_year",
+      "award_category",
+      "winning_artist",
+      "winning_album"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

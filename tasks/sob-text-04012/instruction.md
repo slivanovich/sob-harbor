@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Henri-Florent Lamoral: Henri Florent Eugène François Joseph Lamoral de Ligne (29 December 1881 – 15 May 1967) was a Belgian nobleman, the son of Charles Joseph Eugène Henri Georges Lamoral (1837–1914) and Charlotte de Gontaut-Biron (1854–1933), and the grandson of Eugène de Ligne d'Amblise et d'Epinoy.  He married Charlotte de La Trémoille, the daughter of Louis Charles Marie de La Trémoille and they had one son, Jean Charles, Prince de Ligne de La Trémoille.
-
-De la Gardie Campaign: The De la Gardie Campaign refers to the actions of a 15,000-strong Swedish military unit, commanded by Jacob De la Gardie and Evert Horn in alliance with the Russian commander Mikhail Skopin-Shuisky against the Polish–Lithuanian Commonwealth in the Polish–Muscovite War (1605–18).  The campaign was a result of an alliance between Charles IX of Sweden and Vasili IV of Russia, made in Viborg in 1609, whereby the latter promised to cede the County of Kexholm to Sweden.
-
-Hedvig Catharina von Fersen: Hedvig Catharina von Fersen, née De la Gardie (Stockholm, 20 May 1732–Stockholm, 24 April 1800) was a Swedish noble.  She was the daughter of the General and "riksråd" count Magnus Julius De la Gardie and the political salonist Hedvig Catharina Lilje, and sister of scientist Eva Ekeblad.
-
-Magnus Julius De la Gardie: Magnus Julius De la Gardie (14 April 1668 – 28 April 1741), son of Axel Julius De la Gardie, was a Swedish general and statesman, member of the Swedish Hats Party.
-
-Ulriksdal Palace: Ulriksdal Palace (Swedish: "Ulriksdals slott" ) is a royal palace situated on the banks of the Edsviken in the Royal National City Park in Solna Municipality, 6 km north of Stockholm.  It was originally called "Jakobsdal" for its owner Jacob De la Gardie, who had it built by architect Hans Jacob Kristler in 1643-1645 as a country retreat.  He later passed on to his son, Magnus Gabriel De la Gardie, from whom it was purchased in 1669 by Queen Hedvig Eleonora of Sweden.  The present design is mainly the work of architect Nicodemus Tessin the Elder and dates from the late 17th century.
-
-Jardins ethnobotaniques de la Gardie: The Jardins ethnobotaniques de la Gardie (English translation: "Ethnobotanical gardens of Gardie") are botanical gardens located in a former schoolyard at the Pont d'avène, Rousson, Gard, Languedoc-Roussillon, France.  They are open daily except Monday in July and August, and weekend afternoons in May, June, and September; an admission fee is charged.
-
-De la Gardie: De la Gardie (also de la Gardie) is the name of a distinguished Swedish noble family of French origin.
-
-Catherine Charlotte De la Gardie: Countess Catherine Charlotte De la Gardie (née Catharina Charlotta Taube; 5 April 1723 – 24 March 1763), also known as Catherine Charlotte de La Gardie, was a Swedish noble.  She introduced smallpox vaccination in Sweden, and stopped the last witch trial in her country.
-
-Witch-hunt: A witch-hunt is a search for persons labelled "witches" or evidence of witchcraft, often involving moral panic or mass hysteria.  The classical period of witch-hunts in Early Modern Europe and Colonial North America took place in the Early Modern period or about 1450 to 1750, spanning the upheavals of the Reformation and the Thirty Years' War, resulting in an estimated 35,000 to 100,000 executions.  Including illegal and summary executions it is estimated 200,000 or more witches were tortured, burnt or hanged in the Western world from 1500 until around 1800.  The last executions of people convicted as witches in Europe took place in the 18th century.  In other regions, like Africa and Asia, contemporary witch-hunts have been reported from Sub-Saharan Africa and Papua New Guinea and official legislation against witchcraft is still found in Saudi Arabia and Cameroon today.
-
-Philibert de Gramont: Philibert, Count de Gramont (1621 – 31 January 1707), was a French nobleman, known as the protagonist of the "Mémoires" written by Antoine Hamilton (his brother-in-law).  He was a younger halfbrother of Antoine III of Gramont and uncle of Catherine Charlotte de Gramont, princess of Monaco.
-
-Question: what does Catherine Charlotte De la Gardie and Witch-hunt have in common?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "entity_1_name": {
-      "type": "string",
-      "description": "The name of the first entity."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "entity_2_name": {
-      "type": "string",
-      "description": "The name of the second entity."
-    },
-    "common_theme": {
-      "type": "string",
-      "description": "The common theme or concept that links both entities."
-    },
-    "relationship_description": {
-      "type": "string",
-      "description": "A description of the relationship between the two entities based on the common theme."
-    },
-    "entity_1_action_related_to_theme": {
-      "type": "string",
-      "description": "The specific action or involvement of the first entity related to the common theme."
+    {
+      "role": "user",
+      "content": "Context:\nHenri-Florent Lamoral: Henri Florent Eugène François Joseph Lamoral de Ligne (29 December 1881 – 15 May 1967) was a Belgian nobleman, the son of Charles Joseph Eugène Henri Georges Lamoral (1837–1914) and Charlotte de Gontaut-Biron (1854–1933), and the grandson of Eugène de Ligne d'Amblise et d'Epinoy.  He married Charlotte de La Trémoille, the daughter of Louis Charles Marie de La Trémoille and they had one son, Jean Charles, Prince de Ligne de La Trémoille.\n\nDe la Gardie Campaign: The De la Gardie Campaign refers to the actions of a 15,000-strong Swedish military unit, commanded by Jacob De la Gardie and Evert Horn in alliance with the Russian commander Mikhail Skopin-Shuisky against the Polish–Lithuanian Commonwealth in the Polish–Muscovite War (1605–18).  The campaign was a result of an alliance between Charles IX of Sweden and Vasili IV of Russia, made in Viborg in 1609, whereby the latter promised to cede the County of Kexholm to Sweden.\n\nHedvig Catharina von Fersen: Hedvig Catharina von Fersen, née De la Gardie (Stockholm, 20 May 1732–Stockholm, 24 April 1800) was a Swedish noble.  She was the daughter of the General and \"riksråd\" count Magnus Julius De la Gardie and the political salonist Hedvig Catharina Lilje, and sister of scientist Eva Ekeblad.\n\nMagnus Julius De la Gardie: Magnus Julius De la Gardie (14 April 1668 – 28 April 1741), son of Axel Julius De la Gardie, was a Swedish general and statesman, member of the Swedish Hats Party.\n\nUlriksdal Palace: Ulriksdal Palace (Swedish: \"Ulriksdals slott\" ) is a royal palace situated on the banks of the Edsviken in the Royal National City Park in Solna Municipality, 6 km north of Stockholm.  It was originally called \"Jakobsdal\" for its owner Jacob De la Gardie, who had it built by architect Hans Jacob Kristler in 1643-1645 as a country retreat.  He later passed on to his son, Magnus Gabriel De la Gardie, from whom it was purchased in 1669 by Queen Hedvig Eleonora of Sweden.  The present design is mainly the work of architect Nicodemus Tessin the Elder and dates from the late 17th century.\n\nJardins ethnobotaniques de la Gardie: The Jardins ethnobotaniques de la Gardie (English translation: \"Ethnobotanical gardens of Gardie\") are botanical gardens located in a former schoolyard at the Pont d'avène, Rousson, Gard, Languedoc-Roussillon, France.  They are open daily except Monday in July and August, and weekend afternoons in May, June, and September; an admission fee is charged.\n\nDe la Gardie: De la Gardie (also de la Gardie) is the name of a distinguished Swedish noble family of French origin.\n\nCatherine Charlotte De la Gardie: Countess Catherine Charlotte De la Gardie (née Catharina Charlotta Taube; 5 April 1723 – 24 March 1763), also known as Catherine Charlotte de La Gardie, was a Swedish noble.  She introduced smallpox vaccination in Sweden, and stopped the last witch trial in her country.\n\nWitch-hunt: A witch-hunt is a search for persons labelled \"witches\" or evidence of witchcraft, often involving moral panic or mass hysteria.  The classical period of witch-hunts in Early Modern Europe and Colonial North America took place in the Early Modern period or about 1450 to 1750, spanning the upheavals of the Reformation and the Thirty Years' War, resulting in an estimated 35,000 to 100,000 executions.  Including illegal and summary executions it is estimated 200,000 or more witches were tortured, burnt or hanged in the Western world from 1500 until around 1800.  The last executions of people convicted as witches in Europe took place in the 18th century.  In other regions, like Africa and Asia, contemporary witch-hunts have been reported from Sub-Saharan Africa and Papua New Guinea and official legislation against witchcraft is still found in Saudi Arabia and Cameroon today.\n\nPhilibert de Gramont: Philibert, Count de Gramont (1621 – 31 January 1707), was a French nobleman, known as the protagonist of the \"Mémoires\" written by Antoine Hamilton (his brother-in-law).  He was a younger halfbrother of Antoine III of Gramont and uncle of Catherine Charlotte de Gramont, princess of Monaco.\n\nQuestion: what does Catherine Charlotte De la Gardie and Witch-hunt have in common?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"entity_1_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the first entity.\"\n    },\n    \"entity_2_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the second entity.\"\n    },\n    \"common_theme\": {\n      \"type\": \"string\",\n      \"description\": \"The common theme or concept that links both entities.\"\n    },\n    \"relationship_description\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the relationship between the two entities based on the common theme.\"\n    },\n    \"entity_1_action_related_to_theme\": {\n      \"type\": \"string\",\n      \"description\": \"The specific action or involvement of the first entity related to the common theme.\"\n    }\n  },\n  \"required\": [\n    \"entity_1_name\",\n    \"entity_2_name\",\n    \"common_theme\",\n    \"relationship_description\",\n    \"entity_1_action_related_to_theme\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "entity_1_name",
-    "entity_2_name",
-    "common_theme",
-    "relationship_description",
-    "entity_1_action_related_to_theme"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "entity_1_name": {
+        "type": "string",
+        "description": "The name of the first entity."
+      },
+      "entity_2_name": {
+        "type": "string",
+        "description": "The name of the second entity."
+      },
+      "common_theme": {
+        "type": "string",
+        "description": "The common theme or concept that links both entities."
+      },
+      "relationship_description": {
+        "type": "string",
+        "description": "A description of the relationship between the two entities based on the common theme."
+      },
+      "entity_1_action_related_to_theme": {
+        "type": "string",
+        "description": "The specific action or involvement of the first entity related to the common theme."
+      }
+    },
+    "required": [
+      "entity_1_name",
+      "entity_2_name",
+      "common_theme",
+      "relationship_description",
+      "entity_1_action_related_to_theme"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

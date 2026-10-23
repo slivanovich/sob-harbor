@@ -1,77 +1,54 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Behave Yourself (1962 film): Behave Yourself is a 1962 British short comedy film directed by Michael Winner, produced by Harold Baim and featuring Dennis Price, Jack Jackson and Pete Murray.
-
-Law and Disorder (1958 film): Law and Disorder is a 1958 British comedy film directed by Charles Crichton and starring Michael Redgrave, Robert Morley, Joan Hickson, Lionel Jeffries.  It was based on the 1954 novel "Smugglers' Circuit" by Denys Roberts.  The film was started by director Henry Cornelius who died whilst making the film.  He was replaced by Charles Crichton.
-
-Play It Cool (film): Play it Cool is a 1962 British musical film directed by Michael Winner and starring Billy Fury, Michael Anderson Jr., Helen Shapiro, Bobby Vee, Shane Fenton, Danny Williams, Dennis Price, Richard Wattis, Maurice Kaufmann and Anna Palk.  The film tells the story of a struggling singer, Billy Universe (Billy Fury), and his band, who befriend an heiress who, against the wishes of her father, (Dennis Price), is searching for her lover who she has been forbidden to see and who she is hoping to elope with.  The plot takes the main characters to a succession of nightclubs where the other stars are performing.  There are guest appearances by Lionel Blair and Bernie Winters as well as Norrie Paramor, who was the Sir George Martin of his day.  The only hit from the songs featured in the film was Fury's rendition of "Once Upon a Dream".
-
-Go to Blazes (1962 film): Go to Blazes is a 1962 British comedy film directed by Michael Truman and starring Dave King, Robert Morley, Norman Rossington, Daniel Massey, Dennis Price, Maggie Smith, David Lodge.  It also featured Arthur Lowe and John Le Mesurier, later to feature prominently in "Dad's Army".
-
-Beat the Devil (film): Beat the Devil is a 1953 adventure comedy film.  The film was directed by John Huston, and starred Humphrey Bogart, Jennifer Jones and Gina Lollobrigida, and featured Robert Morley, Peter Lorre and Bernard Lee.  Huston and Truman Capote wrote the screenplay, loosely based upon a novel of the same name by British journalist Claud Cockburn, writing under the pseudonym James Helvick.  Huston made the film as a parody of a genre of film.  Although often described as a parody of "The Maltese Falcon", which Huston directed and in which Bogart and Lorre appeared, this is not the case.  Capote said "John [Huston] and I decided to kid the story, to treat it as a parody.  Instead of another "Maltese Falcon", we turned it into a ... [spoof] on this type of film."
-
-Theatre of Blood: Theatre of Blood (also known in the United States as Theater of Blood) is a 1973 horror film starring Vincent Price as vengeful actor Edward Lionheart and Diana Rigg as his daughter Edwina.  The cast includes distinguished actors Harry Andrews, Coral Browne, Robert Coote, Jack Hawkins, Ian Hendry, Michael Hordern, Arthur Lowe, Joan Hickson, Robert Morley, Milo O'Shea, Diana Dors and Dennis Price.  It was directed by Douglas Hickox.
-
-Maggie Smith: Dame Margaret Natalie Smith, {'1': ", '2': ", '3': ", '4': "} (born 28 December 1934) known as Maggie Smith, is an English actress.  She has had an extensive, varied career on stage, film and television spanning over sixty-five years.  Smith has appeared in over 50 films and is one of Britain's most recognisable actresses.  A prominent figure in British culture for six decades, she was made a Dame by Queen Elizabeth II in 1990 for services to the performing arts, and received the Companion of Honour from the Queen in 2014 for services to drama.
-
-Touch and Go (1955 film): Touch and Go (U.S.  The Light Touch) is a 1955 British comedy film directed by Michael Truman and starring Jack Hawkins, Margaret Johnston, and June Thorburn.  The film was made by Ealing Studios.  The film was indifferently received on release and is not generally included in the canon of classic Ealing Comedies.  It did however pick up two nominations at the 1956 British Academy Film Awards: Margaret Johnston for 'Best British Actress' and William Rose for 'Best British Screenplay' – Rose did win that year's screenplay award but for another Ealing film, "The Ladykillers".
-
-Bob Morley: Robert Alfred "Bob" Morley (born 20 December 1984) is an Australian actor.  After appearing in various theatre productions and short films, Morley was cast as Drew Curtis in "Home and Away" in 2006.  For the role, he received a nomination for the Most Popular New Male Talent Logie Award.  Morley appeared on "It Takes Two" in 2007, and following his departure from "Home and Away", he joined the cast of "The Strip".  Morley was cast as Aidan Foster in "Neighbours", in 2011, and he starred in the feature film "Blinder" in 2013.  As of 2014, Morley stars as Bellamy Blake on "The 100".  He also does and has already done charity actions and events.
-
-Some Will, Some Won't: Some Will, Some Won't is a 1970 British comedy film directed by Duncan Wood.  It was a remake of "Laughter in Paradise", and starred an ensemble British cast, which included Michael Hordern, Ronnie Corbett, Dennis Price, Leslie Phillips and Arthur Lowe.  It featured a cameo performance from "Steptoe and Son" actor Wilfrid Brambell who played Henry Russell, who has left four family members £150,000 in his will, on the condition they do the bizarre tasks he has set out for them.
-
-Question: What actress with a 65 year plus career starred in Michael Truman's 1962 comedy film with Dave King, Robert Morley, and Dennis Price?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actress_name": {
-      "type": "string",
-      "description": "The name of the actress."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
-    },
-    "film_year": {
-      "type": "integer",
-      "description": "The release year of the film."
-    },
-    "director_name": {
-      "type": "string",
-      "description": "The director of the film."
-    },
-    "career_length_years": {
-      "type": "integer",
-      "description": "The approximate career length of the actress in years."
-    },
-    "other_cast_members": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Other specified cast members in the film."
+    {
+      "role": "user",
+      "content": "Context:\nBehave Yourself (1962 film): Behave Yourself is a 1962 British short comedy film directed by Michael Winner, produced by Harold Baim and featuring Dennis Price, Jack Jackson and Pete Murray.\n\nLaw and Disorder (1958 film): Law and Disorder is a 1958 British comedy film directed by Charles Crichton and starring Michael Redgrave, Robert Morley, Joan Hickson, Lionel Jeffries.  It was based on the 1954 novel \"Smugglers' Circuit\" by Denys Roberts.  The film was started by director Henry Cornelius who died whilst making the film.  He was replaced by Charles Crichton.\n\nPlay It Cool (film): Play it Cool is a 1962 British musical film directed by Michael Winner and starring Billy Fury, Michael Anderson Jr., Helen Shapiro, Bobby Vee, Shane Fenton, Danny Williams, Dennis Price, Richard Wattis, Maurice Kaufmann and Anna Palk.  The film tells the story of a struggling singer, Billy Universe (Billy Fury), and his band, who befriend an heiress who, against the wishes of her father, (Dennis Price), is searching for her lover who she has been forbidden to see and who she is hoping to elope with.  The plot takes the main characters to a succession of nightclubs where the other stars are performing.  There are guest appearances by Lionel Blair and Bernie Winters as well as Norrie Paramor, who was the Sir George Martin of his day.  The only hit from the songs featured in the film was Fury's rendition of \"Once Upon a Dream\".\n\nGo to Blazes (1962 film): Go to Blazes is a 1962 British comedy film directed by Michael Truman and starring Dave King, Robert Morley, Norman Rossington, Daniel Massey, Dennis Price, Maggie Smith, David Lodge.  It also featured Arthur Lowe and John Le Mesurier, later to feature prominently in \"Dad's Army\".\n\nBeat the Devil (film): Beat the Devil is a 1953 adventure comedy film.  The film was directed by John Huston, and starred Humphrey Bogart, Jennifer Jones and Gina Lollobrigida, and featured Robert Morley, Peter Lorre and Bernard Lee.  Huston and Truman Capote wrote the screenplay, loosely based upon a novel of the same name by British journalist Claud Cockburn, writing under the pseudonym James Helvick.  Huston made the film as a parody of a genre of film.  Although often described as a parody of \"The Maltese Falcon\", which Huston directed and in which Bogart and Lorre appeared, this is not the case.  Capote said \"John [Huston] and I decided to kid the story, to treat it as a parody.  Instead of another \"Maltese Falcon\", we turned it into a ... [spoof] on this type of film.\"\n\nTheatre of Blood: Theatre of Blood (also known in the United States as Theater of Blood) is a 1973 horror film starring Vincent Price as vengeful actor Edward Lionheart and Diana Rigg as his daughter Edwina.  The cast includes distinguished actors Harry Andrews, Coral Browne, Robert Coote, Jack Hawkins, Ian Hendry, Michael Hordern, Arthur Lowe, Joan Hickson, Robert Morley, Milo O'Shea, Diana Dors and Dennis Price.  It was directed by Douglas Hickox.\n\nMaggie Smith: Dame Margaret Natalie Smith, {'1': \", '2': \", '3': \", '4': \"} (born 28 December 1934) known as Maggie Smith, is an English actress.  She has had an extensive, varied career on stage, film and television spanning over sixty-five years.  Smith has appeared in over 50 films and is one of Britain's most recognisable actresses.  A prominent figure in British culture for six decades, she was made a Dame by Queen Elizabeth II in 1990 for services to the performing arts, and received the Companion of Honour from the Queen in 2014 for services to drama.\n\nTouch and Go (1955 film): Touch and Go (U.S.  The Light Touch) is a 1955 British comedy film directed by Michael Truman and starring Jack Hawkins, Margaret Johnston, and June Thorburn.  The film was made by Ealing Studios.  The film was indifferently received on release and is not generally included in the canon of classic Ealing Comedies.  It did however pick up two nominations at the 1956 British Academy Film Awards: Margaret Johnston for 'Best British Actress' and William Rose for 'Best British Screenplay' – Rose did win that year's screenplay award but for another Ealing film, \"The Ladykillers\".\n\nBob Morley: Robert Alfred \"Bob\" Morley (born 20 December 1984) is an Australian actor.  After appearing in various theatre productions and short films, Morley was cast as Drew Curtis in \"Home and Away\" in 2006.  For the role, he received a nomination for the Most Popular New Male Talent Logie Award.  Morley appeared on \"It Takes Two\" in 2007, and following his departure from \"Home and Away\", he joined the cast of \"The Strip\".  Morley was cast as Aidan Foster in \"Neighbours\", in 2011, and he starred in the feature film \"Blinder\" in 2013.  As of 2014, Morley stars as Bellamy Blake on \"The 100\".  He also does and has already done charity actions and events.\n\nSome Will, Some Won't: Some Will, Some Won't is a 1970 British comedy film directed by Duncan Wood.  It was a remake of \"Laughter in Paradise\", and starred an ensemble British cast, which included Michael Hordern, Ronnie Corbett, Dennis Price, Leslie Phillips and Arthur Lowe.  It featured a cameo performance from \"Steptoe and Son\" actor Wilfrid Brambell who played Henry Russell, who has left four family members £150,000 in his will, on the condition they do the bizarre tasks he has set out for them.\n\nQuestion: What actress with a 65 year plus career starred in Michael Truman's 1962 comedy film with Dave King, Robert Morley, and Dennis Price?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actress_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actress.\"\n    },\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"film_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film.\"\n    },\n    \"director_name\": {\n      \"type\": \"string\",\n      \"description\": \"The director of the film.\"\n    },\n    \"career_length_years\": {\n      \"type\": \"integer\",\n      \"description\": \"The approximate career length of the actress in years.\"\n    },\n    \"other_cast_members\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"Other specified cast members in the film.\"\n    }\n  },\n  \"required\": [\n    \"actress_name\",\n    \"film_title\",\n    \"film_year\",\n    \"director_name\",\n    \"career_length_years\",\n    \"other_cast_members\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actress_name",
-    "film_title",
-    "film_year",
-    "director_name",
-    "career_length_years",
-    "other_cast_members"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actress_name": {
+        "type": "string",
+        "description": "The name of the actress."
+      },
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "film_year": {
+        "type": "integer",
+        "description": "The release year of the film."
+      },
+      "director_name": {
+        "type": "string",
+        "description": "The director of the film."
+      },
+      "career_length_years": {
+        "type": "integer",
+        "description": "The approximate career length of the actress in years."
+      },
+      "other_cast_members": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Other specified cast members in the film."
+      }
+    },
+    "required": [
+      "actress_name",
+      "film_title",
+      "film_year",
+      "director_name",
+      "career_length_years",
+      "other_cast_members"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

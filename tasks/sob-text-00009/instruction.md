@@ -1,107 +1,84 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-The Phantom of the Opera (2004 film): The Phantom of the Opera is a 2004 British-American musical drama film based on Andrew Lloyd Webber's 1986 musical of the same name, which in turn is based on the French novel "Le Fantôme de l'Opéra" by Gaston Leroux.  It was produced and co-written by Lloyd Webber and directed by Joel Schumacher.  It stars Gerard Butler in the title role, Emmy Rossum as Christine Daaé, Patrick Wilson as Raoul, Miranda Richardson as Madame Giry, Minnie Driver as Carlotta Giudicelli, and Jennifer Ellison as Meg Giry.
-
-Cindy O'Callaghan: Cindy O'Callaghan (born 18 October 1956) is an Irish-born British former actress.  Her acting career began in her adolescence, when she was chosen to play the part of Carrie Rawlins in the Disney feature film "Bedknobs and Broomsticks" in 1971.  She has appeared in a wide range of television programmes and films since, including BBC's "EastEnders", where she played Andrea Price for several stints in the 1990s.  Her last credited role was in 2001, and she has since given up acting to become a child psychologist.
-
-Bedknobs and Broomsticks: Bedknobs and Broomsticks is a 1971 British-American musical fantasy film produced by Walt Disney Productions and released by Buena Vista Distribution Company in North America on December 13, 1971.  It is based upon the books "The Magic Bedknob; or, How to Become a Witch in Ten Easy Lessons" (1943) and "Bonfires and Broomsticks" (1945) by English children's author Mary Norton.  The film, which combines live action and animation, stars Angela Lansbury and David Tomlinson.
-
-Lindsay Parker: Lindsay Parker (born March 30, 1980 in Los Angeles, California) is an American actress who got her start as Little Girl on an episode of "MacGyver".  She appeared in the film "Shocker" three years later, and played Kirstie Alley's daughter Melissa in the 1987 film "Infidelity".  She provided the voice of Corey in "Cartoon All-Stars to the Rescue" and also played Carrie in the 1987 film "Flowers in the Attic".  She remained active in acting up until 2007.
-
-Corpse Bride: Corpse Bride is a 2005 British-American stop-motion-animated musical fantasy film directed by Mike Johnson and Tim Burton with a screenplay by John August, Caroline Thompson and Pamela Pettler based on characters created by Burton and Carlos Grangel.  The plot is set in a fictional Victorian era village in Europe.  Johnny Depp leads the cast as the voice of Victor, while Helena Bonham Carter voices Emily, the titular bride.  "Corpse Bride" is the third stop-motion feature film produced by Burton and the first directed by him (the previous two films, "The Nightmare Before Christmas" and "James and the Giant Peach", were directed by Henry Selick).  This is also the first stop-motion feature from Burton that was distributed by Warner Bros.  Pictures.  It was dedicated to executive producer Joe Ranft, who died during production.
-
-The Rocky Horror Picture Show: The Rocky Horror Picture Show is a 1975 British-American musical screwball comedy horror film by 20th Century Fox produced by Lou Adler and Michael White and directed by Jim Sharman.  The screenplay was written by Sharman and actor Richard O'Brien, who appears in the film, which is based on the 1973 musical stage production "of the same title", with music, book, and lyrics by O'Brien.  The production is a parody tribute to the science fiction and horror B movies of the 1930s through to the early 1970s.  Along with O'Brien, the film stars Tim Curry, Susan Sarandon, and Barry Bostwick and is narrated by Charles Gray with cast members from the original Royal Court Theatre, Roxy Theatre, and Belasco Theatre productions.
-
-James and the Giant Peach (film): James and the Giant Peach is a 1996 British-American musical fantasy film directed by Henry Selick, based on the 1961 novel of the same name by Roald Dahl.  It was produced by Tim Burton and Denise Di Novi, directed by Henry Selick, and starred Paul Terry as James.  The film is a combination of live action and stop-motion animation.  Co-stars Joanna Lumley and Miriam Margolyes played James's aunts in the live-action segments, and Simon Callow, Richard Dreyfuss, Susan Sarandon, Jane Leeves, David Thewlis, and Margoyles voiced his insect friends in the animation sequences.
-
-Labyrinth (film): Labyrinth is a 1986 British-American adventure musical dark fantasy film directed by Jim Henson, executive-produced by George Lucas, and based upon conceptual designs by Brian Froud.  The film revolves around 15-year-old Sarah's (Jennifer Connelly) quest to reach the center of an enormous otherworldly maze to rescue her infant brother Toby, whom Sarah wished away to Jareth, the Goblin King (David Bowie).  With the exception of Connelly and Bowie, most of the film's significant characters are played by puppets produced by Jim Henson's Creature Shop.
-
-Macbeth (1971 film): Macbeth (or The Tragedy of Macbeth) is a 1971 British-American historical drama film directed by Roman Polanski and co-written by Polanski and Kenneth Tynan.  A film adaptation of William Shakespeare's tragedy of the same name, it retells the story of the Highland lord who becomes King of Scotland through treachery and murder.  The film stars Jon Finch as the title character and Francesca Annis as Lady Macbeth, noted for their relative youth as actors.  Themes of historic recurrence, greater pessimism and internal ugliness in physically beautiful characters are added to Shakespeare's story of moral decline, which is presented in a more realistic style.
-
-The Boy Friend (1971 film): The Boy Friend is a 1971 British-American musical comedy film directed by Ken Russell and starring Twiggy, Christopher Gable, Tommy Tune, and Max Adrian with an uncredited appearance by Glenda Jackson.  It is an adaptation of the musical "The Boy Friend" by Sandy Wilson.  It was released on DVD on April 12, 2011.
-
-Question: Cindy O'Callaghan played Carrie Rawlins in a 1971 British-American musical fantasy film that was based upon books by who?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_year": {
-      "type": "integer",
-      "description": "The release year of the film."
-    },
-    "film_genre": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "The genres of the film."
-    },
-    "film_origin_countries": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "The countries of origin for the film."
-    },
-    "actress_name": {
-      "type": "string",
-      "description": "The name of the actress."
-    },
-    "role_name": {
-      "type": "string",
-      "description": "The name of the role played by the actress in the film."
-    },
-    "source_material": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "The type of source material (e.g., books, novel, musical)."
-        },
-        "author_name": {
-          "type": "string",
-          "description": "The name of the author of the source material."
-        },
-        "book_titles": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "The titles of the books the film is based upon."
-        }
-      },
-      "required": [
-        "type",
-        "author_name",
-        "book_titles"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nThe Phantom of the Opera (2004 film): The Phantom of the Opera is a 2004 British-American musical drama film based on Andrew Lloyd Webber's 1986 musical of the same name, which in turn is based on the French novel \"Le Fantôme de l'Opéra\" by Gaston Leroux.  It was produced and co-written by Lloyd Webber and directed by Joel Schumacher.  It stars Gerard Butler in the title role, Emmy Rossum as Christine Daaé, Patrick Wilson as Raoul, Miranda Richardson as Madame Giry, Minnie Driver as Carlotta Giudicelli, and Jennifer Ellison as Meg Giry.\n\nCindy O'Callaghan: Cindy O'Callaghan (born 18 October 1956) is an Irish-born British former actress.  Her acting career began in her adolescence, when she was chosen to play the part of Carrie Rawlins in the Disney feature film \"Bedknobs and Broomsticks\" in 1971.  She has appeared in a wide range of television programmes and films since, including BBC's \"EastEnders\", where she played Andrea Price for several stints in the 1990s.  Her last credited role was in 2001, and she has since given up acting to become a child psychologist.\n\nBedknobs and Broomsticks: Bedknobs and Broomsticks is a 1971 British-American musical fantasy film produced by Walt Disney Productions and released by Buena Vista Distribution Company in North America on December 13, 1971.  It is based upon the books \"The Magic Bedknob; or, How to Become a Witch in Ten Easy Lessons\" (1943) and \"Bonfires and Broomsticks\" (1945) by English children's author Mary Norton.  The film, which combines live action and animation, stars Angela Lansbury and David Tomlinson.\n\nLindsay Parker: Lindsay Parker (born March 30, 1980 in Los Angeles, California) is an American actress who got her start as Little Girl on an episode of \"MacGyver\".  She appeared in the film \"Shocker\" three years later, and played Kirstie Alley's daughter Melissa in the 1987 film \"Infidelity\".  She provided the voice of Corey in \"Cartoon All-Stars to the Rescue\" and also played Carrie in the 1987 film \"Flowers in the Attic\".  She remained active in acting up until 2007.\n\nCorpse Bride: Corpse Bride is a 2005 British-American stop-motion-animated musical fantasy film directed by Mike Johnson and Tim Burton with a screenplay by John August, Caroline Thompson and Pamela Pettler based on characters created by Burton and Carlos Grangel.  The plot is set in a fictional Victorian era village in Europe.  Johnny Depp leads the cast as the voice of Victor, while Helena Bonham Carter voices Emily, the titular bride.  \"Corpse Bride\" is the third stop-motion feature film produced by Burton and the first directed by him (the previous two films, \"The Nightmare Before Christmas\" and \"James and the Giant Peach\", were directed by Henry Selick).  This is also the first stop-motion feature from Burton that was distributed by Warner Bros.  Pictures.  It was dedicated to executive producer Joe Ranft, who died during production.\n\nThe Rocky Horror Picture Show: The Rocky Horror Picture Show is a 1975 British-American musical screwball comedy horror film by 20th Century Fox produced by Lou Adler and Michael White and directed by Jim Sharman.  The screenplay was written by Sharman and actor Richard O'Brien, who appears in the film, which is based on the 1973 musical stage production \"of the same title\", with music, book, and lyrics by O'Brien.  The production is a parody tribute to the science fiction and horror B movies of the 1930s through to the early 1970s.  Along with O'Brien, the film stars Tim Curry, Susan Sarandon, and Barry Bostwick and is narrated by Charles Gray with cast members from the original Royal Court Theatre, Roxy Theatre, and Belasco Theatre productions.\n\nJames and the Giant Peach (film): James and the Giant Peach is a 1996 British-American musical fantasy film directed by Henry Selick, based on the 1961 novel of the same name by Roald Dahl.  It was produced by Tim Burton and Denise Di Novi, directed by Henry Selick, and starred Paul Terry as James.  The film is a combination of live action and stop-motion animation.  Co-stars Joanna Lumley and Miriam Margolyes played James's aunts in the live-action segments, and Simon Callow, Richard Dreyfuss, Susan Sarandon, Jane Leeves, David Thewlis, and Margoyles voiced his insect friends in the animation sequences.\n\nLabyrinth (film): Labyrinth is a 1986 British-American adventure musical dark fantasy film directed by Jim Henson, executive-produced by George Lucas, and based upon conceptual designs by Brian Froud.  The film revolves around 15-year-old Sarah's (Jennifer Connelly) quest to reach the center of an enormous otherworldly maze to rescue her infant brother Toby, whom Sarah wished away to Jareth, the Goblin King (David Bowie).  With the exception of Connelly and Bowie, most of the film's significant characters are played by puppets produced by Jim Henson's Creature Shop.\n\nMacbeth (1971 film): Macbeth (or The Tragedy of Macbeth) is a 1971 British-American historical drama film directed by Roman Polanski and co-written by Polanski and Kenneth Tynan.  A film adaptation of William Shakespeare's tragedy of the same name, it retells the story of the Highland lord who becomes King of Scotland through treachery and murder.  The film stars Jon Finch as the title character and Francesca Annis as Lady Macbeth, noted for their relative youth as actors.  Themes of historic recurrence, greater pessimism and internal ugliness in physically beautiful characters are added to Shakespeare's story of moral decline, which is presented in a more realistic style.\n\nThe Boy Friend (1971 film): The Boy Friend is a 1971 British-American musical comedy film directed by Ken Russell and starring Twiggy, Christopher Gable, Tommy Tune, and Max Adrian with an uncredited appearance by Glenda Jackson.  It is an adaptation of the musical \"The Boy Friend\" by Sandy Wilson.  It was released on DVD on April 12, 2011.\n\nQuestion: Cindy O'Callaghan played Carrie Rawlins in a 1971 British-American musical fantasy film that was based upon books by who?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"film_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film.\"\n    },\n    \"film_genre\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"The genres of the film.\"\n    },\n    \"film_origin_countries\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"The countries of origin for the film.\"\n    },\n    \"actress_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actress.\"\n    },\n    \"role_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the role played by the actress in the film.\"\n    },\n    \"source_material\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of source material (e.g., books, novel, musical).\"\n        },\n        \"author_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the author of the source material.\"\n        },\n        \"book_titles\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"The titles of the books the film is based upon.\"\n        }\n      },\n      \"required\": [\n        \"type\",\n        \"author_name\",\n        \"book_titles\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"film_year\",\n    \"film_genre\",\n    \"film_origin_countries\",\n    \"actress_name\",\n    \"role_name\",\n    \"source_material\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "film_year",
-    "film_genre",
-    "film_origin_countries",
-    "actress_name",
-    "role_name",
-    "source_material"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "film_year": {
+        "type": "integer",
+        "description": "The release year of the film."
+      },
+      "film_genre": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The genres of the film."
+      },
+      "film_origin_countries": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The countries of origin for the film."
+      },
+      "actress_name": {
+        "type": "string",
+        "description": "The name of the actress."
+      },
+      "role_name": {
+        "type": "string",
+        "description": "The name of the role played by the actress in the film."
+      },
+      "source_material": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of source material (e.g., books, novel, musical)."
+          },
+          "author_name": {
+            "type": "string",
+            "description": "The name of the author of the source material."
+          },
+          "book_titles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The titles of the books the film is based upon."
+          }
+        },
+        "required": [
+          "type",
+          "author_name",
+          "book_titles"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "film_title",
+      "film_year",
+      "film_genre",
+      "film_origin_countries",
+      "actress_name",
+      "role_name",
+      "source_material"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

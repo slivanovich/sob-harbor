@@ -1,83 +1,60 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Auisle: Auisle or Óisle (Old Norse: "Ásl "or" Auðgísl" ; died c. 867) was a Viking leader in Ireland and Scotland in the mid-late ninth century.  He was the son of the king of Lochlann, identified in the non-contemporary "Fragmentary Annals of Ireland" as Gofraid, and brother of Amlaíb Conung and Ímar, the latter of whom founded the Uí Ímair dynasty, and whose descendants would go on to dominate the Irish Sea region for several centuries.  Another Viking leader, Halfdan Ragnarsson, is sometimes considered a brother.  The Irish Annals title Auisle, Ímar and Amlaíb "kings of the foreigners".  Modern scholars use the title "kings of Dublin" after the Viking settlement which formed the base of their power.
-
-Ímar: Ímar (Old Norse: "Ívarr" ; died c. 873) was a Viking leader in Ireland and Scotland in the mid-late ninth century who founded the Uí Ímair dynasty, and whose descendants would go on to dominate the Irish Sea region for several centuries.  He was the son of the king of Lochlann, identified in the non-contemporary "Fragmentary Annals of Ireland" as Gofraid.  The "Fragmentary Annals" name Auisle and Amlaíb Conung as his brothers.  Another Viking leader, Halfdan Ragnarsson, is considered by some scholars to be another brother.  The Irish Annals title Amlaíb, Ímar and Auisle "kings of the foreigners".  Modern scholars use the title "kings of Dublin" after the Viking settlement which formed the base of their power.  Some scholars consider Ímar to be identical to Ivar the Boneless, a Viking commander of the Great Heathen Army named in contemporary English sources who also appears in the Icelandic sagas as a son of the legendary Viking Ragnar Lodbrok.
-
-Early Scandinavian Dublin: The First Viking Age in Ireland began in 795, when Vikings began carrying out hit-and-run raids on Gaelic Irish coastal settlements.  Over the following decades the raiding parties became bigger and better organized; inland settlements were targeted as well as coastal ones; and the raiders built naval encampments known as longphorts to allow them to remain in Ireland throughout the winter.  In the mid 9th century, Viking leader Turgeis or "Thorgest" founded a stronghold at Dublin, plundered Leinster and Meath, and raided other parts of Ireland.  He was killed by the High King, Máel Sechnaill mac Máele Ruanaid, which was followed by several Irish victories against the Vikings and the seizure of Dublin in 849.  Shortly after, a new group of Vikings known as the Dubgaill ("dark foreigners") came to Ireland and clashed with the earlier Viking settlers, now called the Finngaill ("fair foreigners").  The wavering fortunes of these three groups and their shifting alliances, together with the shortcomings of contemporary records and the inaccuracy of later accounts, make this period one of the most complicated and least understood in the fledgling city's history.  In 853 a Viking warlord called Amlaíb (, possibly Olaf the White) arrived and made himself king of Dublin.  He ruled along with his brothers Ímar ("Ívarr", possibly Ivar the Boneless) and Auisle ("Ásl").  For the next fifteen years or so, they used Dublin as their base for a series of campaigns against Irish kingdoms.  During these conflicts they briefly allied themselves with several Irish kings.  The Dublin Vikings also carried out a number of raids in Britain at this time.  The deaths of Ivar (c.873) and Olaf (c.874) were followed by internecine conflict among the Vikings.  Although intermittent warfare between the Vikings and the Irish continued, these inner conflicts weakened the Viking colonies and made it easier for the Irish to unite against them.  In 902, Cerball mac Muirecáin, king of Leinster, and Máel Findia mac Flannacáin, king of Brega, launched a two-pronged attack on Dublin and drove the Vikings from the city.  However, in 914 the Vikings now known as the Uí Ímair (House of Ivar) would return to Ireland, marking the beginning of the Second Viking Age.
-
-Odda, Ealdorman of Devon: Odda, also known as Oddune, was a ninth-century ealdorman of Devon.  He is known for his victory at the Battle of Cynwit in 878, where his West Saxon forces defeated a Viking army led by Ubba, brother of the Viking chiefs Ivar the Boneless and Halfdan Ragnarsson.
-
-Halfdan Ragnarsson: Halfdan Ragnarsson (Old Norse: "Hálfdan" ; or "Healfdene"; Old Irish: "Albann" ; died 877) was a Viking leader and a commander of the Great Heathen Army which invaded the Anglo-Saxon kingdoms of England, starting in 865.  According to the tradition recorded in the Norse sagas he was one of the sons of Ragnar Lodbrok, and his brothers included Björn Ironside, Ivar the Boneless, Sigurd Snake-in-the-Eye and Ubba.  He was the first Viking King of Northumbria and a pretender to the throne of Kingdom of Dublin.  He died at the Battle of Strangford Lough in 877 trying to press his Irish claim.
-
-Battle of Strangford Lough: The Battle of Strangford Lough was fought in 877 between two groups of rival Vikings described by the Irish Annals as the "fair heathens" and the "dark heathens".  The "Annals of Ulster" describe "Albann", a figure usually identified with Halfdan Ragnarsson, a leader of the Great Heathen Army, as king of the "dark heathens", and "Cogad Gáedel re Gallaib" identifies Bárid mac Ímair, King of Dublin as the leader of the "fair heathens".  All accounts agree Halfdan was killed in the battle, and "Cogad Gáedel re Gallaib" adds that Bárid was wounded in it.
-
-Amlaíb Conung: Amlaíb Conung (Old Norse: "Óláfr" ; died c. 874) was a Viking leader in Ireland and Scotland in the mid-late ninth century.  He was the son of the king of Lochlann, identified in the non-contemporary "Fragmentary Annals of Ireland" as Gofraid, and brother of Auisle and Ímar, the latter of whom founded the Uí Ímair dynasty, and whose descendants would go on to dominate the Irish Sea region for several centuries.  Another Viking leader, Halfdan Ragnarsson, is considered by some scholars to be another brother.  The Irish Annals title Amlaíb, Ímar and Auisle "kings of the foreigners".  Modern scholars use the title "kings of Dublin" after the Viking settlement which formed the base of their power.  The epithet "Conung" is derived from the Old Norse "konungr" and simply means "king".  Some scholars consider Amlaíb to be identical to Olaf the White, a Viking sea-king who features in the "Landnámabók" and other Icelandic sagas.
-
-Bagsecg: Bagsecg (also known as Bægsecg or Bagsec) (died 8 January 871) was a Viking leader commonly referred to as a king.  In 870 or 871 he led The Great Summer Army to England.  His forces joined those of the Great Danish Army which had already overrun much of England.  He and Halfdan Ragnarsson became the leaders of a joint invasion of the Kingdom of Wessex.  He was killed at the Battle of Ashdown, fighting a West Saxon Army led by King Ethelred and his younger brother, the future Alfred the Great.
-
-Sitric Cáech: Sitric Cáech, also known as Sitric Gále, (Old Norse: "Sigtryggr" , died 927) was a Viking leader who ruled Dublin and then Viking Northumbria in the early 10th century.  He was a grandson of Ímar and a member of the Uí Ímair.  Sitric was most probably among those Vikings expelled from Dublin in 902, whereafter he may have ruled territory in the eastern Danelaw in England.  In 917, he and his kinsman Ragnall ua Ímair sailed separate fleets to Ireland where they won several battles against local kings.  Sitric successfully recaptured Dublin and established himself as king, while Ragnall returned to England to become King of Northumbria.  In 919, Sitric won a victory at the Battle of Islandbridge over a coalition of local Irish kings who aimed to expel the Uí Ímair from Ireland.  Six Irish kings were killed in the battle, including Niall Glúndub, overking of the Northern Uí Néill and High King of Ireland.
-
-Ivar the Boneless: Ivar the Boneless (Old Norse: "Ívarr hinn Beinlausi" ; ) was a Viking leader and a commander who invaded what is now England.  According to the "Tale of Ragnar Lodbrok", he was the son of Ragnar Lodbrok and Aslaug.  His brothers included Björn Ironside, Halfdan Ragnarsson, Hvitserk, Sigurd Snake-in-the-Eye and Ubba.
-
-Question: Auisle or Óisle, was a Viking leader in Ireland and Scotland in the mid-late of which century, a nother Viking leader, Halfdan Ragnarsson, is sometimes considered a brother?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "viking_leader_name": {
-      "type": "string",
-      "description": "The primary name of the Viking leader in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "alternative_name": {
-      "type": "string",
-      "description": "An alternative name for the Viking leader."
-    },
-    "century_of_leadership": {
-      "type": "string",
-      "description": "The century during which the Viking leader was active."
-    },
-    "death_year": {
-      "type": "integer",
-      "description": "The approximate year of the Viking leader's death."
-    },
-    "related_viking_leader": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of another Viking leader mentioned in relation to the primary leader."
-        },
-        "relationship": {
-          "type": "string",
-          "description": "The relationship between the two Viking leaders."
-        }
-      },
-      "required": [
-        "name",
-        "relationship"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nAuisle: Auisle or Óisle (Old Norse: \"Ásl \"or\" Auðgísl\" ; died c. 867) was a Viking leader in Ireland and Scotland in the mid-late ninth century.  He was the son of the king of Lochlann, identified in the non-contemporary \"Fragmentary Annals of Ireland\" as Gofraid, and brother of Amlaíb Conung and Ímar, the latter of whom founded the Uí Ímair dynasty, and whose descendants would go on to dominate the Irish Sea region for several centuries.  Another Viking leader, Halfdan Ragnarsson, is sometimes considered a brother.  The Irish Annals title Auisle, Ímar and Amlaíb \"kings of the foreigners\".  Modern scholars use the title \"kings of Dublin\" after the Viking settlement which formed the base of their power.\n\nÍmar: Ímar (Old Norse: \"Ívarr\" ; died c. 873) was a Viking leader in Ireland and Scotland in the mid-late ninth century who founded the Uí Ímair dynasty, and whose descendants would go on to dominate the Irish Sea region for several centuries.  He was the son of the king of Lochlann, identified in the non-contemporary \"Fragmentary Annals of Ireland\" as Gofraid.  The \"Fragmentary Annals\" name Auisle and Amlaíb Conung as his brothers.  Another Viking leader, Halfdan Ragnarsson, is considered by some scholars to be another brother.  The Irish Annals title Amlaíb, Ímar and Auisle \"kings of the foreigners\".  Modern scholars use the title \"kings of Dublin\" after the Viking settlement which formed the base of their power.  Some scholars consider Ímar to be identical to Ivar the Boneless, a Viking commander of the Great Heathen Army named in contemporary English sources who also appears in the Icelandic sagas as a son of the legendary Viking Ragnar Lodbrok.\n\nEarly Scandinavian Dublin: The First Viking Age in Ireland began in 795, when Vikings began carrying out hit-and-run raids on Gaelic Irish coastal settlements.  Over the following decades the raiding parties became bigger and better organized; inland settlements were targeted as well as coastal ones; and the raiders built naval encampments known as longphorts to allow them to remain in Ireland throughout the winter.  In the mid 9th century, Viking leader Turgeis or \"Thorgest\" founded a stronghold at Dublin, plundered Leinster and Meath, and raided other parts of Ireland.  He was killed by the High King, Máel Sechnaill mac Máele Ruanaid, which was followed by several Irish victories against the Vikings and the seizure of Dublin in 849.  Shortly after, a new group of Vikings known as the Dubgaill (\"dark foreigners\") came to Ireland and clashed with the earlier Viking settlers, now called the Finngaill (\"fair foreigners\").  The wavering fortunes of these three groups and their shifting alliances, together with the shortcomings of contemporary records and the inaccuracy of later accounts, make this period one of the most complicated and least understood in the fledgling city's history.  In 853 a Viking warlord called Amlaíb (, possibly Olaf the White) arrived and made himself king of Dublin.  He ruled along with his brothers Ímar (\"Ívarr\", possibly Ivar the Boneless) and Auisle (\"Ásl\").  For the next fifteen years or so, they used Dublin as their base for a series of campaigns against Irish kingdoms.  During these conflicts they briefly allied themselves with several Irish kings.  The Dublin Vikings also carried out a number of raids in Britain at this time.  The deaths of Ivar (c.873) and Olaf (c.874) were followed by internecine conflict among the Vikings.  Although intermittent warfare between the Vikings and the Irish continued, these inner conflicts weakened the Viking colonies and made it easier for the Irish to unite against them.  In 902, Cerball mac Muirecáin, king of Leinster, and Máel Findia mac Flannacáin, king of Brega, launched a two-pronged attack on Dublin and drove the Vikings from the city.  However, in 914 the Vikings now known as the Uí Ímair (House of Ivar) would return to Ireland, marking the beginning of the Second Viking Age.\n\nOdda, Ealdorman of Devon: Odda, also known as Oddune, was a ninth-century ealdorman of Devon.  He is known for his victory at the Battle of Cynwit in 878, where his West Saxon forces defeated a Viking army led by Ubba, brother of the Viking chiefs Ivar the Boneless and Halfdan Ragnarsson.\n\nHalfdan Ragnarsson: Halfdan Ragnarsson (Old Norse: \"Hálfdan\" ; or \"Healfdene\"; Old Irish: \"Albann\" ; died 877) was a Viking leader and a commander of the Great Heathen Army which invaded the Anglo-Saxon kingdoms of England, starting in 865.  According to the tradition recorded in the Norse sagas he was one of the sons of Ragnar Lodbrok, and his brothers included Björn Ironside, Ivar the Boneless, Sigurd Snake-in-the-Eye and Ubba.  He was the first Viking King of Northumbria and a pretender to the throne of Kingdom of Dublin.  He died at the Battle of Strangford Lough in 877 trying to press his Irish claim.\n\nBattle of Strangford Lough: The Battle of Strangford Lough was fought in 877 between two groups of rival Vikings described by the Irish Annals as the \"fair heathens\" and the \"dark heathens\".  The \"Annals of Ulster\" describe \"Albann\", a figure usually identified with Halfdan Ragnarsson, a leader of the Great Heathen Army, as king of the \"dark heathens\", and \"Cogad Gáedel re Gallaib\" identifies Bárid mac Ímair, King of Dublin as the leader of the \"fair heathens\".  All accounts agree Halfdan was killed in the battle, and \"Cogad Gáedel re Gallaib\" adds that Bárid was wounded in it.\n\nAmlaíb Conung: Amlaíb Conung (Old Norse: \"Óláfr\" ; died c. 874) was a Viking leader in Ireland and Scotland in the mid-late ninth century.  He was the son of the king of Lochlann, identified in the non-contemporary \"Fragmentary Annals of Ireland\" as Gofraid, and brother of Auisle and Ímar, the latter of whom founded the Uí Ímair dynasty, and whose descendants would go on to dominate the Irish Sea region for several centuries.  Another Viking leader, Halfdan Ragnarsson, is considered by some scholars to be another brother.  The Irish Annals title Amlaíb, Ímar and Auisle \"kings of the foreigners\".  Modern scholars use the title \"kings of Dublin\" after the Viking settlement which formed the base of their power.  The epithet \"Conung\" is derived from the Old Norse \"konungr\" and simply means \"king\".  Some scholars consider Amlaíb to be identical to Olaf the White, a Viking sea-king who features in the \"Landnámabók\" and other Icelandic sagas.\n\nBagsecg: Bagsecg (also known as Bægsecg or Bagsec) (died 8 January 871) was a Viking leader commonly referred to as a king.  In 870 or 871 he led The Great Summer Army to England.  His forces joined those of the Great Danish Army which had already overrun much of England.  He and Halfdan Ragnarsson became the leaders of a joint invasion of the Kingdom of Wessex.  He was killed at the Battle of Ashdown, fighting a West Saxon Army led by King Ethelred and his younger brother, the future Alfred the Great.\n\nSitric Cáech: Sitric Cáech, also known as Sitric Gále, (Old Norse: \"Sigtryggr\" , died 927) was a Viking leader who ruled Dublin and then Viking Northumbria in the early 10th century.  He was a grandson of Ímar and a member of the Uí Ímair.  Sitric was most probably among those Vikings expelled from Dublin in 902, whereafter he may have ruled territory in the eastern Danelaw in England.  In 917, he and his kinsman Ragnall ua Ímair sailed separate fleets to Ireland where they won several battles against local kings.  Sitric successfully recaptured Dublin and established himself as king, while Ragnall returned to England to become King of Northumbria.  In 919, Sitric won a victory at the Battle of Islandbridge over a coalition of local Irish kings who aimed to expel the Uí Ímair from Ireland.  Six Irish kings were killed in the battle, including Niall Glúndub, overking of the Northern Uí Néill and High King of Ireland.\n\nIvar the Boneless: Ivar the Boneless (Old Norse: \"Ívarr hinn Beinlausi\" ; ) was a Viking leader and a commander who invaded what is now England.  According to the \"Tale of Ragnar Lodbrok\", he was the son of Ragnar Lodbrok and Aslaug.  His brothers included Björn Ironside, Halfdan Ragnarsson, Hvitserk, Sigurd Snake-in-the-Eye and Ubba.\n\nQuestion: Auisle or Óisle, was a Viking leader in Ireland and Scotland in the mid-late of which century, a nother Viking leader, Halfdan Ragnarsson, is sometimes considered a brother?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"viking_leader_name\": {\n      \"type\": \"string\",\n      \"description\": \"The primary name of the Viking leader in question.\"\n    },\n    \"alternative_name\": {\n      \"type\": \"string\",\n      \"description\": \"An alternative name for the Viking leader.\"\n    },\n    \"century_of_leadership\": {\n      \"type\": \"string\",\n      \"description\": \"The century during which the Viking leader was active.\"\n    },\n    \"death_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The approximate year of the Viking leader's death.\"\n    },\n    \"related_viking_leader\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of another Viking leader mentioned in relation to the primary leader.\"\n        },\n        \"relationship\": {\n          \"type\": \"string\",\n          \"description\": \"The relationship between the two Viking leaders.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"relationship\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"viking_leader_name\",\n    \"alternative_name\",\n    \"century_of_leadership\",\n    \"death_year\",\n    \"related_viking_leader\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "viking_leader_name",
-    "alternative_name",
-    "century_of_leadership",
-    "death_year",
-    "related_viking_leader"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "viking_leader_name": {
+        "type": "string",
+        "description": "The primary name of the Viking leader in question."
+      },
+      "alternative_name": {
+        "type": "string",
+        "description": "An alternative name for the Viking leader."
+      },
+      "century_of_leadership": {
+        "type": "string",
+        "description": "The century during which the Viking leader was active."
+      },
+      "death_year": {
+        "type": "integer",
+        "description": "The approximate year of the Viking leader's death."
+      },
+      "related_viking_leader": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of another Viking leader mentioned in relation to the primary leader."
+          },
+          "relationship": {
+            "type": "string",
+            "description": "The relationship between the two Viking leaders."
+          }
+        },
+        "required": [
+          "name",
+          "relationship"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "viking_leader_name",
+      "alternative_name",
+      "century_of_leadership",
+      "death_year",
+      "related_viking_leader"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

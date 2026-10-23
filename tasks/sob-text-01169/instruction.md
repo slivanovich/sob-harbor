@@ -1,84 +1,61 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Ferme générale: The ferme générale (] , "general farm") was, in "ancien régime" France, essentially an outsourced customs, excise and indirect tax operation.  It collected duties on behalf of the King (plus hefty bonus fees for themselves), under renewable six-year contracts.  The major tax collectors in that unfair, and therefore highly unpopular, tax farming system were known as the fermiers généraux, which would be "tax farmers-general" in English.
-
-Turnover tax: A turnover tax is similar to VAT, with the difference that it taxes intermediate and possibly capital goods.  It is an indirect tax, typically on an ad valorem basis, applicable to a production process or stage.  For example, when manufacturing activity is completed, a tax may be charged on some companies.  Sales tax occurs when merchandise has been sold.
-
-Service Tax: Service tax was a tax levied by Central Government of India on services provided or agreed to be provided excluding services covered under negative list and considering the Place of Provision of Services Rules, 2012 and collected as per Point of Taxation Rules, 2011 from the person liable to pay service tax.  Person liable to pay service tax is governed by Service Tax Rules, 1994 he may be service provider or service receiver or any other person made so liable.  It is an indirect tax wherein the service provider collects the tax on services from service receiver and pays the same to government of India.  Few services are presently exempt in public interest via Mega Exemption Notification 25/2012-ST as amended up to date and few services are charged service tax at abated rate as per Notification No. 26/2012-ST as amended up to date.  Presently from 1 June 2016, service tax rate has been increased to consolidated rate at 14% +0.5%+0.5%= 15% of value of services provided or to be provided.  The service tax rate now is consolidated rate as education cess and secondary higher education cess are subsumed with 2% of "Swach Bharat Cess(0.50%)" has been notified by the Government.
-
-Millones: The Millones were an indirect tax on food in Spain in the 16th and 17th centuries.  They were first imposed by Philip II and were approved by the Cortes de Castilla 4 April 1590.  The tax was initially intended in 1590 as a temporary measure to replace the Spanish Armada lost in attacking England.  The "millones" was voted by the Cortes of Castille in 1590 as a 6-year grant for 8 million ducats.  It was originally levied on the "cuatro especies" of wine, meat, olive oil, and vinegar.  The tax was renewed by the Cortes in 1596, and used as well by Philip's successors Philip III, Philip IV and Charles II.  Under Philip III the tax brought in 3 million ducats a year, although that fell back to 2 million ducats a year due to population loss and recession at the end of his reign.  In 1626, Philip IV and his Cortes doubled the tax to the level of 4 million ducats by also levying it on salt, paper and ship anchorage in lieu of proposed taxes on offices, grants and property; in the Cortes of 1632, the tax raised an additional 2.5 million ducats a year because it was levied on chocolate, sugar, fish, tobacco and other commodities.  From 1655, renewal of the tax was practically automatic, and from 1668 it was renewed by the "Junta de asistentes" that the king called together in lieu of bringing together the full Cortes.
-
-Navin Kumar: Navin Kumar (born 29 August 1952), is a retired Indian Administrative Service (I.A.S.) officer of Bihar cadre in India.  He also served as the first Chairman of Goods and Services Tax Network (GSTN) in India from 2013 to August 2017.  He has also served as Chief Secretary in the state of Bihar retiring from service in August 2012.  He belongs to the I.A.S. batch of 1975.  He has also served as Secretary in Ministry of Urban Development, Chairman of Metro Rail Corporations of India such as Delhi Metro Rail Corporation, Bangalore Metro Rail Corporation and Director General of Doordarshan with additional charge as CEO of Prasar Bharati.
-
-Direct tax: Though the actual definitions vary between jurisdictions, in general, a direct tax is a tax imposed upon a person or property as distinct from a tax imposed upon a transaction, which is described as an indirect tax.  The term may be used in economic and political analyses, but does not itself have any legal implications.  However, in the United States, the term has special constitutional significance because of a provision in the U.S. Constitution that "direct taxes" imposed by the national government be apportioned among the states on the basis of population.  In the European Union direct taxation remains the sole responsibility of member states.
-
-Value added tax (Nepal): Value Added Tax (VAT) is an indirect tax levied on the value creation or addition.  Concept of VAT in Nepal was introduced in FY 2049/50 but the act was developed in BS 2050.  VAT was implemented in 1998 and is the major source of government's revenue.  It is administered by Inland Revenue Department of Nepal.
-
-Goods and Services Tax (India): Goods and Services Tax (GST) is an indirect tax which was introduced in India on 1 July 2017 and was applicable throughout India which replaced multiple cascading taxes levied by the central and state governments.  It was introduced as The Constitution (One Hundred and First Amendment) Act 2017, following the passage of Constitution 122nd Amendment Bill.  The GST is governed by a GST Council and its Chairman is the Finance Minister of India.  Under GST, goods and services are taxed at the following rates, 0%, 5%, 12% ,18% and 28%.  There is a special rate of 0.25% on rough precious and semi-precious stones and 3% on gold.  In addition a cess of 15% or other rates on top of 28% GST applies on few items like aerated drinks, luxury cars and tobacco products.  GST was initially proposed to replace a slew of indirect taxes with a unified tax and was therefore set to dramatically reshape the country's 2 trillion dollar economy.  The rate of GST in India is between double to four times that levied in other countries like Singapore.
-
-Indirect tax: An indirect tax (such as sales tax, per unit tax, value added tax (VAT), or goods and services tax (GST)) is a tax collected by an intermediary (such as a retail store) from the person who bears the ultimate economic burden of the tax (such as the consumer).  The intermediary later files a tax return and forwards the tax proceeds to government with the return.  In this sense, the term indirect tax is contrasted with a direct tax, which is collected directly by government from the persons (legal or natural) on whom it is imposed.  Some commentators have argued that "a direct tax is one that cannot be changed by the taxpayer to someone else, whereas an indirect tax can be."
-
-Salt Commission: The Salt Industry Commission was an organization created in 758, during the decline of Tang dynasty China, used to raise tax revenue from the state monopoly of the salt trade, or salt gabelle.  The Commission sold salt to private merchants at a price that included a low but cumulatively substantial tax, which was passed on by the merchants at the point of sale.  This basic mechanism of an indirect tax collected by private merchants supervised by government officials endured to the mid-20th century.  The salt tax enabled a weak government to sustain itself; the government need control only the few regions that produced salt.  Plans to end the government monopoly on salt by 2016 were announced in 2014.
-
-Question: When was the indirect tax at which Navin Kumar served as the first chairman introduced in India? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "tax_name": {
-      "type": "string",
-      "description": "The name of the indirect tax."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "tax_type": {
-      "type": "string",
-      "description": "The classification of the tax (e.g., indirect tax)."
-    },
-    "country_of_introduction": {
-      "type": "string",
-      "description": "The country where the tax was introduced."
-    },
-    "introduction_date": {
-      "type": "string",
-      "format": "date",
-      "description": "The date when the tax was introduced."
-    },
-    "chairman_details": {
-      "type": "object",
-      "properties": {
-        "chairman_name": {
-          "type": "string",
-          "description": "The name of the first chairman."
-        },
-        "role": {
-          "type": "string",
-          "description": "The role of the chairman (e.g., first Chairman of GSTN)."
-        }
-      },
-      "required": [
-        "chairman_name",
-        "role"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nFerme générale: The ferme générale (] , \"general farm\") was, in \"ancien régime\" France, essentially an outsourced customs, excise and indirect tax operation.  It collected duties on behalf of the King (plus hefty bonus fees for themselves), under renewable six-year contracts.  The major tax collectors in that unfair, and therefore highly unpopular, tax farming system were known as the fermiers généraux, which would be \"tax farmers-general\" in English.\n\nTurnover tax: A turnover tax is similar to VAT, with the difference that it taxes intermediate and possibly capital goods.  It is an indirect tax, typically on an ad valorem basis, applicable to a production process or stage.  For example, when manufacturing activity is completed, a tax may be charged on some companies.  Sales tax occurs when merchandise has been sold.\n\nService Tax: Service tax was a tax levied by Central Government of India on services provided or agreed to be provided excluding services covered under negative list and considering the Place of Provision of Services Rules, 2012 and collected as per Point of Taxation Rules, 2011 from the person liable to pay service tax.  Person liable to pay service tax is governed by Service Tax Rules, 1994 he may be service provider or service receiver or any other person made so liable.  It is an indirect tax wherein the service provider collects the tax on services from service receiver and pays the same to government of India.  Few services are presently exempt in public interest via Mega Exemption Notification 25/2012-ST as amended up to date and few services are charged service tax at abated rate as per Notification No. 26/2012-ST as amended up to date.  Presently from 1 June 2016, service tax rate has been increased to consolidated rate at 14% +0.5%+0.5%= 15% of value of services provided or to be provided.  The service tax rate now is consolidated rate as education cess and secondary higher education cess are subsumed with 2% of \"Swach Bharat Cess(0.50%)\" has been notified by the Government.\n\nMillones: The Millones were an indirect tax on food in Spain in the 16th and 17th centuries.  They were first imposed by Philip II and were approved by the Cortes de Castilla 4 April 1590.  The tax was initially intended in 1590 as a temporary measure to replace the Spanish Armada lost in attacking England.  The \"millones\" was voted by the Cortes of Castille in 1590 as a 6-year grant for 8 million ducats.  It was originally levied on the \"cuatro especies\" of wine, meat, olive oil, and vinegar.  The tax was renewed by the Cortes in 1596, and used as well by Philip's successors Philip III, Philip IV and Charles II.  Under Philip III the tax brought in 3 million ducats a year, although that fell back to 2 million ducats a year due to population loss and recession at the end of his reign.  In 1626, Philip IV and his Cortes doubled the tax to the level of 4 million ducats by also levying it on salt, paper and ship anchorage in lieu of proposed taxes on offices, grants and property; in the Cortes of 1632, the tax raised an additional 2.5 million ducats a year because it was levied on chocolate, sugar, fish, tobacco and other commodities.  From 1655, renewal of the tax was practically automatic, and from 1668 it was renewed by the \"Junta de asistentes\" that the king called together in lieu of bringing together the full Cortes.\n\nNavin Kumar: Navin Kumar (born 29 August 1952), is a retired Indian Administrative Service (I.A.S.) officer of Bihar cadre in India.  He also served as the first Chairman of Goods and Services Tax Network (GSTN) in India from 2013 to August 2017.  He has also served as Chief Secretary in the state of Bihar retiring from service in August 2012.  He belongs to the I.A.S. batch of 1975.  He has also served as Secretary in Ministry of Urban Development, Chairman of Metro Rail Corporations of India such as Delhi Metro Rail Corporation, Bangalore Metro Rail Corporation and Director General of Doordarshan with additional charge as CEO of Prasar Bharati.\n\nDirect tax: Though the actual definitions vary between jurisdictions, in general, a direct tax is a tax imposed upon a person or property as distinct from a tax imposed upon a transaction, which is described as an indirect tax.  The term may be used in economic and political analyses, but does not itself have any legal implications.  However, in the United States, the term has special constitutional significance because of a provision in the U.S. Constitution that \"direct taxes\" imposed by the national government be apportioned among the states on the basis of population.  In the European Union direct taxation remains the sole responsibility of member states.\n\nValue added tax (Nepal): Value Added Tax (VAT) is an indirect tax levied on the value creation or addition.  Concept of VAT in Nepal was introduced in FY 2049/50 but the act was developed in BS 2050.  VAT was implemented in 1998 and is the major source of government's revenue.  It is administered by Inland Revenue Department of Nepal.\n\nGoods and Services Tax (India): Goods and Services Tax (GST) is an indirect tax which was introduced in India on 1 July 2017 and was applicable throughout India which replaced multiple cascading taxes levied by the central and state governments.  It was introduced as The Constitution (One Hundred and First Amendment) Act 2017, following the passage of Constitution 122nd Amendment Bill.  The GST is governed by a GST Council and its Chairman is the Finance Minister of India.  Under GST, goods and services are taxed at the following rates, 0%, 5%, 12% ,18% and 28%.  There is a special rate of 0.25% on rough precious and semi-precious stones and 3% on gold.  In addition a cess of 15% or other rates on top of 28% GST applies on few items like aerated drinks, luxury cars and tobacco products.  GST was initially proposed to replace a slew of indirect taxes with a unified tax and was therefore set to dramatically reshape the country's 2 trillion dollar economy.  The rate of GST in India is between double to four times that levied in other countries like Singapore.\n\nIndirect tax: An indirect tax (such as sales tax, per unit tax, value added tax (VAT), or goods and services tax (GST)) is a tax collected by an intermediary (such as a retail store) from the person who bears the ultimate economic burden of the tax (such as the consumer).  The intermediary later files a tax return and forwards the tax proceeds to government with the return.  In this sense, the term indirect tax is contrasted with a direct tax, which is collected directly by government from the persons (legal or natural) on whom it is imposed.  Some commentators have argued that \"a direct tax is one that cannot be changed by the taxpayer to someone else, whereas an indirect tax can be.\"\n\nSalt Commission: The Salt Industry Commission was an organization created in 758, during the decline of Tang dynasty China, used to raise tax revenue from the state monopoly of the salt trade, or salt gabelle.  The Commission sold salt to private merchants at a price that included a low but cumulatively substantial tax, which was passed on by the merchants at the point of sale.  This basic mechanism of an indirect tax collected by private merchants supervised by government officials endured to the mid-20th century.  The salt tax enabled a weak government to sustain itself; the government need control only the few regions that produced salt.  Plans to end the government monopoly on salt by 2016 were announced in 2014.\n\nQuestion: When was the indirect tax at which Navin Kumar served as the first chairman introduced in India? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"tax_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the indirect tax.\"\n    },\n    \"tax_type\": {\n      \"type\": \"string\",\n      \"description\": \"The classification of the tax (e.g., indirect tax).\"\n    },\n    \"country_of_introduction\": {\n      \"type\": \"string\",\n      \"description\": \"The country where the tax was introduced.\"\n    },\n    \"introduction_date\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"The date when the tax was introduced.\"\n    },\n    \"chairman_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"chairman_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the first chairman.\"\n        },\n        \"role\": {\n          \"type\": \"string\",\n          \"description\": \"The role of the chairman (e.g., first Chairman of GSTN).\"\n        }\n      },\n      \"required\": [\n        \"chairman_name\",\n        \"role\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"tax_name\",\n    \"tax_type\",\n    \"country_of_introduction\",\n    \"introduction_date\",\n    \"chairman_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "tax_name",
-    "tax_type",
-    "country_of_introduction",
-    "introduction_date",
-    "chairman_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "tax_name": {
+        "type": "string",
+        "description": "The name of the indirect tax."
+      },
+      "tax_type": {
+        "type": "string",
+        "description": "The classification of the tax (e.g., indirect tax)."
+      },
+      "country_of_introduction": {
+        "type": "string",
+        "description": "The country where the tax was introduced."
+      },
+      "introduction_date": {
+        "type": "string",
+        "format": "date",
+        "description": "The date when the tax was introduced."
+      },
+      "chairman_details": {
+        "type": "object",
+        "properties": {
+          "chairman_name": {
+            "type": "string",
+            "description": "The name of the first chairman."
+          },
+          "role": {
+            "type": "string",
+            "description": "The role of the chairman (e.g., first Chairman of GSTN)."
+          }
+        },
+        "required": [
+          "chairman_name",
+          "role"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "tax_name",
+      "tax_type",
+      "country_of_introduction",
+      "introduction_date",
+      "chairman_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

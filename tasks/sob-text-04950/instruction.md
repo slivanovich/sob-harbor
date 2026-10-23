@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Saint Medard, Ouest: Saint Medard is a town in the Arcahaie commune of the Arcahaie Arrondissement, in the Ouest department of Haiti.  It is located 3 kilometers north of Arcahaie communal section.
-
-Mont Saint-Michel: Le Mont-Saint-Michel (] ; Norman: "Mont Saint Miché", English: Saint Michael's Mount ) is an island commune in Normandy, France.  It is located about one kilometre (1 km ) off the country's northwestern coast, at the mouth of the Couesnon River near Avranches and is 100 ha in size.  s of 2009 , the island has a population of 44.
-
-Batha Region: Batha (Arabic: البطحة‎ ‎ ) is one of the 23 regions of Chad, composed of what was formerly Batha Prefecture.  It is located in the centre of the country.  The regional capital is Ati.  The region of Batha is divided into three departments are Batha Est, Batha Ouest and Fitri.
-
-Holy well: A holy well or sacred spring is a spring or other small body of water revered either in a Christian or pagan context, sometimes both.  The term "holy well" is commonly employed to refer to any water source of limited size (i.e. not a lake or river, but including pools and natural springs and seeps), which has some significance in the folklore of the area where it is located, whether in the form of a particular name, an associated legend, the attribution of healing qualities to the water through the numinous presence of its guardian spirit or Christian saint, or a ceremony or ritual centred on the well site.  In Christian legend, the water is often said to have been made to flow by the action of a saint, a familiar theme especially in the hagiography of Celtic saints.
-
-Kenscoff: Kenscoff is a commune in the Port-au-Prince Arrondissement, in the Ouest department of Haiti, located in the foothills of the Chaîne de la Selle mountain range, some 10 kilometres to the southeast of the capital city of Port-au-Prince.  The altitude is approximately 1500 meters, making the town the highest permanent settlement in the Caribbean.  Because of its altitude, the temperature is on average cooler than the capital and during winter months can be chilly relative to the rest of the country.  It has a population of around 52,200.
-
-Parroquia del Espíritu Santo y San Patricio: The Parroquia del Espíritu Santo y San Patricio (English: Parish Church of the Holy Spirit and Saint Patrick ), constructed in 1645, is one of Puerto Rico's oldest Catholic parish churches.  It is located in the main plaza of the municipality of Loíza, Puerto Rico.  The church represents an ethnically distinct community characterized by a rich Afro-Hispanic cultural and folk craft tradition.  The structure's massive walls and buttresses helped the building withstand flood and hurricanes and likewise provided the people of Loíza with shelter from such natural disasters.  The church, named after Saint Patrick, was enlarged to its present size in 1729.
-
-Haiti: Haiti ( ; French: "Haïti" ] ; Haitian Creole: "Ayiti" ] ), officially the Republic of Haiti (French: "République d'Haïti" ; Haitian Creole: "Repiblik Ayiti" ) and formerly called Hayti, is a country located on the island of Hispaniola in the Greater Antilles archipelago of the Caribbean Sea.  It occupies the western three-eighths of the island, which it shares with the Dominican Republic.  Haiti is 27750 km2 in size and has an estimated /1e6 round 1 million people, making it the most populous country in the Caribbean Community (CARICOM) and the second-most populous country in the Caribbean as a whole.
-
-Saint Mary's University Library: Saint Mary's University Twin Cities Library serves the university's 4,800 combined graduate and undergraduate nontraditional and adult student population.  The TC Library's continually growing print, online, and A/V collections support the degrees and coursework offered through Saint Mary's University of Minnesota Schools of Graduate and Professional Programs.  Saint Mary's University Library relocated three times as the library expanded in collection content, size, and staff.  The most recent renovation in July–October 2008 expanded the library to over 13500 sqft .  Presently located in LaSalle Hall at Saint Mary's University's Minneapolis campus, the library now offers individual and group study spaces, media viewing rooms, a computer lab, two instruction classrooms, and presentation theater available for exit interviews and dissertation defenses.  TC Library specializes in offering online resources for distance and commuter students.
-
-Geography of Saint Kitts and Nevis: Saint Kitts and Nevis is a twin island country with a total landmass of just 104 sqmi .  The island of St. Kitts, the larger of the two, is 68 sqmi in size and is located at latitude 17.30 N, and longitude 62.80 W. Nevis is 36 sqmi and located at latitude 17.10 N, longitude 62.35 W, approximately 3 km south-east of St. Kitts.  The islands are about one-third of the way from Puerto Rico to Trinidad and Tobago.
-
-List of diplomatic missions of Saint Lucia: This is a list of diplomatic missions of Saint Lucia.  Saint Lucia has a modest number of diplomatic missions appropriate to the country's size.  The mission in Brussels is jointly representative of the Organization of Eastern Caribbean States.
-
-Question: What is the size of the country where Saint Medard, Ouest is located? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "location_name": {
-      "type": "string",
-      "description": "The name of the specific location mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "country_name": {
-      "type": "string",
-      "description": "The name of the country where the location is situated."
-    },
-    "country_size_km2": {
-      "type": "integer",
-      "description": "The total land area of the country in square kilometers."
+    {
+      "role": "user",
+      "content": "Context:\nSaint Medard, Ouest: Saint Medard is a town in the Arcahaie commune of the Arcahaie Arrondissement, in the Ouest department of Haiti.  It is located 3 kilometers north of Arcahaie communal section.\n\nMont Saint-Michel: Le Mont-Saint-Michel (] ; Norman: \"Mont Saint Miché\", English: Saint Michael's Mount ) is an island commune in Normandy, France.  It is located about one kilometre (1 km ) off the country's northwestern coast, at the mouth of the Couesnon River near Avranches and is 100 ha in size.  s of 2009 , the island has a population of 44.\n\nBatha Region: Batha (Arabic: البطحة‎ ‎ ) is one of the 23 regions of Chad, composed of what was formerly Batha Prefecture.  It is located in the centre of the country.  The regional capital is Ati.  The region of Batha is divided into three departments are Batha Est, Batha Ouest and Fitri.\n\nHoly well: A holy well or sacred spring is a spring or other small body of water revered either in a Christian or pagan context, sometimes both.  The term \"holy well\" is commonly employed to refer to any water source of limited size (i.e. not a lake or river, but including pools and natural springs and seeps), which has some significance in the folklore of the area where it is located, whether in the form of a particular name, an associated legend, the attribution of healing qualities to the water through the numinous presence of its guardian spirit or Christian saint, or a ceremony or ritual centred on the well site.  In Christian legend, the water is often said to have been made to flow by the action of a saint, a familiar theme especially in the hagiography of Celtic saints.\n\nKenscoff: Kenscoff is a commune in the Port-au-Prince Arrondissement, in the Ouest department of Haiti, located in the foothills of the Chaîne de la Selle mountain range, some 10 kilometres to the southeast of the capital city of Port-au-Prince.  The altitude is approximately 1500 meters, making the town the highest permanent settlement in the Caribbean.  Because of its altitude, the temperature is on average cooler than the capital and during winter months can be chilly relative to the rest of the country.  It has a population of around 52,200.\n\nParroquia del Espíritu Santo y San Patricio: The Parroquia del Espíritu Santo y San Patricio (English: Parish Church of the Holy Spirit and Saint Patrick ), constructed in 1645, is one of Puerto Rico's oldest Catholic parish churches.  It is located in the main plaza of the municipality of Loíza, Puerto Rico.  The church represents an ethnically distinct community characterized by a rich Afro-Hispanic cultural and folk craft tradition.  The structure's massive walls and buttresses helped the building withstand flood and hurricanes and likewise provided the people of Loíza with shelter from such natural disasters.  The church, named after Saint Patrick, was enlarged to its present size in 1729.\n\nHaiti: Haiti ( ; French: \"Haïti\" ] ; Haitian Creole: \"Ayiti\" ] ), officially the Republic of Haiti (French: \"République d'Haïti\" ; Haitian Creole: \"Repiblik Ayiti\" ) and formerly called Hayti, is a country located on the island of Hispaniola in the Greater Antilles archipelago of the Caribbean Sea.  It occupies the western three-eighths of the island, which it shares with the Dominican Republic.  Haiti is 27750 km2 in size and has an estimated /1e6 round 1 million people, making it the most populous country in the Caribbean Community (CARICOM) and the second-most populous country in the Caribbean as a whole.\n\nSaint Mary's University Library: Saint Mary's University Twin Cities Library serves the university's 4,800 combined graduate and undergraduate nontraditional and adult student population.  The TC Library's continually growing print, online, and A/V collections support the degrees and coursework offered through Saint Mary's University of Minnesota Schools of Graduate and Professional Programs.  Saint Mary's University Library relocated three times as the library expanded in collection content, size, and staff.  The most recent renovation in July–October 2008 expanded the library to over 13500 sqft .  Presently located in LaSalle Hall at Saint Mary's University's Minneapolis campus, the library now offers individual and group study spaces, media viewing rooms, a computer lab, two instruction classrooms, and presentation theater available for exit interviews and dissertation defenses.  TC Library specializes in offering online resources for distance and commuter students.\n\nGeography of Saint Kitts and Nevis: Saint Kitts and Nevis is a twin island country with a total landmass of just 104 sqmi .  The island of St. Kitts, the larger of the two, is 68 sqmi in size and is located at latitude 17.30 N, and longitude 62.80 W. Nevis is 36 sqmi and located at latitude 17.10 N, longitude 62.35 W, approximately 3 km south-east of St. Kitts.  The islands are about one-third of the way from Puerto Rico to Trinidad and Tobago.\n\nList of diplomatic missions of Saint Lucia: This is a list of diplomatic missions of Saint Lucia.  Saint Lucia has a modest number of diplomatic missions appropriate to the country's size.  The mission in Brussels is jointly representative of the Organization of Eastern Caribbean States.\n\nQuestion: What is the size of the country where Saint Medard, Ouest is located? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"location_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the specific location mentioned in the question.\"\n    },\n    \"country_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the country where the location is situated.\"\n    },\n    \"country_size_km2\": {\n      \"type\": \"integer\",\n      \"description\": \"The total land area of the country in square kilometers.\"\n    }\n  },\n  \"required\": [\n    \"location_name\",\n    \"country_name\",\n    \"country_size_km2\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "location_name",
-    "country_name",
-    "country_size_km2"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "location_name": {
+        "type": "string",
+        "description": "The name of the specific location mentioned in the question."
+      },
+      "country_name": {
+        "type": "string",
+        "description": "The name of the country where the location is situated."
+      },
+      "country_size_km2": {
+        "type": "integer",
+        "description": "The total land area of the country in square kilometers."
+      }
+    },
+    "required": [
+      "location_name",
+      "country_name",
+      "country_size_km2"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

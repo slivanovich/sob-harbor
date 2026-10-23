@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-F-22P Zulfiquar-class frigate: The F-22P or "Zulfiquar"-class frigate (Urdu: ذوالفقار ‎ English: Sword class ), is a general purpose frigate built by Pakistan under license from China for the Pakistan Navy (PN).  They are an adaptation of the Type 053H3 frigates of China but include elements of the Type 054 frigates as well.
-
-Whitby-class frigate: The Type 12 or "Whitby"-class frigates were a six-ship class of anti-submarine frigates of the British Royal Navy, which entered service late in the 1950s.  They were designed in the early 1950s as first-rate ocean-going convoy escorts, in the light of experience gained during World War II.  At this time, the Royal Navy were designing single-role escorts and the "Whitby"s were designed as fast convoy escorts capable of tackling high-speed submarines.  However, this made the "Whitby"s more expensive and sophisticated to produce in large numbers in the event of a major war, and so the Type 14 "utility" or "second-rate" anti-submarine frigate was developed to complement the Type 12.  Although themselves rapidly outdated, the Type 12 proved to be an excellent basis for a series of frigate designs used by the British and Commonwealth navies for the next 20 years.
-
-General Purpose Frigate (Canada): The General Purpose Frigate, or GPF, was a procurement project for the Royal Canadian Navy during the Cold War.  The class was also known as the Tribal-class frigate.  Intended as a replacement for the Second World War-era destroyers in service at the time, the frigate design was developed for the Progressive Conservative Diefenbaker government in the late 1950s as part of the general fleet renewal program.  The GPF program was cancelled under the Liberal Pearson government as part of their plan to reshape the Canadian Armed Forces.  Following the cancellation, a modified version of the design was used for the "Iroquois"-class destroyer s.
-
-Type 23 frigate: The Type 23 frigate or "Duke"-class is a class of frigate built for the United Kingdom's Royal Navy.  The ships are named after British Dukes, thus leading to the class being commonly known as the "Duke"-class.  The first Type 23 was commissioned in 1989, and the sixteenth, HMS "St Albans" was commissioned in June 2002.  They form the core of the Royal Navy's destroyer and frigate fleet and serve alongside the Type 45 destroyers. Originally designed for anti-submarine warfare in the North Atlantic, the Royal Navy’s Type 23 frigates have proven their versatility in warfighting, peace-keeping and maritime security operations around the globe.  Thirteen Type 23 frigates remain in service with the Royal Navy, with three vessels having been sold to Chile and handed over to the Chilean Navy.
-
-Type 22 frigate: The Type 22 "Broadsword" class was a class of frigate built for the British Royal Navy.  Fourteen of the class were built in total, with production divided into three batches.  HMS "Cornwall" was the last Royal Navy Type 22 frigate, retired from service on 30 June 2011.
-
-HMS Lancaster (F229): HMS "Lancaster" is a "Duke" class Type 23 frigate of the Royal Navy.  She was launched by Queen Elizabeth II on 24 May 1990 and is known as "The Queen's Frigate", the Duke of Lancaster being a subsidiary title of the Sovereign.  Being the third ship in the Type 23 class, "Lancaster" was originally allocated the pennant number F232 until it was realised that the 232 is the Royal Navy report form for groundings and collisions and therefore considered unlucky.  She is one of the few "stag ships" left in the fleet, she has some female officers but the mess decks are men-only.  It is quite common when she has returned from long operations that she is flown over by the Avro Lancaster bomber which is part of the Battle of Britain Memorial Flight based at RAF Coningsby.
-
-HMNZS Otago (F111): HMNZS "Otago" (F111) was a "Rothesay"-class Type 12 frigate, or separately designated, "Otago"-class frigate acquired from the Royal Navy by the Royal New Zealand Navy (RNZN) before completion.  "Otago" and "Taranaki" significantly differ from the Royal Navy "Rothesay"s as the RNZN is a conventionally armed navy, and the New Zealand ships have a slightly higher level of conventional capability.  with the long range Type 177 sonar to combine with the only operational MK 20 heavyweight torpedo,(where the RN versions in most cases had an accurate short range Type 174, initially) and provide more comfort for the crew in cafeteria and bunk bedding.  She was launched on 11 December 1958 by Princess Margaret, and was commissioned into the Royal New Zealand Navy on 22 June 1960.  As ordered the frigate was intended to mount a twin Mk 5 40mm for close in AA to supplement the 4.5 turret but by 1960 the RNZN had made the decision to rely on missiles in the form of Seacat for AA as soon as the system could be refited and the Otago and sister Taranaki were fitted only with a single 40mm on completion with Seacat being refitted in NZ in 1963-64.  During the confrontation with Indonesia in 1964-6,HMNZS Otago, in line with most RN frigates was refitted with a couple of WW2 20mm single mounts for junk bashing, its sister Taranaki had old Mk 3 40 mm temporarily fitted for this.  later in the decade US Mk 32 tubes were fitted for Mk 44/46 torpedoes in place of the tubes for ineffective, RN Mk20 torpedoes, in line with the ANZUS alliance, the UKs 1968 decision to withdraw from East of Suez and the belief of the RNZN anti sub specialists and director of plans that Limbo mortars were useless for anything but killing huge numbers of fish in the Hauraki Gulf.
-
-Type 26 frigate: The Type 26 frigate or City-class frigate is a class of frigate being built for the United Kingdom's Royal Navy.  The ship design and manufacture program, known as the Global Combat Ship, was created by the UK Ministry of Defence to partially replace the navy's thirteen Type 23 frigates, and for export.  It will be a multi-mission warship designed to support anti-submarine warfare, air defence and general purpose operations.
-
-Type 31e frigate: The Type 31e frigate, also known as the Type 31 frigate or General Purpose Frigate (GPFF), is a planned class of frigate for the United Kingdom's Royal Navy intended to enter service in the 2020s alongside the more advanced Type 26 frigate.
-
-HMNZS Canterbury (F421): HMNZS "Canterbury" (F421) was one of two broad beam "Leander"-class frigates operated by the Royal New Zealand Navy (RNZN) from 1971 to 2005.  She was built in Scotland and launched in 1970.  Commissioned in 1971, "Canterbury" saw operational service in much of Australasia and other regions like the Persian Gulf.  She undertook operations such as supporting UN sanctions against Iraq and peace-keeping in East Timor.  With her sister ship HMNZS "Waikato" she relieved the Royal Navy frigate HMS "Amazon" in the Indian Ocean during the Falklands War.  Early in HMNZS Canterbury's career she relieved the frigate HMNZS "Otago" at Moruroa during anti-nuclear protests, in 1973, F 421 being the most effectively insulated frigate, from nuclear fallout, with the Improved Broad Beam Leander steam plant, for e.g., being remote controlled and capable of unmanned operation and therefore the ship a more effective sealed citadel for operations in areas of nuclear explosions.
-
-Question: The Type 31e frigate, also known as the Type 31 frigate or General Purpose Frigate (GPFF), is a planned class of frigate for the United Kingdom's Royal Navy intended to enter service in the 2020s alongside the more advanced Type 26 frigate, a class of frigate being built for which organization of the United Kingdom?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "frigate_class_name": {
-      "type": "string",
-      "description": "The name of the frigate class."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "organization_name": {
-      "type": "string",
-      "description": "The name of the organization for which the frigate is being built."
-    },
-    "country": {
-      "type": "string",
-      "description": "The country associated with the organization."
-    },
-    "frigate_purpose": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "The intended operational purposes of the frigate."
+    {
+      "role": "user",
+      "content": "Context:\nF-22P Zulfiquar-class frigate: The F-22P or \"Zulfiquar\"-class frigate (Urdu: ذوالفقار ‎ English: Sword class ), is a general purpose frigate built by Pakistan under license from China for the Pakistan Navy (PN).  They are an adaptation of the Type 053H3 frigates of China but include elements of the Type 054 frigates as well.\n\nWhitby-class frigate: The Type 12 or \"Whitby\"-class frigates were a six-ship class of anti-submarine frigates of the British Royal Navy, which entered service late in the 1950s.  They were designed in the early 1950s as first-rate ocean-going convoy escorts, in the light of experience gained during World War II.  At this time, the Royal Navy were designing single-role escorts and the \"Whitby\"s were designed as fast convoy escorts capable of tackling high-speed submarines.  However, this made the \"Whitby\"s more expensive and sophisticated to produce in large numbers in the event of a major war, and so the Type 14 \"utility\" or \"second-rate\" anti-submarine frigate was developed to complement the Type 12.  Although themselves rapidly outdated, the Type 12 proved to be an excellent basis for a series of frigate designs used by the British and Commonwealth navies for the next 20 years.\n\nGeneral Purpose Frigate (Canada): The General Purpose Frigate, or GPF, was a procurement project for the Royal Canadian Navy during the Cold War.  The class was also known as the Tribal-class frigate.  Intended as a replacement for the Second World War-era destroyers in service at the time, the frigate design was developed for the Progressive Conservative Diefenbaker government in the late 1950s as part of the general fleet renewal program.  The GPF program was cancelled under the Liberal Pearson government as part of their plan to reshape the Canadian Armed Forces.  Following the cancellation, a modified version of the design was used for the \"Iroquois\"-class destroyer s.\n\nType 23 frigate: The Type 23 frigate or \"Duke\"-class is a class of frigate built for the United Kingdom's Royal Navy.  The ships are named after British Dukes, thus leading to the class being commonly known as the \"Duke\"-class.  The first Type 23 was commissioned in 1989, and the sixteenth, HMS \"St Albans\" was commissioned in June 2002.  They form the core of the Royal Navy's destroyer and frigate fleet and serve alongside the Type 45 destroyers. Originally designed for anti-submarine warfare in the North Atlantic, the Royal Navy’s Type 23 frigates have proven their versatility in warfighting, peace-keeping and maritime security operations around the globe.  Thirteen Type 23 frigates remain in service with the Royal Navy, with three vessels having been sold to Chile and handed over to the Chilean Navy.\n\nType 22 frigate: The Type 22 \"Broadsword\" class was a class of frigate built for the British Royal Navy.  Fourteen of the class were built in total, with production divided into three batches.  HMS \"Cornwall\" was the last Royal Navy Type 22 frigate, retired from service on 30 June 2011.\n\nHMS Lancaster (F229): HMS \"Lancaster\" is a \"Duke\" class Type 23 frigate of the Royal Navy.  She was launched by Queen Elizabeth II on 24 May 1990 and is known as \"The Queen's Frigate\", the Duke of Lancaster being a subsidiary title of the Sovereign.  Being the third ship in the Type 23 class, \"Lancaster\" was originally allocated the pennant number F232 until it was realised that the 232 is the Royal Navy report form for groundings and collisions and therefore considered unlucky.  She is one of the few \"stag ships\" left in the fleet, she has some female officers but the mess decks are men-only.  It is quite common when she has returned from long operations that she is flown over by the Avro Lancaster bomber which is part of the Battle of Britain Memorial Flight based at RAF Coningsby.\n\nHMNZS Otago (F111): HMNZS \"Otago\" (F111) was a \"Rothesay\"-class Type 12 frigate, or separately designated, \"Otago\"-class frigate acquired from the Royal Navy by the Royal New Zealand Navy (RNZN) before completion.  \"Otago\" and \"Taranaki\" significantly differ from the Royal Navy \"Rothesay\"s as the RNZN is a conventionally armed navy, and the New Zealand ships have a slightly higher level of conventional capability.  with the long range Type 177 sonar to combine with the only operational MK 20 heavyweight torpedo,(where the RN versions in most cases had an accurate short range Type 174, initially) and provide more comfort for the crew in cafeteria and bunk bedding.  She was launched on 11 December 1958 by Princess Margaret, and was commissioned into the Royal New Zealand Navy on 22 June 1960.  As ordered the frigate was intended to mount a twin Mk 5 40mm for close in AA to supplement the 4.5 turret but by 1960 the RNZN had made the decision to rely on missiles in the form of Seacat for AA as soon as the system could be refited and the Otago and sister Taranaki were fitted only with a single 40mm on completion with Seacat being refitted in NZ in 1963-64.  During the confrontation with Indonesia in 1964-6,HMNZS Otago, in line with most RN frigates was refitted with a couple of WW2 20mm single mounts for junk bashing, its sister Taranaki had old Mk 3 40 mm temporarily fitted for this.  later in the decade US Mk 32 tubes were fitted for Mk 44/46 torpedoes in place of the tubes for ineffective, RN Mk20 torpedoes, in line with the ANZUS alliance, the UKs 1968 decision to withdraw from East of Suez and the belief of the RNZN anti sub specialists and director of plans that Limbo mortars were useless for anything but killing huge numbers of fish in the Hauraki Gulf.\n\nType 26 frigate: The Type 26 frigate or City-class frigate is a class of frigate being built for the United Kingdom's Royal Navy.  The ship design and manufacture program, known as the Global Combat Ship, was created by the UK Ministry of Defence to partially replace the navy's thirteen Type 23 frigates, and for export.  It will be a multi-mission warship designed to support anti-submarine warfare, air defence and general purpose operations.\n\nType 31e frigate: The Type 31e frigate, also known as the Type 31 frigate or General Purpose Frigate (GPFF), is a planned class of frigate for the United Kingdom's Royal Navy intended to enter service in the 2020s alongside the more advanced Type 26 frigate.\n\nHMNZS Canterbury (F421): HMNZS \"Canterbury\" (F421) was one of two broad beam \"Leander\"-class frigates operated by the Royal New Zealand Navy (RNZN) from 1971 to 2005.  She was built in Scotland and launched in 1970.  Commissioned in 1971, \"Canterbury\" saw operational service in much of Australasia and other regions like the Persian Gulf.  She undertook operations such as supporting UN sanctions against Iraq and peace-keeping in East Timor.  With her sister ship HMNZS \"Waikato\" she relieved the Royal Navy frigate HMS \"Amazon\" in the Indian Ocean during the Falklands War.  Early in HMNZS Canterbury's career she relieved the frigate HMNZS \"Otago\" at Moruroa during anti-nuclear protests, in 1973, F 421 being the most effectively insulated frigate, from nuclear fallout, with the Improved Broad Beam Leander steam plant, for e.g., being remote controlled and capable of unmanned operation and therefore the ship a more effective sealed citadel for operations in areas of nuclear explosions.\n\nQuestion: The Type 31e frigate, also known as the Type 31 frigate or General Purpose Frigate (GPFF), is a planned class of frigate for the United Kingdom's Royal Navy intended to enter service in the 2020s alongside the more advanced Type 26 frigate, a class of frigate being built for which organization of the United Kingdom?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"frigate_class_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the frigate class.\"\n    },\n    \"organization_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the organization for which the frigate is being built.\"\n    },\n    \"country\": {\n      \"type\": \"string\",\n      \"description\": \"The country associated with the organization.\"\n    },\n    \"frigate_purpose\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"The intended operational purposes of the frigate.\"\n    }\n  },\n  \"required\": [\n    \"frigate_class_name\",\n    \"organization_name\",\n    \"country\",\n    \"frigate_purpose\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "frigate_class_name",
-    "organization_name",
-    "country",
-    "frigate_purpose"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "frigate_class_name": {
+        "type": "string",
+        "description": "The name of the frigate class."
+      },
+      "organization_name": {
+        "type": "string",
+        "description": "The name of the organization for which the frigate is being built."
+      },
+      "country": {
+        "type": "string",
+        "description": "The country associated with the organization."
+      },
+      "frigate_purpose": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The intended operational purposes of the frigate."
+      }
+    },
+    "required": [
+      "frigate_class_name",
+      "organization_name",
+      "country",
+      "frigate_purpose"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Jessica Alba: Jessica Marie Alba ( ; born April 28, 1981) is an American actress and businesswoman.  She has won various awards for her acting, including the Choice Actress Teen Choice Award and Saturn Award for Best Actress on Television, and a Golden Globe nomination for her lead role in the television series "Dark Angel".
-
-Erik Clausen: Erik Clausen (born 7 March 1942) is a Danish actor, film director and screenwriter.  He has directed fourteen films since 1981.  His 2007 film "Temporary Release" was entered into the 29th Moscow International Film Festival.
-
-Awake (film): Awake is a 2007 American conspiracy thriller film written and directed by Joby Harold.  It stars Hayden Christensen, Jessica Alba, Terrence Howard and Lena Olin.  The film was released in the United States and Canada on November 30, 2007.
-
-Last Train Home EP: Last Train Home EP is an EP by singer/songwriter Ryan Star including four previously unreleased songs and two music videos.  It reached No. 42 on Top Heatseekers chart.  The title song was released as the first single off Star's major label debut "".  It was also featured on the soundtrack for the 2007 film P.S. I Love You.
-
-Illegal Tender (film): Illegal Tender is a 2007 film written and directed by Franc.  Reyes and produced by John Singleton.  It stars Rick Gonzalez, Wanda De Jesus and Dania Ramirez, the film also marks the film debut of Reggaeton music star Tego Calderón.
-
-Andrew Kazamia: He has written and directed "Trust Me", the 2007 film starring Cory Prendergast, Enn Reitel, Tony Curran and Shelley Long.  It won three awards at its first festival screening at the Breckenridge Festival of Film, June 2007: Best Supporting Actor for Enn Reitel, Best Comedy and an Audiences Award.  At the next festival, the Honolulu International Film Festival, July 2007, it won Best Director, then at the Kansas Universal Film Festival, September 2007, it won Best Director and Best Editor.  It screened at the Braunschweig Film Festival in Germany where Andrew Kazamia won the Heinrich award for first time European film makers.
-
-Chris Wyatt (producer): Christopher Aaron Wyatt, sometimes credited as Chris "Doc" Wyatt, (born October 5, 1975 in Atlanta, Georgia) is an American film producer, writer, and second unit director.  He produced the 2004 film "Napoleon Dynamite", the 2006 film "Think Tank", the 2007 film "Beneath", the 2007 film "Coyote", and the 2009 film "Broken Hill" featuring Oscar-winner Timothy Hutton.  He is a graduate of the Peter Stark Producing Program at the University of Southern California.
-
-Halloween II (2009 film): Halloween II is a 2009 American slasher film written, directed, and produced by Rob Zombie.  The film is a sequel to Zombie's 2007 remake of 1978's "Halloween", and the tenth installment of the franchise.  Picking up where the 2007 film ended and then jumping ahead one year, "Halloween II" follows Laurie Strode as she deals with the aftermath of the previous film's events, Dr. Loomis who is trying to capitalize on those events by publishing a new book that chronicles everything that happened, and Michael Myers as he continues his search for Laurie so that he can reunite with his sister.  The film sees the return of lead cast members from the 2007 film Malcolm McDowell, Scout Taylor-Compton, and Tyler Mane, who portray Dr. Loomis, Laurie Strode, and Michael Myers, respectively.
-
-Nick Chastain: Nicholas "Nick" Joseph Chastain, born (1981--) 1, 1981 (age 36 ) , is an American actor, best known for his portrayal of the psychotic Alex on the highest rated soap opera The Young and the Restless in 2004 and 2006.  He was in the 2007 film "Fast Girl".
-
-Amanda Brooks: Amanda Brooks (born June 22, 1981) is an actress who starred in the 2007 film "D-War" and in the 2006 film "Cut Off".  She also had leading roles in the 2005 films "Flightplan" and "River's End".  She also starred in "The Canyons" as Gina.
-
-Question: Which star of the 2007 film Awake was born in 1981 ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "release_year": {
-      "type": "integer",
-      "description": "The release year of the film."
-    },
-    "actor_details": {
-      "type": "object",
-      "properties": {
-        "actor_name": {
-          "type": "string",
-          "description": "The name of the actor who meets the criteria."
-        },
-        "birth_year": {
-          "type": "integer",
-          "description": "The birth year of the identified actor."
-        }
-      },
-      "required": [
-        "actor_name",
-        "birth_year"
-      ],
-      "additionalProperties": false
-    },
-    "question_year_of_birth": {
-      "type": "integer",
-      "description": "The birth year specified in the question for filtering actors."
+    {
+      "role": "user",
+      "content": "Context:\nJessica Alba: Jessica Marie Alba ( ; born April 28, 1981) is an American actress and businesswoman.  She has won various awards for her acting, including the Choice Actress Teen Choice Award and Saturn Award for Best Actress on Television, and a Golden Globe nomination for her lead role in the television series \"Dark Angel\".\n\nErik Clausen: Erik Clausen (born 7 March 1942) is a Danish actor, film director and screenwriter.  He has directed fourteen films since 1981.  His 2007 film \"Temporary Release\" was entered into the 29th Moscow International Film Festival.\n\nAwake (film): Awake is a 2007 American conspiracy thriller film written and directed by Joby Harold.  It stars Hayden Christensen, Jessica Alba, Terrence Howard and Lena Olin.  The film was released in the United States and Canada on November 30, 2007.\n\nLast Train Home EP: Last Train Home EP is an EP by singer/songwriter Ryan Star including four previously unreleased songs and two music videos.  It reached No. 42 on Top Heatseekers chart.  The title song was released as the first single off Star's major label debut \"\".  It was also featured on the soundtrack for the 2007 film P.S. I Love You.\n\nIllegal Tender (film): Illegal Tender is a 2007 film written and directed by Franc.  Reyes and produced by John Singleton.  It stars Rick Gonzalez, Wanda De Jesus and Dania Ramirez, the film also marks the film debut of Reggaeton music star Tego Calderón.\n\nAndrew Kazamia: He has written and directed \"Trust Me\", the 2007 film starring Cory Prendergast, Enn Reitel, Tony Curran and Shelley Long.  It won three awards at its first festival screening at the Breckenridge Festival of Film, June 2007: Best Supporting Actor for Enn Reitel, Best Comedy and an Audiences Award.  At the next festival, the Honolulu International Film Festival, July 2007, it won Best Director, then at the Kansas Universal Film Festival, September 2007, it won Best Director and Best Editor.  It screened at the Braunschweig Film Festival in Germany where Andrew Kazamia won the Heinrich award for first time European film makers.\n\nChris Wyatt (producer): Christopher Aaron Wyatt, sometimes credited as Chris \"Doc\" Wyatt, (born October 5, 1975 in Atlanta, Georgia) is an American film producer, writer, and second unit director.  He produced the 2004 film \"Napoleon Dynamite\", the 2006 film \"Think Tank\", the 2007 film \"Beneath\", the 2007 film \"Coyote\", and the 2009 film \"Broken Hill\" featuring Oscar-winner Timothy Hutton.  He is a graduate of the Peter Stark Producing Program at the University of Southern California.\n\nHalloween II (2009 film): Halloween II is a 2009 American slasher film written, directed, and produced by Rob Zombie.  The film is a sequel to Zombie's 2007 remake of 1978's \"Halloween\", and the tenth installment of the franchise.  Picking up where the 2007 film ended and then jumping ahead one year, \"Halloween II\" follows Laurie Strode as she deals with the aftermath of the previous film's events, Dr. Loomis who is trying to capitalize on those events by publishing a new book that chronicles everything that happened, and Michael Myers as he continues his search for Laurie so that he can reunite with his sister.  The film sees the return of lead cast members from the 2007 film Malcolm McDowell, Scout Taylor-Compton, and Tyler Mane, who portray Dr. Loomis, Laurie Strode, and Michael Myers, respectively.\n\nNick Chastain: Nicholas \"Nick\" Joseph Chastain, born (1981--) 1, 1981 (age 36 ) , is an American actor, best known for his portrayal of the psychotic Alex on the highest rated soap opera The Young and the Restless in 2004 and 2006.  He was in the 2007 film \"Fast Girl\".\n\nAmanda Brooks: Amanda Brooks (born June 22, 1981) is an actress who starred in the 2007 film \"D-War\" and in the 2006 film \"Cut Off\".  She also had leading roles in the 2005 films \"Flightplan\" and \"River's End\".  She also starred in \"The Canyons\" as Gina.\n\nQuestion: Which star of the 2007 film Awake was born in 1981 ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film mentioned in the question.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film.\"\n    },\n    \"actor_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"actor_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the actor who meets the criteria.\"\n        },\n        \"birth_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The birth year of the identified actor.\"\n        }\n      },\n      \"required\": [\n        \"actor_name\",\n        \"birth_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"question_year_of_birth\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year specified in the question for filtering actors.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"release_year\",\n    \"actor_details\",\n    \"question_year_of_birth\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "release_year",
-    "actor_details",
-    "question_year_of_birth"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film mentioned in the question."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The release year of the film."
+      },
+      "actor_details": {
+        "type": "object",
+        "properties": {
+          "actor_name": {
+            "type": "string",
+            "description": "The name of the actor who meets the criteria."
+          },
+          "birth_year": {
+            "type": "integer",
+            "description": "The birth year of the identified actor."
+          }
+        },
+        "required": [
+          "actor_name",
+          "birth_year"
+        ],
+        "additionalProperties": false
+      },
+      "question_year_of_birth": {
+        "type": "integer",
+        "description": "The birth year specified in the question for filtering actors."
+      }
+    },
+    "required": [
+      "film_title",
+      "release_year",
+      "actor_details",
+      "question_year_of_birth"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,65 +1,42 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Santino Rice: Santino Rice (born August 20, 1974) is an American fashion designer and television personality.  He is best known for his appearances on the reality television programs "Project Runway", "RuPaul's Drag Race" and "On the Road with Austin and Santino".
-
-RuPaul's Drag Race (season 7): The seventh season of RuPaul's Drag Race began airing on March 2, 2015.  Returning judges include RuPaul and Michelle Visage, while the space previously occupied by Santino Rice has been filled by new additions Ross Mathews and Carson Kressley.  Matthews and Kressley are only both present for the season premiere and will take turns sharing judging responsibilities.  Shawn Morales, a member of the Pit Crew since the third season and Simon Sherry-Wood, a member in the sixth season, do not appear this season and were replaced by Bryce Eilenberg.  Like the previous two seasons of "RuPaul's Drag Race", the season featured 14 contestants competing for the title of "America's Next Drag Superstar", a one-year supply of Anastasia Beverly Hills cosmetics and a cash prize of 100,000 dollars.  The premiere of season, the show debuted with a live and same-day viewership of 350,000, a 20% increase from the previous season.  On March 20, 2015, it was announced that LogoTV had given the series an early renewal for an eighth season.
-
-RuPaul's Drag Race (season 1): The first season of "RuPaul's Drag Race", later referred to as "The Lost Season", premiered in the United States on February 2, 2009, on VH-1.  Nine contestants were selected to compete in the running of becoming "America's Next Drag Superstar."  The first season was filmed during the summer of 2008.  The winner of the first season won a lifetime supply of MAC Cosmetics, was featured in an LA Eyeworks campaign, joined the Logo Drag Race tour, and won a cash prize of $20,000.  One of the nine contestants to compete on "RuPaul's Drag Race" was determined by an audience vote via the show's official website.  The results were announced in early September 2008.  The theme song playing during the runway every episode was "Cover Girl" from RuPaul's album "Champion".  This season and season one of All-Stars are the only seasons to not feature the "Snatch Game."
-
-Carmen Carrera: Carmen Roman (born Christopher Roman; April 13, 1985), better known by her stage name Carmen Carrera, is an American reality television personality, model, burlesque performer, and actress, known for appearing on the third season of the Logo reality television series "RuPaul's Drag Race", as well as its spin-off series "RuPaul's Drag U".  Although she presented as male during the third season of "RuPaul's Drag Race", on May 1, 2012, ABC News reported that Carrera is a transgender woman.
-
-RuPaul's Drag Race: RuPaul's Drag Race is an American reality competition television series produced by World of Wonder for Logo TV and, beginning with the ninth season, VH1.  The show documents RuPaul in the search for "America's next drag superstar."  RuPaul plays the role of host, mentor, and head judge for this series, as contestants are given different challenges each week.  "RuPaul's Drag Race" employs a panel of judges, including RuPaul, Michelle Visage, Ross Mathews, Carson Kressley, and a host of other guest judges, who critique contestants' progress throughout the competition.  The title of the show is a play on drag queen and drag racing, and the title sequence and song "Drag Race" both have a drag-racing theme.
-
-RuPaul's Drag Race: All Stars: RuPaul's Drag Race All Stars is an American reality competition television series produced by World of Wonder for Logo TV.  The show is a spin-off of "RuPaul's Drag Race" where RuPaul allows past contestants to come back and compete for a spot in the Drag Race Hall of Fame.  RuPaul plays the roles of host, mentor, and source of inspiration for this series, as contestants are given different challenges each week.  "RuPaul's Drag Race" employs a panel of judges, including RuPaul, Michelle Visage and a host of other guest judges, who critique contestants' progress throughout the competition.
-
-List of RuPaul's Drag Race episodes: "RuPaul's Drag Race" is an American reality competition television series produced by World of Wonder for Logo TV.  The show documents RuPaul in his search for "America's next drag superstar."  Queen RuPaul plays the roles of host, mentor, and source of inspiration for this series, as contestants are given different challenges each week.  "RuPaul's Drag Race" employs a panel of judges, including RuPaul, Michelle Visage and a host of other guest judges, who critique contestants' progress throughout the competition.  The title of the show is a play on drag queen and drag racing, and the title sequence and song "Drag Race" both have a drag-racing theme.
-
-Shangela Laquifa Wadley: D.J. Pierce, known by his stage name Shangela Laquifa Wadley, is an American drag queen, comedian, dancer, businessperson and reality television personality who rose to prominence competing on RuPaul's Drag Race.  She was the first contestant eliminated in season two, and returned as a surprise contestant in the series' third season, where she finished in fifth place.  Since RuPaul's Drag Race, Shangela has had several television appearances and continues to perform across the United States and Canada.
-
-Latrice Royale: Timothy Wilcots (born February 12, 1972), better known by his stage name of Latrice Royale, is an American drag performer and reality television personality.  He is best known for appearing in "RuPaul's Drag Race" season 4 and "RuPaul's Drag Race All Stars".
-
-List of RuPaul's Drag Race contestants: This is a list of contestants who have appeared on the American television show "RuPaul's Drag Race".  Contestants compete against each other and are progressively eliminated, until just a winner remains, who is crowned "next drag superstar".  They are judged by drag queen RuPaul and her panel of judges.  The series first aired in 2009 and as of 2017, there have been nine seasons of the show.  A total of 113 different participants have been selected as finalists in the show in its eight years running, with nine drag queens — BeBe Zahara Benet, Tyra Sanchez, Raja, Sharon Needles, Jinkx Monsoon, Bianca Del Rio, Violet Chachki, Bob the Drag Queen, and Sasha Velour being crowned so far as "America's Next Drag Superstar".  In addition, an season aired in 2012 featuring twelve returning contestants from the first four seasons, each competing for a place in the "Drag Race Hall of Fame".  The season was won by Chad Michaels, previously a runner-up in season four.  In 2015, it was announced "All Stars" had been renewed and a premiered on August 25, 2016.  The second season was won by Alaska, who was previously a runner-up in season 5.
-
-Question: Although his spot is now filled on the "RuPaul Drag Race" televisionshow,what other relaity tv has this designer and television personality been seen in? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the person being asked about."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "person_roles": {
-      "type": "array",
-      "description": "A list of roles or professions associated with the person.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "other_reality_tv_shows": {
-      "type": "array",
-      "description": "A list of other reality television programs the person has appeared in, besides RuPaul's Drag Race.",
-      "items": {
-        "type": "string"
-      }
+    {
+      "role": "user",
+      "content": "Context:\nSantino Rice: Santino Rice (born August 20, 1974) is an American fashion designer and television personality.  He is best known for his appearances on the reality television programs \"Project Runway\", \"RuPaul's Drag Race\" and \"On the Road with Austin and Santino\".\n\nRuPaul's Drag Race (season 7): The seventh season of RuPaul's Drag Race began airing on March 2, 2015.  Returning judges include RuPaul and Michelle Visage, while the space previously occupied by Santino Rice has been filled by new additions Ross Mathews and Carson Kressley.  Matthews and Kressley are only both present for the season premiere and will take turns sharing judging responsibilities.  Shawn Morales, a member of the Pit Crew since the third season and Simon Sherry-Wood, a member in the sixth season, do not appear this season and were replaced by Bryce Eilenberg.  Like the previous two seasons of \"RuPaul's Drag Race\", the season featured 14 contestants competing for the title of \"America's Next Drag Superstar\", a one-year supply of Anastasia Beverly Hills cosmetics and a cash prize of 100,000 dollars.  The premiere of season, the show debuted with a live and same-day viewership of 350,000, a 20% increase from the previous season.  On March 20, 2015, it was announced that LogoTV had given the series an early renewal for an eighth season.\n\nRuPaul's Drag Race (season 1): The first season of \"RuPaul's Drag Race\", later referred to as \"The Lost Season\", premiered in the United States on February 2, 2009, on VH-1.  Nine contestants were selected to compete in the running of becoming \"America's Next Drag Superstar.\"  The first season was filmed during the summer of 2008.  The winner of the first season won a lifetime supply of MAC Cosmetics, was featured in an LA Eyeworks campaign, joined the Logo Drag Race tour, and won a cash prize of $20,000.  One of the nine contestants to compete on \"RuPaul's Drag Race\" was determined by an audience vote via the show's official website.  The results were announced in early September 2008.  The theme song playing during the runway every episode was \"Cover Girl\" from RuPaul's album \"Champion\".  This season and season one of All-Stars are the only seasons to not feature the \"Snatch Game.\"\n\nCarmen Carrera: Carmen Roman (born Christopher Roman; April 13, 1985), better known by her stage name Carmen Carrera, is an American reality television personality, model, burlesque performer, and actress, known for appearing on the third season of the Logo reality television series \"RuPaul's Drag Race\", as well as its spin-off series \"RuPaul's Drag U\".  Although she presented as male during the third season of \"RuPaul's Drag Race\", on May 1, 2012, ABC News reported that Carrera is a transgender woman.\n\nRuPaul's Drag Race: RuPaul's Drag Race is an American reality competition television series produced by World of Wonder for Logo TV and, beginning with the ninth season, VH1.  The show documents RuPaul in the search for \"America's next drag superstar.\"  RuPaul plays the role of host, mentor, and head judge for this series, as contestants are given different challenges each week.  \"RuPaul's Drag Race\" employs a panel of judges, including RuPaul, Michelle Visage, Ross Mathews, Carson Kressley, and a host of other guest judges, who critique contestants' progress throughout the competition.  The title of the show is a play on drag queen and drag racing, and the title sequence and song \"Drag Race\" both have a drag-racing theme.\n\nRuPaul's Drag Race: All Stars: RuPaul's Drag Race All Stars is an American reality competition television series produced by World of Wonder for Logo TV.  The show is a spin-off of \"RuPaul's Drag Race\" where RuPaul allows past contestants to come back and compete for a spot in the Drag Race Hall of Fame.  RuPaul plays the roles of host, mentor, and source of inspiration for this series, as contestants are given different challenges each week.  \"RuPaul's Drag Race\" employs a panel of judges, including RuPaul, Michelle Visage and a host of other guest judges, who critique contestants' progress throughout the competition.\n\nList of RuPaul's Drag Race episodes: \"RuPaul's Drag Race\" is an American reality competition television series produced by World of Wonder for Logo TV.  The show documents RuPaul in his search for \"America's next drag superstar.\"  Queen RuPaul plays the roles of host, mentor, and source of inspiration for this series, as contestants are given different challenges each week.  \"RuPaul's Drag Race\" employs a panel of judges, including RuPaul, Michelle Visage and a host of other guest judges, who critique contestants' progress throughout the competition.  The title of the show is a play on drag queen and drag racing, and the title sequence and song \"Drag Race\" both have a drag-racing theme.\n\nShangela Laquifa Wadley: D.J. Pierce, known by his stage name Shangela Laquifa Wadley, is an American drag queen, comedian, dancer, businessperson and reality television personality who rose to prominence competing on RuPaul's Drag Race.  She was the first contestant eliminated in season two, and returned as a surprise contestant in the series' third season, where she finished in fifth place.  Since RuPaul's Drag Race, Shangela has had several television appearances and continues to perform across the United States and Canada.\n\nLatrice Royale: Timothy Wilcots (born February 12, 1972), better known by his stage name of Latrice Royale, is an American drag performer and reality television personality.  He is best known for appearing in \"RuPaul's Drag Race\" season 4 and \"RuPaul's Drag Race All Stars\".\n\nList of RuPaul's Drag Race contestants: This is a list of contestants who have appeared on the American television show \"RuPaul's Drag Race\".  Contestants compete against each other and are progressively eliminated, until just a winner remains, who is crowned \"next drag superstar\".  They are judged by drag queen RuPaul and her panel of judges.  The series first aired in 2009 and as of 2017, there have been nine seasons of the show.  A total of 113 different participants have been selected as finalists in the show in its eight years running, with nine drag queens — BeBe Zahara Benet, Tyra Sanchez, Raja, Sharon Needles, Jinkx Monsoon, Bianca Del Rio, Violet Chachki, Bob the Drag Queen, and Sasha Velour being crowned so far as \"America's Next Drag Superstar\".  In addition, an season aired in 2012 featuring twelve returning contestants from the first four seasons, each competing for a place in the \"Drag Race Hall of Fame\".  The season was won by Chad Michaels, previously a runner-up in season four.  In 2015, it was announced \"All Stars\" had been renewed and a premiered on August 25, 2016.  The second season was won by Alaska, who was previously a runner-up in season 5.\n\nQuestion: Although his spot is now filled on the \"RuPaul Drag Race\" televisionshow,what other relaity tv has this designer and television personality been seen in? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person being asked about.\"\n    },\n    \"person_roles\": {\n      \"type\": \"array\",\n      \"description\": \"A list of roles or professions associated with the person.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"other_reality_tv_shows\": {\n      \"type\": \"array\",\n      \"description\": \"A list of other reality television programs the person has appeared in, besides RuPaul's Drag Race.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"person_roles\",\n    \"other_reality_tv_shows\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "person_roles",
-    "other_reality_tv_shows"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the person being asked about."
+      },
+      "person_roles": {
+        "type": "array",
+        "description": "A list of roles or professions associated with the person.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "other_reality_tv_shows": {
+        "type": "array",
+        "description": "A list of other reality television programs the person has appeared in, besides RuPaul's Drag Race.",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "person_name",
+      "person_roles",
+      "other_reality_tv_shows"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

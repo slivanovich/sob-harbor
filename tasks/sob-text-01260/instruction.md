@@ -1,72 +1,49 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Strictly Personal (film): Strictly Personal is a 1933 American Pre-Code drama film directed by Ralph Murphy and written by Beatrice Banyard, Willard Mack, Wilson Mizner, Casey Robinson and Robert T. Shannon.  The film stars Marjorie Rambeau, Dorothy Jordan, Eddie Quillan, Edward Ellis, Louis Calhern, Dorothy Burgess and Rollo Lloyd.  The film was released on March 17, 1933, by Paramount Pictures.
-
-Octavia Spencer: Octavia Lenora Spencer (born May 25, 1972) is an American actress and author.  She made her film debut in the 1996 drama film "A Time to Kill".  Her breakthrough came in 2011, when she starred as Minny Jackson in the period drama film "The Help", for which she won the Academy Award, Golden Globe, SAG, BAFTA, and Critics' Choice Movie Award for Best Supporting Actress.  She had a critically acclaimed performance in Ryan Coogler's drama "Fruitvale Station" (2013), for which she received the National Board of Review Award for Best Supporting Actress.  Spencer has received acclaim for her work in the films "Smashed" (2012), "Snowpiercer" (2013), "Get on Up" (2014), "The Divergent Series" (2015-2016), "Zootopia" (2016) and "The Shape of Water" (2017).  In 2017, she received Academy Award, Golden Globe, and SAG nominations for Best Supporting Actress for her performance as mathematician Dorothy Vaughan in the drama "Hidden Figures".
-
-Island in the Sun (film): Island in the Sun is a 1957 De Luxe in CinemaScope drama film produced by Darryl F. Zanuck and directed by Robert Rossen.  It features an ensemble cast including James Mason, Harry Belafonte, Joan Fontaine, Joan Collins, Dorothy Dandridge, Michael Rennie, Stephen Boyd, Patricia Owens, John Justin, Diana Wynyard, and Basil Sydney.  The film is about race relations and interracial romance set in the fictitious island of Santa Marta.  Barbados and Grenada were selected as the sites for the movie based on the 1955 novel by Alec Waugh.  The film was controversial at the time of its release for its portrayal of an interracial romance.
-
-The Bookshop (film): The Bookshop is a Spanish, British and German coproduced drama film.  Directed and written by the Spanish director Isabel Coixet, based on the novel by Penelope Fitzgerald, the film stars Emily Mortimer as Florence Green, Patricia Clarkson as Violet Gamart, and (Bill Nighy) as Edmund Brundish.  This is the third collaboration between Patricia Clarkson and Isabel Coixet, after Elegy and Learning to Drive, and the second time Emily Mortimer and Patricia Clarkson appear together in 2017.
-
-Dorothy Duffy: Dorothy Duffy (born in Douglas Bridge, Northern Ireland) is an Irish actress.  She is best known for her performance as Rose / Patricia in "The Magdalene Sisters".
-
-Children of the Bride: Children of the Bride is a 1990 American made-for-television drama film directed by Jonathan Sanger and starring Rue McClanahan, Kristy McNichol, Jack Coleman, Anne Bobby, Conor O'Farrell and Patrick Duffy.  The film premiered on CBS on October 5, 1990 and was released on DVD in 2003.  The film was followed by two sequels: "Baby of the Bride" (1991) and "Mother of the Bride" (1993).
-
-The Magdalene Sisters: The Magdalene Sisters is a 2002 Irish-British drama film written and directed by Peter Mullan, about three teenage girls who were sent to Magdalene Asylums (also known as 'Magdalene Laundries') homes for women who were labelled as "fallen" by their families or society.  The homes were maintained by individual religious orders in the Roman Catholic Church in Ireland.
-
-Duffy's Tavern (film): Duffy's Tavern is a 1945 American comedy film directed by Hal Walker and written by Melvin Frank and Norman Panama.  The film stars Ed Gardner, Bing Crosby, Betty Hutton, Paulette Goddard, Alan Ladd, Dorothy Lamour, Eddie Bracken and Brian Donlevy.  The film was released on September 28, 1945, by Paramount Pictures.
-
-Affairs of a Gentleman: Affairs of a Gentleman is a 1934 American Pre-Code drama film directed by Edwin L. Marin and written by Cyril Hume, Peter Ruric and Milton Krims.  The film stars Paul Lukas, Leila Hyams, Patricia Ellis, Phillip Reed, Onslow Stevens and Dorothy Burgess.  The film was released on May 1, 1934, by Universal Pictures.
-
-Crow Hollow: Crow Hollow is a 1952 British drama film directed by Michael McCarthy and starring Donald Houston, Natasha Parry and Patricia Owens.  It is based on the 1950 novel "Crow Hollow" by Dorothy Eden.
-
-Question: In what year was the drama film in which Dorothy Duffy played Rose / Patricia released?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the drama film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the film was released."
-    },
-    "actress_name": {
-      "type": "string",
-      "description": "The name of the actress who played the specified characters."
-    },
-    "character_names": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "The names of the characters played by the actress in the film."
-    },
-    "film_genre": {
-      "type": "string",
-      "description": "The genre of the film."
+    {
+      "role": "user",
+      "content": "Context:\nStrictly Personal (film): Strictly Personal is a 1933 American Pre-Code drama film directed by Ralph Murphy and written by Beatrice Banyard, Willard Mack, Wilson Mizner, Casey Robinson and Robert T. Shannon.  The film stars Marjorie Rambeau, Dorothy Jordan, Eddie Quillan, Edward Ellis, Louis Calhern, Dorothy Burgess and Rollo Lloyd.  The film was released on March 17, 1933, by Paramount Pictures.\n\nOctavia Spencer: Octavia Lenora Spencer (born May 25, 1972) is an American actress and author.  She made her film debut in the 1996 drama film \"A Time to Kill\".  Her breakthrough came in 2011, when she starred as Minny Jackson in the period drama film \"The Help\", for which she won the Academy Award, Golden Globe, SAG, BAFTA, and Critics' Choice Movie Award for Best Supporting Actress.  She had a critically acclaimed performance in Ryan Coogler's drama \"Fruitvale Station\" (2013), for which she received the National Board of Review Award for Best Supporting Actress.  Spencer has received acclaim for her work in the films \"Smashed\" (2012), \"Snowpiercer\" (2013), \"Get on Up\" (2014), \"The Divergent Series\" (2015-2016), \"Zootopia\" (2016) and \"The Shape of Water\" (2017).  In 2017, she received Academy Award, Golden Globe, and SAG nominations for Best Supporting Actress for her performance as mathematician Dorothy Vaughan in the drama \"Hidden Figures\".\n\nIsland in the Sun (film): Island in the Sun is a 1957 De Luxe in CinemaScope drama film produced by Darryl F. Zanuck and directed by Robert Rossen.  It features an ensemble cast including James Mason, Harry Belafonte, Joan Fontaine, Joan Collins, Dorothy Dandridge, Michael Rennie, Stephen Boyd, Patricia Owens, John Justin, Diana Wynyard, and Basil Sydney.  The film is about race relations and interracial romance set in the fictitious island of Santa Marta.  Barbados and Grenada were selected as the sites for the movie based on the 1955 novel by Alec Waugh.  The film was controversial at the time of its release for its portrayal of an interracial romance.\n\nThe Bookshop (film): The Bookshop is a Spanish, British and German coproduced drama film.  Directed and written by the Spanish director Isabel Coixet, based on the novel by Penelope Fitzgerald, the film stars Emily Mortimer as Florence Green, Patricia Clarkson as Violet Gamart, and (Bill Nighy) as Edmund Brundish.  This is the third collaboration between Patricia Clarkson and Isabel Coixet, after Elegy and Learning to Drive, and the second time Emily Mortimer and Patricia Clarkson appear together in 2017.\n\nDorothy Duffy: Dorothy Duffy (born in Douglas Bridge, Northern Ireland) is an Irish actress.  She is best known for her performance as Rose / Patricia in \"The Magdalene Sisters\".\n\nChildren of the Bride: Children of the Bride is a 1990 American made-for-television drama film directed by Jonathan Sanger and starring Rue McClanahan, Kristy McNichol, Jack Coleman, Anne Bobby, Conor O'Farrell and Patrick Duffy.  The film premiered on CBS on October 5, 1990 and was released on DVD in 2003.  The film was followed by two sequels: \"Baby of the Bride\" (1991) and \"Mother of the Bride\" (1993).\n\nThe Magdalene Sisters: The Magdalene Sisters is a 2002 Irish-British drama film written and directed by Peter Mullan, about three teenage girls who were sent to Magdalene Asylums (also known as 'Magdalene Laundries') homes for women who were labelled as \"fallen\" by their families or society.  The homes were maintained by individual religious orders in the Roman Catholic Church in Ireland.\n\nDuffy's Tavern (film): Duffy's Tavern is a 1945 American comedy film directed by Hal Walker and written by Melvin Frank and Norman Panama.  The film stars Ed Gardner, Bing Crosby, Betty Hutton, Paulette Goddard, Alan Ladd, Dorothy Lamour, Eddie Bracken and Brian Donlevy.  The film was released on September 28, 1945, by Paramount Pictures.\n\nAffairs of a Gentleman: Affairs of a Gentleman is a 1934 American Pre-Code drama film directed by Edwin L. Marin and written by Cyril Hume, Peter Ruric and Milton Krims.  The film stars Paul Lukas, Leila Hyams, Patricia Ellis, Phillip Reed, Onslow Stevens and Dorothy Burgess.  The film was released on May 1, 1934, by Universal Pictures.\n\nCrow Hollow: Crow Hollow is a 1952 British drama film directed by Michael McCarthy and starring Donald Houston, Natasha Parry and Patricia Owens.  It is based on the 1950 novel \"Crow Hollow\" by Dorothy Eden.\n\nQuestion: In what year was the drama film in which Dorothy Duffy played Rose / Patricia released?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the drama film.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the film was released.\"\n    },\n    \"actress_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actress who played the specified characters.\"\n    },\n    \"character_names\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"The names of the characters played by the actress in the film.\"\n    },\n    \"film_genre\": {\n      \"type\": \"string\",\n      \"description\": \"The genre of the film.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"release_year\",\n    \"actress_name\",\n    \"character_names\",\n    \"film_genre\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "release_year",
-    "actress_name",
-    "character_names",
-    "film_genre"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the drama film."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the film was released."
+      },
+      "actress_name": {
+        "type": "string",
+        "description": "The name of the actress who played the specified characters."
+      },
+      "character_names": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The names of the characters played by the actress in the film."
+      },
+      "film_genre": {
+        "type": "string",
+        "description": "The genre of the film."
+      }
+    },
+    "required": [
+      "film_title",
+      "release_year",
+      "actress_name",
+      "character_names",
+      "film_genre"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

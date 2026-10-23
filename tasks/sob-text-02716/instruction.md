@@ -1,87 +1,64 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Kitoko: Musabwa Patrick known as Kitoko Bibarwa' the eldest in the Family of 3 siblings, is a Rwandan Afro-beat artist.  He released his debut album, "Ifaranga" composed by 12 songs, in January 2009.  The album enjoyed immediate and wide success in Rwanda . Kitoko after his first album he released 2 more albums which made him being one of the favorite artists known In Rwanda, Uganda ,Burundi and Congo and that was in 2010-2011 .
-
-TechnoKill: TechnoKill is the fifth novel of the military science fiction "StarFist Saga", written by David Sherman and Dan Cragg.  This book in the series once again follows 3rd Platoon, Company L, 34th FIST under Gunnery Sergeant Bass.  This time they head to an alien planet to hatch open a nefarious conspiracy of corruption at the highest levels of Confederation power.
-
-Cajón de tapeo: The cajón de tapeo, tapeador, cajón de tamboreo or Mexican cajon is a wood box drum traditional to southern Mexico.  It is played by slapping the top face with a piece of wood in one hand, and a bare hand.  It was developed as a substitute of the tarima de baile of Oaxaca and Guerrero.  It usually follows 3/4 and 6/8 time signatures.  In 1962, musicologist E. Thomas Stanford made a description of its use in Jamiltepec, Oaxaca.
-
-We Bare Bears: We Bare Bears is an American animated sitcom created by Daniel Chong for Cartoon Network.  The show made its premiere on July 27, 2015 and follows three bear siblings, Grizzly, Panda and Ice Bear (respectively voiced by Eric Edelstein, Bobby Moynihan, and Demetri Martin), and their awkward attempts at integrating with the human world in the San Francisco Bay Area.  Based on Chong's webcomic "The Three Bare Bears", the pilot episode made its world premiere at the KLIK!  Amsterdam Animation Festival, where it won in the "Young Amsterdam Audience" category.  The series premiered on July 27, 2015.  Nintendo has also partnered with Cartoon Network to make ads of the show's characters playing the Nintendo Switch.
-
-The Cartoonstitute: The Cartoonstitute was a planned Cartoon Network project created by Cartoon Network's executive Rob Sorcher that would have been a showcase for animated shorts created without the interference of network executives and focus testing.  It was headed by Craig McCracken (creator of "The Powerpuff Girls", "Foster's Home for Imaginary Friends", and "Wander Over Yonder") and Rob Renzetti (creator of "My Life as a Teenage Robot").  39 shorts for the project were in development at Cartoon Network Studios, but only 14 of these were completed.  Eventually, balancing 5 upcoming shows and adding another proved difficult and the project was scrapped.  Of the shorts which were made, only "Regular Show" and "Uncle Grandpa" have been greenlit to become animated series (the latter was initially greenlit as "Secret Mountain Fort Awesome", before becoming a series of its own).  On May 7, 2010, Cartoon Network uploaded nearly all of the shorts to their website.  The only shorts not uploaded were "Maruined", "3 Dog Band", and "Joey to the World".
-
-Run of the House: Run of the House is a sitcom on The WB, that aired between September 2003 and May 2004.  Nineteen episodes were produced but only sixteen were aired before the show was cancelled.  The show was about a family of four siblings, whose parents moved from Grand Rapids, Michigan, to Arizona, because the weather would be better there for their father's health.  But they left the mostly-grown children to stay in their old house and look after themselves, with the 3 eldest siblings also having to deal with raising their 15-year-old sister, Brooke.  There was also a nosy neighbor named Mrs. Norris who often popped in unannounced to check up on them.
-
-Winnie Johnson-Marquart: Winnie Johnson-Marquart is President of the Johnson Family Foundation.  She is tied with her 3 siblings and mother at #156 on the Forbes 400 list of Richest Americans.
-
-Inauguration of Rodrigo Duterte: The inauguration of Rodrigo Duterte as the sixteenth President of the Philippines took place at around noon (PHT) on Thursday, June 30, 2016 at the Rizal Ceremonial Hall of the Malacañang Palace in Manila.  The oath of office was administered by the Associate Justice of the Supreme Court of the Philippines, Bienvenido L. Reyes.  Veronica Duterte, Duterte's daughter to Honeylet Avanceña, held the Bible of the president's mother Soledad for her father.  Veronica was joined by her 3 siblings, Sara, Paolo and Sebastian.
-
-Silent House (novel): Silent House (1983) is Orhan Pamuk's second novel published after "Cevdet Bey and His Sons".  The novel tells the story of a week in which 3 siblings go to visit their grandmother in Cennethisar, a small town near Istanbul.
-
-Rob Sorcher: Robert Sorcher is Executive Vice President and Chief Content Officer at Cartoon Network, starting his job in 2008 (but promoted in 2013).  He is a producer for "We Bare Bears", Emmy and Peabody-winning "Adventure Time", "Clarence", "Regular Show", "Steven Universe", "Over the Garden Wall", "The PowerPuff Girls" and "Ben 10".  As Chief Content Officer, he oversees digital strategy, gaming, and original content development for the Cartoon Network.
-
-Question: What show was Robert Sorcher a producer on that follows 3 siblings?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "show_title": {
-      "type": "string",
-      "description": "The title of the animated show."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "producer_name": {
-      "type": "string",
-      "description": "The name of the producer associated with the show."
-    },
-    "features_siblings": {
-      "type": "boolean",
-      "description": "Indicates if the show features siblings as main characters."
-    },
-    "number_of_siblings": {
-      "type": "integer",
-      "description": "The total number of siblings featured in the show."
-    },
-    "sibling_characters": {
-      "type": "array",
-      "description": "A list of the sibling characters in the show.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the sibling character."
-          },
-          "species": {
-            "type": "string",
-            "description": "The species of the sibling character."
-          }
-        },
-        "required": [
-          "name",
-          "species"
-        ],
-        "additionalProperties": false
-      }
+    {
+      "role": "user",
+      "content": "Context:\nKitoko: Musabwa Patrick known as Kitoko Bibarwa' the eldest in the Family of 3 siblings, is a Rwandan Afro-beat artist.  He released his debut album, \"Ifaranga\" composed by 12 songs, in January 2009.  The album enjoyed immediate and wide success in Rwanda . Kitoko after his first album he released 2 more albums which made him being one of the favorite artists known In Rwanda, Uganda ,Burundi and Congo and that was in 2010-2011 .\n\nTechnoKill: TechnoKill is the fifth novel of the military science fiction \"StarFist Saga\", written by David Sherman and Dan Cragg.  This book in the series once again follows 3rd Platoon, Company L, 34th FIST under Gunnery Sergeant Bass.  This time they head to an alien planet to hatch open a nefarious conspiracy of corruption at the highest levels of Confederation power.\n\nCajón de tapeo: The cajón de tapeo, tapeador, cajón de tamboreo or Mexican cajon is a wood box drum traditional to southern Mexico.  It is played by slapping the top face with a piece of wood in one hand, and a bare hand.  It was developed as a substitute of the tarima de baile of Oaxaca and Guerrero.  It usually follows 3/4 and 6/8 time signatures.  In 1962, musicologist E. Thomas Stanford made a description of its use in Jamiltepec, Oaxaca.\n\nWe Bare Bears: We Bare Bears is an American animated sitcom created by Daniel Chong for Cartoon Network.  The show made its premiere on July 27, 2015 and follows three bear siblings, Grizzly, Panda and Ice Bear (respectively voiced by Eric Edelstein, Bobby Moynihan, and Demetri Martin), and their awkward attempts at integrating with the human world in the San Francisco Bay Area.  Based on Chong's webcomic \"The Three Bare Bears\", the pilot episode made its world premiere at the KLIK!  Amsterdam Animation Festival, where it won in the \"Young Amsterdam Audience\" category.  The series premiered on July 27, 2015.  Nintendo has also partnered with Cartoon Network to make ads of the show's characters playing the Nintendo Switch.\n\nThe Cartoonstitute: The Cartoonstitute was a planned Cartoon Network project created by Cartoon Network's executive Rob Sorcher that would have been a showcase for animated shorts created without the interference of network executives and focus testing.  It was headed by Craig McCracken (creator of \"The Powerpuff Girls\", \"Foster's Home for Imaginary Friends\", and \"Wander Over Yonder\") and Rob Renzetti (creator of \"My Life as a Teenage Robot\").  39 shorts for the project were in development at Cartoon Network Studios, but only 14 of these were completed.  Eventually, balancing 5 upcoming shows and adding another proved difficult and the project was scrapped.  Of the shorts which were made, only \"Regular Show\" and \"Uncle Grandpa\" have been greenlit to become animated series (the latter was initially greenlit as \"Secret Mountain Fort Awesome\", before becoming a series of its own).  On May 7, 2010, Cartoon Network uploaded nearly all of the shorts to their website.  The only shorts not uploaded were \"Maruined\", \"3 Dog Band\", and \"Joey to the World\".\n\nRun of the House: Run of the House is a sitcom on The WB, that aired between September 2003 and May 2004.  Nineteen episodes were produced but only sixteen were aired before the show was cancelled.  The show was about a family of four siblings, whose parents moved from Grand Rapids, Michigan, to Arizona, because the weather would be better there for their father's health.  But they left the mostly-grown children to stay in their old house and look after themselves, with the 3 eldest siblings also having to deal with raising their 15-year-old sister, Brooke.  There was also a nosy neighbor named Mrs. Norris who often popped in unannounced to check up on them.\n\nWinnie Johnson-Marquart: Winnie Johnson-Marquart is President of the Johnson Family Foundation.  She is tied with her 3 siblings and mother at #156 on the Forbes 400 list of Richest Americans.\n\nInauguration of Rodrigo Duterte: The inauguration of Rodrigo Duterte as the sixteenth President of the Philippines took place at around noon (PHT) on Thursday, June 30, 2016 at the Rizal Ceremonial Hall of the Malacañang Palace in Manila.  The oath of office was administered by the Associate Justice of the Supreme Court of the Philippines, Bienvenido L. Reyes.  Veronica Duterte, Duterte's daughter to Honeylet Avanceña, held the Bible of the president's mother Soledad for her father.  Veronica was joined by her 3 siblings, Sara, Paolo and Sebastian.\n\nSilent House (novel): Silent House (1983) is Orhan Pamuk's second novel published after \"Cevdet Bey and His Sons\".  The novel tells the story of a week in which 3 siblings go to visit their grandmother in Cennethisar, a small town near Istanbul.\n\nRob Sorcher: Robert Sorcher is Executive Vice President and Chief Content Officer at Cartoon Network, starting his job in 2008 (but promoted in 2013).  He is a producer for \"We Bare Bears\", Emmy and Peabody-winning \"Adventure Time\", \"Clarence\", \"Regular Show\", \"Steven Universe\", \"Over the Garden Wall\", \"The PowerPuff Girls\" and \"Ben 10\".  As Chief Content Officer, he oversees digital strategy, gaming, and original content development for the Cartoon Network.\n\nQuestion: What show was Robert Sorcher a producer on that follows 3 siblings?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"show_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the animated show.\"\n    },\n    \"producer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the producer associated with the show.\"\n    },\n    \"features_siblings\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the show features siblings as main characters.\"\n    },\n    \"number_of_siblings\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of siblings featured in the show.\"\n    },\n    \"sibling_characters\": {\n      \"type\": \"array\",\n      \"description\": \"A list of the sibling characters in the show.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the sibling character.\"\n          },\n          \"species\": {\n            \"type\": \"string\",\n            \"description\": \"The species of the sibling character.\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"species\"\n        ],\n        \"additionalProperties\": false\n      }\n    }\n  },\n  \"required\": [\n    \"show_title\",\n    \"producer_name\",\n    \"features_siblings\",\n    \"number_of_siblings\",\n    \"sibling_characters\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "show_title",
-    "producer_name",
-    "features_siblings",
-    "number_of_siblings",
-    "sibling_characters"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "show_title": {
+        "type": "string",
+        "description": "The title of the animated show."
+      },
+      "producer_name": {
+        "type": "string",
+        "description": "The name of the producer associated with the show."
+      },
+      "features_siblings": {
+        "type": "boolean",
+        "description": "Indicates if the show features siblings as main characters."
+      },
+      "number_of_siblings": {
+        "type": "integer",
+        "description": "The total number of siblings featured in the show."
+      },
+      "sibling_characters": {
+        "type": "array",
+        "description": "A list of the sibling characters in the show.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the sibling character."
+            },
+            "species": {
+              "type": "string",
+              "description": "The species of the sibling character."
+            }
+          },
+          "required": [
+            "name",
+            "species"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "show_title",
+      "producer_name",
+      "features_siblings",
+      "number_of_siblings",
+      "sibling_characters"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

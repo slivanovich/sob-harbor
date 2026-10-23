@@ -1,87 +1,64 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-United States Space Camp: U.S. Space Camp is a camp and related programs owned and operated by the Alabama Space Science Exhibit Commission's U.S. Space & Rocket Center in Huntsville, Alabama.  The camp provides residential and educational programs for children and adults.  These programs include space oriented camp programs, aircraft themed Aviation Challenge camps, and robotics themed programs, which are designed to promote science, engineering, aviation and technology.  More than 750,000 campers have graduated since 1982.
-
-Pinto, Maryland: Pinto is an unincorporated community along the North Branch Potomac River in Allegany County, Maryland across from Rocket Center, West Virginia.  While the town is officially named Potomac, its post office is referred to as Pinto because there already exists a Potomac, Maryland.  Pinto is located south of Cresaptown on Winchester Road.
-
-Space Shuttle Pathfinder: The Space Shuttle Orbiter "Pathfinder" (honorary Orbiter Vehicle Designation: OV-098) is a Space Shuttle test simulator made of steel and wood.  Constructed by NASA in 1977 as an unnamed facilities test article, it was purchased in the early 1980s by the America-Japan Society, Inc. which had it refurbished, named it, and placed it on display in the Great Space Shuttle Exhibition in Tokyo.  The mockup was later returned to the United States and placed on permanent display at the U.S. Space & Rocket Center in Huntsville, Alabama, in May 1988.
-
-Allegany Ballistics Laboratory: Allegany Ballistics Laboratory (ABL) located in Rocket Center, West Virginia, is a diverse industrial complex employing some 1,000 people across 1628 acre .  The facility is a member of the Federal Laboratory Consortium and is operated by Alliant Techsystems (ATK) under contract with the Naval Sea Systems Command (NAVSEA).
-
-Altair (rocket stage): The Altair was a solid-fuel rocket with a fiberglass casing, initially developed for use as the third stage of Vanguard rockets.  It was manufactured by Allegany Ballistics Laboratory (ABL) as the X-248.  It was also sometimes called the Burner 1.
-
-McKenzie, Maryland: McKenzie is an unincorporated community in Allegany County, Maryland, containing only a few houses, and mostly land.  Its name is derived from a family which owned a large farm along the river bottom in the area.  It is directly across from the Allegany Ballistics Laboratory in Rocket Center, West Virginia.  The area used to be a railroad junction of the Patterson Creek Cutoff and the main B&O line.  McKenzie is also the site of one of the first settlements in Allegany county, where many pieces of glass, metal, stone, and some coin have been found.  In the fields of the river bottom, arrowheads and flint can be found, suggesting a possible Native American community at one time, similar to the Barton, Maryland site.
-
-U.S. Space &amp; Rocket Center: The U.S. Space & Rocket Center in Huntsville, Alabama is a museum operated by the government of Alabama, showcasing rockets, achievements, and artifacts of the U.S. space program.  Sometimes billed as "Earth's largest space museum", astronaut Owen Garriott described the place as, "a great way to learn about space in a town that has embraced the space program from the very beginning."
-
-West Virginia Route 956: West Virginia Route 956 (WV 956) is a 4.2 mi long east–west state highway in the northeastern portion of the U.S. state of West Virginia.  The western terminus of WV 956 is at the Maryland state line at Rocket Center, where it becomes Maryland Route 956 (MD 956) at the Potomac River crossing.  Its eastern terminus is at a T-intersection with WV 28 at Short Gap.  Along its path, WV 956 passes over Knobly Mountain.
-
-Rocket Center, West Virginia: Rocket Center, West Virginia is the site of a government installation known as Allegany Ballistics Laboratory, part of the Naval Sea Systems Command which is currently operated by Alliant Techsystems.  Rocket Center shares a ZIP Code with Keyser but is located 15 mi north along the North Branch Potomac River in Mineral County, West Virginia.  There are no residents in Rocket Center.
-
-Seneca Allegany Casino: Seneca Allegany Casino is a resort, hotel, and casino in Salamanca, New York.  It is owned by the Seneca Nation of New York.  The complex consists of 68300 sqft of gaming space, a spa, six restaurants, and has 413 hotel rooms.  The Seneca Allegany Events Center, a multi-purpose facility that can host up to 2,400 guests, is also located on the property.  In 2015, the Seneca Allegany Casino was awarded AAA Four Diamond Award status for the seventh consecutive year.
-
-Question: Who operates The Rocket center and Allegany Ballisics Laboratory?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "operator_name": {
-      "type": "string",
-      "description": "The name of the entity that operates the facilities."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "operated_facilities": {
-      "type": "array",
-      "description": "A list of facilities operated by the specified operator.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "facility_name": {
-            "type": "string",
-            "description": "The name of the operated facility."
+    {
+      "role": "user",
+      "content": "Context:\nUnited States Space Camp: U.S. Space Camp is a camp and related programs owned and operated by the Alabama Space Science Exhibit Commission's U.S. Space & Rocket Center in Huntsville, Alabama.  The camp provides residential and educational programs for children and adults.  These programs include space oriented camp programs, aircraft themed Aviation Challenge camps, and robotics themed programs, which are designed to promote science, engineering, aviation and technology.  More than 750,000 campers have graduated since 1982.\n\nPinto, Maryland: Pinto is an unincorporated community along the North Branch Potomac River in Allegany County, Maryland across from Rocket Center, West Virginia.  While the town is officially named Potomac, its post office is referred to as Pinto because there already exists a Potomac, Maryland.  Pinto is located south of Cresaptown on Winchester Road.\n\nSpace Shuttle Pathfinder: The Space Shuttle Orbiter \"Pathfinder\" (honorary Orbiter Vehicle Designation: OV-098) is a Space Shuttle test simulator made of steel and wood.  Constructed by NASA in 1977 as an unnamed facilities test article, it was purchased in the early 1980s by the America-Japan Society, Inc. which had it refurbished, named it, and placed it on display in the Great Space Shuttle Exhibition in Tokyo.  The mockup was later returned to the United States and placed on permanent display at the U.S. Space & Rocket Center in Huntsville, Alabama, in May 1988.\n\nAllegany Ballistics Laboratory: Allegany Ballistics Laboratory (ABL) located in Rocket Center, West Virginia, is a diverse industrial complex employing some 1,000 people across 1628 acre .  The facility is a member of the Federal Laboratory Consortium and is operated by Alliant Techsystems (ATK) under contract with the Naval Sea Systems Command (NAVSEA).\n\nAltair (rocket stage): The Altair was a solid-fuel rocket with a fiberglass casing, initially developed for use as the third stage of Vanguard rockets.  It was manufactured by Allegany Ballistics Laboratory (ABL) as the X-248.  It was also sometimes called the Burner 1.\n\nMcKenzie, Maryland: McKenzie is an unincorporated community in Allegany County, Maryland, containing only a few houses, and mostly land.  Its name is derived from a family which owned a large farm along the river bottom in the area.  It is directly across from the Allegany Ballistics Laboratory in Rocket Center, West Virginia.  The area used to be a railroad junction of the Patterson Creek Cutoff and the main B&O line.  McKenzie is also the site of one of the first settlements in Allegany county, where many pieces of glass, metal, stone, and some coin have been found.  In the fields of the river bottom, arrowheads and flint can be found, suggesting a possible Native American community at one time, similar to the Barton, Maryland site.\n\nU.S. Space &amp; Rocket Center: The U.S. Space & Rocket Center in Huntsville, Alabama is a museum operated by the government of Alabama, showcasing rockets, achievements, and artifacts of the U.S. space program.  Sometimes billed as \"Earth's largest space museum\", astronaut Owen Garriott described the place as, \"a great way to learn about space in a town that has embraced the space program from the very beginning.\"\n\nWest Virginia Route 956: West Virginia Route 956 (WV 956) is a 4.2 mi long east–west state highway in the northeastern portion of the U.S. state of West Virginia.  The western terminus of WV 956 is at the Maryland state line at Rocket Center, where it becomes Maryland Route 956 (MD 956) at the Potomac River crossing.  Its eastern terminus is at a T-intersection with WV 28 at Short Gap.  Along its path, WV 956 passes over Knobly Mountain.\n\nRocket Center, West Virginia: Rocket Center, West Virginia is the site of a government installation known as Allegany Ballistics Laboratory, part of the Naval Sea Systems Command which is currently operated by Alliant Techsystems.  Rocket Center shares a ZIP Code with Keyser but is located 15 mi north along the North Branch Potomac River in Mineral County, West Virginia.  There are no residents in Rocket Center.\n\nSeneca Allegany Casino: Seneca Allegany Casino is a resort, hotel, and casino in Salamanca, New York.  It is owned by the Seneca Nation of New York.  The complex consists of 68300 sqft of gaming space, a spa, six restaurants, and has 413 hotel rooms.  The Seneca Allegany Events Center, a multi-purpose facility that can host up to 2,400 guests, is also located on the property.  In 2015, the Seneca Allegany Casino was awarded AAA Four Diamond Award status for the seventh consecutive year.\n\nQuestion: Who operates The Rocket center and Allegany Ballisics Laboratory?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"operator_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the entity that operates the facilities.\"\n    },\n    \"operated_facilities\": {\n      \"type\": \"array\",\n      \"description\": \"A list of facilities operated by the specified operator.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"facility_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the operated facility.\"\n          },\n          \"location\": {\n            \"type\": \"string\",\n            \"description\": \"The geographical location of the facility.\"\n          }\n        },\n        \"required\": [\n          \"facility_name\",\n          \"location\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"contract_details\": {\n      \"type\": \"object\",\n      \"description\": \"Details about the contract under which the operation takes place.\",\n      \"properties\": {\n        \"contracting_authority\": {\n          \"type\": \"string\",\n          \"description\": \"The entity that holds the contract for the operation.\"\n        }\n      },\n      \"required\": [\n        \"contracting_authority\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"operator_name\",\n    \"operated_facilities\",\n    \"contract_details\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "operator_name": {
+        "type": "string",
+        "description": "The name of the entity that operates the facilities."
+      },
+      "operated_facilities": {
+        "type": "array",
+        "description": "A list of facilities operated by the specified operator.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "facility_name": {
+              "type": "string",
+              "description": "The name of the operated facility."
+            },
+            "location": {
+              "type": "string",
+              "description": "The geographical location of the facility."
+            }
           },
-          "location": {
+          "required": [
+            "facility_name",
+            "location"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "contract_details": {
+        "type": "object",
+        "description": "Details about the contract under which the operation takes place.",
+        "properties": {
+          "contracting_authority": {
             "type": "string",
-            "description": "The geographical location of the facility."
+            "description": "The entity that holds the contract for the operation."
           }
         },
         "required": [
-          "facility_name",
-          "location"
+          "contracting_authority"
         ],
         "additionalProperties": false
       }
     },
-    "contract_details": {
-      "type": "object",
-      "description": "Details about the contract under which the operation takes place.",
-      "properties": {
-        "contracting_authority": {
-          "type": "string",
-          "description": "The entity that holds the contract for the operation."
-        }
-      },
-      "required": [
-        "contracting_authority"
-      ],
-      "additionalProperties": false
-    }
+    "required": [
+      "operator_name",
+      "operated_facilities",
+      "contract_details"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "operator_name",
-    "operated_facilities",
-    "contract_details"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

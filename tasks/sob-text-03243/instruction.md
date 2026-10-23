@@ -1,65 +1,42 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Dan Deacon: Dan Deacon (born August 28, 1981) is an American composer and electronic musician based in Baltimore, Maryland.  Since 2003, Deacon has released eight albums under several different labels.  Deacon is renowned for his live shows, where large-scale audience participation and interaction is often a major element of the performance.  Godson of Paul J Fowler.
-
-Gliss Riffer: Gliss Riffer is the seventh studio album by American electronic musician Dan Deacon.  It was released on February 25, 2015, on Domino Records.
-
-The Charmer (album): The Charmer is the second studio album by American jam band Family Groove Company released on April 25, 2006.  It was recorded at Studio Chicago in Chicago, Illinois in December 2005.  Additional recording was done at Studio 710 in Chicago and Vine Sounds in Highland Park, Illinois.
-
-Age Ain't Nothing but a Number: Age Ain't Nothing but a Number is the debut studio album by American R&B recording artist Aaliyah, released under Jive and Blackground Records on May 24, 1994, in the United States.  After being signed by her uncle Barry Hankerson, Aaliyah was introduced to recording artist and producer R. Kelly.  He became her mentor, as well as the lead songwriter and producer of the album.  The duo recorded the album at the Chicago Recording Company in Chicago, Illinois.  The album featured two hit singles, including the top ten-charting "Back & Forth" and "At Your Best (You Are Love)"; both singles were certified Gold by the Recording Industry Association of America (RIAA).  One additional single followed in the US: "Age Ain't Nothing but a Number".  Two more singles were released internationally after "Age Ain't Nothing But a Number": "Down with the Clique" and "The Thing I Like".
-
-American Mime Theatre: The American Mime Theatre is a professional performing company and training school based in New York City.  It was founded in 1952 by Paul J. Curtis (August 29, 1927– April 28, 2012) and Leslie Barrett (October 30, 1919-June 8, 2010).  It is the oldest continuing professional mime company in the United States.  The theatre ran under the direction of founder Paul J. Curtis for 60 years.
-
-Badger Daylighting: Badger Daylighting is a publicly traded Canadian company.  The company was founded in 1992 and is headquartered in Calgary, Alberta.  It is best known for being North America's largest provider of non-destructive hydrovac excavation to North America.  Badger Daylighting is also the manufacturer and operator of hydrovac trucks.  Paul J. Vanderberg is the company's president and CEO since August 15, 2016.  By the end of 2015, the company's customer base was 38% oil and gas and 62% utility and municipality.
-
-Janet Jackson (album): Janet Jackson is the self-titled debut studio album by American recording artist Janet Jackson.  It was released on September 21, 1982, by A&M Records.  Jackson's career as a recording artist was established by her father and manager Joseph Jackson, who arranged her recording contract with her recording company.  Prior to her rise to fame, the singer had no interest in pursuing a musical career.  Despite this, she was motivated to pursue a career in entertainment, and considered the idea after recording herself in the studio.  After acting in the variety show "The Jacksons", she began starring in several TV series and commenced recording her debut album.  Its artwork depicts Jackson in a swimming pool.
-
-461 Ocean Boulevard: 461 Ocean Boulevard is a 1974 solo album by Eric Clapton that marked his return to recording after recovering from a three-year addiction to heroin.  The album was released in late July 1974 for RSO Records, shortly after the record company released the hit single "I Shot the Sheriff" in early July the same year.  The album topped various international charts and sold more than two million copies.  It was also one of the first "pop music" albums to be released in the Soviet Union.
-
-Vicki Fowler: Victoria Louise "Vicki" Fowler is a fictional character from the BBC soap opera "EastEnders", played by Emma Herry from the character's birth in 1986 to 1988, Samantha Leigh Martin from 1988 to 1995, and Scarlett Alice Johnson from 2003 to 2004.  She is the daughter of Michelle Fowler (Susan Tully) and Den Watts (Leslie Grantham).  The character is born in the serial, conceived in a controversial storyline about teenage pregnancy.  Exploiting a whodunnit angle, at the time of the first showing, viewers were not initially told who was the father, and press interest in the fledgling show escalated as journalists attempted to guess.  The audience finally discovered his identity in October 1985 in episode 66.  Written by series co-creator/script-editor Tony Holland and directed by co-creator/producer Julia Smith, it was considered a landmark episode in the show's history.  Early suspects were Ian Beale (Adam Woodyatt) and Kelvin Carpenter (Paul J. Medford), but then four possible suspects are seen leaving the Square early in the episode: Tony Carpenter (Oscar James), Ali Osman (Nejdet Salih), Andy O'Brien (Ross Davidson), and Den Watts.  As Michelle waits by their rendezvous point, a car pulls up and the fluffy white legs of the soap landlord's poodle Roly leap out of a car to give it all away: Den Watts is the father of Michelle's baby.  After this storyline the programme started to appear in newspaper cartoons as it moved more and more into the public mainstream.
-
-Around the World in a Day: Around the World in a Day is the seventh studio album by American recording artist Prince, and the second to feature his backing band The Revolution.  It was released on April 22, 1985 by Paisley Park Records and Warner Bros.  Records.  Departing somewhat from the commercial sound of his previous release, the massively successful "Purple Rain" (1984), the album instead saw Prince experimenting with psychedelic styles and more opulent textures.  In compliance with Prince's wishes, the record company released the album with minimal publicity, withholding accompanying singles until almost a month after the album's release.
-
-Question: What recording company released an album by the godson of Paul J Fowler on February 25, 2015?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "artist_name": {
-      "type": "string",
-      "description": "The name of the artist who released the album."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "album_title": {
-      "type": "string",
-      "description": "The title of the album released."
-    },
-    "release_date": {
-      "type": "string",
-      "format": "date",
-      "description": "The date the album was released."
-    },
-    "recording_company": {
-      "type": "string",
-      "description": "The recording company that released the album."
+    {
+      "role": "user",
+      "content": "Context:\nDan Deacon: Dan Deacon (born August 28, 1981) is an American composer and electronic musician based in Baltimore, Maryland.  Since 2003, Deacon has released eight albums under several different labels.  Deacon is renowned for his live shows, where large-scale audience participation and interaction is often a major element of the performance.  Godson of Paul J Fowler.\n\nGliss Riffer: Gliss Riffer is the seventh studio album by American electronic musician Dan Deacon.  It was released on February 25, 2015, on Domino Records.\n\nThe Charmer (album): The Charmer is the second studio album by American jam band Family Groove Company released on April 25, 2006.  It was recorded at Studio Chicago in Chicago, Illinois in December 2005.  Additional recording was done at Studio 710 in Chicago and Vine Sounds in Highland Park, Illinois.\n\nAge Ain't Nothing but a Number: Age Ain't Nothing but a Number is the debut studio album by American R&B recording artist Aaliyah, released under Jive and Blackground Records on May 24, 1994, in the United States.  After being signed by her uncle Barry Hankerson, Aaliyah was introduced to recording artist and producer R. Kelly.  He became her mentor, as well as the lead songwriter and producer of the album.  The duo recorded the album at the Chicago Recording Company in Chicago, Illinois.  The album featured two hit singles, including the top ten-charting \"Back & Forth\" and \"At Your Best (You Are Love)\"; both singles were certified Gold by the Recording Industry Association of America (RIAA).  One additional single followed in the US: \"Age Ain't Nothing but a Number\".  Two more singles were released internationally after \"Age Ain't Nothing But a Number\": \"Down with the Clique\" and \"The Thing I Like\".\n\nAmerican Mime Theatre: The American Mime Theatre is a professional performing company and training school based in New York City.  It was founded in 1952 by Paul J. Curtis (August 29, 1927– April 28, 2012) and Leslie Barrett (October 30, 1919-June 8, 2010).  It is the oldest continuing professional mime company in the United States.  The theatre ran under the direction of founder Paul J. Curtis for 60 years.\n\nBadger Daylighting: Badger Daylighting is a publicly traded Canadian company.  The company was founded in 1992 and is headquartered in Calgary, Alberta.  It is best known for being North America's largest provider of non-destructive hydrovac excavation to North America.  Badger Daylighting is also the manufacturer and operator of hydrovac trucks.  Paul J. Vanderberg is the company's president and CEO since August 15, 2016.  By the end of 2015, the company's customer base was 38% oil and gas and 62% utility and municipality.\n\nJanet Jackson (album): Janet Jackson is the self-titled debut studio album by American recording artist Janet Jackson.  It was released on September 21, 1982, by A&M Records.  Jackson's career as a recording artist was established by her father and manager Joseph Jackson, who arranged her recording contract with her recording company.  Prior to her rise to fame, the singer had no interest in pursuing a musical career.  Despite this, she was motivated to pursue a career in entertainment, and considered the idea after recording herself in the studio.  After acting in the variety show \"The Jacksons\", she began starring in several TV series and commenced recording her debut album.  Its artwork depicts Jackson in a swimming pool.\n\n461 Ocean Boulevard: 461 Ocean Boulevard is a 1974 solo album by Eric Clapton that marked his return to recording after recovering from a three-year addiction to heroin.  The album was released in late July 1974 for RSO Records, shortly after the record company released the hit single \"I Shot the Sheriff\" in early July the same year.  The album topped various international charts and sold more than two million copies.  It was also one of the first \"pop music\" albums to be released in the Soviet Union.\n\nVicki Fowler: Victoria Louise \"Vicki\" Fowler is a fictional character from the BBC soap opera \"EastEnders\", played by Emma Herry from the character's birth in 1986 to 1988, Samantha Leigh Martin from 1988 to 1995, and Scarlett Alice Johnson from 2003 to 2004.  She is the daughter of Michelle Fowler (Susan Tully) and Den Watts (Leslie Grantham).  The character is born in the serial, conceived in a controversial storyline about teenage pregnancy.  Exploiting a whodunnit angle, at the time of the first showing, viewers were not initially told who was the father, and press interest in the fledgling show escalated as journalists attempted to guess.  The audience finally discovered his identity in October 1985 in episode 66.  Written by series co-creator/script-editor Tony Holland and directed by co-creator/producer Julia Smith, it was considered a landmark episode in the show's history.  Early suspects were Ian Beale (Adam Woodyatt) and Kelvin Carpenter (Paul J. Medford), but then four possible suspects are seen leaving the Square early in the episode: Tony Carpenter (Oscar James), Ali Osman (Nejdet Salih), Andy O'Brien (Ross Davidson), and Den Watts.  As Michelle waits by their rendezvous point, a car pulls up and the fluffy white legs of the soap landlord's poodle Roly leap out of a car to give it all away: Den Watts is the father of Michelle's baby.  After this storyline the programme started to appear in newspaper cartoons as it moved more and more into the public mainstream.\n\nAround the World in a Day: Around the World in a Day is the seventh studio album by American recording artist Prince, and the second to feature his backing band The Revolution.  It was released on April 22, 1985 by Paisley Park Records and Warner Bros.  Records.  Departing somewhat from the commercial sound of his previous release, the massively successful \"Purple Rain\" (1984), the album instead saw Prince experimenting with psychedelic styles and more opulent textures.  In compliance with Prince's wishes, the record company released the album with minimal publicity, withholding accompanying singles until almost a month after the album's release.\n\nQuestion: What recording company released an album by the godson of Paul J Fowler on February 25, 2015?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"artist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the artist who released the album.\"\n    },\n    \"album_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the album released.\"\n    },\n    \"release_date\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"The date the album was released.\"\n    },\n    \"recording_company\": {\n      \"type\": \"string\",\n      \"description\": \"The recording company that released the album.\"\n    }\n  },\n  \"required\": [\n    \"artist_name\",\n    \"album_title\",\n    \"release_date\",\n    \"recording_company\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "artist_name",
-    "album_title",
-    "release_date",
-    "recording_company"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "artist_name": {
+        "type": "string",
+        "description": "The name of the artist who released the album."
+      },
+      "album_title": {
+        "type": "string",
+        "description": "The title of the album released."
+      },
+      "release_date": {
+        "type": "string",
+        "format": "date",
+        "description": "The date the album was released."
+      },
+      "recording_company": {
+        "type": "string",
+        "description": "The recording company that released the album."
+      }
+    },
+    "required": [
+      "artist_name",
+      "album_title",
+      "release_date",
+      "recording_company"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

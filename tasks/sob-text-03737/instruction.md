@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-1988 Los Angeles Raiders season: The 1988 Los Angeles Raiders season was the club's 29th season in the NFL.  Mike Shanahan was hired as head coach, and the club finished with a 7–9 record.  The Raiders drafted Heisman Trophy winner Tim Brown, making Brown the third person on the Raiders roster to have won the Heisman Trophy, the others being Marcus Allen and Bo Jackson.  Most of the team's success throughout the season came through their division, as the Raiders finished 6-2 against the weak AFC West division, with their only 2 losses against the champions of the division, the Seattle Seahawks.  However, the Raiders were only 1-7 against the rest of the NFL, with their only other win coming against the eventual champions, the 49ers in San Francisco in a game in which only field goals were kicked.
-
-1983 Los Angeles Raiders season: The 1983 Los Angeles Raiders season began with the team trying to improve on their 8–1 record from 1982.  The 1983 season was the second season in Los Angeles.  The 1983 season is also the Raiders third Super Bowl winning season.  To date, it was the team's most recent NFL championship season.  NFL Films titled the season highlights of the 1983 Los Angeles Raiders, "Just Win, Baby!" , narrated by John Facenda, and on November 24, 2006, NFL Network aired , the 1983 Los Angeles Raiders, ranking them #20, with team commentary from Marcus Allen, Todd Christensen and Howie Long, and narrated by Alec Baldwin.
-
-1994 Los Angeles Raiders season: The 1994 Los Angeles Raiders season was the team's 13th and final season in Los Angeles, before returning to their original home in Oakland the following season.
-
-2017 Oakland Raiders season: The 2017 Oakland Raiders season is the 58th overall season of the Oakland Raiders franchise, the franchise's 48th season in the National Football League, their 24th season since their return to Oakland, and the third under head coach Jack Del Rio.  The Raiders are looking to win their first AFC West title since 2002 and the Super Bowl for the first time since 1983, when the club was still in Los Angeles.  The Raiders began the season on September 10 at the Tennessee Titans and will finish the season December 31 at the Los Angeles Chargers.  The Raiders, as they did in 2016, will play one home game in Mexico City, this time against the New England Patriots.
-
-Sports in Los Angeles: The Los Angeles metropolitan area is home to several professional and collegiate sports teams.  The Greater Los Angeles Area has nine major league professional teams: the Anaheim Ducks, the Los Angeles Angels, the Los Angeles Chargers, the Los Angeles Clippers, the Los Angeles Dodgers, LA Galaxy, the Los Angeles Kings, the Los Angeles Lakers, and the Los Angeles Rams.  Los Angeles FC will begin play as the area's tenth major team in 2018.  USC Trojans football, UCLA Bruins men's basketball, USC Trojans baseball, USC Trojans track & field, and Cal State Fullerton Titans baseball are all historically premier organizations in college sports.  Other major sports teams include UCLA Bruins Football, Los Angeles Sparks, Pepperdine Waves baseball, and formerly the Los Angeles Raiders and Los Angeles Aztecs.  Between them, these Los Angeles area sports teams have won a combined 105 Championship Titles.  Los Angeles area colleges have produced upwards of 200 National Championship Teams, primarily from USC Trojans and UCLA Bruins of the Pac-12 Conference.  The 1932 and 1984 Summer Olympics were held in Los Angeles.  In 2028 the city will host the Olympics for a third time.
-
-1980 Oakland Raiders season: The 1980 Oakland Raiders season began with the team trying to improve on their 9–7 record from 1979.  It was the 20th anniversary of the Oakland Raiders franchise and ended with their second Super Bowl victory.  Prior to the start of the season Al Davis announced plans to move the Raiders from Oakland to Los Angeles.  However, NFL Commissioner Pete Rozelle blocked the move by filing a restraining order.  He would even try to get Al Davis removed as owner, as the case went to the courts.  Still playing in Oakland the Raiders entered the season with a new Quarterback after acquiring Dan Pastorini from the Houston Oilers for Kenny Stabler.  However Pastorini struggled and the Raiders got off to a 2-3 when Pastorini was injured and replaced by Jim Plunkett.  Plunkett proved right for the Raiders offense.  The defense led the league in interceptions (35), turnovers (52) and yards per carry (3.4 YPA).  Lester Hayes led the NFL with 13 interceptions.  The team won 6 straight compiling an 11-5 record, and qualifying for the playoffs as a Wild Card.  In the Wild Card Game the Raiders would beat the Houston Oilers 27-7 at Oakland as the Raiders defense picked off former teammate Kenny Stabler twice.  Playing in freezing weather with temperature reading 30 degrees below zero the Raiders stunned the Browns 14-12 in a defensive struggle in Cleveland.  In the AFC Championship Game in San Diego the game would be a shoot out as the Raiders stunned the Chargers 34-27 to become the first AFC Wild Card to make the Super Bowl.  Highlighted by Jim Plunkett's MVP performance and Rod Martin's 3 interceptions the Raiders defeated the Philadelphia Eagles 27 - 10 in Super Bowl 15.
-
-1989 Los Angeles Raiders season: The 1989 Los Angeles Raiders season was the club's 30th season in the National Football League (NFL).  Art Shell replaced Mike Shanahan, and in the process became the first black head coach in the NFL since Fritz Pollard coached the Akron Pros in 1921.  The club finished with an 8–8 record.  In preseason against the Houston Oilers, the Raiders played their first game in Oakland since moving to Los Angeles in 1982, before eventually moving back to Oakland in 1995.
-
-Ethan Horton: Ethan Shane Horton (born December 19, 1962) is a former professional American football tight end in the National Football League.  He played one season for the Kansas City Chiefs (1985), and seven seasons as a tight end for the Los Angeles Raiders (1987, 1989–1993), and the Washington Redskins (1994).
-
-Todd Christensen: Todd Jay Christensen (August 3, 1956 – November 13, 2013) was an American football player who played in the National Football League from 1978 until 1988, spending most of that time playing tight end for the Oakland and Los Angeles Raiders.  Following his retirement Christensen became a commentator for both professional and collegiate games, working for NBC Sports, ESPN, and CBS Sports Network among others.
-
-1991 Los Angeles Raiders season: The 1991 Los Angeles Raiders season was their 32nd in the National Football League (NFL).  They were unable to improve upon their previous season's output of 12–4, winning only nine games.  After a 9-4 start, the team lost its last three games, but did qualify for the playoffs for the second straight season.  The Raiders were inconsistent offensively, with struggling quarterback Jay Schroeder eventually benched in favor of rookie Todd Marinovich.  It was notable that future Hall of Famer Marcus Allen's role was restricted mainly to backing up newly acquired Roger Craig, and future All-Pro Tim Brown also played mostly as a reserve, starting only one game.  The loss of Bo Jackson to a career-ending inury also clearly had an impact.  A solid defense was led by Howie Long, Greg Townsend (13 sacks) and another acquisition from Northern California as the Raiders played in LA and not Oakland as some people have forgotten , Ronnie Lott (8 interceptions).
-
-Question: What commentator on the 1983 Los Angeles Raiders season spent most of his career playing tight end for the Oakland and Los Angeles Raiders?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "commentator_name": {
-      "type": "string",
-      "description": "The name of the individual who served as a commentator."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "commentary_season": {
-      "type": "integer",
-      "description": "The year of the season for which the individual provided commentary."
-    },
-    "player_position": {
-      "type": "string",
-      "description": "The primary playing position of the individual during their career."
-    },
-    "player_teams": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of teams the individual played for, specifically mentioning the Raiders."
+    {
+      "role": "user",
+      "content": "Context:\n1988 Los Angeles Raiders season: The 1988 Los Angeles Raiders season was the club's 29th season in the NFL.  Mike Shanahan was hired as head coach, and the club finished with a 7–9 record.  The Raiders drafted Heisman Trophy winner Tim Brown, making Brown the third person on the Raiders roster to have won the Heisman Trophy, the others being Marcus Allen and Bo Jackson.  Most of the team's success throughout the season came through their division, as the Raiders finished 6-2 against the weak AFC West division, with their only 2 losses against the champions of the division, the Seattle Seahawks.  However, the Raiders were only 1-7 against the rest of the NFL, with their only other win coming against the eventual champions, the 49ers in San Francisco in a game in which only field goals were kicked.\n\n1983 Los Angeles Raiders season: The 1983 Los Angeles Raiders season began with the team trying to improve on their 8–1 record from 1982.  The 1983 season was the second season in Los Angeles.  The 1983 season is also the Raiders third Super Bowl winning season.  To date, it was the team's most recent NFL championship season.  NFL Films titled the season highlights of the 1983 Los Angeles Raiders, \"Just Win, Baby!\" , narrated by John Facenda, and on November 24, 2006, NFL Network aired , the 1983 Los Angeles Raiders, ranking them #20, with team commentary from Marcus Allen, Todd Christensen and Howie Long, and narrated by Alec Baldwin.\n\n1994 Los Angeles Raiders season: The 1994 Los Angeles Raiders season was the team's 13th and final season in Los Angeles, before returning to their original home in Oakland the following season.\n\n2017 Oakland Raiders season: The 2017 Oakland Raiders season is the 58th overall season of the Oakland Raiders franchise, the franchise's 48th season in the National Football League, their 24th season since their return to Oakland, and the third under head coach Jack Del Rio.  The Raiders are looking to win their first AFC West title since 2002 and the Super Bowl for the first time since 1983, when the club was still in Los Angeles.  The Raiders began the season on September 10 at the Tennessee Titans and will finish the season December 31 at the Los Angeles Chargers.  The Raiders, as they did in 2016, will play one home game in Mexico City, this time against the New England Patriots.\n\nSports in Los Angeles: The Los Angeles metropolitan area is home to several professional and collegiate sports teams.  The Greater Los Angeles Area has nine major league professional teams: the Anaheim Ducks, the Los Angeles Angels, the Los Angeles Chargers, the Los Angeles Clippers, the Los Angeles Dodgers, LA Galaxy, the Los Angeles Kings, the Los Angeles Lakers, and the Los Angeles Rams.  Los Angeles FC will begin play as the area's tenth major team in 2018.  USC Trojans football, UCLA Bruins men's basketball, USC Trojans baseball, USC Trojans track & field, and Cal State Fullerton Titans baseball are all historically premier organizations in college sports.  Other major sports teams include UCLA Bruins Football, Los Angeles Sparks, Pepperdine Waves baseball, and formerly the Los Angeles Raiders and Los Angeles Aztecs.  Between them, these Los Angeles area sports teams have won a combined 105 Championship Titles.  Los Angeles area colleges have produced upwards of 200 National Championship Teams, primarily from USC Trojans and UCLA Bruins of the Pac-12 Conference.  The 1932 and 1984 Summer Olympics were held in Los Angeles.  In 2028 the city will host the Olympics for a third time.\n\n1980 Oakland Raiders season: The 1980 Oakland Raiders season began with the team trying to improve on their 9–7 record from 1979.  It was the 20th anniversary of the Oakland Raiders franchise and ended with their second Super Bowl victory.  Prior to the start of the season Al Davis announced plans to move the Raiders from Oakland to Los Angeles.  However, NFL Commissioner Pete Rozelle blocked the move by filing a restraining order.  He would even try to get Al Davis removed as owner, as the case went to the courts.  Still playing in Oakland the Raiders entered the season with a new Quarterback after acquiring Dan Pastorini from the Houston Oilers for Kenny Stabler.  However Pastorini struggled and the Raiders got off to a 2-3 when Pastorini was injured and replaced by Jim Plunkett.  Plunkett proved right for the Raiders offense.  The defense led the league in interceptions (35), turnovers (52) and yards per carry (3.4 YPA).  Lester Hayes led the NFL with 13 interceptions.  The team won 6 straight compiling an 11-5 record, and qualifying for the playoffs as a Wild Card.  In the Wild Card Game the Raiders would beat the Houston Oilers 27-7 at Oakland as the Raiders defense picked off former teammate Kenny Stabler twice.  Playing in freezing weather with temperature reading 30 degrees below zero the Raiders stunned the Browns 14-12 in a defensive struggle in Cleveland.  In the AFC Championship Game in San Diego the game would be a shoot out as the Raiders stunned the Chargers 34-27 to become the first AFC Wild Card to make the Super Bowl.  Highlighted by Jim Plunkett's MVP performance and Rod Martin's 3 interceptions the Raiders defeated the Philadelphia Eagles 27 - 10 in Super Bowl 15.\n\n1989 Los Angeles Raiders season: The 1989 Los Angeles Raiders season was the club's 30th season in the National Football League (NFL).  Art Shell replaced Mike Shanahan, and in the process became the first black head coach in the NFL since Fritz Pollard coached the Akron Pros in 1921.  The club finished with an 8–8 record.  In preseason against the Houston Oilers, the Raiders played their first game in Oakland since moving to Los Angeles in 1982, before eventually moving back to Oakland in 1995.\n\nEthan Horton: Ethan Shane Horton (born December 19, 1962) is a former professional American football tight end in the National Football League.  He played one season for the Kansas City Chiefs (1985), and seven seasons as a tight end for the Los Angeles Raiders (1987, 1989–1993), and the Washington Redskins (1994).\n\nTodd Christensen: Todd Jay Christensen (August 3, 1956 – November 13, 2013) was an American football player who played in the National Football League from 1978 until 1988, spending most of that time playing tight end for the Oakland and Los Angeles Raiders.  Following his retirement Christensen became a commentator for both professional and collegiate games, working for NBC Sports, ESPN, and CBS Sports Network among others.\n\n1991 Los Angeles Raiders season: The 1991 Los Angeles Raiders season was their 32nd in the National Football League (NFL).  They were unable to improve upon their previous season's output of 12–4, winning only nine games.  After a 9-4 start, the team lost its last three games, but did qualify for the playoffs for the second straight season.  The Raiders were inconsistent offensively, with struggling quarterback Jay Schroeder eventually benched in favor of rookie Todd Marinovich.  It was notable that future Hall of Famer Marcus Allen's role was restricted mainly to backing up newly acquired Roger Craig, and future All-Pro Tim Brown also played mostly as a reserve, starting only one game.  The loss of Bo Jackson to a career-ending inury also clearly had an impact.  A solid defense was led by Howie Long, Greg Townsend (13 sacks) and another acquisition from Northern California as the Raiders played in LA and not Oakland as some people have forgotten , Ronnie Lott (8 interceptions).\n\nQuestion: What commentator on the 1983 Los Angeles Raiders season spent most of his career playing tight end for the Oakland and Los Angeles Raiders?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"commentator_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the individual who served as a commentator.\"\n    },\n    \"commentary_season\": {\n      \"type\": \"integer\",\n      \"description\": \"The year of the season for which the individual provided commentary.\"\n    },\n    \"player_position\": {\n      \"type\": \"string\",\n      \"description\": \"The primary playing position of the individual during their career.\"\n    },\n    \"player_teams\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of teams the individual played for, specifically mentioning the Raiders.\"\n    }\n  },\n  \"required\": [\n    \"commentator_name\",\n    \"commentary_season\",\n    \"player_position\",\n    \"player_teams\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "commentator_name",
-    "commentary_season",
-    "player_position",
-    "player_teams"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "commentator_name": {
+        "type": "string",
+        "description": "The name of the individual who served as a commentator."
+      },
+      "commentary_season": {
+        "type": "integer",
+        "description": "The year of the season for which the individual provided commentary."
+      },
+      "player_position": {
+        "type": "string",
+        "description": "The primary playing position of the individual during their career."
+      },
+      "player_teams": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of teams the individual played for, specifically mentioning the Raiders."
+      }
+    },
+    "required": [
+      "commentator_name",
+      "commentary_season",
+      "player_position",
+      "player_teams"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

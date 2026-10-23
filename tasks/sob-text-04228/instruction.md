@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Micrococcidae: Micrococcidae is a family of scale insects commonly known as the Mediterranean scales.  There are two genera and eight species.  Members of this family are found in Cyprus, Italy and other Mediterranean countries including Egypt, France, Greece, Israel, Lebanon, Libya, Syria and Turkey.
-
-Trifurcula cryptella: Trifurcula cryptella is a moth of the Nepticulidae family.  It is widespread throughout Europe, northwards to southern parts of Norway and Sweden (but not in Finland), eastwards to Poland and the Balkan Peninsula, and south to the Mediterranean countries, but there it is rare and confined to mountainous regions.  In Italy it has only been recorded from the northern part, in Portugal in the Serra da Estrêla, in Spain in the Cantabrian Mountains and possibly the Sierra Nevada.  It is absent from the Mediterranean islands.
-
-Mompha miscella: Mompha miscella is a moth in the Momphidae family.  It is found from most of Europe to Asia Minor and North Africa.  In the north, it ranges to southern Fennoscandia.
-
-Mediterranean Journal of Educational Studies: The Mediterranean Journal of Educational Studies is a biannual open source refereed international journal with a regional focus.  It features educational research carried out in Mediterranean countries, as well as educational studies related to the diaspora of Mediterranean people worldwide.  The first issue of the MJES was published in 1996 and is now available free of charge.
-
-List of Mediterranean countries: The Mediterranean countries are those that surround the Mediterranean Sea.  Below is the list of the Mediterranean countries listed clockwise:
-
-Megahit-International Mediterranean Song Contest: Megahit-International Mediterranean Song Contest (Turkish: "Megahit-Uluslararası Akdeniz Şarkı Yarışması" ) was an international song contest hosted in Turkey by participations of singers from Mediterranean countries.  There were three different editions of the event.  First event that 9 countries participated was organized in 2002 in Antalya, second and third events were organized in Fethiye, Muğla.  Number of participants raised and reached to 14 in 2003, and to 15 in 2004.  Winners were Eyal Shachar of Israel, Sedat Yüce of Turkey and Linda Valori of Italy respectively.
-
-Alexandria International Film Festival: Alexandria International Film Festival for Mediterranean Countries is a film festival in Egypt.  Organized by the Egyptian Association of Film Writers and Critics (EAFWC).  The AIFF aims to broaden film culture and strengthen the relationship between filmmakers throughout the world, with special attention given to Mediterranean countries.
-
-North Africa: North Africa is a group of Mediterranean countries situated in the northern-most region of the African continent.  The term "North Africa" has no single accepted definition.  It is sometimes defined as stretching from the Atlantic shores of Morocco in the west, to the Suez Canal and the Red Sea in the east.  Others have limited it to the countries of Morocco, Algeria, and Tunisia, a region known by the French during colonial times as “Afrique du Nord” and by the Arabs as the Maghreb (“West”).  The most commonly accepted definition includes Morocco, Algeria, and Tunisia, as well as Libya, Sudan, and Egypt.  The term “North Africa”, when commonly used in North Africa and the Middle East, often refers only to the countries of the Maghreb and Libya.  Egypt, due to its greater Middle Eastern associations, is in the Middle East.
-
-Networks of Mediterranean Youth: The Networks of Mediterranean Youth (NET-MED Youth) project is a three-year project (2014-2017) implemented by UNESCO and funded by the European Union.  It aims at mainstreaming youth issues and priorities across national decision-making and policy implementation in eastern and western Mediterranean countries by building the capacities of youth and youth organizations and promoting their active engagement in the development and implementation of national policies and strategies on youth, ensuring that youth issues are adequately covered by national and regional media and by identifying workable models for improving youth access to employment and youth inclusion in different sectors.
-
-Messor capitatus: Messor capitatus is an ant species part of the Messor genus.  This genus includes about 40 specialized species that are found in dry areas of Mediterranean countries such as Africa, Southern Europe, and Asia. "Messor capitatus" are known as an Old World species because they release trail pheromones from the Dufour gland instead of from poison glands.  "Messor capitatus" are known as individual foragers that collect food independently of one another but sometimes will also use group foraging to form irregular, broad columns.  "Messor capitatus" main food source is seeds but they also will eat remains of plants and animals.
-
-Question: Which group of Mediterranean countries is  Mompha miscella found from 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "entity_name": {
-      "type": "string",
-      "description": "The name of the entity being discussed."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "entity_type": {
-      "type": "string",
-      "description": "The type of the entity (e.g., moth, insect)."
-    },
-    "found_regions": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of broader geographical regions where the entity is found."
-    },
-    "mediterranean_group_found": {
-      "type": "string",
-      "description": "The specific group of Mediterranean countries where the entity is found, as requested by the question."
+    {
+      "role": "user",
+      "content": "Context:\nMicrococcidae: Micrococcidae is a family of scale insects commonly known as the Mediterranean scales.  There are two genera and eight species.  Members of this family are found in Cyprus, Italy and other Mediterranean countries including Egypt, France, Greece, Israel, Lebanon, Libya, Syria and Turkey.\n\nTrifurcula cryptella: Trifurcula cryptella is a moth of the Nepticulidae family.  It is widespread throughout Europe, northwards to southern parts of Norway and Sweden (but not in Finland), eastwards to Poland and the Balkan Peninsula, and south to the Mediterranean countries, but there it is rare and confined to mountainous regions.  In Italy it has only been recorded from the northern part, in Portugal in the Serra da Estrêla, in Spain in the Cantabrian Mountains and possibly the Sierra Nevada.  It is absent from the Mediterranean islands.\n\nMompha miscella: Mompha miscella is a moth in the Momphidae family.  It is found from most of Europe to Asia Minor and North Africa.  In the north, it ranges to southern Fennoscandia.\n\nMediterranean Journal of Educational Studies: The Mediterranean Journal of Educational Studies is a biannual open source refereed international journal with a regional focus.  It features educational research carried out in Mediterranean countries, as well as educational studies related to the diaspora of Mediterranean people worldwide.  The first issue of the MJES was published in 1996 and is now available free of charge.\n\nList of Mediterranean countries: The Mediterranean countries are those that surround the Mediterranean Sea.  Below is the list of the Mediterranean countries listed clockwise:\n\nMegahit-International Mediterranean Song Contest: Megahit-International Mediterranean Song Contest (Turkish: \"Megahit-Uluslararası Akdeniz Şarkı Yarışması\" ) was an international song contest hosted in Turkey by participations of singers from Mediterranean countries.  There were three different editions of the event.  First event that 9 countries participated was organized in 2002 in Antalya, second and third events were organized in Fethiye, Muğla.  Number of participants raised and reached to 14 in 2003, and to 15 in 2004.  Winners were Eyal Shachar of Israel, Sedat Yüce of Turkey and Linda Valori of Italy respectively.\n\nAlexandria International Film Festival: Alexandria International Film Festival for Mediterranean Countries is a film festival in Egypt.  Organized by the Egyptian Association of Film Writers and Critics (EAFWC).  The AIFF aims to broaden film culture and strengthen the relationship between filmmakers throughout the world, with special attention given to Mediterranean countries.\n\nNorth Africa: North Africa is a group of Mediterranean countries situated in the northern-most region of the African continent.  The term \"North Africa\" has no single accepted definition.  It is sometimes defined as stretching from the Atlantic shores of Morocco in the west, to the Suez Canal and the Red Sea in the east.  Others have limited it to the countries of Morocco, Algeria, and Tunisia, a region known by the French during colonial times as “Afrique du Nord” and by the Arabs as the Maghreb (“West”).  The most commonly accepted definition includes Morocco, Algeria, and Tunisia, as well as Libya, Sudan, and Egypt.  The term “North Africa”, when commonly used in North Africa and the Middle East, often refers only to the countries of the Maghreb and Libya.  Egypt, due to its greater Middle Eastern associations, is in the Middle East.\n\nNetworks of Mediterranean Youth: The Networks of Mediterranean Youth (NET-MED Youth) project is a three-year project (2014-2017) implemented by UNESCO and funded by the European Union.  It aims at mainstreaming youth issues and priorities across national decision-making and policy implementation in eastern and western Mediterranean countries by building the capacities of youth and youth organizations and promoting their active engagement in the development and implementation of national policies and strategies on youth, ensuring that youth issues are adequately covered by national and regional media and by identifying workable models for improving youth access to employment and youth inclusion in different sectors.\n\nMessor capitatus: Messor capitatus is an ant species part of the Messor genus.  This genus includes about 40 specialized species that are found in dry areas of Mediterranean countries such as Africa, Southern Europe, and Asia. \"Messor capitatus\" are known as an Old World species because they release trail pheromones from the Dufour gland instead of from poison glands.  \"Messor capitatus\" are known as individual foragers that collect food independently of one another but sometimes will also use group foraging to form irregular, broad columns.  \"Messor capitatus\" main food source is seeds but they also will eat remains of plants and animals.\n\nQuestion: Which group of Mediterranean countries is  Mompha miscella found from \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"entity_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the entity being discussed.\"\n    },\n    \"entity_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of the entity (e.g., moth, insect).\"\n    },\n    \"found_regions\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of broader geographical regions where the entity is found.\"\n    },\n    \"mediterranean_group_found\": {\n      \"type\": \"string\",\n      \"description\": \"The specific group of Mediterranean countries where the entity is found, as requested by the question.\"\n    }\n  },\n  \"required\": [\n    \"entity_name\",\n    \"entity_type\",\n    \"found_regions\",\n    \"mediterranean_group_found\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "entity_name",
-    "entity_type",
-    "found_regions",
-    "mediterranean_group_found"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "entity_name": {
+        "type": "string",
+        "description": "The name of the entity being discussed."
+      },
+      "entity_type": {
+        "type": "string",
+        "description": "The type of the entity (e.g., moth, insect)."
+      },
+      "found_regions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of broader geographical regions where the entity is found."
+      },
+      "mediterranean_group_found": {
+        "type": "string",
+        "description": "The specific group of Mediterranean countries where the entity is found, as requested by the question."
+      }
+    },
+    "required": [
+      "entity_name",
+      "entity_type",
+      "found_regions",
+      "mediterranean_group_found"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

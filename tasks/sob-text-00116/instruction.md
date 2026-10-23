@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Anne of Green Gables: The Animated Series: Anne of Green Gables: The Animated Series is a Canadian animated television series produced by Sullivan Entertainment and developed by writer/director/producer Kevin Sullivan, based on the 1908 novel "Anne of Green Gables" by L. M. Montgomery.  One season of the series was produced, with 26 episodes, originally airing from 2001 to 2002.  The series was developed for PBS.  Then the show aired in reruns on Qubo from May 13, 2013, until December 25, 2016.  Each episode contained an educational aspect, with a problem for one or more of the show's characters to face and solve.  In conjunction with these problems, PBS "Ready-to-Learn" guides were created for teachers in America to use in classrooms.
-
-Kon'nichiwa Anne: Before Green Gables: Konnichiwa Anne: Before Green Gables (こんにちは アン 〜Before Green Gables , Konnichiwa An 〜Bifō Guriin Gēburusu , lit.  "Hello Anne: Before Green Gables”) , is the 26th series in Nippon Animation's "World Masterpiece Theater" anime.  The series is an adaptation of Canadian children's literature author Budge Wilson's prequel novel "Before Green Gables", which was translated into Japanese as "Konnichiwa Anne" (こんにちは アン) by Akiko Usagawa.  It chronicles the early years of main character Anne Shirley as she loses both her parents and is adopted by Matthew and Marilla Cuthbert.
-
-Anne (TV series): Anne (titled Anne with an E on Netflix) is a Canadian television series based on the 1908 novel "Anne of Green Gables" by Lucy Maud Montgomery, and adapted by Emmy Award-winning writer and producer Moira Walley-Beckett.  It airs on CBC in Canada, and elsewhere in the world it is available for streaming on Netflix.  The first season consists of seven episodes, with Niki Caro directing the 90-minute season premiere.  The series premiered on March 19, 2017, on CBC, the season finale airing on April 30, 2017.
-
-Green Gables (Melbourne, Florida): Green Gables, also known as the Wells House, is a historic home at 1501 South Harbor City Boulevard in Melbourne, Florida, United States.  The house fronts the Indian River.  Local business man William T. Wells purchased the Strobah property and built the Green Gables in 1886 with his wife Nora Stanford Wells as a winter home.  Green Gables is an example of Queen Anne style architecture, and it is believed to be the first home in the area with indoor plumbing and an indoor bathroom.  On May 18, 2016, it was added to the U.S. National Register of Historic Places.  Green Gables was scheduled for demolition in 2015, but a group of local historians worked with the owners, fourth generation family members, to save the house due to its historical significance to the area.
-
-Patricia Hamilton: Patricia Hamilton (born 1938) is a Canadian actress, perhaps best known as "Rachel Lynde" in the television mini-series "Anne of Green Gables", its sequels: "Anne of Green Gables: The Sequel", "", and "", and several Anne of Green Gables related films (such as "Road to Avonlea").
-
-Moira Walley-Beckett: Moira Walley-Beckett is a Canadian television actress, producer and writer.  She has worked on the AMC drama "Breaking Bad" as a writer and producer and has won the Primetime Emmy Award for Outstanding Writing for a Drama Series as well as being nominated for a Writers Guild of America (WGA) Award for her work on the series.  She is the creator of television series "Flesh and Bone" and "Anne with an E."
-
-Anne of Green Gables: The Continuing Story: Anne of Green Gables: The Continuing Story was a 2000 mini-series television film, and the third installment in a series of four films.  The film was highly anticipated among fans of "Anne of Green Gables".  It borrowed characters from the "Anne of Green Gables" novels by Lucy Maud Montgomery.  It served as a sequel to two mini-series produced by CBC Television in the 1980s.  It was the most controversial and heavily criticized of the three film adaptations written and produced by Kevin Sullivan.
-
-Green Gables (Prince Edward Island): Green Gables is the name of a 19th-century farm in Cavendish, Prince Edward Island, and is one of the most notable literary landmarks in Canada.  The Green Gables farm and its surroundings are the setting for the popular "Anne of Green Gables" novels by Lucy Maud Montgomery.  The site is also known as Green Gables Heritage Place.  The house was designated a National Historic Site in 1985 and the complex is located within Prince Edward Island National Park.
-
-Anne of Green Gables: Anne of Green Gables is a 1908 novel by Canadian author Lucy Maud Montgomery (published as L. M. Montgomery).  Written for all ages, it has been considered a children's novel since the mid-twentieth century.  It recounts the adventures of Anne Shirley, an 11-year-old orphan girl who is mistakenly sent to Matthew and Marilla Cuthbert, a middle-aged brother and sister who had intended to adopt a boy to help them on their farm in the fictional town of Avonlea on Prince Edward Island.  The novel recounts how Anne makes her way with the Cuthberts, in school, and within the town.
-
-Looking for Anne of Green Gables: Looking for Anne of Green Gables: The Story of L. M. Montgomery and her Literary Classic is a dual biography of Anne Shirley and her creator L. M. Montgomery. " Anne of Green Gables" is a 1908 children’s novel which has been read by over fifty million readers and translated into over thirty-five languages.  The author reconstructs the development of Anne Shirley, the main character in Montgomery's novel.
-
-Question: "Anne with an E" created by Moira Walley-Beckett is based on the 1908 novel "Anne of Green Gables" by which author?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "series_title": {
-      "type": "string",
-      "description": "The title of the television series."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "series_creator": {
-      "type": "string",
-      "description": "The creator of the television series."
-    },
-    "source_novel_title": {
-      "type": "string",
-      "description": "The title of the novel the series is based on."
-    },
-    "source_novel_author": {
-      "type": "string",
-      "description": "The author of the source novel."
-    },
-    "novel_publication_year": {
-      "type": "integer",
-      "description": "The publication year of the source novel."
+    {
+      "role": "user",
+      "content": "Context:\nAnne of Green Gables: The Animated Series: Anne of Green Gables: The Animated Series is a Canadian animated television series produced by Sullivan Entertainment and developed by writer/director/producer Kevin Sullivan, based on the 1908 novel \"Anne of Green Gables\" by L. M. Montgomery.  One season of the series was produced, with 26 episodes, originally airing from 2001 to 2002.  The series was developed for PBS.  Then the show aired in reruns on Qubo from May 13, 2013, until December 25, 2016.  Each episode contained an educational aspect, with a problem for one or more of the show's characters to face and solve.  In conjunction with these problems, PBS \"Ready-to-Learn\" guides were created for teachers in America to use in classrooms.\n\nKon'nichiwa Anne: Before Green Gables: Konnichiwa Anne: Before Green Gables (こんにちは アン 〜Before Green Gables , Konnichiwa An 〜Bifō Guriin Gēburusu , lit.  \"Hello Anne: Before Green Gables”) , is the 26th series in Nippon Animation's \"World Masterpiece Theater\" anime.  The series is an adaptation of Canadian children's literature author Budge Wilson's prequel novel \"Before Green Gables\", which was translated into Japanese as \"Konnichiwa Anne\" (こんにちは アン) by Akiko Usagawa.  It chronicles the early years of main character Anne Shirley as she loses both her parents and is adopted by Matthew and Marilla Cuthbert.\n\nAnne (TV series): Anne (titled Anne with an E on Netflix) is a Canadian television series based on the 1908 novel \"Anne of Green Gables\" by Lucy Maud Montgomery, and adapted by Emmy Award-winning writer and producer Moira Walley-Beckett.  It airs on CBC in Canada, and elsewhere in the world it is available for streaming on Netflix.  The first season consists of seven episodes, with Niki Caro directing the 90-minute season premiere.  The series premiered on March 19, 2017, on CBC, the season finale airing on April 30, 2017.\n\nGreen Gables (Melbourne, Florida): Green Gables, also known as the Wells House, is a historic home at 1501 South Harbor City Boulevard in Melbourne, Florida, United States.  The house fronts the Indian River.  Local business man William T. Wells purchased the Strobah property and built the Green Gables in 1886 with his wife Nora Stanford Wells as a winter home.  Green Gables is an example of Queen Anne style architecture, and it is believed to be the first home in the area with indoor plumbing and an indoor bathroom.  On May 18, 2016, it was added to the U.S. National Register of Historic Places.  Green Gables was scheduled for demolition in 2015, but a group of local historians worked with the owners, fourth generation family members, to save the house due to its historical significance to the area.\n\nPatricia Hamilton: Patricia Hamilton (born 1938) is a Canadian actress, perhaps best known as \"Rachel Lynde\" in the television mini-series \"Anne of Green Gables\", its sequels: \"Anne of Green Gables: The Sequel\", \"\", and \"\", and several Anne of Green Gables related films (such as \"Road to Avonlea\").\n\nMoira Walley-Beckett: Moira Walley-Beckett is a Canadian television actress, producer and writer.  She has worked on the AMC drama \"Breaking Bad\" as a writer and producer and has won the Primetime Emmy Award for Outstanding Writing for a Drama Series as well as being nominated for a Writers Guild of America (WGA) Award for her work on the series.  She is the creator of television series \"Flesh and Bone\" and \"Anne with an E.\"\n\nAnne of Green Gables: The Continuing Story: Anne of Green Gables: The Continuing Story was a 2000 mini-series television film, and the third installment in a series of four films.  The film was highly anticipated among fans of \"Anne of Green Gables\".  It borrowed characters from the \"Anne of Green Gables\" novels by Lucy Maud Montgomery.  It served as a sequel to two mini-series produced by CBC Television in the 1980s.  It was the most controversial and heavily criticized of the three film adaptations written and produced by Kevin Sullivan.\n\nGreen Gables (Prince Edward Island): Green Gables is the name of a 19th-century farm in Cavendish, Prince Edward Island, and is one of the most notable literary landmarks in Canada.  The Green Gables farm and its surroundings are the setting for the popular \"Anne of Green Gables\" novels by Lucy Maud Montgomery.  The site is also known as Green Gables Heritage Place.  The house was designated a National Historic Site in 1985 and the complex is located within Prince Edward Island National Park.\n\nAnne of Green Gables: Anne of Green Gables is a 1908 novel by Canadian author Lucy Maud Montgomery (published as L. M. Montgomery).  Written for all ages, it has been considered a children's novel since the mid-twentieth century.  It recounts the adventures of Anne Shirley, an 11-year-old orphan girl who is mistakenly sent to Matthew and Marilla Cuthbert, a middle-aged brother and sister who had intended to adopt a boy to help them on their farm in the fictional town of Avonlea on Prince Edward Island.  The novel recounts how Anne makes her way with the Cuthberts, in school, and within the town.\n\nLooking for Anne of Green Gables: Looking for Anne of Green Gables: The Story of L. M. Montgomery and her Literary Classic is a dual biography of Anne Shirley and her creator L. M. Montgomery. \" Anne of Green Gables\" is a 1908 children’s novel which has been read by over fifty million readers and translated into over thirty-five languages.  The author reconstructs the development of Anne Shirley, the main character in Montgomery's novel.\n\nQuestion: \"Anne with an E\" created by Moira Walley-Beckett is based on the 1908 novel \"Anne of Green Gables\" by which author?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"series_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the television series.\"\n    },\n    \"series_creator\": {\n      \"type\": \"string\",\n      \"description\": \"The creator of the television series.\"\n    },\n    \"source_novel_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the novel the series is based on.\"\n    },\n    \"source_novel_author\": {\n      \"type\": \"string\",\n      \"description\": \"The author of the source novel.\"\n    },\n    \"novel_publication_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The publication year of the source novel.\"\n    }\n  },\n  \"required\": [\n    \"series_title\",\n    \"series_creator\",\n    \"source_novel_title\",\n    \"source_novel_author\",\n    \"novel_publication_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "series_title",
-    "series_creator",
-    "source_novel_title",
-    "source_novel_author",
-    "novel_publication_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "series_title": {
+        "type": "string",
+        "description": "The title of the television series."
+      },
+      "series_creator": {
+        "type": "string",
+        "description": "The creator of the television series."
+      },
+      "source_novel_title": {
+        "type": "string",
+        "description": "The title of the novel the series is based on."
+      },
+      "source_novel_author": {
+        "type": "string",
+        "description": "The author of the source novel."
+      },
+      "novel_publication_year": {
+        "type": "integer",
+        "description": "The publication year of the source novel."
+      }
+    },
+    "required": [
+      "series_title",
+      "series_creator",
+      "source_novel_title",
+      "source_novel_author",
+      "novel_publication_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

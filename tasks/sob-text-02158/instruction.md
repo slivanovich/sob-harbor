@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Jameis Winston: Jameis Lanaed Winston ( , , born January 6, 1994) is an American football quarterback for the Tampa Bay Buccaneers of the National Football League (NFL).  Born and raised in Alabama, he was a highly regarded quarterback in high school, and led his team to the state championship as a junior.  Winston played college football for the Florida State Seminoles and as a Redshirt freshman became the youngest player to win the Heisman Trophy and helped lead the Seminoles to a victory in the 2014 BCS National Championship Game.  In his sophomore and final year, the Seminoles advanced to the Rose Bowl, part of the College Football Playoff.  Winston also played on Florida State's baseball team.  Winston was drafted as the first overall pick by the Buccaneers in the 2015 NFL Draft.
-
-Tyrod Taylor: Tyrod Di'allo Taylor (born August 3, 1989) is an American football quarterback for the Buffalo Bills of the National Football League (NFL).  He was the starting quarterback for the Virginia Tech Hokies football team from the start of the 2008 college football season through the 2011 Orange Bowl, the final game of the 2010 college football season for Virginia Tech.  He was drafted by the Baltimore Ravens in the sixth round of the 2011 NFL Draft and served as the backup to starting quarterback Joe Flacco, including during the Ravens' Super Bowl XLVII victory over the San Francisco 49ers.  Signed by Buffalo as a free agent in 2015, Taylor was named the starting quarterback for the Bills at the beginning of the 2015 NFL season.
-
-2000 Music City Bowl: In the 2000 Music City Bowl, West Virginia defeated Ole Miss 49–38.  This game was also West Virginia Mountaineers football coach Don Nehlen's final game.  Although West Virginia won the game, it was notable because of a second half comeback by freshman Eli Manning.  Down 49–16 in the fourth quarter, Ole Miss coach David Cutcliffe inserted Manning.  Ole Miss scored 22 unanswered points in the fourth quarter.
-
-Vince Young: Vincent Paul Young Jr. (born May 18, 1983) is an American football quarterback who is currently a free agent.  Young played in the National Football League (NFL) for six seasons.  Young was drafted by the Tennessee Titans with the third overall pick in the 2006 NFL Draft.  He spent the first five seasons of his career with the Titans.  In his rookie season, Young was named the NFL Offensive Rookie of the Year and was named to the AFC Pro Bowl team as a reserve.  In 2009, Young earned his second Pro Bowl selection and was named "Sporting News" NFL Comeback Player of the Year.
-
-Eli Manning: Elisha Nelson Manning (born January 3, 1981) is an American football quarterback for the New York Giants of the National Football League (NFL).  He played college football at the University of Mississippi.  He was drafted as the first overall pick in the 2004 NFL Draft by the San Diego Chargers and was immediately traded to the Giants who in return gave up a package, highlighted by fourth overall selection Philip Rivers.  He is the son of former NFL quarterback Archie Manning and the younger brother of former NFL quarterback Peyton Manning.
-
-Joe Montana: Joseph Clifford Montana Jr. (born June 11, 1956), nicknamed "Joe Cool" and "The Comeback Kid", is a former American football quarterback who played in the National Football League (NFL) for 16 seasons, primarily with the San Francisco 49ers and then with the Kansas City Chiefs for the final two seasons of his NFL career.  After winning a college national championship at Notre Dame, Montana started his NFL career in 1979 with San Francisco, where he played for the next 14 seasons. .  While a member of the 49ers, Montana started and won four Super Bowls and was the first player ever to have been named Super Bowl Most Valuable Player three times.  He also holds Super Bowl career records for most passes without an interception (122 in 4 games) and the all-time highest quarterback rating of 127.8.  Montana was elected to the Pro Football Hall of Fame in 2000, his first year of eligibility.
-
-Austin Davis: Austin Davis (born June 2, 1989) is an American football quarterback for the Seattle Seahawks of the National Football League (NFL).  A walk-on to the Southern Miss Golden Eagles program, Davis redshirted the 2007 season and became the starter a year later.  He ended the year with a combined total of 15 school records for both game and single-season marks and led the Golden Eagles to a bowl game victory in the 2008 New Orleans Bowl.  He was selected to the Freshman All-Conference USA team and earned a Freshman All-American honorable mention by College Football News for 2008.
-
-AJ McCarron: Raymond Anthony "AJ" McCarron Jr. (born September 13, 1990) is an American football quarterback for the Cincinnati Bengals of the National Football League (NFL).  He was drafted by the Bengals in the fifth round of the 2014 NFL Draft.  He played college football at Alabama.  Following the 2013 BCS National Championship Game against Notre Dame, McCarron became the first quarterback to win back-to-back consensus national championships in the BCS era.  McCarron is one of only seven quarterbacks in history to win back-to-back titles in some form and the first FBS quarterback to win back-to-back consecutive titles since Nebraska's Tommie Frazier in 1994 and 1995.  In addition, since his freshman/redshirt year, McCarron has been associated with three national title teams under coach Nick Saban: 2009, 2011, and 2012.
-
-Nissan Stadium: Nissan Stadium is a multi-purpose stadium in Nashville, Tennessee, United States, owned by the Metropolitan Government of Nashville and Davidson County.  It is primarily used for football and is the home field of the Tennessee Titans of the National Football League (NFL) and the Tennessee State Tigers of Tennessee State University.  The stadium is also the site of the Franklin American Mortgage Music City Bowl, a postseason college football bowl game played each December, and is occasionally used as a venue for soccer matches.  Nissan Stadium is used for large concerts, such as the CMA Music Festival nightly concerts which take place for four days every June.  Facilities are included to enable the stadium to host other public events, meetings, parties, and gatherings.
-
-Sam Bradford: Samuel Jacob Bradford (born November 8, 1987) is an American football quarterback for the Minnesota Vikings of the National Football League (NFL).  Bradford attended Putnam City North High School in Oklahoma City, where he starred in football, basketball and golf.  As a senior quarterback in 2005, he threw for 2,029 yards and 17 touchdowns in 12 games.  Bradford was not highly recruited coming out of high school, but he did receive a scholarship offer from the University of Oklahoma, which he accepted.  After a redshirt season in 2006, Bradford threw for 3,121 yards and 36 touchdowns as a redshirt freshman.  That set the stage for a phenomenal 2008 year, when Bradford became only the second sophomore to win the Heisman Trophy as he was the trigger man for the highest-scoring offense in NCAA history, throwing for 4,464 yards with 48 touchdowns and just six interceptions.  He again led the nation in passing and also added five rushing touchdowns as the Sooners went 12-1 and advanced to the BCS national title game.  Bradford declared for the NFL draft following the 2009 season and was drafted by the St. Louis Rams with the first overall pick in the 2010 NFL Draft.
-
-Question: For which team does this American football quarterback in the National Football League (NFL) who scored a remarkable comeback as freshman in the 2000 Music City Bowl? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "quarterback_name": {
-      "type": "string",
-      "description": "The name of the American football quarterback."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "comeback_event": {
-      "type": "string",
-      "description": "The name of the game where the comeback occurred."
-    },
-    "event_year": {
-      "type": "integer",
-      "description": "The year the comeback event took place."
-    },
-    "nfl_team": {
-      "type": "string",
-      "description": "The current NFL team for which the quarterback plays."
+    {
+      "role": "user",
+      "content": "Context:\nJameis Winston: Jameis Lanaed Winston ( , , born January 6, 1994) is an American football quarterback for the Tampa Bay Buccaneers of the National Football League (NFL).  Born and raised in Alabama, he was a highly regarded quarterback in high school, and led his team to the state championship as a junior.  Winston played college football for the Florida State Seminoles and as a Redshirt freshman became the youngest player to win the Heisman Trophy and helped lead the Seminoles to a victory in the 2014 BCS National Championship Game.  In his sophomore and final year, the Seminoles advanced to the Rose Bowl, part of the College Football Playoff.  Winston also played on Florida State's baseball team.  Winston was drafted as the first overall pick by the Buccaneers in the 2015 NFL Draft.\n\nTyrod Taylor: Tyrod Di'allo Taylor (born August 3, 1989) is an American football quarterback for the Buffalo Bills of the National Football League (NFL).  He was the starting quarterback for the Virginia Tech Hokies football team from the start of the 2008 college football season through the 2011 Orange Bowl, the final game of the 2010 college football season for Virginia Tech.  He was drafted by the Baltimore Ravens in the sixth round of the 2011 NFL Draft and served as the backup to starting quarterback Joe Flacco, including during the Ravens' Super Bowl XLVII victory over the San Francisco 49ers.  Signed by Buffalo as a free agent in 2015, Taylor was named the starting quarterback for the Bills at the beginning of the 2015 NFL season.\n\n2000 Music City Bowl: In the 2000 Music City Bowl, West Virginia defeated Ole Miss 49–38.  This game was also West Virginia Mountaineers football coach Don Nehlen's final game.  Although West Virginia won the game, it was notable because of a second half comeback by freshman Eli Manning.  Down 49–16 in the fourth quarter, Ole Miss coach David Cutcliffe inserted Manning.  Ole Miss scored 22 unanswered points in the fourth quarter.\n\nVince Young: Vincent Paul Young Jr. (born May 18, 1983) is an American football quarterback who is currently a free agent.  Young played in the National Football League (NFL) for six seasons.  Young was drafted by the Tennessee Titans with the third overall pick in the 2006 NFL Draft.  He spent the first five seasons of his career with the Titans.  In his rookie season, Young was named the NFL Offensive Rookie of the Year and was named to the AFC Pro Bowl team as a reserve.  In 2009, Young earned his second Pro Bowl selection and was named \"Sporting News\" NFL Comeback Player of the Year.\n\nEli Manning: Elisha Nelson Manning (born January 3, 1981) is an American football quarterback for the New York Giants of the National Football League (NFL).  He played college football at the University of Mississippi.  He was drafted as the first overall pick in the 2004 NFL Draft by the San Diego Chargers and was immediately traded to the Giants who in return gave up a package, highlighted by fourth overall selection Philip Rivers.  He is the son of former NFL quarterback Archie Manning and the younger brother of former NFL quarterback Peyton Manning.\n\nJoe Montana: Joseph Clifford Montana Jr. (born June 11, 1956), nicknamed \"Joe Cool\" and \"The Comeback Kid\", is a former American football quarterback who played in the National Football League (NFL) for 16 seasons, primarily with the San Francisco 49ers and then with the Kansas City Chiefs for the final two seasons of his NFL career.  After winning a college national championship at Notre Dame, Montana started his NFL career in 1979 with San Francisco, where he played for the next 14 seasons. .  While a member of the 49ers, Montana started and won four Super Bowls and was the first player ever to have been named Super Bowl Most Valuable Player three times.  He also holds Super Bowl career records for most passes without an interception (122 in 4 games) and the all-time highest quarterback rating of 127.8.  Montana was elected to the Pro Football Hall of Fame in 2000, his first year of eligibility.\n\nAustin Davis: Austin Davis (born June 2, 1989) is an American football quarterback for the Seattle Seahawks of the National Football League (NFL).  A walk-on to the Southern Miss Golden Eagles program, Davis redshirted the 2007 season and became the starter a year later.  He ended the year with a combined total of 15 school records for both game and single-season marks and led the Golden Eagles to a bowl game victory in the 2008 New Orleans Bowl.  He was selected to the Freshman All-Conference USA team and earned a Freshman All-American honorable mention by College Football News for 2008.\n\nAJ McCarron: Raymond Anthony \"AJ\" McCarron Jr. (born September 13, 1990) is an American football quarterback for the Cincinnati Bengals of the National Football League (NFL).  He was drafted by the Bengals in the fifth round of the 2014 NFL Draft.  He played college football at Alabama.  Following the 2013 BCS National Championship Game against Notre Dame, McCarron became the first quarterback to win back-to-back consensus national championships in the BCS era.  McCarron is one of only seven quarterbacks in history to win back-to-back titles in some form and the first FBS quarterback to win back-to-back consecutive titles since Nebraska's Tommie Frazier in 1994 and 1995.  In addition, since his freshman/redshirt year, McCarron has been associated with three national title teams under coach Nick Saban: 2009, 2011, and 2012.\n\nNissan Stadium: Nissan Stadium is a multi-purpose stadium in Nashville, Tennessee, United States, owned by the Metropolitan Government of Nashville and Davidson County.  It is primarily used for football and is the home field of the Tennessee Titans of the National Football League (NFL) and the Tennessee State Tigers of Tennessee State University.  The stadium is also the site of the Franklin American Mortgage Music City Bowl, a postseason college football bowl game played each December, and is occasionally used as a venue for soccer matches.  Nissan Stadium is used for large concerts, such as the CMA Music Festival nightly concerts which take place for four days every June.  Facilities are included to enable the stadium to host other public events, meetings, parties, and gatherings.\n\nSam Bradford: Samuel Jacob Bradford (born November 8, 1987) is an American football quarterback for the Minnesota Vikings of the National Football League (NFL).  Bradford attended Putnam City North High School in Oklahoma City, where he starred in football, basketball and golf.  As a senior quarterback in 2005, he threw for 2,029 yards and 17 touchdowns in 12 games.  Bradford was not highly recruited coming out of high school, but he did receive a scholarship offer from the University of Oklahoma, which he accepted.  After a redshirt season in 2006, Bradford threw for 3,121 yards and 36 touchdowns as a redshirt freshman.  That set the stage for a phenomenal 2008 year, when Bradford became only the second sophomore to win the Heisman Trophy as he was the trigger man for the highest-scoring offense in NCAA history, throwing for 4,464 yards with 48 touchdowns and just six interceptions.  He again led the nation in passing and also added five rushing touchdowns as the Sooners went 12-1 and advanced to the BCS national title game.  Bradford declared for the NFL draft following the 2009 season and was drafted by the St. Louis Rams with the first overall pick in the 2010 NFL Draft.\n\nQuestion: For which team does this American football quarterback in the National Football League (NFL) who scored a remarkable comeback as freshman in the 2000 Music City Bowl? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"quarterback_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the American football quarterback.\"\n    },\n    \"comeback_event\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the game where the comeback occurred.\"\n    },\n    \"event_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the comeback event took place.\"\n    },\n    \"nfl_team\": {\n      \"type\": \"string\",\n      \"description\": \"The current NFL team for which the quarterback plays.\"\n    }\n  },\n  \"required\": [\n    \"quarterback_name\",\n    \"comeback_event\",\n    \"event_year\",\n    \"nfl_team\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "quarterback_name",
-    "comeback_event",
-    "event_year",
-    "nfl_team"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "quarterback_name": {
+        "type": "string",
+        "description": "The name of the American football quarterback."
+      },
+      "comeback_event": {
+        "type": "string",
+        "description": "The name of the game where the comeback occurred."
+      },
+      "event_year": {
+        "type": "integer",
+        "description": "The year the comeback event took place."
+      },
+      "nfl_team": {
+        "type": "string",
+        "description": "The current NFL team for which the quarterback plays."
+      }
+    },
+    "required": [
+      "quarterback_name",
+      "comeback_event",
+      "event_year",
+      "nfl_team"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,88 +1,65 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Charles Richard-Hamelin: Charles Richard-Hamelin (Lanaudière, Canada, 17 July 1989) is a Canadian concert pianist.  A former student of McGill University, where he received his bachelor's degree in 2011, Richard-Hamelin concluded his master's at Yale School of Music in 2013.  After reaching the final stage in important piano competitions held in Montreal and Seoul, he had a distinguished participation at the XVII International Chopin Piano Competition (Warsaw, 2015), where he received the second prize and the Krystian Zimerman Prize for the best performance of a Sonata.
-
-Francqui Prize: The Francqui Prize is a prestigious Belgian scholarly and scientific prize named after Émile Francqui.  Normally annually since 1933, the Francqui Foundation awards it in recognition of the achievements of a scholar or scientist, who at the start of the year still had to be under 50.  It currently represents a sum of 250,000 Euros and is awarded in the following three-year rotation of subjects: exact sciences, social sciences or humanities, and biological or medical sciences.
-
-Hans von Bülow: Baron Hans Guido von Bülow (January 8, 1830February 12, 1894) was a German conductor, virtuoso pianist, and composer of the Romantic era.  One of the most famous conductors of the 19th century, his activity was critical for establishing the successes of several major composers of the time, especially Richard Wagner and Johannes Brahms.  Alongside Carl Tausig, Bülow was perhaps the most prominent of the early students of Hungarian virtuoso pianist, conductor and composer Franz Liszt – therein performed the first public performance of Liszt's Sonata in B minor in 1857.  He became acquainted with, fell in love and eventually married Liszt's daughter Cosima, who later left him for Wagner.  Noted for his interpretation of the works of Ludwig van Beethoven, he was one of the earliest European musicians to tour the United States.
-
-Krystian Zimerman: Krystian Zimerman (born December 5, 1956) is a Polish virtuoso pianist who has been hailed as one of the finest living pianists.
-
-Carl Tausig: Carl (or Karl) Tausig (4 November 184117 July 1871) was a Polish virtuoso pianist, arranger and composer.  He is generally accepted as Franz Liszt's most esteemed pupil, and one of the greatest pianists of all time.
-
-The Virtuoso Pianist in 60 Exercises: The Virtuoso Pianist ("Le Pianiste virtuose") by Charles-Louis Hanon, is a compilation of sixty exercises meant to train the pianist in speed, precision, agility, and strength of all of the fingers and flexibility in the wrists.  First published in Boulogne, in 1873, "The Virtuoso Pianist" is Hanon's most well-known work, and is still widely used by piano instructors and pupils.  However, the applicability of these nineteenth-century exercises has been questioned by some piano instructors today.
-
-European Coach of the Year (association football): European Football Coach of the Year is an annual prize in association football awarded to the best European manager or manager of European team in a calendar year, organized by European Union of Sports Press (fr.  "Union européenne de la presse sportive (UEPS)", also known as AIPS Europe) since 2001.  Previously it was awarded by the Association of European Journalists (AEJ, 1978—1997) and the Technical Commission of Torneo di Viareggio (1998—2000).  The winner receives a prize named after a prominent coach from the past.
-
-Alexandre Tansman: Alexandre Tansman (12 June 1897 – 15 November 1986) was a Polish composer and virtuoso pianist of Jewish origin.  He spent his early years in his native Poland, but lived in France for most of his life, being granted French citizenship in 1938.  His Polish identity influenced several orchestral and chamber works, such as "Rapsodie polonaise" and "Quatre Danses polonaises", and some guitar works, such as "Hommage à Lech Walesa" and "Hommage à Chopin".  His music is often said to be primarily neoclassical, drawing on his Polish Jewish heritage as well as his French musical influences.
-
-Volta Prize: The Volta Prize (French: le Prix Volta) was originally established by Napoleon Bonaparte in 1801 to honor Alessandro Volta, an Italian physicist noted for developing the battery.  At that time Alessandro Volta was summoned to Paris to demonstrate his great discovery before the French Academy of Sciences.  Bonaparte declared his presentation a triumph, presented him with a gold medal and conceived of the Volta Prize named in his honor, which the French government awarded for scientific achievement in electricity.  An early recipient was Sir Humphry Davy for his work on electrolysis.
-
-Leonardo da Vinci International Art Award: The Leonardo da Vinci Award was established in 1975 by the Rotary Club of Florence as an annual international prize named after Leonardo da Vinci, to be presented to young people involved in the study of the sciences, technology, literature and the arts.  Among the disciplines recognised and rewarded so far have been painting, sculpture, music, geology, architecture, medicine and nuclear physics.  The 21st Leonardo da Vinci Prize was recently presented to the brilliant young pianist Johan Schmidt.  The prize giving event has been hosted by other European Rotary Clubs in cities such as Tours, Vienna, Athens, Madrid, Würzburg, Brussels and Amsterdam.  This event was last held in London in 1987, when the prize was awarded to the internationally recognised percussionist Evelyn Glennie.  In 1996 1/2 the Rotary Club of London will again be responsible for hosting the prize-giving ceremony.
-
-Question: What is the name of the Polish virtuoso pianist who has a prize named in his honor that was awarded to Charles Richard-Hamelin in 2015?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "pianist_name": {
-      "type": "string",
-      "description": "The name of the Polish virtuoso pianist."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "pianist_nationality": {
-      "type": "string",
-      "description": "The nationality of the pianist."
-    },
-    "prize_details": {
-      "type": "object",
-      "properties": {
-        "prize_name": {
-          "type": "string",
-          "description": "The name of the prize awarded."
-        },
-        "award_year": {
-          "type": "integer",
-          "description": "The year the prize was awarded."
-        },
-        "recipient_name": {
-          "type": "string",
-          "description": "The name of the person who received the prize."
-        },
-        "competition_name": {
-          "type": "string",
-          "description": "The name of the competition where the prize was awarded."
-        },
-        "prize_category": {
-          "type": "string",
-          "description": "The specific category for which the prize was given."
-        }
-      },
-      "required": [
-        "prize_name",
-        "award_year",
-        "recipient_name",
-        "competition_name",
-        "prize_category"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nCharles Richard-Hamelin: Charles Richard-Hamelin (Lanaudière, Canada, 17 July 1989) is a Canadian concert pianist.  A former student of McGill University, where he received his bachelor's degree in 2011, Richard-Hamelin concluded his master's at Yale School of Music in 2013.  After reaching the final stage in important piano competitions held in Montreal and Seoul, he had a distinguished participation at the XVII International Chopin Piano Competition (Warsaw, 2015), where he received the second prize and the Krystian Zimerman Prize for the best performance of a Sonata.\n\nFrancqui Prize: The Francqui Prize is a prestigious Belgian scholarly and scientific prize named after Émile Francqui.  Normally annually since 1933, the Francqui Foundation awards it in recognition of the achievements of a scholar or scientist, who at the start of the year still had to be under 50.  It currently represents a sum of 250,000 Euros and is awarded in the following three-year rotation of subjects: exact sciences, social sciences or humanities, and biological or medical sciences.\n\nHans von Bülow: Baron Hans Guido von Bülow (January 8, 1830February 12, 1894) was a German conductor, virtuoso pianist, and composer of the Romantic era.  One of the most famous conductors of the 19th century, his activity was critical for establishing the successes of several major composers of the time, especially Richard Wagner and Johannes Brahms.  Alongside Carl Tausig, Bülow was perhaps the most prominent of the early students of Hungarian virtuoso pianist, conductor and composer Franz Liszt – therein performed the first public performance of Liszt's Sonata in B minor in 1857.  He became acquainted with, fell in love and eventually married Liszt's daughter Cosima, who later left him for Wagner.  Noted for his interpretation of the works of Ludwig van Beethoven, he was one of the earliest European musicians to tour the United States.\n\nKrystian Zimerman: Krystian Zimerman (born December 5, 1956) is a Polish virtuoso pianist who has been hailed as one of the finest living pianists.\n\nCarl Tausig: Carl (or Karl) Tausig (4 November 184117 July 1871) was a Polish virtuoso pianist, arranger and composer.  He is generally accepted as Franz Liszt's most esteemed pupil, and one of the greatest pianists of all time.\n\nThe Virtuoso Pianist in 60 Exercises: The Virtuoso Pianist (\"Le Pianiste virtuose\") by Charles-Louis Hanon, is a compilation of sixty exercises meant to train the pianist in speed, precision, agility, and strength of all of the fingers and flexibility in the wrists.  First published in Boulogne, in 1873, \"The Virtuoso Pianist\" is Hanon's most well-known work, and is still widely used by piano instructors and pupils.  However, the applicability of these nineteenth-century exercises has been questioned by some piano instructors today.\n\nEuropean Coach of the Year (association football): European Football Coach of the Year is an annual prize in association football awarded to the best European manager or manager of European team in a calendar year, organized by European Union of Sports Press (fr.  \"Union européenne de la presse sportive (UEPS)\", also known as AIPS Europe) since 2001.  Previously it was awarded by the Association of European Journalists (AEJ, 1978—1997) and the Technical Commission of Torneo di Viareggio (1998—2000).  The winner receives a prize named after a prominent coach from the past.\n\nAlexandre Tansman: Alexandre Tansman (12 June 1897 – 15 November 1986) was a Polish composer and virtuoso pianist of Jewish origin.  He spent his early years in his native Poland, but lived in France for most of his life, being granted French citizenship in 1938.  His Polish identity influenced several orchestral and chamber works, such as \"Rapsodie polonaise\" and \"Quatre Danses polonaises\", and some guitar works, such as \"Hommage à Lech Walesa\" and \"Hommage à Chopin\".  His music is often said to be primarily neoclassical, drawing on his Polish Jewish heritage as well as his French musical influences.\n\nVolta Prize: The Volta Prize (French: le Prix Volta) was originally established by Napoleon Bonaparte in 1801 to honor Alessandro Volta, an Italian physicist noted for developing the battery.  At that time Alessandro Volta was summoned to Paris to demonstrate his great discovery before the French Academy of Sciences.  Bonaparte declared his presentation a triumph, presented him with a gold medal and conceived of the Volta Prize named in his honor, which the French government awarded for scientific achievement in electricity.  An early recipient was Sir Humphry Davy for his work on electrolysis.\n\nLeonardo da Vinci International Art Award: The Leonardo da Vinci Award was established in 1975 by the Rotary Club of Florence as an annual international prize named after Leonardo da Vinci, to be presented to young people involved in the study of the sciences, technology, literature and the arts.  Among the disciplines recognised and rewarded so far have been painting, sculpture, music, geology, architecture, medicine and nuclear physics.  The 21st Leonardo da Vinci Prize was recently presented to the brilliant young pianist Johan Schmidt.  The prize giving event has been hosted by other European Rotary Clubs in cities such as Tours, Vienna, Athens, Madrid, Würzburg, Brussels and Amsterdam.  This event was last held in London in 1987, when the prize was awarded to the internationally recognised percussionist Evelyn Glennie.  In 1996 1/2 the Rotary Club of London will again be responsible for hosting the prize-giving ceremony.\n\nQuestion: What is the name of the Polish virtuoso pianist who has a prize named in his honor that was awarded to Charles Richard-Hamelin in 2015?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"pianist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Polish virtuoso pianist.\"\n    },\n    \"pianist_nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the pianist.\"\n    },\n    \"prize_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"prize_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the prize awarded.\"\n        },\n        \"award_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the prize was awarded.\"\n        },\n        \"recipient_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the person who received the prize.\"\n        },\n        \"competition_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the competition where the prize was awarded.\"\n        },\n        \"prize_category\": {\n          \"type\": \"string\",\n          \"description\": \"The specific category for which the prize was given.\"\n        }\n      },\n      \"required\": [\n        \"prize_name\",\n        \"award_year\",\n        \"recipient_name\",\n        \"competition_name\",\n        \"prize_category\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"pianist_name\",\n    \"pianist_nationality\",\n    \"prize_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "pianist_name",
-    "pianist_nationality",
-    "prize_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "pianist_name": {
+        "type": "string",
+        "description": "The name of the Polish virtuoso pianist."
+      },
+      "pianist_nationality": {
+        "type": "string",
+        "description": "The nationality of the pianist."
+      },
+      "prize_details": {
+        "type": "object",
+        "properties": {
+          "prize_name": {
+            "type": "string",
+            "description": "The name of the prize awarded."
+          },
+          "award_year": {
+            "type": "integer",
+            "description": "The year the prize was awarded."
+          },
+          "recipient_name": {
+            "type": "string",
+            "description": "The name of the person who received the prize."
+          },
+          "competition_name": {
+            "type": "string",
+            "description": "The name of the competition where the prize was awarded."
+          },
+          "prize_category": {
+            "type": "string",
+            "description": "The specific category for which the prize was given."
+          }
+        },
+        "required": [
+          "prize_name",
+          "award_year",
+          "recipient_name",
+          "competition_name",
+          "prize_category"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "pianist_name",
+      "pianist_nationality",
+      "prize_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

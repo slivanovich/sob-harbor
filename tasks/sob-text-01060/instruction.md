@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Zenji flava: Zenji Flava is a common nickname for Zanzibari hip hop, a genre that began to develop in the 1990s.  Cool Para said to be the first rapper to pioneer Zenji Flava during the 90s.  He was using Saleh Jabri's tape to rap on some local shows in Zanzibar until 1996 when he teamed-up with another rapper named Cool Muza together with others they formed a rap group called "Struggling Islanders.  They made their debut single "Historia" in early 1997.  Though the group short-lived and Cool Para and Muza both went to pursue a solo career.  Cool Para was the first rapper in Zanzibar and Tanzania mainland to make rap and taarab fusion called taarap.  With it he went to record a song with the most prominent taarab music band widely known as the East African Melody Modern Taarab, the song was known as "Loo Umezoea" which was released early 2000.  He also did "Kwenye Mataa" with the same taarab band in 1998.  Before Cool Para, there was also another short-lived crew named Contish.  The group consisted with two members Abdul and Hakim.  They released their only album called "Mabishoo" (93).  The album was available all over Zanzibar and Tanzania.  They were using Swahili lyrics over ragga instrumentals such as 'Tingaling' by Shabba Ranks.  Sam,e style as Saleh J. Sometimes later they disbanded and Kim went on pursue a solo and released an album called Kim Pekee.  Abdul went to live abroad.  The name is made of "zenji", which is slang for "Zanzibar", and "flava", which is a corruption of "flavour", thus meaning "of Zanzibari taste".  As with bongo flava, i.e., Tanzanian mainland's hip hop, zenji flava is usually sung in swahili; the main difference between the two subgenres is that Zanzibari hip hop also reflects some influence of taarab, and thus indirectly of Arab music and Indian music.  Notable zenji flava artists include Ali Haji.  As Zenji flavour goes on it find itself as a sub part of Bongo flava as it has influence from the young generation of artists who want to cop with Bongo flava.  like Offside trick, 2 berry now is separated to form two solo artists（Berry black and Berry white）, Wazenji kijiwe and Shaka zulu, others are East connection which was made up with almost seven groups of artist including Offside trick Brooklyn, Four nature, Jumbo camp, Queen love, and K jam.  It was in this time that Zenji flava was modernized with rapid growth in the number of artists.
-
-The Sky Moves Sideways: The Sky Moves Sideways is the third studio album by British progressive rock band Porcupine Tree, first released in February 1995.
-
-Kscope: Kscope is an independent record label that is part of Snapper Music, and a sister-label of Peaceville.  It is dedicated to artists in the progressive rock genre.  The label has released albums by Steven Wilson and his projects Porcupine Tree, No-Man and Blackfield.  In 2008 it branched out and has since signed the post-progressive artists Anathema, Lunatic Soul and Ulver, and progressive rock stalwart Ian Anderson to their roster.  In 2013, the Steven Wilson release The Raven That Refused To Sing (and Other Stories) received the Album of the Year award at the Progressive Music Awards.
-
-Up the Downstair: Up the Downstair is the second studio album by British progressive rock band Porcupine Tree, first released in May 1993.  It was originally intended to be a double album set including the song "", which was instead released as a single in 1992, and other material that ended up on the "Staircase Infinities" EP (1994).  In 2005, it was partially re-recorded, fully re-mixed, remastered and re-released along with the "Staircase Infinities" EP as a double album.  The re-release contains a new mix by Steven Wilson, along with recorded drums by Gavin Harrison that replace the electronic drums of the original version.  Steven Wilson has stated that the title of the album came from a line in the song "Voyage 34."  There is still a title track, however.  Another re-release on double vinyl was pressed on 14 August 2008 on Kscope records.  This is identical to the 2005 release, except it is printed on coloured vinyl and the "Staircase Infinities" disc contains the song "Phantoms".
-
-Moonloop: Moonloop is an EP released by British psychedelic rock and progressive rock band Porcupine Tree, prior to the release of their third studio album, "The Sky Moves Sideways".  It was released on vinyl and CD in the UK by Delerium Records.
-
-Transmission IV: Transmission IV is the fourth and final Transmission information service release (only available to subscribers) by British progressive rock band Porcupine Tree.  It contains a complete improvisation of what would become the song "Moonloop", included on the 1995 release "The Sky Moves Sideways".
-
-Porcupine Tree: Porcupine Tree were an English rock band formed by musician Steven Wilson in 1987.  The band began essentially as a solo project for Wilson, who created all of the band's music.  However, by 1993, Wilson desired to work in a band environment, and so brought on frequent collaborators Richard Barbieri on keyboards, Colin Edwin on bass and Chris Maitland on drums as permanent band members.  With Wilson still in charge of guitar and lead vocals, this would remain the lineup until 2001, when the band recruited Gavin Harrison to replace Maitland on drums.
-
-Tarquin's Seaweed Farm: Tarquin's Seaweed Farm, subtitled "Words from a Hessian Sack", is the first album to be released by Steven Wilson under the name "Porcupine Tree".  It was originally a compiled cassette of experimental music made by Steven Wilson for his joke band he formed with his friend Malcom Stocks.  The cassette was only sent out to a few people, but was enough to give the band a bit of fame in the UK underground music scene of the time, being picked up by the underground magazine Freakbeat.  It was later released under Delerium Records in 1991 in a limited edition of 300 copies.  Eventually, the tracks from this and the later Porcupine Tree album "The Nostalgia Factory" were compiled into what are considered Porcupine Tree's first true studio albums, "On the Sunday of Life" and "Yellow Hedgerow Dreamscape".
-
-Anesthetize: "Anesthetize" is a Porcupine Tree song.  It is the third track on the 2007 album "Fear of a Blank Planet".  It is the longest song on this album, clocking in at 17:42, making "Fear of a Blank Planet" the studio album containing the longest composition since 1995's "The Sky Moves Sideways" (not counting Voyage 34 (Phase III) in "" since it is a compilation album).
-
-The Contrast (band): The Contrast are a guitar power pop band based in Peterborough, Cambridgeshire in the United Kingdom.  They were formed in 1999 by David Reid and have since released five albums on the New York based label Rainbow Quartz and two for Wicked Cool Records.  Since the release of their second album "Wireless Days", their music has been regularly played by Little Steven on his Underground Garage radio show.  Little Steven once described them on air as "One of the best bands on the planet – and England too" and consequently invited them to play the Underground Garage Festival on Randall's Island in 2004.  In May 2007, they released a new album called "Underground Ghosts" (also on Rainbow Quartz) that has since been regularly featured on Little Steven's Underground Garage show.  A compilation of tracks from all of the Rainbow Quartz albums was released in 2007.  This contains new and unreleased tracks and is the band's first release on Little Steven's "Wicked Cool" label.  The band's song "Mystery #1" was featured on a Wicked Cool compilation album, "The Coolest Songs In The World- Vol 2".
-
-Question: Which band formed by Steven Wilson released an album called The Sky Moves Sideways?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "band_name": {
-      "type": "string",
-      "description": "The name of the band that released the album."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "album_name": {
-      "type": "string",
-      "description": "The title of the album."
-    },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the album was first released."
-    },
-    "formed_by": {
-      "type": "string",
-      "description": "The name of the musician who formed the band."
+    {
+      "role": "user",
+      "content": "Context:\nZenji flava: Zenji Flava is a common nickname for Zanzibari hip hop, a genre that began to develop in the 1990s.  Cool Para said to be the first rapper to pioneer Zenji Flava during the 90s.  He was using Saleh Jabri's tape to rap on some local shows in Zanzibar until 1996 when he teamed-up with another rapper named Cool Muza together with others they formed a rap group called \"Struggling Islanders.  They made their debut single \"Historia\" in early 1997.  Though the group short-lived and Cool Para and Muza both went to pursue a solo career.  Cool Para was the first rapper in Zanzibar and Tanzania mainland to make rap and taarab fusion called taarap.  With it he went to record a song with the most prominent taarab music band widely known as the East African Melody Modern Taarab, the song was known as \"Loo Umezoea\" which was released early 2000.  He also did \"Kwenye Mataa\" with the same taarab band in 1998.  Before Cool Para, there was also another short-lived crew named Contish.  The group consisted with two members Abdul and Hakim.  They released their only album called \"Mabishoo\" (93).  The album was available all over Zanzibar and Tanzania.  They were using Swahili lyrics over ragga instrumentals such as 'Tingaling' by Shabba Ranks.  Sam,e style as Saleh J. Sometimes later they disbanded and Kim went on pursue a solo and released an album called Kim Pekee.  Abdul went to live abroad.  The name is made of \"zenji\", which is slang for \"Zanzibar\", and \"flava\", which is a corruption of \"flavour\", thus meaning \"of Zanzibari taste\".  As with bongo flava, i.e., Tanzanian mainland's hip hop, zenji flava is usually sung in swahili; the main difference between the two subgenres is that Zanzibari hip hop also reflects some influence of taarab, and thus indirectly of Arab music and Indian music.  Notable zenji flava artists include Ali Haji.  As Zenji flavour goes on it find itself as a sub part of Bongo flava as it has influence from the young generation of artists who want to cop with Bongo flava.  like Offside trick, 2 berry now is separated to form two solo artists（Berry black and Berry white）, Wazenji kijiwe and Shaka zulu, others are East connection which was made up with almost seven groups of artist including Offside trick Brooklyn, Four nature, Jumbo camp, Queen love, and K jam.  It was in this time that Zenji flava was modernized with rapid growth in the number of artists.\n\nThe Sky Moves Sideways: The Sky Moves Sideways is the third studio album by British progressive rock band Porcupine Tree, first released in February 1995.\n\nKscope: Kscope is an independent record label that is part of Snapper Music, and a sister-label of Peaceville.  It is dedicated to artists in the progressive rock genre.  The label has released albums by Steven Wilson and his projects Porcupine Tree, No-Man and Blackfield.  In 2008 it branched out and has since signed the post-progressive artists Anathema, Lunatic Soul and Ulver, and progressive rock stalwart Ian Anderson to their roster.  In 2013, the Steven Wilson release The Raven That Refused To Sing (and Other Stories) received the Album of the Year award at the Progressive Music Awards.\n\nUp the Downstair: Up the Downstair is the second studio album by British progressive rock band Porcupine Tree, first released in May 1993.  It was originally intended to be a double album set including the song \"\", which was instead released as a single in 1992, and other material that ended up on the \"Staircase Infinities\" EP (1994).  In 2005, it was partially re-recorded, fully re-mixed, remastered and re-released along with the \"Staircase Infinities\" EP as a double album.  The re-release contains a new mix by Steven Wilson, along with recorded drums by Gavin Harrison that replace the electronic drums of the original version.  Steven Wilson has stated that the title of the album came from a line in the song \"Voyage 34.\"  There is still a title track, however.  Another re-release on double vinyl was pressed on 14 August 2008 on Kscope records.  This is identical to the 2005 release, except it is printed on coloured vinyl and the \"Staircase Infinities\" disc contains the song \"Phantoms\".\n\nMoonloop: Moonloop is an EP released by British psychedelic rock and progressive rock band Porcupine Tree, prior to the release of their third studio album, \"The Sky Moves Sideways\".  It was released on vinyl and CD in the UK by Delerium Records.\n\nTransmission IV: Transmission IV is the fourth and final Transmission information service release (only available to subscribers) by British progressive rock band Porcupine Tree.  It contains a complete improvisation of what would become the song \"Moonloop\", included on the 1995 release \"The Sky Moves Sideways\".\n\nPorcupine Tree: Porcupine Tree were an English rock band formed by musician Steven Wilson in 1987.  The band began essentially as a solo project for Wilson, who created all of the band's music.  However, by 1993, Wilson desired to work in a band environment, and so brought on frequent collaborators Richard Barbieri on keyboards, Colin Edwin on bass and Chris Maitland on drums as permanent band members.  With Wilson still in charge of guitar and lead vocals, this would remain the lineup until 2001, when the band recruited Gavin Harrison to replace Maitland on drums.\n\nTarquin's Seaweed Farm: Tarquin's Seaweed Farm, subtitled \"Words from a Hessian Sack\", is the first album to be released by Steven Wilson under the name \"Porcupine Tree\".  It was originally a compiled cassette of experimental music made by Steven Wilson for his joke band he formed with his friend Malcom Stocks.  The cassette was only sent out to a few people, but was enough to give the band a bit of fame in the UK underground music scene of the time, being picked up by the underground magazine Freakbeat.  It was later released under Delerium Records in 1991 in a limited edition of 300 copies.  Eventually, the tracks from this and the later Porcupine Tree album \"The Nostalgia Factory\" were compiled into what are considered Porcupine Tree's first true studio albums, \"On the Sunday of Life\" and \"Yellow Hedgerow Dreamscape\".\n\nAnesthetize: \"Anesthetize\" is a Porcupine Tree song.  It is the third track on the 2007 album \"Fear of a Blank Planet\".  It is the longest song on this album, clocking in at 17:42, making \"Fear of a Blank Planet\" the studio album containing the longest composition since 1995's \"The Sky Moves Sideways\" (not counting Voyage 34 (Phase III) in \"\" since it is a compilation album).\n\nThe Contrast (band): The Contrast are a guitar power pop band based in Peterborough, Cambridgeshire in the United Kingdom.  They were formed in 1999 by David Reid and have since released five albums on the New York based label Rainbow Quartz and two for Wicked Cool Records.  Since the release of their second album \"Wireless Days\", their music has been regularly played by Little Steven on his Underground Garage radio show.  Little Steven once described them on air as \"One of the best bands on the planet – and England too\" and consequently invited them to play the Underground Garage Festival on Randall's Island in 2004.  In May 2007, they released a new album called \"Underground Ghosts\" (also on Rainbow Quartz) that has since been regularly featured on Little Steven's Underground Garage show.  A compilation of tracks from all of the Rainbow Quartz albums was released in 2007.  This contains new and unreleased tracks and is the band's first release on Little Steven's \"Wicked Cool\" label.  The band's song \"Mystery #1\" was featured on a Wicked Cool compilation album, \"The Coolest Songs In The World- Vol 2\".\n\nQuestion: Which band formed by Steven Wilson released an album called The Sky Moves Sideways?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the band that released the album.\"\n    },\n    \"album_name\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the album.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the album was first released.\"\n    },\n    \"formed_by\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the musician who formed the band.\"\n    }\n  },\n  \"required\": [\n    \"band_name\",\n    \"album_name\",\n    \"release_year\",\n    \"formed_by\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "band_name",
-    "album_name",
-    "release_year",
-    "formed_by"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "band_name": {
+        "type": "string",
+        "description": "The name of the band that released the album."
+      },
+      "album_name": {
+        "type": "string",
+        "description": "The title of the album."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the album was first released."
+      },
+      "formed_by": {
+        "type": "string",
+        "description": "The name of the musician who formed the band."
+      }
+    },
+    "required": [
+      "band_name",
+      "album_name",
+      "release_year",
+      "formed_by"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

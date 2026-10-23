@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Historikill: 1995–2007: Historikill: 1995–2007 is a compact disc box set by the American thrash metal band Overkill, which was released on October 16, 2015.  The originally planned release date was September 18, 2015.  The box set spans the years from 1995 to 2007, including seven of the original seventeen Overkill albums from "The Killing Kind" (1996) to "Immortalis" (2007), two of their live albums ("Wrecking Your Neck" and "Wrecking Everything"), one of their compilation albums (""), the covers album "Coverkill" and a bonus disc featuring demos, remixes and one cover song.  The albums are placed in chronological order, although "Wrecking Everything" was released three months before the "Hello from the Gutter" compilation album.
-
-Asbury Park High School: Asbury Park High School is a comprehensive, four-year community public high school headquartered in a landmark building in Asbury Park, Monmouth County, New Jersey, United States, constructed during the New Deal as a model high school campus.  The school is part of the Asbury Park Public Schools, an Abbott District that serves children in pre-kindergarten through twelfth grade.  The current school building opened to students in September 1926.
-
-Wrecking Everything: Wrecking Everything is a 2002 live album by thrash metal band Overkill which is the counterpart to Wrecking Everything – An Evening in Asbury Park VHS/DVD.  Recorded at The Paramount, Asbury Park, New Jersey on March 23, 2002.  As of 2006, the album had sold over 5,300 copies and according to Bobby "Blitz" Ellsworth, the VHS/DVD has sold around 15,000–20,000 copies in the U.S.
-
-Asbury Lanes: Asbury Lanes located in Asbury Park, New Jersey is a vintage bowling alley and bar with live performances ranging from live musical acts, burlesque, hot rod, dance parties, film and art shows.  It is one of the many historic music landmarks located within Asbury Park.  These include The Stone Pony, the Wonderbar, the Saint and the Fastlane.
-
-Wrecking Everything – An Evening in Asbury Park: Wrecking Everything – An Evening in Asbury Park is a 2002 live DVD by thrash metal band Overkill.  It was recorded at The Paramount, Asbury Park, New Jersey on March 23, 2002.  This is the very first Overkill DVD/VHS and the video counterpart to their "Wrecking Everything" live album.
-
-Overkill (band): Overkill is an American thrash metal band, formed in 1980 in New Jersey.  They have gone through many line-up changes, leaving bassist D. D. Verni and lead vocalist Bobby "Blitz" Ellsworth as the only constant members.  In addition to Verni and Ellsworth, Overkill's current lineup includes Dave Linsk on lead guitar, Derek "The Skull" Tailer on rhythm guitar and Jason Bittner on drums.  Along with Anthrax, whose one-time lead guitarist Dan Spitz was also an early member of Overkill, the band is one of the most successful East Coast thrash metal bands, and they are often called "the Motörhead of thrash metal".  The band has a notable mascot named "Chaly", a skeletal bat with a skull-like face, horns, bony wings and green eyes, who has appeared on most of their album covers.
-
-Walter Reade: Walter Reade Sr (1884–1952) was the man behind a chain of theatres which grew from a single theatre in Asbury Park, New Jersey to a chain of forty theatres and drive-ins in New Jersey, New York and neighboring states that lasted into the mid seventies.  Known as the “Showman of The Shore,” his name was associated with big, beautifully kept single movie theatres of Hollywood’s golden age.  He lived in Deal, New Jersey, and considered Asbury Park the home base of his organization.  He had six theatres there: The Mayfair, St. James, Lyric, Ocean, Paramount and Savoy.  He soon became embroiled in fighting the corruption in Asbury Park from 1946 onward after he started a newspaper that had some unfavorable things to say about his adversaries.
-
-Down the Street: "Down the Street" was a popular nightclub in Asbury Park, New Jersey.  It opened in 1988 by John Hitchcock who was previously manager/DJ at the ever so popular "M&K".  The club had much previous gay history.  It was originally the "dance" part of Atlantis, the other part which was a hotel/ piano bar that burned very suspiciously one night after closing.  It re-opened in the 1980s as "Visions" by one of the previous owners of "Boots" next door, Len but It had a short lived life as Visions.  The club was one of the state's first gay discos.  The name 'Down the Street' was used because it was located down the street from other popular gay clubs, Odyssey and M&K.  It housed a dance floor, 5 bars, light shows, and drag |contests.  It also had an outside area which included a volleyball court, food cart and another building which housed a quieter bar, The Clubhouse.  The club even earned Asbury Park the nicknames "Gay riveria on the East Coast" and "the budget Cherry Grove."  When Asbury Park declined in the 1980s, all of the other clubs in the city closed or were razed.  However, Down the Street managed to stay open, making it the oldest and longest operating gay disco in New Jersey's history when it closed in 1999.  John had moved to Florida with his partner Jay and opened a new and successful bar The Cubby Hole.  John since sold that and has retired.
-
-1970 Asbury Park race riots: The 1970 Asbury Park race riots were a major civil disturbance that occurred in Asbury Park, New Jersey between July 4 and July 10, 1970.  The seven days of rioting, looting, and destruction left 180 people injured, including 15 state troopers, and the shopping district of the west side neighborhood of Asbury Park, completely destroyed.
-
-Paramount Theatre (Asbury Park, New Jersey): The Paramount Theatre in Asbury Park, New Jersey, Monmouth County, New Jersey, United States, is co-located with the Asbury Park Convention Hall on the boardwalk along the Atlantic Ocean.  The two are connected by an arcade that spans the boardwalk, and is bordered by the Atlantic Ocean on the east, and Bradley Park on the west.  A statue of Asbury Park founder James A. Bradley faces the buildings west facade.
-
-Question: Wrecking Everything – An Evening in Asbury Park is a 2002 live DVD by a band that has a notable skeleltal bat mascot named what?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "dvd_title": {
-      "type": "string",
-      "description": "The title of the live DVD."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the DVD was released."
-    },
-    "band_info": {
-      "type": "object",
-      "properties": {
-        "band_name": {
-          "type": "string",
-          "description": "The name of the band."
-        },
-        "mascot_name": {
-          "type": "string",
-          "description": "The name of the band's mascot."
-        },
-        "mascot_description": {
-          "type": "string",
-          "description": "A description of the band's mascot."
-        }
-      },
-      "required": [
-        "band_name",
-        "mascot_name",
-        "mascot_description"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nHistorikill: 1995–2007: Historikill: 1995–2007 is a compact disc box set by the American thrash metal band Overkill, which was released on October 16, 2015.  The originally planned release date was September 18, 2015.  The box set spans the years from 1995 to 2007, including seven of the original seventeen Overkill albums from \"The Killing Kind\" (1996) to \"Immortalis\" (2007), two of their live albums (\"Wrecking Your Neck\" and \"Wrecking Everything\"), one of their compilation albums (\"\"), the covers album \"Coverkill\" and a bonus disc featuring demos, remixes and one cover song.  The albums are placed in chronological order, although \"Wrecking Everything\" was released three months before the \"Hello from the Gutter\" compilation album.\n\nAsbury Park High School: Asbury Park High School is a comprehensive, four-year community public high school headquartered in a landmark building in Asbury Park, Monmouth County, New Jersey, United States, constructed during the New Deal as a model high school campus.  The school is part of the Asbury Park Public Schools, an Abbott District that serves children in pre-kindergarten through twelfth grade.  The current school building opened to students in September 1926.\n\nWrecking Everything: Wrecking Everything is a 2002 live album by thrash metal band Overkill which is the counterpart to Wrecking Everything – An Evening in Asbury Park VHS/DVD.  Recorded at The Paramount, Asbury Park, New Jersey on March 23, 2002.  As of 2006, the album had sold over 5,300 copies and according to Bobby \"Blitz\" Ellsworth, the VHS/DVD has sold around 15,000–20,000 copies in the U.S.\n\nAsbury Lanes: Asbury Lanes located in Asbury Park, New Jersey is a vintage bowling alley and bar with live performances ranging from live musical acts, burlesque, hot rod, dance parties, film and art shows.  It is one of the many historic music landmarks located within Asbury Park.  These include The Stone Pony, the Wonderbar, the Saint and the Fastlane.\n\nWrecking Everything – An Evening in Asbury Park: Wrecking Everything – An Evening in Asbury Park is a 2002 live DVD by thrash metal band Overkill.  It was recorded at The Paramount, Asbury Park, New Jersey on March 23, 2002.  This is the very first Overkill DVD/VHS and the video counterpart to their \"Wrecking Everything\" live album.\n\nOverkill (band): Overkill is an American thrash metal band, formed in 1980 in New Jersey.  They have gone through many line-up changes, leaving bassist D. D. Verni and lead vocalist Bobby \"Blitz\" Ellsworth as the only constant members.  In addition to Verni and Ellsworth, Overkill's current lineup includes Dave Linsk on lead guitar, Derek \"The Skull\" Tailer on rhythm guitar and Jason Bittner on drums.  Along with Anthrax, whose one-time lead guitarist Dan Spitz was also an early member of Overkill, the band is one of the most successful East Coast thrash metal bands, and they are often called \"the Motörhead of thrash metal\".  The band has a notable mascot named \"Chaly\", a skeletal bat with a skull-like face, horns, bony wings and green eyes, who has appeared on most of their album covers.\n\nWalter Reade: Walter Reade Sr (1884–1952) was the man behind a chain of theatres which grew from a single theatre in Asbury Park, New Jersey to a chain of forty theatres and drive-ins in New Jersey, New York and neighboring states that lasted into the mid seventies.  Known as the “Showman of The Shore,” his name was associated with big, beautifully kept single movie theatres of Hollywood’s golden age.  He lived in Deal, New Jersey, and considered Asbury Park the home base of his organization.  He had six theatres there: The Mayfair, St. James, Lyric, Ocean, Paramount and Savoy.  He soon became embroiled in fighting the corruption in Asbury Park from 1946 onward after he started a newspaper that had some unfavorable things to say about his adversaries.\n\nDown the Street: \"Down the Street\" was a popular nightclub in Asbury Park, New Jersey.  It opened in 1988 by John Hitchcock who was previously manager/DJ at the ever so popular \"M&K\".  The club had much previous gay history.  It was originally the \"dance\" part of Atlantis, the other part which was a hotel/ piano bar that burned very suspiciously one night after closing.  It re-opened in the 1980s as \"Visions\" by one of the previous owners of \"Boots\" next door, Len but It had a short lived life as Visions.  The club was one of the state's first gay discos.  The name 'Down the Street' was used because it was located down the street from other popular gay clubs, Odyssey and M&K.  It housed a dance floor, 5 bars, light shows, and drag |contests.  It also had an outside area which included a volleyball court, food cart and another building which housed a quieter bar, The Clubhouse.  The club even earned Asbury Park the nicknames \"Gay riveria on the East Coast\" and \"the budget Cherry Grove.\"  When Asbury Park declined in the 1980s, all of the other clubs in the city closed or were razed.  However, Down the Street managed to stay open, making it the oldest and longest operating gay disco in New Jersey's history when it closed in 1999.  John had moved to Florida with his partner Jay and opened a new and successful bar The Cubby Hole.  John since sold that and has retired.\n\n1970 Asbury Park race riots: The 1970 Asbury Park race riots were a major civil disturbance that occurred in Asbury Park, New Jersey between July 4 and July 10, 1970.  The seven days of rioting, looting, and destruction left 180 people injured, including 15 state troopers, and the shopping district of the west side neighborhood of Asbury Park, completely destroyed.\n\nParamount Theatre (Asbury Park, New Jersey): The Paramount Theatre in Asbury Park, New Jersey, Monmouth County, New Jersey, United States, is co-located with the Asbury Park Convention Hall on the boardwalk along the Atlantic Ocean.  The two are connected by an arcade that spans the boardwalk, and is bordered by the Atlantic Ocean on the east, and Bradley Park on the west.  A statue of Asbury Park founder James A. Bradley faces the buildings west facade.\n\nQuestion: Wrecking Everything – An Evening in Asbury Park is a 2002 live DVD by a band that has a notable skeleltal bat mascot named what?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"dvd_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the live DVD.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the DVD was released.\"\n    },\n    \"band_info\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"band_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the band.\"\n        },\n        \"mascot_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the band's mascot.\"\n        },\n        \"mascot_description\": {\n          \"type\": \"string\",\n          \"description\": \"A description of the band's mascot.\"\n        }\n      },\n      \"required\": [\n        \"band_name\",\n        \"mascot_name\",\n        \"mascot_description\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"dvd_title\",\n    \"release_year\",\n    \"band_info\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "dvd_title",
-    "release_year",
-    "band_info"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "dvd_title": {
+        "type": "string",
+        "description": "The title of the live DVD."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the DVD was released."
+      },
+      "band_info": {
+        "type": "object",
+        "properties": {
+          "band_name": {
+            "type": "string",
+            "description": "The name of the band."
+          },
+          "mascot_name": {
+            "type": "string",
+            "description": "The name of the band's mascot."
+          },
+          "mascot_description": {
+            "type": "string",
+            "description": "A description of the band's mascot."
+          }
+        },
+        "required": [
+          "band_name",
+          "mascot_name",
+          "mascot_description"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "dvd_title",
+      "release_year",
+      "band_info"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,81 +1,58 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Titta Ruffo: Titta Ruffo (9 June 1877 - 5 July 1953), born as Ruffo Titta Cafiero, was an Italian operatic baritone who had a major international singing career.  Known as the "Voce del leone" ("voice of the lion"), he was greatly admired, even by rival baritones, such as Giuseppe De Luca, who said of Ruffo: "His was not a voice, it was a miracle" (although not often published is the second part of De Luca's conclusion "...which he [Ruffo] bawled away..."), and Victor Maurel, the creator of Verdi's Iago and Falstaff.  Maurel said that the notes of Ruffo's upper register were the most glorious baritone sounds he had ever heard (see Pleasants, cited below).  Indeed Walter Legge, the prominent classical record producer, went so far as to call Ruffo "a genius".
-
-Ian Carey: Ian Carey is an American house DJ, musician and record producer based in Miami, United States.  Carey has performed as a disc jockey since 1993 and worked as a record producer since 1998.  Working with Jason Papillon (see DJ Jason Brooks) as part of Soul Providers, their first single, "Rise", reached No. 59 on the UK Singles Chart.
-
-Far Corporation: Far Corporation were a British band created by record producer Frank Farian, who created the bands Boney M. and Milli Vanilli.  The name was shortened from "Frank Farian Corporation", which was originally put together to record a cover of the Paul Simon piece "Mother and Child Reunion" as a charity record and reached the top 10 in several European countries.  That group's lineup included members of Barclay James Harvest, Toto, Boney M and Force Majeure.
-
-Bebu Silvetti: Juan Fernando Silvetti Adorno (27 March 1944 – 5 July 2003), professionally known as Bebu Silvetti or simply Silvetti, was an Argentine-born Mexican pianist, composer, conductor, arranger, and record producer.  In the 1970s he moved to Mexico and got the nationality.  Popularly known for the 1977 instrumental disco hit, "Lluvia De Primavera" ("Spring Rain" in English), the album was produced in Mexico and for the 1980 modern instrumental mariachi album.  Silvetti was also a successful, Grammy-winning producer for a wide variety of Latin and international music performers.  He was the father of the actress Anna Silvetti.  Silvetti also worked in the music of successful films and telenovelas in Mexico.
-
-See Thru Broadcasting: See Thru Broadcasting is a record label that was the brainchild of record producer D. Sardy.  For two years, new bands were jettisoned onto the college music charts and into Mom and Pop record stores.  The web site was central to See Thru's identity, which Zurkow art directed.  All album art and ancillary packaging was designed by Nancy Nowacek and Zurkow.
-
-Active Child: Patrick James Grossi (born May 28, 1983), better known by his stage name Active Child, is an American singer, songwriter, and record producer.  His debut album, "You Are All I See", was released in 2011 and produced by Ariel Rechtshaid, and garnered substantial reviews from media outlets like Pitchfork Media and Drowned in Sound.  In 2011, Active Child opened British musician James Blake and for the French synthpop band M83.  In 2012, his song, "Hanging On," was covered by English pop artist Ellie Goulding and later included on her second album, "Halcyon".
-
-As Far as I Can See...: As Far As I Can See is the fourth studio album by the British rock band the Zombies, and their first since 1991.  The lineup includes three of the band's original members: Rod Argent, Colin Blunstone and Chris White, with fourth original member Paul Atkinson also serving as A&R for the record.
-
-Emiel Pijnaker: Emiel Pijnaker is a film producer, composer and singer.  He is a producer on such upcoming feature films as "Van Gogh", "New Amsterdam" and "Shakespeare".  Emiel is also the lead singer and founder of Dutch rock band Yellow Pearl.  They have had several hit singles on the song charts, including 'For You And Me' and ‘See You Again.’  The music video for 'See You Again' appeared on MTV’s European television affiliates for 14 weeks.  Emiel's song ‘For You and Me’, enjoyed such popularity that it was included on three compilation albums from record labels SONY BMG ("Love Songs Top 100"), EMI ("Arbeidsvitaminen 60th Anniversary") and BMG ("Hitzone 27").  On TV Gelderland's "Gelderse Top 100" television special, 'For You And Me' was chosen as one of the Top 100 Dutch Songs of All-Time.  In June 2016 it was announced that Emiel has been working on new music with Alex Al (bass player Michael Jackson) and Pete Merriweather (drummer En Vogue).
-
-Love Never Felt So Good: "Love Never Felt So Good" is a song performed by American singer Michael Jackson, released posthumously on May 2, 2014.  The song, reworked from a 1983 demo track originally composed by Jackson and Canadian singer-songwriter Paul Anka, was the first single released from Jackson's second posthumous album, "Xscape".  Two versions of the single were developed.  The first was a solo version produced by American record producer John McClain and Dutch record producer Giorgio Tuinfort.  The second version was a duet featuring American singer Justin Timberlake, produced by American record producers Timbaland and J-Roc, which received positive reviews from music critics.  Its accompanying music video premiered on May 14, 2014 on "The Ellen DeGeneres Show".  In it, Timberlake appears with a crowd of young dancers, who reference Jackson's most known dance moves, interspersed with archival footage of the late pop singer's many short films.  The song is the second collaboration between Jackson and Anka to be released since Jackson's death in 2009 — the first being "This Is It".
-
-Chris White (musician): Christopher Taylor "Chris" White (born 7 March 1943) is an English singer, songwriter, musician, and record producer.
-
-Question: As Far as I Can See... included the singer and record producer who is of what nationality?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "album_title": {
-      "type": "string",
-      "description": "The title of the album mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "band_name": {
-      "type": "string",
-      "description": "The name of the band that released the album."
-    },
-    "producer_singer_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the individual who is both a singer and a record producer."
-        },
-        "nationality": {
-          "type": "string",
-          "description": "The nationality of the individual."
-        },
-        "roles": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "The roles of the individual in relation to the album or music industry."
-        }
-      },
-      "required": [
-        "name",
-        "nationality",
-        "roles"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nTitta Ruffo: Titta Ruffo (9 June 1877 - 5 July 1953), born as Ruffo Titta Cafiero, was an Italian operatic baritone who had a major international singing career.  Known as the \"Voce del leone\" (\"voice of the lion\"), he was greatly admired, even by rival baritones, such as Giuseppe De Luca, who said of Ruffo: \"His was not a voice, it was a miracle\" (although not often published is the second part of De Luca's conclusion \"...which he [Ruffo] bawled away...\"), and Victor Maurel, the creator of Verdi's Iago and Falstaff.  Maurel said that the notes of Ruffo's upper register were the most glorious baritone sounds he had ever heard (see Pleasants, cited below).  Indeed Walter Legge, the prominent classical record producer, went so far as to call Ruffo \"a genius\".\n\nIan Carey: Ian Carey is an American house DJ, musician and record producer based in Miami, United States.  Carey has performed as a disc jockey since 1993 and worked as a record producer since 1998.  Working with Jason Papillon (see DJ Jason Brooks) as part of Soul Providers, their first single, \"Rise\", reached No. 59 on the UK Singles Chart.\n\nFar Corporation: Far Corporation were a British band created by record producer Frank Farian, who created the bands Boney M. and Milli Vanilli.  The name was shortened from \"Frank Farian Corporation\", which was originally put together to record a cover of the Paul Simon piece \"Mother and Child Reunion\" as a charity record and reached the top 10 in several European countries.  That group's lineup included members of Barclay James Harvest, Toto, Boney M and Force Majeure.\n\nBebu Silvetti: Juan Fernando Silvetti Adorno (27 March 1944 – 5 July 2003), professionally known as Bebu Silvetti or simply Silvetti, was an Argentine-born Mexican pianist, composer, conductor, arranger, and record producer.  In the 1970s he moved to Mexico and got the nationality.  Popularly known for the 1977 instrumental disco hit, \"Lluvia De Primavera\" (\"Spring Rain\" in English), the album was produced in Mexico and for the 1980 modern instrumental mariachi album.  Silvetti was also a successful, Grammy-winning producer for a wide variety of Latin and international music performers.  He was the father of the actress Anna Silvetti.  Silvetti also worked in the music of successful films and telenovelas in Mexico.\n\nSee Thru Broadcasting: See Thru Broadcasting is a record label that was the brainchild of record producer D. Sardy.  For two years, new bands were jettisoned onto the college music charts and into Mom and Pop record stores.  The web site was central to See Thru's identity, which Zurkow art directed.  All album art and ancillary packaging was designed by Nancy Nowacek and Zurkow.\n\nActive Child: Patrick James Grossi (born May 28, 1983), better known by his stage name Active Child, is an American singer, songwriter, and record producer.  His debut album, \"You Are All I See\", was released in 2011 and produced by Ariel Rechtshaid, and garnered substantial reviews from media outlets like Pitchfork Media and Drowned in Sound.  In 2011, Active Child opened British musician James Blake and for the French synthpop band M83.  In 2012, his song, \"Hanging On,\" was covered by English pop artist Ellie Goulding and later included on her second album, \"Halcyon\".\n\nAs Far as I Can See...: As Far As I Can See is the fourth studio album by the British rock band the Zombies, and their first since 1991.  The lineup includes three of the band's original members: Rod Argent, Colin Blunstone and Chris White, with fourth original member Paul Atkinson also serving as A&R for the record.\n\nEmiel Pijnaker: Emiel Pijnaker is a film producer, composer and singer.  He is a producer on such upcoming feature films as \"Van Gogh\", \"New Amsterdam\" and \"Shakespeare\".  Emiel is also the lead singer and founder of Dutch rock band Yellow Pearl.  They have had several hit singles on the song charts, including 'For You And Me' and ‘See You Again.’  The music video for 'See You Again' appeared on MTV’s European television affiliates for 14 weeks.  Emiel's song ‘For You and Me’, enjoyed such popularity that it was included on three compilation albums from record labels SONY BMG (\"Love Songs Top 100\"), EMI (\"Arbeidsvitaminen 60th Anniversary\") and BMG (\"Hitzone 27\").  On TV Gelderland's \"Gelderse Top 100\" television special, 'For You And Me' was chosen as one of the Top 100 Dutch Songs of All-Time.  In June 2016 it was announced that Emiel has been working on new music with Alex Al (bass player Michael Jackson) and Pete Merriweather (drummer En Vogue).\n\nLove Never Felt So Good: \"Love Never Felt So Good\" is a song performed by American singer Michael Jackson, released posthumously on May 2, 2014.  The song, reworked from a 1983 demo track originally composed by Jackson and Canadian singer-songwriter Paul Anka, was the first single released from Jackson's second posthumous album, \"Xscape\".  Two versions of the single were developed.  The first was a solo version produced by American record producer John McClain and Dutch record producer Giorgio Tuinfort.  The second version was a duet featuring American singer Justin Timberlake, produced by American record producers Timbaland and J-Roc, which received positive reviews from music critics.  Its accompanying music video premiered on May 14, 2014 on \"The Ellen DeGeneres Show\".  In it, Timberlake appears with a crowd of young dancers, who reference Jackson's most known dance moves, interspersed with archival footage of the late pop singer's many short films.  The song is the second collaboration between Jackson and Anka to be released since Jackson's death in 2009 — the first being \"This Is It\".\n\nChris White (musician): Christopher Taylor \"Chris\" White (born 7 March 1943) is an English singer, songwriter, musician, and record producer.\n\nQuestion: As Far as I Can See... included the singer and record producer who is of what nationality?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"album_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the album mentioned in the question.\"\n    },\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the band that released the album.\"\n    },\n    \"producer_singer_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the individual who is both a singer and a record producer.\"\n        },\n        \"nationality\": {\n          \"type\": \"string\",\n          \"description\": \"The nationality of the individual.\"\n        },\n        \"roles\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"The roles of the individual in relation to the album or music industry.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"nationality\",\n        \"roles\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"album_title\",\n    \"band_name\",\n    \"producer_singer_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "album_title",
-    "band_name",
-    "producer_singer_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "album_title": {
+        "type": "string",
+        "description": "The title of the album mentioned in the question."
+      },
+      "band_name": {
+        "type": "string",
+        "description": "The name of the band that released the album."
+      },
+      "producer_singer_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the individual who is both a singer and a record producer."
+          },
+          "nationality": {
+            "type": "string",
+            "description": "The nationality of the individual."
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The roles of the individual in relation to the album or music industry."
+          }
+        },
+        "required": [
+          "name",
+          "nationality",
+          "roles"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "album_title",
+      "band_name",
+      "producer_singer_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

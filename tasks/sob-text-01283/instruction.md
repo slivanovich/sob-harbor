@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Rick Sanchez (Rick and Morty): Rick Sanchez is a fictional character from the Adult Swim animated television series "Rick and Morty".  Created by Justin Roiland and Dan Harmon, Sanchez is a genius alcoholic scientist based on Emmett Brown from "Back to the Future".  Rick is the show's main protagonist alongside his grandson Morty.  Known for his reckless, nihilist behavior and his pessimistic personality, the character has been well-received.
-
-Nepal Television: Nepal Television (Nepali: नेपाल टेलिभिजन ) is the oldest and most watched television channel in Nepal.  This was for many years the only television channel native to Nepal, but several others have recently begun operation.  "The News" (broadcast at 8:00 p.m.) is the channel's most popular show, followed by comedy program "Bhadragol", "Meri Bassai" and "Jire Khursani".
-
-Dharampatni: Dharampatni (English: Dutiful Wife) was an Indian soap opera on Imagine TV.  This serial was jointly produced by DJ's Creative Unit and Endemol India.  It replaced the slot of the show "Looteri Dulhan" and started on 16 August 2011 at 9.30pm (8:00pm uae time) Monday–Thursday.  Harshad Chopra and Aasiya Kazi are the main leads, portraying the characters of Mohan and Kastur.  The show faced stiff competition from Star plus's popular show Yeh Rishta Kya Kehlata Hai but managed to get decent ratings for the channel due to the sweet chemistry of the lead actors .
-
-Lawnmower Dog: "Lawnmower Dog" is the second episode of "Rick and Morty".  It premiered on Adult Swim on December 9, 2013, was written by Ryan Ridley, and directed by John Rice.  In the episode, Rick gives Jerry a device to enhance the dog's intelligence, whilst Rick and Morty get lost in the dreams of Morty's math teacher.  The episode was well received, with approximately 1.5 million viewers when airing.
-
-Rick and Morty: Rick and Morty is an American adult animated science-fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network's late-night programming block Adult Swim.  The series follows the misadventures of cynical mad scientist Rick Sanchez and his fretful, easily influenced grandson Morty Smith, who split their time between domestic family life and interdimensional adventures.  Roiland voices the series' eponymous characters, with the voice talent of Chris Parnell, Spencer Grammer, and Sarah Chalke providing the rest of the family.  It premiered on December 2, 2013.
-
-Eric Hehner: Eric C. R. Hehner, called Rick, is a Canadian computer scientist.
-
-Cake Wars: Cake Wars is an American reality competition series which was first broadcast on June 29, 2015 and aired on the cable TV channel Food Network.  "Cake Wars" is a spinoff of Food Network's popular baking reality series "Cupcake Wars".  Jonathan Bennett hosts a competition where four bakers face off to have their cakes featured in a special event, in addition to a $10,000 prize.  Star pastry chefs Waylynn Lucas, Ron Ben-Israel and Richard Ruskell judge which cakes are worthy of headlining parties for things such as "The Simpsons", "The Sound of Music", DC Comics, and more.  The first season of the show ran for 8 episodes and later seasons of the show, Season 2 and so on run for 13 episodes.  There was also an annual Christmas-themed spin-off of the show called "Cake Wars: Christmas" which made its debut the same year as "Cake Wars" and is identical and similar to another annual holiday-themed show called "Halloween Wars" which is for Halloween instead of Christmas.
-
-Detroit Lions Television Network: The Detroit Lions Television Network is a network of seven television stations (and one cable/satellite channel) in Michigan and Ohio that broadcast the NFL's Detroit Lions preseason games and related coverage.  On May 21, 2015, the Detroit Lions announced a multi-year broadcast partnership with WJBK (Fox 2) and Fox Sports Detroit.  Fox Sports Detroit produces the preseason game broadcasts with Fox 2 producing the pre-game and post-game segments.  The games air live on Fox 2 and the rest of the Detroit Lions Television Network, with re-airings on Fox Sports Detroit.  The wrap around shows' hosts are Dan Miller, Herman Moore, Jamie Samuelsen, Jennifer Hammond, and Woody Woodriffe.  The game announcers are Matt Shepard with play-by-play, Chris Spielman with color commentary, and Jennifer Hammond with sideline reports.  The network also airs a live regular season pre-game show called "Lions Game Day Live", while Fox Sports Detroit has a live regular season post-game show called "Lions Live".
-
-Vaishali Thakkar: Vaishali Thakkar (Hindi: वैशाली ठक्कर ; born 25 July in Bombay) is an Indian theatre and television actress.  She is best known for portraying the comic role of Praveena in the popular show Star Plus TV series "Baa Bahoo Aur Baby" & portraying the Supporting role of Damini in the popular show Colors TV series "Uttaran"
-
-Adult Swim: Adult Swim (stylized as [adult swim]) is the adult-oriented nighttime programming block of American children's cable network, Cartoon Network, that operates daily from 8:00 pm to 6:00 am, Eastern and Pacific Time.  It is programmed by Williams Street Productions, a subsidiary of Turner, which also developed two other programming blocks for Cartoon Network: Toonami (which later became a block on Adult Swim in 2012) and Miguzi.  The block gets its name from a phrase used by public swimming pools in the United States to label designated times when children are restricted from using the facilities in favor of adults.
-
-Question: What is the name of the network that comes on at 8:00pm-6:00am and has a popular show called Rick and Morty?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "network_name": {
-      "type": "string",
-      "description": "The name of the television network or programming block."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "operating_hours": {
-      "type": "string",
-      "description": "The daily operating hours of the network."
-    },
-    "popular_show": {
-      "type": "string",
-      "description": "A popular show aired on the network."
-    },
-    "parent_network": {
-      "type": "string",
-      "description": "The main network that hosts the programming block, if applicable."
+    {
+      "role": "user",
+      "content": "Context:\nRick Sanchez (Rick and Morty): Rick Sanchez is a fictional character from the Adult Swim animated television series \"Rick and Morty\".  Created by Justin Roiland and Dan Harmon, Sanchez is a genius alcoholic scientist based on Emmett Brown from \"Back to the Future\".  Rick is the show's main protagonist alongside his grandson Morty.  Known for his reckless, nihilist behavior and his pessimistic personality, the character has been well-received.\n\nNepal Television: Nepal Television (Nepali: नेपाल टेलिभिजन ) is the oldest and most watched television channel in Nepal.  This was for many years the only television channel native to Nepal, but several others have recently begun operation.  \"The News\" (broadcast at 8:00 p.m.) is the channel's most popular show, followed by comedy program \"Bhadragol\", \"Meri Bassai\" and \"Jire Khursani\".\n\nDharampatni: Dharampatni (English: Dutiful Wife) was an Indian soap opera on Imagine TV.  This serial was jointly produced by DJ's Creative Unit and Endemol India.  It replaced the slot of the show \"Looteri Dulhan\" and started on 16 August 2011 at 9.30pm (8:00pm uae time) Monday–Thursday.  Harshad Chopra and Aasiya Kazi are the main leads, portraying the characters of Mohan and Kastur.  The show faced stiff competition from Star plus's popular show Yeh Rishta Kya Kehlata Hai but managed to get decent ratings for the channel due to the sweet chemistry of the lead actors .\n\nLawnmower Dog: \"Lawnmower Dog\" is the second episode of \"Rick and Morty\".  It premiered on Adult Swim on December 9, 2013, was written by Ryan Ridley, and directed by John Rice.  In the episode, Rick gives Jerry a device to enhance the dog's intelligence, whilst Rick and Morty get lost in the dreams of Morty's math teacher.  The episode was well received, with approximately 1.5 million viewers when airing.\n\nRick and Morty: Rick and Morty is an American adult animated science-fiction sitcom created by Justin Roiland and Dan Harmon for Cartoon Network's late-night programming block Adult Swim.  The series follows the misadventures of cynical mad scientist Rick Sanchez and his fretful, easily influenced grandson Morty Smith, who split their time between domestic family life and interdimensional adventures.  Roiland voices the series' eponymous characters, with the voice talent of Chris Parnell, Spencer Grammer, and Sarah Chalke providing the rest of the family.  It premiered on December 2, 2013.\n\nEric Hehner: Eric C. R. Hehner, called Rick, is a Canadian computer scientist.\n\nCake Wars: Cake Wars is an American reality competition series which was first broadcast on June 29, 2015 and aired on the cable TV channel Food Network.  \"Cake Wars\" is a spinoff of Food Network's popular baking reality series \"Cupcake Wars\".  Jonathan Bennett hosts a competition where four bakers face off to have their cakes featured in a special event, in addition to a $10,000 prize.  Star pastry chefs Waylynn Lucas, Ron Ben-Israel and Richard Ruskell judge which cakes are worthy of headlining parties for things such as \"The Simpsons\", \"The Sound of Music\", DC Comics, and more.  The first season of the show ran for 8 episodes and later seasons of the show, Season 2 and so on run for 13 episodes.  There was also an annual Christmas-themed spin-off of the show called \"Cake Wars: Christmas\" which made its debut the same year as \"Cake Wars\" and is identical and similar to another annual holiday-themed show called \"Halloween Wars\" which is for Halloween instead of Christmas.\n\nDetroit Lions Television Network: The Detroit Lions Television Network is a network of seven television stations (and one cable/satellite channel) in Michigan and Ohio that broadcast the NFL's Detroit Lions preseason games and related coverage.  On May 21, 2015, the Detroit Lions announced a multi-year broadcast partnership with WJBK (Fox 2) and Fox Sports Detroit.  Fox Sports Detroit produces the preseason game broadcasts with Fox 2 producing the pre-game and post-game segments.  The games air live on Fox 2 and the rest of the Detroit Lions Television Network, with re-airings on Fox Sports Detroit.  The wrap around shows' hosts are Dan Miller, Herman Moore, Jamie Samuelsen, Jennifer Hammond, and Woody Woodriffe.  The game announcers are Matt Shepard with play-by-play, Chris Spielman with color commentary, and Jennifer Hammond with sideline reports.  The network also airs a live regular season pre-game show called \"Lions Game Day Live\", while Fox Sports Detroit has a live regular season post-game show called \"Lions Live\".\n\nVaishali Thakkar: Vaishali Thakkar (Hindi: वैशाली ठक्कर ; born 25 July in Bombay) is an Indian theatre and television actress.  She is best known for portraying the comic role of Praveena in the popular show Star Plus TV series \"Baa Bahoo Aur Baby\" & portraying the Supporting role of Damini in the popular show Colors TV series \"Uttaran\"\n\nAdult Swim: Adult Swim (stylized as [adult swim]) is the adult-oriented nighttime programming block of American children's cable network, Cartoon Network, that operates daily from 8:00 pm to 6:00 am, Eastern and Pacific Time.  It is programmed by Williams Street Productions, a subsidiary of Turner, which also developed two other programming blocks for Cartoon Network: Toonami (which later became a block on Adult Swim in 2012) and Miguzi.  The block gets its name from a phrase used by public swimming pools in the United States to label designated times when children are restricted from using the facilities in favor of adults.\n\nQuestion: What is the name of the network that comes on at 8:00pm-6:00am and has a popular show called Rick and Morty?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"network_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the television network or programming block.\"\n    },\n    \"operating_hours\": {\n      \"type\": \"string\",\n      \"description\": \"The daily operating hours of the network.\"\n    },\n    \"popular_show\": {\n      \"type\": \"string\",\n      \"description\": \"A popular show aired on the network.\"\n    },\n    \"parent_network\": {\n      \"type\": \"string\",\n      \"description\": \"The main network that hosts the programming block, if applicable.\"\n    }\n  },\n  \"required\": [\n    \"network_name\",\n    \"operating_hours\",\n    \"popular_show\",\n    \"parent_network\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "network_name",
-    "operating_hours",
-    "popular_show",
-    "parent_network"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "network_name": {
+        "type": "string",
+        "description": "The name of the television network or programming block."
+      },
+      "operating_hours": {
+        "type": "string",
+        "description": "The daily operating hours of the network."
+      },
+      "popular_show": {
+        "type": "string",
+        "description": "A popular show aired on the network."
+      },
+      "parent_network": {
+        "type": "string",
+        "description": "The main network that hosts the programming block, if applicable."
+      }
+    },
+    "required": [
+      "network_name",
+      "operating_hours",
+      "popular_show",
+      "parent_network"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

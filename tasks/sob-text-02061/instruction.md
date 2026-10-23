@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Angry Birds Blues: Angry Birds Blues is a Finnish computer-animated TV series based on the Blues and the Hatchlings that appeared in "The Angry Birds Movie".  Animated in the same style as in the movie, the series shows the lives of the Blues having fun, while the Hatchlings doing random stuff and ruining their plans.  It was produced by Rovio Entertainment, along with its affiliated company Kaiken Entertainment, and Bardel Entertainment providing its animation.  The series premiered on 10 March 2017 on the Toons.TV channel, before continuing on the Angry Birds' official YouTube channel after ToonsTV was shut down.
-
-Peter Dinklage: Peter Hayden Dinklage ( , born June 11, 1969) is an American actor and film producer.  He has received numerous accolades, including a Golden Globe Award and two Primetime Emmy Awards.
-
-Clay Kaytis: Clay Kaytis is an American animator and film director, best known for directing the animated film "The Angry Birds Movie".  He has been the head of animation at Walt Disney Animation Studios.
-
-Friends (Blake Shelton song): "Friends" is a song recorded by American singer Blake Shelton.  It was released as the first promotional single from Shelton's tenth studio album, "If I'm Honest" (2016), and is also featured on "The Angry Birds Movie: Original Motion Picture Soundtrack" (2016).  It was issued as a digital download on April 8, 2016.  The track was written by both Shelton and Jessi Alexander, becoming their first collaboration.
-
-Fergal Reilly: Fergal Reilly is an Irish animator, storyboard artist, and film director, best known for directing the animated film "The Angry Birds Movie".
-
-The Angry Birds Movie: The Angry Birds Movie (or simply Angry Birds) is a 2016 3D computer-animated comedy film based on the video game series of the same name, but it can also be interpreted to be a direct prequel to, or origin story behind the original game.  Produced by Rovio Animation, it was animated by Sony Pictures Imageworks.  It was directed by Clay Kaytis and Fergal Reilly in their directorial debuts, and written by Jon Vitti.  The film stars Jason Sudeikis, Josh Gad, Danny McBride, Maya Rudolph, Kate McKinnon, Sean Penn, Tony Hale, Keegan-Michael Key, Bill Hader and Peter Dinklage.  It is an international co-production between the United States and Finland.
-
-Angry Birds Fight!: Angry Birds Fight!  is a match-3 puzzle video game with role-playing game elements and is the eleventh installment in the "Angry Birds" series.  The game was co-developed by Rovio Entertainment and Kiteretsu Inc.  The game was soft-launched in some Asian Pacific countries in early 2015 and the worldwide release was on June 11, 2015.  In the game the player must match enough Angry Birds to earn enough power to defeat the enemy players and pigs.
-
-Lego Angry Birds: Lego Angry Birds, stylised as LEGO Angry Birds, is a line of Angry Birds-themed LEGO sets introduced by The LEGO Group in 2016, to coincide with the release of The Angry Birds Movie.  Rovio had made a deal with The Lego Group to manufacture six LEGO sets.
-
-Angry Birds Action!: Angry Birds Action!  is a 2016 pinball video game developed by Tag Games and published by Rovio Entertainment as the thirteenth game in the "Angry Birds" series, and the first to have the birds appear like their counterparts in "The Angry Birds Movie".  It was soft-launched in New Zealand on February 16, 2016 and was released for iOS and Android worldwide on April 28, 2016.  It uses the basic mechanics of pinball with the various Angry Birds acting as the pinball.  It is free-to-play with optional purchases for in-game currency.
-
-Jon Vitti: Jon Vitti (born 1960) is an American writer best known for his work on the television series "The Simpsons".  He has also written for the "King of the Hill" and "The Critic" series, and has served as a screenwriter or consultant for several animated and live-action movies, including "Ice Age" (2002) and "Robots" (2005).  He is one of the eleven writers of "The Simpsons Movie" and also wrote the screenplays for the film adaptions "Alvin and the Chipmunks", and "The Angry Birds Movie".
-
-Question: What American actor, born on June 11, 1969, starred in The Angry Birds Movie?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "actor_nationality": {
-      "type": "string",
-      "description": "The nationality of the actor."
-    },
-    "actor_birth_date": {
-      "type": "string",
-      "description": "The birth date of the actor in 'Month Day, Year' format."
-    },
-    "movie_title": {
-      "type": "string",
-      "description": "The title of the movie the actor starred in."
+    {
+      "role": "user",
+      "content": "Context:\nAngry Birds Blues: Angry Birds Blues is a Finnish computer-animated TV series based on the Blues and the Hatchlings that appeared in \"The Angry Birds Movie\".  Animated in the same style as in the movie, the series shows the lives of the Blues having fun, while the Hatchlings doing random stuff and ruining their plans.  It was produced by Rovio Entertainment, along with its affiliated company Kaiken Entertainment, and Bardel Entertainment providing its animation.  The series premiered on 10 March 2017 on the Toons.TV channel, before continuing on the Angry Birds' official YouTube channel after ToonsTV was shut down.\n\nPeter Dinklage: Peter Hayden Dinklage ( , born June 11, 1969) is an American actor and film producer.  He has received numerous accolades, including a Golden Globe Award and two Primetime Emmy Awards.\n\nClay Kaytis: Clay Kaytis is an American animator and film director, best known for directing the animated film \"The Angry Birds Movie\".  He has been the head of animation at Walt Disney Animation Studios.\n\nFriends (Blake Shelton song): \"Friends\" is a song recorded by American singer Blake Shelton.  It was released as the first promotional single from Shelton's tenth studio album, \"If I'm Honest\" (2016), and is also featured on \"The Angry Birds Movie: Original Motion Picture Soundtrack\" (2016).  It was issued as a digital download on April 8, 2016.  The track was written by both Shelton and Jessi Alexander, becoming their first collaboration.\n\nFergal Reilly: Fergal Reilly is an Irish animator, storyboard artist, and film director, best known for directing the animated film \"The Angry Birds Movie\".\n\nThe Angry Birds Movie: The Angry Birds Movie (or simply Angry Birds) is a 2016 3D computer-animated comedy film based on the video game series of the same name, but it can also be interpreted to be a direct prequel to, or origin story behind the original game.  Produced by Rovio Animation, it was animated by Sony Pictures Imageworks.  It was directed by Clay Kaytis and Fergal Reilly in their directorial debuts, and written by Jon Vitti.  The film stars Jason Sudeikis, Josh Gad, Danny McBride, Maya Rudolph, Kate McKinnon, Sean Penn, Tony Hale, Keegan-Michael Key, Bill Hader and Peter Dinklage.  It is an international co-production between the United States and Finland.\n\nAngry Birds Fight!: Angry Birds Fight!  is a match-3 puzzle video game with role-playing game elements and is the eleventh installment in the \"Angry Birds\" series.  The game was co-developed by Rovio Entertainment and Kiteretsu Inc.  The game was soft-launched in some Asian Pacific countries in early 2015 and the worldwide release was on June 11, 2015.  In the game the player must match enough Angry Birds to earn enough power to defeat the enemy players and pigs.\n\nLego Angry Birds: Lego Angry Birds, stylised as LEGO Angry Birds, is a line of Angry Birds-themed LEGO sets introduced by The LEGO Group in 2016, to coincide with the release of The Angry Birds Movie.  Rovio had made a deal with The Lego Group to manufacture six LEGO sets.\n\nAngry Birds Action!: Angry Birds Action!  is a 2016 pinball video game developed by Tag Games and published by Rovio Entertainment as the thirteenth game in the \"Angry Birds\" series, and the first to have the birds appear like their counterparts in \"The Angry Birds Movie\".  It was soft-launched in New Zealand on February 16, 2016 and was released for iOS and Android worldwide on April 28, 2016.  It uses the basic mechanics of pinball with the various Angry Birds acting as the pinball.  It is free-to-play with optional purchases for in-game currency.\n\nJon Vitti: Jon Vitti (born 1960) is an American writer best known for his work on the television series \"The Simpsons\".  He has also written for the \"King of the Hill\" and \"The Critic\" series, and has served as a screenwriter or consultant for several animated and live-action movies, including \"Ice Age\" (2002) and \"Robots\" (2005).  He is one of the eleven writers of \"The Simpsons Movie\" and also wrote the screenplays for the film adaptions \"Alvin and the Chipmunks\", and \"The Angry Birds Movie\".\n\nQuestion: What American actor, born on June 11, 1969, starred in The Angry Birds Movie?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor.\"\n    },\n    \"actor_nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the actor.\"\n    },\n    \"actor_birth_date\": {\n      \"type\": \"string\",\n      \"description\": \"The birth date of the actor in 'Month Day, Year' format.\"\n    },\n    \"movie_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the movie the actor starred in.\"\n    }\n  },\n  \"required\": [\n    \"actor_name\",\n    \"actor_nationality\",\n    \"actor_birth_date\",\n    \"movie_title\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actor_name",
-    "actor_nationality",
-    "actor_birth_date",
-    "movie_title"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor."
+      },
+      "actor_nationality": {
+        "type": "string",
+        "description": "The nationality of the actor."
+      },
+      "actor_birth_date": {
+        "type": "string",
+        "description": "The birth date of the actor in 'Month Day, Year' format."
+      },
+      "movie_title": {
+        "type": "string",
+        "description": "The title of the movie the actor starred in."
+      }
+    },
+    "required": [
+      "actor_name",
+      "actor_nationality",
+      "actor_birth_date",
+      "movie_title"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

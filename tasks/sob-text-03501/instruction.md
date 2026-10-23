@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-392nd (Croatian) Infantry Division (Wehrmacht): The 392nd (Croatian) Infantry Division (German: "392.  (Kroatische) Infanterie-Division" , Croatian: "392.  (hrvatska) pješačka divizija" ) was a so-called "legionnaire" division of the German Army during World War II.  It was formed in August 1943 using Croatian Home Guard soldiers with a German cadre.  The division was commanded by Germans down to battalion and even company level in nearly all cases.  Originally formed with the intention of service on the Eastern Front, this did not eventuate, and the division was used in anti-Partisan operations in the territory of the Independent State of Croatia (NDH) until the end of the war.  It was commonly known as the Blue Division.
-
-373rd (Croatian) Infantry Division (Wehrmacht): The 373rd (Croatian) Infantry Division (German: "373.  (Kroatische) Infanterie-Division" , Croatian: "373.  (hrvatska) pješačka divizija" ) was a division of the German Army during World War II.  It was formed in June 1943 using a brigade from the Home Guard of the Independent State of Croatia (Croatian: "Nezavisna Država Hrvatska" , NDH) with the addition of a German cadre.  The division was commanded by Germans down to battalion and even company level in nearly all cases, and was commonly referred to as a "legionnaire division".  Originally formed with the intention of service on the Eastern Front, it was used instead for anti-Partisan operations in the territory of the NDH until the end of the war.  It fought mainly in the western areas of the NDH, and was involved in the attempt to kill or capture the leader of the Partisans, Josip Broz Tito, in May 1944.  Severely depleted by desertion, the division withdrew towards the Reich border in the early months of 1945, eventually surrendering to the Partisans on 10 May 1945 near Brežice in modern-day Slovenia.
-
-Silver Burdett: Silver Burdett is an American primary education textbook publishing imprint owned by Pearson Education, which is a division of media conglomerate Pearson PLC.  It was first formed as a company in 1888 when Frank W. Burdett purchased a controlling interest in the textbook publishing company, Silver & Company.  In 1962, it was acquired by Time Inc., and it became the distributor of Time-Life Books to schools and libraries.  In 1965 it became the first division of the General Learning Corporation, a muli-million collaboration between Time Inc. and General Electric.  Simon & Schuster purchased it in 1986, and merged it with Ginn & Company, a leading el-hi (elementary school and high school) textbook publisher - which formed the imprint Silver Burdett & Ginn.  In 1998, Pearson PLC acquired Simon & Schuster's educational businesses (which included Silver Burdett & Ginn) from S&S parent Viacom, and created Pearson Education.
-
-WestRock: WestRock is an American corrugated packaging company.  It was formed in May 2015 after regulators approved the merger of MeadWestvaco and RockTenn.  MeadWestvaco stockholders will receive 0.78 shares of the combined company.  Rock-Tenn stockholders can choose either one share of the combined company or a specific cash amount for each of their shares.
-
-31st Guards Airborne Division: The 31st Guards Airborne Division was formed on 15 October 1948 from the 298th Guards Airborne Regiment of the 100th Guards Airborne Division in Novohrad-Volynskyi, part of the 39th Guards Airborne Corps.  The division inherited the Order of Kutuzov from the regiment.  Its 381st Guards Air Landing Regiment was converted to an airborne regiment at some point.  The division's Separate Air Landing Security Company was disbanded in 1949.  On 15 November 1953, its 716th Separate Guards Communications Company became a battalion, along with the Separate Medical & Sanitary Company.  The Separate Guards Antitank Battalion and Separate Guards Reconnaissance Company were disbanded on the same date.  On 30 April 1955, the 109th Guards Airborne Regiment became part of the division after its original parent unit, the 100th Guards Airborne Division was disbanded.  The 152nd Separate Tank Destroyer Battalion was activated on the same day.
-
-School Choice International: School Choice International and its consumer division, specializes in school admissions and placement services.  School Choice International provides education consulting for transnational companies and globally mobile families.  The company has three main functions: aid relocating families find schools, help global companies set educational policy in regards to their employee’s children, and provide online tools.  School Search Solutions provides school placement and advisement services directly to families.
-
-Jutland Division: The Jutland Division ("Jyske Divisionskommando") was a mechanized infantry formation of the Danish Army during the Cold War.  It was formed during 1951-1952 as 3rd Division from assets of the III Military Region and the division headquarters was initially located in Aabenraa.  As initially formed, the division had only one active brigade (1st Brigade) and two reserve brigades (the 2nd and 3rd Brigades).  The division changed its name to "Jutland Division" in 1961.  In 1975, the division headquarters was moved to Fredericia and the 2nd and 3rd Brigades received full equipment sets.  By 1979, each brigade was made up of two mechanized infantry battalion, a tank battalion, a self-propelled artillery battalion, and an armored reconnaissance squadron (company).
-
-National Analysts: NAXION previously known as National Analysts Worldwide, is an American marketing research company that originally worked as a division of the Curtis Publishing Company.  It was founded by Charles Coolidge Parlin in 1911.  Donald M. Hobart, future head of the division, joined in 1923, though he ended up resigning from the company in 1928 because he desired to work on the selling side of the concept.  He was asked to rejoin the company and become the head of the division in 1938 after Parlin had decided to retire.  It is considered to be the "first commercial research company" ever formed.  It became an independent organization in 1943 in order to "provide research services to industry and government."
-
-11th Guards Air Assault Brigade: The brigade was formed as the 11th Separate Airborne Brigade on 1 August 1968 in Mogocha.  Along with the 13th Separate Airborne Brigade, it was the first of many Soviet air assault brigades formed in the Cold War.  It was formed from the 1st Battalion of the 113th Guards Motorized Rifle Regiment of the 38th Guards Motor Rifle Division, which was renamed the 617th Separate Airborne Assault Battalion.  The 696th Helicopter Regiment, 656th Separate Communications Company and the 49th Separate Airfield Technical Support company combined to form the 211th Aviation Group.  The 618th and 619th Separate Airborne Assault battalions were formed from two battalions of the 52nd Motorized Rifle Division in Nizhneudinsk.  The 284th Independent Artillery Battalion was formed in Mogocha during the same month.  The 617th, 618th and 619th Separate Airborne Assault Battalions (OVSHB) became air assault battalions (ODSHB) in April 1969.  In July 1971, it was renamed the 11th Landing-Assault Brigade (air assault; ODShBr).
-
-Fold-Pak: Fold-Pak, formerly Bloomer Brothers of Newark, NY, is a division of WestRock with three production facilities: Hazleton, PA, Fresno, CA, and Lebanon, TN.  The company manufactures containers for take-out food under the Fold-Pak, Bio-Pak, Bio-Plus, and SmartServ product lines.
-
-Question: In regards to the company that has Fold-Pak as a division, when was it formed?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "company_name": {
-      "type": "string",
-      "description": "The name of the parent company."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "division_name": {
-      "type": "string",
-      "description": "The name of the division."
-    },
-    "formation_date": {
-      "type": "string",
-      "description": "The date when the parent company was formed."
-    },
-    "formation_event": {
-      "type": "string",
-      "description": "Description of the event that led to the company's formation."
+    {
+      "role": "user",
+      "content": "Context:\n392nd (Croatian) Infantry Division (Wehrmacht): The 392nd (Croatian) Infantry Division (German: \"392.  (Kroatische) Infanterie-Division\" , Croatian: \"392.  (hrvatska) pješačka divizija\" ) was a so-called \"legionnaire\" division of the German Army during World War II.  It was formed in August 1943 using Croatian Home Guard soldiers with a German cadre.  The division was commanded by Germans down to battalion and even company level in nearly all cases.  Originally formed with the intention of service on the Eastern Front, this did not eventuate, and the division was used in anti-Partisan operations in the territory of the Independent State of Croatia (NDH) until the end of the war.  It was commonly known as the Blue Division.\n\n373rd (Croatian) Infantry Division (Wehrmacht): The 373rd (Croatian) Infantry Division (German: \"373.  (Kroatische) Infanterie-Division\" , Croatian: \"373.  (hrvatska) pješačka divizija\" ) was a division of the German Army during World War II.  It was formed in June 1943 using a brigade from the Home Guard of the Independent State of Croatia (Croatian: \"Nezavisna Država Hrvatska\" , NDH) with the addition of a German cadre.  The division was commanded by Germans down to battalion and even company level in nearly all cases, and was commonly referred to as a \"legionnaire division\".  Originally formed with the intention of service on the Eastern Front, it was used instead for anti-Partisan operations in the territory of the NDH until the end of the war.  It fought mainly in the western areas of the NDH, and was involved in the attempt to kill or capture the leader of the Partisans, Josip Broz Tito, in May 1944.  Severely depleted by desertion, the division withdrew towards the Reich border in the early months of 1945, eventually surrendering to the Partisans on 10 May 1945 near Brežice in modern-day Slovenia.\n\nSilver Burdett: Silver Burdett is an American primary education textbook publishing imprint owned by Pearson Education, which is a division of media conglomerate Pearson PLC.  It was first formed as a company in 1888 when Frank W. Burdett purchased a controlling interest in the textbook publishing company, Silver & Company.  In 1962, it was acquired by Time Inc., and it became the distributor of Time-Life Books to schools and libraries.  In 1965 it became the first division of the General Learning Corporation, a muli-million collaboration between Time Inc. and General Electric.  Simon & Schuster purchased it in 1986, and merged it with Ginn & Company, a leading el-hi (elementary school and high school) textbook publisher - which formed the imprint Silver Burdett & Ginn.  In 1998, Pearson PLC acquired Simon & Schuster's educational businesses (which included Silver Burdett & Ginn) from S&S parent Viacom, and created Pearson Education.\n\nWestRock: WestRock is an American corrugated packaging company.  It was formed in May 2015 after regulators approved the merger of MeadWestvaco and RockTenn.  MeadWestvaco stockholders will receive 0.78 shares of the combined company.  Rock-Tenn stockholders can choose either one share of the combined company or a specific cash amount for each of their shares.\n\n31st Guards Airborne Division: The 31st Guards Airborne Division was formed on 15 October 1948 from the 298th Guards Airborne Regiment of the 100th Guards Airborne Division in Novohrad-Volynskyi, part of the 39th Guards Airborne Corps.  The division inherited the Order of Kutuzov from the regiment.  Its 381st Guards Air Landing Regiment was converted to an airborne regiment at some point.  The division's Separate Air Landing Security Company was disbanded in 1949.  On 15 November 1953, its 716th Separate Guards Communications Company became a battalion, along with the Separate Medical & Sanitary Company.  The Separate Guards Antitank Battalion and Separate Guards Reconnaissance Company were disbanded on the same date.  On 30 April 1955, the 109th Guards Airborne Regiment became part of the division after its original parent unit, the 100th Guards Airborne Division was disbanded.  The 152nd Separate Tank Destroyer Battalion was activated on the same day.\n\nSchool Choice International: School Choice International and its consumer division, specializes in school admissions and placement services.  School Choice International provides education consulting for transnational companies and globally mobile families.  The company has three main functions: aid relocating families find schools, help global companies set educational policy in regards to their employee’s children, and provide online tools.  School Search Solutions provides school placement and advisement services directly to families.\n\nJutland Division: The Jutland Division (\"Jyske Divisionskommando\") was a mechanized infantry formation of the Danish Army during the Cold War.  It was formed during 1951-1952 as 3rd Division from assets of the III Military Region and the division headquarters was initially located in Aabenraa.  As initially formed, the division had only one active brigade (1st Brigade) and two reserve brigades (the 2nd and 3rd Brigades).  The division changed its name to \"Jutland Division\" in 1961.  In 1975, the division headquarters was moved to Fredericia and the 2nd and 3rd Brigades received full equipment sets.  By 1979, each brigade was made up of two mechanized infantry battalion, a tank battalion, a self-propelled artillery battalion, and an armored reconnaissance squadron (company).\n\nNational Analysts: NAXION previously known as National Analysts Worldwide, is an American marketing research company that originally worked as a division of the Curtis Publishing Company.  It was founded by Charles Coolidge Parlin in 1911.  Donald M. Hobart, future head of the division, joined in 1923, though he ended up resigning from the company in 1928 because he desired to work on the selling side of the concept.  He was asked to rejoin the company and become the head of the division in 1938 after Parlin had decided to retire.  It is considered to be the \"first commercial research company\" ever formed.  It became an independent organization in 1943 in order to \"provide research services to industry and government.\"\n\n11th Guards Air Assault Brigade: The brigade was formed as the 11th Separate Airborne Brigade on 1 August 1968 in Mogocha.  Along with the 13th Separate Airborne Brigade, it was the first of many Soviet air assault brigades formed in the Cold War.  It was formed from the 1st Battalion of the 113th Guards Motorized Rifle Regiment of the 38th Guards Motor Rifle Division, which was renamed the 617th Separate Airborne Assault Battalion.  The 696th Helicopter Regiment, 656th Separate Communications Company and the 49th Separate Airfield Technical Support company combined to form the 211th Aviation Group.  The 618th and 619th Separate Airborne Assault battalions were formed from two battalions of the 52nd Motorized Rifle Division in Nizhneudinsk.  The 284th Independent Artillery Battalion was formed in Mogocha during the same month.  The 617th, 618th and 619th Separate Airborne Assault Battalions (OVSHB) became air assault battalions (ODSHB) in April 1969.  In July 1971, it was renamed the 11th Landing-Assault Brigade (air assault; ODShBr).\n\nFold-Pak: Fold-Pak, formerly Bloomer Brothers of Newark, NY, is a division of WestRock with three production facilities: Hazleton, PA, Fresno, CA, and Lebanon, TN.  The company manufactures containers for take-out food under the Fold-Pak, Bio-Pak, Bio-Plus, and SmartServ product lines.\n\nQuestion: In regards to the company that has Fold-Pak as a division, when was it formed?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"company_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the parent company.\"\n    },\n    \"division_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the division.\"\n    },\n    \"formation_date\": {\n      \"type\": \"string\",\n      \"description\": \"The date when the parent company was formed.\"\n    },\n    \"formation_event\": {\n      \"type\": \"string\",\n      \"description\": \"Description of the event that led to the company's formation.\"\n    }\n  },\n  \"required\": [\n    \"company_name\",\n    \"division_name\",\n    \"formation_date\",\n    \"formation_event\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "company_name",
-    "division_name",
-    "formation_date",
-    "formation_event"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "company_name": {
+        "type": "string",
+        "description": "The name of the parent company."
+      },
+      "division_name": {
+        "type": "string",
+        "description": "The name of the division."
+      },
+      "formation_date": {
+        "type": "string",
+        "description": "The date when the parent company was formed."
+      },
+      "formation_event": {
+        "type": "string",
+        "description": "Description of the event that led to the company's formation."
+      }
+    },
+    "required": [
+      "company_name",
+      "division_name",
+      "formation_date",
+      "formation_event"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

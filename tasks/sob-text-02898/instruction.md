@@ -1,113 +1,90 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Beckley, West Virginia: Beckley is a city in and the county seat of Raleigh County, West Virginia, United States.  It was founded on April 4, 1838.  Beckley was named in honor of John James Beckley, who was the first Clerk of the House of Representatives and the first Librarian of Congress.  It was founded by his son Alfred Beckley (US Army general and Confederate militia commander, born in Washington, D.C.).  The current mayor is Rob Rappold
-
-Now (Paul Rodgers album): Now is the third studio album by English rock musician Paul Rodgers, of Free and Bad Company fame.  Released on 17 June 1997, "Now" is Paul Rodgers' second solo work of original material, following 1983's "Cut Loose".  Now the album is more known as a part of 2-CD set, "Now & Live" including a disc of the 1995 live performance at which Rodgers performed many Free and Bad Company favourites.
-
-Collaborations (KJ-52 album): Collaborations is rapper KJ-52's second studio album, and his first distributed by BEC Recordings.  It features his most known song, "Dear Slim" which was shown on Total Request Live and described his aspirations such as "Rise Up" featuring Rob Beckley of Pillar and Trevor McNevan of Thousand Foot Krutch as well as "Revenge of the Nerds" featuring Pigeon John.
-
-Paul Rodgers: Paul Bernard Rodgers (born 17 December 1949) is an English singer, songwriter and musician, best known for his success in the 1960s and 1970s as vocalist of Free and Bad Company.  He now lives in Canada as a naturalized Canadian citizen.  After stints in two less successful bands in the 1980s and early 1990s, The Firm and The Law, he became a solo artist.  He has more recently toured and recorded with Queen.  Rodgers has been dubbed "The Voice" by his fans.  A poll in "Rolling Stone" magazine ranked him number 55 on its list of the "100 Greatest Singers of All Time".  In 2011 Rodgers received the British Academy's Ivor Novello Award for Outstanding Contribution to British Music.
-
-Rob Beckley: Robert Benjamin "Rob" Beckley (born August 20, 1975) is the lead singer and rhythm guitarist of the Christian rock band Pillar, which was voted Best Hard Rock Band in "CCM Magazine"<nowiki>'</nowiki>s 2006 Reader's Choice Awards.  Beckley started the band in 1998 in Kansas.
-
-Electric (Paul Rodgers album): Electric (fully as Paul Rodgers Electric according to Paul Rodgers official site) is a studio album by Paul Rodgers of Free and Bad Company fame.  It was recorded in 1999 at Lartington Hall Studios near Barnard Castle in the North East of England.  Electric was released in 2000 (the Japanese version of 1999 has a bonus track).
-
-Queen + Paul Rodgers Tour: Queen + Paul Rodgers Tour was a world concert tour by Queen guitarist Brian May and drummer Roger Taylor, joined by singer Paul Rodgers under the moniker of Queen + Paul Rodgers.  The tour was Queen's first since The Magic Tour in 1986, and the death of lead singer Freddie Mercury in November 1991.  The band's drummer Roger Taylor commented; "We never thought we would tour again, Paul (Rodgers) came along by chance and we seemed to have a chemistry.  Paul is just such a great singer.  He's not trying to be Freddie."  Bassist John Deacon also did not take part due to his retirement in 1997, however he gave the enterprise his blessing.
-
-Queen + Paul Rodgers: Queen + Paul Rodgers (sometimes referred to as Q+PR or QPR) were a collaboration between Queen (Brian May and Roger Taylor) and Paul Rodgers formerly of Bad Company, Free, The Firm and The Law.  Guitarist May had previously performed with Rodgers on several occasions, including a performance at the Royal Albert Hall.
-
-The Cosmos Rocks: The Cosmos Rocks is the only studio album by Queen + Paul Rodgers, released on 15 September 2008.  It contains 14 new tracks written by Brian May, Roger Taylor, and Paul Rodgers.  This is the first studio album of new material from the two remaining members of Queen since 1995′s "Made in Heaven", and is the only studio collaboration to date with Paul Rodgers.
-
-Say It's Not True: "Say It's Not True" is the first studio single by Queen + Paul Rodgers, It was released on World AIDS Day 1 December 2007.  The song was available as a free download from QueenOnline.com.  The track is written by drummer Roger Taylor and features all 3 members on vocal.  The song was performed live on the Queen + Paul Rodgers 2005/06 world tour, however the live rendition was acoustic and only featured Taylor on vocal.  When played on the Rock the Cosmos Tour, the song was sung by Taylor, May and Rodgers as on the single.
-
-Question: Who has performed in more bands, Paul Rodgers or Rob Beckley?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "comparison_subject": {
-      "type": "string",
-      "description": "The subject of the comparison, e.g., 'number of bands performed in'."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "person_a": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the first person being compared."
-        },
-        "band_count": {
-          "type": "integer",
-          "description": "The total number of bands the first person performed in."
-        },
-        "bands": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A list of bands the first person performed in."
-        }
-      },
-      "required": [
-        "name",
-        "band_count",
-        "bands"
-      ],
-      "additionalProperties": false
-    },
-    "person_b": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the second person being compared."
-        },
-        "band_count": {
-          "type": "integer",
-          "description": "The total number of bands the second person performed in."
-        },
-        "bands": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A list of bands the second person performed in."
-        }
-      },
-      "required": [
-        "name",
-        "band_count",
-        "bands"
-      ],
-      "additionalProperties": false
-    },
-    "person_with_more_bands": {
-      "type": "string",
-      "description": "The name of the person who performed in more bands."
-    },
-    "more_bands_count": {
-      "type": "integer",
-      "description": "The number of bands the person with more bands performed in."
+    {
+      "role": "user",
+      "content": "Context:\nBeckley, West Virginia: Beckley is a city in and the county seat of Raleigh County, West Virginia, United States.  It was founded on April 4, 1838.  Beckley was named in honor of John James Beckley, who was the first Clerk of the House of Representatives and the first Librarian of Congress.  It was founded by his son Alfred Beckley (US Army general and Confederate militia commander, born in Washington, D.C.).  The current mayor is Rob Rappold\n\nNow (Paul Rodgers album): Now is the third studio album by English rock musician Paul Rodgers, of Free and Bad Company fame.  Released on 17 June 1997, \"Now\" is Paul Rodgers' second solo work of original material, following 1983's \"Cut Loose\".  Now the album is more known as a part of 2-CD set, \"Now & Live\" including a disc of the 1995 live performance at which Rodgers performed many Free and Bad Company favourites.\n\nCollaborations (KJ-52 album): Collaborations is rapper KJ-52's second studio album, and his first distributed by BEC Recordings.  It features his most known song, \"Dear Slim\" which was shown on Total Request Live and described his aspirations such as \"Rise Up\" featuring Rob Beckley of Pillar and Trevor McNevan of Thousand Foot Krutch as well as \"Revenge of the Nerds\" featuring Pigeon John.\n\nPaul Rodgers: Paul Bernard Rodgers (born 17 December 1949) is an English singer, songwriter and musician, best known for his success in the 1960s and 1970s as vocalist of Free and Bad Company.  He now lives in Canada as a naturalized Canadian citizen.  After stints in two less successful bands in the 1980s and early 1990s, The Firm and The Law, he became a solo artist.  He has more recently toured and recorded with Queen.  Rodgers has been dubbed \"The Voice\" by his fans.  A poll in \"Rolling Stone\" magazine ranked him number 55 on its list of the \"100 Greatest Singers of All Time\".  In 2011 Rodgers received the British Academy's Ivor Novello Award for Outstanding Contribution to British Music.\n\nRob Beckley: Robert Benjamin \"Rob\" Beckley (born August 20, 1975) is the lead singer and rhythm guitarist of the Christian rock band Pillar, which was voted Best Hard Rock Band in \"CCM Magazine\"<nowiki>'</nowiki>s 2006 Reader's Choice Awards.  Beckley started the band in 1998 in Kansas.\n\nElectric (Paul Rodgers album): Electric (fully as Paul Rodgers Electric according to Paul Rodgers official site) is a studio album by Paul Rodgers of Free and Bad Company fame.  It was recorded in 1999 at Lartington Hall Studios near Barnard Castle in the North East of England.  Electric was released in 2000 (the Japanese version of 1999 has a bonus track).\n\nQueen + Paul Rodgers Tour: Queen + Paul Rodgers Tour was a world concert tour by Queen guitarist Brian May and drummer Roger Taylor, joined by singer Paul Rodgers under the moniker of Queen + Paul Rodgers.  The tour was Queen's first since The Magic Tour in 1986, and the death of lead singer Freddie Mercury in November 1991.  The band's drummer Roger Taylor commented; \"We never thought we would tour again, Paul (Rodgers) came along by chance and we seemed to have a chemistry.  Paul is just such a great singer.  He's not trying to be Freddie.\"  Bassist John Deacon also did not take part due to his retirement in 1997, however he gave the enterprise his blessing.\n\nQueen + Paul Rodgers: Queen + Paul Rodgers (sometimes referred to as Q+PR or QPR) were a collaboration between Queen (Brian May and Roger Taylor) and Paul Rodgers formerly of Bad Company, Free, The Firm and The Law.  Guitarist May had previously performed with Rodgers on several occasions, including a performance at the Royal Albert Hall.\n\nThe Cosmos Rocks: The Cosmos Rocks is the only studio album by Queen + Paul Rodgers, released on 15 September 2008.  It contains 14 new tracks written by Brian May, Roger Taylor, and Paul Rodgers.  This is the first studio album of new material from the two remaining members of Queen since 1995′s \"Made in Heaven\", and is the only studio collaboration to date with Paul Rodgers.\n\nSay It's Not True: \"Say It's Not True\" is the first studio single by Queen + Paul Rodgers, It was released on World AIDS Day 1 December 2007.  The song was available as a free download from QueenOnline.com.  The track is written by drummer Roger Taylor and features all 3 members on vocal.  The song was performed live on the Queen + Paul Rodgers 2005/06 world tour, however the live rendition was acoustic and only featured Taylor on vocal.  When played on the Rock the Cosmos Tour, the song was sung by Taylor, May and Rodgers as on the single.\n\nQuestion: Who has performed in more bands, Paul Rodgers or Rob Beckley?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"comparison_subject\": {\n      \"type\": \"string\",\n      \"description\": \"The subject of the comparison, e.g., 'number of bands performed in'.\"\n    },\n    \"person_a\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the first person being compared.\"\n        },\n        \"band_count\": {\n          \"type\": \"integer\",\n          \"description\": \"The total number of bands the first person performed in.\"\n        },\n        \"bands\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"A list of bands the first person performed in.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"band_count\",\n        \"bands\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"person_b\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the second person being compared.\"\n        },\n        \"band_count\": {\n          \"type\": \"integer\",\n          \"description\": \"The total number of bands the second person performed in.\"\n        },\n        \"bands\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"A list of bands the second person performed in.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"band_count\",\n        \"bands\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"person_with_more_bands\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person who performed in more bands.\"\n    },\n    \"more_bands_count\": {\n      \"type\": \"integer\",\n      \"description\": \"The number of bands the person with more bands performed in.\"\n    }\n  },\n  \"required\": [\n    \"comparison_subject\",\n    \"person_a\",\n    \"person_b\",\n    \"person_with_more_bands\",\n    \"more_bands_count\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "comparison_subject",
-    "person_a",
-    "person_b",
-    "person_with_more_bands",
-    "more_bands_count"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "comparison_subject": {
+        "type": "string",
+        "description": "The subject of the comparison, e.g., 'number of bands performed in'."
+      },
+      "person_a": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the first person being compared."
+          },
+          "band_count": {
+            "type": "integer",
+            "description": "The total number of bands the first person performed in."
+          },
+          "bands": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of bands the first person performed in."
+          }
+        },
+        "required": [
+          "name",
+          "band_count",
+          "bands"
+        ],
+        "additionalProperties": false
+      },
+      "person_b": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the second person being compared."
+          },
+          "band_count": {
+            "type": "integer",
+            "description": "The total number of bands the second person performed in."
+          },
+          "bands": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of bands the second person performed in."
+          }
+        },
+        "required": [
+          "name",
+          "band_count",
+          "bands"
+        ],
+        "additionalProperties": false
+      },
+      "person_with_more_bands": {
+        "type": "string",
+        "description": "The name of the person who performed in more bands."
+      },
+      "more_bands_count": {
+        "type": "integer",
+        "description": "The number of bands the person with more bands performed in."
+      }
+    },
+    "required": [
+      "comparison_subject",
+      "person_a",
+      "person_b",
+      "person_with_more_bands",
+      "more_bands_count"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

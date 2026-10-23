@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Matt Hughes (fighter): Matthew Allen Hughes (born October 13, 1973) is a retired American mixed martial artist with a background in wrestling.  He is a two-time UFC Welterweight Champion, UFC Hall of Fame inductee, and NJCAA Hall of Fame inductee.  During his tenures in the Ultimate Fighting Championship, Hughes put together two separate six-fight winning streaks, defeated all the available opposition in the welterweight division, and defended the belt a then-record seven times.  Hughes was inducted into the UFC Hall of Fame in May 2010 during the UFC Fan Expo in conjunction with UFC 114.
-
-San Diego Padres Hall of Fame: The San Diego Padres are an American professional baseball team in Major League Baseball (MLB) based in San Diego, California.  The club was founded in 1969 as part of the league's expansion.  The team's Hall of Fame, created in 1999 to honor the club's 30th anniversary, recognizes players, coaches, and executives who have made key contributions to the franchise.  Voting is conducted by a 35-member committee.  Candidates typically must wait at least two years after retiring to be eligible for induction, though Tony Gwynn was selected during his final season in 2001 before the last game of the year.  He was also the Hall of Fame's first ever unanimous selection.  There are 14 members in the team's Hall of Fame, the most recent inductee being Jack McKeon in 2017.  The inductees are featured in an exhibit at the team's home stadium, Petco Park.
-
-Hall of Fame (song): "Hall of Fame" is a song by Irish pop rock band The Script.  It is the lead single from their third studio album "#3".  The track features American hip-hop artist will.i.am of The Black Eyed Peas.  The track was given its first radio play on Capital on 23 July 2012.  Written and co-produced by the band, the song is about following dreams and making an impact on the world.  The song has been licensed for use in various media since its release.
-
-3 (The Script album): The band announced via their official Twitter account on 2 June 2012, that recording on their third studio album was complete, and that the title of the album would be "#3".  They also stated that the album was due for release on 17 September 2012, however, it was later revealed that the release date would be pushed forward by a week to 10 September.  O'Donoghue later revealed on 8 July that the title of the lead single would be "Hall of Fame", and that the track would debut on radio on 23 July.  He also revealed that the track was recorded in Los Angeles, and will be available for digital download on 19 August.  The single also features vocals from O'Donoughue close friend and fellow "The Voice UK" coach will.i.am.  The majority of the album was recorded in London's Sphere Studios, once again working with longtime collaborators Andrew Frampton and Steve Kipner.  The album's track listing was confirmed by Digital Spy on 8 August 2012.  The deluxe edition of the album contains a bonus disc, containing two previously unreleased tracks, four live tracks and two alternative versions of "Hall of Fame", the second of which is a hidden track.  Digital Spy also revealed the album's artwork on the same date.
-
-BC Entertainment Hall of Fame: The BC Entertainment Hall of Fame in Vancouver was founded on 24 July 1992 to honour British Columbians that have made outstanding contributions to the entertainment industry.  Star Walk inductees are featured with a plaque on the Walk of Fame on Granville Street and in a gallery in the Orpheum.  Individuals and organizations can be nominated and inducted.  The City of Vancouver provides guided tours of the Orpheum and BC Entertainment Hall of Fame to which the proceeds go back into the BC Entertainment Hall of Fame fund.
-
-Murray Williamson: Murray Williamson (born January 13, 1934 in Winnipeg, Manitoba, Canada) is a retired ice hockey player and coach.  Williamson was an All American at the University of Minnesota in 1959 and played, coached and managed in the United States Hockey League with the St. Paul Steers.  He coached the United States National teams in the World Hockey Championships in 1967, 1969 and 1971 and the United States Olympic teams in 1968 and 1972.  The 1972 team won the silver medal at the 1972 Winter Olympics held in Sapporo, Japan.  He was instrumental in the founding of the Midwest Junior Hockey League in 1973 (now called the United States Hockey League) and was the coach and general manager of the first United States National Junior team that participated in the inaugural World Junior Tournament held in Lennigrad, Russia in 1973.  Williamson was inducted into the United States Hockey Hall of Fame in 2005,the Massachusetts Hockey Hall of Fame in 2000, the Manitoba Hockey Hall of Fame in 2009 and the University of Minnesota Athletic Hall of Fame in 2008.  He was awarded the Legend of Hobey Baker Award in 2005 for his contributions to college hockey.  He is featured in the book "Striking Silver" the untold story of America's forgotten hockey team, published by Sorts Publishing LLC in 2006 by the Caraccioli brothers
-
-South Dakota Hall of Fame: The South Dakota Hall of Fame, a hall of fame in Chamberlain, South Dakota, honors those individuals who have contributed to the progress, way of life, and values of the State of South Dakota.  The South Dakota Legislature named it the official hall of fame in 1996.  The current facility opened in June, 2000.  Individuals may be inducted into one of 15 categories of induction and more than 500 South Dakotans have been inducted to date.  In addition, a Writer of the Year and an Artist of the Year are named.
-
-Baseball Hall of Fame balloting, 1971: Elections to the Baseball Hall of Fame for 1971 featured a new committee on the Negro Leagues that met in February and selected Satchel Paige.  The museum planned to honor Paige and those who would follow in a special permanent exhibit outside the Hall of Fame but controversy about the nature of the honor began at the event announcing his election, February 9, and continued until the induction ceremonies six months later.  At the latter event Paige was inducted to the Hall of Fame itself, the same as the major league figures.
-
-Dave Prater: David Prater, Jr. (May 9, 1937 – April 9, 1988) was an American Southern soul and rhythm & blues singer and musician, who was the deeper baritone/tenor vocalist of the soul vocal duo Sam & Dave from 1961 until his death in 1988.  He is a member of the Rock & Roll Hall of Fame (1992), the Grammy Hall of Fame (1999, for the song "Soul Man"), the Vocal Group Hall of Fame, and the Georgia Music Hall of Fame (1997), and he was a Grammy Award–winning (1967) and multiple Gold Record award-winning recording artist.
-
-Rock &amp; Roll Hall of Fame Covers EP: Rock & Roll Hall of Fame Covers EP is EP compilation by American rock band Red Hot Chili Peppers, released in 2012 through iTunes as a digital-only download.  The band first announced the EP through their website on April 19, 2012 with the title "We Salute You", although it was changed on the date of the release.  The EP consists of six cover songs, live and in the studio, of previous Rock and Roll Hall of Fame inductees all who influenced the band.  The EP was released to commemorate the band's own induction into the Rock and Roll Hall of Fame in 2012.  All six songs have been previously featured on other releases by the band.  Four of the six tracks had never been released digitally before.
-
-Question: What artist was featured in the song "Hall of Fame"?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "featured_artist": {
-      "type": "string",
-      "description": "The name of the artist featured in the song."
-    },
-    "artist_nationality": {
-      "type": "string",
-      "description": "The nationality of the featured artist."
-    },
-    "artist_group": {
-      "type": "string",
-      "description": "The musical group the featured artist is part of."
+    {
+      "role": "user",
+      "content": "Context:\nMatt Hughes (fighter): Matthew Allen Hughes (born October 13, 1973) is a retired American mixed martial artist with a background in wrestling.  He is a two-time UFC Welterweight Champion, UFC Hall of Fame inductee, and NJCAA Hall of Fame inductee.  During his tenures in the Ultimate Fighting Championship, Hughes put together two separate six-fight winning streaks, defeated all the available opposition in the welterweight division, and defended the belt a then-record seven times.  Hughes was inducted into the UFC Hall of Fame in May 2010 during the UFC Fan Expo in conjunction with UFC 114.\n\nSan Diego Padres Hall of Fame: The San Diego Padres are an American professional baseball team in Major League Baseball (MLB) based in San Diego, California.  The club was founded in 1969 as part of the league's expansion.  The team's Hall of Fame, created in 1999 to honor the club's 30th anniversary, recognizes players, coaches, and executives who have made key contributions to the franchise.  Voting is conducted by a 35-member committee.  Candidates typically must wait at least two years after retiring to be eligible for induction, though Tony Gwynn was selected during his final season in 2001 before the last game of the year.  He was also the Hall of Fame's first ever unanimous selection.  There are 14 members in the team's Hall of Fame, the most recent inductee being Jack McKeon in 2017.  The inductees are featured in an exhibit at the team's home stadium, Petco Park.\n\nHall of Fame (song): \"Hall of Fame\" is a song by Irish pop rock band The Script.  It is the lead single from their third studio album \"#3\".  The track features American hip-hop artist will.i.am of The Black Eyed Peas.  The track was given its first radio play on Capital on 23 July 2012.  Written and co-produced by the band, the song is about following dreams and making an impact on the world.  The song has been licensed for use in various media since its release.\n\n3 (The Script album): The band announced via their official Twitter account on 2 June 2012, that recording on their third studio album was complete, and that the title of the album would be \"#3\".  They also stated that the album was due for release on 17 September 2012, however, it was later revealed that the release date would be pushed forward by a week to 10 September.  O'Donoghue later revealed on 8 July that the title of the lead single would be \"Hall of Fame\", and that the track would debut on radio on 23 July.  He also revealed that the track was recorded in Los Angeles, and will be available for digital download on 19 August.  The single also features vocals from O'Donoughue close friend and fellow \"The Voice UK\" coach will.i.am.  The majority of the album was recorded in London's Sphere Studios, once again working with longtime collaborators Andrew Frampton and Steve Kipner.  The album's track listing was confirmed by Digital Spy on 8 August 2012.  The deluxe edition of the album contains a bonus disc, containing two previously unreleased tracks, four live tracks and two alternative versions of \"Hall of Fame\", the second of which is a hidden track.  Digital Spy also revealed the album's artwork on the same date.\n\nBC Entertainment Hall of Fame: The BC Entertainment Hall of Fame in Vancouver was founded on 24 July 1992 to honour British Columbians that have made outstanding contributions to the entertainment industry.  Star Walk inductees are featured with a plaque on the Walk of Fame on Granville Street and in a gallery in the Orpheum.  Individuals and organizations can be nominated and inducted.  The City of Vancouver provides guided tours of the Orpheum and BC Entertainment Hall of Fame to which the proceeds go back into the BC Entertainment Hall of Fame fund.\n\nMurray Williamson: Murray Williamson (born January 13, 1934 in Winnipeg, Manitoba, Canada) is a retired ice hockey player and coach.  Williamson was an All American at the University of Minnesota in 1959 and played, coached and managed in the United States Hockey League with the St. Paul Steers.  He coached the United States National teams in the World Hockey Championships in 1967, 1969 and 1971 and the United States Olympic teams in 1968 and 1972.  The 1972 team won the silver medal at the 1972 Winter Olympics held in Sapporo, Japan.  He was instrumental in the founding of the Midwest Junior Hockey League in 1973 (now called the United States Hockey League) and was the coach and general manager of the first United States National Junior team that participated in the inaugural World Junior Tournament held in Lennigrad, Russia in 1973.  Williamson was inducted into the United States Hockey Hall of Fame in 2005,the Massachusetts Hockey Hall of Fame in 2000, the Manitoba Hockey Hall of Fame in 2009 and the University of Minnesota Athletic Hall of Fame in 2008.  He was awarded the Legend of Hobey Baker Award in 2005 for his contributions to college hockey.  He is featured in the book \"Striking Silver\" the untold story of America's forgotten hockey team, published by Sorts Publishing LLC in 2006 by the Caraccioli brothers\n\nSouth Dakota Hall of Fame: The South Dakota Hall of Fame, a hall of fame in Chamberlain, South Dakota, honors those individuals who have contributed to the progress, way of life, and values of the State of South Dakota.  The South Dakota Legislature named it the official hall of fame in 1996.  The current facility opened in June, 2000.  Individuals may be inducted into one of 15 categories of induction and more than 500 South Dakotans have been inducted to date.  In addition, a Writer of the Year and an Artist of the Year are named.\n\nBaseball Hall of Fame balloting, 1971: Elections to the Baseball Hall of Fame for 1971 featured a new committee on the Negro Leagues that met in February and selected Satchel Paige.  The museum planned to honor Paige and those who would follow in a special permanent exhibit outside the Hall of Fame but controversy about the nature of the honor began at the event announcing his election, February 9, and continued until the induction ceremonies six months later.  At the latter event Paige was inducted to the Hall of Fame itself, the same as the major league figures.\n\nDave Prater: David Prater, Jr. (May 9, 1937 – April 9, 1988) was an American Southern soul and rhythm & blues singer and musician, who was the deeper baritone/tenor vocalist of the soul vocal duo Sam & Dave from 1961 until his death in 1988.  He is a member of the Rock & Roll Hall of Fame (1992), the Grammy Hall of Fame (1999, for the song \"Soul Man\"), the Vocal Group Hall of Fame, and the Georgia Music Hall of Fame (1997), and he was a Grammy Award–winning (1967) and multiple Gold Record award-winning recording artist.\n\nRock &amp; Roll Hall of Fame Covers EP: Rock & Roll Hall of Fame Covers EP is EP compilation by American rock band Red Hot Chili Peppers, released in 2012 through iTunes as a digital-only download.  The band first announced the EP through their website on April 19, 2012 with the title \"We Salute You\", although it was changed on the date of the release.  The EP consists of six cover songs, live and in the studio, of previous Rock and Roll Hall of Fame inductees all who influenced the band.  The EP was released to commemorate the band's own induction into the Rock and Roll Hall of Fame in 2012.  All six songs have been previously featured on other releases by the band.  Four of the six tracks had never been released digitally before.\n\nQuestion: What artist was featured in the song \"Hall of Fame\"?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song.\"\n    },\n    \"featured_artist\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the artist featured in the song.\"\n    },\n    \"artist_nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the featured artist.\"\n    },\n    \"artist_group\": {\n      \"type\": \"string\",\n      \"description\": \"The musical group the featured artist is part of.\"\n    }\n  },\n  \"required\": [\n    \"song_title\",\n    \"featured_artist\",\n    \"artist_nationality\",\n    \"artist_group\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "song_title",
-    "featured_artist",
-    "artist_nationality",
-    "artist_group"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song."
+      },
+      "featured_artist": {
+        "type": "string",
+        "description": "The name of the artist featured in the song."
+      },
+      "artist_nationality": {
+        "type": "string",
+        "description": "The nationality of the featured artist."
+      },
+      "artist_group": {
+        "type": "string",
+        "description": "The musical group the featured artist is part of."
+      }
+    },
+    "required": [
+      "song_title",
+      "featured_artist",
+      "artist_nationality",
+      "artist_group"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

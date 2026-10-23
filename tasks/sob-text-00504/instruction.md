@@ -1,91 +1,68 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Are You Still in Love with Me: "Are You Still in Love with Me" is a song written by Jack White, K. C. Porter and Mark Spiro, and performed by Anne Murray.  The song reached #8 on the Canadian Adult Contemporary chart, #10 on the Canadian Country chart, and #20 on the U.S. Country chart in 1987.  It was released in May 1987 as the first single from her album "Harmony".  The song was produced by Jack White.
-
-If I Had You (The Carpenters song): "If I Had You" is a song recorded by singer Karen Carpenter during her solo sessions in New York with producer Phil Ramone for her subsequently shelved debut solo album.  In 1989 "If I Had You" was released as a Karen Carpenter solo single (featuring Richard Carpenter's remix ending), along with "The Uninvited Guest" (an outtake from the Carpenters album "Made In America"), also credited as a Karen Carpenter solo, as its B-side (in Japan the B-side was "Lovelines", another track from Karen's solo album, also the title track from the 1989 Carpenters "Lovelines" album).  The single was the first single from the Carpenters' album "Lovelines".  As of 2016, this is also the last Carpenters single released to American radio.  The single version has also appeared on numerous Carpenters compilations since its release.  The single reached number 18 on the 'Billboard" Adult Contemporary Chart.
-
-Blunderbuss (album): Blunderbuss is the debut album by Jack White, released on April 23, 2012 through White's own label Third Man Records in association with XL Recordings and Columbia Records.  The album was released in MP3, compact disc, and vinyl editions.  The album was almost entirely written, recorded, and produced by White in 2011.  The first single from the album, "Love Interruption", was released on January 30, 2012 through White's website and Third Man Records website.  The album debuted at number one on the "Billboard" 200 with first-week sales of 138,000 copies.  The album received Grammy Award nominations for Album of the Year and Best Rock Album at the 2013 Grammy Awards, while the single "Freedom at 21" was nominated for Best Rock Song.  The single "I'm Shakin" was nominated for Best Rock Performance at 2014 Grammy Awards.
-
-Jack White: John Anthony "Jack" White (né Gillis; July 9, 1975) is an American musician, singer, songwriter, record producer and actor.  He is known as the lead singer and guitarist of duo The White Stripes.  He has also had success in other bands and as a solo artist.  On April 24, 2012, White released his debut solo album, "Blunderbuss".  His second studio album, "Lazaretto", was released on June 10, 2014.  Both received wide commercial and critical acclaim.
-
-Crossfire (Brandon Flowers song): "Crossfire" is the debut solo single from singer-songwriter and frontman of The Killers, Brandon Flowers.  Written by Flowers himself, and produced by Brendan O'Brien, it is the first single from his debut solo album, "Flamingo".  A video for the single was released on July 8, 2010, and features actress Charlize Theron.
-
-Love Interruption: "Love Interruption" is the first single from Jack White's debut solo album, "Blunderbuss".
-
-Wu-Syndicate: Wu-Syndicate is a group from Virginia consisting of Joe Mafia, Napoleon, and Myalansky (who named himself after the gangster Meyer Lansky).  They were originally called Crime Syndicate but changed their name to Wu-Syndicate when they signed to Wu-Tang Records and became Wu-Tang Clan affiliates.  After debuting on the compilation "" in 1998, their self-titled debut album "Wu-Syndicate" was released in 1999 on both Wu-Tang Records and their own label Slot Time Records.  The album was, like most releases from Wu-Tang Clan affiliates during this time enjoyed moderately successful sales with the single "Where Wuz Heaven" going gold.  Soon after the release there was a dispute of an unknown origin between the group and Wu-Tang Records and the group briefly changed their name to The Syndicate until 2009 with eventual reconciliation and the release of their second official album "Grimlenz", produced mostly by Antagonist Dragonspit of Virginia Beach,VA.  Both Myalansky and Napoleon continue to work with Joe Mafia but have refused to work with each other since the release of their first album.  In an interview Napoleon stated that though they have always clashed, "Mya is still my dude though regardless".  The group has maintained ties with various members of the Wu-Tang Family.  Napoleon is currently working on a project with fellow Wu-Tang alumni Solomon Childs, Shaka Amazulu, and Dexter Wiggle called "Illuminati Network".  Joe Mafia released his debut solo album "This One" in 2002 and founded his own label called 58 West Diamond Street Records.  Napoleon released his first solo album, "Kingpin Wit Da Inkpen" in 2007 and a mixtape titled "Mark of the Beast" in 2011.  Myalansky released his first solo album, "Drastic Measures" in 2008 and a mixtape a few years later in 2011 "AMW.Com".  Myalansky has also been working with California rapper Mitchy Slick and has released two more volumes of his "AMW.Com" mixtape series.  In 2013 Myalansky and Joe Mafia featured on the song "Golden Age Rapper" by CHG Unfadable.
-
-Omarion: Omari Ishmael Grandberry (born November 12, 1984, known by his stage name Omarion) is an American singer, songwriter, rapper, actor and dancer.  He is best known as being the lead singer of the American R&B boy band B2K; the group achieved success with singles like "Bump, Bump, Bump", "Uh Huh", and "Girlfriend", which all reached success on the "Billboard" Hot 100.  After the group's disbandment, Omarion released his debut solo album, "O" (2005), which debuted atop the "Billboard" 200 and received a Grammy Award nomination for Best Contemporary R&B Album at the 48th Grammy Awards.  His second solo album, "21" (2006), contained his second highest-charting single to date, "Ice Box", which reached the top 20 on the "Billboard" Hot 100.  His third solo album, "Ollusion" (2010), was released on January 12, 2010, with the lead single, "I Get It In".  His fourth solo album, "Sex Playlist" (2014), spawned the single, "Post to Be", which was certified 3x platinum and reached number 13 on the Hot 100 chart in May 2015, and became his highest charting single to date.
-
-Shutterbugg: "Shutterbugg" is the debut solo single by American rapper Big Boi.  It is the first single released in promotion of his debut solo album, "".  The song features singer Cutty on the song's chorus.  The song was co-produced by Scott Storch and Big Boi himself.  "Shutterbugg" was nominated for a Grammy Award for Best Rap Performance by a Duo or Group in 2011. " Rolling Stone" named it the fourteenth best single of 2010 in its year-end list.  PopMatters ranked it number seven on its year-end best songs list.  It is also featured on the "NBA 2K11" soundtrack.
-
-Alive (Natalie Bassingthwaighte song): "Alive" is the debut solo single by Australian recording artist and actress Natalie Bassingthwaighte.  It was released on 14 October 2008, as the first single from her debut solo album "1000 Stars".  The song's musical-genre is pop and its lyrics describe being free, taking chances and making love.  Upon its release, "Alive" peaked at number eight on the ARIA Singles Chart and was certified platinum by the Australian Recording Industry Association for sales exceeding 70,000 copies.
-
-Question: What was the title of the first single from Jack White's debut solo album?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "artist": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "name"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "debut_solo_album": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "release_year": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "title",
-        "release_year"
-      ],
-      "additionalProperties": false
-    },
-    "first_single": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "release_date": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "title",
-        "release_date"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nAre You Still in Love with Me: \"Are You Still in Love with Me\" is a song written by Jack White, K. C. Porter and Mark Spiro, and performed by Anne Murray.  The song reached #8 on the Canadian Adult Contemporary chart, #10 on the Canadian Country chart, and #20 on the U.S. Country chart in 1987.  It was released in May 1987 as the first single from her album \"Harmony\".  The song was produced by Jack White.\n\nIf I Had You (The Carpenters song): \"If I Had You\" is a song recorded by singer Karen Carpenter during her solo sessions in New York with producer Phil Ramone for her subsequently shelved debut solo album.  In 1989 \"If I Had You\" was released as a Karen Carpenter solo single (featuring Richard Carpenter's remix ending), along with \"The Uninvited Guest\" (an outtake from the Carpenters album \"Made In America\"), also credited as a Karen Carpenter solo, as its B-side (in Japan the B-side was \"Lovelines\", another track from Karen's solo album, also the title track from the 1989 Carpenters \"Lovelines\" album).  The single was the first single from the Carpenters' album \"Lovelines\".  As of 2016, this is also the last Carpenters single released to American radio.  The single version has also appeared on numerous Carpenters compilations since its release.  The single reached number 18 on the 'Billboard\" Adult Contemporary Chart.\n\nBlunderbuss (album): Blunderbuss is the debut album by Jack White, released on April 23, 2012 through White's own label Third Man Records in association with XL Recordings and Columbia Records.  The album was released in MP3, compact disc, and vinyl editions.  The album was almost entirely written, recorded, and produced by White in 2011.  The first single from the album, \"Love Interruption\", was released on January 30, 2012 through White's website and Third Man Records website.  The album debuted at number one on the \"Billboard\" 200 with first-week sales of 138,000 copies.  The album received Grammy Award nominations for Album of the Year and Best Rock Album at the 2013 Grammy Awards, while the single \"Freedom at 21\" was nominated for Best Rock Song.  The single \"I'm Shakin\" was nominated for Best Rock Performance at 2014 Grammy Awards.\n\nJack White: John Anthony \"Jack\" White (né Gillis; July 9, 1975) is an American musician, singer, songwriter, record producer and actor.  He is known as the lead singer and guitarist of duo The White Stripes.  He has also had success in other bands and as a solo artist.  On April 24, 2012, White released his debut solo album, \"Blunderbuss\".  His second studio album, \"Lazaretto\", was released on June 10, 2014.  Both received wide commercial and critical acclaim.\n\nCrossfire (Brandon Flowers song): \"Crossfire\" is the debut solo single from singer-songwriter and frontman of The Killers, Brandon Flowers.  Written by Flowers himself, and produced by Brendan O'Brien, it is the first single from his debut solo album, \"Flamingo\".  A video for the single was released on July 8, 2010, and features actress Charlize Theron.\n\nLove Interruption: \"Love Interruption\" is the first single from Jack White's debut solo album, \"Blunderbuss\".\n\nWu-Syndicate: Wu-Syndicate is a group from Virginia consisting of Joe Mafia, Napoleon, and Myalansky (who named himself after the gangster Meyer Lansky).  They were originally called Crime Syndicate but changed their name to Wu-Syndicate when they signed to Wu-Tang Records and became Wu-Tang Clan affiliates.  After debuting on the compilation \"\" in 1998, their self-titled debut album \"Wu-Syndicate\" was released in 1999 on both Wu-Tang Records and their own label Slot Time Records.  The album was, like most releases from Wu-Tang Clan affiliates during this time enjoyed moderately successful sales with the single \"Where Wuz Heaven\" going gold.  Soon after the release there was a dispute of an unknown origin between the group and Wu-Tang Records and the group briefly changed their name to The Syndicate until 2009 with eventual reconciliation and the release of their second official album \"Grimlenz\", produced mostly by Antagonist Dragonspit of Virginia Beach,VA.  Both Myalansky and Napoleon continue to work with Joe Mafia but have refused to work with each other since the release of their first album.  In an interview Napoleon stated that though they have always clashed, \"Mya is still my dude though regardless\".  The group has maintained ties with various members of the Wu-Tang Family.  Napoleon is currently working on a project with fellow Wu-Tang alumni Solomon Childs, Shaka Amazulu, and Dexter Wiggle called \"Illuminati Network\".  Joe Mafia released his debut solo album \"This One\" in 2002 and founded his own label called 58 West Diamond Street Records.  Napoleon released his first solo album, \"Kingpin Wit Da Inkpen\" in 2007 and a mixtape titled \"Mark of the Beast\" in 2011.  Myalansky released his first solo album, \"Drastic Measures\" in 2008 and a mixtape a few years later in 2011 \"AMW.Com\".  Myalansky has also been working with California rapper Mitchy Slick and has released two more volumes of his \"AMW.Com\" mixtape series.  In 2013 Myalansky and Joe Mafia featured on the song \"Golden Age Rapper\" by CHG Unfadable.\n\nOmarion: Omari Ishmael Grandberry (born November 12, 1984, known by his stage name Omarion) is an American singer, songwriter, rapper, actor and dancer.  He is best known as being the lead singer of the American R&B boy band B2K; the group achieved success with singles like \"Bump, Bump, Bump\", \"Uh Huh\", and \"Girlfriend\", which all reached success on the \"Billboard\" Hot 100.  After the group's disbandment, Omarion released his debut solo album, \"O\" (2005), which debuted atop the \"Billboard\" 200 and received a Grammy Award nomination for Best Contemporary R&B Album at the 48th Grammy Awards.  His second solo album, \"21\" (2006), contained his second highest-charting single to date, \"Ice Box\", which reached the top 20 on the \"Billboard\" Hot 100.  His third solo album, \"Ollusion\" (2010), was released on January 12, 2010, with the lead single, \"I Get It In\".  His fourth solo album, \"Sex Playlist\" (2014), spawned the single, \"Post to Be\", which was certified 3x platinum and reached number 13 on the Hot 100 chart in May 2015, and became his highest charting single to date.\n\nShutterbugg: \"Shutterbugg\" is the debut solo single by American rapper Big Boi.  It is the first single released in promotion of his debut solo album, \"\".  The song features singer Cutty on the song's chorus.  The song was co-produced by Scott Storch and Big Boi himself.  \"Shutterbugg\" was nominated for a Grammy Award for Best Rap Performance by a Duo or Group in 2011. \" Rolling Stone\" named it the fourteenth best single of 2010 in its year-end list.  PopMatters ranked it number seven on its year-end best songs list.  It is also featured on the \"NBA 2K11\" soundtrack.\n\nAlive (Natalie Bassingthwaighte song): \"Alive\" is the debut solo single by Australian recording artist and actress Natalie Bassingthwaighte.  It was released on 14 October 2008, as the first single from her debut solo album \"1000 Stars\".  The song's musical-genre is pop and its lyrics describe being free, taking chances and making love.  Upon its release, \"Alive\" peaked at number eight on the ARIA Singles Chart and was certified platinum by the Australian Recording Industry Association for sales exceeding 70,000 copies.\n\nQuestion: What was the title of the first single from Jack White's debut solo album?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"artist\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"name\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"debut_solo_album\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\"\n        },\n        \"release_year\": {\n          \"type\": \"integer\"\n        }\n      },\n      \"required\": [\n        \"title\",\n        \"release_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"first_single\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\"\n        },\n        \"release_date\": {\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"title\",\n        \"release_date\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"artist\",\n    \"debut_solo_album\",\n    \"first_single\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "artist",
-    "debut_solo_album",
-    "first_single"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "artist": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "debut_solo_album": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "release_year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "title",
+          "release_year"
+        ],
+        "additionalProperties": false
+      },
+      "first_single": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "release_date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "release_date"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "artist",
+      "debut_solo_album",
+      "first_single"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

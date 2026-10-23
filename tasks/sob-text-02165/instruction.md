@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Robert Caret: Robert Laurent Caret (born October 7, 1947) is the chancellor of the University System of Maryland.  He became chancellor on July 1, 2015.  Caret, a native of New England, became chancellor of the University System of Maryland after completing presidencies at San Jose State University, Towson University and the University of Massachusetts.
-
-State University of New York: The State University of New York (SUNY ) is a system of public institutions of higher education in New York, United States.  It is one of the largest comprehensive systems of universities, colleges, and community colleges in the United States, with a total enrollment of 465,000 students, plus 1.1 million adult education students, spanning 64 campuses across the state.  Led by Chancellor Kristina M. Johnson, the SUNY system has 88,000 faculty members and some 7,660 degree and certificate programs overall and a $10.7 billion budget.
-
-California State University: The California State University (Cal State or CSU) is a public university system in California.  With 23 campuses and eight off-campus centers enrolling 478,638 students with 24,405 faculty and 23,012 staff, CSU describes itself the largest four-year public university system in the United States.  It is one of three public higher education systems in the state, with the other two being the University of California system and the California Community Colleges System.  The CSU System is incorporated as The Trustees of the California State University.  The California State University system headquarters are at 401 Golden Shore in Long Beach, California.
-
-Oklahoma State University System: The Oklahoma State University System is a university system comprising six educational institutes across Oklahoma: four general academic universities and two health institutions.  Its flagship institute is the Oklahoma State University–Stillwater.  The Oklahoma State University System has a total enrollment of about 35,073 students and is the largest university in the state of Oklahoma.  It is governed by the Oklahoma Agricultural and Mechanical Colleges Board of Regents in Oklahoma City, Oklahoma.  The System also has Agricultural Experiment Stations throughout Oklahoma and Cooperative Extension offices that serve all 77 counties.  V. Burns Hargis currently serves as CEO of the Oklahoma State University System, in addition to his service as president of OSU-Stillwater.
-
-Stephen Reno: Stephen J. Reno was Chancellor of the University System of New Hampshire from 2000 to 2009.  The university system comprises four institutions, the University of New Hampshire, Keene State College, Plymouth State University, and Granite State College.  Is currently the Executive Director of Leadership New Hampshire, a leadership development program created to “increase civic engagement and strengthen communities through connecting and educating a diverse pool of engaged or emerging leaders about the state of New Hampshire.”
-
-WBSU: WBSU (89.1 FM) is a radio station licensed to Brockport, New York, United States.  The station serves the entire Western New York region and into Toronto.  WBSU is known better today as 89.1 The Point.  The station is owned by State University of New York, and operates from The College at Brockport.
-
-Charles Mercer Snelling: Charles Mercer Snelling (November 3, 1862 – September 19, 1939) was the Chancellor of the University of Georgia (UGA) in Athens, Georgia from 1925 to 1932 and the first Chancellor of the Georgia Board of Regents of the University System of Georgia (1932–1933).  All UGA leaders after Snelling have been referred to as President (the previous title before the 1860 University reorganization that created the UGA Chancellor position).
-
-University of Maryland, Baltimore: The University of Maryland, Baltimore, (also known as University of Maryland: The Founding Campus, or UMB, UMAB) was founded in 1807.  It comprises some of the oldest professional schools of dentistry, law, medicine, pharmacy, social work and nursing in the United States.  It is the original campus of the University System of Maryland.  Located on 60 acres (242,811 m²) in downtown Baltimore, it is part of the University System of Maryland.  Effective July 1, 2010, Jay A. Perman was appointed president of the university by William English Kirwan, chancellor of the University System of Maryland.
-
-University of California finances: The University of California public university system is funded through both public and private money.  Some funds are given directly to each of the system's 10 campuses, while the rest are distributed through the central UC Office of the President.  Support given by the state of California to its three-tier higher education system (comprising the University of California, California State University, and California Community College) is presented by the governor every January, and approved by the state legislator at the end of the fiscal year in June.  Traditionally, the state of California has been the largest public supporter of the UC system.  In response to state budget woes, UC Berkeley Chancellor Robert Birgeneau in 2011 made the claim that his own university is turning into a federal and not a state institution because of the inversion of the proportion of funds given by each jurisdiction since he became Chancellor in 2004.
-
-University system: A university system is a set of multiple, affiliated universities and colleges that are usually geographically distributed.  Typically, all member universities in a university system share a common component among all of their various names.  Usually, all member universities of a university system are governed by a system-wide governing body, such as a board of trustees or a board of regents.  In fact, university systems are so common in post-World War II United States that most states have one or two state university systems under which many of their publicly funded universities are aligned, both in name and in governance.  Additionally, for-profit universities, such as DeVry University, often have multiple campuses which share the same name; these may be, but are not always, described as a university system (not necessarily accurately, see below).
-
-Question: Who is the chancellor of the university system that owns WBSU?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "university_system_name": {
-      "type": "string",
-      "description": "The name of the university system that owns the radio station."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "chancellor_name": {
-      "type": "string",
-      "description": "The name of the chancellor of the identified university system."
-    },
-    "radio_station_owned": {
-      "type": "string",
-      "description": "The name of the radio station in question."
+    {
+      "role": "user",
+      "content": "Context:\nRobert Caret: Robert Laurent Caret (born October 7, 1947) is the chancellor of the University System of Maryland.  He became chancellor on July 1, 2015.  Caret, a native of New England, became chancellor of the University System of Maryland after completing presidencies at San Jose State University, Towson University and the University of Massachusetts.\n\nState University of New York: The State University of New York (SUNY ) is a system of public institutions of higher education in New York, United States.  It is one of the largest comprehensive systems of universities, colleges, and community colleges in the United States, with a total enrollment of 465,000 students, plus 1.1 million adult education students, spanning 64 campuses across the state.  Led by Chancellor Kristina M. Johnson, the SUNY system has 88,000 faculty members and some 7,660 degree and certificate programs overall and a $10.7 billion budget.\n\nCalifornia State University: The California State University (Cal State or CSU) is a public university system in California.  With 23 campuses and eight off-campus centers enrolling 478,638 students with 24,405 faculty and 23,012 staff, CSU describes itself the largest four-year public university system in the United States.  It is one of three public higher education systems in the state, with the other two being the University of California system and the California Community Colleges System.  The CSU System is incorporated as The Trustees of the California State University.  The California State University system headquarters are at 401 Golden Shore in Long Beach, California.\n\nOklahoma State University System: The Oklahoma State University System is a university system comprising six educational institutes across Oklahoma: four general academic universities and two health institutions.  Its flagship institute is the Oklahoma State University–Stillwater.  The Oklahoma State University System has a total enrollment of about 35,073 students and is the largest university in the state of Oklahoma.  It is governed by the Oklahoma Agricultural and Mechanical Colleges Board of Regents in Oklahoma City, Oklahoma.  The System also has Agricultural Experiment Stations throughout Oklahoma and Cooperative Extension offices that serve all 77 counties.  V. Burns Hargis currently serves as CEO of the Oklahoma State University System, in addition to his service as president of OSU-Stillwater.\n\nStephen Reno: Stephen J. Reno was Chancellor of the University System of New Hampshire from 2000 to 2009.  The university system comprises four institutions, the University of New Hampshire, Keene State College, Plymouth State University, and Granite State College.  Is currently the Executive Director of Leadership New Hampshire, a leadership development program created to “increase civic engagement and strengthen communities through connecting and educating a diverse pool of engaged or emerging leaders about the state of New Hampshire.”\n\nWBSU: WBSU (89.1 FM) is a radio station licensed to Brockport, New York, United States.  The station serves the entire Western New York region and into Toronto.  WBSU is known better today as 89.1 The Point.  The station is owned by State University of New York, and operates from The College at Brockport.\n\nCharles Mercer Snelling: Charles Mercer Snelling (November 3, 1862 – September 19, 1939) was the Chancellor of the University of Georgia (UGA) in Athens, Georgia from 1925 to 1932 and the first Chancellor of the Georgia Board of Regents of the University System of Georgia (1932–1933).  All UGA leaders after Snelling have been referred to as President (the previous title before the 1860 University reorganization that created the UGA Chancellor position).\n\nUniversity of Maryland, Baltimore: The University of Maryland, Baltimore, (also known as University of Maryland: The Founding Campus, or UMB, UMAB) was founded in 1807.  It comprises some of the oldest professional schools of dentistry, law, medicine, pharmacy, social work and nursing in the United States.  It is the original campus of the University System of Maryland.  Located on 60 acres (242,811 m²) in downtown Baltimore, it is part of the University System of Maryland.  Effective July 1, 2010, Jay A. Perman was appointed president of the university by William English Kirwan, chancellor of the University System of Maryland.\n\nUniversity of California finances: The University of California public university system is funded through both public and private money.  Some funds are given directly to each of the system's 10 campuses, while the rest are distributed through the central UC Office of the President.  Support given by the state of California to its three-tier higher education system (comprising the University of California, California State University, and California Community College) is presented by the governor every January, and approved by the state legislator at the end of the fiscal year in June.  Traditionally, the state of California has been the largest public supporter of the UC system.  In response to state budget woes, UC Berkeley Chancellor Robert Birgeneau in 2011 made the claim that his own university is turning into a federal and not a state institution because of the inversion of the proportion of funds given by each jurisdiction since he became Chancellor in 2004.\n\nUniversity system: A university system is a set of multiple, affiliated universities and colleges that are usually geographically distributed.  Typically, all member universities in a university system share a common component among all of their various names.  Usually, all member universities of a university system are governed by a system-wide governing body, such as a board of trustees or a board of regents.  In fact, university systems are so common in post-World War II United States that most states have one or two state university systems under which many of their publicly funded universities are aligned, both in name and in governance.  Additionally, for-profit universities, such as DeVry University, often have multiple campuses which share the same name; these may be, but are not always, described as a university system (not necessarily accurately, see below).\n\nQuestion: Who is the chancellor of the university system that owns WBSU?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"university_system_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the university system that owns the radio station.\"\n    },\n    \"chancellor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the chancellor of the identified university system.\"\n    },\n    \"radio_station_owned\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the radio station in question.\"\n    }\n  },\n  \"required\": [\n    \"university_system_name\",\n    \"chancellor_name\",\n    \"radio_station_owned\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "university_system_name",
-    "chancellor_name",
-    "radio_station_owned"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "university_system_name": {
+        "type": "string",
+        "description": "The name of the university system that owns the radio station."
+      },
+      "chancellor_name": {
+        "type": "string",
+        "description": "The name of the chancellor of the identified university system."
+      },
+      "radio_station_owned": {
+        "type": "string",
+        "description": "The name of the radio station in question."
+      }
+    },
+    "required": [
+      "university_system_name",
+      "chancellor_name",
+      "radio_station_owned"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

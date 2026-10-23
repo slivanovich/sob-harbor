@@ -1,103 +1,80 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-El Santo de la Espada: El Santo de la Espada (in English, "The Saint of the Sword") is a 1970 Argentine historical epic film directed by Leopoldo Torre Nilsson and starring Alfredo Alcón.  It narrates the life of José de San Martín.  It was written by Beatriz Guido y Luis Pico Estrada, based on the eponymous novel by Ricardo Rojas.  The script was supervised by the Sanmartinian National Institute.  It had a great success, and it is the most successful movie about "The Emancipator" San Martín, although it received some negative reviews due to historical inaccuracies.
-
-Russell Crowe: Russell Ira Crowe (born 7 April 1964) is an actor, film producer and musician.  Although a New Zealand citizen, he has lived most of his life in Australia.  He came to international attention for his role as the Roman General Maximus Decimus Meridius in the 2000 historical epic film "Gladiator", directed by Ridley Scott, for which Crowe won an Academy Award for Best Actor, a Broadcast Film Critics Association Award for Best Actor, an Empire Award for Best Actor and a London Film Critics Circle Award for Best Actor and 10 further nominations for best actor.
-
-Jennifer Tilly: Jennifer Tilly (born Jennifer Ellen Chan; September 16, 1958) is an American-Canadian actress and poker player.  She is a World Series of Poker Ladies' Event bracelet winner.  She was nominated for an Academy Award for Best Supporting Actress for her role as Olive Neal in the film "Bullets over Broadway" (1994).  Her other film roles include "Let It Ride" (1989) "Made in America" (1993), "Bound" (1996), "Liar Liar" (1997) and "Bride of Chucky" (1998).  She has done extensive voice-over work including Celia in "Monsters, Inc." (2001).  She is the older sister of actress Meg Tilly.
-
-Invasion 1700: Invasion 1700 (Italian: "Col ferro e col fuoco" , French: "Par le fer et par le feu" , also known as "With Fire and Sword" and "Daggers of Blood") is a 1962 Italian-French historical epic film directed by Fernando Cerchio.  It is based on the 1884 polish historical novel "With Fire and Sword" written by Henryk Sienkiewicz.
-
-Heroic Times: Heroic Times (Hungarian: Daliás idők ) is a 1984 Hungarian animated historical epic film directed by József Gémes.  It is an adaptation of the Toldi trilogy, a 19th-century epic poem in three parts by János Arany.  The film was produced through Pannonia Film Studio and is notable for its visual style, which resembles oil painting.  It won the feature film award at the 1985 Annecy International Animated Film Festival.
-
-The Opium War (film): The Opium War (鸦片战争) is a 1997 Chinese historical epic film directed by Xie Jin.  The winner of the 1997 Golden Rooster and 1998 Hundred Flowers Awards for Best Picture, the film was screened in several international film festivals, notably Cannes and Montreal.  The film tells the story of the First Opium War of 1839–1842, which was fought between the Qing Empire of China and the British Empire, from the perspectives of key figures such as the Chinese viceroy Lin Zexu and the British naval diplomat Charles Elliot.
-
-Empire of Silver (film): Empire of Silver () is a 2009 historical epic film written and directed by Christina Yao, based on the novel "The Silver Valley" by Cheng Yi.  It focuses on a wealthy banking clan in Pingyao, Shanxi and its fortunes during the turn-of-the-century Chinese economic and political turmoil.  The film stars Aaron Kwok and Jennifer Tilly.
-
-Dag Palovic: Dag Palovič (* 4 January 1975, Bratislava) is a Slovak professional poker player, businessman and a former TV host.  Since 1 January 2011, he is a member of PokerStars Team Pro, first and as of October 2011 only sponsored poker player from Slovakia.  He is best known for making two European Poker Tour (EPT) final tables as well as being the only player from Slovakia who has cashed in the World Series of Poker (WSOP) Main Event, finishing 120th in 2009 and 37th in 2010.  As of March 2013, he is second leading Slovak all time money list with career earnings of $909,405 and is also an author of first Slovak poker book on poker titled "Ako sa stať poker pro" (How to become a poker pro), co-authored by 1983 World Series Of Poker champion Tom McEvoy.  From 2000 until 2004 he was CEO and Chairman Of The Board of Directors of "ad pepper media Slovakia, a.s.", the daughter company of one of the world´s leading e-Adverising german-dutch agency "ad pepper media International N.V." for Slovak and Czech Republic.
-
-The Silver Chalice (film): The Silver Chalice is a 1954 American historical epic film directed and producer by Victor Saville, based on Thomas B. Costain's 1952 novel of the same name.  It was Saville's last film and marked the acting debut of Paul Newman; despite being nominated for a Golden Globe Award for his performance, Newman later called it "the worst motion picture produced during the 1950s".
-
-Howard Lederer: Howard Henry Lederer (born October 30, 1963) is an American professional poker player.  He has won two World Series of Poker bracelets and holds two World Poker Tour titles.  Lederer has also contributed to several books on poker strategy and has provided commentary for poker programming.  He is known by poker fans and players as "The Professor" and is the older brother of professional poker player Annie Duke.
-
-Question: Which American-Canadian actress and poker player stars in the 2009 historical epic film Empire of Silver?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actress": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the actress."
-        },
-        "nationality": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "The nationalities of the actress."
-        },
-        "professions": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "The professions of the actress."
-        }
-      },
-      "required": [
-        "name",
-        "nationality",
-        "professions"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "The title of the film."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The release year of the film."
-        },
-        "genre": {
-          "type": "string",
-          "description": "The genre of the film."
-        }
-      },
-      "required": [
-        "title",
-        "year",
-        "genre"
-      ],
-      "additionalProperties": false
-    },
-    "role_description": {
-      "type": "string",
-      "description": "Description of the actress's involvement in the film."
+    {
+      "role": "user",
+      "content": "Context:\nEl Santo de la Espada: El Santo de la Espada (in English, \"The Saint of the Sword\") is a 1970 Argentine historical epic film directed by Leopoldo Torre Nilsson and starring Alfredo Alcón.  It narrates the life of José de San Martín.  It was written by Beatriz Guido y Luis Pico Estrada, based on the eponymous novel by Ricardo Rojas.  The script was supervised by the Sanmartinian National Institute.  It had a great success, and it is the most successful movie about \"The Emancipator\" San Martín, although it received some negative reviews due to historical inaccuracies.\n\nRussell Crowe: Russell Ira Crowe (born 7 April 1964) is an actor, film producer and musician.  Although a New Zealand citizen, he has lived most of his life in Australia.  He came to international attention for his role as the Roman General Maximus Decimus Meridius in the 2000 historical epic film \"Gladiator\", directed by Ridley Scott, for which Crowe won an Academy Award for Best Actor, a Broadcast Film Critics Association Award for Best Actor, an Empire Award for Best Actor and a London Film Critics Circle Award for Best Actor and 10 further nominations for best actor.\n\nJennifer Tilly: Jennifer Tilly (born Jennifer Ellen Chan; September 16, 1958) is an American-Canadian actress and poker player.  She is a World Series of Poker Ladies' Event bracelet winner.  She was nominated for an Academy Award for Best Supporting Actress for her role as Olive Neal in the film \"Bullets over Broadway\" (1994).  Her other film roles include \"Let It Ride\" (1989) \"Made in America\" (1993), \"Bound\" (1996), \"Liar Liar\" (1997) and \"Bride of Chucky\" (1998).  She has done extensive voice-over work including Celia in \"Monsters, Inc.\" (2001).  She is the older sister of actress Meg Tilly.\n\nInvasion 1700: Invasion 1700 (Italian: \"Col ferro e col fuoco\" , French: \"Par le fer et par le feu\" , also known as \"With Fire and Sword\" and \"Daggers of Blood\") is a 1962 Italian-French historical epic film directed by Fernando Cerchio.  It is based on the 1884 polish historical novel \"With Fire and Sword\" written by Henryk Sienkiewicz.\n\nHeroic Times: Heroic Times (Hungarian: Daliás idők ) is a 1984 Hungarian animated historical epic film directed by József Gémes.  It is an adaptation of the Toldi trilogy, a 19th-century epic poem in three parts by János Arany.  The film was produced through Pannonia Film Studio and is notable for its visual style, which resembles oil painting.  It won the feature film award at the 1985 Annecy International Animated Film Festival.\n\nThe Opium War (film): The Opium War (鸦片战争) is a 1997 Chinese historical epic film directed by Xie Jin.  The winner of the 1997 Golden Rooster and 1998 Hundred Flowers Awards for Best Picture, the film was screened in several international film festivals, notably Cannes and Montreal.  The film tells the story of the First Opium War of 1839–1842, which was fought between the Qing Empire of China and the British Empire, from the perspectives of key figures such as the Chinese viceroy Lin Zexu and the British naval diplomat Charles Elliot.\n\nEmpire of Silver (film): Empire of Silver () is a 2009 historical epic film written and directed by Christina Yao, based on the novel \"The Silver Valley\" by Cheng Yi.  It focuses on a wealthy banking clan in Pingyao, Shanxi and its fortunes during the turn-of-the-century Chinese economic and political turmoil.  The film stars Aaron Kwok and Jennifer Tilly.\n\nDag Palovic: Dag Palovič (* 4 January 1975, Bratislava) is a Slovak professional poker player, businessman and a former TV host.  Since 1 January 2011, he is a member of PokerStars Team Pro, first and as of October 2011 only sponsored poker player from Slovakia.  He is best known for making two European Poker Tour (EPT) final tables as well as being the only player from Slovakia who has cashed in the World Series of Poker (WSOP) Main Event, finishing 120th in 2009 and 37th in 2010.  As of March 2013, he is second leading Slovak all time money list with career earnings of $909,405 and is also an author of first Slovak poker book on poker titled \"Ako sa stať poker pro\" (How to become a poker pro), co-authored by 1983 World Series Of Poker champion Tom McEvoy.  From 2000 until 2004 he was CEO and Chairman Of The Board of Directors of \"ad pepper media Slovakia, a.s.\", the daughter company of one of the world´s leading e-Adverising german-dutch agency \"ad pepper media International N.V.\" for Slovak and Czech Republic.\n\nThe Silver Chalice (film): The Silver Chalice is a 1954 American historical epic film directed and producer by Victor Saville, based on Thomas B. Costain's 1952 novel of the same name.  It was Saville's last film and marked the acting debut of Paul Newman; despite being nominated for a Golden Globe Award for his performance, Newman later called it \"the worst motion picture produced during the 1950s\".\n\nHoward Lederer: Howard Henry Lederer (born October 30, 1963) is an American professional poker player.  He has won two World Series of Poker bracelets and holds two World Poker Tour titles.  Lederer has also contributed to several books on poker strategy and has provided commentary for poker programming.  He is known by poker fans and players as \"The Professor\" and is the older brother of professional poker player Annie Duke.\n\nQuestion: Which American-Canadian actress and poker player stars in the 2009 historical epic film Empire of Silver?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actress\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the actress.\"\n        },\n        \"nationality\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"The nationalities of the actress.\"\n        },\n        \"professions\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"The professions of the actress.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"nationality\",\n        \"professions\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"film\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the film.\"\n        },\n        \"year\": {\n          \"type\": \"integer\",\n          \"description\": \"The release year of the film.\"\n        },\n        \"genre\": {\n          \"type\": \"string\",\n          \"description\": \"The genre of the film.\"\n        }\n      },\n      \"required\": [\n        \"title\",\n        \"year\",\n        \"genre\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"role_description\": {\n      \"type\": \"string\",\n      \"description\": \"Description of the actress's involvement in the film.\"\n    }\n  },\n  \"required\": [\n    \"actress\",\n    \"film\",\n    \"role_description\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actress",
-    "film",
-    "role_description"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actress": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the actress."
+          },
+          "nationality": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The nationalities of the actress."
+          },
+          "professions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The professions of the actress."
+          }
+        },
+        "required": [
+          "name",
+          "nationality",
+          "professions"
+        ],
+        "additionalProperties": false
+      },
+      "film": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the film."
+          },
+          "year": {
+            "type": "integer",
+            "description": "The release year of the film."
+          },
+          "genre": {
+            "type": "string",
+            "description": "The genre of the film."
+          }
+        },
+        "required": [
+          "title",
+          "year",
+          "genre"
+        ],
+        "additionalProperties": false
+      },
+      "role_description": {
+        "type": "string",
+        "description": "Description of the actress's involvement in the film."
+      }
+    },
+    "required": [
+      "actress",
+      "film",
+      "role_description"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

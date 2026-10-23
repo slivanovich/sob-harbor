@@ -1,97 +1,74 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Battle of the Ch'ongch'on River: The Battle of the Ch'ongch'on River, also known as the Battle of the Ch'ongch'on () or the Second Phase Campaign Western Sector (), was a decisive battle in the Korean War, and it took place from November 25 to December 2, 1950, along the Ch'ongch'on River Valley in the northwestern part of North Korea.  In response to the successful Chinese First Phase Campaign against the United Nations forces, General Douglas MacArthur launched the Home-by-Christmas Offensive to evict the Chinese forces from Korea and to end the war.  Anticipating this reaction, the Chinese People's Volunteer Army Commander Peng Dehuai planned a counteroffensive, dubbed the "Second Phase Campaign", against the advancing UN forces.
-
-Alpha L. Bowser: Alpha Lyons Bowser (August 21, 1910 – July 13, 2003) was a United States Marine Corps lieutenant general.  He was a combat veteran of World War II and the Korean War — decorated for his actions during the Battle of Iwo Jima and in the Battle of Chosin Reservoir.
-
-Homer Litzenberg: Homer Laurence Litzenberg (January 8, 1903 – June 27, 1963) was a decorated Lieutenant General in the United States Marine Corps, serving in Haiti, World War II, and the Korean War.  His final rank was awarded at his retirement for valor in battle.  He retired from the post of Inspector General of the Marine Corps on May 31, 1959, after more than 37 years of service.  Litzenberg is best known for commanding the 7th Marine Regiment during the Battle of Chosin Reservoir.
-
-The Battle of Chosin: The Battle of Chosin is a 2016 American documentary film about the Battle of Chosin Reservoir during the Korean War.  The film is directed by Randall MacLowry and was distributed on the PBS network.  It premiered on November 1, 2016 as part of the "American Experience" series.
-
-Battle of Chosin Reservoir order of battle: Battle of Chosin Reservoir Order of Battle is a list of the significant units that fought in the Battle of Chosin Reservoir between November 27, 1950 and December 13, 1950.
-
-VMR-152: Marine Transport Squadron 152 (VMR-152) was an air transport of the United States Marine Corps that was responsible for the movement of personnel, equipment, and supplies.  The squadron flew fixed-wing cargo aircraft to include the R4D Skytrain and the R4Q Flying Boxcar.  The squadron saw combat during World War II and the Korean War with their most notable contributions coming during the early stages of the Battle of Guadalcanal and during the Marine breakout during the Battle of Chosin Reservoir.  The squadron was decommissioned in the late 1950s.
-
-USS Chosin: USS "Chosin" (CG-65) is a "Ticonderoga"-class guided-missile cruiser serving in the United States Navy.  She is named in honor of the Battle of Chosin Reservoir of the Korean War.  Commissioned in 1991, she is currently serving in the Pacific Fleet, based at San Diego.  The cruiser has participated in Operation Southern Watch, Operation Enduring Freedom, and Operation Iraqi Freedom.  She is the first US Navy ship to bear this name.
-
-Second Phase Campaign: The Second Phase Campaign of the Korean War was an extended military offensive by the Chinese People's Volunteer Army during the last week of November, 1950, and the first two weeks of December.  The two major engagements were battles near the Ch'ongch'on River in the Chinese-designated Western Sector and Chosin Reservoir in their Eastern Sector.  The Chinese opposed United Nations-authorized forces composed of American military and various allied forces.
-
-Battle of Chosin Reservoir: The Battle of Chosin Reservoir, also known as the Chosin Reservoir Campaign or the Changjin Lake Campaign (Korean: 장진호 전투 ; hanja: 長津湖戰鬪; rr: "Jangjin ho jeontu"; ), was a decisive battle in the Korean War.  The name "Chosin" is derived from the Japanese pronunciation ""Chōshin"", instead of Korean pronunciation
-
-William Frederick Harris: William Frederick Harris (6 March 1918 – 7 December 1950) was a United States Marine Corps Lieutenant Colonel during the Korean War.  He was the son of USMC General Field Harris, a Prisoner of War during World War II and a recipient of the Navy Cross for extraordinary heroism during the breakout in the Battle of Chosin Reservoir.  He was last seen by American forces on 7 December 1950, was listed missing in action and is presumed to have been killed in action.  Harris was featured in the and film "Unbroken".
-
-Question: The Battle of Chosin Reservoir and Battle of the Ch'ongch'on River where part of which war?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "war_name": {
-      "type": "string",
-      "description": "The name of the war to which the battles belong."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "battles_involved": {
-      "type": "array",
-      "description": "A list of battles that were part of the specified war.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "battle_name": {
-            "type": "string",
-            "description": "The name of the battle."
+    {
+      "role": "user",
+      "content": "Context:\nBattle of the Ch'ongch'on River: The Battle of the Ch'ongch'on River, also known as the Battle of the Ch'ongch'on () or the Second Phase Campaign Western Sector (), was a decisive battle in the Korean War, and it took place from November 25 to December 2, 1950, along the Ch'ongch'on River Valley in the northwestern part of North Korea.  In response to the successful Chinese First Phase Campaign against the United Nations forces, General Douglas MacArthur launched the Home-by-Christmas Offensive to evict the Chinese forces from Korea and to end the war.  Anticipating this reaction, the Chinese People's Volunteer Army Commander Peng Dehuai planned a counteroffensive, dubbed the \"Second Phase Campaign\", against the advancing UN forces.\n\nAlpha L. Bowser: Alpha Lyons Bowser (August 21, 1910 – July 13, 2003) was a United States Marine Corps lieutenant general.  He was a combat veteran of World War II and the Korean War — decorated for his actions during the Battle of Iwo Jima and in the Battle of Chosin Reservoir.\n\nHomer Litzenberg: Homer Laurence Litzenberg (January 8, 1903 – June 27, 1963) was a decorated Lieutenant General in the United States Marine Corps, serving in Haiti, World War II, and the Korean War.  His final rank was awarded at his retirement for valor in battle.  He retired from the post of Inspector General of the Marine Corps on May 31, 1959, after more than 37 years of service.  Litzenberg is best known for commanding the 7th Marine Regiment during the Battle of Chosin Reservoir.\n\nThe Battle of Chosin: The Battle of Chosin is a 2016 American documentary film about the Battle of Chosin Reservoir during the Korean War.  The film is directed by Randall MacLowry and was distributed on the PBS network.  It premiered on November 1, 2016 as part of the \"American Experience\" series.\n\nBattle of Chosin Reservoir order of battle: Battle of Chosin Reservoir Order of Battle is a list of the significant units that fought in the Battle of Chosin Reservoir between November 27, 1950 and December 13, 1950.\n\nVMR-152: Marine Transport Squadron 152 (VMR-152) was an air transport of the United States Marine Corps that was responsible for the movement of personnel, equipment, and supplies.  The squadron flew fixed-wing cargo aircraft to include the R4D Skytrain and the R4Q Flying Boxcar.  The squadron saw combat during World War II and the Korean War with their most notable contributions coming during the early stages of the Battle of Guadalcanal and during the Marine breakout during the Battle of Chosin Reservoir.  The squadron was decommissioned in the late 1950s.\n\nUSS Chosin: USS \"Chosin\" (CG-65) is a \"Ticonderoga\"-class guided-missile cruiser serving in the United States Navy.  She is named in honor of the Battle of Chosin Reservoir of the Korean War.  Commissioned in 1991, she is currently serving in the Pacific Fleet, based at San Diego.  The cruiser has participated in Operation Southern Watch, Operation Enduring Freedom, and Operation Iraqi Freedom.  She is the first US Navy ship to bear this name.\n\nSecond Phase Campaign: The Second Phase Campaign of the Korean War was an extended military offensive by the Chinese People's Volunteer Army during the last week of November, 1950, and the first two weeks of December.  The two major engagements were battles near the Ch'ongch'on River in the Chinese-designated Western Sector and Chosin Reservoir in their Eastern Sector.  The Chinese opposed United Nations-authorized forces composed of American military and various allied forces.\n\nBattle of Chosin Reservoir: The Battle of Chosin Reservoir, also known as the Chosin Reservoir Campaign or the Changjin Lake Campaign (Korean: 장진호 전투 ; hanja: 長津湖戰鬪; rr: \"Jangjin ho jeontu\"; ), was a decisive battle in the Korean War.  The name \"Chosin\" is derived from the Japanese pronunciation \"\"Chōshin\"\", instead of Korean pronunciation\n\nWilliam Frederick Harris: William Frederick Harris (6 March 1918 – 7 December 1950) was a United States Marine Corps Lieutenant Colonel during the Korean War.  He was the son of USMC General Field Harris, a Prisoner of War during World War II and a recipient of the Navy Cross for extraordinary heroism during the breakout in the Battle of Chosin Reservoir.  He was last seen by American forces on 7 December 1950, was listed missing in action and is presumed to have been killed in action.  Harris was featured in the and film \"Unbroken\".\n\nQuestion: The Battle of Chosin Reservoir and Battle of the Ch'ongch'on River where part of which war?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"war_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the war to which the battles belong.\"\n    },\n    \"battles_involved\": {\n      \"type\": \"array\",\n      \"description\": \"A list of battles that were part of the specified war.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"battle_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the battle.\"\n          },\n          \"battle_significance\": {\n            \"type\": \"string\",\n            \"description\": \"A description of the battle's significance or type within the war.\"\n          }\n        },\n        \"required\": [\n          \"battle_name\",\n          \"battle_significance\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"campaign_context\": {\n      \"type\": \"object\",\n      \"description\": \"Context about the military campaign that included these battles.\",\n      \"properties\": {\n        \"campaign_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the campaign.\"\n        },\n        \"campaign_description\": {\n          \"type\": \"string\",\n          \"description\": \"A brief description of the campaign.\"\n        },\n        \"campaign_duration\": {\n          \"type\": \"string\",\n          \"description\": \"The duration of the campaign.\"\n        }\n      },\n      \"required\": [\n        \"campaign_name\",\n        \"campaign_description\",\n        \"campaign_duration\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"war_name\",\n    \"battles_involved\",\n    \"campaign_context\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "war_name": {
+        "type": "string",
+        "description": "The name of the war to which the battles belong."
+      },
+      "battles_involved": {
+        "type": "array",
+        "description": "A list of battles that were part of the specified war.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "battle_name": {
+              "type": "string",
+              "description": "The name of the battle."
+            },
+            "battle_significance": {
+              "type": "string",
+              "description": "A description of the battle's significance or type within the war."
+            }
           },
-          "battle_significance": {
+          "required": [
+            "battle_name",
+            "battle_significance"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "campaign_context": {
+        "type": "object",
+        "description": "Context about the military campaign that included these battles.",
+        "properties": {
+          "campaign_name": {
             "type": "string",
-            "description": "A description of the battle's significance or type within the war."
+            "description": "The name of the campaign."
+          },
+          "campaign_description": {
+            "type": "string",
+            "description": "A brief description of the campaign."
+          },
+          "campaign_duration": {
+            "type": "string",
+            "description": "The duration of the campaign."
           }
         },
         "required": [
-          "battle_name",
-          "battle_significance"
+          "campaign_name",
+          "campaign_description",
+          "campaign_duration"
         ],
         "additionalProperties": false
       }
     },
-    "campaign_context": {
-      "type": "object",
-      "description": "Context about the military campaign that included these battles.",
-      "properties": {
-        "campaign_name": {
-          "type": "string",
-          "description": "The name of the campaign."
-        },
-        "campaign_description": {
-          "type": "string",
-          "description": "A brief description of the campaign."
-        },
-        "campaign_duration": {
-          "type": "string",
-          "description": "The duration of the campaign."
-        }
-      },
-      "required": [
-        "campaign_name",
-        "campaign_description",
-        "campaign_duration"
-      ],
-      "additionalProperties": false
-    }
+    "required": [
+      "war_name",
+      "battles_involved",
+      "campaign_context"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "war_name",
-    "battles_involved",
-    "campaign_context"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

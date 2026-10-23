@@ -1,102 +1,79 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Fiji Sanatan Society of Alberta: The Fiji Sanatan Society of Alberta, also known as Vishnu Mandir (Devanagri: विष्णु मन्दिर) in Edmonton, Alberta, Canada is a modern-style Hindu temple that was built by some of the very first Fijian Hindu immigrants in Edmonton in 1984.  Hindus have been living in Canada for over a century, especially in Edmonton.  Fijian Hindus began to settle in Edmonton in larger proportions starting in the 1960s and 1970s.  They conducted prayers and meditated in individual households via groups they formed in the community.  Talks of the need of a temple started in 1983 by four major Hindu Bhakti groups in Edmonton at the time, Shree Sanatan Dharam Ramayan Society, Edmonton Geeta Ramayan Congregation, Edmonton Vedic Congregation and later joined by Edmonton Prem Society, the group founded the Sanatan Board and raised funds to buy a property for the temple.  It became the first Fijian Hindu cultural society in all of Canada, and till date is the largest.  It started as a small place of worship in the Balwin residential area, constructed out of an old Church building.  Since then it has been renovated 2 times, first adding a basement, then in 2006 expanded further making it the second largest Hindu temple in Edmonton.
-
-Tere Naam: Tere Naam (English: "In your name" ) is a 2003 Indian Hindi-language romantic drama film.  It is directed by Satish Kaushik and written by Bala and Jainendra Jain, starring Salman Khan and Bhoomika Chawla in her Hindi film debut.  The film is a remake of Bala's own Tamil blockbuster "Sethu" (1999).
-
-Gibraltar Hindu Temple: The Gibraltar Hindu Temple (Sindhi: जिब्राल्टर हिन्दू मंदिर‎ ), also known as Gibraltar Mandir, is a Hindu temple ("mandir") in the British Overseas Territory of Gibraltar.  Established in 2000, the Gibraltar Hindu Temple is located at Engineer Lane.  Gibraltarian Hindus make approximately 1.8% of Gibraltar's population.  This is the only Hindu temple in Gibraltar and it serves as the spiritual centre for Hindu population of territory.  The temple is a charitable organisation and aims to maintain and promote Hindu culture in Gibraltar.  The presiding deity of the temple is Rama along with his consort Sita, brother Laxman and Hanuman, an ardent devotee of Rama.  Besides, there are many other "murtis" in temple, including Jhulelal, "iṣṭa-devatā" of Sindhi people, and Guru Nanak, the first of the ten Sikh Gurus.  The temple conducts several study classes related to different Hindu scriptures.
-
-Hindu Temple and Cultural Center of the Rockies: Hindu Temple and Cultural Center of the Rockies in Denver, Colorado (Hindu Temple, Denver) is the major Hindu Temple in the Colorado and nearby region.  The Hindu Society of Colorado was incorporated in 1984.  During 1996-2015 the temple was located in a former church building in Littleton.  The formally designed temple opened on July 3, 2015 with Prana Pratishtha on June 5–7, 2015.  The temple now has 1,500 families as members.  The temple is non-regional and non-sectarian.
-
-Hinduism in England: Hinduism in England is the third largest religion in the country, with over 806,000 followers as of the 2011 Census.  This represents over 1.5% of the English population, up from 1.1% the previous decade.  Hindus are predominantly in the cities of London and Leicester, where they make up greater proportions of the population(Hindu Enclaves, also known as Hindu Hotspots).  England has a number of Hindu temples, including the Hindu temple at Neasden which is the largest Hindu temple in Europe.  Recently the largest Hindu Mandir in the North of England, the Bradford Lakshmi Narayan Hindu Temple opened in Bradford, West Yorkshire.
-
-Hindu Temple Society of North America: Hindu Temple Society of North America, representing Sri Maha Vallabha Ganapati Devasthanam, (Sanskrit: श्री महावल्लभ गणपति देवस्थानम्, Tamil: ஸ்ரீ மகா வல்லப கணபதி தேவஸ்தானம்), at 45–57 Bowne Street, Flushing, Queens, in New York City, was claimed to be the very first of the traditional Hindu temples in the USA.  But it was later proven that the International Society of Krishna Consciousness, founded in New York in 1966, actually established traditional Hindu Krishna temples in New York, San Francisco, Los Angeles and Dallas even before the year 1970. vFamous Hindu chaplain honored at Hindu Sangathan Diwas celebrations in New York, 27 August 2007, http://www.asiantribune.com/node/7144</ref> The designation of "North America" in the name was chosen because at its inception, it was sometimes claimed that there were no other Hindu temples in North America from which it needed to distinguish itself.  But there were already the traditional Krishna temples of Iskcon in North America (see Iskcon).  The status of being a genuine traditional Hindu religion for iskcon was also confirmed by the Hindu Vishva Parishad in October 1976 and on various other occasions.  Iskcon with its more than 100.000 present members in North America appreciates and strongly supports the activities of Hindu Temple Society of North America,
-
-Radha Madhav Dham: Radha Madhav Dham, originally called Barsana Dham is the main U.S. center of Jagadguru Kripalu Parishat, a non-profit, charitable, educational and spiritual organisation located on more than 200 acres of land in Hays County, south of Austin, Texas.  It is a Hindu temple and ashram complex, the oldest Hindu Temple in Texas the largest in North America and one of the largest Hindu Temple complexes in the Western Hemisphere.
-
-Bradford Lakshmi Narayan Hindu Temple: The Lakshmi Narayan Hindu Temple in Bradford is the largest Hindu temple (mandir) in Northern England.  The temple was designed by local Yorkshire architects and built by a local construction company.  The temple is faced with Yorkshire stone, and the design modern, reflecting the position of Hindus as part of contemporary Yorkshire society.  The temple is unusual in housing most of the major deities revered by the Hindu community, in addition to Lakshmi Narayan, the main deities.  This reflects the needs of the Hindu population in the United Kingdom, where temples have to serve all types of Hindus rather than just followers of a specific deity.
-
-Birla Mandir, Shahad: Birla Mandir is a Hindu temple for Vithoba located in the vicinity of the Century Rayon Company in Shahad, Ulhasnagar Taluka, Maharashtra, India.  It has also served as a shooting location for various Bollywood films like "Tere Naam" Prem Granth, Suhaag (Old),etc.  It is on the National Highway 222 (Kalyan-Murbad-Nagar-Nanded-Adilabad) and is just 4 km from Kalyan. Kalyan city.
-
-Hindu Temple, Dubai: Hindu Temple, Dubai (referred to locally as Shiva and Krishna "Mandir") is a temple complex in Dubai, United Arab Emirates (UAE).  The temple caters to the large Hindu community in the United Arab Emirates and is currently the only Hindu temple in the UAE while plans are on their way to build another temple in Abu Dhabi.  The temple complex comprises a Shiva and Krishna temple.
-
-Question: What hindu temple is a shooting location for a film that is a remake of the 1999 film "Sethu"?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "temple_name": {
-      "type": "string",
-      "description": "The name of the Hindu temple."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "temple_location": {
-      "type": "string",
-      "description": "The location of the Hindu temple."
-    },
-    "film_details": {
-      "type": "object",
-      "properties": {
-        "film_title": {
-          "type": "string",
-          "description": "The title of the film shot at the temple."
-        },
-        "release_year": {
-          "type": "integer",
-          "description": "The release year of the film."
-        },
-        "director": {
-          "type": "string",
-          "description": "The director of the film."
-        },
-        "is_remake": {
-          "type": "boolean",
-          "description": "Indicates if the film is a remake of another film."
-        },
-        "original_film_details": {
-          "type": "object",
-          "properties": {
-            "original_film_title": {
-              "type": "string",
-              "description": "The title of the original film."
-            },
-            "original_film_release_year": {
-              "type": "integer",
-              "description": "The release year of the original film."
-            }
-          },
-          "required": [
-            "original_film_title",
-            "original_film_release_year"
-          ],
-          "additionalProperties": false
-        }
-      },
-      "required": [
-        "film_title",
-        "release_year",
-        "director",
-        "is_remake",
-        "original_film_details"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nFiji Sanatan Society of Alberta: The Fiji Sanatan Society of Alberta, also known as Vishnu Mandir (Devanagri: विष्णु मन्दिर) in Edmonton, Alberta, Canada is a modern-style Hindu temple that was built by some of the very first Fijian Hindu immigrants in Edmonton in 1984.  Hindus have been living in Canada for over a century, especially in Edmonton.  Fijian Hindus began to settle in Edmonton in larger proportions starting in the 1960s and 1970s.  They conducted prayers and meditated in individual households via groups they formed in the community.  Talks of the need of a temple started in 1983 by four major Hindu Bhakti groups in Edmonton at the time, Shree Sanatan Dharam Ramayan Society, Edmonton Geeta Ramayan Congregation, Edmonton Vedic Congregation and later joined by Edmonton Prem Society, the group founded the Sanatan Board and raised funds to buy a property for the temple.  It became the first Fijian Hindu cultural society in all of Canada, and till date is the largest.  It started as a small place of worship in the Balwin residential area, constructed out of an old Church building.  Since then it has been renovated 2 times, first adding a basement, then in 2006 expanded further making it the second largest Hindu temple in Edmonton.\n\nTere Naam: Tere Naam (English: \"In your name\" ) is a 2003 Indian Hindi-language romantic drama film.  It is directed by Satish Kaushik and written by Bala and Jainendra Jain, starring Salman Khan and Bhoomika Chawla in her Hindi film debut.  The film is a remake of Bala's own Tamil blockbuster \"Sethu\" (1999).\n\nGibraltar Hindu Temple: The Gibraltar Hindu Temple (Sindhi: जिब्राल्टर हिन्दू मंदिर‎ ), also known as Gibraltar Mandir, is a Hindu temple (\"mandir\") in the British Overseas Territory of Gibraltar.  Established in 2000, the Gibraltar Hindu Temple is located at Engineer Lane.  Gibraltarian Hindus make approximately 1.8% of Gibraltar's population.  This is the only Hindu temple in Gibraltar and it serves as the spiritual centre for Hindu population of territory.  The temple is a charitable organisation and aims to maintain and promote Hindu culture in Gibraltar.  The presiding deity of the temple is Rama along with his consort Sita, brother Laxman and Hanuman, an ardent devotee of Rama.  Besides, there are many other \"murtis\" in temple, including Jhulelal, \"iṣṭa-devatā\" of Sindhi people, and Guru Nanak, the first of the ten Sikh Gurus.  The temple conducts several study classes related to different Hindu scriptures.\n\nHindu Temple and Cultural Center of the Rockies: Hindu Temple and Cultural Center of the Rockies in Denver, Colorado (Hindu Temple, Denver) is the major Hindu Temple in the Colorado and nearby region.  The Hindu Society of Colorado was incorporated in 1984.  During 1996-2015 the temple was located in a former church building in Littleton.  The formally designed temple opened on July 3, 2015 with Prana Pratishtha on June 5–7, 2015.  The temple now has 1,500 families as members.  The temple is non-regional and non-sectarian.\n\nHinduism in England: Hinduism in England is the third largest religion in the country, with over 806,000 followers as of the 2011 Census.  This represents over 1.5% of the English population, up from 1.1% the previous decade.  Hindus are predominantly in the cities of London and Leicester, where they make up greater proportions of the population(Hindu Enclaves, also known as Hindu Hotspots).  England has a number of Hindu temples, including the Hindu temple at Neasden which is the largest Hindu temple in Europe.  Recently the largest Hindu Mandir in the North of England, the Bradford Lakshmi Narayan Hindu Temple opened in Bradford, West Yorkshire.\n\nHindu Temple Society of North America: Hindu Temple Society of North America, representing Sri Maha Vallabha Ganapati Devasthanam, (Sanskrit: श्री महावल्लभ गणपति देवस्थानम्, Tamil: ஸ்ரீ மகா வல்லப கணபதி தேவஸ்தானம்), at 45–57 Bowne Street, Flushing, Queens, in New York City, was claimed to be the very first of the traditional Hindu temples in the USA.  But it was later proven that the International Society of Krishna Consciousness, founded in New York in 1966, actually established traditional Hindu Krishna temples in New York, San Francisco, Los Angeles and Dallas even before the year 1970. vFamous Hindu chaplain honored at Hindu Sangathan Diwas celebrations in New York, 27 August 2007, http://www.asiantribune.com/node/7144</ref> The designation of \"North America\" in the name was chosen because at its inception, it was sometimes claimed that there were no other Hindu temples in North America from which it needed to distinguish itself.  But there were already the traditional Krishna temples of Iskcon in North America (see Iskcon).  The status of being a genuine traditional Hindu religion for iskcon was also confirmed by the Hindu Vishva Parishad in October 1976 and on various other occasions.  Iskcon with its more than 100.000 present members in North America appreciates and strongly supports the activities of Hindu Temple Society of North America,\n\nRadha Madhav Dham: Radha Madhav Dham, originally called Barsana Dham is the main U.S. center of Jagadguru Kripalu Parishat, a non-profit, charitable, educational and spiritual organisation located on more than 200 acres of land in Hays County, south of Austin, Texas.  It is a Hindu temple and ashram complex, the oldest Hindu Temple in Texas the largest in North America and one of the largest Hindu Temple complexes in the Western Hemisphere.\n\nBradford Lakshmi Narayan Hindu Temple: The Lakshmi Narayan Hindu Temple in Bradford is the largest Hindu temple (mandir) in Northern England.  The temple was designed by local Yorkshire architects and built by a local construction company.  The temple is faced with Yorkshire stone, and the design modern, reflecting the position of Hindus as part of contemporary Yorkshire society.  The temple is unusual in housing most of the major deities revered by the Hindu community, in addition to Lakshmi Narayan, the main deities.  This reflects the needs of the Hindu population in the United Kingdom, where temples have to serve all types of Hindus rather than just followers of a specific deity.\n\nBirla Mandir, Shahad: Birla Mandir is a Hindu temple for Vithoba located in the vicinity of the Century Rayon Company in Shahad, Ulhasnagar Taluka, Maharashtra, India.  It has also served as a shooting location for various Bollywood films like \"Tere Naam\" Prem Granth, Suhaag (Old),etc.  It is on the National Highway 222 (Kalyan-Murbad-Nagar-Nanded-Adilabad) and is just 4 km from Kalyan. Kalyan city.\n\nHindu Temple, Dubai: Hindu Temple, Dubai (referred to locally as Shiva and Krishna \"Mandir\") is a temple complex in Dubai, United Arab Emirates (UAE).  The temple caters to the large Hindu community in the United Arab Emirates and is currently the only Hindu temple in the UAE while plans are on their way to build another temple in Abu Dhabi.  The temple complex comprises a Shiva and Krishna temple.\n\nQuestion: What hindu temple is a shooting location for a film that is a remake of the 1999 film \"Sethu\"?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"temple_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Hindu temple.\"\n    },\n    \"temple_location\": {\n      \"type\": \"string\",\n      \"description\": \"The location of the Hindu temple.\"\n    },\n    \"film_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"film_title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the film shot at the temple.\"\n        },\n        \"release_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The release year of the film.\"\n        },\n        \"director\": {\n          \"type\": \"string\",\n          \"description\": \"The director of the film.\"\n        },\n        \"is_remake\": {\n          \"type\": \"boolean\",\n          \"description\": \"Indicates if the film is a remake of another film.\"\n        },\n        \"original_film_details\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"original_film_title\": {\n              \"type\": \"string\",\n              \"description\": \"The title of the original film.\"\n            },\n            \"original_film_release_year\": {\n              \"type\": \"integer\",\n              \"description\": \"The release year of the original film.\"\n            }\n          },\n          \"required\": [\n            \"original_film_title\",\n            \"original_film_release_year\"\n          ],\n          \"additionalProperties\": false\n        }\n      },\n      \"required\": [\n        \"film_title\",\n        \"release_year\",\n        \"director\",\n        \"is_remake\",\n        \"original_film_details\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"temple_name\",\n    \"temple_location\",\n    \"film_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "temple_name",
-    "temple_location",
-    "film_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "temple_name": {
+        "type": "string",
+        "description": "The name of the Hindu temple."
+      },
+      "temple_location": {
+        "type": "string",
+        "description": "The location of the Hindu temple."
+      },
+      "film_details": {
+        "type": "object",
+        "properties": {
+          "film_title": {
+            "type": "string",
+            "description": "The title of the film shot at the temple."
+          },
+          "release_year": {
+            "type": "integer",
+            "description": "The release year of the film."
+          },
+          "director": {
+            "type": "string",
+            "description": "The director of the film."
+          },
+          "is_remake": {
+            "type": "boolean",
+            "description": "Indicates if the film is a remake of another film."
+          },
+          "original_film_details": {
+            "type": "object",
+            "properties": {
+              "original_film_title": {
+                "type": "string",
+                "description": "The title of the original film."
+              },
+              "original_film_release_year": {
+                "type": "integer",
+                "description": "The release year of the original film."
+              }
+            },
+            "required": [
+              "original_film_title",
+              "original_film_release_year"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "film_title",
+          "release_year",
+          "director",
+          "is_remake",
+          "original_film_details"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "temple_name",
+      "temple_location",
+      "film_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

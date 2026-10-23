@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Wind It Up (Gwen Stefani song): "Wind It Up" is a song by American singer and songwriter Gwen Stefani.  Originally written for inclusion on Stefani's Harajuku Lovers Tour, the song was later recorded for her second solo studio album, "The Sweet Escape" (2006).  The track contains an interpolation of "The Sound of Music" song "The Lonely Goatherd".
-
-The Sweet Escape (song): "The Sweet Escape" is a song by American singer and songwriter Gwen Stefani from her second studio album of the same name (2006).  It was written by Stefani, Akon, and Giorgio Tuinfort.  Akon, who is also a featured artist, developed the song's beat before collaborating with Stefani.  He designed it based on her previous work with No Doubt, and Stefani later commented that it put her "on the yellow brick road to the No Doubt record I might do".  "The Sweet Escape" is an apology for a fight between two lovers and describes a dream of a pleasant life for them.  As the album's title track, its title was chosen to help market Stefani's music and fashion lines.
-
-Harajuku Lovers Live: Harajuku Lovers Live is the first live long-form video by American recording artist Gwen Stefani.  It was released on DVD on December 4, 2006, by Interscope Records.  The DVD was directed by Sophie Muller and produced by Oil Factory Productions.  It is a recording of one of Stefani's concerts during her Harajuku Lovers Tour 2005 in late 2005 to promote her first album, "Love.  Angel.  Music.  Baby. ", released in November 2004.  The performance was recorded in November 2005, in Anaheim, California.  The concert features performances of all twelve songs from "Love.  Angel.  Music.  Baby."  and two new songs from her second studio album, "The Sweet Escape", as well as interviews with the musicians and dancers and a documentary of tour preparation.
-
-Now That You Got It: "Now That You Got It" is a song by American singer and songwriter Gwen Stefani from her second solo studio album, "The Sweet Escape" (2006).  Stefani co-wrote the song with its producers Sean Garrett and Swizz Beatz.  "Now That You Got It" is a reggae song featuring hip hop beats, staccato piano sample and military snare drums.  Lyrically, the song places Gwen asking her lover to give all that she wants.  A remix featuring Damian Marley was produced for the song's release as the album's fourth single on August 27, 2007 by Interscope Records.
-
-4 in the Morning: "4 in the Morning" is a song by American singer Gwen Stefani from her second studio album, "The Sweet Escape" (2006).  It was written by Stefani and co-written and produced by Tony Kanal, with additional production by Mark "Spike" Stent.  Interscope Records serviced the song to US contemporary hit radio on May 8, 2007, as the album's third single; elsewhere it was released in June 2007.  Described as one of her favorite songs on the album, Stefani began writing the song while pregnant and finished with Kanal, drawing inspiration from Roberta Flack and Billy Idol.
-
-Cool (Gwen Stefani song): "Cool" is a song by American singer Gwen Stefani from her debut solo studio album, "Love.  Angel.  Music.  Baby. " (2004).  Written by Stefani and Dallas Austin, the song was released on July 5, 2005 as the album's fourth single.  It was written by Austin basing the song on No Doubt's "Simple Kind of Life", but he did not finish it.  He then asked for help from Stefani, and they finished the song in 15 minutes.  The single's musical style and production were inspired by synth-pop and new wave arrangements from the 1980s, and its lyrics chronicle a relationship in which two lovers have separated, but remain "cool" with each other as good friends.
-
-Yummy (Gwen Stefani song): "Yummy" is a song recorded by American singer and songwriter Gwen Stefani, featuring American musician Pharrell Williams, from her second solo studio album, "The Sweet Escape" (2006).  The track was released on November 11, 2006 as a promotional single for the parent album's release through Interscope Records.  It was developed during several sessions in Miami, Florida and Hollywood, California in July 2005, for an intended EP or as extra tracks on her video album "Harajuku Lovers Live" (2005).  The song was written by Stefani and Williams and produced by The Neptunes.  Musically, the collaboration is a dance-pop recording with a "day-glo" rap.  Its lyrics deal with food, sexual intercourse, and the roles that an individual may have within a household.
-
-The Sweet Escape Tour: The Sweet Escape Tour was the second concert tour by American singer-songwriter Gwen Stefani.  The tour began in April 2007 in support of her second solo album "The Sweet Escape".
-
-Gwen Stefani: Gwen Renée Stefani ( ; born October 3, 1969) is an American singer, songwriter, fashion designer, actress, and television personality.  She is a co-founder and the lead vocalist of the band No Doubt that experienced major success after their breakthrough studio album "Tragic Kingdom" (1995) along with various successful singles, including "Just a Girl", "Don't Speak", "Hey Baby", and "It's My Life".  During the band's hiatus, Stefani embarked on a solo pop career in 2004 by releasing her debut studio album "Love.  Angel.  Music.  Baby. " Inspired by pop music from the 1980s, the album was met with both critical and commercial success.  It spawned three commercially successful singles: "What You Waiting For? ", "Rich Girl", and "Hollaback Girl", the latter reached number one on the "Billboard" Hot 100 while also becoming the first US download to sell one million copies.  In 2006 Stefani released her second studio album "The Sweet Escape".  The album produced two successful singles: "Wind It Up" and the album's title track "The Sweet Escape".  Her third solo album "This Is What the Truth Feels Like" was released in March 2016 and became her first solo number-one album on the "Billboard" 200.
-
-Early Winter: "Early Winter" is a song by American singer and songwriter Gwen Stefani from her second solo studio album, "The Sweet Escape" (2006).  Written by Stefani and English pianist Tim Rice-Oxley, the song was released in Europe as the album's fifth and final single on January 18, 2008 by Interscope Records.  Musically, "Early Winter" is a soft rock and synthpop ballad with new wave influences.  Critics found it similar to songs by English alternative rock band Keane.  The lyrics of the song describe the nearing of the end of a relationship, and were speculated to be references to Stefani's own relationship with husband Gavin Rossdale.
-
-Question: What song from Gwen Stefani's album The Sweet Escape is an apology for a fight between two lovers?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "album_title": {
-      "type": "string",
-      "description": "The title of the album the song is from."
-    },
-    "artist": {
-      "type": "string",
-      "description": "The artist who performed the song."
-    },
-    "lyrical_theme": {
-      "type": "string",
-      "description": "A description of the song's lyrical content."
-    },
-    "is_apology_song": {
-      "type": "boolean",
-      "description": "Indicates if the song's lyrics are an apology for a fight."
+    {
+      "role": "user",
+      "content": "Context:\nWind It Up (Gwen Stefani song): \"Wind It Up\" is a song by American singer and songwriter Gwen Stefani.  Originally written for inclusion on Stefani's Harajuku Lovers Tour, the song was later recorded for her second solo studio album, \"The Sweet Escape\" (2006).  The track contains an interpolation of \"The Sound of Music\" song \"The Lonely Goatherd\".\n\nThe Sweet Escape (song): \"The Sweet Escape\" is a song by American singer and songwriter Gwen Stefani from her second studio album of the same name (2006).  It was written by Stefani, Akon, and Giorgio Tuinfort.  Akon, who is also a featured artist, developed the song's beat before collaborating with Stefani.  He designed it based on her previous work with No Doubt, and Stefani later commented that it put her \"on the yellow brick road to the No Doubt record I might do\".  \"The Sweet Escape\" is an apology for a fight between two lovers and describes a dream of a pleasant life for them.  As the album's title track, its title was chosen to help market Stefani's music and fashion lines.\n\nHarajuku Lovers Live: Harajuku Lovers Live is the first live long-form video by American recording artist Gwen Stefani.  It was released on DVD on December 4, 2006, by Interscope Records.  The DVD was directed by Sophie Muller and produced by Oil Factory Productions.  It is a recording of one of Stefani's concerts during her Harajuku Lovers Tour 2005 in late 2005 to promote her first album, \"Love.  Angel.  Music.  Baby. \", released in November 2004.  The performance was recorded in November 2005, in Anaheim, California.  The concert features performances of all twelve songs from \"Love.  Angel.  Music.  Baby.\"  and two new songs from her second studio album, \"The Sweet Escape\", as well as interviews with the musicians and dancers and a documentary of tour preparation.\n\nNow That You Got It: \"Now That You Got It\" is a song by American singer and songwriter Gwen Stefani from her second solo studio album, \"The Sweet Escape\" (2006).  Stefani co-wrote the song with its producers Sean Garrett and Swizz Beatz.  \"Now That You Got It\" is a reggae song featuring hip hop beats, staccato piano sample and military snare drums.  Lyrically, the song places Gwen asking her lover to give all that she wants.  A remix featuring Damian Marley was produced for the song's release as the album's fourth single on August 27, 2007 by Interscope Records.\n\n4 in the Morning: \"4 in the Morning\" is a song by American singer Gwen Stefani from her second studio album, \"The Sweet Escape\" (2006).  It was written by Stefani and co-written and produced by Tony Kanal, with additional production by Mark \"Spike\" Stent.  Interscope Records serviced the song to US contemporary hit radio on May 8, 2007, as the album's third single; elsewhere it was released in June 2007.  Described as one of her favorite songs on the album, Stefani began writing the song while pregnant and finished with Kanal, drawing inspiration from Roberta Flack and Billy Idol.\n\nCool (Gwen Stefani song): \"Cool\" is a song by American singer Gwen Stefani from her debut solo studio album, \"Love.  Angel.  Music.  Baby. \" (2004).  Written by Stefani and Dallas Austin, the song was released on July 5, 2005 as the album's fourth single.  It was written by Austin basing the song on No Doubt's \"Simple Kind of Life\", but he did not finish it.  He then asked for help from Stefani, and they finished the song in 15 minutes.  The single's musical style and production were inspired by synth-pop and new wave arrangements from the 1980s, and its lyrics chronicle a relationship in which two lovers have separated, but remain \"cool\" with each other as good friends.\n\nYummy (Gwen Stefani song): \"Yummy\" is a song recorded by American singer and songwriter Gwen Stefani, featuring American musician Pharrell Williams, from her second solo studio album, \"The Sweet Escape\" (2006).  The track was released on November 11, 2006 as a promotional single for the parent album's release through Interscope Records.  It was developed during several sessions in Miami, Florida and Hollywood, California in July 2005, for an intended EP or as extra tracks on her video album \"Harajuku Lovers Live\" (2005).  The song was written by Stefani and Williams and produced by The Neptunes.  Musically, the collaboration is a dance-pop recording with a \"day-glo\" rap.  Its lyrics deal with food, sexual intercourse, and the roles that an individual may have within a household.\n\nThe Sweet Escape Tour: The Sweet Escape Tour was the second concert tour by American singer-songwriter Gwen Stefani.  The tour began in April 2007 in support of her second solo album \"The Sweet Escape\".\n\nGwen Stefani: Gwen Renée Stefani ( ; born October 3, 1969) is an American singer, songwriter, fashion designer, actress, and television personality.  She is a co-founder and the lead vocalist of the band No Doubt that experienced major success after their breakthrough studio album \"Tragic Kingdom\" (1995) along with various successful singles, including \"Just a Girl\", \"Don't Speak\", \"Hey Baby\", and \"It's My Life\".  During the band's hiatus, Stefani embarked on a solo pop career in 2004 by releasing her debut studio album \"Love.  Angel.  Music.  Baby. \" Inspired by pop music from the 1980s, the album was met with both critical and commercial success.  It spawned three commercially successful singles: \"What You Waiting For? \", \"Rich Girl\", and \"Hollaback Girl\", the latter reached number one on the \"Billboard\" Hot 100 while also becoming the first US download to sell one million copies.  In 2006 Stefani released her second studio album \"The Sweet Escape\".  The album produced two successful singles: \"Wind It Up\" and the album's title track \"The Sweet Escape\".  Her third solo album \"This Is What the Truth Feels Like\" was released in March 2016 and became her first solo number-one album on the \"Billboard\" 200.\n\nEarly Winter: \"Early Winter\" is a song by American singer and songwriter Gwen Stefani from her second solo studio album, \"The Sweet Escape\" (2006).  Written by Stefani and English pianist Tim Rice-Oxley, the song was released in Europe as the album's fifth and final single on January 18, 2008 by Interscope Records.  Musically, \"Early Winter\" is a soft rock and synthpop ballad with new wave influences.  Critics found it similar to songs by English alternative rock band Keane.  The lyrics of the song describe the nearing of the end of a relationship, and were speculated to be references to Stefani's own relationship with husband Gavin Rossdale.\n\nQuestion: What song from Gwen Stefani's album The Sweet Escape is an apology for a fight between two lovers?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song.\"\n    },\n    \"album_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the album the song is from.\"\n    },\n    \"artist\": {\n      \"type\": \"string\",\n      \"description\": \"The artist who performed the song.\"\n    },\n    \"lyrical_theme\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the song's lyrical content.\"\n    },\n    \"is_apology_song\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the song's lyrics are an apology for a fight.\"\n    }\n  },\n  \"required\": [\n    \"song_title\",\n    \"album_title\",\n    \"artist\",\n    \"lyrical_theme\",\n    \"is_apology_song\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "song_title",
-    "album_title",
-    "artist",
-    "lyrical_theme",
-    "is_apology_song"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song."
+      },
+      "album_title": {
+        "type": "string",
+        "description": "The title of the album the song is from."
+      },
+      "artist": {
+        "type": "string",
+        "description": "The artist who performed the song."
+      },
+      "lyrical_theme": {
+        "type": "string",
+        "description": "A description of the song's lyrical content."
+      },
+      "is_apology_song": {
+        "type": "boolean",
+        "description": "Indicates if the song's lyrics are an apology for a fight."
+      }
+    },
+    "required": [
+      "song_title",
+      "album_title",
+      "artist",
+      "lyrical_theme",
+      "is_apology_song"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

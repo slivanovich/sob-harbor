@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Lucas Nogueira: Lucas Riva Amarante "Bebê" Nogueira (born July 26, 1992) is a Brazilian professional basketball player for the Toronto Raptors of the National Basketball Association (NBA).  He was selected with the 16th overall pick in the 2013 NBA draft by the Boston Celtics, but was later traded to the Atlanta Hawks.  In 2014, his rights were traded to the Toronto Raptors.
-
-2007–08 Toronto Raptors season: The 2007–08 Toronto Raptors season was the 13th National Basketball Association (NBA) season for the Toronto Raptors basketball franchise, with the 2007–08 season scheduled to begin in October 2007.  The major acquisition was that of three-point specialist Jason Kapono from the Miami Heat, and much expectations also rested on the maturing of Andrea Bargnani, Toronto's number one draft pick in 2006.  With an overwhelming majority of home game sellouts (32, the second highest in franchise history), the Raptors qualified for the playoffs for the second year running, but this time around as the sixth seed.  The Raptors faced the third seed Orlando Magic, and were eliminated in five games.
-
-Tyler Hansbrough: Andrew Tyler Hansbrough (born November 3, 1985) is an American professional basketball player for the Guangzhou Long-Lions of the Chinese Basketball Association (CBA).  The most decorated and honored player in North Carolina Tar Heels history, Hansbrough was the first player in ACC history to not only be named First Team All-ACC four times, but to also be named to a First Team All-American squad in each of his four seasons.  He was also named ACC Rookie of the Year in 2006 and ACC Player of the Year in 2008, while sweeping all national player of the year awards that year as well.  Following his college career, he was selected by the Indiana Pacers with the 13th overall pick in the 2009 NBA draft.  He played four seasons for the Pacers before joining the Toronto Raptors in 2013.  After two seasons with the Raptors, he joined the Charlotte Hornets for the 2015–16 season.
-
-1995 NBA Expansion Draft: The 1995 NBA Expansion Draft was the tenth expansion draft of the National Basketball Association (NBA).  The draft was held on June 24, 1995, so that the newly founded Toronto Raptors and Vancouver Grizzlies could acquire players for the upcoming .  Toronto was awarded an expansion team on September 30, 1993, while Vancouver was awarded the league's 29th franchise on April 27, 1994.  They were the first NBA teams based in Canada since the Toronto Huskies.  In an NBA expansion draft, new NBA teams are allowed to acquire players from the previously established teams in the league.  Not all players on a given team are available during an expansion draft, since each team can protect a certain number of players from being selected.  In this draft, each of the twenty-seven other NBA teams had protected eight players from their roster, and the Raptors and the Grizzlies selected fourteen and thirteen unprotected players respectively, one from each team.  Prior to the draft, the league conducted a coin flip between the Raptors and the Grizzlies to decide their draft order in this expansion draft and in the 1995 NBA draft.  The Grizzlies won the coin flip and chose to have the higher pick in the 1995 Draft, allowing the Raptors to receive the first selection and the right to select fourteen players in the expansion draft.
-
-Pascal Siakam: Pascal Siakam (born April 2, 1994) is a Cameroonian professional basketball player for the Toronto Raptors of the National Basketball Association (NBA).  After attending New Mexico State University and playing basketball for the Aggies, Siakam was selected with the 27th overall pick in the 2016 NBA draft by the Toronto Raptors.
-
-2006–07 Toronto Raptors season: The Toronto Raptors 2006–07 season is the twelfth National Basketball Association (NBA) season for the Toronto Raptors basketball franchise.  Following a poor 2005–06 season, General Manager Bryan Colangelo greatly revamped the team roster during the pre-season but continued to build the team around All-Star Chris Bosh.  Despite a sluggish start, the 2006–07 season transformed into a year for Toronto.  The Raptors captured their first division title, finished third in the Eastern Conference, made the playoffs for the first time in five years, equalled their best ever regular season record, and secured home court advantage for the first time in franchise history.  However, the Raptors met the New Jersey Nets in the first round of the playoffs and were defeated four games to two.  At the end of the regular season, head coach Sam Mitchell and Colangelo were named NBA Coach of the Year and NBA Executive of the Year respectively.
-
-Jonas Valančiūnas: Jonas Valančiūnas (] ; born 6 May 1992) is a Lithuanian professional basketball player for the Toronto Raptors of the National Basketball Association (NBA).  He was selected by the Raptors with the fifth overall pick in the 2011 NBA draft.
-
-Damon Stoudamire: Damon Lamon Stoudamire (born September 3, 1973) is an American retired professional basketball player and the current head men's basketball coach at the University of the Pacific.  The 5 ft , 171 lb point guard was selected with the 7th overall pick by the Toronto Raptors in the 1995 NBA draft and won the 1995–96 NBA Rookie of the Year Award.  He played collegiately at the University of Arizona, and professionally for the Toronto Raptors, Portland Trail Blazers, Memphis Grizzlies and San Antonio Spurs.  He is the cousin of former Arizona Wildcats standout Salim Stoudamire and current NBA player Terrence Jones.
-
-Jermaine O'Neal: Jermaine Lee O'Neal (born October 13, 1978) is an American former professional basketball player.  The 6 ft 11 in (2.11 m), 255 lb (115 kg) forward–center had a successful high school career and declared his eligibility for the 1996 NBA draft straight out of high school.  He was selected by the Portland Trail Blazers with the 17th overall pick, but O'Neal was unable to break into the first team in Portland and was traded to the Indiana Pacers in 2000.  In his eight seasons with the club, he was voted an NBA All-Star six times, made the All-NBA teams three times, and was voted the NBA Most Improved Player in the 2001–02 season.  He also helped Indiana reach the NBA Playoffs six times, including the Conference Finals in the 2003–04 season.  He was traded to the Toronto Raptors before the 2008–09 season began, and traded to the Miami Heat midway through the same season.  O'Neal joined the Boston Celtics prior to the 2010–11 season.  In 2012, he signed with the Suns, and in the offseason of 2013, he signed with the Warriors.
-
-2012–13 Toronto Raptors season: The 2012–13 Toronto Raptors season was the 18th season of the franchise in the National Basketball Association (NBA).  In the off-season, after failing to pursue Steve Nash in free agency, the Raptors acquired Kyle Lowry from the Houston Rockets for a first round pick.  The also season marked the debut of Jonas Valančiūnas, their first pick in the 2011 Draft from Lithuania.  On January 30, 2013, the Raptors acquired Rudy Gay in a three-way deal with the Memphis Grizzlies and Detroit Pistons which sent longtime point guard José Calderón to the Pistons.  Despite a winning home record (21-20) the Raptors failed to secure a playoff spot with a 34-48 record.
-
-Question: Which number overall pick was the Lithuanian player who debuted with the Toronto Raptors in the 2012-13 season?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "player_name": {
-      "type": "string",
-      "description": "The name of the basketball player."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "nationality": {
-      "type": "string",
-      "description": "The nationality of the player."
-    },
-    "debut_season_with_raptors": {
-      "type": "string",
-      "description": "The NBA season in which the player debuted with the Toronto Raptors."
-    },
-    "draft_pick_number": {
-      "type": "integer",
-      "description": "The overall pick number in the NBA draft."
+    {
+      "role": "user",
+      "content": "Context:\nLucas Nogueira: Lucas Riva Amarante \"Bebê\" Nogueira (born July 26, 1992) is a Brazilian professional basketball player for the Toronto Raptors of the National Basketball Association (NBA).  He was selected with the 16th overall pick in the 2013 NBA draft by the Boston Celtics, but was later traded to the Atlanta Hawks.  In 2014, his rights were traded to the Toronto Raptors.\n\n2007–08 Toronto Raptors season: The 2007–08 Toronto Raptors season was the 13th National Basketball Association (NBA) season for the Toronto Raptors basketball franchise, with the 2007–08 season scheduled to begin in October 2007.  The major acquisition was that of three-point specialist Jason Kapono from the Miami Heat, and much expectations also rested on the maturing of Andrea Bargnani, Toronto's number one draft pick in 2006.  With an overwhelming majority of home game sellouts (32, the second highest in franchise history), the Raptors qualified for the playoffs for the second year running, but this time around as the sixth seed.  The Raptors faced the third seed Orlando Magic, and were eliminated in five games.\n\nTyler Hansbrough: Andrew Tyler Hansbrough (born November 3, 1985) is an American professional basketball player for the Guangzhou Long-Lions of the Chinese Basketball Association (CBA).  The most decorated and honored player in North Carolina Tar Heels history, Hansbrough was the first player in ACC history to not only be named First Team All-ACC four times, but to also be named to a First Team All-American squad in each of his four seasons.  He was also named ACC Rookie of the Year in 2006 and ACC Player of the Year in 2008, while sweeping all national player of the year awards that year as well.  Following his college career, he was selected by the Indiana Pacers with the 13th overall pick in the 2009 NBA draft.  He played four seasons for the Pacers before joining the Toronto Raptors in 2013.  After two seasons with the Raptors, he joined the Charlotte Hornets for the 2015–16 season.\n\n1995 NBA Expansion Draft: The 1995 NBA Expansion Draft was the tenth expansion draft of the National Basketball Association (NBA).  The draft was held on June 24, 1995, so that the newly founded Toronto Raptors and Vancouver Grizzlies could acquire players for the upcoming .  Toronto was awarded an expansion team on September 30, 1993, while Vancouver was awarded the league's 29th franchise on April 27, 1994.  They were the first NBA teams based in Canada since the Toronto Huskies.  In an NBA expansion draft, new NBA teams are allowed to acquire players from the previously established teams in the league.  Not all players on a given team are available during an expansion draft, since each team can protect a certain number of players from being selected.  In this draft, each of the twenty-seven other NBA teams had protected eight players from their roster, and the Raptors and the Grizzlies selected fourteen and thirteen unprotected players respectively, one from each team.  Prior to the draft, the league conducted a coin flip between the Raptors and the Grizzlies to decide their draft order in this expansion draft and in the 1995 NBA draft.  The Grizzlies won the coin flip and chose to have the higher pick in the 1995 Draft, allowing the Raptors to receive the first selection and the right to select fourteen players in the expansion draft.\n\nPascal Siakam: Pascal Siakam (born April 2, 1994) is a Cameroonian professional basketball player for the Toronto Raptors of the National Basketball Association (NBA).  After attending New Mexico State University and playing basketball for the Aggies, Siakam was selected with the 27th overall pick in the 2016 NBA draft by the Toronto Raptors.\n\n2006–07 Toronto Raptors season: The Toronto Raptors 2006–07 season is the twelfth National Basketball Association (NBA) season for the Toronto Raptors basketball franchise.  Following a poor 2005–06 season, General Manager Bryan Colangelo greatly revamped the team roster during the pre-season but continued to build the team around All-Star Chris Bosh.  Despite a sluggish start, the 2006–07 season transformed into a year for Toronto.  The Raptors captured their first division title, finished third in the Eastern Conference, made the playoffs for the first time in five years, equalled their best ever regular season record, and secured home court advantage for the first time in franchise history.  However, the Raptors met the New Jersey Nets in the first round of the playoffs and were defeated four games to two.  At the end of the regular season, head coach Sam Mitchell and Colangelo were named NBA Coach of the Year and NBA Executive of the Year respectively.\n\nJonas Valančiūnas: Jonas Valančiūnas (] ; born 6 May 1992) is a Lithuanian professional basketball player for the Toronto Raptors of the National Basketball Association (NBA).  He was selected by the Raptors with the fifth overall pick in the 2011 NBA draft.\n\nDamon Stoudamire: Damon Lamon Stoudamire (born September 3, 1973) is an American retired professional basketball player and the current head men's basketball coach at the University of the Pacific.  The 5 ft , 171 lb point guard was selected with the 7th overall pick by the Toronto Raptors in the 1995 NBA draft and won the 1995–96 NBA Rookie of the Year Award.  He played collegiately at the University of Arizona, and professionally for the Toronto Raptors, Portland Trail Blazers, Memphis Grizzlies and San Antonio Spurs.  He is the cousin of former Arizona Wildcats standout Salim Stoudamire and current NBA player Terrence Jones.\n\nJermaine O'Neal: Jermaine Lee O'Neal (born October 13, 1978) is an American former professional basketball player.  The 6 ft 11 in (2.11 m), 255 lb (115 kg) forward–center had a successful high school career and declared his eligibility for the 1996 NBA draft straight out of high school.  He was selected by the Portland Trail Blazers with the 17th overall pick, but O'Neal was unable to break into the first team in Portland and was traded to the Indiana Pacers in 2000.  In his eight seasons with the club, he was voted an NBA All-Star six times, made the All-NBA teams three times, and was voted the NBA Most Improved Player in the 2001–02 season.  He also helped Indiana reach the NBA Playoffs six times, including the Conference Finals in the 2003–04 season.  He was traded to the Toronto Raptors before the 2008–09 season began, and traded to the Miami Heat midway through the same season.  O'Neal joined the Boston Celtics prior to the 2010–11 season.  In 2012, he signed with the Suns, and in the offseason of 2013, he signed with the Warriors.\n\n2012–13 Toronto Raptors season: The 2012–13 Toronto Raptors season was the 18th season of the franchise in the National Basketball Association (NBA).  In the off-season, after failing to pursue Steve Nash in free agency, the Raptors acquired Kyle Lowry from the Houston Rockets for a first round pick.  The also season marked the debut of Jonas Valančiūnas, their first pick in the 2011 Draft from Lithuania.  On January 30, 2013, the Raptors acquired Rudy Gay in a three-way deal with the Memphis Grizzlies and Detroit Pistons which sent longtime point guard José Calderón to the Pistons.  Despite a winning home record (21-20) the Raptors failed to secure a playoff spot with a 34-48 record.\n\nQuestion: Which number overall pick was the Lithuanian player who debuted with the Toronto Raptors in the 2012-13 season?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"player_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the basketball player.\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the player.\"\n    },\n    \"debut_season_with_raptors\": {\n      \"type\": \"string\",\n      \"description\": \"The NBA season in which the player debuted with the Toronto Raptors.\"\n    },\n    \"draft_pick_number\": {\n      \"type\": \"integer\",\n      \"description\": \"The overall pick number in the NBA draft.\"\n    }\n  },\n  \"required\": [\n    \"player_name\",\n    \"nationality\",\n    \"debut_season_with_raptors\",\n    \"draft_pick_number\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "player_name",
-    "nationality",
-    "debut_season_with_raptors",
-    "draft_pick_number"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "player_name": {
+        "type": "string",
+        "description": "The name of the basketball player."
+      },
+      "nationality": {
+        "type": "string",
+        "description": "The nationality of the player."
+      },
+      "debut_season_with_raptors": {
+        "type": "string",
+        "description": "The NBA season in which the player debuted with the Toronto Raptors."
+      },
+      "draft_pick_number": {
+        "type": "integer",
+        "description": "The overall pick number in the NBA draft."
+      }
+    },
+    "required": [
+      "player_name",
+      "nationality",
+      "debut_season_with_raptors",
+      "draft_pick_number"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

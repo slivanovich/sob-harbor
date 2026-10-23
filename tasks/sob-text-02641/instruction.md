@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Potato skins: Potato skins are a snack food or appetizer made of unpeeled potato halves, hollowed and dressed with bacon, cheddar cheese and green onions.  They are commonly found on the menus of casual dining restaurants such as T.G.I. Friday's, which is known for serving them.  While commonly eaten in restaurants, these snacks are also commonly made at home.
-
-Casual Friday (The Office): "Casual Friday" is the twenty-sixth episode of the fifth season of the television series "The Office", and the 98th overall episode of the series.  It originally aired on NBC in the United States on April 30, 2009.  In this episode, Michael, Pam and Ryan return to Dunder Mifflin as salespeople, and other members of the sales staff become upset when they don't get their old clients back that the Michael Scott Paper Company stole from them.  Meanwhile, Jim tries to remain neutral about the situation and plays board games with Creed, and Casual Friday is reinstated in the office, with mixed results.
-
-Business casual: Business casual is an ambiguously-defined dress code that has been adopted by many professional and white-collar workplaces in Western countries.  It entails neat yet casual attire and is generally more casual than informal attire but more formal than casual or smart casual attire.  Casual Fridays preceded widespread acceptance of business casual attire in many offices.
-
-Casual Viewin': Casual Viewin' is a 2000 album by Canadian alternative rock band 54-40.  The title refers to a lyric from the Genesis song "Broadway Melody of 1974", which reads: "Marshall McLuhan, casual viewin', head buried in the sand."  54-40 commented in interviews at the time of the album's release that they were influenced by McLuhan's work when making the album, and that they adopted the Genesis lyric as a result.
-
-Beer and pretzels game: A beer and pretzels game is any of a class of tabletop games that are light on rules and strategy, feature a high amount of randomness and a light theme.  This is in direct contrast to Eurogames, which involve complex rules and emphasize strategy over randomness.  The term was originally coined to describe relatively simple wargames that did not require extraordinary focus to play.  The name was then adopted by gamers to mean casual, short and easy to play games in general.  Examples of beer and pretzels games include "Bohnanza", "Wizwar" and "Pit".
-
-Casual Friday: Casual Friday (also known as dress-down Friday or casual day) is a Western trend, which has spread to other parts of the world, in which some business offices relax their dress code on Fridays.  Some businesses that usually require employees to wear suits, dress shirts, neckties, and dress shoes allow more casual attire on Fridays.
-
-Sunderland International Airshow: Sunderland International Airshow is the biggest free annual airshow in Europe, held at the Roker and Seaburn seafronts.  It takes place over the course of three days, usually the final weekend in July (Friday to Sunday), and attracts around 2,000,000 spectators every year.  The airshow features a large number of planes, including the Red Arrows and the Eurofighter Typhoon.  In addition to the planes, the seafront plays host to a range of food counters, stalls and fairground games.  The Royal Navy traditionally have a warship off the coast every year, usually HMS Ocean, the adopted warship of Sunderland, however in 2007, HMS Albion made an appearance instead as HMS Ocean had other commitments.  The airshow was first held in 1989 as a single day show, and was planned to be a one-off event, when it attracted 250,000 spectators.  Due to its success, from 1991 it became a two-day show, and subsequently three days.  Due to thick fog and mist in 2008, the airshow was cancelled after only one plane had flown.  The Friday night launch, which started back in 2010, shows sunset displays for the majority of the night, but the night is rounded off with gliders with sparklers (used in fireworks) during the "settling down" period, and then a large firework display ends it all.
-
-Oberon Media: Oberon Media is a multi-platform casual games company, delivering casual games across online, social, mobile/Smartphone, interactive TV and retail categories.  Oberon games have been adopted by global digital and media companies, such as Acer, Microsoft, AT&T, Yahoo!, Electronic Arts, and Orange France.
-
-1582: Year 1582 (MDLXXXII) was a common year starting on Monday (link will display the full calendar) of the Julian calendar, and a common year starting on Friday (link will display the full calendar) of the Proleptic Gregorian calendar.  However, this year also saw the beginning of the Gregorian Calendar switch, when the Papal bull known as "Inter gravissimas" introduced the Gregorian calendar, adopted by Spain, Portugal, the Polish–Lithuanian Commonwealth and most of present-day Italy from the start.  In these countries, the year continued as normal until Thursday, October 4.  However, the next day became Friday, October 15 (like a common year starting on Friday), in those countries (France followed two months later, letting Sunday, December 9 be followed by Monday, December 20).  Other countries continued using the Julian calendar, switching calendars in later years, and the complete conversion of the Gregorian calendar was not entirely done until 1929.
-
-T.G.I. Friday's: TGI Fridays is an American restaurant chain focusing on casual dining.  The company is a unit of the Sentinel Capital Partners and TriArtisan Capital Partners, who purchased the company from Carlson Companies in May 2014.  The name is asserted to stand for "Thank God It's Friday", although as of 2010 some television commercials for the chain have also made use of the alternative phrase, "Thank Goodness It's Friday."  The chain is known for its appearance—with red-striped canopies, brass railings, Tiffany lamps, and frequent use of antiques as decor—and its cocktails.
-
-Question: Where was casual friday adopted?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "trend_name": {
-      "type": "string",
-      "description": "The name of the trend being discussed."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "primary_adoption_region": {
-      "type": "string",
-      "description": "The initial geographical region where the trend was adopted."
-    },
-    "spread_to_other_regions": {
-      "type": "boolean",
-      "description": "Indicates if the trend has spread beyond its primary adoption region."
-    },
-    "description": {
-      "type": "string",
-      "description": "A brief description of what the Casual Friday trend entails."
+    {
+      "role": "user",
+      "content": "Context:\nPotato skins: Potato skins are a snack food or appetizer made of unpeeled potato halves, hollowed and dressed with bacon, cheddar cheese and green onions.  They are commonly found on the menus of casual dining restaurants such as T.G.I. Friday's, which is known for serving them.  While commonly eaten in restaurants, these snacks are also commonly made at home.\n\nCasual Friday (The Office): \"Casual Friday\" is the twenty-sixth episode of the fifth season of the television series \"The Office\", and the 98th overall episode of the series.  It originally aired on NBC in the United States on April 30, 2009.  In this episode, Michael, Pam and Ryan return to Dunder Mifflin as salespeople, and other members of the sales staff become upset when they don't get their old clients back that the Michael Scott Paper Company stole from them.  Meanwhile, Jim tries to remain neutral about the situation and plays board games with Creed, and Casual Friday is reinstated in the office, with mixed results.\n\nBusiness casual: Business casual is an ambiguously-defined dress code that has been adopted by many professional and white-collar workplaces in Western countries.  It entails neat yet casual attire and is generally more casual than informal attire but more formal than casual or smart casual attire.  Casual Fridays preceded widespread acceptance of business casual attire in many offices.\n\nCasual Viewin': Casual Viewin' is a 2000 album by Canadian alternative rock band 54-40.  The title refers to a lyric from the Genesis song \"Broadway Melody of 1974\", which reads: \"Marshall McLuhan, casual viewin', head buried in the sand.\"  54-40 commented in interviews at the time of the album's release that they were influenced by McLuhan's work when making the album, and that they adopted the Genesis lyric as a result.\n\nBeer and pretzels game: A beer and pretzels game is any of a class of tabletop games that are light on rules and strategy, feature a high amount of randomness and a light theme.  This is in direct contrast to Eurogames, which involve complex rules and emphasize strategy over randomness.  The term was originally coined to describe relatively simple wargames that did not require extraordinary focus to play.  The name was then adopted by gamers to mean casual, short and easy to play games in general.  Examples of beer and pretzels games include \"Bohnanza\", \"Wizwar\" and \"Pit\".\n\nCasual Friday: Casual Friday (also known as dress-down Friday or casual day) is a Western trend, which has spread to other parts of the world, in which some business offices relax their dress code on Fridays.  Some businesses that usually require employees to wear suits, dress shirts, neckties, and dress shoes allow more casual attire on Fridays.\n\nSunderland International Airshow: Sunderland International Airshow is the biggest free annual airshow in Europe, held at the Roker and Seaburn seafronts.  It takes place over the course of three days, usually the final weekend in July (Friday to Sunday), and attracts around 2,000,000 spectators every year.  The airshow features a large number of planes, including the Red Arrows and the Eurofighter Typhoon.  In addition to the planes, the seafront plays host to a range of food counters, stalls and fairground games.  The Royal Navy traditionally have a warship off the coast every year, usually HMS Ocean, the adopted warship of Sunderland, however in 2007, HMS Albion made an appearance instead as HMS Ocean had other commitments.  The airshow was first held in 1989 as a single day show, and was planned to be a one-off event, when it attracted 250,000 spectators.  Due to its success, from 1991 it became a two-day show, and subsequently three days.  Due to thick fog and mist in 2008, the airshow was cancelled after only one plane had flown.  The Friday night launch, which started back in 2010, shows sunset displays for the majority of the night, but the night is rounded off with gliders with sparklers (used in fireworks) during the \"settling down\" period, and then a large firework display ends it all.\n\nOberon Media: Oberon Media is a multi-platform casual games company, delivering casual games across online, social, mobile/Smartphone, interactive TV and retail categories.  Oberon games have been adopted by global digital and media companies, such as Acer, Microsoft, AT&T, Yahoo!, Electronic Arts, and Orange France.\n\n1582: Year 1582 (MDLXXXII) was a common year starting on Monday (link will display the full calendar) of the Julian calendar, and a common year starting on Friday (link will display the full calendar) of the Proleptic Gregorian calendar.  However, this year also saw the beginning of the Gregorian Calendar switch, when the Papal bull known as \"Inter gravissimas\" introduced the Gregorian calendar, adopted by Spain, Portugal, the Polish–Lithuanian Commonwealth and most of present-day Italy from the start.  In these countries, the year continued as normal until Thursday, October 4.  However, the next day became Friday, October 15 (like a common year starting on Friday), in those countries (France followed two months later, letting Sunday, December 9 be followed by Monday, December 20).  Other countries continued using the Julian calendar, switching calendars in later years, and the complete conversion of the Gregorian calendar was not entirely done until 1929.\n\nT.G.I. Friday's: TGI Fridays is an American restaurant chain focusing on casual dining.  The company is a unit of the Sentinel Capital Partners and TriArtisan Capital Partners, who purchased the company from Carlson Companies in May 2014.  The name is asserted to stand for \"Thank God It's Friday\", although as of 2010 some television commercials for the chain have also made use of the alternative phrase, \"Thank Goodness It's Friday.\"  The chain is known for its appearance—with red-striped canopies, brass railings, Tiffany lamps, and frequent use of antiques as decor—and its cocktails.\n\nQuestion: Where was casual friday adopted?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"trend_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the trend being discussed.\"\n    },\n    \"primary_adoption_region\": {\n      \"type\": \"string\",\n      \"description\": \"The initial geographical region where the trend was adopted.\"\n    },\n    \"spread_to_other_regions\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the trend has spread beyond its primary adoption region.\"\n    },\n    \"description\": {\n      \"type\": \"string\",\n      \"description\": \"A brief description of what the Casual Friday trend entails.\"\n    }\n  },\n  \"required\": [\n    \"trend_name\",\n    \"primary_adoption_region\",\n    \"spread_to_other_regions\",\n    \"description\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "trend_name",
-    "primary_adoption_region",
-    "spread_to_other_regions",
-    "description"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "trend_name": {
+        "type": "string",
+        "description": "The name of the trend being discussed."
+      },
+      "primary_adoption_region": {
+        "type": "string",
+        "description": "The initial geographical region where the trend was adopted."
+      },
+      "spread_to_other_regions": {
+        "type": "boolean",
+        "description": "Indicates if the trend has spread beyond its primary adoption region."
+      },
+      "description": {
+        "type": "string",
+        "description": "A brief description of what the Casual Friday trend entails."
+      }
+    },
+    "required": [
+      "trend_name",
+      "primary_adoption_region",
+      "spread_to_other_regions",
+      "description"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

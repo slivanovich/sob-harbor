@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Search and Rescue (Stargate Atlantis): "Search and Rescue" is the fifth season premiere of science fiction television show "Stargate Atlantis", and is the 81st episode of the series.  The episode premiered on July 11, 2008 in the United States on SCI FI channel, and was then shown on Canada's The Movie Network.  The episode premiered over a month later in the United Kingdom on August 19 on Sky One.  iTunes USA also made the episode available for download several days later.  However, by the next episode, "Seed", shows will be added at the same time as they are scheduled to air.  This is the 26th episode of "Stargate Atlantis" to be written by Martin Gero.  The episode introduces several changes in the personnel and command of Atlantis, seeing Richard Woolsey (Robert Picardo) take over command of the base.
-
-The New Detectives: The New Detectives: Case Studies in Forensic Science is a documentary true crime television show that aired two to three different cases in forensic science per episode.  Episode reruns currently air on the Discovery Channel, TLC, the Investigation Discovery network, and the Justice Network.  Before the series was canceled, the show also aired on The History Channel in the United States and Canal D, Court TV, and Botswana TV in Canada.  The show was also carried by international markets where the series was shown on the Discovery Channel UK, Discovery Europe, the Crime & Investigation Network in Australia, Prime TV in New Zealand, TV Norge, TV Danmark, Kanal 5 in Sweden, and RTL in the Netherlands.  A version of the series was broadcast on the British Channel Five, under the name "Murder Detectives: Case Files.
-
-Partial Terms of Endearment: "Partial Terms of Endearment" is the 21st and final episode of the eighth season of the animated comedy series "Family Guy".  Directed by Joseph Lee and written by Danny Smith, the episode originally aired on BBC Three in the United Kingdom on June 20, 2010, and has not been allowed to air in the United States on Fox, the original television network of the series, due to its controversial nature.  This is the last episode that is presented in standard format, before the series' switch to high definition format, and it is the final episode to feature the opening sequence that was updated during the second season.
-
-Diwali (The Office): "Diwali" is the sixth episode of the third season of the American comedy television series "The Office" and the show's 34th overall.  It was written by Mindy Kaling, who also acts in the show as Kelly Kapoor, and directed by Miguel Arteta.  The episode first aired on November 2, 2006, on NBC, twelve days after the actual Diwali holiday.
-
-There's Only One Way to Try a Case: "There's Only One Way to Try a Case" is the first episode of the fourth season of the DirecTV legal drama series "Damages" and the show's fortieth episode overall.  It was written by creators and executive producers Todd A. Kessler, Glenn Kessler and Daniel Zelman and directed by Todd A. Kessler.  It originally premiered in the United States on DirecTV's Audience Network on July 13, 2011, and was the first episode of the series to air on DirecTV after the series moved from the FX network.
-
-Simpsons Roasting on an Open Fire: "Simpsons Roasting on an Open Fire", also known as "The Simpsons Christmas Special", is the series premiere episode of "The Simpsons".  It was the first episode to air despite originally being the eighth episode produced for season one.  It is the only full-length episode to air during the 1980s, having originally aired on the Fox network in the United States on December 17, 1989.
-
-The Office (U.S. TV series): The Office is an American television comedy series that aired on NBC from March 24, 2005, to May 16, 2013.  It is an adaptation of the BBC series of the same name.  "The Office" was adapted for American audiences by Greg Daniels, a veteran writer for "Saturday Night Live", "King of the Hill", and "The Simpsons".  It is co-produced by Daniels' Deedle-Dee Productions, and Reveille Productions (later Shine America), in association with Universal Television.  The original executive producers were Greg Daniels, Howard Klein, Ben Silverman, Ricky Gervais, and Stephen Merchant, with numerous others being promoted in later seasons.
-
-Some Enchanted Evening (The Simpsons): "Some Enchanted Evening" is the thirteenth episode of "The Simpsons"<nowiki>'</nowiki> first season.  It originally aired on the Fox network in the United States on May 13, 1990.  Written by Matt Groening and Sam Simon and directed by David Silverman and Kent Butterworth, "Some Enchanted Evening" was the first episode produced for season one and was intended to air as the series premiere, but served as the final episode of the season due to significant animation problems.  It is also the last episode to feature the original opening sequence starting from "Bart the Genius".  In the episode, Homer and Marge spend a night on the town while leaving the children with a diabolical babysitter named Ms. Botz.
-
-Cartoon Wars Part II: "Cartoon Wars Part II" is the fourth episode in the tenth season of the American animated television series "South Park".  The 143rd episode of the series overall, it first aired on Comedy Central in the United States on April 12, 2006.  After "Cartoon Wars Part I", it is the second part of a two-episode story-arc, which focuses on Cartman's efforts to get the television series "Family Guy" cancelled, by exploiting fears of retaliation by Muslims to an impending "Family Guy" episode in which the Islamic prophet Muhammad will appear, in violation of some interpretations of Muslim law.  Kyle instead urges the president of the network airing "Family Guy", Fox, to air the episode in an exercise of free speech.
-
-Seeing Red (Buffy the Vampire Slayer): "Seeing Red" is the 19th episode of season 6 of the television series "Buffy the Vampire Slayer".  In North America, this episode was somehow syndicated onto UPN affiliates a week early by accident.  Although none of them broadcast the episode by mistake, the episode was leaked onto the internet more than a week before it was slated to air.  The episode was also noted for its drastic and controversial content, being the only episode of the series to air at an alternate time on the Canadian family network YTV.
-
-Question: What network did the series that "Diwali" was an episode of air on?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "episode_title": {
-      "type": "string",
-      "description": "The title of the specific episode."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "series_title": {
-      "type": "string",
-      "description": "The title of the television series the episode belongs to."
-    },
-    "network_aired_on": {
-      "type": "string",
-      "description": "The television network on which the series aired."
+    {
+      "role": "user",
+      "content": "Context:\nSearch and Rescue (Stargate Atlantis): \"Search and Rescue\" is the fifth season premiere of science fiction television show \"Stargate Atlantis\", and is the 81st episode of the series.  The episode premiered on July 11, 2008 in the United States on SCI FI channel, and was then shown on Canada's The Movie Network.  The episode premiered over a month later in the United Kingdom on August 19 on Sky One.  iTunes USA also made the episode available for download several days later.  However, by the next episode, \"Seed\", shows will be added at the same time as they are scheduled to air.  This is the 26th episode of \"Stargate Atlantis\" to be written by Martin Gero.  The episode introduces several changes in the personnel and command of Atlantis, seeing Richard Woolsey (Robert Picardo) take over command of the base.\n\nThe New Detectives: The New Detectives: Case Studies in Forensic Science is a documentary true crime television show that aired two to three different cases in forensic science per episode.  Episode reruns currently air on the Discovery Channel, TLC, the Investigation Discovery network, and the Justice Network.  Before the series was canceled, the show also aired on The History Channel in the United States and Canal D, Court TV, and Botswana TV in Canada.  The show was also carried by international markets where the series was shown on the Discovery Channel UK, Discovery Europe, the Crime & Investigation Network in Australia, Prime TV in New Zealand, TV Norge, TV Danmark, Kanal 5 in Sweden, and RTL in the Netherlands.  A version of the series was broadcast on the British Channel Five, under the name \"Murder Detectives: Case Files.\n\nPartial Terms of Endearment: \"Partial Terms of Endearment\" is the 21st and final episode of the eighth season of the animated comedy series \"Family Guy\".  Directed by Joseph Lee and written by Danny Smith, the episode originally aired on BBC Three in the United Kingdom on June 20, 2010, and has not been allowed to air in the United States on Fox, the original television network of the series, due to its controversial nature.  This is the last episode that is presented in standard format, before the series' switch to high definition format, and it is the final episode to feature the opening sequence that was updated during the second season.\n\nDiwali (The Office): \"Diwali\" is the sixth episode of the third season of the American comedy television series \"The Office\" and the show's 34th overall.  It was written by Mindy Kaling, who also acts in the show as Kelly Kapoor, and directed by Miguel Arteta.  The episode first aired on November 2, 2006, on NBC, twelve days after the actual Diwali holiday.\n\nThere's Only One Way to Try a Case: \"There's Only One Way to Try a Case\" is the first episode of the fourth season of the DirecTV legal drama series \"Damages\" and the show's fortieth episode overall.  It was written by creators and executive producers Todd A. Kessler, Glenn Kessler and Daniel Zelman and directed by Todd A. Kessler.  It originally premiered in the United States on DirecTV's Audience Network on July 13, 2011, and was the first episode of the series to air on DirecTV after the series moved from the FX network.\n\nSimpsons Roasting on an Open Fire: \"Simpsons Roasting on an Open Fire\", also known as \"The Simpsons Christmas Special\", is the series premiere episode of \"The Simpsons\".  It was the first episode to air despite originally being the eighth episode produced for season one.  It is the only full-length episode to air during the 1980s, having originally aired on the Fox network in the United States on December 17, 1989.\n\nThe Office (U.S. TV series): The Office is an American television comedy series that aired on NBC from March 24, 2005, to May 16, 2013.  It is an adaptation of the BBC series of the same name.  \"The Office\" was adapted for American audiences by Greg Daniels, a veteran writer for \"Saturday Night Live\", \"King of the Hill\", and \"The Simpsons\".  It is co-produced by Daniels' Deedle-Dee Productions, and Reveille Productions (later Shine America), in association with Universal Television.  The original executive producers were Greg Daniels, Howard Klein, Ben Silverman, Ricky Gervais, and Stephen Merchant, with numerous others being promoted in later seasons.\n\nSome Enchanted Evening (The Simpsons): \"Some Enchanted Evening\" is the thirteenth episode of \"The Simpsons\"<nowiki>'</nowiki> first season.  It originally aired on the Fox network in the United States on May 13, 1990.  Written by Matt Groening and Sam Simon and directed by David Silverman and Kent Butterworth, \"Some Enchanted Evening\" was the first episode produced for season one and was intended to air as the series premiere, but served as the final episode of the season due to significant animation problems.  It is also the last episode to feature the original opening sequence starting from \"Bart the Genius\".  In the episode, Homer and Marge spend a night on the town while leaving the children with a diabolical babysitter named Ms. Botz.\n\nCartoon Wars Part II: \"Cartoon Wars Part II\" is the fourth episode in the tenth season of the American animated television series \"South Park\".  The 143rd episode of the series overall, it first aired on Comedy Central in the United States on April 12, 2006.  After \"Cartoon Wars Part I\", it is the second part of a two-episode story-arc, which focuses on Cartman's efforts to get the television series \"Family Guy\" cancelled, by exploiting fears of retaliation by Muslims to an impending \"Family Guy\" episode in which the Islamic prophet Muhammad will appear, in violation of some interpretations of Muslim law.  Kyle instead urges the president of the network airing \"Family Guy\", Fox, to air the episode in an exercise of free speech.\n\nSeeing Red (Buffy the Vampire Slayer): \"Seeing Red\" is the 19th episode of season 6 of the television series \"Buffy the Vampire Slayer\".  In North America, this episode was somehow syndicated onto UPN affiliates a week early by accident.  Although none of them broadcast the episode by mistake, the episode was leaked onto the internet more than a week before it was slated to air.  The episode was also noted for its drastic and controversial content, being the only episode of the series to air at an alternate time on the Canadian family network YTV.\n\nQuestion: What network did the series that \"Diwali\" was an episode of air on?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"episode_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the specific episode.\"\n    },\n    \"series_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the television series the episode belongs to.\"\n    },\n    \"network_aired_on\": {\n      \"type\": \"string\",\n      \"description\": \"The television network on which the series aired.\"\n    }\n  },\n  \"required\": [\n    \"episode_title\",\n    \"series_title\",\n    \"network_aired_on\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "episode_title",
-    "series_title",
-    "network_aired_on"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "episode_title": {
+        "type": "string",
+        "description": "The title of the specific episode."
+      },
+      "series_title": {
+        "type": "string",
+        "description": "The title of the television series the episode belongs to."
+      },
+      "network_aired_on": {
+        "type": "string",
+        "description": "The television network on which the series aired."
+      }
+    },
+    "required": [
+      "episode_title",
+      "series_title",
+      "network_aired_on"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

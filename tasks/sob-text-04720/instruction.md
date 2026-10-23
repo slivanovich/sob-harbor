@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Heydar Aliyev International Airport: Baku Heydar Aliyev International Airport (Azerbaijani: "Heydər Əliyev Beynəlxalq hava limanı" (Latin); Һејдәр Әлијев адына бејнәлхалг һава лиманы (Cyrillic)) is one of the six international airports serving Azerbaijan.  Formerly, it was called Bina International Airport by the name of a suburb in Baku.  On March 10, 2004, the airport was renamed in honor of National Leader Heydar Aliyev, the third President of Azerbaijan.  The airport is located 20 kilometers northeast of Baku, connected to the city by a modern highway, which was put into operation in 2008.  It is the busiest airport in Azerbaijan and of the Caucasus.  The airport serves as the home base for flag carrier Azerbaijan Airlines and its subsidiary AZALJet as well as freight carrier Silk Way Airlines.
-
-Turkish Airlines: Turkish Airlines (Turkish: "Türk Hava Yolları") () is the national flag carrier airline of Turkey, headquartered at the Turkish Airlines General Management Building on the grounds of Atatürk Airport in Yeşilköy, Bakırköy, Istanbul.  s of 2017 , it operates scheduled services to 302 destinations in Europe, Asia, Africa, and the Americas, making it the fourth-largest carrier in the world by number of destinations.  It serves more destinations non-stop from a single airport than any other airline in Europe.  Turkish Airlines flies to 120 countries, more than any other airline.  With an operational fleet of fourteen cargo aircraft, the airline's cargo division serves 64 destinations.  Istanbul Atatürk Airport is its main base, and there are secondary hubs at Esenboğa International Airport, Sabiha Gökçen International Airport, and Adnan Menderes Airport.  Turkish Airlines has been a member of the Star Alliance network since 1 April 2008.
-
-Air Nicaragua: Nicaragua Airways is the potential future national flag carrier of Nicaragua.  Its main base is Augusto C. Sandino International Airport, Managua.  It is the first time in 20 years that Nicaragua will have a national flag carrier, after Aeronica ceased operations in 1991.  Since then, the flag carrier status was awarded to Nicaragüense de Aviación also known as NICA Airlines.  Several airlines had tried to become the Nicaraguan flag carrier like CAAL (Central American Airlines), SANSA (Servicios Aereos Nicaraguenses S.A.) but none of these survived a year.  Today even NICA Airlines (6Y) is registered as the national airline of Nicaragua, the only international flight it operated once (Managua to Miami) and is done under the TACA code (TA) as a full TACA Airlines flight.
-
-Mohammed V International Airport: Mohammed V International Airport (French: "Aéroport international Mohammed V" , Arabic: مطار محمد الخامس الدولي‎ ‎ , "Matar Muhammad al-Khamis ad-Dowaly" , IATA: CMN, ICAO: GMMN ) is an international airport serving Casablanca, Morocco.  Located in Nouaceur Province, it is operated by ONDA (National Airports Office ).  With just under 8 million passengers passing through the airport in 2014, it was the busiest airport in Morocco and the fourth busiest in Africa.  In August 2014, ONDA reported a year-on-year increase of 7.28% passenger traffic, to 918,238.  The airport serves as hub for Morocco's flag carrier Royal Air Maroc, Jetairfly, Air Arabia Maroc and RAM Express.  It is named after King Mohammed V of Morocco.
-
-Belavia: Belavia Belarusian Airlines, legally "Joint Stock Company "Belavia Belarusian Airlines"" (Belarusian: ААТ «Авіякампанія «Белавія» ; Russian: ОАО «Авиакомпания «Белавиа» ), is the flag carrier and national airline of Belarus, headquartered in Minsk.  The state-owned company has 1,017 employees.  Belavia serves a network of routes between European cities and the Commonwealth of Independent States, as well as some Middle East destinations from its base at Minsk National Airport.
-
-Minsk National Airport: Minsk National Airport (IATA: MSQ, ICAO: UMMS) , (Belarusian: Нацыянальны аэрапорт Мінск, ] ; Russian: Национальный аэропорт Минск ), formerly named "Minsk-2" - not to be confused with the now defunct Minsk-1 Airport near downtown Minsk -, is the main international airport in Belarus, located 42 km (26 mi) to the east of the capital Minsk, geographically lying in the territory of Smalyavichy Raion, but administratively being subordinated to Kastrychnitski District of Minsk.  The airport serves as hub of the national Belarusian airline Belavia and the cargo carriers TransAVIAexport Airlines and Genex.
-
-Cameroon Airlines: Cameroon Airlines was an airline from Cameroon, serving as flag carrier of the country.  Based in Douala, it operated scheduled services within Africa, as well as to Europe and the Middle East out of its hub at Douala International Airport, with a second network focus on Yaoundé Nsimalen International Airport.  The company was 96.43 per cent state owned, with the remaining shares having been held by Air France.  It ceased operations in March 2008; its role as Cameroon's flag carrier was taken over by Camair-Co.
-
-China-Belarus Industrial Park: The China-Belarus Industrial Park (Russian: Китайско-Белорусский индустриальный парк , ) is a special economic zone in Belarus, established under the intergovernmental agreement between the People’s Republic of China and the Republic of Belarus.  The industrial park was created in the territory of Smolevichsky district, Minsk region, near the Minsk National Airport.
-
-China Airlines: China Airlines (CAL) () () is the flag carrier and largest airline of the Republic of China (Taiwan).  It is headquartered in Taoyuan International Airport and has 12,607 regular employees.  China Airlines operates over 1,400 flights weekly to 118 airports in 115 cities (including codeshare) across Asia, Europe, North America and Oceania.  The cargo division operates 91 pure freighter flights weekly.  The carrier was, in 2013, the 29th and 10th largest airline in the world in terms of passenger revenue per kilometer (RPK) and freight RPK, respectively.  China Airlines has three airline subsidiaries: Mandarin Airlines operates flights to domestic and low-demand regional destinations; China Airlines Cargo, a member of Skyteam Cargo, operates a fleet of freighter aircraft and manages its parent airline's cargo-hold capacity; Tigerair Taiwan is a low-cost carrier established by China Airlines and Singaporean airline group Tigerair Holdings and is wholly owned by China Airlines Group.
-
-Air Panamá Internacional: Air Panamá Internacional, also known as Air Panama International or just Air Panama, was a state owned airline from Panama that served as the flag carrier of the country between 1968 and 1989.  From its hub at Tocumen International Airport in Panama City, scheduled passenger flights to a number of destinations in the Americas was offered.
-
-Question: Minsk National Airport serves as hub of a national Belarusian airline which is the flag carrier and is a state owned company with how many employees?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "airline_name": {
-      "type": "string",
-      "description": "The name of the national Belarusian airline."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "is_flag_carrier": {
-      "type": "boolean",
-      "description": "Indicates if the airline is the flag carrier of its country."
-    },
-    "ownership_type": {
-      "type": "string",
-      "description": "The type of ownership of the airline (e.g., state-owned)."
-    },
-    "number_of_employees": {
-      "type": "integer",
-      "description": "The total number of employees of the airline."
-    },
-    "hub_airport_name": {
-      "type": "string",
-      "description": "The name of the airport that serves as the airline's hub."
+    {
+      "role": "user",
+      "content": "Context:\nHeydar Aliyev International Airport: Baku Heydar Aliyev International Airport (Azerbaijani: \"Heydər Əliyev Beynəlxalq hava limanı\" (Latin); Һејдәр Әлијев адына бејнәлхалг һава лиманы (Cyrillic)) is one of the six international airports serving Azerbaijan.  Formerly, it was called Bina International Airport by the name of a suburb in Baku.  On March 10, 2004, the airport was renamed in honor of National Leader Heydar Aliyev, the third President of Azerbaijan.  The airport is located 20 kilometers northeast of Baku, connected to the city by a modern highway, which was put into operation in 2008.  It is the busiest airport in Azerbaijan and of the Caucasus.  The airport serves as the home base for flag carrier Azerbaijan Airlines and its subsidiary AZALJet as well as freight carrier Silk Way Airlines.\n\nTurkish Airlines: Turkish Airlines (Turkish: \"Türk Hava Yolları\") () is the national flag carrier airline of Turkey, headquartered at the Turkish Airlines General Management Building on the grounds of Atatürk Airport in Yeşilköy, Bakırköy, Istanbul.  s of 2017 , it operates scheduled services to 302 destinations in Europe, Asia, Africa, and the Americas, making it the fourth-largest carrier in the world by number of destinations.  It serves more destinations non-stop from a single airport than any other airline in Europe.  Turkish Airlines flies to 120 countries, more than any other airline.  With an operational fleet of fourteen cargo aircraft, the airline's cargo division serves 64 destinations.  Istanbul Atatürk Airport is its main base, and there are secondary hubs at Esenboğa International Airport, Sabiha Gökçen International Airport, and Adnan Menderes Airport.  Turkish Airlines has been a member of the Star Alliance network since 1 April 2008.\n\nAir Nicaragua: Nicaragua Airways is the potential future national flag carrier of Nicaragua.  Its main base is Augusto C. Sandino International Airport, Managua.  It is the first time in 20 years that Nicaragua will have a national flag carrier, after Aeronica ceased operations in 1991.  Since then, the flag carrier status was awarded to Nicaragüense de Aviación also known as NICA Airlines.  Several airlines had tried to become the Nicaraguan flag carrier like CAAL (Central American Airlines), SANSA (Servicios Aereos Nicaraguenses S.A.) but none of these survived a year.  Today even NICA Airlines (6Y) is registered as the national airline of Nicaragua, the only international flight it operated once (Managua to Miami) and is done under the TACA code (TA) as a full TACA Airlines flight.\n\nMohammed V International Airport: Mohammed V International Airport (French: \"Aéroport international Mohammed V\" , Arabic: مطار محمد الخامس الدولي‎ ‎ , \"Matar Muhammad al-Khamis ad-Dowaly\" , IATA: CMN, ICAO: GMMN ) is an international airport serving Casablanca, Morocco.  Located in Nouaceur Province, it is operated by ONDA (National Airports Office ).  With just under 8 million passengers passing through the airport in 2014, it was the busiest airport in Morocco and the fourth busiest in Africa.  In August 2014, ONDA reported a year-on-year increase of 7.28% passenger traffic, to 918,238.  The airport serves as hub for Morocco's flag carrier Royal Air Maroc, Jetairfly, Air Arabia Maroc and RAM Express.  It is named after King Mohammed V of Morocco.\n\nBelavia: Belavia Belarusian Airlines, legally \"Joint Stock Company \"Belavia Belarusian Airlines\"\" (Belarusian: ААТ «Авіякампанія «Белавія» ; Russian: ОАО «Авиакомпания «Белавиа» ), is the flag carrier and national airline of Belarus, headquartered in Minsk.  The state-owned company has 1,017 employees.  Belavia serves a network of routes between European cities and the Commonwealth of Independent States, as well as some Middle East destinations from its base at Minsk National Airport.\n\nMinsk National Airport: Minsk National Airport (IATA: MSQ, ICAO: UMMS) , (Belarusian: Нацыянальны аэрапорт Мінск, ] ; Russian: Национальный аэропорт Минск ), formerly named \"Minsk-2\" - not to be confused with the now defunct Minsk-1 Airport near downtown Minsk -, is the main international airport in Belarus, located 42 km (26 mi) to the east of the capital Minsk, geographically lying in the territory of Smalyavichy Raion, but administratively being subordinated to Kastrychnitski District of Minsk.  The airport serves as hub of the national Belarusian airline Belavia and the cargo carriers TransAVIAexport Airlines and Genex.\n\nCameroon Airlines: Cameroon Airlines was an airline from Cameroon, serving as flag carrier of the country.  Based in Douala, it operated scheduled services within Africa, as well as to Europe and the Middle East out of its hub at Douala International Airport, with a second network focus on Yaoundé Nsimalen International Airport.  The company was 96.43 per cent state owned, with the remaining shares having been held by Air France.  It ceased operations in March 2008; its role as Cameroon's flag carrier was taken over by Camair-Co.\n\nChina-Belarus Industrial Park: The China-Belarus Industrial Park (Russian: Китайско-Белорусский индустриальный парк , ) is a special economic zone in Belarus, established under the intergovernmental agreement between the People’s Republic of China and the Republic of Belarus.  The industrial park was created in the territory of Smolevichsky district, Minsk region, near the Minsk National Airport.\n\nChina Airlines: China Airlines (CAL) () () is the flag carrier and largest airline of the Republic of China (Taiwan).  It is headquartered in Taoyuan International Airport and has 12,607 regular employees.  China Airlines operates over 1,400 flights weekly to 118 airports in 115 cities (including codeshare) across Asia, Europe, North America and Oceania.  The cargo division operates 91 pure freighter flights weekly.  The carrier was, in 2013, the 29th and 10th largest airline in the world in terms of passenger revenue per kilometer (RPK) and freight RPK, respectively.  China Airlines has three airline subsidiaries: Mandarin Airlines operates flights to domestic and low-demand regional destinations; China Airlines Cargo, a member of Skyteam Cargo, operates a fleet of freighter aircraft and manages its parent airline's cargo-hold capacity; Tigerair Taiwan is a low-cost carrier established by China Airlines and Singaporean airline group Tigerair Holdings and is wholly owned by China Airlines Group.\n\nAir Panamá Internacional: Air Panamá Internacional, also known as Air Panama International or just Air Panama, was a state owned airline from Panama that served as the flag carrier of the country between 1968 and 1989.  From its hub at Tocumen International Airport in Panama City, scheduled passenger flights to a number of destinations in the Americas was offered.\n\nQuestion: Minsk National Airport serves as hub of a national Belarusian airline which is the flag carrier and is a state owned company with how many employees?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"airline_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the national Belarusian airline.\"\n    },\n    \"is_flag_carrier\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the airline is the flag carrier of its country.\"\n    },\n    \"ownership_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of ownership of the airline (e.g., state-owned).\"\n    },\n    \"number_of_employees\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of employees of the airline.\"\n    },\n    \"hub_airport_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the airport that serves as the airline's hub.\"\n    }\n  },\n  \"required\": [\n    \"airline_name\",\n    \"is_flag_carrier\",\n    \"ownership_type\",\n    \"number_of_employees\",\n    \"hub_airport_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "airline_name",
-    "is_flag_carrier",
-    "ownership_type",
-    "number_of_employees",
-    "hub_airport_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "airline_name": {
+        "type": "string",
+        "description": "The name of the national Belarusian airline."
+      },
+      "is_flag_carrier": {
+        "type": "boolean",
+        "description": "Indicates if the airline is the flag carrier of its country."
+      },
+      "ownership_type": {
+        "type": "string",
+        "description": "The type of ownership of the airline (e.g., state-owned)."
+      },
+      "number_of_employees": {
+        "type": "integer",
+        "description": "The total number of employees of the airline."
+      },
+      "hub_airport_name": {
+        "type": "string",
+        "description": "The name of the airport that serves as the airline's hub."
+      }
+    },
+    "required": [
+      "airline_name",
+      "is_flag_carrier",
+      "ownership_type",
+      "number_of_employees",
+      "hub_airport_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

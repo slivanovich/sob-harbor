@@ -1,79 +1,56 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Marco Polo (TV series): Marco Polo is an American drama web television series inspired by Marco Polo's early years in the court of Kublai Khan, the Khagan of the Mongol Empire and the founder of the Yuan dynasty (1271–1368).  The show premiered on Netflix on December 12, 2014.  The series was written and created by John Fusco and stars Lorenzo Richelmy in the title role with Benedict Wong as Kublai Khan.  The series is produced by The Weinstein Company.  On January 7, 2015, "Marco Polo" was renewed by Netflix for a 10-episode second season, which premiered on July 1, 2016.
-
-Benedict Wong: Benedict Wong (born 3 June 1971) is an English actor.  He has appeared on film, television, and also on stage.  Wong is best known for portraying Kublai Khan in Netflix's "Marco Polo" (2014–16), Bruce Ng in "The Martian" (2015) and Wong in Marvel's film adaptation of "Doctor Strange" (2016), and will reprise that role in "" (2018).
-
-Marco Polo (opera): Marco Polo is an opera by the Chinese-born composer Tan Dun set to an English libretto by Paul Griffiths.  It premiered in Munich on 7 May 1996.  Described variously as an "opera within an opera" and a "fantasia on an epic journey", the multi-layered storyline is loosely based on the journey of Marco Polo from Venice to China.  In the opera, Marco Polo becomes two characters: Marco, who represents the real person and is sung by a mezzo-soprano, and Polo who represents his memory and is sung by a tenor.  The work is scored for vocal soloists, a chorus of 20 and a large orchestra of both modern and medieval European instruments as well as instruments from the cultures that Marco Polo passed through on his journey, including sitar, pipa, sheng, tabla and Tibetan horns and bells.  "Marco Polo" won the 1998 Grawemeyer Award for Music Composition.
-
-Marco Polo Park: Marco Polo Park (AKA Passport to Fun World) was a theme park located just west of Interstate 95 between Jacksonville and Daytona Beach near Bunnell, at Exit 278 in Flagler County, Florida on the site of the current Plantation Bay Golf and County Club community.  The park's theme was based on Marco Polo's legendary travels through Europe and the Far East.  The brochure provided at the park's entrance gave this description: "Like Marco Polo himself, you will be wonderstruck at the authentic Oriental splendor of your personal voyage of discovery as you journey into the exotic four worlds of the Far East, Turkey, India, China, Japan and beautiful Venice, your port of embarkation."  The park featured rides, puppet shows, multimedia shows, and other attractions.
-
-The Martian (film): The Martian is a 2015 science fiction film directed by Ridley Scott and based on Andy Weir's 2011 novel of the same name.  Matt Damon stars as an astronaut who is mistakenly presumed dead and left behind on Mars.  The film depicts his struggle to survive and others' efforts to rescue him.  The film's ensemble cast also features Jessica Chastain, Kristen Wiig, Jeff Daniels, Michael Peña, Kate Mara, Sean Bean, Sebastian Stan, Donald Glover, Aksel Hennie and Chiwetel Ejiofor.
-
-Italian cruiser Marco Polo: Marco Polo was an armored cruiser built for the Royal Italian Navy ("Regia Marina") in the 1890s, the first of her type in Italian service.  The ship spent the bulk of her career deployed in the Far East.  Between deployments she participated in the Italo-Turkish War of 1911–12 during which she caused a diplomatic incident with the Austro-Hungarian Empire.  After that affair "Marco Polo" was sent to Libya where she bombarded the towns of Homs, and Zuara and the defenses of the Dardanelles.  In between these operations, the ship provided naval gunfire support to the Royal Italian Army in Libya.  Due to her age, "Marco Polo" did not play a significant role in World War I, serving as an accommodation ship in Venice until she began conversion into a troopship in 1917.  After a series of renamings in 1920–21, the ship was stricken from the naval register in 1922 and subsequently sold for scrap.
-
-Marco Polo – The Journey: Marco Polo – The Journey is album by Ensemble Renaissance, released in 1992 on the Artelier Music label in Germany.  It is Renaissance's 11th album.  Theme of the album is early music from the time of the travels of Marco Polo.  It is one of the Renaissance's more eclectic works, covering not only the instrumental istanpittas of the Italian Trecento and earlier Franciscan laudas, but also Byzantine chant, girl songs from Cyprus preserved in the Manuscript 1203 kept in Iviron monastery, Persian and Arabic dances, traditional Music of Mongolia and Ancient Chinese ceremonial music.  "Marco Polo" is one of the Ensemble's biggest successes, having spent a few weeks at the top of the classical music charts in Germany, in the 1993.
-
-Marco Polo condo fire: The Marco Polo condo fire was a fire that occurred at 2:17pm on July 14, 2017 in the 36-story Marco Polo condominum building at 2333 Kapiolani Boulevard in the McCully-Mōʻiliʻili neighborhood of Honolulu, Hawaii.  4 people were killed, and 13 others (including 1 firefighter) were injured.More 200 units are damaged or destroyed giving the destruction of the building at more than $100 million.  Additionally, concern about the abatement of asbestos, which was built into the Marco Polo structure, is under investigation by the state of Hawai'i's Department of Health and Department of Labor’s workplace safety division.
-
-Niccolò and Maffeo Polo: Niccolò Polo (] ; c. 1230 – c. 1294) and Maffeo Polo (] ) (or Matteo ] ; c. 1230 – c. 1309) were Italian traveling merchants best known as the father and uncle, respectively, of the explorer Marco Polo.  The brothers went into business before Marco's birth, established trading posts in Constantinople, Sudak in Crimea, and in a western part of the Mongol Empire in Asia.  As a duo, they reached modern-day China before temporarily returning to Europe to deliver a message to the Pope.  Taking Niccolò's son Marco with them, the Polos then made another journey through Asia, which became the subject of Marco's account "The Travels of Marco Polo".
-
-In the Footsteps of Marco Polo: In the Footsteps of Marco Polo is a 2008 PBS documentary film detailing Denis Belliveau and Francis O'Donnell's 1993 retracing of Marco Polo's journey from Venice to Anatolia, Persia, India and China.  The movie documents the first quest "to visit and document every region Marco Polo claimed to have traveled" using only land and sea methods of transportation.  Mike Hale of "The New York Times" writes that the documentary includes how Belliveau and O'Donnell "encountered Mongol horsemen and hostile Chinese security officers and survived a firefight between Afghan factions.  In the spirit of Polo's journey -- and to prove a point regarding the authenticity of his account -- they disdained airplanes, traveling by foot, on horses and camels and by jeep, boat and train."  A text by the same name as the video, "In the Footsteps of Marco Polo", written by Belliveau and O'Donnell, and published by Rowman & Littlefield, serves as a companion to the documentary film.  "In the Footsteps of Marco Polo" has been used by Belliveau to create a unique interdisciplinary educational curriculum that he presents at schools and libraries across the United States and internationally.
-
-Question: The star of Netflix's "Marco Polo" starred alongside what actor, who plays an astronaut who is left behind on Mars, in the movie the Martian?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "netflix_series_name": {
-      "type": "string",
-      "description": "The name of the Netflix series."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "actor_from_series": {
-      "type": "string",
-      "description": "The actor from the Netflix series who also appeared in the specified film."
-    },
-    "actor_from_series_role": {
-      "type": "string",
-      "description": "The role played by the actor in the Netflix series."
-    },
-    "film_name": {
-      "type": "string",
-      "description": "The name of the film where the actors co-starred."
-    },
-    "common_actor_role_in_film": {
-      "type": "string",
-      "description": "The role played by the common actor in the film."
-    },
-    "co_star_in_film": {
-      "type": "string",
-      "description": "The actor who played the astronaut left behind on Mars in the film."
-    },
-    "co_star_in_film_role_description": {
-      "type": "string",
-      "description": "Description of the role played by the co-star in the film."
+    {
+      "role": "user",
+      "content": "Context:\nMarco Polo (TV series): Marco Polo is an American drama web television series inspired by Marco Polo's early years in the court of Kublai Khan, the Khagan of the Mongol Empire and the founder of the Yuan dynasty (1271–1368).  The show premiered on Netflix on December 12, 2014.  The series was written and created by John Fusco and stars Lorenzo Richelmy in the title role with Benedict Wong as Kublai Khan.  The series is produced by The Weinstein Company.  On January 7, 2015, \"Marco Polo\" was renewed by Netflix for a 10-episode second season, which premiered on July 1, 2016.\n\nBenedict Wong: Benedict Wong (born 3 June 1971) is an English actor.  He has appeared on film, television, and also on stage.  Wong is best known for portraying Kublai Khan in Netflix's \"Marco Polo\" (2014–16), Bruce Ng in \"The Martian\" (2015) and Wong in Marvel's film adaptation of \"Doctor Strange\" (2016), and will reprise that role in \"\" (2018).\n\nMarco Polo (opera): Marco Polo is an opera by the Chinese-born composer Tan Dun set to an English libretto by Paul Griffiths.  It premiered in Munich on 7 May 1996.  Described variously as an \"opera within an opera\" and a \"fantasia on an epic journey\", the multi-layered storyline is loosely based on the journey of Marco Polo from Venice to China.  In the opera, Marco Polo becomes two characters: Marco, who represents the real person and is sung by a mezzo-soprano, and Polo who represents his memory and is sung by a tenor.  The work is scored for vocal soloists, a chorus of 20 and a large orchestra of both modern and medieval European instruments as well as instruments from the cultures that Marco Polo passed through on his journey, including sitar, pipa, sheng, tabla and Tibetan horns and bells.  \"Marco Polo\" won the 1998 Grawemeyer Award for Music Composition.\n\nMarco Polo Park: Marco Polo Park (AKA Passport to Fun World) was a theme park located just west of Interstate 95 between Jacksonville and Daytona Beach near Bunnell, at Exit 278 in Flagler County, Florida on the site of the current Plantation Bay Golf and County Club community.  The park's theme was based on Marco Polo's legendary travels through Europe and the Far East.  The brochure provided at the park's entrance gave this description: \"Like Marco Polo himself, you will be wonderstruck at the authentic Oriental splendor of your personal voyage of discovery as you journey into the exotic four worlds of the Far East, Turkey, India, China, Japan and beautiful Venice, your port of embarkation.\"  The park featured rides, puppet shows, multimedia shows, and other attractions.\n\nThe Martian (film): The Martian is a 2015 science fiction film directed by Ridley Scott and based on Andy Weir's 2011 novel of the same name.  Matt Damon stars as an astronaut who is mistakenly presumed dead and left behind on Mars.  The film depicts his struggle to survive and others' efforts to rescue him.  The film's ensemble cast also features Jessica Chastain, Kristen Wiig, Jeff Daniels, Michael Peña, Kate Mara, Sean Bean, Sebastian Stan, Donald Glover, Aksel Hennie and Chiwetel Ejiofor.\n\nItalian cruiser Marco Polo: Marco Polo was an armored cruiser built for the Royal Italian Navy (\"Regia Marina\") in the 1890s, the first of her type in Italian service.  The ship spent the bulk of her career deployed in the Far East.  Between deployments she participated in the Italo-Turkish War of 1911–12 during which she caused a diplomatic incident with the Austro-Hungarian Empire.  After that affair \"Marco Polo\" was sent to Libya where she bombarded the towns of Homs, and Zuara and the defenses of the Dardanelles.  In between these operations, the ship provided naval gunfire support to the Royal Italian Army in Libya.  Due to her age, \"Marco Polo\" did not play a significant role in World War I, serving as an accommodation ship in Venice until she began conversion into a troopship in 1917.  After a series of renamings in 1920–21, the ship was stricken from the naval register in 1922 and subsequently sold for scrap.\n\nMarco Polo – The Journey: Marco Polo – The Journey is album by Ensemble Renaissance, released in 1992 on the Artelier Music label in Germany.  It is Renaissance's 11th album.  Theme of the album is early music from the time of the travels of Marco Polo.  It is one of the Renaissance's more eclectic works, covering not only the instrumental istanpittas of the Italian Trecento and earlier Franciscan laudas, but also Byzantine chant, girl songs from Cyprus preserved in the Manuscript 1203 kept in Iviron monastery, Persian and Arabic dances, traditional Music of Mongolia and Ancient Chinese ceremonial music.  \"Marco Polo\" is one of the Ensemble's biggest successes, having spent a few weeks at the top of the classical music charts in Germany, in the 1993.\n\nMarco Polo condo fire: The Marco Polo condo fire was a fire that occurred at 2:17pm on July 14, 2017 in the 36-story Marco Polo condominum building at 2333 Kapiolani Boulevard in the McCully-Mōʻiliʻili neighborhood of Honolulu, Hawaii.  4 people were killed, and 13 others (including 1 firefighter) were injured.More 200 units are damaged or destroyed giving the destruction of the building at more than $100 million.  Additionally, concern about the abatement of asbestos, which was built into the Marco Polo structure, is under investigation by the state of Hawai'i's Department of Health and Department of Labor’s workplace safety division.\n\nNiccolò and Maffeo Polo: Niccolò Polo (] ; c. 1230 – c. 1294) and Maffeo Polo (] ) (or Matteo ] ; c. 1230 – c. 1309) were Italian traveling merchants best known as the father and uncle, respectively, of the explorer Marco Polo.  The brothers went into business before Marco's birth, established trading posts in Constantinople, Sudak in Crimea, and in a western part of the Mongol Empire in Asia.  As a duo, they reached modern-day China before temporarily returning to Europe to deliver a message to the Pope.  Taking Niccolò's son Marco with them, the Polos then made another journey through Asia, which became the subject of Marco's account \"The Travels of Marco Polo\".\n\nIn the Footsteps of Marco Polo: In the Footsteps of Marco Polo is a 2008 PBS documentary film detailing Denis Belliveau and Francis O'Donnell's 1993 retracing of Marco Polo's journey from Venice to Anatolia, Persia, India and China.  The movie documents the first quest \"to visit and document every region Marco Polo claimed to have traveled\" using only land and sea methods of transportation.  Mike Hale of \"The New York Times\" writes that the documentary includes how Belliveau and O'Donnell \"encountered Mongol horsemen and hostile Chinese security officers and survived a firefight between Afghan factions.  In the spirit of Polo's journey -- and to prove a point regarding the authenticity of his account -- they disdained airplanes, traveling by foot, on horses and camels and by jeep, boat and train.\"  A text by the same name as the video, \"In the Footsteps of Marco Polo\", written by Belliveau and O'Donnell, and published by Rowman & Littlefield, serves as a companion to the documentary film.  \"In the Footsteps of Marco Polo\" has been used by Belliveau to create a unique interdisciplinary educational curriculum that he presents at schools and libraries across the United States and internationally.\n\nQuestion: The star of Netflix's \"Marco Polo\" starred alongside what actor, who plays an astronaut who is left behind on Mars, in the movie the Martian?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"netflix_series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Netflix series.\"\n    },\n    \"actor_from_series\": {\n      \"type\": \"string\",\n      \"description\": \"The actor from the Netflix series who also appeared in the specified film.\"\n    },\n    \"actor_from_series_role\": {\n      \"type\": \"string\",\n      \"description\": \"The role played by the actor in the Netflix series.\"\n    },\n    \"film_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the film where the actors co-starred.\"\n    },\n    \"common_actor_role_in_film\": {\n      \"type\": \"string\",\n      \"description\": \"The role played by the common actor in the film.\"\n    },\n    \"co_star_in_film\": {\n      \"type\": \"string\",\n      \"description\": \"The actor who played the astronaut left behind on Mars in the film.\"\n    },\n    \"co_star_in_film_role_description\": {\n      \"type\": \"string\",\n      \"description\": \"Description of the role played by the co-star in the film.\"\n    }\n  },\n  \"required\": [\n    \"netflix_series_name\",\n    \"actor_from_series\",\n    \"actor_from_series_role\",\n    \"film_name\",\n    \"common_actor_role_in_film\",\n    \"co_star_in_film\",\n    \"co_star_in_film_role_description\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "netflix_series_name",
-    "actor_from_series",
-    "actor_from_series_role",
-    "film_name",
-    "common_actor_role_in_film",
-    "co_star_in_film",
-    "co_star_in_film_role_description"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "netflix_series_name": {
+        "type": "string",
+        "description": "The name of the Netflix series."
+      },
+      "actor_from_series": {
+        "type": "string",
+        "description": "The actor from the Netflix series who also appeared in the specified film."
+      },
+      "actor_from_series_role": {
+        "type": "string",
+        "description": "The role played by the actor in the Netflix series."
+      },
+      "film_name": {
+        "type": "string",
+        "description": "The name of the film where the actors co-starred."
+      },
+      "common_actor_role_in_film": {
+        "type": "string",
+        "description": "The role played by the common actor in the film."
+      },
+      "co_star_in_film": {
+        "type": "string",
+        "description": "The actor who played the astronaut left behind on Mars in the film."
+      },
+      "co_star_in_film_role_description": {
+        "type": "string",
+        "description": "Description of the role played by the co-star in the film."
+      }
+    },
+    "required": [
+      "netflix_series_name",
+      "actor_from_series",
+      "actor_from_series_role",
+      "film_name",
+      "common_actor_role_in_film",
+      "co_star_in_film",
+      "co_star_in_film_role_description"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

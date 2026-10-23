@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Snoqualmie River: The Snoqualmie River is a 45 mi long river in King County and Snohomish County in the U.S. state of Washington.  The river's three main tributaries are the North, Middle, and South Forks, which drain the west side of the Cascade Mountains near the town of North Bend and join near the town of Snoqualmie just above the Snoqualmie Falls.  After the falls the river flows north through rich farmland and the towns of Fall City, Carnation, and Duvall before meeting the Skykomish River to form the Snohomish River near Monroe.  The Snohomish River empties into Puget Sound at Everett.  Other tributaries of the Snoqualmie River include the Taylor River and the Pratt River, both of which enter the Middle Fork, the Tolt River, which joins at Carnation, and the Raging River at Fall City.
-
-Exodusters: Exodusters was a name given to African Americans who migrated from states along the Mississippi River to Kansas in the late nineteenth century, as part of the Exoduster Movement or Exodus of 1879.  It was the first general migration of blacks following the Civil War.  The movement received substantial organizational support from prominent figures, Benjamin Singleton of Tennessee and Henry Adams of Louisiana.  As many as forty thousand Exodusters left the South to settle in Kansas, Oklahoma and Colorado.
-
-Casa Vieja Lodge: Casa Vieja Lodge was opened in 2006 in Puerto San Jose, Escuintla, Guatemala.  It consists of 19 bedroom fisherman style lodge complete with an outdoor restaurant, pool, and gym.  Casa Vieja Lodge is a direct result of the former and original sport fishing lodge of Fins 'n Feathers Inn by Tim Choate in 1998.  A large majority of the original staff moved to Casa Vieja Lodge from Fins 'n Feathers after its closing in 2002.  Casa Vieja Lodge was originally a private home that Jim Turner purchased and turned into the beginning of Casa Vieja Lodge.  From there he constructed an additional building with 8 rooms and an outdoor tiki hut style dining/bar area.  Turner was the owner from 2006-2013 when he then sold to David Salazar, a former captain of the Fins 'n Feathers Fleet on the Yellowfin, Nany, and the Man 'O War.  David Salazar, along with his wife Kristen, are now the lodge owners, where David is at the helm of the Finest Kind, a 40' Whiticar.
-
-Snohomish River: The Snohomish River is a river in the U.S. state of Washington, formed by the confluence of the Skykomish and Snoqualmie rivers near Monroe.  It flows northwest entering Port Gardner Bay, part of Puget Sound, between Everett and Marysville.  The Pilchuck River is its main tributary and joins the river at Snohomish.  The river system drains the west side of the Cascade Mountains from Snoqualmie Pass to north of Stevens Pass.
-
-Monroe Work: Monroe Nathan Work (August 15, 1866–May 2, 1945) was an American sociologist who founded the Department of Records and Research at the Tuskegee Institute in 1908 and expanded its national reputation.  With much of his career he strove to advance credibility to the anti-lynching campaigns and the National Negro Health Week movement.  His chief works include the "Negro Year Book" and "A Bibliography of the Negro in Africa and America"—a bibliography of 17,000 references on African Americans.  These resources were the largest of their kind in an era when scholarship by and about black Americans was highly inaccessible, and overlooked or ignored by most academics in the US.
-
-Away West: Scraps of Time: 1879, Away West is a 2006 book by Patricia McKissack about a farmboy, Everett Turner, who runs away and joins the Exodusters, travelling to Nicodemus, Kansas.
-
-Beth Turner: Beth P. Turner (born 13 May 1958 in Maine) is an American politician from Maine.  A Republican, Turner represents portions of Aroostook County and Penobscot County in the Maine House of Representatives.  She was first elected in March 2011 in a special election following the death of Rep. Everett McLeod in December 2010.
-
-Everett Public Library: The Everett Public Library (EPL) serves the residents of Everett, Washington.  EPL operates a main library at 2702 Hoyt Avenue and the Evergreen branch, at 9512 Evergreen Way.  The main library overlooks Puget Sound and the southern end of Whidbey Island.  The library has noteworthy artworks, including works by Dudley Pratt, Ransom Patrick, Guy Anderson, Jack Gunter, and Sonja Blomdahl.  The library circulates over 900,000 items per year, provides exceptional book and media collections, reference services, on-line resources, in-home library services, and programs for adults, children and families.  The library’s staff includes specialists in adult reference, children’s books, local history and career information.  The Everett Public Library introduced a bookmobile service in May 1924; the first of its kind in Washington state, and the second in the West.  It is also one of the few public library systems in the United States that has two full-time historians on staff, David Dilgard and Melinda Van Wingen.  Historian Margaret Riddle retired after 31 years.
-
-Jack Rabbit Blues – The Singles of 1958–1960: Jack Rabbit Blues is a compilation album of songs that Ike Turner performed on between 1958 and 1960 released through Secret Records.  At this time, Turner was involved and performed with various bands and musicians including Kenneth Churchill, Otis Rush, Betty Everett, Buddy Guy and his own Kings of Rhythm as well as his earlier singles with future wife, Tina Turner (she also went under the alias of Little Ann).  Every one of these tracks features Ike Turner on guitar, piano and/or vocals.
-
-Möngöl Hörde: Möngöl Hörde is an English hardcore punk band formed in 2012.  The group features Frank Turner on vocals, Ben Dawson on drums and Matt Nasir on guitar.  Turner and Dawson are both former members of hardcore punk outfit Million Dead.  Frank Turner is now best known for his solo folk-punk material, and Matt Nasir is part of his backing band, The Sleeping Souls.  Lyrically, Möngöl Hörde is not as serious as Frank Turner's other projects, with Turner stating, "Lyrically it's very different from what I do now, it's kind of depraved.  The first song we wrote is about Natalie Portman's tapeworm using her as a glove puppet to lead an uprising in Hollywood.  We're writing a whole pile of new songs and we're going to do some live dates soon."
-
-Question: Everett Turner joins what kind of Americans?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the person in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "group_joined": {
-      "type": "string",
-      "description": "The name of the group the person joined."
-    },
-    "group_demographic": {
-      "type": "string",
-      "description": "The demographic description of the group."
-    },
-    "movement_name": {
-      "type": "string",
-      "description": "The name of the historical movement associated with the group."
+    {
+      "role": "user",
+      "content": "Context:\nSnoqualmie River: The Snoqualmie River is a 45 mi long river in King County and Snohomish County in the U.S. state of Washington.  The river's three main tributaries are the North, Middle, and South Forks, which drain the west side of the Cascade Mountains near the town of North Bend and join near the town of Snoqualmie just above the Snoqualmie Falls.  After the falls the river flows north through rich farmland and the towns of Fall City, Carnation, and Duvall before meeting the Skykomish River to form the Snohomish River near Monroe.  The Snohomish River empties into Puget Sound at Everett.  Other tributaries of the Snoqualmie River include the Taylor River and the Pratt River, both of which enter the Middle Fork, the Tolt River, which joins at Carnation, and the Raging River at Fall City.\n\nExodusters: Exodusters was a name given to African Americans who migrated from states along the Mississippi River to Kansas in the late nineteenth century, as part of the Exoduster Movement or Exodus of 1879.  It was the first general migration of blacks following the Civil War.  The movement received substantial organizational support from prominent figures, Benjamin Singleton of Tennessee and Henry Adams of Louisiana.  As many as forty thousand Exodusters left the South to settle in Kansas, Oklahoma and Colorado.\n\nCasa Vieja Lodge: Casa Vieja Lodge was opened in 2006 in Puerto San Jose, Escuintla, Guatemala.  It consists of 19 bedroom fisherman style lodge complete with an outdoor restaurant, pool, and gym.  Casa Vieja Lodge is a direct result of the former and original sport fishing lodge of Fins 'n Feathers Inn by Tim Choate in 1998.  A large majority of the original staff moved to Casa Vieja Lodge from Fins 'n Feathers after its closing in 2002.  Casa Vieja Lodge was originally a private home that Jim Turner purchased and turned into the beginning of Casa Vieja Lodge.  From there he constructed an additional building with 8 rooms and an outdoor tiki hut style dining/bar area.  Turner was the owner from 2006-2013 when he then sold to David Salazar, a former captain of the Fins 'n Feathers Fleet on the Yellowfin, Nany, and the Man 'O War.  David Salazar, along with his wife Kristen, are now the lodge owners, where David is at the helm of the Finest Kind, a 40' Whiticar.\n\nSnohomish River: The Snohomish River is a river in the U.S. state of Washington, formed by the confluence of the Skykomish and Snoqualmie rivers near Monroe.  It flows northwest entering Port Gardner Bay, part of Puget Sound, between Everett and Marysville.  The Pilchuck River is its main tributary and joins the river at Snohomish.  The river system drains the west side of the Cascade Mountains from Snoqualmie Pass to north of Stevens Pass.\n\nMonroe Work: Monroe Nathan Work (August 15, 1866–May 2, 1945) was an American sociologist who founded the Department of Records and Research at the Tuskegee Institute in 1908 and expanded its national reputation.  With much of his career he strove to advance credibility to the anti-lynching campaigns and the National Negro Health Week movement.  His chief works include the \"Negro Year Book\" and \"A Bibliography of the Negro in Africa and America\"—a bibliography of 17,000 references on African Americans.  These resources were the largest of their kind in an era when scholarship by and about black Americans was highly inaccessible, and overlooked or ignored by most academics in the US.\n\nAway West: Scraps of Time: 1879, Away West is a 2006 book by Patricia McKissack about a farmboy, Everett Turner, who runs away and joins the Exodusters, travelling to Nicodemus, Kansas.\n\nBeth Turner: Beth P. Turner (born 13 May 1958 in Maine) is an American politician from Maine.  A Republican, Turner represents portions of Aroostook County and Penobscot County in the Maine House of Representatives.  She was first elected in March 2011 in a special election following the death of Rep. Everett McLeod in December 2010.\n\nEverett Public Library: The Everett Public Library (EPL) serves the residents of Everett, Washington.  EPL operates a main library at 2702 Hoyt Avenue and the Evergreen branch, at 9512 Evergreen Way.  The main library overlooks Puget Sound and the southern end of Whidbey Island.  The library has noteworthy artworks, including works by Dudley Pratt, Ransom Patrick, Guy Anderson, Jack Gunter, and Sonja Blomdahl.  The library circulates over 900,000 items per year, provides exceptional book and media collections, reference services, on-line resources, in-home library services, and programs for adults, children and families.  The library’s staff includes specialists in adult reference, children’s books, local history and career information.  The Everett Public Library introduced a bookmobile service in May 1924; the first of its kind in Washington state, and the second in the West.  It is also one of the few public library systems in the United States that has two full-time historians on staff, David Dilgard and Melinda Van Wingen.  Historian Margaret Riddle retired after 31 years.\n\nJack Rabbit Blues – The Singles of 1958–1960: Jack Rabbit Blues is a compilation album of songs that Ike Turner performed on between 1958 and 1960 released through Secret Records.  At this time, Turner was involved and performed with various bands and musicians including Kenneth Churchill, Otis Rush, Betty Everett, Buddy Guy and his own Kings of Rhythm as well as his earlier singles with future wife, Tina Turner (she also went under the alias of Little Ann).  Every one of these tracks features Ike Turner on guitar, piano and/or vocals.\n\nMöngöl Hörde: Möngöl Hörde is an English hardcore punk band formed in 2012.  The group features Frank Turner on vocals, Ben Dawson on drums and Matt Nasir on guitar.  Turner and Dawson are both former members of hardcore punk outfit Million Dead.  Frank Turner is now best known for his solo folk-punk material, and Matt Nasir is part of his backing band, The Sleeping Souls.  Lyrically, Möngöl Hörde is not as serious as Frank Turner's other projects, with Turner stating, \"Lyrically it's very different from what I do now, it's kind of depraved.  The first song we wrote is about Natalie Portman's tapeworm using her as a glove puppet to lead an uprising in Hollywood.  We're writing a whole pile of new songs and we're going to do some live dates soon.\"\n\nQuestion: Everett Turner joins what kind of Americans?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person in question.\"\n    },\n    \"group_joined\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the group the person joined.\"\n    },\n    \"group_demographic\": {\n      \"type\": \"string\",\n      \"description\": \"The demographic description of the group.\"\n    },\n    \"movement_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the historical movement associated with the group.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"group_joined\",\n    \"group_demographic\",\n    \"movement_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "group_joined",
-    "group_demographic",
-    "movement_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the person in question."
+      },
+      "group_joined": {
+        "type": "string",
+        "description": "The name of the group the person joined."
+      },
+      "group_demographic": {
+        "type": "string",
+        "description": "The demographic description of the group."
+      },
+      "movement_name": {
+        "type": "string",
+        "description": "The name of the historical movement associated with the group."
+      }
+    },
+    "required": [
+      "person_name",
+      "group_joined",
+      "group_demographic",
+      "movement_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

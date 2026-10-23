@@ -1,65 +1,42 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Environment and Climate Change Canada: Environment and Climate Change Canada (or simply its former name, Environment Canada, or EC) (French: "Environnement et Changement climatique Canada" ), legally incorporated as the Department of the Environment under the "Department of the Environment Act" (R.S., 1985, c. E-10 ), is the department of the Government of Canada with responsibility for coordinating environmental policies and programs as well as preserving and enhancing the natural environment and renewable resources.  The powers, duties and functions of the Minister of the Environment extend to and include matters relating to: "preserve and enhance the quality of the natural environment, including water, air, soil, flora and fauna; conserve Canada's renewable resources; conserve and protect Canada's water resources;
-
-Linpan in Chengdu Plain: The Linpan in Chengdu Plain is a special settlement in Chengdu Plain, Sichuan, China, which consists of farm house with woods around, irrigation system, farm land and is elementary unit of the village within the scattered locations.  The rural landscape of Chengdu Plain is beautiful and unique because of the typical element "Linpan".  The production, life and landscape features set in one of the rural settlement pattern that is formed with the history, which is in line with local rural living environment commonly known as "Linpan Settlement in Chengdu Plain".
-
-Uttarakhand: Uttarakhand ( ), officially the State of Uttarakhand ("Uttarākhaṇḍ Rājya"), formerly known as Uttaranchal, is a state in the northern part of India.  It is often referred to as the "Devbhumi" (literally "Land of the Gods") due to many Hindu temples and pilgrimage centres found throughout the state.  Uttarakhand is known for the natural environment of the Himalayas, the Bhabhar and the Terai.  On 9 November 2000, Uttarakhand became the 27th state of the Republic of India, being created from the Himalayan and adjoining northwestern districts of Uttar Pradesh.  It borders Tibet to the north; the Mahakali Zone of the Far-Western Region, Nepal to the east; and the Indian states of Uttar Pradesh to the south and Himachal Pradesh to the west and north-west as well as Haryana on its south-western corner.  The state is divided into two divisions, Garhwal and Kumaon, with a total of 13 districts.  The interim capital of Uttarakhand is Dehradun, the largest city of the state, which is a railhead.  The High Court of the state is located in Nainital.
-
-Landscape archaeology: Landscape archaeology is the study of the ways in which people in the past constructed and used the environment around them.  Landscape archaeology is inherently multidisciplinary in its approach to the study of culture, and is used by pre-historical, classic, and historic archaeologists.  The key feature that distinguishes landscape archaeology from other archaeological approaches to sites is that there is an explicit emphasis on the sites' relationships between material culture, human alteration of land/cultural modifications to landscape, and the natural environment.  The study of landscape archaeology (also sometimes referred to as the archaeology of the cultural landscape) has evolved to include how landscapes were used to create and reinforce social inequality and to announce one's social status to the community at large.
-
-Traprock mountain: Traprock (or basalt) mountains, ridges, (or just traps) are elevated landscape features made of trap rock, most often basalt.  Basalt, due to its high quantity of iron, is a characteristically dark-colored rock that weathers to shades of red and purplish-red when exposed to the air.  Basalt is the substance of many elevated topographic features worldwide (hills, mountains, ridges, rock formations, etc.).  Landscape features composed of basalt may include:
-
-Lists of environmental topics: The natural environment, commonly referred to simply as the environment, is all living and non-living things that occur naturally on Earth or some part of it (e.g. the natural environment in a country).  This includes complete ecological units that function as natural systems without massive human intervention, including all vegetation, animals, microorganisms, rocks, atmosphere and natural phenomena that occur within their boundaries.  And it includes universal natural resources and physical phenomena that lack clear-cut boundaries, such as air, water, and climate, as well as energy, radiation, electric charge, and magnetism, not originating from human activity.
-
-Terai Arc Landscape: Terai Arc Landscape (TAL) is composed of 14 Indian and Nepalese trans-border protected ecosystems of the Terai (Sanskrit for "lowlands") and nearby foothills of the Himalayas.  and encompassing 14 protected areas of Nepal and India.  The area spans approximately 12.3 million acres (5 million hectares) and includes Nepal's Bagmati River to the east and India's Yamuna River to the west.
-
-Bedini Bugyal: Bedini Bugyal is a Himalayan Alpine meadow, situated at an elevation of 3354 m in the Chamoli district of Uttarakhand state of India.  Bedini Bugyal falls on the way to Roopkund near Wan village.  Trisul and Nanda Ghunti are clearly visible from here.  This lush green meadow is adorned with blooms in a wide range of varieties.  There is a small lake named "Vaitarani" (Bedini Kund), situated amidst the meadow.  The rich flora of the area includes 'Brahm Kamal' or "Saussurea obvallata".
-
-Terai: The Terai (Hindi: तराई Nepali: तराइ ) is a lowland region in southern Nepal and northern India that lies south of the outer foothills of the Himalayas, the Siwalik Hills, and north of the Indo-Gangetic Plain.  This lowland belt is characterised by tall grasslands, scrub savannah, sal forests and clay rich swamps.  In northern India, the Terai spreads from the Yamuna River eastward across Himachal Pradesh, Haryana, Uttarakhand, Uttar Pradesh and Bihar.  The Terai is part the Terai-Duar savanna and grasslands ecoregion.  The corresponding lowland region in West Bengal, Bangladesh, Bhutan and Assam in the Brahmaputra River basin is called 'Dooars'.
-
-Tharu people: The Tharu people are an ethnic group indigenous to the southern foothills of the Himalayas; most of the Tharu people live in the Nepal Terai.  Some Tharu groups also live in the Indian Terai, foremost in Uttarakhand, Uttar Pradesh and Bihar.
-
-Question: Uttarakhand is known for the natural environment of the Himalayas, the Bhabhar and the Terai because of what comon visible landscape features?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "state_name": {
-      "type": "string",
-      "description": "The name of the state."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "environments_known_for": {
-      "type": "array",
-      "description": "A list of natural environments the state is known for.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "visible_landscape_features": {
-      "type": "array",
-      "description": "A list of common visible landscape features contributing to the state's natural environment.",
-      "items": {
-        "type": "string"
-      }
+    {
+      "role": "user",
+      "content": "Context:\nEnvironment and Climate Change Canada: Environment and Climate Change Canada (or simply its former name, Environment Canada, or EC) (French: \"Environnement et Changement climatique Canada\" ), legally incorporated as the Department of the Environment under the \"Department of the Environment Act\" (R.S., 1985, c. E-10 ), is the department of the Government of Canada with responsibility for coordinating environmental policies and programs as well as preserving and enhancing the natural environment and renewable resources.  The powers, duties and functions of the Minister of the Environment extend to and include matters relating to: \"preserve and enhance the quality of the natural environment, including water, air, soil, flora and fauna; conserve Canada's renewable resources; conserve and protect Canada's water resources;\n\nLinpan in Chengdu Plain: The Linpan in Chengdu Plain is a special settlement in Chengdu Plain, Sichuan, China, which consists of farm house with woods around, irrigation system, farm land and is elementary unit of the village within the scattered locations.  The rural landscape of Chengdu Plain is beautiful and unique because of the typical element \"Linpan\".  The production, life and landscape features set in one of the rural settlement pattern that is formed with the history, which is in line with local rural living environment commonly known as \"Linpan Settlement in Chengdu Plain\".\n\nUttarakhand: Uttarakhand ( ), officially the State of Uttarakhand (\"Uttarākhaṇḍ Rājya\"), formerly known as Uttaranchal, is a state in the northern part of India.  It is often referred to as the \"Devbhumi\" (literally \"Land of the Gods\") due to many Hindu temples and pilgrimage centres found throughout the state.  Uttarakhand is known for the natural environment of the Himalayas, the Bhabhar and the Terai.  On 9 November 2000, Uttarakhand became the 27th state of the Republic of India, being created from the Himalayan and adjoining northwestern districts of Uttar Pradesh.  It borders Tibet to the north; the Mahakali Zone of the Far-Western Region, Nepal to the east; and the Indian states of Uttar Pradesh to the south and Himachal Pradesh to the west and north-west as well as Haryana on its south-western corner.  The state is divided into two divisions, Garhwal and Kumaon, with a total of 13 districts.  The interim capital of Uttarakhand is Dehradun, the largest city of the state, which is a railhead.  The High Court of the state is located in Nainital.\n\nLandscape archaeology: Landscape archaeology is the study of the ways in which people in the past constructed and used the environment around them.  Landscape archaeology is inherently multidisciplinary in its approach to the study of culture, and is used by pre-historical, classic, and historic archaeologists.  The key feature that distinguishes landscape archaeology from other archaeological approaches to sites is that there is an explicit emphasis on the sites' relationships between material culture, human alteration of land/cultural modifications to landscape, and the natural environment.  The study of landscape archaeology (also sometimes referred to as the archaeology of the cultural landscape) has evolved to include how landscapes were used to create and reinforce social inequality and to announce one's social status to the community at large.\n\nTraprock mountain: Traprock (or basalt) mountains, ridges, (or just traps) are elevated landscape features made of trap rock, most often basalt.  Basalt, due to its high quantity of iron, is a characteristically dark-colored rock that weathers to shades of red and purplish-red when exposed to the air.  Basalt is the substance of many elevated topographic features worldwide (hills, mountains, ridges, rock formations, etc.).  Landscape features composed of basalt may include:\n\nLists of environmental topics: The natural environment, commonly referred to simply as the environment, is all living and non-living things that occur naturally on Earth or some part of it (e.g. the natural environment in a country).  This includes complete ecological units that function as natural systems without massive human intervention, including all vegetation, animals, microorganisms, rocks, atmosphere and natural phenomena that occur within their boundaries.  And it includes universal natural resources and physical phenomena that lack clear-cut boundaries, such as air, water, and climate, as well as energy, radiation, electric charge, and magnetism, not originating from human activity.\n\nTerai Arc Landscape: Terai Arc Landscape (TAL) is composed of 14 Indian and Nepalese trans-border protected ecosystems of the Terai (Sanskrit for \"lowlands\") and nearby foothills of the Himalayas.  and encompassing 14 protected areas of Nepal and India.  The area spans approximately 12.3 million acres (5 million hectares) and includes Nepal's Bagmati River to the east and India's Yamuna River to the west.\n\nBedini Bugyal: Bedini Bugyal is a Himalayan Alpine meadow, situated at an elevation of 3354 m in the Chamoli district of Uttarakhand state of India.  Bedini Bugyal falls on the way to Roopkund near Wan village.  Trisul and Nanda Ghunti are clearly visible from here.  This lush green meadow is adorned with blooms in a wide range of varieties.  There is a small lake named \"Vaitarani\" (Bedini Kund), situated amidst the meadow.  The rich flora of the area includes 'Brahm Kamal' or \"Saussurea obvallata\".\n\nTerai: The Terai (Hindi: तराई Nepali: तराइ ) is a lowland region in southern Nepal and northern India that lies south of the outer foothills of the Himalayas, the Siwalik Hills, and north of the Indo-Gangetic Plain.  This lowland belt is characterised by tall grasslands, scrub savannah, sal forests and clay rich swamps.  In northern India, the Terai spreads from the Yamuna River eastward across Himachal Pradesh, Haryana, Uttarakhand, Uttar Pradesh and Bihar.  The Terai is part the Terai-Duar savanna and grasslands ecoregion.  The corresponding lowland region in West Bengal, Bangladesh, Bhutan and Assam in the Brahmaputra River basin is called 'Dooars'.\n\nTharu people: The Tharu people are an ethnic group indigenous to the southern foothills of the Himalayas; most of the Tharu people live in the Nepal Terai.  Some Tharu groups also live in the Indian Terai, foremost in Uttarakhand, Uttar Pradesh and Bihar.\n\nQuestion: Uttarakhand is known for the natural environment of the Himalayas, the Bhabhar and the Terai because of what comon visible landscape features?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"state_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the state.\"\n    },\n    \"environments_known_for\": {\n      \"type\": \"array\",\n      \"description\": \"A list of natural environments the state is known for.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"visible_landscape_features\": {\n      \"type\": \"array\",\n      \"description\": \"A list of common visible landscape features contributing to the state's natural environment.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    }\n  },\n  \"required\": [\n    \"state_name\",\n    \"environments_known_for\",\n    \"visible_landscape_features\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "state_name",
-    "environments_known_for",
-    "visible_landscape_features"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "state_name": {
+        "type": "string",
+        "description": "The name of the state."
+      },
+      "environments_known_for": {
+        "type": "array",
+        "description": "A list of natural environments the state is known for.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "visible_landscape_features": {
+        "type": "array",
+        "description": "A list of common visible landscape features contributing to the state's natural environment.",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "state_name",
+      "environments_known_for",
+      "visible_landscape_features"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

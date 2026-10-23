@@ -1,93 +1,70 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Mesquite: Mesquite is the common name for the genus "Prosopis", containing over 40 species of small leguminous trees.  They are native to the southwestern United States and Mexico (even the creeping mesquite, which is invasive in southern California).
-
-Bruckenthalia: Bruckenthalia is a genus of plants consisting of only one species, Bruckenthalia spiculifolia (spike heath) an evergreen shrub native to southeastern Europe and Asia Minor.  It is a dwarf and heath-like plant to 10 in high.  Suitable for rock gardens and borders.  Leaves are dark green.  The flowers in terminal clusters of rose-pink, bell-shaped appear in early summer.
-
-North Mesquite High School: North Mesquite High School is a secondary school in Mesquite, Texas.  As of 2017, the school serves northern portions of Mesquite and the MISD portion of Garland.  Formerly, North Mesquite served all of Sunnyvale before the completion of Sunnyvale High School, leaving the class of 2010 the last North Mesquite class catering to Sunnyvale students.
-
-Mesquite flour: Mesquite flour is made from the dried and ground pods of the mesquite ("Prosopis" spp.) .  The tree grows throughout North America in arid climates.  The flour made from the long, beige-colored seed pods has a sweet, slightly nutty flavor and can be used in a wide variety of applications.  It has a high-protein, low-glycemic content and can serve as a gluten-free replacement for flours.  In the past, Indigenous American Indians relied on these mesquite pods as an important food source.  The bean pods of the mesquite tree are dried and ground into a flour ("pinole").  This flour is rich in dietary fiber (25%) and protein (13%).  It also contains significant quantities of calcium, magnesium, potassium, iron, zinc, and the amino acid lysine, and it is low in fat (around 3%).
-
-Mesquite High School (Mesquite, Texas): Mesquite High School is a high school in Mesquite, Texas.  MHS serves Mesquite and a small portion of Balch Springs for the grades 9 through 12 and is a part of the Mesquite Independent School District.  Total enrollment for the school as of October 2011 was 2,804 and therefore places it in the UIL 6A division.  "Stormy the Skeeter" is the school mascot for the school's various athletic teams (all known with some variant of the word "Skeeter") and the school's colors are Maroon and White.
-
-Mesquite Hills, El Paso, Texas: Mesquite Hills is a newly developing neighborhood in Northeast El Paso, Texas.  Newman Ranch Partners, LLC, began construction of the community in 2007, as demand for housing in the area increased.  This increase in housing demand can be attributed to the relocation of tens of thousands of U.S. Soldiers from Germany to nearby Fort Bliss.  At full build out, Mesquite Hills will have approximately 1,774 single family homes.  There are also plans for four neighborhood parks to be located within Mesquite Hills.  Plans call for commercial plots along U.S. 54 to the north and Dyer street to the south.  Newman Ranch Partners initially were in negotiations with the Ysleta Independent School District to include an elementary school in Mesquite Hills, however a bond proposal was voted down by voters, and the elementary school will not be built.  Newman Ranch Partners will now build more housing where the school was to be built.
-
-Memorial Stadium (Mesquite, Texas): Memorial Stadium is a stadium in Mesquite, Texas.  It was completed in 1976 and is located on the campus of West Mesquite High School, next to Mesquite Tower.  The field is primarily used for football, and all five High Schools in Mesquite share use of the field.
-
-Mesquite ProRodeo: The Mesquite ProRodeo is a rodeo located in Mesquite, Texas, United States that operates during rodeo season (roughly April through September).  Named the Mesquite Championship Rodeo prior to its purchase by Camelot Sports and Entertainment in 2009, it is also addressed as simply the Mesquite Rodeo.
-
-Mesquite Valley: Mesquite Valley is a valley in Clark County, Nevada and Inyo County and San Bernardino County, California.  Mesquite is an endorheic basin with Mesquite Lake at is lowest point at an elevation of 2,536 feet / 773 meters.  This valley trends northwest and southeast with a head at to the southeast near State Line Pass and another head at at the southwestern end of Pahrump Valley, at an elevation of 2,808 feet / 856 meters, between the Kingston Range and Black Butte to the northwest.  It is bounded on the northeast by the Spring Mountains, by the Mesquite Mountains to the southwest and the Clark Mountains to the southeast.
-
-Placosternus difficilis: Placosternus difficilis, commonly known as the Mesquite Borer, is a wood boring longhorn beetle which resembles a black and yellow wasp.  Larvae of mesquite borers are deposited in mesquite trees.  It has been seen to be attracted to mesquite trees when there is freshly cut or broken limbs and logs.  Adults use nectar and pollen as a food source.
-
-Question: What are both Mesquite and Bruckenthalia?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "common_category": {
-      "type": "string",
-      "description": "The shared classification or category for the entities."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "category_type": {
-      "type": "string",
-      "description": "The type of classification (e.g., biological, geographical)."
-    },
-    "classified_entities": {
-      "type": "array",
-      "description": "Details about each entity that shares the common category.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "entity_name": {
-            "type": "string",
-            "description": "The name of the entity."
-          },
-          "entity_type": {
-            "type": "string",
-            "description": "The specific type of the entity (e.g., genus, species)."
-          },
-          "description_summary": {
-            "type": "string",
-            "description": "A brief summary of the entity from the context."
-          },
-          "number_of_species": {
-            "type": "integer",
-            "description": "The number of species within the genus, if specified."
-          },
-          "native_regions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "Regions where the entity is native."
-          }
-        },
-        "required": [
-          "entity_name",
-          "entity_type",
-          "description_summary"
-        ],
-        "additionalProperties": false
-      }
+    {
+      "role": "user",
+      "content": "Context:\nMesquite: Mesquite is the common name for the genus \"Prosopis\", containing over 40 species of small leguminous trees.  They are native to the southwestern United States and Mexico (even the creeping mesquite, which is invasive in southern California).\n\nBruckenthalia: Bruckenthalia is a genus of plants consisting of only one species, Bruckenthalia spiculifolia (spike heath) an evergreen shrub native to southeastern Europe and Asia Minor.  It is a dwarf and heath-like plant to 10 in high.  Suitable for rock gardens and borders.  Leaves are dark green.  The flowers in terminal clusters of rose-pink, bell-shaped appear in early summer.\n\nNorth Mesquite High School: North Mesquite High School is a secondary school in Mesquite, Texas.  As of 2017, the school serves northern portions of Mesquite and the MISD portion of Garland.  Formerly, North Mesquite served all of Sunnyvale before the completion of Sunnyvale High School, leaving the class of 2010 the last North Mesquite class catering to Sunnyvale students.\n\nMesquite flour: Mesquite flour is made from the dried and ground pods of the mesquite (\"Prosopis\" spp.) .  The tree grows throughout North America in arid climates.  The flour made from the long, beige-colored seed pods has a sweet, slightly nutty flavor and can be used in a wide variety of applications.  It has a high-protein, low-glycemic content and can serve as a gluten-free replacement for flours.  In the past, Indigenous American Indians relied on these mesquite pods as an important food source.  The bean pods of the mesquite tree are dried and ground into a flour (\"pinole\").  This flour is rich in dietary fiber (25%) and protein (13%).  It also contains significant quantities of calcium, magnesium, potassium, iron, zinc, and the amino acid lysine, and it is low in fat (around 3%).\n\nMesquite High School (Mesquite, Texas): Mesquite High School is a high school in Mesquite, Texas.  MHS serves Mesquite and a small portion of Balch Springs for the grades 9 through 12 and is a part of the Mesquite Independent School District.  Total enrollment for the school as of October 2011 was 2,804 and therefore places it in the UIL 6A division.  \"Stormy the Skeeter\" is the school mascot for the school's various athletic teams (all known with some variant of the word \"Skeeter\") and the school's colors are Maroon and White.\n\nMesquite Hills, El Paso, Texas: Mesquite Hills is a newly developing neighborhood in Northeast El Paso, Texas.  Newman Ranch Partners, LLC, began construction of the community in 2007, as demand for housing in the area increased.  This increase in housing demand can be attributed to the relocation of tens of thousands of U.S. Soldiers from Germany to nearby Fort Bliss.  At full build out, Mesquite Hills will have approximately 1,774 single family homes.  There are also plans for four neighborhood parks to be located within Mesquite Hills.  Plans call for commercial plots along U.S. 54 to the north and Dyer street to the south.  Newman Ranch Partners initially were in negotiations with the Ysleta Independent School District to include an elementary school in Mesquite Hills, however a bond proposal was voted down by voters, and the elementary school will not be built.  Newman Ranch Partners will now build more housing where the school was to be built.\n\nMemorial Stadium (Mesquite, Texas): Memorial Stadium is a stadium in Mesquite, Texas.  It was completed in 1976 and is located on the campus of West Mesquite High School, next to Mesquite Tower.  The field is primarily used for football, and all five High Schools in Mesquite share use of the field.\n\nMesquite ProRodeo: The Mesquite ProRodeo is a rodeo located in Mesquite, Texas, United States that operates during rodeo season (roughly April through September).  Named the Mesquite Championship Rodeo prior to its purchase by Camelot Sports and Entertainment in 2009, it is also addressed as simply the Mesquite Rodeo.\n\nMesquite Valley: Mesquite Valley is a valley in Clark County, Nevada and Inyo County and San Bernardino County, California.  Mesquite is an endorheic basin with Mesquite Lake at is lowest point at an elevation of 2,536 feet / 773 meters.  This valley trends northwest and southeast with a head at to the southeast near State Line Pass and another head at at the southwestern end of Pahrump Valley, at an elevation of 2,808 feet / 856 meters, between the Kingston Range and Black Butte to the northwest.  It is bounded on the northeast by the Spring Mountains, by the Mesquite Mountains to the southwest and the Clark Mountains to the southeast.\n\nPlacosternus difficilis: Placosternus difficilis, commonly known as the Mesquite Borer, is a wood boring longhorn beetle which resembles a black and yellow wasp.  Larvae of mesquite borers are deposited in mesquite trees.  It has been seen to be attracted to mesquite trees when there is freshly cut or broken limbs and logs.  Adults use nectar and pollen as a food source.\n\nQuestion: What are both Mesquite and Bruckenthalia?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"common_category\": {\n      \"type\": \"string\",\n      \"description\": \"The shared classification or category for the entities.\"\n    },\n    \"category_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of classification (e.g., biological, geographical).\"\n    },\n    \"classified_entities\": {\n      \"type\": \"array\",\n      \"description\": \"Details about each entity that shares the common category.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"entity_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the entity.\"\n          },\n          \"entity_type\": {\n            \"type\": \"string\",\n            \"description\": \"The specific type of the entity (e.g., genus, species).\"\n          },\n          \"description_summary\": {\n            \"type\": \"string\",\n            \"description\": \"A brief summary of the entity from the context.\"\n          },\n          \"number_of_species\": {\n            \"type\": \"integer\",\n            \"description\": \"The number of species within the genus, if specified.\"\n          },\n          \"native_regions\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"type\": \"string\"\n            },\n            \"description\": \"Regions where the entity is native.\"\n          }\n        },\n        \"required\": [\n          \"entity_name\",\n          \"entity_type\",\n          \"description_summary\"\n        ],\n        \"additionalProperties\": false\n      }\n    }\n  },\n  \"required\": [\n    \"common_category\",\n    \"category_type\",\n    \"classified_entities\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "common_category",
-    "category_type",
-    "classified_entities"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "common_category": {
+        "type": "string",
+        "description": "The shared classification or category for the entities."
+      },
+      "category_type": {
+        "type": "string",
+        "description": "The type of classification (e.g., biological, geographical)."
+      },
+      "classified_entities": {
+        "type": "array",
+        "description": "Details about each entity that shares the common category.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "entity_name": {
+              "type": "string",
+              "description": "The name of the entity."
+            },
+            "entity_type": {
+              "type": "string",
+              "description": "The specific type of the entity (e.g., genus, species)."
+            },
+            "description_summary": {
+              "type": "string",
+              "description": "A brief summary of the entity from the context."
+            },
+            "number_of_species": {
+              "type": "integer",
+              "description": "The number of species within the genus, if specified."
+            },
+            "native_regions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Regions where the entity is native."
+            }
+          },
+          "required": [
+            "entity_name",
+            "entity_type",
+            "description_summary"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "common_category",
+      "category_type",
+      "classified_entities"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

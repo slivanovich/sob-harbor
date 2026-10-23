@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Pat Finn: Patrick Joseph "Pat" Finn (born July 24, 1956) is an American television presenter and game show host.  He is the owner of the production company Rubicon Entertainment.  Finn's first national gig was hosting the 1990 remake of the classic Jack Barry show "The Joker's Wild".  In 1991, he became host of "Shop 'til You Drop", the #1 rated cable game show in America at the time, where he remained for 11 years, and from 1999-2009 he became the host of the California State Lottery's weekly game show, "The Big Spin".
-
-Josie Long: Josie Long (born 17 April 1982) is a British comedian.  She started performing as a stand-up at the age of 14 and won the BBC New Comedy Awards at 17.  In 2006, she won the If.comeddies Best Newcomer award at the Edinburgh Festival Fringe for her show "Kindness and Exuberance".  Josie has been nominated for the Edinburgh Comedy Award for Best Show three times.  In 2012, Long and director Doug King produced two short comedy films in Glasgow called "Let’s Go Swimming" and "Romance and Adventure", which were nominated for a BAFTA Scotland New Talent Award.  She is married to Johnny Donahoe .
-
-Three for the Money: Three for the Money is an American game show produced by Stefan Hatos-Monty Hall Productions that aired on NBC from September 29 to November 28, 1975.  Dick Enberg was the host with Jack Clark announcing.  Enberg was also hosting "Sports Challenge" at the time and had just joined NBC's sports division.
-
-Barrios Rocks: The Barrios Rocks ( ) are a small group of rocks lying 1 nmi west of Toro Point, Trinity Peninsula.  The name "Islote Barrios" was given by the First Chilean Antarctic Expedition (1947–48) after General Guillermo Barrios Tirado, minister of national defense who accompanied the Presidential Antarctic Expedition (1948) to this area in the Transporter "Presidente Pinto".  Air photographs of this feature appear to show three small rocks closely juxtaposed.
-
-Win Ben Stein's Money: Win Ben Stein's Money was an American television game show created by Al Burton and Donnie Brainard that aired first-run episodes from July 28, 1997 to January 31, 2003 on the Comedy Central cable network, with repeat episodes airing until May 8, 2003.  The show featured three contestants who competed to answer general knowledge questions in order to win the grand prize of $5,000 from the show's host, Ben Stein.  In the second half of each episode, Stein participated as a "common" contestant in order to defend his money from being taken by his competitors.  The show won six Daytime Emmy awards, with Stein and Jimmy Kimmel, the show's original co-host, sharing the Outstanding Game Show Host award in 1999.
-
-Dick Enberg: Richard Alan Enberg (born January 9, 1935) is a retired American sportscaster.  He provided play-by-play for various sports on numerous radio and television networks (including NBC, CBS, and ESPN), and for individual teams, over the course of an approximately 60-year career.
-
-Real-time analyzer: A real-time analyzer (RTA) is a professional audio device that measures and displays the frequency spectrum of an audio signal; a spectrum analyzer that works in real time.  An RTA can range from a small PDA-sized device to a rack-mounted hardware unit to software running on a laptop.  It works by measuring and displaying sound input, often from an integrated microphone or with a signal from a PA system.  Basic RTAs show three measurements per octave at 3 or 6 dB increments; sophisticated software solutions can show 24 or more measurements per octave as well as 0.1 dB resolution.
-
-The Big Money Game: The Big Money Game is a game show, broadcast on RTÉ One on Saturday nights during the summer months of June, July and August as a seasonal replacement for "Winning Streak".  The successor to "Fame and Fortune" (1996–2006) and "The Trump Card" (2007), "The Big Money Game" was first broadcast on Saturday, 14 June 2008.  As with "Winning Streak", production costs for the programme are paid by RTÉ and the prize money is funded by the Irish National Lottery.  Entry to the game show is based on getting three "lucky stars" on associated National Lottery scratchcards and submitting them for a televised drawing.  Contestants can win cash prizes up to €250,000, as well as cars, holidays, and other prizes.
-
-Portuguese euro coins: Portuguese euro coins show three different designs for each of the three series of coins.  However, they are quite similar in that all contain old Portuguese royal mints and seals within a circle of seven castles and five escutcheons with silver bezants (all similar to what can be seen in the coat of arms and flag of Portugal) and the word "Portugal".  Also featured in the designs, all done by Vítor Manuel Fernandes dos Santos, are the 12 stars of the EU and the year of minting.
-
-List of Britney Spears live performances: American singer Britney Spears has embarked on six headlining concert tours, five of which have been worldwide.  She first served as an opening act for NSYNC before starting her 1999–2000 headlining debut, the ...Baby One More Time Tour, which was based in North America only.  Its success prompted an extension of dates entitled Crazy 2K.  The tour was positively received by critics, but generated some controversy due to her racy outfits.  Jae-Ha Kim of the "Chicago Sun-Times" commented that "Spears has that 'it' factor that worked for pinup queens of the past."  In 2000–01, she performed on the worldwide Oops! ... I Did It Again World Tour.  It was critically appreciated for Spears' energy and performance, as well as the band.  She then followed this with the Dream Within a Dream Tour in 2001–02, visiting Japan and Mexico for the first time.  The performances were accompanied by many special effects, the "pièce de résistance" being a water screen that pumped two tons of water onto the stage during the encore performance of "...Baby One More Time."  In a show in Miami, Britney stopped the show three songs into the setlist because it was too dangerous to perform in the rain storm.
-
-Question: How long was the career of the host of the game show  Three for the Money ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "game_show_name": {
-      "type": "string",
-      "description": "The name of the game show in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "host_name": {
-      "type": "string",
-      "description": "The name of the host of the game show."
-    },
-    "host_career_length_years": {
-      "type": "integer",
-      "description": "The approximate length of the host's career in years."
-    },
-    "career_length_description": {
-      "type": "string",
-      "description": "A descriptive string for the host's career length, including any qualifiers like 'approximately'."
+    {
+      "role": "user",
+      "content": "Context:\nPat Finn: Patrick Joseph \"Pat\" Finn (born July 24, 1956) is an American television presenter and game show host.  He is the owner of the production company Rubicon Entertainment.  Finn's first national gig was hosting the 1990 remake of the classic Jack Barry show \"The Joker's Wild\".  In 1991, he became host of \"Shop 'til You Drop\", the #1 rated cable game show in America at the time, where he remained for 11 years, and from 1999-2009 he became the host of the California State Lottery's weekly game show, \"The Big Spin\".\n\nJosie Long: Josie Long (born 17 April 1982) is a British comedian.  She started performing as a stand-up at the age of 14 and won the BBC New Comedy Awards at 17.  In 2006, she won the If.comeddies Best Newcomer award at the Edinburgh Festival Fringe for her show \"Kindness and Exuberance\".  Josie has been nominated for the Edinburgh Comedy Award for Best Show three times.  In 2012, Long and director Doug King produced two short comedy films in Glasgow called \"Let’s Go Swimming\" and \"Romance and Adventure\", which were nominated for a BAFTA Scotland New Talent Award.  She is married to Johnny Donahoe .\n\nThree for the Money: Three for the Money is an American game show produced by Stefan Hatos-Monty Hall Productions that aired on NBC from September 29 to November 28, 1975.  Dick Enberg was the host with Jack Clark announcing.  Enberg was also hosting \"Sports Challenge\" at the time and had just joined NBC's sports division.\n\nBarrios Rocks: The Barrios Rocks ( ) are a small group of rocks lying 1 nmi west of Toro Point, Trinity Peninsula.  The name \"Islote Barrios\" was given by the First Chilean Antarctic Expedition (1947–48) after General Guillermo Barrios Tirado, minister of national defense who accompanied the Presidential Antarctic Expedition (1948) to this area in the Transporter \"Presidente Pinto\".  Air photographs of this feature appear to show three small rocks closely juxtaposed.\n\nWin Ben Stein's Money: Win Ben Stein's Money was an American television game show created by Al Burton and Donnie Brainard that aired first-run episodes from July 28, 1997 to January 31, 2003 on the Comedy Central cable network, with repeat episodes airing until May 8, 2003.  The show featured three contestants who competed to answer general knowledge questions in order to win the grand prize of $5,000 from the show's host, Ben Stein.  In the second half of each episode, Stein participated as a \"common\" contestant in order to defend his money from being taken by his competitors.  The show won six Daytime Emmy awards, with Stein and Jimmy Kimmel, the show's original co-host, sharing the Outstanding Game Show Host award in 1999.\n\nDick Enberg: Richard Alan Enberg (born January 9, 1935) is a retired American sportscaster.  He provided play-by-play for various sports on numerous radio and television networks (including NBC, CBS, and ESPN), and for individual teams, over the course of an approximately 60-year career.\n\nReal-time analyzer: A real-time analyzer (RTA) is a professional audio device that measures and displays the frequency spectrum of an audio signal; a spectrum analyzer that works in real time.  An RTA can range from a small PDA-sized device to a rack-mounted hardware unit to software running on a laptop.  It works by measuring and displaying sound input, often from an integrated microphone or with a signal from a PA system.  Basic RTAs show three measurements per octave at 3 or 6 dB increments; sophisticated software solutions can show 24 or more measurements per octave as well as 0.1 dB resolution.\n\nThe Big Money Game: The Big Money Game is a game show, broadcast on RTÉ One on Saturday nights during the summer months of June, July and August as a seasonal replacement for \"Winning Streak\".  The successor to \"Fame and Fortune\" (1996–2006) and \"The Trump Card\" (2007), \"The Big Money Game\" was first broadcast on Saturday, 14 June 2008.  As with \"Winning Streak\", production costs for the programme are paid by RTÉ and the prize money is funded by the Irish National Lottery.  Entry to the game show is based on getting three \"lucky stars\" on associated National Lottery scratchcards and submitting them for a televised drawing.  Contestants can win cash prizes up to €250,000, as well as cars, holidays, and other prizes.\n\nPortuguese euro coins: Portuguese euro coins show three different designs for each of the three series of coins.  However, they are quite similar in that all contain old Portuguese royal mints and seals within a circle of seven castles and five escutcheons with silver bezants (all similar to what can be seen in the coat of arms and flag of Portugal) and the word \"Portugal\".  Also featured in the designs, all done by Vítor Manuel Fernandes dos Santos, are the 12 stars of the EU and the year of minting.\n\nList of Britney Spears live performances: American singer Britney Spears has embarked on six headlining concert tours, five of which have been worldwide.  She first served as an opening act for NSYNC before starting her 1999–2000 headlining debut, the ...Baby One More Time Tour, which was based in North America only.  Its success prompted an extension of dates entitled Crazy 2K.  The tour was positively received by critics, but generated some controversy due to her racy outfits.  Jae-Ha Kim of the \"Chicago Sun-Times\" commented that \"Spears has that 'it' factor that worked for pinup queens of the past.\"  In 2000–01, she performed on the worldwide Oops! ... I Did It Again World Tour.  It was critically appreciated for Spears' energy and performance, as well as the band.  She then followed this with the Dream Within a Dream Tour in 2001–02, visiting Japan and Mexico for the first time.  The performances were accompanied by many special effects, the \"pièce de résistance\" being a water screen that pumped two tons of water onto the stage during the encore performance of \"...Baby One More Time.\"  In a show in Miami, Britney stopped the show three songs into the setlist because it was too dangerous to perform in the rain storm.\n\nQuestion: How long was the career of the host of the game show  Three for the Money ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"game_show_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the game show in question.\"\n    },\n    \"host_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the host of the game show.\"\n    },\n    \"host_career_length_years\": {\n      \"type\": \"integer\",\n      \"description\": \"The approximate length of the host's career in years.\"\n    },\n    \"career_length_description\": {\n      \"type\": \"string\",\n      \"description\": \"A descriptive string for the host's career length, including any qualifiers like 'approximately'.\"\n    }\n  },\n  \"required\": [\n    \"game_show_name\",\n    \"host_name\",\n    \"host_career_length_years\",\n    \"career_length_description\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "game_show_name",
-    "host_name",
-    "host_career_length_years",
-    "career_length_description"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "game_show_name": {
+        "type": "string",
+        "description": "The name of the game show in question."
+      },
+      "host_name": {
+        "type": "string",
+        "description": "The name of the host of the game show."
+      },
+      "host_career_length_years": {
+        "type": "integer",
+        "description": "The approximate length of the host's career in years."
+      },
+      "career_length_description": {
+        "type": "string",
+        "description": "A descriptive string for the host's career length, including any qualifiers like 'approximately'."
+      }
+    },
+    "required": [
+      "game_show_name",
+      "host_name",
+      "host_career_length_years",
+      "career_length_description"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

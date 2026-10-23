@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Jon Wolfsthal: Jon Wolfsthal is an independent consultant and expert on all aspects of nuclear weapons, arms control, nonproliferation, and deterrence issues.  He is a non-resident fellow at the Managing the Atom Project at the Belfer Center at Harvard University and at the Carnegie Endowment for International Peace.  He is also a columnist for Foreign Policy's Shadow Government.  He is also a senior advisor at Global Zero.  He served most recently (2014-2017) as special assistant to President Barack Obama and Senior Director for Arms Control and Nonproliferation at the National Security Council.  In that post, we was the most senior White House official setting and implementing U.S. Government policy on all aspects of arms control, nonproliferation, and nuclear policy.  He worked previously in government, in academia and in the non-governmental community and is a leading scholar and educator in the areas of nuclear deterrence, arms control and nonproliferation issues.  During his more than five years at the White House, he helped guide key aspects of U.S. nuclear and nonproliferation policy.  He was directly involved in crafting President Obama's Prague speech (April 2009), served on the delegation to the 2010 Nuclear Security Summit, helped negotiate and gain Senate approval of the New START arms control agreement with Russia, helped draft the 2010 Nuclear Posture Review and coordinated U.S. policy for the 2015 NPT Review Conference.  He was instrumental in supporting President Obama's historic visit to Hiroshima, Japan in 2016.
-
-Geoffrey Cowan: Geoffrey Cowan is an American lawyer, professor, author, and non-profit executive.  He is currently a University Professor at the University of Southern California, where he holds the Annenberg Family Chair in Communication Leadership and directs the Annenberg School's Center on Communication Leadership & Policy.  In 2010, Cowan was named president of The Annenberg Foundation Trust at Sunnylands, a position he held until July 2016.  In this role, Cowan was commissioned with the task of turning the 200-acre estate of Ambassador Walter Annenberg and his wife Leonore into "a venue for important retreats for top government officials and leaders in the fields of law, education, philanthropy, the arts, culture, science and medicine."  Since Sunnylands reopened in 2012, Cowan has helped to arrange a series of meetings and retreats there.  In 2013-14, President Barack Obama convened bilateral meetings at Sunnylands with President Xi Jinping of China and with King Abdullah II of Jordan.
-
-Organizing for America: Organizing for America, then Organizing for Action, (OFA) is a community organizing project of the Democratic National Committee.  Initially founded after the presidential inauguration of Barack Obama, the group sought to mobilize supporters in favor of Obama's legislative priorities, particularly health care reform.  Eventually, the organization played a role in the midterm elections of 2010.  Later, it became the grassroots arm of Obama for America.  After Obama's second inauguration, it was reorganized as Organizing for Action and returned to its previous mission of organizing around the President's agenda.  It has since turned into a hub of the Democratic protest movement.
-
-Dinesh D'Souza: Dinesh Joseph D'Souza ( ; born April 25, 1961) is an Indian American conservative political commentator, author and filmmaker.  From 2010 to 2012, he was president of The King's College, a Christian school in New York City.
-
-Alyssa Mastromonaco: Alyssa Mende Mastromonaco (born February 22, 1976) is the President of Global Communications Strategy & Talent at A&E Networks as of December 2016.  She was previously the Chief Operating Officer of Vice Media.  She is also a contributing editor at "Marie Claire" magazine.  She previously served as White House Deputy Chief of Staff for Operations in the administration of President Barack Obama from 2011 to 2014.  She was the youngest woman to hold that position.  Mastromonaco had worked for Obama since 2005 when he was on the United States Senate as his Director of Scheduling.
-
-2016: Obama's America: 2016: Obama's America is a 2012 documentary film by conservative author and political commentator Dinesh D'Souza.  The film was produced by Doug Sain and Gerald R. Molen.  D'Souza and John Sullivan co-directed and co-wrote the film, which is based on D'Souza's book "The Roots of Obama's Rage" (2010).  Through interviews and reenactments, the film compares the similarities of the lives of D'Souza and President Barack Obama as D'Souza alleges that early influences on Obama are affecting his domestic policy decisions.
-
-Healthy, Hunger-Free Kids Act of 2010: The Healthy, Hunger-Free Kids Act of 2010 (Pub.L.  111–296 ) is a federal statute signed into law by President Barack Obama on December 13, 2010.  The bill is part of the reauthorization of funding for child nutrition (see the original Child Nutrition Act).  The bill funds child nutrition programs and free lunch programs in schools for the next 5 years.  In addition, the bill sets new nutrition standards for schools, and allocates $4.5 billion for their implementation.  The new nutrition standards have been a point initiative of First Lady Michelle Obama in her fight against childhood obesity as part of her Let's Move!  initiative.  In FY 2011, federal spending totaled $10.1 billion for the National School Lunch Program.  The Healthy, Hunger-Free Kids Act allows USDA, for the first time in 30 years, opportunity to make real reforms to the school lunch and breakfast programs by improving the critical nutrition and hunger safety net for millions of children.  Healthy, Hunger-Free Kids Act and Michelle Obama were a step in transforming the food pyramid recommendation, which has been around since the early 1990s, into what is now known as "MyPlate".
-
-Presidency of Barack Obama: The presidency of Barack Obama began at noon EST on January 20, 2009, when Barack Obama was inaugurated as President of the United States, and ended on January 20, 2017.  Obama, a Democrat, took office as the 44th United States president following a decisive victory over Republican John McCain in the 2008 presidential election.  Four years later, in the 2012 election, he defeated Mitt Romney to win re-election.  He was the first African American president, the first multiracial president, the first non-white president, and the first president to have been born in Hawaii.  Obama was succeeded by Republican Donald Trump, who won the 2016 presidential election.
-
-Organizing for Action: Organizing for Action (OFA) is a nonprofit 501(c)4 organization and community organizing project that advocates for the agenda of former U.S. President Barack Obama.  The organization is officially non-partisan, but its agenda and policies are strongly allied with the Democratic Party.  It is the successor of Obama's 2012 re-election campaign and of Organizing for America, which itself succeeded Obama's 2008 campaign.
-
-National School Scrabble Championship: The National School Scrabble Championship is a Scrabble tournament for 4th-8th graders held annually in North America since 2003.  In 2012, 4th graders were allowed to compete for the first time ever.  The School Scrabble Championship uses the SSWL dictionary which has offensive words such as "lez" or "jew" omitted.  The competition is tournament Scrabble play, in which teams of two play for 25 minutes with digital timers similar to those used in the board game of chess.  The time limit was originally 22 minutes for each side until 2012 when the switch was made to coincide with the traditional times of the Adult Nationals.  The team with the most wins is determined the winner.  If there are multiple teams with the same number of wins, spread is used to break the tie.  Matthew Silver of Connecticut became the first competitor to win two consecutive National School Scrabble Championship titles in 2007 and 2008.  He accumulated a 14-0 record in those two years.  In 2009, for the first time ever, the event was won by a team of 5th graders, Andy Hoang & Erik Salgado of Salem Elementary in North Carolina.  They were the last team to finish the tournament with an undefeated record (7-0).  Since then, the champion has finished either 6-1 (2010) or 7-1 (2011, 2012, 2013).  The winners have often been invited to be on Good Morning America and Jimmy Kimmel Live! .  The event has also received recognition from president Barack Obama and NBA superstar Shaquille O'Neal, who are advocates for the game themselves.  In 2012, Andy Hoang & Erik Salgado of North Carolina became the first team to win two NSSC titles, their first as 5th graders in 2009, and their second as 8th graders in 2012.  The 2013 NSSC was held in Washington D.C. 2013 marked the first time since 2009 that a previous champion will not be competing.  In 2010, 2011, and 2012, Andy Hoang, Erik Salgado, Bradley Robbins, and Evan McCarthy were champions that returned.  Only Andy Hoang and Erik Salgado were the only ones to repeat during the streak.  With Kevin Bowerman and Raymond Gao's win in 2013, North Carolina became the first state to hold 3 National titles (Winning 3 of the last 5 tournaments: 2009, 2012, & 2013), the most of all the states or districts in North America.
-
-Question: What school did the author of "2016: Obama's America" hold the role of president of from 2010 to 2012?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "author_name": {
-      "type": "string",
-      "description": "The name of the author of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film mentioned in the question."
-    },
-    "school_name": {
-      "type": "string",
-      "description": "The name of the school where the author held a presidential role."
-    },
-    "role": {
-      "type": "string",
-      "description": "The role held by the author at the school."
-    },
-    "start_year": {
-      "type": "integer",
-      "description": "The start year of the author's role at the school."
-    },
-    "end_year": {
-      "type": "integer",
-      "description": "The end year of the author's role at the school."
+    {
+      "role": "user",
+      "content": "Context:\nJon Wolfsthal: Jon Wolfsthal is an independent consultant and expert on all aspects of nuclear weapons, arms control, nonproliferation, and deterrence issues.  He is a non-resident fellow at the Managing the Atom Project at the Belfer Center at Harvard University and at the Carnegie Endowment for International Peace.  He is also a columnist for Foreign Policy's Shadow Government.  He is also a senior advisor at Global Zero.  He served most recently (2014-2017) as special assistant to President Barack Obama and Senior Director for Arms Control and Nonproliferation at the National Security Council.  In that post, we was the most senior White House official setting and implementing U.S. Government policy on all aspects of arms control, nonproliferation, and nuclear policy.  He worked previously in government, in academia and in the non-governmental community and is a leading scholar and educator in the areas of nuclear deterrence, arms control and nonproliferation issues.  During his more than five years at the White House, he helped guide key aspects of U.S. nuclear and nonproliferation policy.  He was directly involved in crafting President Obama's Prague speech (April 2009), served on the delegation to the 2010 Nuclear Security Summit, helped negotiate and gain Senate approval of the New START arms control agreement with Russia, helped draft the 2010 Nuclear Posture Review and coordinated U.S. policy for the 2015 NPT Review Conference.  He was instrumental in supporting President Obama's historic visit to Hiroshima, Japan in 2016.\n\nGeoffrey Cowan: Geoffrey Cowan is an American lawyer, professor, author, and non-profit executive.  He is currently a University Professor at the University of Southern California, where he holds the Annenberg Family Chair in Communication Leadership and directs the Annenberg School's Center on Communication Leadership & Policy.  In 2010, Cowan was named president of The Annenberg Foundation Trust at Sunnylands, a position he held until July 2016.  In this role, Cowan was commissioned with the task of turning the 200-acre estate of Ambassador Walter Annenberg and his wife Leonore into \"a venue for important retreats for top government officials and leaders in the fields of law, education, philanthropy, the arts, culture, science and medicine.\"  Since Sunnylands reopened in 2012, Cowan has helped to arrange a series of meetings and retreats there.  In 2013-14, President Barack Obama convened bilateral meetings at Sunnylands with President Xi Jinping of China and with King Abdullah II of Jordan.\n\nOrganizing for America: Organizing for America, then Organizing for Action, (OFA) is a community organizing project of the Democratic National Committee.  Initially founded after the presidential inauguration of Barack Obama, the group sought to mobilize supporters in favor of Obama's legislative priorities, particularly health care reform.  Eventually, the organization played a role in the midterm elections of 2010.  Later, it became the grassroots arm of Obama for America.  After Obama's second inauguration, it was reorganized as Organizing for Action and returned to its previous mission of organizing around the President's agenda.  It has since turned into a hub of the Democratic protest movement.\n\nDinesh D'Souza: Dinesh Joseph D'Souza ( ; born April 25, 1961) is an Indian American conservative political commentator, author and filmmaker.  From 2010 to 2012, he was president of The King's College, a Christian school in New York City.\n\nAlyssa Mastromonaco: Alyssa Mende Mastromonaco (born February 22, 1976) is the President of Global Communications Strategy & Talent at A&E Networks as of December 2016.  She was previously the Chief Operating Officer of Vice Media.  She is also a contributing editor at \"Marie Claire\" magazine.  She previously served as White House Deputy Chief of Staff for Operations in the administration of President Barack Obama from 2011 to 2014.  She was the youngest woman to hold that position.  Mastromonaco had worked for Obama since 2005 when he was on the United States Senate as his Director of Scheduling.\n\n2016: Obama's America: 2016: Obama's America is a 2012 documentary film by conservative author and political commentator Dinesh D'Souza.  The film was produced by Doug Sain and Gerald R. Molen.  D'Souza and John Sullivan co-directed and co-wrote the film, which is based on D'Souza's book \"The Roots of Obama's Rage\" (2010).  Through interviews and reenactments, the film compares the similarities of the lives of D'Souza and President Barack Obama as D'Souza alleges that early influences on Obama are affecting his domestic policy decisions.\n\nHealthy, Hunger-Free Kids Act of 2010: The Healthy, Hunger-Free Kids Act of 2010 (Pub.L.  111–296 ) is a federal statute signed into law by President Barack Obama on December 13, 2010.  The bill is part of the reauthorization of funding for child nutrition (see the original Child Nutrition Act).  The bill funds child nutrition programs and free lunch programs in schools for the next 5 years.  In addition, the bill sets new nutrition standards for schools, and allocates $4.5 billion for their implementation.  The new nutrition standards have been a point initiative of First Lady Michelle Obama in her fight against childhood obesity as part of her Let's Move!  initiative.  In FY 2011, federal spending totaled $10.1 billion for the National School Lunch Program.  The Healthy, Hunger-Free Kids Act allows USDA, for the first time in 30 years, opportunity to make real reforms to the school lunch and breakfast programs by improving the critical nutrition and hunger safety net for millions of children.  Healthy, Hunger-Free Kids Act and Michelle Obama were a step in transforming the food pyramid recommendation, which has been around since the early 1990s, into what is now known as \"MyPlate\".\n\nPresidency of Barack Obama: The presidency of Barack Obama began at noon EST on January 20, 2009, when Barack Obama was inaugurated as President of the United States, and ended on January 20, 2017.  Obama, a Democrat, took office as the 44th United States president following a decisive victory over Republican John McCain in the 2008 presidential election.  Four years later, in the 2012 election, he defeated Mitt Romney to win re-election.  He was the first African American president, the first multiracial president, the first non-white president, and the first president to have been born in Hawaii.  Obama was succeeded by Republican Donald Trump, who won the 2016 presidential election.\n\nOrganizing for Action: Organizing for Action (OFA) is a nonprofit 501(c)4 organization and community organizing project that advocates for the agenda of former U.S. President Barack Obama.  The organization is officially non-partisan, but its agenda and policies are strongly allied with the Democratic Party.  It is the successor of Obama's 2012 re-election campaign and of Organizing for America, which itself succeeded Obama's 2008 campaign.\n\nNational School Scrabble Championship: The National School Scrabble Championship is a Scrabble tournament for 4th-8th graders held annually in North America since 2003.  In 2012, 4th graders were allowed to compete for the first time ever.  The School Scrabble Championship uses the SSWL dictionary which has offensive words such as \"lez\" or \"jew\" omitted.  The competition is tournament Scrabble play, in which teams of two play for 25 minutes with digital timers similar to those used in the board game of chess.  The time limit was originally 22 minutes for each side until 2012 when the switch was made to coincide with the traditional times of the Adult Nationals.  The team with the most wins is determined the winner.  If there are multiple teams with the same number of wins, spread is used to break the tie.  Matthew Silver of Connecticut became the first competitor to win two consecutive National School Scrabble Championship titles in 2007 and 2008.  He accumulated a 14-0 record in those two years.  In 2009, for the first time ever, the event was won by a team of 5th graders, Andy Hoang & Erik Salgado of Salem Elementary in North Carolina.  They were the last team to finish the tournament with an undefeated record (7-0).  Since then, the champion has finished either 6-1 (2010) or 7-1 (2011, 2012, 2013).  The winners have often been invited to be on Good Morning America and Jimmy Kimmel Live! .  The event has also received recognition from president Barack Obama and NBA superstar Shaquille O'Neal, who are advocates for the game themselves.  In 2012, Andy Hoang & Erik Salgado of North Carolina became the first team to win two NSSC titles, their first as 5th graders in 2009, and their second as 8th graders in 2012.  The 2013 NSSC was held in Washington D.C. 2013 marked the first time since 2009 that a previous champion will not be competing.  In 2010, 2011, and 2012, Andy Hoang, Erik Salgado, Bradley Robbins, and Evan McCarthy were champions that returned.  Only Andy Hoang and Erik Salgado were the only ones to repeat during the streak.  With Kevin Bowerman and Raymond Gao's win in 2013, North Carolina became the first state to hold 3 National titles (Winning 3 of the last 5 tournaments: 2009, 2012, & 2013), the most of all the states or districts in North America.\n\nQuestion: What school did the author of \"2016: Obama's America\" hold the role of president of from 2010 to 2012?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"author_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the author of the film.\"\n    },\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film mentioned in the question.\"\n    },\n    \"school_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the school where the author held a presidential role.\"\n    },\n    \"role\": {\n      \"type\": \"string\",\n      \"description\": \"The role held by the author at the school.\"\n    },\n    \"start_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The start year of the author's role at the school.\"\n    },\n    \"end_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The end year of the author's role at the school.\"\n    }\n  },\n  \"required\": [\n    \"author_name\",\n    \"film_title\",\n    \"school_name\",\n    \"role\",\n    \"start_year\",\n    \"end_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "author_name",
-    "film_title",
-    "school_name",
-    "role",
-    "start_year",
-    "end_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "author_name": {
+        "type": "string",
+        "description": "The name of the author of the film."
+      },
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film mentioned in the question."
+      },
+      "school_name": {
+        "type": "string",
+        "description": "The name of the school where the author held a presidential role."
+      },
+      "role": {
+        "type": "string",
+        "description": "The role held by the author at the school."
+      },
+      "start_year": {
+        "type": "integer",
+        "description": "The start year of the author's role at the school."
+      },
+      "end_year": {
+        "type": "integer",
+        "description": "The end year of the author's role at the school."
+      }
+    },
+    "required": [
+      "author_name",
+      "film_title",
+      "school_name",
+      "role",
+      "start_year",
+      "end_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

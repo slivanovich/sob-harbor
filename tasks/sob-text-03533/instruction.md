@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Praha-Smíchov railway station: Praha-Smíchov railway station (Czech: "Nádraží Praha-Smíchov" , ] ) is a major railway station in Prague, Czech Republic, located in Smíchov, in the south-west of the city.  It serves as a major railway station on the Czech national rail network, and is connected to the rest of Prague by its metro station of the same name and numerous tram routes which stop on Nádražní street outside the station.  It is also a major bus terminus for lines going to the south and southwest of Prague and beyond.  In 2009 the station served almost 4 million people.
-
-Penychain railway station: Penychain railway station, formerly known as (and still sometimes referred to as) Butlins Penychain railway station, is located by an over bridge at Pen Y Chain on the Llŷn Peninsula in Gwynedd, Wales.  This railway station is an unstaffed halt on the Cambrian Coast Railway with passenger services to Pwllheli, Porthmadog, Harlech, Barmouth, Machynlleth and Shrewsbury.  For many years the station served the large Butlins Holiday Camp at Penychain.
-
-Nanjing South Railway Station: The Nanjing South Railway Station () (IATA: NKJ) is a high-speed railway station in Nanjing, Jiangsu, People's Republic of China, serving the Jinghu High-Speed Railway, Huning Intercity Rail, Ninghang Passenger Railway and the Huhanrong (Shanghai–Wuhan–Chengdu) Railways.  The New Nanjing South Railway Station station is located a few kilometres south of downtown Nanjing.  The station's construction site is already connected with central Nanjing by Line 1, Line 3 and Line S1 of Nanjing Metro.  On September 30, 2016 the metro station served a peak volume of 102,300 passengers.  According to CCTV, it is the world's second largest railway station in terms of GFA (Gross Floor Area) at 458,000 square metre (4,929,871 square ft).  The dimension of the main roof is 456m x 216m (excluding smaller roof on both sides of the main roof), the main roof is constructed with steel weighing more than 8000 tons.  The roof on top of the waiting hall area (part of the main roof) is 72,000 square meter (775,001 square ft).  The entire railway station has 128 escalators, and 28 platforms (a combination of island-platforms and side-platforms).  At the peak of the construction phase, there were more than 20,000 construction workers and engineers at work.  Solar panels cover the majority of the railway station roof and are capable of providing 7.17 MW (megawatt) of electricity.
-
-Collingbourne railway station: Collingbourne railway station served the village of Collingbourne Ducis in Wiltshire, England.  It was on the Midland and South Western Junction Railway (M&SWJR) and opened on 1 May 1882 on the southern section of the Swindon, Marlborough and Andover Railway (SM&AR) which at that stage terminated at the-then next station to the north, Grafton and Burbage.  In 1883, the SM&AR gained running rights over the Great Western Railway branch from Savernake Low Level to Marlborough and through services started between Swindon Town and Andover Junction railway station, and on down the Sprat and Winkle Line to Southampton.  The same year, the Swindon and Cheltenham Extension Railway (S&CER) opened north of Swindon as far as Cirencester and in 1884 the SM&AR and the S&CER merged to form the M&SWJR.  The line was completed as a through-route from the Midlands to the south coast by the completion of the northern end of the route between Cirencester and Cheltenham in 1891.
-
-Walker railway station: Walker railway station, known as Low Walker until 1889, served Walker, a residential suburb of Newcastle, in Tyne and Wear.  It was situated on the North Eastern Railway's Riverside Branch from to Tynemouth via .  The station served as a passenger halt and goods depot for shipping companies such as Armstrong Whitworth and other land-based companies including the Northern Wood Haskinizing Company.
-
-Whitworth, Lancashire: Whitworth is a small town and civil parish in Lancashire, England, amongst the foothills of the Pennines between Bacup, to the north, and Rochdale, to the south.  It had a population of 7,500 at the 2011 Census.
-
-Parkdale station (Toronto): Parkdale railway station or North Parkdale railway station as it was also known was a passenger train station in Toronto, Ontario, Canada.  The station served the Parkdale village on the then-outskirts of Toronto.  The station served trains on the Canadian Northern Railway and Credit Valley Railway, later the Canadian Pacific Railway, railways.  It was situated at the intersection of Dufferin Street and Queen Street West.  The train station was decommissioned in the 1970s.
-
-Castlebellingham railway station: Castlebellingham railway station served the village of Castlebellingham on the Dublin to Belfast railway line between Drogheda railway station and Dundalk railway station.  It was north of where the line branched to Ardee.  The station opened on 1 April 1851, closed to goods on 2 December 1974 and was finally closed on 6 September 1976.
-
-Ingrow (East) railway station: Ingrow (East) railway station was a small English railway station on the Keighley-Queensbury section of the Queensbury Lines which ran between Bradford, Halifax and Keighley via Queensbury.  The station served the prosperous industrial district of Keighley and was only a short distance away from the Ingrow (West) railway station on the Midland Railway Oxenhope Branch, which is now the preserved Keighley and Worth Valley Railway.
-
-Whitworth railway station: Whitworth railway station served the town of Whitworth in Rossendale, Lancashire, England, from 1870 until closure in 1947.
-
-Question: what is the population of town that Whitworth railway station served at the 2011 Census?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "town_name": {
-      "type": "string",
-      "description": "The name of the town."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "population": {
-      "type": "integer",
-      "description": "The population of the town."
-    },
-    "census_year": {
-      "type": "integer",
-      "description": "The year the population census was conducted."
-    },
-    "served_by_station": {
-      "type": "string",
-      "description": "The name of the railway station that served the town."
+    {
+      "role": "user",
+      "content": "Context:\nPraha-Smíchov railway station: Praha-Smíchov railway station (Czech: \"Nádraží Praha-Smíchov\" , ] ) is a major railway station in Prague, Czech Republic, located in Smíchov, in the south-west of the city.  It serves as a major railway station on the Czech national rail network, and is connected to the rest of Prague by its metro station of the same name and numerous tram routes which stop on Nádražní street outside the station.  It is also a major bus terminus for lines going to the south and southwest of Prague and beyond.  In 2009 the station served almost 4 million people.\n\nPenychain railway station: Penychain railway station, formerly known as (and still sometimes referred to as) Butlins Penychain railway station, is located by an over bridge at Pen Y Chain on the Llŷn Peninsula in Gwynedd, Wales.  This railway station is an unstaffed halt on the Cambrian Coast Railway with passenger services to Pwllheli, Porthmadog, Harlech, Barmouth, Machynlleth and Shrewsbury.  For many years the station served the large Butlins Holiday Camp at Penychain.\n\nNanjing South Railway Station: The Nanjing South Railway Station () (IATA: NKJ) is a high-speed railway station in Nanjing, Jiangsu, People's Republic of China, serving the Jinghu High-Speed Railway, Huning Intercity Rail, Ninghang Passenger Railway and the Huhanrong (Shanghai–Wuhan–Chengdu) Railways.  The New Nanjing South Railway Station station is located a few kilometres south of downtown Nanjing.  The station's construction site is already connected with central Nanjing by Line 1, Line 3 and Line S1 of Nanjing Metro.  On September 30, 2016 the metro station served a peak volume of 102,300 passengers.  According to CCTV, it is the world's second largest railway station in terms of GFA (Gross Floor Area) at 458,000 square metre (4,929,871 square ft).  The dimension of the main roof is 456m x 216m (excluding smaller roof on both sides of the main roof), the main roof is constructed with steel weighing more than 8000 tons.  The roof on top of the waiting hall area (part of the main roof) is 72,000 square meter (775,001 square ft).  The entire railway station has 128 escalators, and 28 platforms (a combination of island-platforms and side-platforms).  At the peak of the construction phase, there were more than 20,000 construction workers and engineers at work.  Solar panels cover the majority of the railway station roof and are capable of providing 7.17 MW (megawatt) of electricity.\n\nCollingbourne railway station: Collingbourne railway station served the village of Collingbourne Ducis in Wiltshire, England.  It was on the Midland and South Western Junction Railway (M&SWJR) and opened on 1 May 1882 on the southern section of the Swindon, Marlborough and Andover Railway (SM&AR) which at that stage terminated at the-then next station to the north, Grafton and Burbage.  In 1883, the SM&AR gained running rights over the Great Western Railway branch from Savernake Low Level to Marlborough and through services started between Swindon Town and Andover Junction railway station, and on down the Sprat and Winkle Line to Southampton.  The same year, the Swindon and Cheltenham Extension Railway (S&CER) opened north of Swindon as far as Cirencester and in 1884 the SM&AR and the S&CER merged to form the M&SWJR.  The line was completed as a through-route from the Midlands to the south coast by the completion of the northern end of the route between Cirencester and Cheltenham in 1891.\n\nWalker railway station: Walker railway station, known as Low Walker until 1889, served Walker, a residential suburb of Newcastle, in Tyne and Wear.  It was situated on the North Eastern Railway's Riverside Branch from to Tynemouth via .  The station served as a passenger halt and goods depot for shipping companies such as Armstrong Whitworth and other land-based companies including the Northern Wood Haskinizing Company.\n\nWhitworth, Lancashire: Whitworth is a small town and civil parish in Lancashire, England, amongst the foothills of the Pennines between Bacup, to the north, and Rochdale, to the south.  It had a population of 7,500 at the 2011 Census.\n\nParkdale station (Toronto): Parkdale railway station or North Parkdale railway station as it was also known was a passenger train station in Toronto, Ontario, Canada.  The station served the Parkdale village on the then-outskirts of Toronto.  The station served trains on the Canadian Northern Railway and Credit Valley Railway, later the Canadian Pacific Railway, railways.  It was situated at the intersection of Dufferin Street and Queen Street West.  The train station was decommissioned in the 1970s.\n\nCastlebellingham railway station: Castlebellingham railway station served the village of Castlebellingham on the Dublin to Belfast railway line between Drogheda railway station and Dundalk railway station.  It was north of where the line branched to Ardee.  The station opened on 1 April 1851, closed to goods on 2 December 1974 and was finally closed on 6 September 1976.\n\nIngrow (East) railway station: Ingrow (East) railway station was a small English railway station on the Keighley-Queensbury section of the Queensbury Lines which ran between Bradford, Halifax and Keighley via Queensbury.  The station served the prosperous industrial district of Keighley and was only a short distance away from the Ingrow (West) railway station on the Midland Railway Oxenhope Branch, which is now the preserved Keighley and Worth Valley Railway.\n\nWhitworth railway station: Whitworth railway station served the town of Whitworth in Rossendale, Lancashire, England, from 1870 until closure in 1947.\n\nQuestion: what is the population of town that Whitworth railway station served at the 2011 Census?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"town_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the town.\"\n    },\n    \"population\": {\n      \"type\": \"integer\",\n      \"description\": \"The population of the town.\"\n    },\n    \"census_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the population census was conducted.\"\n    },\n    \"served_by_station\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the railway station that served the town.\"\n    }\n  },\n  \"required\": [\n    \"town_name\",\n    \"population\",\n    \"census_year\",\n    \"served_by_station\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "town_name",
-    "population",
-    "census_year",
-    "served_by_station"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "town_name": {
+        "type": "string",
+        "description": "The name of the town."
+      },
+      "population": {
+        "type": "integer",
+        "description": "The population of the town."
+      },
+      "census_year": {
+        "type": "integer",
+        "description": "The year the population census was conducted."
+      },
+      "served_by_station": {
+        "type": "string",
+        "description": "The name of the railway station that served the town."
+      }
+    },
+    "required": [
+      "town_name",
+      "population",
+      "census_year",
+      "served_by_station"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

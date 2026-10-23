@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Ray Price (motorcycles): Ray Price (June 25, 1937 – December 16, 2015) was an American motorcycle drag racer and is credited as the “Father of the Funnybike".  He was also a renowned designer, engineer and the first drag racer to be sponsored by Harley-Davidson.  He also developed the first wheelie bar, and the two-speed automatic racing transmission for drag racing motorcycles.  This was the first transmission that enabled the first motorcycle to ever achieve 200 mph and has now become standard in the sport.  Price also created the Pro Fuel drag racing class.  Price is an inducted member of five halls of fame including the American Motorcycle Association Hall of Fame, Sturgis Motorcycle Hall of Fame, the North Carolina Sport Hall of Fame, and the North Carolina Drag Racing Hall of Fame.
-
-Kenny Bernstein: Kenny Bernstein (born September 6, 1944) is an American drag racer and former NASCAR and IndyCar team owner.  He is nicknamed the "Bud King" for his success in the Budweiser King funny car and dragster.  He has also been nicknamed "The King of Speed," because he was the first driver to break 300 miles per hour in the standing-start quarter mile.  Bernstein owned King Racing, which he drove for in the NHRA and fielded various cars in other racing series such as IndyCar and NASCAR.  Bernstein retired from full-time competition in 2002 and moved his son Brandon into the Bud King Top Fuel dragster, but returned to finish the season in place of his son after Brandon suffered a severe injury.  With the exception of a brief return to Funny Car in 2006, Bernstein did not return to the car and instead continued to run his team until the end of the 2011 season when he left drag racing altogether.
-
-John Bradley (nostalgia drag racer): John Bradley (29 October 1925, San Bernardino, California-13 December 2012, Dolan Springs, Arizona), nicknamed "Mr. Flathead", is a pioneering American drag racer and land speed racer.
-
-Eddie Hill: Eddie Hill (born March 6, 1936) is a retired American drag racer who won numerous drag racing championships on land and water.  Hill had the first run in the four second range (4.990 seconds), which earned him the nickname "Four Father of Drag Racing."  His other nicknames include "The Thrill", "Holeshot Hill", and "Fast Eddie".  In 1960, he set the NHRA record for the largest improvement in the elapsed time (e.t.) when he drove the quarter mile in 8.84 seconds to break the previous 9.40-second record.
-
-Bob Glidden: Bob Glidden (born 1944) is an American drag racer.  He was retired from Pro Stock racing in 1997 and returned in 2010.  Glidden retired as the driver with the most wins in National Hot Rod Association (NHRA) history at that time (a feat recently topped by 16 time Funny Car champion John Force), and he is currently the third most successful drag racer of the professional class drivers (sixth when counting sportsman national event winners).  Glidden won 85 NHRA National Events.  In the Professional classes, he currently is behind Force (141) and Warren Johnson (97).  Glidden's ten Pro Stock championships included five in a row beginning in 1985.  Among his numerous accomplishments, Glidden won nine straight NHRA national races in 1979 and was the No. 1 qualifier 23 times in a row, including the entire 1987 season.  At one point, he won 50 eliminations rounds in a row.
-
-Bruce Larson: Bruce Larson is a retired American drag racer from Camp Hill, Pennsylvania.  He became nationally known for his match races.  He quit drag racing during the early 1980s.  He returned in 1985 on the National Hot Rod Association (NHRA) Funny Car tour and won the 1989 NHRA Funny Car championship.  Larson is remembered for his red, white, and blue USA-1 Chevrolet Camaros.
-
-Top Fuel: Top Fuel dragsters are the quickest accelerating racing cars in the world and the fastest sanctioned category of drag racers, with the fastest competitors reaching speeds of 335 mph and finishing the 1000 foot runs in 3.64 seconds.
-
-Leah Pritchett: Leah C. Pritchett (née Pruett, born May 26, 1988 in Redlands, California) is an American drag racer, currently driving an NHRA Top Fuel dragster for Don Schumacher Racing after previously being employed at Bob Vandergriff Racing before the company closed in April 2016.  Her first career national event win on the professional level came February 28, 2016 at the Carquest Auto Parts NHRA Nationals in Chandler, Arizona, defeating Brittany Force in the first all-female final round in Top Fuel since 1982.  Pritchett debuted in Top Fuel in 2013 with Dote Racing after previously competing in Pro Mod and Nostalgia Funny Car.  Papa John's and FireAide 2000 have returned as primary sponsors for Pritchett during the 2017 NHRA Mello Yello Drag Racing Series season.
-
-Roland Leong: Roland Leong (born 1945) is an American drag racer, whose "Hawaiian" Top Fuel dragsters swept the National Hot Rod Association's two National Events, the Winternationals at the Pomona Fairgrounds and the U.S. Nationals in Indianapolis, two years consecutively, in 1965 and again in 1966.  This feat by Leong's entries was accomplished with two different drivers, as Don "the Snake" Prudhomme scored the back-to-back victories in 1965, followed by Mike Snively in 1966.  In 1967, Leong failed to three-peat at Pomona or Indianapolis, but did triumph that year at two popular independent drag races, the notoriously fierce March Meet in Bakersfield, and the Hot Rod Magazine Championships in Riverside, CA.
-
-Antron Brown: Antron Brown (born c, 1976) is an American drag racer, currently driving the Matco Tools Toyota for Don Schumacher Racing in NHRA's Top Fuel division.  He is known for winning the 2012, 2015 and 2016 Top Fuel championships.  Antron is the sport's first African American champion.
-
-Question: American Drag racer Antron Brown has been known to compete in championships reaching what speed?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "racer_name": {
-      "type": "string",
-      "description": "The name of the drag racer."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "racing_division": {
-      "type": "string",
-      "description": "The drag racing division the racer competes in."
-    },
-    "max_speed_mph": {
-      "type": "integer",
-      "description": "The maximum speed reached by competitors in the specified racing division, in miles per hour."
+    {
+      "role": "user",
+      "content": "Context:\nRay Price (motorcycles): Ray Price (June 25, 1937 – December 16, 2015) was an American motorcycle drag racer and is credited as the “Father of the Funnybike\".  He was also a renowned designer, engineer and the first drag racer to be sponsored by Harley-Davidson.  He also developed the first wheelie bar, and the two-speed automatic racing transmission for drag racing motorcycles.  This was the first transmission that enabled the first motorcycle to ever achieve 200 mph and has now become standard in the sport.  Price also created the Pro Fuel drag racing class.  Price is an inducted member of five halls of fame including the American Motorcycle Association Hall of Fame, Sturgis Motorcycle Hall of Fame, the North Carolina Sport Hall of Fame, and the North Carolina Drag Racing Hall of Fame.\n\nKenny Bernstein: Kenny Bernstein (born September 6, 1944) is an American drag racer and former NASCAR and IndyCar team owner.  He is nicknamed the \"Bud King\" for his success in the Budweiser King funny car and dragster.  He has also been nicknamed \"The King of Speed,\" because he was the first driver to break 300 miles per hour in the standing-start quarter mile.  Bernstein owned King Racing, which he drove for in the NHRA and fielded various cars in other racing series such as IndyCar and NASCAR.  Bernstein retired from full-time competition in 2002 and moved his son Brandon into the Bud King Top Fuel dragster, but returned to finish the season in place of his son after Brandon suffered a severe injury.  With the exception of a brief return to Funny Car in 2006, Bernstein did not return to the car and instead continued to run his team until the end of the 2011 season when he left drag racing altogether.\n\nJohn Bradley (nostalgia drag racer): John Bradley (29 October 1925, San Bernardino, California-13 December 2012, Dolan Springs, Arizona), nicknamed \"Mr. Flathead\", is a pioneering American drag racer and land speed racer.\n\nEddie Hill: Eddie Hill (born March 6, 1936) is a retired American drag racer who won numerous drag racing championships on land and water.  Hill had the first run in the four second range (4.990 seconds), which earned him the nickname \"Four Father of Drag Racing.\"  His other nicknames include \"The Thrill\", \"Holeshot Hill\", and \"Fast Eddie\".  In 1960, he set the NHRA record for the largest improvement in the elapsed time (e.t.) when he drove the quarter mile in 8.84 seconds to break the previous 9.40-second record.\n\nBob Glidden: Bob Glidden (born 1944) is an American drag racer.  He was retired from Pro Stock racing in 1997 and returned in 2010.  Glidden retired as the driver with the most wins in National Hot Rod Association (NHRA) history at that time (a feat recently topped by 16 time Funny Car champion John Force), and he is currently the third most successful drag racer of the professional class drivers (sixth when counting sportsman national event winners).  Glidden won 85 NHRA National Events.  In the Professional classes, he currently is behind Force (141) and Warren Johnson (97).  Glidden's ten Pro Stock championships included five in a row beginning in 1985.  Among his numerous accomplishments, Glidden won nine straight NHRA national races in 1979 and was the No. 1 qualifier 23 times in a row, including the entire 1987 season.  At one point, he won 50 eliminations rounds in a row.\n\nBruce Larson: Bruce Larson is a retired American drag racer from Camp Hill, Pennsylvania.  He became nationally known for his match races.  He quit drag racing during the early 1980s.  He returned in 1985 on the National Hot Rod Association (NHRA) Funny Car tour and won the 1989 NHRA Funny Car championship.  Larson is remembered for his red, white, and blue USA-1 Chevrolet Camaros.\n\nTop Fuel: Top Fuel dragsters are the quickest accelerating racing cars in the world and the fastest sanctioned category of drag racers, with the fastest competitors reaching speeds of 335 mph and finishing the 1000 foot runs in 3.64 seconds.\n\nLeah Pritchett: Leah C. Pritchett (née Pruett, born May 26, 1988 in Redlands, California) is an American drag racer, currently driving an NHRA Top Fuel dragster for Don Schumacher Racing after previously being employed at Bob Vandergriff Racing before the company closed in April 2016.  Her first career national event win on the professional level came February 28, 2016 at the Carquest Auto Parts NHRA Nationals in Chandler, Arizona, defeating Brittany Force in the first all-female final round in Top Fuel since 1982.  Pritchett debuted in Top Fuel in 2013 with Dote Racing after previously competing in Pro Mod and Nostalgia Funny Car.  Papa John's and FireAide 2000 have returned as primary sponsors for Pritchett during the 2017 NHRA Mello Yello Drag Racing Series season.\n\nRoland Leong: Roland Leong (born 1945) is an American drag racer, whose \"Hawaiian\" Top Fuel dragsters swept the National Hot Rod Association's two National Events, the Winternationals at the Pomona Fairgrounds and the U.S. Nationals in Indianapolis, two years consecutively, in 1965 and again in 1966.  This feat by Leong's entries was accomplished with two different drivers, as Don \"the Snake\" Prudhomme scored the back-to-back victories in 1965, followed by Mike Snively in 1966.  In 1967, Leong failed to three-peat at Pomona or Indianapolis, but did triumph that year at two popular independent drag races, the notoriously fierce March Meet in Bakersfield, and the Hot Rod Magazine Championships in Riverside, CA.\n\nAntron Brown: Antron Brown (born c, 1976) is an American drag racer, currently driving the Matco Tools Toyota for Don Schumacher Racing in NHRA's Top Fuel division.  He is known for winning the 2012, 2015 and 2016 Top Fuel championships.  Antron is the sport's first African American champion.\n\nQuestion: American Drag racer Antron Brown has been known to compete in championships reaching what speed?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"racer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the drag racer.\"\n    },\n    \"racing_division\": {\n      \"type\": \"string\",\n      \"description\": \"The drag racing division the racer competes in.\"\n    },\n    \"max_speed_mph\": {\n      \"type\": \"integer\",\n      \"description\": \"The maximum speed reached by competitors in the specified racing division, in miles per hour.\"\n    }\n  },\n  \"required\": [\n    \"racer_name\",\n    \"racing_division\",\n    \"max_speed_mph\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "racer_name",
-    "racing_division",
-    "max_speed_mph"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "racer_name": {
+        "type": "string",
+        "description": "The name of the drag racer."
+      },
+      "racing_division": {
+        "type": "string",
+        "description": "The drag racing division the racer competes in."
+      },
+      "max_speed_mph": {
+        "type": "integer",
+        "description": "The maximum speed reached by competitors in the specified racing division, in miles per hour."
+      }
+    },
+    "required": [
+      "racer_name",
+      "racing_division",
+      "max_speed_mph"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

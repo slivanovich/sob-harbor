@@ -1,77 +1,54 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Ron and Tammys: "Ron and Tammys" is the second episode of the fourth season of the NBC sitcom "Parks and Recreation".  It originally aired on NBC on September 29, 2011.  In the episode, Ron Swanson (Nick Offerman) is confronted by his first ex-wife, Tammy 1 (Patricia Clarkson) who has a malevolent influence on him, and Leslie Knope (Amy Poehler) becomes involved in Ron's personal life.  This episode marks the first and only appearance of Ron's mother, Tamara (Paula Pell).  It garnered 4.33 million viewers, an increase in viewers from the previous episode's 4.11 million.
-
-List of Parks and Recreation characters: The primary characters of the American television comedy series "Parks and Recreation" are the employees of the parks department of Pawnee, a fictional Indiana town.  The protagonist is Leslie Knope (Amy Poehler), the deputy parks director as well as serving on city council, and the rest of the ensemble cast consists of her friends and co-workers, including nurse Ann Perkins (Rashida Jones), parks director Ron Swanson (Nick Offerman), and parks department employees Tom Haverford (Aziz Ansari), April Ludgate (Aubrey Plaza), Andy Dwyer (Chris Pratt), Jerry Gergich (Jim O'Heir), and Donna Meagle (Retta).
-
-Nick Offerman: Nicholas "Nick" Offerman (born June 26, 1970) is an American actor, voice actor, producer, writer, comedian and carpenter widely known for his breakout role as Ron Swanson in the acclaimed NBC sitcom "Parks and Recreation", for which he received the Television Critics Association Award for Individual Achievement in Comedy.  His first major television role since the end of "Parks and Recreation" was his role as Karl Weathers in the FX series "Fargo", for which he received a Critics' Choice Television Award nomination for Best Supporting Actor in a Movie/Miniseries and Gavin in the Ice Age franchise.
-
-Parks and Recreation: Parks and Recreation is an American political comedy television sitcom starring Amy Poehler as Leslie Knope, a perky, mid-level bureaucrat in the Parks Department of Pawnee, a fictional town in Indiana.  Created by Greg Daniels and Michael Schur, the series aired on NBC from April 9, 2009 to February 24, 2015, for 125 episodes, over seven seasons.  It was written by the same writers and uses the same filming style as "The Office", with the same implication of a documentary crew filming everyone.  The ensemble and supporting cast feature Rashida Jones as Ann Perkins, Paul Schneider as Mark Brendanawicz, Aziz Ansari as Tom Haverford, Nick Offerman as Ron Swanson, Aubrey Plaza as April Ludgate, Chris Pratt as Andy Dwyer, Adam Scott as Ben Wyatt, Rob Lowe as Chris Traeger, Jim O'Heir as Garry "Jerry" or "Larry" Gergich, Retta as Donna Meagle, and Billy Eichner as Craig Middlebrooks.
-
-Born &amp; Raised (Parks and Recreation): "Born & Raised" is the third episode of the fourth season of the American comedy television series "Parks and Recreation", and the 49th overall episode of the series.  It originally aired on NBC in the United States on October 6, 2011.  In the episode, Leslie Knope (Amy Poehler) promotes a book she has written about Pawnee to advance her campaign, but is sidetracked when Joan Callamezzo (Mo Collins) points out that she was not born in Pawnee.  Meanwhile, Ann Perkins (Rashida Jones) attempts to bond with April Ludgate (Aubrey Plaza) and Ron Swanson (Nick Offerman), while Tom Haverford (Aziz Ansari) and Ben Wyatt (Adam Scott) attempt to charm the recently divorced Callamezzo.
-
-April Ludgate: April Roberta Ludgate-Dwyer (portrayed by Aubrey Plaza) is a fictional character in the NBC comedy "Parks and Recreation".  She is first seen as an apathetic college student working as an intern in the Pawnee Department of Parks and Recreation, before being hired as Ron Swanson's assistant.  She later becomes the Deputy Director of Animal Control.  April, along with Plaza's performance, garnered universal acclaim and has gained popularity for her goth-like behavior and deadpan-style comedy.
-
-The Kings of Summer: The Kings of Summer (originally Toy's House) is a 2013 American independent coming-of-age comedy-drama film that premiered at the 2013 Sundance Film Festival.  It stars Nick Robinson, Moisés Arias, Gabriel Basso, and Nick Offerman.
-
-American Graffiti: American Graffiti is a 1973 American coming-of-age comedy-drama film directed and co-written by George Lucas starring Richard Dreyfuss, Ron Howard, Paul Le Mat, Harrison Ford, Charles Martin Smith, Cindy Williams, Candy Clark, Mackenzie Phillips, Bo Hopkins, and Wolfman Jack.  Suzanne Somers and Joe Spano also appear in the film.  Set in Modesto, California in 1962, the film is a study of the cruising and rock and roll cultures popular among the post–World War II baby boom generation.  The film is told in a series of vignettes, telling the story of a group of teenagers and their adventures over a single night.
-
-Endrendrum Punnagai: Endrendrum Punnagai (English: Everlasting Smile ) is a 2013 Indian Tamil coming-of-age comedy-drama film written and directed by I. Ahmed starring Jiiva, Trisha Krishnan, Vinay Rai and Santhanam.  The film has music by Harris Jayaraj and cinematography by R. Madhi.  The film was launched officially in Chennai on 29 June 2012.  Upon its release on 20 December 2013, the film met with positive reviews from critics and became a commercial success.
-
-John Hughes (filmmaker): John Wilden Hughes Jr. (February 18, 1950 – August 6, 2009) was an American film director, producer, and screenwriter.  He directed and/or scripted some of the most successful comedy films of the 1980s and early 1990s including the comedy "National Lampoon's Vacation" (1983), the coming-of-age comedy "Sixteen Candles" (1984), the teen sci-fi comedy "Weird Science" (1985), the coming-of-age comedy-drama "The Breakfast Club" (1985), the coming-of-age comedy "Ferris Bueller's Day Off" (1986), the romantic comedy-drama "Pretty in Pink" (1986), the romance "Some Kind of Wonderful" (1987), the comedies "Planes, Trains and Automobiles" (1987) and "Uncle Buck" (1989), the Christmas family comedy "Home Alone" (1990) and its sequel, "" (1992).
-
-Question: Where did the 2013 American independent coming-of-age comedy-drama film starring the actor who played Ron Swanson in "Parks and Recreation" premier?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_release_year": {
-      "type": "integer",
-      "description": "The release year of the film."
-    },
-    "film_genre": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "The genres of the film."
-    },
-    "starring_actor_name": {
-      "type": "string",
-      "description": "The name of the actor starring in the film."
-    },
-    "actor_role_in_parks_and_recreation": {
-      "type": "string",
-      "description": "The character played by the actor in 'Parks and Recreation'."
-    },
-    "premiere_location": {
-      "type": "string",
-      "description": "The location where the film premiered."
+    {
+      "role": "user",
+      "content": "Context:\nRon and Tammys: \"Ron and Tammys\" is the second episode of the fourth season of the NBC sitcom \"Parks and Recreation\".  It originally aired on NBC on September 29, 2011.  In the episode, Ron Swanson (Nick Offerman) is confronted by his first ex-wife, Tammy 1 (Patricia Clarkson) who has a malevolent influence on him, and Leslie Knope (Amy Poehler) becomes involved in Ron's personal life.  This episode marks the first and only appearance of Ron's mother, Tamara (Paula Pell).  It garnered 4.33 million viewers, an increase in viewers from the previous episode's 4.11 million.\n\nList of Parks and Recreation characters: The primary characters of the American television comedy series \"Parks and Recreation\" are the employees of the parks department of Pawnee, a fictional Indiana town.  The protagonist is Leslie Knope (Amy Poehler), the deputy parks director as well as serving on city council, and the rest of the ensemble cast consists of her friends and co-workers, including nurse Ann Perkins (Rashida Jones), parks director Ron Swanson (Nick Offerman), and parks department employees Tom Haverford (Aziz Ansari), April Ludgate (Aubrey Plaza), Andy Dwyer (Chris Pratt), Jerry Gergich (Jim O'Heir), and Donna Meagle (Retta).\n\nNick Offerman: Nicholas \"Nick\" Offerman (born June 26, 1970) is an American actor, voice actor, producer, writer, comedian and carpenter widely known for his breakout role as Ron Swanson in the acclaimed NBC sitcom \"Parks and Recreation\", for which he received the Television Critics Association Award for Individual Achievement in Comedy.  His first major television role since the end of \"Parks and Recreation\" was his role as Karl Weathers in the FX series \"Fargo\", for which he received a Critics' Choice Television Award nomination for Best Supporting Actor in a Movie/Miniseries and Gavin in the Ice Age franchise.\n\nParks and Recreation: Parks and Recreation is an American political comedy television sitcom starring Amy Poehler as Leslie Knope, a perky, mid-level bureaucrat in the Parks Department of Pawnee, a fictional town in Indiana.  Created by Greg Daniels and Michael Schur, the series aired on NBC from April 9, 2009 to February 24, 2015, for 125 episodes, over seven seasons.  It was written by the same writers and uses the same filming style as \"The Office\", with the same implication of a documentary crew filming everyone.  The ensemble and supporting cast feature Rashida Jones as Ann Perkins, Paul Schneider as Mark Brendanawicz, Aziz Ansari as Tom Haverford, Nick Offerman as Ron Swanson, Aubrey Plaza as April Ludgate, Chris Pratt as Andy Dwyer, Adam Scott as Ben Wyatt, Rob Lowe as Chris Traeger, Jim O'Heir as Garry \"Jerry\" or \"Larry\" Gergich, Retta as Donna Meagle, and Billy Eichner as Craig Middlebrooks.\n\nBorn &amp; Raised (Parks and Recreation): \"Born & Raised\" is the third episode of the fourth season of the American comedy television series \"Parks and Recreation\", and the 49th overall episode of the series.  It originally aired on NBC in the United States on October 6, 2011.  In the episode, Leslie Knope (Amy Poehler) promotes a book she has written about Pawnee to advance her campaign, but is sidetracked when Joan Callamezzo (Mo Collins) points out that she was not born in Pawnee.  Meanwhile, Ann Perkins (Rashida Jones) attempts to bond with April Ludgate (Aubrey Plaza) and Ron Swanson (Nick Offerman), while Tom Haverford (Aziz Ansari) and Ben Wyatt (Adam Scott) attempt to charm the recently divorced Callamezzo.\n\nApril Ludgate: April Roberta Ludgate-Dwyer (portrayed by Aubrey Plaza) is a fictional character in the NBC comedy \"Parks and Recreation\".  She is first seen as an apathetic college student working as an intern in the Pawnee Department of Parks and Recreation, before being hired as Ron Swanson's assistant.  She later becomes the Deputy Director of Animal Control.  April, along with Plaza's performance, garnered universal acclaim and has gained popularity for her goth-like behavior and deadpan-style comedy.\n\nThe Kings of Summer: The Kings of Summer (originally Toy's House) is a 2013 American independent coming-of-age comedy-drama film that premiered at the 2013 Sundance Film Festival.  It stars Nick Robinson, Moisés Arias, Gabriel Basso, and Nick Offerman.\n\nAmerican Graffiti: American Graffiti is a 1973 American coming-of-age comedy-drama film directed and co-written by George Lucas starring Richard Dreyfuss, Ron Howard, Paul Le Mat, Harrison Ford, Charles Martin Smith, Cindy Williams, Candy Clark, Mackenzie Phillips, Bo Hopkins, and Wolfman Jack.  Suzanne Somers and Joe Spano also appear in the film.  Set in Modesto, California in 1962, the film is a study of the cruising and rock and roll cultures popular among the post–World War II baby boom generation.  The film is told in a series of vignettes, telling the story of a group of teenagers and their adventures over a single night.\n\nEndrendrum Punnagai: Endrendrum Punnagai (English: Everlasting Smile ) is a 2013 Indian Tamil coming-of-age comedy-drama film written and directed by I. Ahmed starring Jiiva, Trisha Krishnan, Vinay Rai and Santhanam.  The film has music by Harris Jayaraj and cinematography by R. Madhi.  The film was launched officially in Chennai on 29 June 2012.  Upon its release on 20 December 2013, the film met with positive reviews from critics and became a commercial success.\n\nJohn Hughes (filmmaker): John Wilden Hughes Jr. (February 18, 1950 – August 6, 2009) was an American film director, producer, and screenwriter.  He directed and/or scripted some of the most successful comedy films of the 1980s and early 1990s including the comedy \"National Lampoon's Vacation\" (1983), the coming-of-age comedy \"Sixteen Candles\" (1984), the teen sci-fi comedy \"Weird Science\" (1985), the coming-of-age comedy-drama \"The Breakfast Club\" (1985), the coming-of-age comedy \"Ferris Bueller's Day Off\" (1986), the romantic comedy-drama \"Pretty in Pink\" (1986), the romance \"Some Kind of Wonderful\" (1987), the comedies \"Planes, Trains and Automobiles\" (1987) and \"Uncle Buck\" (1989), the Christmas family comedy \"Home Alone\" (1990) and its sequel, \"\" (1992).\n\nQuestion: Where did the 2013 American independent coming-of-age comedy-drama film starring the actor who played Ron Swanson in \"Parks and Recreation\" premier?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"film_release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film.\"\n    },\n    \"film_genre\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"The genres of the film.\"\n    },\n    \"starring_actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor starring in the film.\"\n    },\n    \"actor_role_in_parks_and_recreation\": {\n      \"type\": \"string\",\n      \"description\": \"The character played by the actor in 'Parks and Recreation'.\"\n    },\n    \"premiere_location\": {\n      \"type\": \"string\",\n      \"description\": \"The location where the film premiered.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"film_release_year\",\n    \"film_genre\",\n    \"starring_actor_name\",\n    \"actor_role_in_parks_and_recreation\",\n    \"premiere_location\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "film_release_year",
-    "film_genre",
-    "starring_actor_name",
-    "actor_role_in_parks_and_recreation",
-    "premiere_location"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "film_release_year": {
+        "type": "integer",
+        "description": "The release year of the film."
+      },
+      "film_genre": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The genres of the film."
+      },
+      "starring_actor_name": {
+        "type": "string",
+        "description": "The name of the actor starring in the film."
+      },
+      "actor_role_in_parks_and_recreation": {
+        "type": "string",
+        "description": "The character played by the actor in 'Parks and Recreation'."
+      },
+      "premiere_location": {
+        "type": "string",
+        "description": "The location where the film premiered."
+      }
+    },
+    "required": [
+      "film_title",
+      "film_release_year",
+      "film_genre",
+      "starring_actor_name",
+      "actor_role_in_parks_and_recreation",
+      "premiere_location"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

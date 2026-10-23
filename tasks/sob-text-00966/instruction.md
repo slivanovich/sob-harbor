@@ -1,94 +1,71 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Walter G. O'Connell Copiague High School: Walter G. O'Connell Copiague High School is an American four-year college preparatory public high school in the hamlet of Copiague in Suffolk County, New York.  Commonly referred to as "Copiague High School," the school is named after its founder and first principal Walter G. O'Connell.
-
-New York State Route 108: New York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.  It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.  Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.  NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.
-
-Merrick Road: Merrick Road, known as Merrick Boulevard inside New York City, is an east–west urban arterial in Queens, Nassau, and Suffolk counties, New York, United States.  It runs east from the Queens neighborhood of Jamaica through Merrick past the county line between Nassau and Suffolk into Amityville, where it becomes Montauk Highway at the Amityville–Copiague village/hamlet line.  The easternmost portion of Merrick Road, from Carman Mill Road to its eastern terminus, signed as part of New York State Route 27A (NY 27A).  At one time, the entire length of Merrick Road was signed as NY 27A; currently, the entire portion within Nassau County is currently designated as the unsigned County Route 27 (CR 27).  Merrick Road travels along an old right-of-way that was one of the original paths across southern Long Island, stretching from Queens to Montauk Point.
-
-Copiague Harbor, New York: Copiague Harbor is an incorporated community in the hamlet of Copiague.  It is located south of Merrick Road (or Montauk Highway), off of South Great Neck Road in Suffolk County, New York, USA, on the South Shore of Long Island.  It is sometimes referred to as Great Neck Landing;
-
-New York State Route 454: New York State Route 454 (NY 454), also known as the Suffolk County Veterans Memorial Highway or simply Vets Highway, is a 13.67 mi east–west divided highway in western and central Suffolk County on Long Island in New York.  It spans from NY 25 (Jericho Turnpike) in Commack to NY 27 (Sunrise Highway) in Holbrook.  The route provides access to the Long Island MacArthur Airport, as well as New York State and Suffolk County government offices, and at one time the Long Island Arena.  NY 454 serves as the northern terminus for the Northern State Parkway in Hauppauge, where a concurrency with NY 347 begins.
-
-Long Island: The Long Island is a large, densely-populated island off the East Coast of the United States, beginning at New York Harbor just 0.35 miles (0.56 km) from Manhattan Island and extending eastward into the Atlantic Ocean.  The island comprises four counties in the U.S. state of New York: Kings and Queens (which comprise the New York City boroughs of Brooklyn and Queens, respectively) to the west; and Nassau and Suffolk to the east.  However, many people in the New York metropolitan area (even those living in Brooklyn and Queens) colloquially use the term "Long Island" (or "The Island") exclusively to refer to the Nassau–Suffolk county area collectively, which is mainly suburban in character.  The majority of New York City residents now live on Long Island.
-
-KWO35: KWO35 (the third character is the letter "O," rather than "Zero") is a NOAA Weather Radio (NWR) station that serves the greater New York metropolitan area (which comprises New York City and the surrounding counties and municipalities in the Tri-state area), as well as marine interests from Sandy Hook, New Jersey to Fire island, New York (out to 40 miles from the Atlantic coastline), as well as New York Harbor, the western Long Island Sound, and the Long Island South Shore Base, and extending southward from Sandy Hook, to Little Egg Inlet NJ (out to 40 miles from the Atlantic coastline) (see County Cov.  section for all marine zones).  Programming originates from the National Weather Service weather forecast office (WFO) in Upton, New York (located east of New York City, on the grounds of Brookhaven National Laboratory, in central Suffolk County on eastern Long Island).
-
-North Bay Shore, New York: North Bay Shore is an unincorporated neighborhood on Long Island in the Town of Islip in Suffolk County, New York, United States.  The area is a suburb of New York City.  The hamlet of "North Bay Shore" is within the northern part of the CDP of Bay Shore, New York.  The census-designated place (CDP) named "North Bay Shore" is north of, and adjacent to, the hamlet named North Bay Shore.  The CDP of North Bay Shore contains the hamlet of Pine Aire and part of the hamlet of Brentwood.  The population of the North Bay Shore CDP was 18,944 at the time of the 2010 census.
-
-Copiague (LIRR station): Copiague is a station on the Babylon Branch of the Long Island Rail Road, located in Copiague, New York.  The station is located on Marconi Boulevard and Great Neck Road (Suffolk County Road 47), one block north of Oak Street (Suffolk County Road 12).  Copiague Station was originally built in 1902, and was rebuilt with temporary high-level platforms for the M1s on October 25th, 1968.  The original station was replaced with the current elevated station which opened on August 7, 1973.  It is one of the few railroad stations along the Babylon Branch west of Patchogue that was not originally built by the South Side Railroad of Long Island.
-
-Montauk Highway: Montauk Highway is an east–west road extending for 95 mi across the southern shore of Long Island in Suffolk County, New York, in the United States.  It extends from the Nassau County line in Amityville, where it connects to Merrick Road, to Montauk Point State Park at the very eastern end of Long Island in Montauk.  The highway is known by several designations along its routing, primarily New York State Route 27A (NY 27A) from the county line to Oakdale and NY 27 east of Southampton.  The portion of Montauk Highway between Oakdale and Southampton is mostly county-maintained as County Route 80 and County Route 85 (CR 80 and CR 85, respectively).
-
-Question: What is an incorporated community in the hamlet of Copiague located south of an east–west road extending for 95 mi across the southern shore of Long Island in Suffolk County, New York, sometimes referred to as?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "community_primary_name": {
-      "type": "string",
-      "description": "The primary name of the incorporated community."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "community_type": {
-      "type": "string",
-      "description": "The type of community, e.g., 'incorporated community'."
-    },
-    "located_in_hamlet": {
-      "type": "string",
-      "description": "The hamlet where the community is located."
-    },
-    "located_in_county": {
-      "type": "string",
-      "description": "The county where the community is located."
-    },
-    "located_in_state": {
-      "type": "string",
-      "description": "The state where the community is located."
-    },
-    "located_on_island": {
-      "type": "string",
-      "description": "The island where the community is located."
-    },
-    "relative_location_to_road": {
-      "type": "string",
-      "description": "The community's location relative to the specified road."
-    },
-    "road_name": {
-      "type": "string",
-      "description": "The name of the road the community is located relative to."
-    },
-    "road_length_miles": {
-      "type": "integer",
-      "description": "The length of the road in miles."
-    },
-    "alternative_community_name": {
-      "type": "string",
-      "description": "The name the community is sometimes referred to as."
+    {
+      "role": "user",
+      "content": "Context:\nWalter G. O'Connell Copiague High School: Walter G. O'Connell Copiague High School is an American four-year college preparatory public high school in the hamlet of Copiague in Suffolk County, New York.  Commonly referred to as \"Copiague High School,\" the school is named after its founder and first principal Walter G. O'Connell.\n\nNew York State Route 108: New York State Route 108 (NY 108) is a 1.72 mi north–south state highway located on the Suffolk County side of the Suffolk–Nassau county line on Long Island, New York, in the United States.  It is a spur route connecting NY 25A in Cold Spring Harbor to the Cold Spring Harbor station on the Long Island Rail Road's Port Jefferson Branch via Harbor Road.  Harbor Road terminates at an intersection with Woodbury Road, on the Nassau County line, which carries County Route 11 to the east and unsigned County Route 12 to the west.  NY 108, assigned in the early 1930s, is the shortest state highway on Long Island.\n\nMerrick Road: Merrick Road, known as Merrick Boulevard inside New York City, is an east–west urban arterial in Queens, Nassau, and Suffolk counties, New York, United States.  It runs east from the Queens neighborhood of Jamaica through Merrick past the county line between Nassau and Suffolk into Amityville, where it becomes Montauk Highway at the Amityville–Copiague village/hamlet line.  The easternmost portion of Merrick Road, from Carman Mill Road to its eastern terminus, signed as part of New York State Route 27A (NY 27A).  At one time, the entire length of Merrick Road was signed as NY 27A; currently, the entire portion within Nassau County is currently designated as the unsigned County Route 27 (CR 27).  Merrick Road travels along an old right-of-way that was one of the original paths across southern Long Island, stretching from Queens to Montauk Point.\n\nCopiague Harbor, New York: Copiague Harbor is an incorporated community in the hamlet of Copiague.  It is located south of Merrick Road (or Montauk Highway), off of South Great Neck Road in Suffolk County, New York, USA, on the South Shore of Long Island.  It is sometimes referred to as Great Neck Landing;\n\nNew York State Route 454: New York State Route 454 (NY 454), also known as the Suffolk County Veterans Memorial Highway or simply Vets Highway, is a 13.67 mi east–west divided highway in western and central Suffolk County on Long Island in New York.  It spans from NY 25 (Jericho Turnpike) in Commack to NY 27 (Sunrise Highway) in Holbrook.  The route provides access to the Long Island MacArthur Airport, as well as New York State and Suffolk County government offices, and at one time the Long Island Arena.  NY 454 serves as the northern terminus for the Northern State Parkway in Hauppauge, where a concurrency with NY 347 begins.\n\nLong Island: The Long Island is a large, densely-populated island off the East Coast of the United States, beginning at New York Harbor just 0.35 miles (0.56 km) from Manhattan Island and extending eastward into the Atlantic Ocean.  The island comprises four counties in the U.S. state of New York: Kings and Queens (which comprise the New York City boroughs of Brooklyn and Queens, respectively) to the west; and Nassau and Suffolk to the east.  However, many people in the New York metropolitan area (even those living in Brooklyn and Queens) colloquially use the term \"Long Island\" (or \"The Island\") exclusively to refer to the Nassau–Suffolk county area collectively, which is mainly suburban in character.  The majority of New York City residents now live on Long Island.\n\nKWO35: KWO35 (the third character is the letter \"O,\" rather than \"Zero\") is a NOAA Weather Radio (NWR) station that serves the greater New York metropolitan area (which comprises New York City and the surrounding counties and municipalities in the Tri-state area), as well as marine interests from Sandy Hook, New Jersey to Fire island, New York (out to 40 miles from the Atlantic coastline), as well as New York Harbor, the western Long Island Sound, and the Long Island South Shore Base, and extending southward from Sandy Hook, to Little Egg Inlet NJ (out to 40 miles from the Atlantic coastline) (see County Cov.  section for all marine zones).  Programming originates from the National Weather Service weather forecast office (WFO) in Upton, New York (located east of New York City, on the grounds of Brookhaven National Laboratory, in central Suffolk County on eastern Long Island).\n\nNorth Bay Shore, New York: North Bay Shore is an unincorporated neighborhood on Long Island in the Town of Islip in Suffolk County, New York, United States.  The area is a suburb of New York City.  The hamlet of \"North Bay Shore\" is within the northern part of the CDP of Bay Shore, New York.  The census-designated place (CDP) named \"North Bay Shore\" is north of, and adjacent to, the hamlet named North Bay Shore.  The CDP of North Bay Shore contains the hamlet of Pine Aire and part of the hamlet of Brentwood.  The population of the North Bay Shore CDP was 18,944 at the time of the 2010 census.\n\nCopiague (LIRR station): Copiague is a station on the Babylon Branch of the Long Island Rail Road, located in Copiague, New York.  The station is located on Marconi Boulevard and Great Neck Road (Suffolk County Road 47), one block north of Oak Street (Suffolk County Road 12).  Copiague Station was originally built in 1902, and was rebuilt with temporary high-level platforms for the M1s on October 25th, 1968.  The original station was replaced with the current elevated station which opened on August 7, 1973.  It is one of the few railroad stations along the Babylon Branch west of Patchogue that was not originally built by the South Side Railroad of Long Island.\n\nMontauk Highway: Montauk Highway is an east–west road extending for 95 mi across the southern shore of Long Island in Suffolk County, New York, in the United States.  It extends from the Nassau County line in Amityville, where it connects to Merrick Road, to Montauk Point State Park at the very eastern end of Long Island in Montauk.  The highway is known by several designations along its routing, primarily New York State Route 27A (NY 27A) from the county line to Oakdale and NY 27 east of Southampton.  The portion of Montauk Highway between Oakdale and Southampton is mostly county-maintained as County Route 80 and County Route 85 (CR 80 and CR 85, respectively).\n\nQuestion: What is an incorporated community in the hamlet of Copiague located south of an east–west road extending for 95 mi across the southern shore of Long Island in Suffolk County, New York, sometimes referred to as?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"community_primary_name\": {\n      \"type\": \"string\",\n      \"description\": \"The primary name of the incorporated community.\"\n    },\n    \"community_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of community, e.g., 'incorporated community'.\"\n    },\n    \"located_in_hamlet\": {\n      \"type\": \"string\",\n      \"description\": \"The hamlet where the community is located.\"\n    },\n    \"located_in_county\": {\n      \"type\": \"string\",\n      \"description\": \"The county where the community is located.\"\n    },\n    \"located_in_state\": {\n      \"type\": \"string\",\n      \"description\": \"The state where the community is located.\"\n    },\n    \"located_on_island\": {\n      \"type\": \"string\",\n      \"description\": \"The island where the community is located.\"\n    },\n    \"relative_location_to_road\": {\n      \"type\": \"string\",\n      \"description\": \"The community's location relative to the specified road.\"\n    },\n    \"road_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the road the community is located relative to.\"\n    },\n    \"road_length_miles\": {\n      \"type\": \"integer\",\n      \"description\": \"The length of the road in miles.\"\n    },\n    \"alternative_community_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name the community is sometimes referred to as.\"\n    }\n  },\n  \"required\": [\n    \"community_primary_name\",\n    \"community_type\",\n    \"located_in_hamlet\",\n    \"located_in_county\",\n    \"located_in_state\",\n    \"located_on_island\",\n    \"relative_location_to_road\",\n    \"road_name\",\n    \"road_length_miles\",\n    \"alternative_community_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "community_primary_name",
-    "community_type",
-    "located_in_hamlet",
-    "located_in_county",
-    "located_in_state",
-    "located_on_island",
-    "relative_location_to_road",
-    "road_name",
-    "road_length_miles",
-    "alternative_community_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "community_primary_name": {
+        "type": "string",
+        "description": "The primary name of the incorporated community."
+      },
+      "community_type": {
+        "type": "string",
+        "description": "The type of community, e.g., 'incorporated community'."
+      },
+      "located_in_hamlet": {
+        "type": "string",
+        "description": "The hamlet where the community is located."
+      },
+      "located_in_county": {
+        "type": "string",
+        "description": "The county where the community is located."
+      },
+      "located_in_state": {
+        "type": "string",
+        "description": "The state where the community is located."
+      },
+      "located_on_island": {
+        "type": "string",
+        "description": "The island where the community is located."
+      },
+      "relative_location_to_road": {
+        "type": "string",
+        "description": "The community's location relative to the specified road."
+      },
+      "road_name": {
+        "type": "string",
+        "description": "The name of the road the community is located relative to."
+      },
+      "road_length_miles": {
+        "type": "integer",
+        "description": "The length of the road in miles."
+      },
+      "alternative_community_name": {
+        "type": "string",
+        "description": "The name the community is sometimes referred to as."
+      }
+    },
+    "required": [
+      "community_primary_name",
+      "community_type",
+      "located_in_hamlet",
+      "located_in_county",
+      "located_in_state",
+      "located_on_island",
+      "relative_location_to_road",
+      "road_name",
+      "road_length_miles",
+      "alternative_community_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

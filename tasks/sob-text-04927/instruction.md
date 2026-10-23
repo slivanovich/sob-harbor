@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-1978 Oklahoma Sooners football team: The 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season.  Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923.  The team posted an 11–1 overall record and a 6–1 conference record to earn a share of the conference title under head coach Barry Switzer.  This was Switzer's sixth conference title in six seasons since taking the helm in 1973.
-
-List of Oklahoma Sooners head football coaches: The Oklahoma Sooners football program is a college football team that represents the University of Oklahoma.  The team has had 22 head coaches since organized football began in 1895.  The Sooners have played in more than 1,200 games in its 121 seasons.  In those seasons, eight coaches have led the Sooners to postseason bowl games: Tom Stidham, Jim Tatum, Bud Wilkinson, Gomer Jones, Chuck Fairbanks, Barry Switzer, Gary Gibbs and Bob Stoops.  Eight coaches have won conference championships with the Sooners: Bennie Owen, Stidham, Dewey Luster, Tatum, Wilkinson, Fairbanks, Switzer and Stoops.  Wilkinson, Switzer and Stoops have also won national championships with the Sooners.  Stoops is the all-time leader in games coached and won, Owen is the all-time leader in years coached, while Switzer is the all-time leader in winning percentage.  John Harts is, in terms of winning percentage, the worst coach the Sooners have had as he lost the only game he coached.  John Blake has the lowest winning percentage of those who have coached more than one game with .353 in his 34 games.
-
-1977 Oklahoma Sooners football team: The 1977 Oklahoma Sooners football team represented the University of Oklahoma in the 1977 NCAA Division I football season.  Oklahoma was a member of the Big Eight Conference and played its home games in Oklahoma Memorial Stadium, where it has played its home games since 1923.  The team posted a 10–2 overall record and a 7–0 conference record to earn the Conference title under head coach Barry Switzer who took the helm in 1973.  This was Switzer's fifth conference title and third undefeated conference record in five seasons.
-
-1973 Oklahoma Sooners football team: The 1973 Oklahoma Sooners football team represented the University of Oklahoma in the 1973 NCAA Division I football season.  Oklahoma participated as members of the Big Eight Conference and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923.  The team posted a 10–0–1 overall record and a 7–0 conference record to earn the Conference outright title under first-year head coach Barry Switzer.  This would be the first of eight consecutive Big Eight Conference championships for the Sooners with Switzer as head coach.
-
-Gaylord Family Oklahoma Memorial Stadium: Gaylord Family - Oklahoma Memorial Stadium, also known as Owen Field or The Palace on the Prairie, is the on-campus football facility on the campus of the University of Oklahoma in Norman, Oklahoma, United States, that serves as the home of the Oklahoma Sooners football team.  The official seating capacity of the stadium, following renovations in 2015, is 86,112, making it the 23rd largest stadium in the world, the 15th largest college stadium in the United States and the second largest in the Big 12 Conference, behind Darrell K Royal–Texas Memorial Stadium at the University of Texas at Austin.
-
-1979 Oklahoma Sooners football team: The 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season.  Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923.  The team posted an 11–1 overall record and a 7–0 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973.  This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.
-
-1971 Oklahoma Sooners football team: The 1971 Oklahoma Sooners football team represented the University of Oklahoma in the 1971 NCAA University Division season.  Oklahoma was a member of the Big Eight Conference and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923.  The team posted an 11–1 and 6–1 conference record to under head coach Chuck Fairbanks.  The Sooners finished the season ranked #2, losing only once, 35–31 to eventual national champion Nebraska in the 1971 Nebraska vs. Oklahoma football game, which has become known as Game of the Century.
-
-1956 Oklahoma Sooners football team: The 1956 Oklahoma Sooners football team (variously "Oklahoma", "OU", or the "Sooners") represented the University of Oklahoma in the 1956 college football season.  It was the 62nd season of play for the Sooners.  The team was led by Hall of Fame head coach Bud Wilkinson.  They were led on offense by quarterback Jim Harris, and played their home games at Oklahoma Memorial Stadium in Norman, Oklahoma.
-
-1984 Oklahoma Sooners football team: The 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season.  Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923.  The team posted a 9–2–1 overall record and a 6–1 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973.  This was Switzer's ninth conference title in twelve seasons.
-
-Oklahoma Sooners football: The Oklahoma Sooners football program is a college football team that represents the University of Oklahoma (variously "Oklahoma" or "OU").  The team is currently a member of the Big 12 Conference, which is in Division I Football Bowl Subdivision (formerly Division I-A) of the National Collegiate Athletic Association (NCAA).  The program began in 1895 and is one of the most successful programs since World War II with the most wins (606) and the highest winning percentage (.762) since 1945.  The program has 7 national championships, 45 conference championships, 154 All-Americans (76 consensus), and five Heisman Trophy winners.  In addition, the school has had 23 members (five coaches and 18 players) inducted into the College Football Hall of Fame and holds the record for the longest winning streak in Division I history with 47 straight victories, a record that stands to this day.  Oklahoma is also the only program that has had four coaches with 100+ wins.  They became the sixth NCAA FBS team to win 850 games when they defeated the Kansas Jayhawks on November 22, 2014.  The Sooners play their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma.  Lincoln Riley is currently the team's head coach.
-
-Question: What is the seating capacity of the stadium as of 2015 in which 1971 Oklahoma Sooners football team payed their home games?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "stadium_name": {
-      "type": "string",
-      "description": "The name of the stadium where the team played home games."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "team_year": {
-      "type": "integer",
-      "description": "The year of the Oklahoma Sooners football team in question."
-    },
-    "seating_capacity": {
-      "type": "integer",
-      "description": "The official seating capacity of the stadium after renovations in 2015."
-    },
-    "capacity_as_of_year": {
-      "type": "integer",
-      "description": "The year for which the seating capacity is valid."
+    {
+      "role": "user",
+      "content": "Context:\n1978 Oklahoma Sooners football team: The 1978 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1978 NCAA Division I-A season.  Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923.  The team posted an 11–1 overall record and a 6–1 conference record to earn a share of the conference title under head coach Barry Switzer.  This was Switzer's sixth conference title in six seasons since taking the helm in 1973.\n\nList of Oklahoma Sooners head football coaches: The Oklahoma Sooners football program is a college football team that represents the University of Oklahoma.  The team has had 22 head coaches since organized football began in 1895.  The Sooners have played in more than 1,200 games in its 121 seasons.  In those seasons, eight coaches have led the Sooners to postseason bowl games: Tom Stidham, Jim Tatum, Bud Wilkinson, Gomer Jones, Chuck Fairbanks, Barry Switzer, Gary Gibbs and Bob Stoops.  Eight coaches have won conference championships with the Sooners: Bennie Owen, Stidham, Dewey Luster, Tatum, Wilkinson, Fairbanks, Switzer and Stoops.  Wilkinson, Switzer and Stoops have also won national championships with the Sooners.  Stoops is the all-time leader in games coached and won, Owen is the all-time leader in years coached, while Switzer is the all-time leader in winning percentage.  John Harts is, in terms of winning percentage, the worst coach the Sooners have had as he lost the only game he coached.  John Blake has the lowest winning percentage of those who have coached more than one game with .353 in his 34 games.\n\n1977 Oklahoma Sooners football team: The 1977 Oklahoma Sooners football team represented the University of Oklahoma in the 1977 NCAA Division I football season.  Oklahoma was a member of the Big Eight Conference and played its home games in Oklahoma Memorial Stadium, where it has played its home games since 1923.  The team posted a 10–2 overall record and a 7–0 conference record to earn the Conference title under head coach Barry Switzer who took the helm in 1973.  This was Switzer's fifth conference title and third undefeated conference record in five seasons.\n\n1973 Oklahoma Sooners football team: The 1973 Oklahoma Sooners football team represented the University of Oklahoma in the 1973 NCAA Division I football season.  Oklahoma participated as members of the Big Eight Conference and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923.  The team posted a 10–0–1 overall record and a 7–0 conference record to earn the Conference outright title under first-year head coach Barry Switzer.  This would be the first of eight consecutive Big Eight Conference championships for the Sooners with Switzer as head coach.\n\nGaylord Family Oklahoma Memorial Stadium: Gaylord Family - Oklahoma Memorial Stadium, also known as Owen Field or The Palace on the Prairie, is the on-campus football facility on the campus of the University of Oklahoma in Norman, Oklahoma, United States, that serves as the home of the Oklahoma Sooners football team.  The official seating capacity of the stadium, following renovations in 2015, is 86,112, making it the 23rd largest stadium in the world, the 15th largest college stadium in the United States and the second largest in the Big 12 Conference, behind Darrell K Royal–Texas Memorial Stadium at the University of Texas at Austin.\n\n1979 Oklahoma Sooners football team: The 1979 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1979 NCAA Division I-A season.  Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923.  The team posted an 11–1 overall record and a 7–0 conference record to earn the Conference title outright under head coach Barry Switzer who took the helm in 1973.  This was Switzer's seventh conference title and fourth undefeated conference record in seven seasons.\n\n1971 Oklahoma Sooners football team: The 1971 Oklahoma Sooners football team represented the University of Oklahoma in the 1971 NCAA University Division season.  Oklahoma was a member of the Big Eight Conference and played its home games in Oklahoma Memorial Stadium where it has played its home games since 1923.  The team posted an 11–1 and 6–1 conference record to under head coach Chuck Fairbanks.  The Sooners finished the season ranked #2, losing only once, 35–31 to eventual national champion Nebraska in the 1971 Nebraska vs. Oklahoma football game, which has become known as Game of the Century.\n\n1956 Oklahoma Sooners football team: The 1956 Oklahoma Sooners football team (variously \"Oklahoma\", \"OU\", or the \"Sooners\") represented the University of Oklahoma in the 1956 college football season.  It was the 62nd season of play for the Sooners.  The team was led by Hall of Fame head coach Bud Wilkinson.  They were led on offense by quarterback Jim Harris, and played their home games at Oklahoma Memorial Stadium in Norman, Oklahoma.\n\n1984 Oklahoma Sooners football team: The 1984 Oklahoma Sooners football team represented the University of Oklahoma in the college football 1984 NCAA Division I-A season.  Oklahoma Sooners football participated in the former Big Eight Conference at that time and played its home games in Gaylord Family Oklahoma Memorial Stadium where it has played its home games since 1923.  The team posted a 9–2–1 overall record and a 6–1 conference record to earn a share of the Conference title under head coach Barry Switzer who took the helm in 1973.  This was Switzer's ninth conference title in twelve seasons.\n\nOklahoma Sooners football: The Oklahoma Sooners football program is a college football team that represents the University of Oklahoma (variously \"Oklahoma\" or \"OU\").  The team is currently a member of the Big 12 Conference, which is in Division I Football Bowl Subdivision (formerly Division I-A) of the National Collegiate Athletic Association (NCAA).  The program began in 1895 and is one of the most successful programs since World War II with the most wins (606) and the highest winning percentage (.762) since 1945.  The program has 7 national championships, 45 conference championships, 154 All-Americans (76 consensus), and five Heisman Trophy winners.  In addition, the school has had 23 members (five coaches and 18 players) inducted into the College Football Hall of Fame and holds the record for the longest winning streak in Division I history with 47 straight victories, a record that stands to this day.  Oklahoma is also the only program that has had four coaches with 100+ wins.  They became the sixth NCAA FBS team to win 850 games when they defeated the Kansas Jayhawks on November 22, 2014.  The Sooners play their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma.  Lincoln Riley is currently the team's head coach.\n\nQuestion: What is the seating capacity of the stadium as of 2015 in which 1971 Oklahoma Sooners football team payed their home games?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"stadium_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the stadium where the team played home games.\"\n    },\n    \"team_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year of the Oklahoma Sooners football team in question.\"\n    },\n    \"seating_capacity\": {\n      \"type\": \"integer\",\n      \"description\": \"The official seating capacity of the stadium after renovations in 2015.\"\n    },\n    \"capacity_as_of_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year for which the seating capacity is valid.\"\n    }\n  },\n  \"required\": [\n    \"stadium_name\",\n    \"team_year\",\n    \"seating_capacity\",\n    \"capacity_as_of_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "stadium_name",
-    "team_year",
-    "seating_capacity",
-    "capacity_as_of_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "stadium_name": {
+        "type": "string",
+        "description": "The name of the stadium where the team played home games."
+      },
+      "team_year": {
+        "type": "integer",
+        "description": "The year of the Oklahoma Sooners football team in question."
+      },
+      "seating_capacity": {
+        "type": "integer",
+        "description": "The official seating capacity of the stadium after renovations in 2015."
+      },
+      "capacity_as_of_year": {
+        "type": "integer",
+        "description": "The year for which the seating capacity is valid."
+      }
+    },
+    "required": [
+      "stadium_name",
+      "team_year",
+      "seating_capacity",
+      "capacity_as_of_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

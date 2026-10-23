@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Meuse-Argonne American Cemetery and Memorial: The Meuse-Argonne American Cemetery and Memorial is a 130.5 acre World War I cemetery in France.  It is located east of the village of Romagne-sous-Montfaucon in Meuse.  The cemetery contains the largest number of American military dead in Europe (14,246), most of whom lost their lives during the Meuse-Argonne Offensive and were buried there.  The cemetery consists of eight sections behind a large central reflection pool.  Beyond the grave sections is a chapel which is decorated with stained glass windows depicting American units' insignias.  Along the walls of the chapel area are the tablets of the missing which include the names of those soldiers who fought in the region and in northern Russia, but have no known grave.  It also includes the Montfaucon American Monument.  This cemetery is maintained by the American Battle Monuments Commission.  It is open daily to the public from 9:00 a.m. to 5:00 p.m.  The cemetery is closed January 1 and December 25, but is open on all other holidays.
-
-American Expeditionary Forces: The American Expeditionary Forces (AEF) was the expeditionary force of the United States Army during World War I.  It was established on July 5, 1917, in France under the command of General John J. Pershing.  During the United States campaigns in World War I it fought alongside the French Army, British Army, and Canadian Army on the Western Front, against the German Empire.  A minority of the AEF troops also fought alongside the Italian Army in that same year, against the Austro-Hungarian Army.  The AEF helped the French Army on the Western Front during the Aisne Offensive (at the Battle of Château-Thierry (1918) and Battle of Belleau Wood) in the summer of 1918, and the AEF fought its major actions in the Battle of Saint-Mihiel and the Meuse-Argonne Offensive in the latter part of 1918.
-
-Noël Garnier-Duplessix: General Noël Marie Amédée Garnier-Duplessix (sometimes Duplessis) was a French army officer.  Whilst still a colonel he commanded the 2nd Infantry Division in the Allied victory at the First Battle of the Marne before seeing service in the Zaian War in the French protectorate of Morocco.  Garnier-Duplessix returned to France in October 1916 and received command of the 37th Infantry Division for the 15 December offensive of the Battle of Verdun and the Nivelle Offensive of April 1917.  He received command of the 9th Army Corps in June 1918 and led that unit to victory in the August Battle of Amiens and the autumn Meuse-Argonne Offensive.  After the war he was posted to Cilicia in the Franco-Turkish War of 1920-1 where he argued against early withdrawal of troops following the March 1921 Cilicia Peace Treaty.
-
-Meuse-Argonne Offensive: The Meuse-Argonne Offensive, also known as the Maas-Argonne Offensive and the Battle of the Argonne Forest, was a major part of the final Allied offensive of World War I that stretched along the entire Western Front.  It was fought from 26 September 1918 until the Armistice of 11 November 1918, a total of 47 days.  The Meuse-Argonne Offensive was the largest in United States military history, involving 1.2 million American soldiers.  It was one of a series of Allied attacks known as the Hundred Days Offensive, which brought the war to an end.  The battle cost 28,000 German lives and 26,277 American lives.  It was the largest and bloodiest operation of World War I for the American Expeditionary Force (AEF), which was commanded by General John J. Pershing, and one of the deadliest battles in American history.  American losses were exacerbated by the inexperience of many of the troops, and tactics used during the early phases of the operation.
-
-3d Pursuit Group: The 3d Pursuit Group was a United States Army Air Service unit that fought on the Western Front during World War I as part of the First United States Army.  Formed in France in July 1918, the group was assigned to the 1st Pursuit Wing and saw action in the final months of the war, supporting the Battle of Saint-Mihiel and the Meuse-Argonne Offensive.  Following the end of the war, the group was demobilized in France on 10 April 1919.  There is no modern United States Air Force unit that shares its lineage and history.
-
-Battle of the Canal du Nord: The Battle of Canal du Nord was part of a general Allied offensive against German positions on the Western Front during the Hundred Days Offensive of World War I.  The battle took place in the Nord-Pas-de-Calais region of France, along an incomplete portion of the Canal du Nord and on the outskirts of Cambrai between 27 September and 1 October 1918.  To avoid the risk of having extensive German reserves massed against a single Allied attack, the assault along the Canal du Nord was undertaken as part of a number of closely sequenced Allied attacks at separate points along the Western Front.  It began one day after the Meuse-Argonne Offensive, one day before an offensive in the Flanders region of Belgium and two days before the Battle of St. Quentin Canal.
-
-Hart Goodloe: Hart Goodloe (January 31, 1875 - March 21, 1954) was a surgeon in the First World War who served at Saint-Mihiel and the Meuse-Argonne Offensive.  Hart Goodloe was born in Danville, Kentucky in 1875.  He is a graduate of University of Louisville's School of Medicine and a member of Phi Chi Medical Fraternity's Alpha Alpha-Gamma Chapter serving as Grand Presiding Senior (President) of the Grand Chapter from 1900 to 1901.  On August 13, 1917 he enlisted in the U.S. Army at age 42.  He was commissioned to the rank of major and was a surgeon in the army.  By 1918 he was sent over to France and saw action at the Battle of Saint-Mihiel and Meuse-Argonne Offensive.  He was discharged from service on March 18, 1919, and resided in St. Louis, Missouri.  His war documents were destroyed in a fire at the St. Louis archives.  He died at Veterans Hospital, Biloxi, Mississippi, on March 21, 1954 at age 79.
-
-Grace Banker: Grace D. Banker (October 25, 1892 – September 17, 1960) was a telephone operator who served during World War I (1917–1918) as Chief Operator of mobile for the American Expeditionary Forces (AEF) in the U.S. Army Signal Corps.  She led thirty-three women telephone operators known popularity as Hello Girls.  They were assigned in New York to travel to France to operate telephone switch boards at the war front in Paris, and at Chaumont, Haute-Marne.  They also operated the telephone switch boards at First Army headquarters at Ligny-en-Barrois, about 5 mi to the south of Saint-Mihiel, and later during the Meuse-Argonne Offensive.  After her return to civilian life, Banker and her team members were treated as citizen volunteers and initially not given recognition as members of the military.  In 1919, Banker was honoured with the Distinguished Service Medal for her services with the First Army headquarters during the St. Mihiel and Meuse-Argonne Offensives, with a commendation.
-
-Battle of the Wilderness: The Battle of the Wilderness, fought May 5–7, 1864, was the first battle of Lt. Gen. Ulysses S. Grant's 1864 Virginia Overland Campaign against Gen. Robert E. Lee and the Confederate Army of Northern Virginia in the American Civil War.  Both armies suffered heavy casualties, a harbinger of a bloody war of attrition by Grant against Lee's army and, eventually, the Confederate capital, Richmond, Virginia.  The battle was tactically inconclusive, as Grant disengaged and continued his offensive.
-
-204th Brigade Support Battalion (United States): The mission of the 204th Brigade Support Battalion, "Rough Riders," is to, on order, deploy and execute responsive Combat Service Support and Combat Health Support in support of the 2nd Brigade Combat Team, 4th Infantry Division's objectives.  ("Rough Riders") was originally constituted as the 5th Sanitary Trains on 10 November 1917 at Camp Logan, Texas.  During World War I, the unit fought in numerous battles and campaigns including the Battle of Saint-Mihiel, Meuse-Argonne Offensive, and the Battle of Champagne, at Lorraine.  After the First World War, the unit was reorganized and re-designated on 29 January 1921 as the 5th Medical Regiment.  The 5th Medical Regiment was inactivated in August 1921 at Camp Jackson, South Carolina.
-
-Question: Which was fought in Europe, the Battle of the Wilderness or the Meuse-Argonne Offensive?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "battle_name": {
-      "type": "string",
-      "description": "The name of the battle that was fought in Europe."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "location_continent": {
-      "type": "string",
-      "description": "The continent where the battle took place."
-    },
-    "conflict": {
-      "type": "string",
-      "description": "The war during which the battle occurred."
-    },
-    "involved_forces": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of major forces or armies involved in the battle."
+    {
+      "role": "user",
+      "content": "Context:\nMeuse-Argonne American Cemetery and Memorial: The Meuse-Argonne American Cemetery and Memorial is a 130.5 acre World War I cemetery in France.  It is located east of the village of Romagne-sous-Montfaucon in Meuse.  The cemetery contains the largest number of American military dead in Europe (14,246), most of whom lost their lives during the Meuse-Argonne Offensive and were buried there.  The cemetery consists of eight sections behind a large central reflection pool.  Beyond the grave sections is a chapel which is decorated with stained glass windows depicting American units' insignias.  Along the walls of the chapel area are the tablets of the missing which include the names of those soldiers who fought in the region and in northern Russia, but have no known grave.  It also includes the Montfaucon American Monument.  This cemetery is maintained by the American Battle Monuments Commission.  It is open daily to the public from 9:00 a.m. to 5:00 p.m.  The cemetery is closed January 1 and December 25, but is open on all other holidays.\n\nAmerican Expeditionary Forces: The American Expeditionary Forces (AEF) was the expeditionary force of the United States Army during World War I.  It was established on July 5, 1917, in France under the command of General John J. Pershing.  During the United States campaigns in World War I it fought alongside the French Army, British Army, and Canadian Army on the Western Front, against the German Empire.  A minority of the AEF troops also fought alongside the Italian Army in that same year, against the Austro-Hungarian Army.  The AEF helped the French Army on the Western Front during the Aisne Offensive (at the Battle of Château-Thierry (1918) and Battle of Belleau Wood) in the summer of 1918, and the AEF fought its major actions in the Battle of Saint-Mihiel and the Meuse-Argonne Offensive in the latter part of 1918.\n\nNoël Garnier-Duplessix: General Noël Marie Amédée Garnier-Duplessix (sometimes Duplessis) was a French army officer.  Whilst still a colonel he commanded the 2nd Infantry Division in the Allied victory at the First Battle of the Marne before seeing service in the Zaian War in the French protectorate of Morocco.  Garnier-Duplessix returned to France in October 1916 and received command of the 37th Infantry Division for the 15 December offensive of the Battle of Verdun and the Nivelle Offensive of April 1917.  He received command of the 9th Army Corps in June 1918 and led that unit to victory in the August Battle of Amiens and the autumn Meuse-Argonne Offensive.  After the war he was posted to Cilicia in the Franco-Turkish War of 1920-1 where he argued against early withdrawal of troops following the March 1921 Cilicia Peace Treaty.\n\nMeuse-Argonne Offensive: The Meuse-Argonne Offensive, also known as the Maas-Argonne Offensive and the Battle of the Argonne Forest, was a major part of the final Allied offensive of World War I that stretched along the entire Western Front.  It was fought from 26 September 1918 until the Armistice of 11 November 1918, a total of 47 days.  The Meuse-Argonne Offensive was the largest in United States military history, involving 1.2 million American soldiers.  It was one of a series of Allied attacks known as the Hundred Days Offensive, which brought the war to an end.  The battle cost 28,000 German lives and 26,277 American lives.  It was the largest and bloodiest operation of World War I for the American Expeditionary Force (AEF), which was commanded by General John J. Pershing, and one of the deadliest battles in American history.  American losses were exacerbated by the inexperience of many of the troops, and tactics used during the early phases of the operation.\n\n3d Pursuit Group: The 3d Pursuit Group was a United States Army Air Service unit that fought on the Western Front during World War I as part of the First United States Army.  Formed in France in July 1918, the group was assigned to the 1st Pursuit Wing and saw action in the final months of the war, supporting the Battle of Saint-Mihiel and the Meuse-Argonne Offensive.  Following the end of the war, the group was demobilized in France on 10 April 1919.  There is no modern United States Air Force unit that shares its lineage and history.\n\nBattle of the Canal du Nord: The Battle of Canal du Nord was part of a general Allied offensive against German positions on the Western Front during the Hundred Days Offensive of World War I.  The battle took place in the Nord-Pas-de-Calais region of France, along an incomplete portion of the Canal du Nord and on the outskirts of Cambrai between 27 September and 1 October 1918.  To avoid the risk of having extensive German reserves massed against a single Allied attack, the assault along the Canal du Nord was undertaken as part of a number of closely sequenced Allied attacks at separate points along the Western Front.  It began one day after the Meuse-Argonne Offensive, one day before an offensive in the Flanders region of Belgium and two days before the Battle of St. Quentin Canal.\n\nHart Goodloe: Hart Goodloe (January 31, 1875 - March 21, 1954) was a surgeon in the First World War who served at Saint-Mihiel and the Meuse-Argonne Offensive.  Hart Goodloe was born in Danville, Kentucky in 1875.  He is a graduate of University of Louisville's School of Medicine and a member of Phi Chi Medical Fraternity's Alpha Alpha-Gamma Chapter serving as Grand Presiding Senior (President) of the Grand Chapter from 1900 to 1901.  On August 13, 1917 he enlisted in the U.S. Army at age 42.  He was commissioned to the rank of major and was a surgeon in the army.  By 1918 he was sent over to France and saw action at the Battle of Saint-Mihiel and Meuse-Argonne Offensive.  He was discharged from service on March 18, 1919, and resided in St. Louis, Missouri.  His war documents were destroyed in a fire at the St. Louis archives.  He died at Veterans Hospital, Biloxi, Mississippi, on March 21, 1954 at age 79.\n\nGrace Banker: Grace D. Banker (October 25, 1892 – September 17, 1960) was a telephone operator who served during World War I (1917–1918) as Chief Operator of mobile for the American Expeditionary Forces (AEF) in the U.S. Army Signal Corps.  She led thirty-three women telephone operators known popularity as Hello Girls.  They were assigned in New York to travel to France to operate telephone switch boards at the war front in Paris, and at Chaumont, Haute-Marne.  They also operated the telephone switch boards at First Army headquarters at Ligny-en-Barrois, about 5 mi to the south of Saint-Mihiel, and later during the Meuse-Argonne Offensive.  After her return to civilian life, Banker and her team members were treated as citizen volunteers and initially not given recognition as members of the military.  In 1919, Banker was honoured with the Distinguished Service Medal for her services with the First Army headquarters during the St. Mihiel and Meuse-Argonne Offensives, with a commendation.\n\nBattle of the Wilderness: The Battle of the Wilderness, fought May 5–7, 1864, was the first battle of Lt. Gen. Ulysses S. Grant's 1864 Virginia Overland Campaign against Gen. Robert E. Lee and the Confederate Army of Northern Virginia in the American Civil War.  Both armies suffered heavy casualties, a harbinger of a bloody war of attrition by Grant against Lee's army and, eventually, the Confederate capital, Richmond, Virginia.  The battle was tactically inconclusive, as Grant disengaged and continued his offensive.\n\n204th Brigade Support Battalion (United States): The mission of the 204th Brigade Support Battalion, \"Rough Riders,\" is to, on order, deploy and execute responsive Combat Service Support and Combat Health Support in support of the 2nd Brigade Combat Team, 4th Infantry Division's objectives.  (\"Rough Riders\") was originally constituted as the 5th Sanitary Trains on 10 November 1917 at Camp Logan, Texas.  During World War I, the unit fought in numerous battles and campaigns including the Battle of Saint-Mihiel, Meuse-Argonne Offensive, and the Battle of Champagne, at Lorraine.  After the First World War, the unit was reorganized and re-designated on 29 January 1921 as the 5th Medical Regiment.  The 5th Medical Regiment was inactivated in August 1921 at Camp Jackson, South Carolina.\n\nQuestion: Which was fought in Europe, the Battle of the Wilderness or the Meuse-Argonne Offensive?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"battle_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the battle that was fought in Europe.\"\n    },\n    \"location_continent\": {\n      \"type\": \"string\",\n      \"description\": \"The continent where the battle took place.\"\n    },\n    \"conflict\": {\n      \"type\": \"string\",\n      \"description\": \"The war during which the battle occurred.\"\n    },\n    \"involved_forces\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of major forces or armies involved in the battle.\"\n    }\n  },\n  \"required\": [\n    \"battle_name\",\n    \"location_continent\",\n    \"conflict\",\n    \"involved_forces\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "battle_name",
-    "location_continent",
-    "conflict",
-    "involved_forces"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "battle_name": {
+        "type": "string",
+        "description": "The name of the battle that was fought in Europe."
+      },
+      "location_continent": {
+        "type": "string",
+        "description": "The continent where the battle took place."
+      },
+      "conflict": {
+        "type": "string",
+        "description": "The war during which the battle occurred."
+      },
+      "involved_forces": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of major forces or armies involved in the battle."
+      }
+    },
+    "required": [
+      "battle_name",
+      "location_continent",
+      "conflict",
+      "involved_forces"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,82 +1,59 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Paul Watson: Paul Franklin Watson (born December 2, 1950) is a Canadian marine wildlife conservation and environmental activist, who founded the Sea Shepherd Conservation Society, an anti-poaching and direct action group focused on marine conservation and marine conservation activism.  He is a citizen of Canada and the United States.
-
-Noah Idechong: Noah Idechong is an environmental activist from Palau, and former chief of Palau's Governmental Division of Marine Resources, where he helped draft the Island's first marine conservation legislation in 1997.  Having linked marine science, fisheries, and political reform in Palau, he was awarded the Goldman Environmental Prize in 1995 for his efforts in marine conservation.  Idechong helped found the Palau Conservation Society, which spearheaded revivals in traditional conservation, now proven as effective management measures in the Micronesia region.  He later served as a member of the House of Delegates of Palau, helping to enact progressive, conservation-oriented public programs, such as the Protected Areas Network, the Micronesia Challenge, and the word's first Shark Sanctuary.
-
-Sharkwater: Sharkwater is a 2006 Canadian documentary film written and directed by Rob Stewart.  Helping to protect sharks, changing government policy, and inspiring the creation of shark conservation groups, Sharkwater is considered one of conservation's success stories, resulting in shark finning being banned worldwide.  In the film, Stewart filmed current attitudes about sharks, and how shark-hunting industries are driving them to extinction.
-
-Marine Conservation Institute: Marine Conservation Institute (formerly Marine Conservation Biology Institute) is a tax-exempt nonprofit ocean conservation organization working to identify and protect vulnerable ocean ecosystems worldwide.  The organization is headquartered in Seattle, Washington with offices in Washington D.C. and Glen Ellen, California.
-
-Parks Canada: Parks Canada (French: "Parcs Canada" ), also known as the Parks Canada Agency (French: "Agence Parcs Canada" ), is an agency of the Government of Canada run by a chief executive who answers to the Minister of the Environment.  The national park service is mandated to protect and present nationally significant natural and cultural heritage, and foster public understanding, appreciation, and enjoyment in ways that ensure their ecological and commemorative integrity for present and future generations.  Parks Canada manages 38 National Parks, three National Marine Conservation Areas, 171 National Historic Sites, and one National Landmark.  The agency also administers lands and waters set aside as potential national parklands, including eight National Park Reserves and one National Marine Conservation Area Reserve.  More than 407000 km2 of lands and waters in national parks and national marine conservation areas has been set aside for such purposes.  The Canadian Register of Historic Places is supported and managed by Parks Canada, in collaboration with provincial and territorial governments and other federal bodies.  The agency is also the working arm of the national Historic Sites and Monuments Board, which recommends National Historic Sites, Events, and Persons.
-
-Marine conservation activism: Marine Conservation Activism refers to the efforts of non-governmental organizations and individuals to bring about social and political change in the area of marine conservation.  Marine conservation is properly conceived as a set of management strategies for the protection and preservation of ecosystems in oceans and seas.  Activists raise public awareness and support for conservation, while pushing governments and corporations to practice sound ocean management, create conservation policy, and enforce existing laws and policy through effective regulation.  There are many different kinds of organizations and agencies that work toward these common goals.  They all are a part of the growing movement that is ocean conservation.  These organizations fight for many causes including stopping pollution, overfishing, whaling, by-catching, and Marine Protected Areas.
-
-Marine conservation: Marine conservation is the protection and preservation of ecosystems in oceans and seas. Marine conservation focuses on limiting human-caused damage to marine ecosystems, restoring damaged marine ecosystems, and preserving vulnerable species of the marine life.
-
-Chasing Coral: Chasing Coral is a 2017 documentary film about a team of divers, scientists and photographers around the world who document the disappearance of coral reefs. "Chasing Coral" was produced by Exposure Labs and directed by Jeff Orlowski.  It premiered at the 2017 Sundance Film Festival and was released globally on Netflix as a Netflix Original Documentary in July 2017.
-
-Bolsa Chica Basin State Marine Conservation Area: Bolsa Chica Basin State Marine Conservation Area (SMCA) and Bolsa Bay State Marine Conservation Area (SMCA) are two adjoining marine protected areas located in Orange County on the southern coast of California.  The SMCAs cover 0.66 and 0.07 square miles, respectively.  The SMCAs protect marine life by limiting the removal of marine wildlife from within their borders.
-
-Lake Superior National Marine Conservation Area: Lake Superior National Marine Conservation Area is a National Marine Conservation Area (NMCA) on the north shore of Lake Superior in Ontario, and is a unit of the national park system.  Established on September 1, 2015, it is the largest freshwater marine protected area in the world.
-
-Question: Are the recent films Chasing Coral and Sharkwater both concerned with marine conservation?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "is_concerned_with_marine_conservation": {
-      "type": "boolean",
-      "description": "Indicates whether both films are concerned with marine conservation."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "films_analyzed": {
-      "type": "array",
-      "description": "Details about each film and its connection to marine conservation.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "film_name": {
-            "type": "string",
-            "description": "The name of the film."
+    {
+      "role": "user",
+      "content": "Context:\nPaul Watson: Paul Franklin Watson (born December 2, 1950) is a Canadian marine wildlife conservation and environmental activist, who founded the Sea Shepherd Conservation Society, an anti-poaching and direct action group focused on marine conservation and marine conservation activism.  He is a citizen of Canada and the United States.\n\nNoah Idechong: Noah Idechong is an environmental activist from Palau, and former chief of Palau's Governmental Division of Marine Resources, where he helped draft the Island's first marine conservation legislation in 1997.  Having linked marine science, fisheries, and political reform in Palau, he was awarded the Goldman Environmental Prize in 1995 for his efforts in marine conservation.  Idechong helped found the Palau Conservation Society, which spearheaded revivals in traditional conservation, now proven as effective management measures in the Micronesia region.  He later served as a member of the House of Delegates of Palau, helping to enact progressive, conservation-oriented public programs, such as the Protected Areas Network, the Micronesia Challenge, and the word's first Shark Sanctuary.\n\nSharkwater: Sharkwater is a 2006 Canadian documentary film written and directed by Rob Stewart.  Helping to protect sharks, changing government policy, and inspiring the creation of shark conservation groups, Sharkwater is considered one of conservation's success stories, resulting in shark finning being banned worldwide.  In the film, Stewart filmed current attitudes about sharks, and how shark-hunting industries are driving them to extinction.\n\nMarine Conservation Institute: Marine Conservation Institute (formerly Marine Conservation Biology Institute) is a tax-exempt nonprofit ocean conservation organization working to identify and protect vulnerable ocean ecosystems worldwide.  The organization is headquartered in Seattle, Washington with offices in Washington D.C. and Glen Ellen, California.\n\nParks Canada: Parks Canada (French: \"Parcs Canada\" ), also known as the Parks Canada Agency (French: \"Agence Parcs Canada\" ), is an agency of the Government of Canada run by a chief executive who answers to the Minister of the Environment.  The national park service is mandated to protect and present nationally significant natural and cultural heritage, and foster public understanding, appreciation, and enjoyment in ways that ensure their ecological and commemorative integrity for present and future generations.  Parks Canada manages 38 National Parks, three National Marine Conservation Areas, 171 National Historic Sites, and one National Landmark.  The agency also administers lands and waters set aside as potential national parklands, including eight National Park Reserves and one National Marine Conservation Area Reserve.  More than 407000 km2 of lands and waters in national parks and national marine conservation areas has been set aside for such purposes.  The Canadian Register of Historic Places is supported and managed by Parks Canada, in collaboration with provincial and territorial governments and other federal bodies.  The agency is also the working arm of the national Historic Sites and Monuments Board, which recommends National Historic Sites, Events, and Persons.\n\nMarine conservation activism: Marine Conservation Activism refers to the efforts of non-governmental organizations and individuals to bring about social and political change in the area of marine conservation.  Marine conservation is properly conceived as a set of management strategies for the protection and preservation of ecosystems in oceans and seas.  Activists raise public awareness and support for conservation, while pushing governments and corporations to practice sound ocean management, create conservation policy, and enforce existing laws and policy through effective regulation.  There are many different kinds of organizations and agencies that work toward these common goals.  They all are a part of the growing movement that is ocean conservation.  These organizations fight for many causes including stopping pollution, overfishing, whaling, by-catching, and Marine Protected Areas.\n\nMarine conservation: Marine conservation is the protection and preservation of ecosystems in oceans and seas. Marine conservation focuses on limiting human-caused damage to marine ecosystems, restoring damaged marine ecosystems, and preserving vulnerable species of the marine life.\n\nChasing Coral: Chasing Coral is a 2017 documentary film about a team of divers, scientists and photographers around the world who document the disappearance of coral reefs. \"Chasing Coral\" was produced by Exposure Labs and directed by Jeff Orlowski.  It premiered at the 2017 Sundance Film Festival and was released globally on Netflix as a Netflix Original Documentary in July 2017.\n\nBolsa Chica Basin State Marine Conservation Area: Bolsa Chica Basin State Marine Conservation Area (SMCA) and Bolsa Bay State Marine Conservation Area (SMCA) are two adjoining marine protected areas located in Orange County on the southern coast of California.  The SMCAs cover 0.66 and 0.07 square miles, respectively.  The SMCAs protect marine life by limiting the removal of marine wildlife from within their borders.\n\nLake Superior National Marine Conservation Area: Lake Superior National Marine Conservation Area is a National Marine Conservation Area (NMCA) on the north shore of Lake Superior in Ontario, and is a unit of the national park system.  Established on September 1, 2015, it is the largest freshwater marine protected area in the world.\n\nQuestion: Are the recent films Chasing Coral and Sharkwater both concerned with marine conservation?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"is_concerned_with_marine_conservation\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates whether both films are concerned with marine conservation.\"\n    },\n    \"films_analyzed\": {\n      \"type\": \"array\",\n      \"description\": \"Details about each film and its connection to marine conservation.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"film_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the film.\"\n          },\n          \"primary_focus\": {\n            \"type\": \"string\",\n            \"description\": \"The main subject or issue the film addresses related to marine conservation.\"\n          },\n          \"conservation_impact_or_goal\": {\n            \"type\": \"string\",\n            \"description\": \"The specific way the film contributes to or highlights marine conservation.\"\n          }\n        },\n        \"required\": [\n          \"film_name\",\n          \"primary_focus\",\n          \"conservation_impact_or_goal\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"marine_conservation_definition\": {\n      \"type\": \"string\",\n      \"description\": \"The definition of marine conservation as provided in the context.\"\n    }\n  },\n  \"required\": [\n    \"is_concerned_with_marine_conservation\",\n    \"films_analyzed\",\n    \"marine_conservation_definition\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "is_concerned_with_marine_conservation": {
+        "type": "boolean",
+        "description": "Indicates whether both films are concerned with marine conservation."
+      },
+      "films_analyzed": {
+        "type": "array",
+        "description": "Details about each film and its connection to marine conservation.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "film_name": {
+              "type": "string",
+              "description": "The name of the film."
+            },
+            "primary_focus": {
+              "type": "string",
+              "description": "The main subject or issue the film addresses related to marine conservation."
+            },
+            "conservation_impact_or_goal": {
+              "type": "string",
+              "description": "The specific way the film contributes to or highlights marine conservation."
+            }
           },
-          "primary_focus": {
-            "type": "string",
-            "description": "The main subject or issue the film addresses related to marine conservation."
-          },
-          "conservation_impact_or_goal": {
-            "type": "string",
-            "description": "The specific way the film contributes to or highlights marine conservation."
-          }
-        },
-        "required": [
-          "film_name",
-          "primary_focus",
-          "conservation_impact_or_goal"
-        ],
-        "additionalProperties": false
+          "required": [
+            "film_name",
+            "primary_focus",
+            "conservation_impact_or_goal"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "marine_conservation_definition": {
+        "type": "string",
+        "description": "The definition of marine conservation as provided in the context."
       }
     },
-    "marine_conservation_definition": {
-      "type": "string",
-      "description": "The definition of marine conservation as provided in the context."
-    }
+    "required": [
+      "is_concerned_with_marine_conservation",
+      "films_analyzed",
+      "marine_conservation_definition"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "is_concerned_with_marine_conservation",
-    "films_analyzed",
-    "marine_conservation_definition"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

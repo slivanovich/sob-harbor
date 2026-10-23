@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-George D.D. Huie Grocery Store Building: The George D.D. Huie Grocery Store Building is a historic commercial building at 1400 North Pine Street in North Little Rock, Arkansas.  It has a single-story front section with a gable roof, which housed the retail space, with a two-story rear section used as the proprietor's residence.  This buff brick building was built by George Huie, a Chinese immigrant, in 1949 on the site of a store he had operated since 1938.  The store is historically important for its role in the growth and development of the local Chinese community, and for its service to the historically African-American neighborhood in which it stands.  It presently houses a small museum.
-
-Magnus Jákupsson: Magnus Jákupsson (born 8 September 1994) is a professional swimmer who swam for the Faroe Islands until 2012 and for Denmark since 2013.  He is also swimming for Farum Svømmeklub since March 2015.  Earlier he swam for the Danish clubs SIGMA Nordsjælland and Vestegnens Aqua Team (VAT) and for the Faroese club Havnar Svimjifelag.  Until 2012 he held several Faroese records, he holds the second most Faroese men's swimming records, after Pál Joensen.  His Faroese records are in backstroke, individual medley and butterfly.  He moved to Denmark in 2011, and the following year he changed his swimming nationality to Danish.  After that he can only set Danish records, not Faroese, and he can only represent Denmark in swimming competitions.  Until he changed swimming nationality he was the record holder of six individual Faroese records on short course and eight individual Faroese records on long course.
-
-Margaret Brent: Margaret Brent (c. 1601 – c. 1671), an English immigrant to the Colony of Maryland, settling in its new capitol, St. Mary's City, Maryland, she was the first woman in the English North American colonies to appear before a court of the common law.  She was a significant founding settler in the early histories of the colonies of Maryland and Virginia.  Leonard Calvert, Governor of the Maryland Colony, appointed her as the executrix of his estate in 1647, at a time of political turmoil and risk to the future of the settlement.  She helped ensure soldiers were paid and given food to keep their loyalty to the colony, thereby very likely having saved the colony from violent mutiny, although her actions were taken negatively by the absentee colonial proprietor in England, Cecil Calvert, the second Lord Baltimore, and so ultimately she paid a great price for her efforts and was forced to leave the colony.
-
-Eight Misbehavin': "Eight Misbehavin' " is the seventh episode of the eleventh season of the American animated sitcom "The Simpsons".  It originally aired on the Fox network in the United States on November 21, 1999.  In the episode, after Manjula gives birth to octuplets that were the result of fertility drugs, she and Apu unintentionally allow a zookeeper to exploit their babies in exchange for help after corporate sponsors abandon them for a mom that has given birth to nonuplets.  The episode features several guest appearances and cultural references.  Reception of the episode from television critics has been mixed.
-
-Rohingya people: The Rohingya people ( ; historically also termed Arakanese Indians) are a stateless Indo-Aryan people from Rakhine State, Myanmar.  There were an estimated 1 million Rohingya living in Myanmar before the 2016–17 crisis.  The majority are Muslim while a minority are Hindu.  Described by the United Nations in 2013 as one of the most persecuted minorities in the world, the Rohingya population are denied citizenship under the 1982 Myanmar nationality law.  According to Human Rights Watch, the 1982 laws "effectively deny to the Rohingya the possibility of acquiring a nationality.  Despite being able to trace Rohingya history to the 8th century, Myanmar law does not recognize the ethnic minority as one of the eight "national races".  They are also restricted from freedom of movement, state education and civil service jobs.  The legal conditions faced by the Rohingya in Myanmar have been compared with Apartheid.
-
-Eden Is West: Eden Is West (French: "Eden à l'ouest" ) is a 2009 film by Greek-French director Costa-Gavras about an illegal immigrant called Elias who tries to get to Paris.  The original title in Greek is “Paradissos sti Dysi” (“Paradise in West”) and since it is a Greek-French production, the also original French title is “Eden à l'ouest'.  The nationality of the central hero is not disclosed because Gavras wants to make a point about the odysseys of the illegal immigrants of any nationality, since he himself was an immigrant 50 years ago in France, before he became a well known director.  His hero seems to tolerate the sea, the cold of snowy mountains and the hunger, the rapists and robbers he meets, the cops that are after him all the time, the racists who push him aside, the fellow immigrants who steal his clothes and in the best case the women who see him as a lover they could also take advantage of.  His only comfort is his dream of Paris and, in the complexity of human condition, the good within the evil and vice versa.
-
-Apu Nahasapeemapetilon: Apu Nahasapeemapetilon is a cartoon character in the animated television series "The Simpsons".  He is the Indian immigrant proprietor of the Kwik-E-Mart, a popular convenience store in Springfield, and is well known for his catchphrase, "Thank you, come again."  He is voiced by Hank Azaria and first appeared in the episode "The Telltale Head".
-
-Linesville, Pennsylvania: Linesville is a borough in Crawford County, Pennsylvania, United States.  The population was 1,040 at the 2010 census.  The town gets its name from its founders, which included William Line (the grandson of a Swiss immigrant), who migrated from Carlisle, Pennsylvania, circa the early 1820s, and his relative, Amos Line, who was the town's surveyor and main proprietor.  Amos Line "penetrated the western Pennsylvania wilderness as a member of the Pennsylvania Population Company in the early 1800s."
-
-German nationality law: German nationality law is the law governing the acquisition, transmission and loss of German citizenship.  The law is based on a mixture of the principles of "jus sanguinis" and "jus soli".  In other words, one usually acquires German citizenship if a parent is a German citizen, irrespective of place of birth, or by birth in Germany to parents with foreign nationality if certain requirements are fulfilled.  Naturalisation is also possible for foreign nationals after six to eight years of legal residence in Germany.  However, non-EU and non-Swiss citizens must usually renounce their old citizenship before being naturalised in Germany.  Citizens of other EU countries and of Switzerland usually can keep their old citizenship.  Some EU countries do not allow dual citizenship even with other EU countries.  German citizens wanting to acquire a non-EU or non-Swiss citizenship and to maintain their German citizenship must apply for a permission ("Beibehaltungsgenehmigung") before acquiring the other citizenship, or they will automatically lose their German citizenship when they acquire the foreign citizenship.  For details, see section "Dual citizenship."
-
-Perkerdansk: Perkerdansk or Immigrant Danish is a multi-ethnolect spoken in Denmark, a variety of Danish associated primarily with youths of middle eastern ethnic background.  It is a contact variety that includes features of Danish as well as Arabic, Turkish, English and other immigrant languages.  Particularly common in urban areas with high densities of immigrant populations, its features have also spread to general youth language in Denmark.
-
-Question: Eight Misbehavin' features the immigrant proprietor of Kwik-E-Mart, who is of what nationality?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "character_name": {
-      "type": "string",
-      "description": "The name of the character."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "occupation": {
-      "type": "string",
-      "description": "The character's occupation."
-    },
-    "business_name": {
-      "type": "string",
-      "description": "The name of the business owned or operated by the character."
-    },
-    "nationality": {
-      "type": "string",
-      "description": "The nationality of the character."
-    },
-    "is_immigrant": {
-      "type": "boolean",
-      "description": "True if the character is an immigrant, false otherwise."
-    },
-    "featured_episode": {
-      "type": "string",
-      "description": "The title of the episode where the character is featured in this context."
+    {
+      "role": "user",
+      "content": "Context:\nGeorge D.D. Huie Grocery Store Building: The George D.D. Huie Grocery Store Building is a historic commercial building at 1400 North Pine Street in North Little Rock, Arkansas.  It has a single-story front section with a gable roof, which housed the retail space, with a two-story rear section used as the proprietor's residence.  This buff brick building was built by George Huie, a Chinese immigrant, in 1949 on the site of a store he had operated since 1938.  The store is historically important for its role in the growth and development of the local Chinese community, and for its service to the historically African-American neighborhood in which it stands.  It presently houses a small museum.\n\nMagnus Jákupsson: Magnus Jákupsson (born 8 September 1994) is a professional swimmer who swam for the Faroe Islands until 2012 and for Denmark since 2013.  He is also swimming for Farum Svømmeklub since March 2015.  Earlier he swam for the Danish clubs SIGMA Nordsjælland and Vestegnens Aqua Team (VAT) and for the Faroese club Havnar Svimjifelag.  Until 2012 he held several Faroese records, he holds the second most Faroese men's swimming records, after Pál Joensen.  His Faroese records are in backstroke, individual medley and butterfly.  He moved to Denmark in 2011, and the following year he changed his swimming nationality to Danish.  After that he can only set Danish records, not Faroese, and he can only represent Denmark in swimming competitions.  Until he changed swimming nationality he was the record holder of six individual Faroese records on short course and eight individual Faroese records on long course.\n\nMargaret Brent: Margaret Brent (c. 1601 – c. 1671), an English immigrant to the Colony of Maryland, settling in its new capitol, St. Mary's City, Maryland, she was the first woman in the English North American colonies to appear before a court of the common law.  She was a significant founding settler in the early histories of the colonies of Maryland and Virginia.  Leonard Calvert, Governor of the Maryland Colony, appointed her as the executrix of his estate in 1647, at a time of political turmoil and risk to the future of the settlement.  She helped ensure soldiers were paid and given food to keep their loyalty to the colony, thereby very likely having saved the colony from violent mutiny, although her actions were taken negatively by the absentee colonial proprietor in England, Cecil Calvert, the second Lord Baltimore, and so ultimately she paid a great price for her efforts and was forced to leave the colony.\n\nEight Misbehavin': \"Eight Misbehavin' \" is the seventh episode of the eleventh season of the American animated sitcom \"The Simpsons\".  It originally aired on the Fox network in the United States on November 21, 1999.  In the episode, after Manjula gives birth to octuplets that were the result of fertility drugs, she and Apu unintentionally allow a zookeeper to exploit their babies in exchange for help after corporate sponsors abandon them for a mom that has given birth to nonuplets.  The episode features several guest appearances and cultural references.  Reception of the episode from television critics has been mixed.\n\nRohingya people: The Rohingya people ( ; historically also termed Arakanese Indians) are a stateless Indo-Aryan people from Rakhine State, Myanmar.  There were an estimated 1 million Rohingya living in Myanmar before the 2016–17 crisis.  The majority are Muslim while a minority are Hindu.  Described by the United Nations in 2013 as one of the most persecuted minorities in the world, the Rohingya population are denied citizenship under the 1982 Myanmar nationality law.  According to Human Rights Watch, the 1982 laws \"effectively deny to the Rohingya the possibility of acquiring a nationality.  Despite being able to trace Rohingya history to the 8th century, Myanmar law does not recognize the ethnic minority as one of the eight \"national races\".  They are also restricted from freedom of movement, state education and civil service jobs.  The legal conditions faced by the Rohingya in Myanmar have been compared with Apartheid.\n\nEden Is West: Eden Is West (French: \"Eden à l'ouest\" ) is a 2009 film by Greek-French director Costa-Gavras about an illegal immigrant called Elias who tries to get to Paris.  The original title in Greek is “Paradissos sti Dysi” (“Paradise in West”) and since it is a Greek-French production, the also original French title is “Eden à l'ouest'.  The nationality of the central hero is not disclosed because Gavras wants to make a point about the odysseys of the illegal immigrants of any nationality, since he himself was an immigrant 50 years ago in France, before he became a well known director.  His hero seems to tolerate the sea, the cold of snowy mountains and the hunger, the rapists and robbers he meets, the cops that are after him all the time, the racists who push him aside, the fellow immigrants who steal his clothes and in the best case the women who see him as a lover they could also take advantage of.  His only comfort is his dream of Paris and, in the complexity of human condition, the good within the evil and vice versa.\n\nApu Nahasapeemapetilon: Apu Nahasapeemapetilon is a cartoon character in the animated television series \"The Simpsons\".  He is the Indian immigrant proprietor of the Kwik-E-Mart, a popular convenience store in Springfield, and is well known for his catchphrase, \"Thank you, come again.\"  He is voiced by Hank Azaria and first appeared in the episode \"The Telltale Head\".\n\nLinesville, Pennsylvania: Linesville is a borough in Crawford County, Pennsylvania, United States.  The population was 1,040 at the 2010 census.  The town gets its name from its founders, which included William Line (the grandson of a Swiss immigrant), who migrated from Carlisle, Pennsylvania, circa the early 1820s, and his relative, Amos Line, who was the town's surveyor and main proprietor.  Amos Line \"penetrated the western Pennsylvania wilderness as a member of the Pennsylvania Population Company in the early 1800s.\"\n\nGerman nationality law: German nationality law is the law governing the acquisition, transmission and loss of German citizenship.  The law is based on a mixture of the principles of \"jus sanguinis\" and \"jus soli\".  In other words, one usually acquires German citizenship if a parent is a German citizen, irrespective of place of birth, or by birth in Germany to parents with foreign nationality if certain requirements are fulfilled.  Naturalisation is also possible for foreign nationals after six to eight years of legal residence in Germany.  However, non-EU and non-Swiss citizens must usually renounce their old citizenship before being naturalised in Germany.  Citizens of other EU countries and of Switzerland usually can keep their old citizenship.  Some EU countries do not allow dual citizenship even with other EU countries.  German citizens wanting to acquire a non-EU or non-Swiss citizenship and to maintain their German citizenship must apply for a permission (\"Beibehaltungsgenehmigung\") before acquiring the other citizenship, or they will automatically lose their German citizenship when they acquire the foreign citizenship.  For details, see section \"Dual citizenship.\"\n\nPerkerdansk: Perkerdansk or Immigrant Danish is a multi-ethnolect spoken in Denmark, a variety of Danish associated primarily with youths of middle eastern ethnic background.  It is a contact variety that includes features of Danish as well as Arabic, Turkish, English and other immigrant languages.  Particularly common in urban areas with high densities of immigrant populations, its features have also spread to general youth language in Denmark.\n\nQuestion: Eight Misbehavin' features the immigrant proprietor of Kwik-E-Mart, who is of what nationality?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character.\"\n    },\n    \"occupation\": {\n      \"type\": \"string\",\n      \"description\": \"The character's occupation.\"\n    },\n    \"business_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the business owned or operated by the character.\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the character.\"\n    },\n    \"is_immigrant\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if the character is an immigrant, false otherwise.\"\n    },\n    \"featured_episode\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the episode where the character is featured in this context.\"\n    }\n  },\n  \"required\": [\n    \"character_name\",\n    \"occupation\",\n    \"business_name\",\n    \"nationality\",\n    \"is_immigrant\",\n    \"featured_episode\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "character_name",
-    "occupation",
-    "business_name",
-    "nationality",
-    "is_immigrant",
-    "featured_episode"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "character_name": {
+        "type": "string",
+        "description": "The name of the character."
+      },
+      "occupation": {
+        "type": "string",
+        "description": "The character's occupation."
+      },
+      "business_name": {
+        "type": "string",
+        "description": "The name of the business owned or operated by the character."
+      },
+      "nationality": {
+        "type": "string",
+        "description": "The nationality of the character."
+      },
+      "is_immigrant": {
+        "type": "boolean",
+        "description": "True if the character is an immigrant, false otherwise."
+      },
+      "featured_episode": {
+        "type": "string",
+        "description": "The title of the episode where the character is featured in this context."
+      }
+    },
+    "required": [
+      "character_name",
+      "occupation",
+      "business_name",
+      "nationality",
+      "is_immigrant",
+      "featured_episode"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Coraline: Coraline is a dark fantasy children's novella by British author Neil Gaiman, published in 2002 by Bloomsbury and Harper Collins.  It was awarded the 2003 Hugo Award for Best Novella, the 2003 Nebula Award for Best Novella, and the 2002 Bram Stoker Award for Best Work for Young Readers.  It has been compared to Lewis Carroll's "Alice's Adventures in Wonderland" and was adapted into a 2009 stop-motion film directed by Henry Selick.
-
-Løvejagten: Løvejagten (Danish for ""the lion hunt"", English title: "The Lion Hunt") was a controversial 1907 silent film by Danish producer Ole Olsen and director Viggo Larsen.  The short ten-minute movie caused an enormous public protest in Denmark because it depicted the actual shooting of two captive lions.
-
-Electrocution: Electrocution is death caused by electric shock, electric current passing through the body.  The word is derived from "electro" and "execution", but it is also used for accidental death.  The word is also used to describe non-fatal injuries due to electricity.  The term "electrocution," was coined in 1889 by US newspapers just before the first use of the electric chair in 1890, originally referred only to electrical execution (from which it is a portmanteau word), and not to accidental or suicidal electrical deaths.  However, since no English word was available for non-judicial deaths due to electric shock, the word "electrocution" eventually took over as a description of all circumstances of electrical death from the new commercial electricity.
-
-Kalodont: Kalodont was a toothpaste brand produced by F. A. Sarg’s Sohn & Co. from Vienna, first sold in Austria-Hungary in 1887.  It later became widely distributed, in 34 other countries, and obtained a near-monopoly status that caused the word "kalodont" to become synonymous with the word for "tooth paste" in South Slavic languages.  Kalodont ceased to be produced in 1981.  It was also advertised and sold in Russia in 1927.
-
-Prison commissary: A prison commissary (commissary being a word taken out of context in such situations) or canteen is a store within a correctional facility, from which inmates may purchase products such as hygiene items, snacks, writing instruments, etc.  Spices, including those packaged with instant ramen noodles, are a popular item due to the often bland nature of prison food.  Typically inmates are not allowed to possess cash; instead, they make purchases through an account with funds from money contributed by friends, family members, etc., or earned as wages.  Typically, prisons set a maximum limit of funds that can be spent by each inmate on commissary; in the U.S. federal system, it is $290 per month.  It is generally prohibited for inmates to trade items purchased on commissary.  However, certain items tend to be used as currency.  Cigarettes were a classic medium of exchange, but in the wake of prison tobacco bans, postage stamps have become a more common currency item, along with any inexpensive, popular item that has a round number price such as 25 or 50 cents.  As prison budgets are cut in the USA, ramen has become a popular commodity to supplement food needs.  Mylar foil packets of mackerel fish or "macks" are one such item.  In 1930, the U.S. Department of Justice authorized and established a commissary at each federal institution.  Some prison commissaries are staffed by government employees and inmates, while others have been completely privatized.  Significant price markups are common in prison commissaries, although some prison systems set maximum markups; for instance, the Delaware Department of Correction has a 20% maximum markup.  $100 million in purchases were made from Texas' prison system alone in 2009.  Prison commissary is a privilege that is often taken away for infractions.
-
-Pompatus: Pompatus , is a nonsense word coined by Steve Miller and most famously used in his 1973 hit single "The Joker".  The word was inspired by a similar nonsense word, sometimes transliterated as "puppetutes," in the 1954 song "The Letter" by The Medallions.  The oddness and unknown meaning of the word occasioned some attention and further use, including being used in the title of a movie.
-
-WordTravels: Launched in 2001, Word Travels has become one of the most popular independent series of travel guides available on the internet.  The guides were originally developed for use within travel agencies, offering travel consultants reliable and authoritative information on thousands of worldwide destinations.  Word Travels makes most of its content available online offering original and impartial guides to more than 1000 worldwide destinations, from Azerbaijan to Zurich.  A key feature of the site is the Word Travels Forum, where travellers questions get answered by travel professionals within each destination.  Word Travels produces the travel guides found on many of the most popular airline, hotel and travel agency websites.
-
-Beldam: Beldam, an archaic word meaning "hag" or "witch", may also refer to an old woman, particularly a shrewd, ugly one.  The word has entered popular usage due to the character of the Beldam, the main antagonist of Neil Gaiman's dark fantasy novella "Coraline" and its subsequent film adaption.
-
-Physical dependence: Physical dependence is a physical condition caused by chronic use of a tolerance forming drug, in which abrupt or gradual drug withdrawal causes unpleasant physical symptoms.  Physical dependence can develop from low-dose therapeutic use of certain medications such as benzodiazepines, opioids, antiepileptics and antidepressants, as well as the recreational misuse of drugs such as alcohol, opioids, and benzodiazepines.  The higher the dose used, the greater the duration of use, and the earlier age use began are predictive of worsened physical dependence and thus more severe withdrawal syndromes.  Acute withdrawal syndromes can last days, weeks or months.  Protracted withdrawal syndrome, also known as post-acute-withdrawal syndrome or "PAWS", is a low-grade continuation of some of the symptoms of acute withdrawal, typically in a remitting-relapsing pattern, often resulting in relapse and prolonged disability of a degree to preclude the possibility of lawful employment.  Protracted withdrawal syndrome can last for months, years, or depending on individual factors, indefinitely.  Protracted withdrawal syndrome is noted to be most often caused by benzodiazepines.  To dispel the popular misassociation with addiction, physical dependence to medications is sometimes compared to dependence on insulin by persons with diabetes.
-
-Stiff Gins: Stiff Gins are an Indigenous Australian band from Sydney.  They call their music "acoustic with harmonies" and are regularly compared to Tiddas.  The band was formed by Emma Donovan, Nardi Simpson and Kaleena Briggs in 1999, after meeting at the Eora Centre while studying music.  The band's name uses the word "gin" (a derogatory word for Aboriginal woman which was also a Dharug word for woman/wife) with the word "stiff" to become strong black woman, a name which caused debate about use of the word "gin".
-
-Question: What movie caused the use of the word  "Beldam" to become more popular in 2009?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "movie_title": {
-      "type": "string",
-      "description": "The title of the movie that popularized the word."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the movie was released."
-    },
-    "word_popularized": {
-      "type": "string",
-      "description": "The word that became more popular."
-    },
-    "reason_for_popularity": {
-      "type": "string",
-      "description": "The reason the word became popular due to the movie."
+    {
+      "role": "user",
+      "content": "Context:\nCoraline: Coraline is a dark fantasy children's novella by British author Neil Gaiman, published in 2002 by Bloomsbury and Harper Collins.  It was awarded the 2003 Hugo Award for Best Novella, the 2003 Nebula Award for Best Novella, and the 2002 Bram Stoker Award for Best Work for Young Readers.  It has been compared to Lewis Carroll's \"Alice's Adventures in Wonderland\" and was adapted into a 2009 stop-motion film directed by Henry Selick.\n\nLøvejagten: Løvejagten (Danish for \"\"the lion hunt\"\", English title: \"The Lion Hunt\") was a controversial 1907 silent film by Danish producer Ole Olsen and director Viggo Larsen.  The short ten-minute movie caused an enormous public protest in Denmark because it depicted the actual shooting of two captive lions.\n\nElectrocution: Electrocution is death caused by electric shock, electric current passing through the body.  The word is derived from \"electro\" and \"execution\", but it is also used for accidental death.  The word is also used to describe non-fatal injuries due to electricity.  The term \"electrocution,\" was coined in 1889 by US newspapers just before the first use of the electric chair in 1890, originally referred only to electrical execution (from which it is a portmanteau word), and not to accidental or suicidal electrical deaths.  However, since no English word was available for non-judicial deaths due to electric shock, the word \"electrocution\" eventually took over as a description of all circumstances of electrical death from the new commercial electricity.\n\nKalodont: Kalodont was a toothpaste brand produced by F. A. Sarg’s Sohn & Co. from Vienna, first sold in Austria-Hungary in 1887.  It later became widely distributed, in 34 other countries, and obtained a near-monopoly status that caused the word \"kalodont\" to become synonymous with the word for \"tooth paste\" in South Slavic languages.  Kalodont ceased to be produced in 1981.  It was also advertised and sold in Russia in 1927.\n\nPrison commissary: A prison commissary (commissary being a word taken out of context in such situations) or canteen is a store within a correctional facility, from which inmates may purchase products such as hygiene items, snacks, writing instruments, etc.  Spices, including those packaged with instant ramen noodles, are a popular item due to the often bland nature of prison food.  Typically inmates are not allowed to possess cash; instead, they make purchases through an account with funds from money contributed by friends, family members, etc., or earned as wages.  Typically, prisons set a maximum limit of funds that can be spent by each inmate on commissary; in the U.S. federal system, it is $290 per month.  It is generally prohibited for inmates to trade items purchased on commissary.  However, certain items tend to be used as currency.  Cigarettes were a classic medium of exchange, but in the wake of prison tobacco bans, postage stamps have become a more common currency item, along with any inexpensive, popular item that has a round number price such as 25 or 50 cents.  As prison budgets are cut in the USA, ramen has become a popular commodity to supplement food needs.  Mylar foil packets of mackerel fish or \"macks\" are one such item.  In 1930, the U.S. Department of Justice authorized and established a commissary at each federal institution.  Some prison commissaries are staffed by government employees and inmates, while others have been completely privatized.  Significant price markups are common in prison commissaries, although some prison systems set maximum markups; for instance, the Delaware Department of Correction has a 20% maximum markup.  $100 million in purchases were made from Texas' prison system alone in 2009.  Prison commissary is a privilege that is often taken away for infractions.\n\nPompatus: Pompatus , is a nonsense word coined by Steve Miller and most famously used in his 1973 hit single \"The Joker\".  The word was inspired by a similar nonsense word, sometimes transliterated as \"puppetutes,\" in the 1954 song \"The Letter\" by The Medallions.  The oddness and unknown meaning of the word occasioned some attention and further use, including being used in the title of a movie.\n\nWordTravels: Launched in 2001, Word Travels has become one of the most popular independent series of travel guides available on the internet.  The guides were originally developed for use within travel agencies, offering travel consultants reliable and authoritative information on thousands of worldwide destinations.  Word Travels makes most of its content available online offering original and impartial guides to more than 1000 worldwide destinations, from Azerbaijan to Zurich.  A key feature of the site is the Word Travels Forum, where travellers questions get answered by travel professionals within each destination.  Word Travels produces the travel guides found on many of the most popular airline, hotel and travel agency websites.\n\nBeldam: Beldam, an archaic word meaning \"hag\" or \"witch\", may also refer to an old woman, particularly a shrewd, ugly one.  The word has entered popular usage due to the character of the Beldam, the main antagonist of Neil Gaiman's dark fantasy novella \"Coraline\" and its subsequent film adaption.\n\nPhysical dependence: Physical dependence is a physical condition caused by chronic use of a tolerance forming drug, in which abrupt or gradual drug withdrawal causes unpleasant physical symptoms.  Physical dependence can develop from low-dose therapeutic use of certain medications such as benzodiazepines, opioids, antiepileptics and antidepressants, as well as the recreational misuse of drugs such as alcohol, opioids, and benzodiazepines.  The higher the dose used, the greater the duration of use, and the earlier age use began are predictive of worsened physical dependence and thus more severe withdrawal syndromes.  Acute withdrawal syndromes can last days, weeks or months.  Protracted withdrawal syndrome, also known as post-acute-withdrawal syndrome or \"PAWS\", is a low-grade continuation of some of the symptoms of acute withdrawal, typically in a remitting-relapsing pattern, often resulting in relapse and prolonged disability of a degree to preclude the possibility of lawful employment.  Protracted withdrawal syndrome can last for months, years, or depending on individual factors, indefinitely.  Protracted withdrawal syndrome is noted to be most often caused by benzodiazepines.  To dispel the popular misassociation with addiction, physical dependence to medications is sometimes compared to dependence on insulin by persons with diabetes.\n\nStiff Gins: Stiff Gins are an Indigenous Australian band from Sydney.  They call their music \"acoustic with harmonies\" and are regularly compared to Tiddas.  The band was formed by Emma Donovan, Nardi Simpson and Kaleena Briggs in 1999, after meeting at the Eora Centre while studying music.  The band's name uses the word \"gin\" (a derogatory word for Aboriginal woman which was also a Dharug word for woman/wife) with the word \"stiff\" to become strong black woman, a name which caused debate about use of the word \"gin\".\n\nQuestion: What movie caused the use of the word  \"Beldam\" to become more popular in 2009?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"movie_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the movie that popularized the word.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the movie was released.\"\n    },\n    \"word_popularized\": {\n      \"type\": \"string\",\n      \"description\": \"The word that became more popular.\"\n    },\n    \"reason_for_popularity\": {\n      \"type\": \"string\",\n      \"description\": \"The reason the word became popular due to the movie.\"\n    }\n  },\n  \"required\": [\n    \"movie_title\",\n    \"release_year\",\n    \"word_popularized\",\n    \"reason_for_popularity\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "movie_title",
-    "release_year",
-    "word_popularized",
-    "reason_for_popularity"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "movie_title": {
+        "type": "string",
+        "description": "The title of the movie that popularized the word."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the movie was released."
+      },
+      "word_popularized": {
+        "type": "string",
+        "description": "The word that became more popular."
+      },
+      "reason_for_popularity": {
+        "type": "string",
+        "description": "The reason the word became popular due to the movie."
+      }
+    },
+    "required": [
+      "movie_title",
+      "release_year",
+      "word_popularized",
+      "reason_for_popularity"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

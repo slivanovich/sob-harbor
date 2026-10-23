@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2016–17 Seton Hall Pirates men's basketball team: The 2016–17 Seton Hall Pirates men's basketball team represented Seton Hall University in the 2016–17 NCAA Division I men's basketball season.  The Pirates played home games in Newark, New Jersey at the Prudential Center, with one exhibition and one regular season game at Walsh Gymnasium in South Orange, New Jersey.  They were coached, for the seventh year, by Kevin Willard.  They were members of the Big East Conference.  They finished the season 21–12, 10–8 in Big East play to finish in a four-way tie for third place.  As the No. 5 seed in the Big East Tournament, they defeated Marquette before losing to Villanova in the semifinals.  They received an at-large bid to the NCAA Tournament as a No. 9 seed in the South region where they lost to Arkansas in the First Round.
-
-2014–15 Hampton Pirates men's basketball team: The 2014–15 Hampton Pirates men's basketball team represented Hampton University during the 2014–15 NCAA Division I men's basketball season.  The Pirates, led by sixth year head coach Edward Joyner, played their home games at the Hampton Convocation Center and were members of the Mid-Eastern Athletic Conference.  They finished the season 17–18, 8–8 in MEAC play to finish in sixth place.  The defeated Morgan State, Maryland Eastern Shore, Norfolk State, and Delaware State to become champions of the MEAC Tournament.  They received an automatic bid to the NCAA Tournament where they defeated Manhattan in the First Four before losing in the second round to Kentucky.
-
-2013–14 Hampton Pirates men's basketball team: The 2013–14 Hampton Pirates men's basketball team represented Hampton University during the 2013–14 NCAA Division I men's basketball season.  The Pirates, led by fifth year head coach Edward Joyner, played their home games at the Hampton Convocation Center and were members of the Mid-Eastern Athletic Conference.  They finished the season 18–13, 13–3 in MEAC play to finish in second place.  They lost in the quarterfinals of the MEAC Tournament to Coppin State.  They were invited to the College Basketball Invitational where they lost in the first round to Penn State.
-
-2015–16 Hampton Pirates men's basketball team: The 2015–16 Hampton Pirates men's basketball team represented Hampton University during the 2015–16 NCAA Division I men's basketball season.  The Pirates, led by seventh year head coach Edward Joyner, played their home games at the Hampton Convocation Center and were members of the Mid-Eastern Athletic Conference.  They finished the season 21–11, 13–3 in MEAC play to win the MEAC regular season championship.  They defeated Morgan State, Savannah State, and South Carolina State to be champions of the MEAC Tournament.  They earned the conference's automatic bid to the NCAA Tournament where they lost in the first round to Virginia.
-
-2012–13 Hampton Pirates men's basketball team: The 2012–13 Hampton Pirates men's basketball team represented Hampton University during the 2012–13 NCAA Division I men's basketball season.  The Pirates, led by fourth year head coach Edward Joyner, played their home games at the Hampton Convocation Center and were members of the Mid-Eastern Athletic Conference.  They finished the season 14–17, 11–5 in MEAC play to finish in a tie for third place.  They lost in the quarterfinals of the MEAC Tournament to Delaware State.
-
-UAAP Season 69 men's basketball tournament: The men's basketball tournaments of UAAP Season 69 (A.Y. 2006-07) started on July 8, 2006 at the Araneta Coliseum and ended on October 2, 2006 also at the same venue with the UST Growling Tigers defeating the Ateneo Blue Eagles in the third game of their Finals series.  Ateneo finished first in the elimination round.  They eliminated the Adamson Soaring Falcons, who are in their Final Four debut, in the semifinals.  UST finished tied for third in the eliminations and had to beat the 2nd seed UE Red Warriors twice in order to qualify at the Finals.
-
-Hampton Pirates men's basketball: The Hampton Pirates men's basketball team is the basketball team that represents Hampton University in Hampton, Virginia, United States.  The school's team currently competes in the Mid-Eastern Athletic Conference.  The 2001 Hampton team is one of seven 15th seeds to have upset a 2nd seed in the NCAA Men's Division I Basketball Championship after defeating Iowa State.
-
-2010 Green Bay Packers season: The 2010 Green Bay Packers season was the 91st season in the National Football League for the Packers and the 92nd season for the team overall.  Although they finished with only a respectable 10–6 record, good for a second-place finish in the NFC North, the Packers never lost a game by more than four points, and never trailed by more than seven the entire season, becoming the only team since the AFL-NFL merger in 1970 to accomplish this.  All six of their regular season losses were by a combined 20 points.  They entered the playoffs as the NFC's sixth seed.  After defeating the Philadelphia Eagles 21–16 in the Wild Card round, the Atlanta Falcons 48–21 in the Divisional round and the Chicago Bears 21–14 in the NFC Championship, the team advanced to Super Bowl XLV in which they faced the AFC's 2nd seed Pittsburgh Steelers.  The Packers defeated the Steelers 31–25 to win their fourth Super Bowl and 13th NFL championship.  The Packers became the second overall team after the 2005 Pittsburgh Steelers, and the first NFC team, to win the Super Bowl as a sixth seed, as well as becoming the second NFC team to win three straight road playoff games (the 2007 New York Giants won three straight road games as a five seed).
-
-2016–17 Hampton Pirates men's basketball team: The 2016–17 Hampton Pirates men's basketball team represented Hampton University during the 2016–17 NCAA Division I men's basketball season.  The Pirates, led by eighth-year head coach Edward Joyner, played their home games at the Hampton Convocation Center as members of the Mid-Eastern Athletic Conference.  They finished the season 14–17, 11–5 in MEAC play to finish in a tie for third place.  They lost in the quarterfinals of the MEAC Tournament to Maryland Eastern Shore.  They were invited to the College Basketball Invitational where they lost in the first round to Coastal Carolina.
-
-2000–01 Iowa State Cyclones men's basketball team: The 2000–01 Iowa State Cyclones men's basketball team represents Iowa State University during the 2000–01 NCAA Division I men's basketball season.  The Cyclones were coached by Larry Eustachy, who was in his 3rd season.  They played their home games at Hilton Coliseum in Ames, Iowa and competed in the Big 12 Conference.
-
-Question: In 2001, Hampton Pirates men's basketball beat a 2nd Seed team coached by who ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "upset_year": {
-      "type": "integer",
-      "description": "The year the upset occurred."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "winning_team": {
-      "type": "string",
-      "description": "The name of the team that won the upset game."
-    },
-    "losing_team": {
-      "type": "string",
-      "description": "The name of the 2nd seed team that lost the upset game."
-    },
-    "losing_team_seed": {
-      "type": "integer",
-      "description": "The seed of the team that lost the upset game."
-    },
-    "losing_team_coach": {
-      "type": "string",
-      "description": "The name of the coach of the 2nd seed team that lost."
+    {
+      "role": "user",
+      "content": "Context:\n2016–17 Seton Hall Pirates men's basketball team: The 2016–17 Seton Hall Pirates men's basketball team represented Seton Hall University in the 2016–17 NCAA Division I men's basketball season.  The Pirates played home games in Newark, New Jersey at the Prudential Center, with one exhibition and one regular season game at Walsh Gymnasium in South Orange, New Jersey.  They were coached, for the seventh year, by Kevin Willard.  They were members of the Big East Conference.  They finished the season 21–12, 10–8 in Big East play to finish in a four-way tie for third place.  As the No. 5 seed in the Big East Tournament, they defeated Marquette before losing to Villanova in the semifinals.  They received an at-large bid to the NCAA Tournament as a No. 9 seed in the South region where they lost to Arkansas in the First Round.\n\n2014–15 Hampton Pirates men's basketball team: The 2014–15 Hampton Pirates men's basketball team represented Hampton University during the 2014–15 NCAA Division I men's basketball season.  The Pirates, led by sixth year head coach Edward Joyner, played their home games at the Hampton Convocation Center and were members of the Mid-Eastern Athletic Conference.  They finished the season 17–18, 8–8 in MEAC play to finish in sixth place.  The defeated Morgan State, Maryland Eastern Shore, Norfolk State, and Delaware State to become champions of the MEAC Tournament.  They received an automatic bid to the NCAA Tournament where they defeated Manhattan in the First Four before losing in the second round to Kentucky.\n\n2013–14 Hampton Pirates men's basketball team: The 2013–14 Hampton Pirates men's basketball team represented Hampton University during the 2013–14 NCAA Division I men's basketball season.  The Pirates, led by fifth year head coach Edward Joyner, played their home games at the Hampton Convocation Center and were members of the Mid-Eastern Athletic Conference.  They finished the season 18–13, 13–3 in MEAC play to finish in second place.  They lost in the quarterfinals of the MEAC Tournament to Coppin State.  They were invited to the College Basketball Invitational where they lost in the first round to Penn State.\n\n2015–16 Hampton Pirates men's basketball team: The 2015–16 Hampton Pirates men's basketball team represented Hampton University during the 2015–16 NCAA Division I men's basketball season.  The Pirates, led by seventh year head coach Edward Joyner, played their home games at the Hampton Convocation Center and were members of the Mid-Eastern Athletic Conference.  They finished the season 21–11, 13–3 in MEAC play to win the MEAC regular season championship.  They defeated Morgan State, Savannah State, and South Carolina State to be champions of the MEAC Tournament.  They earned the conference's automatic bid to the NCAA Tournament where they lost in the first round to Virginia.\n\n2012–13 Hampton Pirates men's basketball team: The 2012–13 Hampton Pirates men's basketball team represented Hampton University during the 2012–13 NCAA Division I men's basketball season.  The Pirates, led by fourth year head coach Edward Joyner, played their home games at the Hampton Convocation Center and were members of the Mid-Eastern Athletic Conference.  They finished the season 14–17, 11–5 in MEAC play to finish in a tie for third place.  They lost in the quarterfinals of the MEAC Tournament to Delaware State.\n\nUAAP Season 69 men's basketball tournament: The men's basketball tournaments of UAAP Season 69 (A.Y. 2006-07) started on July 8, 2006 at the Araneta Coliseum and ended on October 2, 2006 also at the same venue with the UST Growling Tigers defeating the Ateneo Blue Eagles in the third game of their Finals series.  Ateneo finished first in the elimination round.  They eliminated the Adamson Soaring Falcons, who are in their Final Four debut, in the semifinals.  UST finished tied for third in the eliminations and had to beat the 2nd seed UE Red Warriors twice in order to qualify at the Finals.\n\nHampton Pirates men's basketball: The Hampton Pirates men's basketball team is the basketball team that represents Hampton University in Hampton, Virginia, United States.  The school's team currently competes in the Mid-Eastern Athletic Conference.  The 2001 Hampton team is one of seven 15th seeds to have upset a 2nd seed in the NCAA Men's Division I Basketball Championship after defeating Iowa State.\n\n2010 Green Bay Packers season: The 2010 Green Bay Packers season was the 91st season in the National Football League for the Packers and the 92nd season for the team overall.  Although they finished with only a respectable 10–6 record, good for a second-place finish in the NFC North, the Packers never lost a game by more than four points, and never trailed by more than seven the entire season, becoming the only team since the AFL-NFL merger in 1970 to accomplish this.  All six of their regular season losses were by a combined 20 points.  They entered the playoffs as the NFC's sixth seed.  After defeating the Philadelphia Eagles 21–16 in the Wild Card round, the Atlanta Falcons 48–21 in the Divisional round and the Chicago Bears 21–14 in the NFC Championship, the team advanced to Super Bowl XLV in which they faced the AFC's 2nd seed Pittsburgh Steelers.  The Packers defeated the Steelers 31–25 to win their fourth Super Bowl and 13th NFL championship.  The Packers became the second overall team after the 2005 Pittsburgh Steelers, and the first NFC team, to win the Super Bowl as a sixth seed, as well as becoming the second NFC team to win three straight road playoff games (the 2007 New York Giants won three straight road games as a five seed).\n\n2016–17 Hampton Pirates men's basketball team: The 2016–17 Hampton Pirates men's basketball team represented Hampton University during the 2016–17 NCAA Division I men's basketball season.  The Pirates, led by eighth-year head coach Edward Joyner, played their home games at the Hampton Convocation Center as members of the Mid-Eastern Athletic Conference.  They finished the season 14–17, 11–5 in MEAC play to finish in a tie for third place.  They lost in the quarterfinals of the MEAC Tournament to Maryland Eastern Shore.  They were invited to the College Basketball Invitational where they lost in the first round to Coastal Carolina.\n\n2000–01 Iowa State Cyclones men's basketball team: The 2000–01 Iowa State Cyclones men's basketball team represents Iowa State University during the 2000–01 NCAA Division I men's basketball season.  The Cyclones were coached by Larry Eustachy, who was in his 3rd season.  They played their home games at Hilton Coliseum in Ames, Iowa and competed in the Big 12 Conference.\n\nQuestion: In 2001, Hampton Pirates men's basketball beat a 2nd Seed team coached by who ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"upset_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the upset occurred.\"\n    },\n    \"winning_team\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the team that won the upset game.\"\n    },\n    \"losing_team\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the 2nd seed team that lost the upset game.\"\n    },\n    \"losing_team_seed\": {\n      \"type\": \"integer\",\n      \"description\": \"The seed of the team that lost the upset game.\"\n    },\n    \"losing_team_coach\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the coach of the 2nd seed team that lost.\"\n    }\n  },\n  \"required\": [\n    \"upset_year\",\n    \"winning_team\",\n    \"losing_team\",\n    \"losing_team_seed\",\n    \"losing_team_coach\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "upset_year",
-    "winning_team",
-    "losing_team",
-    "losing_team_seed",
-    "losing_team_coach"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "upset_year": {
+        "type": "integer",
+        "description": "The year the upset occurred."
+      },
+      "winning_team": {
+        "type": "string",
+        "description": "The name of the team that won the upset game."
+      },
+      "losing_team": {
+        "type": "string",
+        "description": "The name of the 2nd seed team that lost the upset game."
+      },
+      "losing_team_seed": {
+        "type": "integer",
+        "description": "The seed of the team that lost the upset game."
+      },
+      "losing_team_coach": {
+        "type": "string",
+        "description": "The name of the coach of the 2nd seed team that lost."
+      }
+    },
+    "required": [
+      "upset_year",
+      "winning_team",
+      "losing_team",
+      "losing_team_seed",
+      "losing_team_coach"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

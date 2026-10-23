@@ -1,73 +1,50 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Central High School (Springfield, Missouri): Central High School is a high school located in uptown Springfield, Missouri.  The school was Springfield's first high school to be built.  Construction of the building was completed in 1893.  The first graduating class graduated a year later in 1894 consisting of two out of the 76 seniors that were enrolled.  The school was renamed Central High School after the construction of Springfield's second oldest high school, Parkview High School, in 1956.  Central's mascot is a Bulldog, named Pug by the students at the time of his creation.  Central is also the home to the Kiltie Drum and Bugle Corps.  This corps was created by Dr. Robert Ritchie Robertson in 1926, and has the distinction of being the first all-female Scottish pipe and drum corps in the country.  U.S. News & World Report ranked Central High School as the 4th best school in Missouri in 2011.
-
-Colonie Central High School: Colonie Central High School is a public high school in the town of Colonie, with the postal address of Albany, New York.  In 2005 it had 2225 students and 132 classroom teachers.  It is part of the South Colonie Central School District.  The building principal is Christopher Robilotti.
-
-Port Charlotte High School: Port Charlotte High School (PCHS) is a four-year, comprehensive, public high school located in Port Charlotte, Florida, US.  The school opened in 1981, graduated its first class in 1984, its mascot is the pirate, and the school motto is "Yes, I am a Pirate."  It is operated by Charlotte County Public Schools.  At one time, Port Charlotte High School was the largest high school in Charlotte County, with 2,082 students enrolled in grades Grades 9 through 12.  Enrollment was traditionally based on students' geographic locations, but is now by choice under the more recently created open enrollment program.  The school has grown much, and it survived Hurricane Charley.  The school's main feeders are Murdock Middle School, Port Charlotte Middle School, and Punta Gorda Middle School.  The school's top athletic rivals are Charlotte High School and Lemon Bay High School.  The property value of the school is $15,797,719 US.  PCHS has educated two NFL players and one MLB player who also performed in the 2008 Beijing Olympics.
-
-St. Michael-Albertville High School: St. Michael-Albertville High School (also referred to as "STMA High School") is a public high school located in St. Michael, Minnesota with the school motto "Excellence is our tradition".  Known as "STMA" for short, the high school located to a new building which opened for the 2009-2010 school year.  It is currently the 2nd largest high school building in the state of Minnesota.  Its Performing Arts Center (PAC) stands as the largest in the state as well and is often compared to many college-level PACs.  A formal dedication of the school took place on September 20, 2009.
-
-Corey Snide: Corey Snide (born December 19, 1993) is an American actor and dancer best known for his performance as Billy in "Billy Elliot the Musical" based on the hit film "Billy Elliot".  Snide is a graduate of Colonie Central High School (class of 2011), and of Juilliard (class of 2015).
-
-Davidson High School (Mobile, Alabama): W. P. Davidson High School is a four-year senior high school located in Mobile, Alabama.  Its first class graduated in 1963.  The school operates in the Mobile County Public School System.  There are roughly 1,700 students and 110-125 staff members at the school.  The birth of W.P. Davidson High School was in 1960 when a tenth-grade class was contained in the building of the Azalea Road Junior High School.Each year an additional grade was included, until the 1962-1963 school year when Davidson graduated its first class.That same year the modern building, which previously had been only a dream to Davidson students, became a reality.The much envied seniors were given the esteemed privilege of attending classes in the new structure during the last two weeks of school.  The dedication of W.P. Davidson was during September.  The first full year was the 1963-1964 session, in which case four grades, Freshman - Seniors, were taught.
-
-William Fremd High School: William Fremd High School, or Fremd, (formerly known as Palatine High School South) is a public four-year high school located in Palatine, Illinois, a northwest suburb of Chicago, Illinois, in the United States.  It is part of Township High School District 211, which also includes James B. Conant High School, Hoffman Estates High School, Palatine High School, and Schaumburg High School.  The school is known for its academic excellence, and its athletic, drama, visual arts, and music programs have won state championships in recent years.  Academically, Fremd High School has also been recognized by Newsweek as one of “America’s Best High Schools” and by U.S. News & World Report as one of 99 outstanding high schools in the United States with the average AP test taker taking 4.2 exams.  Fremd serves Palatine that is southwest of the UP NW Line railroad tracks, north Hoffman Estates, west Rolling Meadows, north Schaumburg and southeast Inverness.  Feeder schools include Plum Grove Junior High, Carl Sandburg Junior High, Walter Sundling Junior High and Margaret Mead Junior High.  Feeder elementary schools are Pleasant Hill, Paddock, Hunting Ridge, Central Road, Willow Bend, Thomas Jefferson, Marion Jordan, Fairview, and Frank C. Whiteley.
-
-Fremont High School (Indiana): Fremont High School is a public high school located in Fremont, Indiana, United States.  Fremont High School is the high school for the Fremont Community Schools Independent School District and one of four high schools within Steuben County, Indiana.  The present building contains grade nine through twelve and currently houses approximately 400 students and 31 staff members.  Enrollment figures show that the student population has been between 367 and 413 over the past ten years.  36% of students are considered economically disadvantaged based on data reported to the government.  Seventy-eight students graduated in 2012 yielding a 95.1% graduation rate.  Twenty-seven of those graduates earned an Indiana Academic Honors Diploma.  Fremont High School currently has a -3.9 state test achievement gap.  Current budget constraints threaten to decrease the number of teachers at Fremont High School.
-
-Nazareth Area High School: Nazareth High School is a public high school located in Nazareth, Pennsylvania, in the United States.  It is the only high school in the Nazareth Area School District and serves grades 9 through 12.  Its mascot is the Blue Eagle and school colors are blue and white.  Student enrollment for the 2010-2011 school year was approximately 1,600 students.  In a 2006 study conducted by the school district, 43% of households within the district's boundaries reported having one or more children in the high school.  As of the 2009-2010 school year, the high school was fully accredited by the Middle States Association of Colleges and Schools.  In 2012, Nazareth Area High School received the Keystone Award from the Pennsylvania Department of Education for achieving Annual Yearly Progress for two consecutive years as measured by the Pennsylvania State System of Assessment (PSSA) tests.  Nazareth Area High School has also appeared on the College Boards Advanced Placement Honor Roll for the last four consecutive years, out of the five it has been awarded, one of just two Pennsylvania schools to do so.  Nazareth Area High School has an AP test passing rate of 87%, above state average of 69% and global average of 61%.
-
-Rougon High School: Rougon High School was a school located at 13258 Louisiana Highway 416 in the town of Rougon, Louisiana.  The school's mascot was the Devils.  The school was built in the early 1900s on land donated by the Rougon family.  It was originally called Rougon Graded School, and was partly formed from the students of the old Bueche School located in Jarreau, Louisiana.  It was a high school in the Pointe Coupee Parish Public School system until after the 1990-91 school year, when the high school was closed down as part of a plan to combine all parish public schools into the newly formed Pointe Coupee Central High School.  The school had been somewhat of a powerhouse in track & field in the 1970s and 1980s.  The school won LHSAA state championships in track and field in Class C in 1975, 1976, and 1977.  It won Class B state championships in 1985, 1986, 1987, and 1988.  The old Rougon High School building, which was built in 1940, is currently the home to Rougon Elementary School.
-
-Question: Corey Snide graduated from a high school located in what state?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the person."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "high_school_details": {
-      "type": "object",
-      "properties": {
-        "school_name": {
-          "type": "string",
-          "description": "The name of the high school."
-        },
-        "state_located": {
-          "type": "string",
-          "description": "The state where the high school is located."
-        }
-      },
-      "required": [
-        "school_name",
-        "state_located"
-      ],
-      "additionalProperties": false
-    },
-    "graduation_year": {
-      "type": "integer",
-      "description": "The year the person graduated from high school."
+    {
+      "role": "user",
+      "content": "Context:\nCentral High School (Springfield, Missouri): Central High School is a high school located in uptown Springfield, Missouri.  The school was Springfield's first high school to be built.  Construction of the building was completed in 1893.  The first graduating class graduated a year later in 1894 consisting of two out of the 76 seniors that were enrolled.  The school was renamed Central High School after the construction of Springfield's second oldest high school, Parkview High School, in 1956.  Central's mascot is a Bulldog, named Pug by the students at the time of his creation.  Central is also the home to the Kiltie Drum and Bugle Corps.  This corps was created by Dr. Robert Ritchie Robertson in 1926, and has the distinction of being the first all-female Scottish pipe and drum corps in the country.  U.S. News & World Report ranked Central High School as the 4th best school in Missouri in 2011.\n\nColonie Central High School: Colonie Central High School is a public high school in the town of Colonie, with the postal address of Albany, New York.  In 2005 it had 2225 students and 132 classroom teachers.  It is part of the South Colonie Central School District.  The building principal is Christopher Robilotti.\n\nPort Charlotte High School: Port Charlotte High School (PCHS) is a four-year, comprehensive, public high school located in Port Charlotte, Florida, US.  The school opened in 1981, graduated its first class in 1984, its mascot is the pirate, and the school motto is \"Yes, I am a Pirate.\"  It is operated by Charlotte County Public Schools.  At one time, Port Charlotte High School was the largest high school in Charlotte County, with 2,082 students enrolled in grades Grades 9 through 12.  Enrollment was traditionally based on students' geographic locations, but is now by choice under the more recently created open enrollment program.  The school has grown much, and it survived Hurricane Charley.  The school's main feeders are Murdock Middle School, Port Charlotte Middle School, and Punta Gorda Middle School.  The school's top athletic rivals are Charlotte High School and Lemon Bay High School.  The property value of the school is $15,797,719 US.  PCHS has educated two NFL players and one MLB player who also performed in the 2008 Beijing Olympics.\n\nSt. Michael-Albertville High School: St. Michael-Albertville High School (also referred to as \"STMA High School\") is a public high school located in St. Michael, Minnesota with the school motto \"Excellence is our tradition\".  Known as \"STMA\" for short, the high school located to a new building which opened for the 2009-2010 school year.  It is currently the 2nd largest high school building in the state of Minnesota.  Its Performing Arts Center (PAC) stands as the largest in the state as well and is often compared to many college-level PACs.  A formal dedication of the school took place on September 20, 2009.\n\nCorey Snide: Corey Snide (born December 19, 1993) is an American actor and dancer best known for his performance as Billy in \"Billy Elliot the Musical\" based on the hit film \"Billy Elliot\".  Snide is a graduate of Colonie Central High School (class of 2011), and of Juilliard (class of 2015).\n\nDavidson High School (Mobile, Alabama): W. P. Davidson High School is a four-year senior high school located in Mobile, Alabama.  Its first class graduated in 1963.  The school operates in the Mobile County Public School System.  There are roughly 1,700 students and 110-125 staff members at the school.  The birth of W.P. Davidson High School was in 1960 when a tenth-grade class was contained in the building of the Azalea Road Junior High School.Each year an additional grade was included, until the 1962-1963 school year when Davidson graduated its first class.That same year the modern building, which previously had been only a dream to Davidson students, became a reality.The much envied seniors were given the esteemed privilege of attending classes in the new structure during the last two weeks of school.  The dedication of W.P. Davidson was during September.  The first full year was the 1963-1964 session, in which case four grades, Freshman - Seniors, were taught.\n\nWilliam Fremd High School: William Fremd High School, or Fremd, (formerly known as Palatine High School South) is a public four-year high school located in Palatine, Illinois, a northwest suburb of Chicago, Illinois, in the United States.  It is part of Township High School District 211, which also includes James B. Conant High School, Hoffman Estates High School, Palatine High School, and Schaumburg High School.  The school is known for its academic excellence, and its athletic, drama, visual arts, and music programs have won state championships in recent years.  Academically, Fremd High School has also been recognized by Newsweek as one of “America’s Best High Schools” and by U.S. News & World Report as one of 99 outstanding high schools in the United States with the average AP test taker taking 4.2 exams.  Fremd serves Palatine that is southwest of the UP NW Line railroad tracks, north Hoffman Estates, west Rolling Meadows, north Schaumburg and southeast Inverness.  Feeder schools include Plum Grove Junior High, Carl Sandburg Junior High, Walter Sundling Junior High and Margaret Mead Junior High.  Feeder elementary schools are Pleasant Hill, Paddock, Hunting Ridge, Central Road, Willow Bend, Thomas Jefferson, Marion Jordan, Fairview, and Frank C. Whiteley.\n\nFremont High School (Indiana): Fremont High School is a public high school located in Fremont, Indiana, United States.  Fremont High School is the high school for the Fremont Community Schools Independent School District and one of four high schools within Steuben County, Indiana.  The present building contains grade nine through twelve and currently houses approximately 400 students and 31 staff members.  Enrollment figures show that the student population has been between 367 and 413 over the past ten years.  36% of students are considered economically disadvantaged based on data reported to the government.  Seventy-eight students graduated in 2012 yielding a 95.1% graduation rate.  Twenty-seven of those graduates earned an Indiana Academic Honors Diploma.  Fremont High School currently has a -3.9 state test achievement gap.  Current budget constraints threaten to decrease the number of teachers at Fremont High School.\n\nNazareth Area High School: Nazareth High School is a public high school located in Nazareth, Pennsylvania, in the United States.  It is the only high school in the Nazareth Area School District and serves grades 9 through 12.  Its mascot is the Blue Eagle and school colors are blue and white.  Student enrollment for the 2010-2011 school year was approximately 1,600 students.  In a 2006 study conducted by the school district, 43% of households within the district's boundaries reported having one or more children in the high school.  As of the 2009-2010 school year, the high school was fully accredited by the Middle States Association of Colleges and Schools.  In 2012, Nazareth Area High School received the Keystone Award from the Pennsylvania Department of Education for achieving Annual Yearly Progress for two consecutive years as measured by the Pennsylvania State System of Assessment (PSSA) tests.  Nazareth Area High School has also appeared on the College Boards Advanced Placement Honor Roll for the last four consecutive years, out of the five it has been awarded, one of just two Pennsylvania schools to do so.  Nazareth Area High School has an AP test passing rate of 87%, above state average of 69% and global average of 61%.\n\nRougon High School: Rougon High School was a school located at 13258 Louisiana Highway 416 in the town of Rougon, Louisiana.  The school's mascot was the Devils.  The school was built in the early 1900s on land donated by the Rougon family.  It was originally called Rougon Graded School, and was partly formed from the students of the old Bueche School located in Jarreau, Louisiana.  It was a high school in the Pointe Coupee Parish Public School system until after the 1990-91 school year, when the high school was closed down as part of a plan to combine all parish public schools into the newly formed Pointe Coupee Central High School.  The school had been somewhat of a powerhouse in track & field in the 1970s and 1980s.  The school won LHSAA state championships in track and field in Class C in 1975, 1976, and 1977.  It won Class B state championships in 1985, 1986, 1987, and 1988.  The old Rougon High School building, which was built in 1940, is currently the home to Rougon Elementary School.\n\nQuestion: Corey Snide graduated from a high school located in what state?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person.\"\n    },\n    \"high_school_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"school_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the high school.\"\n        },\n        \"state_located\": {\n          \"type\": \"string\",\n          \"description\": \"The state where the high school is located.\"\n        }\n      },\n      \"required\": [\n        \"school_name\",\n        \"state_located\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"graduation_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the person graduated from high school.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"high_school_details\",\n    \"graduation_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "high_school_details",
-    "graduation_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the person."
+      },
+      "high_school_details": {
+        "type": "object",
+        "properties": {
+          "school_name": {
+            "type": "string",
+            "description": "The name of the high school."
+          },
+          "state_located": {
+            "type": "string",
+            "description": "The state where the high school is located."
+          }
+        },
+        "required": [
+          "school_name",
+          "state_located"
+        ],
+        "additionalProperties": false
+      },
+      "graduation_year": {
+        "type": "integer",
+        "description": "The year the person graduated from high school."
+      }
+    },
+    "required": [
+      "person_name",
+      "high_school_details",
+      "graduation_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

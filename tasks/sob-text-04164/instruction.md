@@ -1,72 +1,49 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Khmer Loeu: Khmer Loeu (Khmer: ), is the collective name given to the various indigenous ethnic groups residing in the highlands of Cambodia.  The Khmer Loeu are found mainly in the northeastern provinces of Ratanakiri, Stung Treng, and Mondulkiri.  Most of the highland groups are Mon-Khmer peoples and are distantly related, to one degree or another, to the Khmer.  Two of the Khmer Loeu groups are Chamic peoples, a branch of the Austronesian peoples, and have a very different linguistic and cultural background.  The Mon–Khmer-speaking tribes are the aboriginal inhabitants of mainland Southeast Asia, their ancestors having trickled into the area from the northwest during the prehistoric metal ages.  The Austronesian-speaking groups, Rade and Jarai, are descendants of the Malayo-Polynesian peoples who came to what is now coastal Vietnam, saw the rise and fall of their Champa kingdoms, and then migrated west over the Annamite Range, dispersing between the Mon–Khmer groups.
-
-Baran (surname): Baran is a rare surname from various origins.  It is supposed to be another variant of Baron.  In Gaelic the meaning of the name Baran is: Noble warrior.  In Russian the meaning of the name Baran is: The ram; forceful; virile.  In Teutonic the meaning of the name Baran is: Noble fighter.  In Persian, Kurdish and Turkish baran means rain is a loan word from Persian.  In older Bhojpuri dialect it is misspelling of Varan, or Sanskrit Varna.  In India it is not used as a surname but is/was sometimes found among descendants of indentured labourers from Bihar or Eastern UP as a misspelt form of Varna, especially in compound given names like Rambaran meaning "having the qualities of the clan of Lord Rama".  It is rarely found in Mexico as a variant of Vara, from Portuguese and Spanish: from vara ‘rod’, ‘stick’, ‘yardstick’ (Late Latin vara ‘forked stick’), applied as a nickname or metonymic occupational name in any of various possible senses; it may have been given to a keeper of animals, who used a stick to urge his charges on, or to an official who was responsible for checking weights and measures or who carried a rod as a symbol of his office.
-
-Brass Ankles: The Brass Ankles of South Carolina were a "tri-racial isolate" group, as defined by anthropologists, that developed in the colonial era.  They lived as free people of color successively in the areas of Charleston, Berkeley, Colleton and Orangeburg counties as they increasingly migrated away from the Low Country and into the Piedmont and frontier areas, where racial discrimination was less.  They were identified by this term in the later 18th, 19th, and early 20th centuries.  They had a combination of European, African, and Native American ancestry.
-
-Driggers: Driggers is a surname.  It arrives from Celtic descent, and is thought to be a name given to "Dredge Diggers" and slowly changed to Driggers.  It is also believed to be a branch of the "Rodriguez" surname in the Southern United States, beginning with Emmanual Rodriguez.  Emmanual Rodriguez is believed to have been an African settler in Virginia.  Today in the Southern United States, Driggers can be found in descendants of tri-racial isolate groups such as the Brass Ankles, Lumbee, and Melungeon as well as distinct Native American groups in the Southeast such as the Catawba.
-
-Prospect, North Carolina: Prospect is a census-designated place (CDP) in Robeson County, North Carolina.  The population was 690 at the 2000 census.  Located due northeast of Pembroke, North Carolina, Prospect is a traditionally Methodist community, with its church members largely becoming representatives for the entirety of the American Indian-Methodist community.  Prospect is noted for one of its native sons, Adolph Dial, whose contributions to American Indian Studies have led to an heightened awareness of the local Lumbee Tribe and Native Americans throughout the Southeastern United States.
-
-History of the Native Americans in Baltimore: The history of the Native Americans in Baltimore and what is now Baltimore dates back at least 12,000 years.  As of 2014, Baltimore is home to a small Native American population centered in East Baltimore.  The majority of the Native Americans now living in Baltimore belong to the Lumbee, Piscataway, and Cherokee tribes.  The Piscataway tribe is indigenous to Southern Maryland, living in the area for centuries prior to European colonization.  The Lumbee and Cherokee are indigenous to North Carolina and neighboring states of the Southeastern United States.  Many of the Lumbee and Cherokee migrated to Baltimore during the mid-1900s along with other migrants from the South, such as African-Americans and white Appalachians.
-
-Abandonment cost: Abandonment costs or Abandonment expenditure (ABEX) are costs associated with the abandonment of a business venture.  This term traditionally applied to the process of abandoning an under-producing or non-producing oil or gas well.  In that context, it means the removal of equipment, plugging of the well with cement, any environmental clean-up, etc. necessary to shut the well down.  It is occasionally referred to as "Removal and Abandonment" or R & A.  The objective of well abandonment is to ensure that no hydrocarbons leak into surface water or into the atmosphere.  The cost of a routine abandonment of a typical well in the United States is about $5000 (~Texas average cost in year 2000).  If a well has developed a leak that allows gas to flow up the outside of the well casing, finding and correcting the leak can push the cost of abandonment beyond $100,000.  Wells that have been used as injectors or have been subject to fracking operation are more likely to develop leaks because the injected substances can create channels that permit uncontrolled flow outside the casing.
-
-Verano (surname): Verano is a surname of Basque origin.  as a word it means ""summer"" in the Spanish language but as a family name in the Basque language is ""a habitational name from a town in Biscay province, Basque Country in Spain"", and usually applies to the descendants of the Verano family, an old basque noble family originally from Biscay province in Basque Country.  It's also connected to two important Italian cities, Camerino and Ferrara, The surname Verano has been found in Camerino from as early as the 13th-16th centuries, first with the title of Vicars of the Holy See.  The term Verano may have originated from the Basque "Berano", a name which is popular and common among the residents of those who lived in a town within Biscay Country.  A bishop has even been cited from there in 1482.  The surname Verano is distributed between Verano's family in some countries such Spain (The former Spanish colonies) in the Philippines where substantial numbers of Basques emigrated to, including United States, France, Italy, Malta, and Mexico.  In the United States of America, one of the first Veranos to be recorded on fresh immigration records were from Italy and Hawaii.  However, since they possessed Italian and Spanish names, it can be concluded that they were descendants of those Spaniards or Europeans who landed on the shores Oceania when there was Colonialism in the islands.  There are about 9,102 Documents about Verano Ancestry, 7,223 Birth, Marriage and Deaths and 665 Immigration Records in the USA.
-
-Palaeoptera: The name Palaeoptera has been traditionally applied to those ancestral groups of winged insects (most of them extinct) that lacked the ability to fold the wings back over the abdomen as characterizes the Neoptera.  The Diaphanopterodea, which are palaeopteran insects, had independently and uniquely evolved a different wing-folding mechanism.  Both mayflies and dragonflies lack any of the smell centers in their brain found in Neoptera.
-
-Melungeon: Melungeon ( ) is a term traditionally applied to one of numerous "tri-racial isolate" groups of the Southeastern United States.  Historically, Melungeons were associated with the Cumberland Gap area of central Appalachia, which includes portions of East Tennessee, Southwest Virginia, and eastern Kentucky.  "Tri-racial" describes populations thought to be of mixed European, African and Native American ancestry.  Although there is no consensus on how many such groups exist, estimates range as high as 200.  Melungeons were often referred to by other settlers as "Turks", "Moors" or "Portuguese" on account of their swarthier complexion.
-
-Question: Driggers is a surname, it arrives from Celtic descent, and is thought to be a name given to "Dredge Diggers", Driggers can be found in descendants of tri-racial isolate groups such as the Brass Ankles, Lumbee, and which term traditionally applied to one of numerous "tri-racial isolate" groups of the Southeastern United States?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "surname": {
-      "type": "string",
-      "description": "The surname being discussed."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "origin": {
-      "type": "string",
-      "description": "The stated origin of the surname."
-    },
-    "associated_tri_racial_isolate_groups": {
-      "type": "array",
-      "description": "A list of tri-racial isolate groups whose descendants can have the surname.",
-      "items": {
-        "type": "string"
+    {
+      "role": "user",
+      "content": "Context:\nKhmer Loeu: Khmer Loeu (Khmer: ), is the collective name given to the various indigenous ethnic groups residing in the highlands of Cambodia.  The Khmer Loeu are found mainly in the northeastern provinces of Ratanakiri, Stung Treng, and Mondulkiri.  Most of the highland groups are Mon-Khmer peoples and are distantly related, to one degree or another, to the Khmer.  Two of the Khmer Loeu groups are Chamic peoples, a branch of the Austronesian peoples, and have a very different linguistic and cultural background.  The Mon–Khmer-speaking tribes are the aboriginal inhabitants of mainland Southeast Asia, their ancestors having trickled into the area from the northwest during the prehistoric metal ages.  The Austronesian-speaking groups, Rade and Jarai, are descendants of the Malayo-Polynesian peoples who came to what is now coastal Vietnam, saw the rise and fall of their Champa kingdoms, and then migrated west over the Annamite Range, dispersing between the Mon–Khmer groups.\n\nBaran (surname): Baran is a rare surname from various origins.  It is supposed to be another variant of Baron.  In Gaelic the meaning of the name Baran is: Noble warrior.  In Russian the meaning of the name Baran is: The ram; forceful; virile.  In Teutonic the meaning of the name Baran is: Noble fighter.  In Persian, Kurdish and Turkish baran means rain is a loan word from Persian.  In older Bhojpuri dialect it is misspelling of Varan, or Sanskrit Varna.  In India it is not used as a surname but is/was sometimes found among descendants of indentured labourers from Bihar or Eastern UP as a misspelt form of Varna, especially in compound given names like Rambaran meaning \"having the qualities of the clan of Lord Rama\".  It is rarely found in Mexico as a variant of Vara, from Portuguese and Spanish: from vara ‘rod’, ‘stick’, ‘yardstick’ (Late Latin vara ‘forked stick’), applied as a nickname or metonymic occupational name in any of various possible senses; it may have been given to a keeper of animals, who used a stick to urge his charges on, or to an official who was responsible for checking weights and measures or who carried a rod as a symbol of his office.\n\nBrass Ankles: The Brass Ankles of South Carolina were a \"tri-racial isolate\" group, as defined by anthropologists, that developed in the colonial era.  They lived as free people of color successively in the areas of Charleston, Berkeley, Colleton and Orangeburg counties as they increasingly migrated away from the Low Country and into the Piedmont and frontier areas, where racial discrimination was less.  They were identified by this term in the later 18th, 19th, and early 20th centuries.  They had a combination of European, African, and Native American ancestry.\n\nDriggers: Driggers is a surname.  It arrives from Celtic descent, and is thought to be a name given to \"Dredge Diggers\" and slowly changed to Driggers.  It is also believed to be a branch of the \"Rodriguez\" surname in the Southern United States, beginning with Emmanual Rodriguez.  Emmanual Rodriguez is believed to have been an African settler in Virginia.  Today in the Southern United States, Driggers can be found in descendants of tri-racial isolate groups such as the Brass Ankles, Lumbee, and Melungeon as well as distinct Native American groups in the Southeast such as the Catawba.\n\nProspect, North Carolina: Prospect is a census-designated place (CDP) in Robeson County, North Carolina.  The population was 690 at the 2000 census.  Located due northeast of Pembroke, North Carolina, Prospect is a traditionally Methodist community, with its church members largely becoming representatives for the entirety of the American Indian-Methodist community.  Prospect is noted for one of its native sons, Adolph Dial, whose contributions to American Indian Studies have led to an heightened awareness of the local Lumbee Tribe and Native Americans throughout the Southeastern United States.\n\nHistory of the Native Americans in Baltimore: The history of the Native Americans in Baltimore and what is now Baltimore dates back at least 12,000 years.  As of 2014, Baltimore is home to a small Native American population centered in East Baltimore.  The majority of the Native Americans now living in Baltimore belong to the Lumbee, Piscataway, and Cherokee tribes.  The Piscataway tribe is indigenous to Southern Maryland, living in the area for centuries prior to European colonization.  The Lumbee and Cherokee are indigenous to North Carolina and neighboring states of the Southeastern United States.  Many of the Lumbee and Cherokee migrated to Baltimore during the mid-1900s along with other migrants from the South, such as African-Americans and white Appalachians.\n\nAbandonment cost: Abandonment costs or Abandonment expenditure (ABEX) are costs associated with the abandonment of a business venture.  This term traditionally applied to the process of abandoning an under-producing or non-producing oil or gas well.  In that context, it means the removal of equipment, plugging of the well with cement, any environmental clean-up, etc. necessary to shut the well down.  It is occasionally referred to as \"Removal and Abandonment\" or R & A.  The objective of well abandonment is to ensure that no hydrocarbons leak into surface water or into the atmosphere.  The cost of a routine abandonment of a typical well in the United States is about $5000 (~Texas average cost in year 2000).  If a well has developed a leak that allows gas to flow up the outside of the well casing, finding and correcting the leak can push the cost of abandonment beyond $100,000.  Wells that have been used as injectors or have been subject to fracking operation are more likely to develop leaks because the injected substances can create channels that permit uncontrolled flow outside the casing.\n\nVerano (surname): Verano is a surname of Basque origin.  as a word it means \"\"summer\"\" in the Spanish language but as a family name in the Basque language is \"\"a habitational name from a town in Biscay province, Basque Country in Spain\"\", and usually applies to the descendants of the Verano family, an old basque noble family originally from Biscay province in Basque Country.  It's also connected to two important Italian cities, Camerino and Ferrara, The surname Verano has been found in Camerino from as early as the 13th-16th centuries, first with the title of Vicars of the Holy See.  The term Verano may have originated from the Basque \"Berano\", a name which is popular and common among the residents of those who lived in a town within Biscay Country.  A bishop has even been cited from there in 1482.  The surname Verano is distributed between Verano's family in some countries such Spain (The former Spanish colonies) in the Philippines where substantial numbers of Basques emigrated to, including United States, France, Italy, Malta, and Mexico.  In the United States of America, one of the first Veranos to be recorded on fresh immigration records were from Italy and Hawaii.  However, since they possessed Italian and Spanish names, it can be concluded that they were descendants of those Spaniards or Europeans who landed on the shores Oceania when there was Colonialism in the islands.  There are about 9,102 Documents about Verano Ancestry, 7,223 Birth, Marriage and Deaths and 665 Immigration Records in the USA.\n\nPalaeoptera: The name Palaeoptera has been traditionally applied to those ancestral groups of winged insects (most of them extinct) that lacked the ability to fold the wings back over the abdomen as characterizes the Neoptera.  The Diaphanopterodea, which are palaeopteran insects, had independently and uniquely evolved a different wing-folding mechanism.  Both mayflies and dragonflies lack any of the smell centers in their brain found in Neoptera.\n\nMelungeon: Melungeon ( ) is a term traditionally applied to one of numerous \"tri-racial isolate\" groups of the Southeastern United States.  Historically, Melungeons were associated with the Cumberland Gap area of central Appalachia, which includes portions of East Tennessee, Southwest Virginia, and eastern Kentucky.  \"Tri-racial\" describes populations thought to be of mixed European, African and Native American ancestry.  Although there is no consensus on how many such groups exist, estimates range as high as 200.  Melungeons were often referred to by other settlers as \"Turks\", \"Moors\" or \"Portuguese\" on account of their swarthier complexion.\n\nQuestion: Driggers is a surname, it arrives from Celtic descent, and is thought to be a name given to \"Dredge Diggers\", Driggers can be found in descendants of tri-racial isolate groups such as the Brass Ankles, Lumbee, and which term traditionally applied to one of numerous \"tri-racial isolate\" groups of the Southeastern United States?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"surname\": {\n      \"type\": \"string\",\n      \"description\": \"The surname being discussed.\"\n    },\n    \"origin\": {\n      \"type\": \"string\",\n      \"description\": \"The stated origin of the surname.\"\n    },\n    \"associated_tri_racial_isolate_groups\": {\n      \"type\": \"array\",\n      \"description\": \"A list of tri-racial isolate groups whose descendants can have the surname.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"identified_group\": {\n      \"type\": \"string\",\n      \"description\": \"The specific tri-racial isolate group that fits the description in the question.\"\n    },\n    \"group_location\": {\n      \"type\": \"string\",\n      \"description\": \"The general geographic location associated with the identified group.\"\n    }\n  },\n  \"required\": [\n    \"surname\",\n    \"origin\",\n    \"associated_tri_racial_isolate_groups\",\n    \"identified_group\",\n    \"group_location\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "surname": {
+        "type": "string",
+        "description": "The surname being discussed."
+      },
+      "origin": {
+        "type": "string",
+        "description": "The stated origin of the surname."
+      },
+      "associated_tri_racial_isolate_groups": {
+        "type": "array",
+        "description": "A list of tri-racial isolate groups whose descendants can have the surname.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "identified_group": {
+        "type": "string",
+        "description": "The specific tri-racial isolate group that fits the description in the question."
+      },
+      "group_location": {
+        "type": "string",
+        "description": "The general geographic location associated with the identified group."
       }
     },
-    "identified_group": {
-      "type": "string",
-      "description": "The specific tri-racial isolate group that fits the description in the question."
-    },
-    "group_location": {
-      "type": "string",
-      "description": "The general geographic location associated with the identified group."
-    }
+    "required": [
+      "surname",
+      "origin",
+      "associated_tri_racial_isolate_groups",
+      "identified_group",
+      "group_location"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "surname",
-    "origin",
-    "associated_tri_racial_isolate_groups",
-    "identified_group",
-    "group_location"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Hank Zipzer (TV series): Hank Zipzer is a British children's television series which stars Nick James in the titular role as a 12-year-old dyslexic schoolboy.  The show is based on the series of books by Henry Winkler, who plays the character of Mr. Rock, Hank's music teacher.  The first season premiered in January 2014 on the CBBC Channel Unlike the books that took place in Winker's native United States, the series takes place in the United Kingdom.  The second season began airing on 13 August 2015.  Javone Prince made his first appearance as Mr Joy in season 2, episode 5, "Hank's Hero".  The third season began airing on 26th May 2016, which was followed by an 84-minute Christmas movie later in 2016.  In April 2017, Neil Fitzmaurice confirmed that there will not be a new series.
-
-Oxbridge Blues: Oxbridge Blues is a 1984 British television mini-series, produced and broadcast in the UK by the BBC.  It is an anthology of seven unrelated 75-minute teleplays, most of which focus on relationships of one kind or another.  Most of the teleplays except one take place in England; "He'll See You Now" takes place in the U.S., and "Sleeps Six" takes place in England and France.  The series was broadcast in the U.S. on A&E in 1986 and on PBS in 1988.  In Australia, the series was broadcast on ABC in 1987.
-
-The Walking Dead (TV series): The Walking Dead is an American post-apocalyptic horror television series developed by Frank Darabont for AMC that is based on the eponymous comic book series of the same name by Robert Kirkman, Tony Moore, and Charlie Adlard.  Andrew Lincoln plays the show's lead character, sheriff's deputy Rick Grimes, who awakens from a coma discovering a world overrun by zombies, commonly referred to as "walkers".  Grimes reunites with his family and becomes the leader of a group he forms with other survivors.  Together they struggle to survive and adapt in a post-apocalyptic world filled with walkers and opposing groups of survivors, who are often more dangerous than the walkers themselves.  Much of the series takes place in and around Atlanta, Georgia, and Alexandria, Virginia.
-
-A Young Doctor's Notebook (TV series): A Young Doctor's Notebook is a British dark comedy television programme based on the short story collection of the same name by Mikhail Bulgakov.  Jon Hamm and Daniel Radcliffe portray the show's main characters (a doctor at the fictional Muryevo Hospital in Russia at different ages).  The first series was broadcast between 6 December and 27 December 2012 on Sky Arts 1, and a second (and final) series aired from 21 November to 12 December 2013.  The first series takes place in the year 1917 during the Russian Revolution, and the second series takes place in the following year during the Russian Civil War.
-
-Digimon Tamers: Digimon Tamers (デジモンテイマーズ , Dejimon Teimāzu ) , known outside Japan as season three of Digimon: Digital Monsters, is the third anime television series produced by Toei Animation based on the Japanese "Digimon" franchise.  Unlike the previous seasons, "Digimon Adventure" and "Digimon Adventure 02", "Tamers" takes place in a different universe, where the first two seasons are a TV show.  The show mostly takes place in the real world and revolves heavily around the collectible card game based on the series.
-
-List of Wolfblood episodes: "Wolfblood" is a teen supernatural-drama television series, broadcast on the CBBC channel in the United Kingdom, and also shown worldwide.  A webisode titled "The Scape Goat" takes place between the first and second series.  A series of seven webisodes known as "Jana Bites" takes place between the second and third series.  An online animated motion comic known as "New Moon Rising", which comes in three parts, takes place between the third and fourth series.  An online animated motion comic known as "Hunter's Moon", which comes in three parts, takes place between the fourth and fifth series.  Ten mini-episodes known as "Wolfblood Secrets", which also takes place between the fourth and fifth series, has aired.  An extra webisode called "Lore" aired 19 October 2016.  An online animated motion comic known as "Wolfblood Alpha", which is in three parts, takes place after the fourth series.  s of 1 2017, episodes of "Wolfblood " have aired, concluding the first half of the  series.
-
-Skam (TV series): Skam (] ; English: Shame ) is a Norwegian teen drama television series about the daily life of teenagers at the Hartvig Nissen School, a gymnasium in the wealthy borough of Frogner in West End Oslo.  It was produced by NRK P3, which is part of NRK.  The series is web-based and aired primarily on the website of NRK.
-
-List of Hank Zipzer episodes: "Hank Zipzer" is a children's television series which stars Nick James in the titular role as a 12-year-old dyslexic schoolboy.  The show is based on the series of books by Henry Winkler, who plays the character of Mr. Rock, Hank's music teacher.  The first series premiered in January 2014 on CBBC and a second and third series have been commissioned.  Unlike the books that took place in America, the series takes place in Britain.  The second series began airing on 13 August 2015.  Javone Prince made his first appearance as Mr Joy in series 2, episode 5, "Hank's Hero".  The third series began airing on 26 May 2016, which was followed by an 84-minute Christmas movie on 12 December 2016.  A fourth series has been confirmed by Winkler.
-
-Iman Meskini: Iman Meskini (born 9 March 1997) is a Norwegian actress.  She plays the role of Sana Bakkoush in the teen drama series "SKAM", which is broadcast on NRK.  Sana Bakkoush is a recurring character in seasons 1-4 of SKAM and the lead character in season 4.  As of 2016, Meskini is majoring on Arabic and Middle Eastern studies at the University of Oslo.  Her mother is from Norway and her father is from Tunisia.  She grew up in the village of Langhus and identifies as a practicing Muslim.  Meskini played as a guard for the Høybråten Basketball Club during the 2016-2017 year.
-
-List of Hyakka Ryōran Samurai Girls episodes: Hyakka Ryōran: Samurai Girls is a 2010 anime television series based on the light novels written by Akira Suzuki and illustrated by Niθ, published by Hobby Japan.  Produced by ARMS, the series is directed by KOBUN; series composition by Ryunosuke Kingetsu; music by Tatsuya Kato; produced by Hisato Usui, Ryūji Sekine, Shinsaku Tanaka, and Takuro Hatakeyama; character designs by Tsutomu Miyazawa; with narration in early episodes provided by Fumihiko Tachiki.  The series takes place in Great Japan, an alternate version of Japan where the Tokugawa shogunate remained active and has remained isolated from the rest of the world, and the story centers on Muneakira Yagyu, a young man attending Buou Academic School, an academy located at the base of Mount Fuji where elite nobles train to become samurai warriors.  His life takes a sudden turn when he meets Jubei Yagyu, a mysterious girl who fell from the sky naked who later becomes his first "Master Samurai" after receiving a kiss from her.
-
-Question: The television series on which Iman Meskini plays the character Sana Bakkoush takes place at which school?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "series_name": {
-      "type": "string",
-      "description": "The name of the television series."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "actress_name": {
-      "type": "string",
-      "description": "The name of the actress."
-    },
-    "character_name": {
-      "type": "string",
-      "description": "The name of the character played by the actress."
-    },
-    "school_name": {
-      "type": "string",
-      "description": "The name of the school where the series takes place."
-    },
-    "school_location": {
-      "type": "string",
-      "description": "The location of the school."
+    {
+      "role": "user",
+      "content": "Context:\nHank Zipzer (TV series): Hank Zipzer is a British children's television series which stars Nick James in the titular role as a 12-year-old dyslexic schoolboy.  The show is based on the series of books by Henry Winkler, who plays the character of Mr. Rock, Hank's music teacher.  The first season premiered in January 2014 on the CBBC Channel Unlike the books that took place in Winker's native United States, the series takes place in the United Kingdom.  The second season began airing on 13 August 2015.  Javone Prince made his first appearance as Mr Joy in season 2, episode 5, \"Hank's Hero\".  The third season began airing on 26th May 2016, which was followed by an 84-minute Christmas movie later in 2016.  In April 2017, Neil Fitzmaurice confirmed that there will not be a new series.\n\nOxbridge Blues: Oxbridge Blues is a 1984 British television mini-series, produced and broadcast in the UK by the BBC.  It is an anthology of seven unrelated 75-minute teleplays, most of which focus on relationships of one kind or another.  Most of the teleplays except one take place in England; \"He'll See You Now\" takes place in the U.S., and \"Sleeps Six\" takes place in England and France.  The series was broadcast in the U.S. on A&E in 1986 and on PBS in 1988.  In Australia, the series was broadcast on ABC in 1987.\n\nThe Walking Dead (TV series): The Walking Dead is an American post-apocalyptic horror television series developed by Frank Darabont for AMC that is based on the eponymous comic book series of the same name by Robert Kirkman, Tony Moore, and Charlie Adlard.  Andrew Lincoln plays the show's lead character, sheriff's deputy Rick Grimes, who awakens from a coma discovering a world overrun by zombies, commonly referred to as \"walkers\".  Grimes reunites with his family and becomes the leader of a group he forms with other survivors.  Together they struggle to survive and adapt in a post-apocalyptic world filled with walkers and opposing groups of survivors, who are often more dangerous than the walkers themselves.  Much of the series takes place in and around Atlanta, Georgia, and Alexandria, Virginia.\n\nA Young Doctor's Notebook (TV series): A Young Doctor's Notebook is a British dark comedy television programme based on the short story collection of the same name by Mikhail Bulgakov.  Jon Hamm and Daniel Radcliffe portray the show's main characters (a doctor at the fictional Muryevo Hospital in Russia at different ages).  The first series was broadcast between 6 December and 27 December 2012 on Sky Arts 1, and a second (and final) series aired from 21 November to 12 December 2013.  The first series takes place in the year 1917 during the Russian Revolution, and the second series takes place in the following year during the Russian Civil War.\n\nDigimon Tamers: Digimon Tamers (デジモンテイマーズ , Dejimon Teimāzu ) , known outside Japan as season three of Digimon: Digital Monsters, is the third anime television series produced by Toei Animation based on the Japanese \"Digimon\" franchise.  Unlike the previous seasons, \"Digimon Adventure\" and \"Digimon Adventure 02\", \"Tamers\" takes place in a different universe, where the first two seasons are a TV show.  The show mostly takes place in the real world and revolves heavily around the collectible card game based on the series.\n\nList of Wolfblood episodes: \"Wolfblood\" is a teen supernatural-drama television series, broadcast on the CBBC channel in the United Kingdom, and also shown worldwide.  A webisode titled \"The Scape Goat\" takes place between the first and second series.  A series of seven webisodes known as \"Jana Bites\" takes place between the second and third series.  An online animated motion comic known as \"New Moon Rising\", which comes in three parts, takes place between the third and fourth series.  An online animated motion comic known as \"Hunter's Moon\", which comes in three parts, takes place between the fourth and fifth series.  Ten mini-episodes known as \"Wolfblood Secrets\", which also takes place between the fourth and fifth series, has aired.  An extra webisode called \"Lore\" aired 19 October 2016.  An online animated motion comic known as \"Wolfblood Alpha\", which is in three parts, takes place after the fourth series.  s of 1 2017, episodes of \"Wolfblood \" have aired, concluding the first half of the  series.\n\nSkam (TV series): Skam (] ; English: Shame ) is a Norwegian teen drama television series about the daily life of teenagers at the Hartvig Nissen School, a gymnasium in the wealthy borough of Frogner in West End Oslo.  It was produced by NRK P3, which is part of NRK.  The series is web-based and aired primarily on the website of NRK.\n\nList of Hank Zipzer episodes: \"Hank Zipzer\" is a children's television series which stars Nick James in the titular role as a 12-year-old dyslexic schoolboy.  The show is based on the series of books by Henry Winkler, who plays the character of Mr. Rock, Hank's music teacher.  The first series premiered in January 2014 on CBBC and a second and third series have been commissioned.  Unlike the books that took place in America, the series takes place in Britain.  The second series began airing on 13 August 2015.  Javone Prince made his first appearance as Mr Joy in series 2, episode 5, \"Hank's Hero\".  The third series began airing on 26 May 2016, which was followed by an 84-minute Christmas movie on 12 December 2016.  A fourth series has been confirmed by Winkler.\n\nIman Meskini: Iman Meskini (born 9 March 1997) is a Norwegian actress.  She plays the role of Sana Bakkoush in the teen drama series \"SKAM\", which is broadcast on NRK.  Sana Bakkoush is a recurring character in seasons 1-4 of SKAM and the lead character in season 4.  As of 2016, Meskini is majoring on Arabic and Middle Eastern studies at the University of Oslo.  Her mother is from Norway and her father is from Tunisia.  She grew up in the village of Langhus and identifies as a practicing Muslim.  Meskini played as a guard for the Høybråten Basketball Club during the 2016-2017 year.\n\nList of Hyakka Ryōran Samurai Girls episodes: Hyakka Ryōran: Samurai Girls is a 2010 anime television series based on the light novels written by Akira Suzuki and illustrated by Niθ, published by Hobby Japan.  Produced by ARMS, the series is directed by KOBUN; series composition by Ryunosuke Kingetsu; music by Tatsuya Kato; produced by Hisato Usui, Ryūji Sekine, Shinsaku Tanaka, and Takuro Hatakeyama; character designs by Tsutomu Miyazawa; with narration in early episodes provided by Fumihiko Tachiki.  The series takes place in Great Japan, an alternate version of Japan where the Tokugawa shogunate remained active and has remained isolated from the rest of the world, and the story centers on Muneakira Yagyu, a young man attending Buou Academic School, an academy located at the base of Mount Fuji where elite nobles train to become samurai warriors.  His life takes a sudden turn when he meets Jubei Yagyu, a mysterious girl who fell from the sky naked who later becomes his first \"Master Samurai\" after receiving a kiss from her.\n\nQuestion: The television series on which Iman Meskini plays the character Sana Bakkoush takes place at which school?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the television series.\"\n    },\n    \"actress_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actress.\"\n    },\n    \"character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character played by the actress.\"\n    },\n    \"school_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the school where the series takes place.\"\n    },\n    \"school_location\": {\n      \"type\": \"string\",\n      \"description\": \"The location of the school.\"\n    }\n  },\n  \"required\": [\n    \"series_name\",\n    \"actress_name\",\n    \"character_name\",\n    \"school_name\",\n    \"school_location\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "series_name",
-    "actress_name",
-    "character_name",
-    "school_name",
-    "school_location"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "series_name": {
+        "type": "string",
+        "description": "The name of the television series."
+      },
+      "actress_name": {
+        "type": "string",
+        "description": "The name of the actress."
+      },
+      "character_name": {
+        "type": "string",
+        "description": "The name of the character played by the actress."
+      },
+      "school_name": {
+        "type": "string",
+        "description": "The name of the school where the series takes place."
+      },
+      "school_location": {
+        "type": "string",
+        "description": "The location of the school."
+      }
+    },
+    "required": [
+      "series_name",
+      "actress_name",
+      "character_name",
+      "school_name",
+      "school_location"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

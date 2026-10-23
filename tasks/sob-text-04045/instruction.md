@@ -1,82 +1,59 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Gender disparities in health: WHO has defined health as "a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity."  Identified by the "2012 World Development Report" as one of two key human capital endowments, health can influence an individual’s ability to reach his or her full potential in society.  Yet while gender equality has made the most progress in areas such as education and labor force participation, health inequality between men and women continues to plague many societies today.  While both males and females face health disparities, girls and women experience a majority of health disparities.  This comes from the fact that many cultural ideologies and practices have structured society in a way whereby women are more vulnerable to abuse and mistreatment, making them more prone to illnesses and early death.  Women are also restricted from receiving many opportunities, such as education and paid labor, that can help improve their accessibility to better health care resources.
-
-Susan Lark: Susan Lark is a medical doctor.  She obtained her education from Northwestern Medical School, and has served as one of the clinical faculty members at Stanford University.  At Stanford, Lark taught In the department of family and community medicine.  As of now Lark works in the field of women’s health and preventive medicine.  Lark is the founder and director of the Menopause Self Help Center located in Los Altos, California.  She is well known for her innovative approaches to menopause and hormone management as well as her views on holistic women’s health.  Her holistic approaches focus on hormone balance to assist in the prevention of different physical and emotional health conditions.  She believes that maintaining a slightly alkaline body pH while ultimately lead to optimal health especially in the prevention of diseases such as, osteoporosis.  Dr. Susan Lark has currently innovated and developed different types of nutritional supplements and all natural products in the field of women’s health and hormonal balance.  Her products were invented to allow women to achieve hormone balance without having to utilize conventional hormone replacement therapies.  According to Healthy Directions, “she is also a distinguished clinician, lecturer, and author of 13 best-selling books on women’s health, including Chemistry of Success and the cookbook Eat Papayas Naked, as well as a series of self-help books on women’s health topics like hot flashes, PMS, anxiety, and chronic fatigue.  Her most recent book is Hormone Revolution, written with Kimberly S. Day.  She has also been featured in many publications, including Real Simple, Reader’s Digest, Better Homes & Gardens, New Woman, Family Circle, Shape, The New York Times, and The San Francisco Chronicle.
-
-Hasta el viento tiene miedo: The film is about a group of students in an exclusive college for women, led by Claudia (Alicia Bonet) who decide to investigate a local tower that has figured prominently in disturbing and recurring dreams Claudia has been having.  The dream also features a hanged woman's body.  They are suspended from school for their antics, but Claudia learns from one of the female staff members that the person in the dream is a student who killed herself years before, and that the teacher has seen her ghost.
-
-Claudia (magazine): Claudia is a Polish language monthly women's magazine published in Warsaw, Poland.
-
-Susan Blumenthal: Rear Admiral Susan Blumenthal, M.D. (born 1951) is an American physician, global health expert, psychiatrist and public health advocate.  With more than two decades of service as a senior government health leader in the administrations of four U.S. presidents, Rear Admiral Blumenthal served as the first Deputy Assistant Secretary for Women’s Health and Director of the Office on Women’s Health within the U.S. Department of Health and Human Services (HHS), as well as Assistant Surgeon General of the United States and Senior Global Health Advisor within the HHS.  She also was a Research Branch Chief at the National Institutes of Health (NIH), and the Chair of the NIH Health and Behavior Coordinating Committee.  Dr. Blumenthal is currently the Senior Medical and Policy Advisor at amfAR, The Foundation for AIDS Research, a Senior Fellow in Health Policy at New America, and a Clinical Professor at Tufts and Georgetown Schools of Medicine.  Blumenthal is the Public Health Editor of the "Huffington Post".  She is married to Senator Ed Markey.
-
-Our Bodies, Ourselves: Our Bodies, Ourselves is a book about women's health and sexuality produced by the nonprofit organization Our Bodies Ourselves (originally called the Boston Women's Health Book Collective).  First published in the late 1960s, it contains information related to many aspects of women's health and sexuality, including sexual health, sexual orientation, gender identity, birth control, abortion, pregnancy and childbirth, violence and abuse and menopause.  The most recent edition of the book was published in 2011.  This informational book about women’s health advised women to claim their sexuality for their own pleasure, and included chapters about reproductive health and rights, and lesbian sexuality and independence.  This was revolutionary because the move toward women’s active engagement with their actual sexual desires was contradicting the popular gendered myth of “women as docile, and passive,” and “men as active and aggressive” in a sexual relationship.
-
-Women's Health (magazine): Women's Health, published by Rodale in Emmaus, Pennsylvania, is a magazine focusing on health, nutrition, fitness, sex, and lifestyle.  It is published 10 times a year in the United States and has a circulation of 1.5 million readers.  The magazine has 13 international editions spanning 25 countries and reaching more than 8 million readers globally.
-
-National Women's Health Network: The National Women's Health Network (NWHN) is a non-profit women's health advocacy organization located in Washington, D.C..  It was founded in 1975 by Barbara Seaman, Alice Wolfson, Belita Cowan, Mary Howell, M.D., and Phyllis Chesler, Ph.D.  The stated mission of the organization is to give women a greater voice within the healthcare system.  NWHN is financially supported by 10,000 members, and does not accept contributions from the tobacco and medical industries.  The NWHN researches and lobbies federal agencies on such issues as AIDS, reproductive rights, breast cancer, older women’s health, and new contraceptive technologies.  The Women's Health Voice, the NWHN's health information program, provides independent research on a variety of women's health topics.  Access to their services, as well as various fact sheets, position papers, outside resources, and their newsletters can be found on their official site
-
-Women's reproductive health in the United States: Women’s reproductive health in the United States refers to the set of physical, mental, and social issues related to the health of women in the United States.  It includes the rights of women in the United States to adequate sexual health, available contraception methods, and treatment for sexually transmitted diseases.  The prevalence of women’s health issues in American culture is inspired by second-wave feminism in the United States.  As a result of this movement, women of the United States began to question the largely male-dominated health care system and demanded a right to information on issues regarding their physiology and anatomy.  The U.S. government has made significant strides to propose solutions, like creating the Women’s Health Initiative through the Office of Research on Women’s Health in 1991.
-
-Claudia Nolte: Claudia Nolte was born Claudia Wiesemüller on February 7, 1966 in Rostock, a town that then lay in East Germany.  Nolte became a German politician of the Christian Democratic Union party (CDU), becoming the youngest cabinet minister in German history whilst in office from 1994–98.  She was Federal Minister for family, seniors, women and youth affairs and, by virtue of this office, presided over the European Union Council of Ministers.  Claudia is a Catholic and is active in the Catholic community.  She is married to investigative journalist David Crawford of CORRECT!V.  With her marriage in July 2008, she changed her name to Claudia Crawford.
-
-Question: Claudia and Women's Health are both what?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "common_category": {
-      "type": "string",
-      "description": "The common category or type that both entities belong to."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "entity_count": {
-      "type": "integer",
-      "description": "The number of entities identified in this category."
-    },
-    "entities": {
-      "type": "array",
-      "description": "Details about each entity that shares the common category.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the entity."
-          },
-          "type": {
-            "type": "string",
-            "description": "The specific type of the entity, matching the common category."
-          },
-          "publisher_or_origin": {
-            "type": "string",
-            "description": "The publisher or place of origin for the entity."
-          }
-        },
-        "required": [
-          "name",
-          "type",
-          "publisher_or_origin"
-        ],
-        "additionalProperties": false
-      }
+    {
+      "role": "user",
+      "content": "Context:\nGender disparities in health: WHO has defined health as \"a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity.\"  Identified by the \"2012 World Development Report\" as one of two key human capital endowments, health can influence an individual’s ability to reach his or her full potential in society.  Yet while gender equality has made the most progress in areas such as education and labor force participation, health inequality between men and women continues to plague many societies today.  While both males and females face health disparities, girls and women experience a majority of health disparities.  This comes from the fact that many cultural ideologies and practices have structured society in a way whereby women are more vulnerable to abuse and mistreatment, making them more prone to illnesses and early death.  Women are also restricted from receiving many opportunities, such as education and paid labor, that can help improve their accessibility to better health care resources.\n\nSusan Lark: Susan Lark is a medical doctor.  She obtained her education from Northwestern Medical School, and has served as one of the clinical faculty members at Stanford University.  At Stanford, Lark taught In the department of family and community medicine.  As of now Lark works in the field of women’s health and preventive medicine.  Lark is the founder and director of the Menopause Self Help Center located in Los Altos, California.  She is well known for her innovative approaches to menopause and hormone management as well as her views on holistic women’s health.  Her holistic approaches focus on hormone balance to assist in the prevention of different physical and emotional health conditions.  She believes that maintaining a slightly alkaline body pH while ultimately lead to optimal health especially in the prevention of diseases such as, osteoporosis.  Dr. Susan Lark has currently innovated and developed different types of nutritional supplements and all natural products in the field of women’s health and hormonal balance.  Her products were invented to allow women to achieve hormone balance without having to utilize conventional hormone replacement therapies.  According to Healthy Directions, “she is also a distinguished clinician, lecturer, and author of 13 best-selling books on women’s health, including Chemistry of Success and the cookbook Eat Papayas Naked, as well as a series of self-help books on women’s health topics like hot flashes, PMS, anxiety, and chronic fatigue.  Her most recent book is Hormone Revolution, written with Kimberly S. Day.  She has also been featured in many publications, including Real Simple, Reader’s Digest, Better Homes & Gardens, New Woman, Family Circle, Shape, The New York Times, and The San Francisco Chronicle.\n\nHasta el viento tiene miedo: The film is about a group of students in an exclusive college for women, led by Claudia (Alicia Bonet) who decide to investigate a local tower that has figured prominently in disturbing and recurring dreams Claudia has been having.  The dream also features a hanged woman's body.  They are suspended from school for their antics, but Claudia learns from one of the female staff members that the person in the dream is a student who killed herself years before, and that the teacher has seen her ghost.\n\nClaudia (magazine): Claudia is a Polish language monthly women's magazine published in Warsaw, Poland.\n\nSusan Blumenthal: Rear Admiral Susan Blumenthal, M.D. (born 1951) is an American physician, global health expert, psychiatrist and public health advocate.  With more than two decades of service as a senior government health leader in the administrations of four U.S. presidents, Rear Admiral Blumenthal served as the first Deputy Assistant Secretary for Women’s Health and Director of the Office on Women’s Health within the U.S. Department of Health and Human Services (HHS), as well as Assistant Surgeon General of the United States and Senior Global Health Advisor within the HHS.  She also was a Research Branch Chief at the National Institutes of Health (NIH), and the Chair of the NIH Health and Behavior Coordinating Committee.  Dr. Blumenthal is currently the Senior Medical and Policy Advisor at amfAR, The Foundation for AIDS Research, a Senior Fellow in Health Policy at New America, and a Clinical Professor at Tufts and Georgetown Schools of Medicine.  Blumenthal is the Public Health Editor of the \"Huffington Post\".  She is married to Senator Ed Markey.\n\nOur Bodies, Ourselves: Our Bodies, Ourselves is a book about women's health and sexuality produced by the nonprofit organization Our Bodies Ourselves (originally called the Boston Women's Health Book Collective).  First published in the late 1960s, it contains information related to many aspects of women's health and sexuality, including sexual health, sexual orientation, gender identity, birth control, abortion, pregnancy and childbirth, violence and abuse and menopause.  The most recent edition of the book was published in 2011.  This informational book about women’s health advised women to claim their sexuality for their own pleasure, and included chapters about reproductive health and rights, and lesbian sexuality and independence.  This was revolutionary because the move toward women’s active engagement with their actual sexual desires was contradicting the popular gendered myth of “women as docile, and passive,” and “men as active and aggressive” in a sexual relationship.\n\nWomen's Health (magazine): Women's Health, published by Rodale in Emmaus, Pennsylvania, is a magazine focusing on health, nutrition, fitness, sex, and lifestyle.  It is published 10 times a year in the United States and has a circulation of 1.5 million readers.  The magazine has 13 international editions spanning 25 countries and reaching more than 8 million readers globally.\n\nNational Women's Health Network: The National Women's Health Network (NWHN) is a non-profit women's health advocacy organization located in Washington, D.C..  It was founded in 1975 by Barbara Seaman, Alice Wolfson, Belita Cowan, Mary Howell, M.D., and Phyllis Chesler, Ph.D.  The stated mission of the organization is to give women a greater voice within the healthcare system.  NWHN is financially supported by 10,000 members, and does not accept contributions from the tobacco and medical industries.  The NWHN researches and lobbies federal agencies on such issues as AIDS, reproductive rights, breast cancer, older women’s health, and new contraceptive technologies.  The Women's Health Voice, the NWHN's health information program, provides independent research on a variety of women's health topics.  Access to their services, as well as various fact sheets, position papers, outside resources, and their newsletters can be found on their official site\n\nWomen's reproductive health in the United States: Women’s reproductive health in the United States refers to the set of physical, mental, and social issues related to the health of women in the United States.  It includes the rights of women in the United States to adequate sexual health, available contraception methods, and treatment for sexually transmitted diseases.  The prevalence of women’s health issues in American culture is inspired by second-wave feminism in the United States.  As a result of this movement, women of the United States began to question the largely male-dominated health care system and demanded a right to information on issues regarding their physiology and anatomy.  The U.S. government has made significant strides to propose solutions, like creating the Women’s Health Initiative through the Office of Research on Women’s Health in 1991.\n\nClaudia Nolte: Claudia Nolte was born Claudia Wiesemüller on February 7, 1966 in Rostock, a town that then lay in East Germany.  Nolte became a German politician of the Christian Democratic Union party (CDU), becoming the youngest cabinet minister in German history whilst in office from 1994–98.  She was Federal Minister for family, seniors, women and youth affairs and, by virtue of this office, presided over the European Union Council of Ministers.  Claudia is a Catholic and is active in the Catholic community.  She is married to investigative journalist David Crawford of CORRECT!V.  With her marriage in July 2008, she changed her name to Claudia Crawford.\n\nQuestion: Claudia and Women's Health are both what?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"common_category\": {\n      \"type\": \"string\",\n      \"description\": \"The common category or type that both entities belong to.\"\n    },\n    \"entity_count\": {\n      \"type\": \"integer\",\n      \"description\": \"The number of entities identified in this category.\"\n    },\n    \"entities\": {\n      \"type\": \"array\",\n      \"description\": \"Details about each entity that shares the common category.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the entity.\"\n          },\n          \"type\": {\n            \"type\": \"string\",\n            \"description\": \"The specific type of the entity, matching the common category.\"\n          },\n          \"publisher_or_origin\": {\n            \"type\": \"string\",\n            \"description\": \"The publisher or place of origin for the entity.\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"type\",\n          \"publisher_or_origin\"\n        ],\n        \"additionalProperties\": false\n      }\n    }\n  },\n  \"required\": [\n    \"common_category\",\n    \"entity_count\",\n    \"entities\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "common_category",
-    "entity_count",
-    "entities"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "common_category": {
+        "type": "string",
+        "description": "The common category or type that both entities belong to."
+      },
+      "entity_count": {
+        "type": "integer",
+        "description": "The number of entities identified in this category."
+      },
+      "entities": {
+        "type": "array",
+        "description": "Details about each entity that shares the common category.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the entity."
+            },
+            "type": {
+              "type": "string",
+              "description": "The specific type of the entity, matching the common category."
+            },
+            "publisher_or_origin": {
+              "type": "string",
+              "description": "The publisher or place of origin for the entity."
+            }
+          },
+          "required": [
+            "name",
+            "type",
+            "publisher_or_origin"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "common_category",
+      "entity_count",
+      "entities"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

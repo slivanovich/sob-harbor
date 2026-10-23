@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Jefferson Theatre: The Jefferson Theatre is a historic performing arts theatre located on Fannin Street in downtown Beaumont, Texas.  Designed by Emile Weil and built in 1927, it is an example of Old Spanish architecture and seats over 1400.  The theatre was built by Jefferson Amusement Company, which was owned by Saenger Amusements.  The theatre is featured on the National Register of Historic Places and recognized as a Recorded Texas Historic Landmark.  The theatre recently underwent a comprehensive multimillion-dollar renovation.  It is also one of the few theatres in the country containing its original Morton organ, produced by the Robert Morton Organ Company.
-
-William B. Troubh Ice Arena: The William B. Troubh Ice Arena (formerly the Portland Ice Arena) is an ice hockey arena in Portland, Maine, USA.  Located on Park Avenue between Fitzpatrick Stadium and Hadlock Field, the Ice Arena has a seating capacity of 750 and is open year around.  Since its opening in 1984, it has been home to Portland Pirates hockey practices as well as local amateur teams and open skating hours.  The facility was funded by a 20-year bond which was repaid in 2004.  During the summer of 2012, the facility closed for energy efficiency repairs, which were the first major upgrades since the building opened in 1984.  The repairs were funded by a $625,000 bond passed by voters in 2011 and were estimated to save the city 67,000 kilowatt-hours in energy use yearly.  On January 1, 2015 the Portland Ice Arena changed its name officially to the William B. Troubh Ice Arena as a dedication to William B. Troubh.
-
-Merrimack Repertory Theatre: Merrimack Repertory Theatre (MRT) is a non-profit professional theatre located in Lowell, Massachusetts.  Known for its productions of contemporary work and world premieres, the company presents a September - May season of seven plays at the Nancy L. Donahue Theatre in the historic Liberty Hall, a 279-seat theatre located adjacent to the Lowell Memorial Auditorium.  MRT is the only professional theatre company in the Merrimack Valley region of Massachusetts and New Hampshire, and one of three League of Resident Theatres (LORT) members in Massachusetts.
-
-State Theatre (Portland, Maine): The State Theatre is a historic theater located at 609 Congress Street in downtown Portland, Maine, which features a combination of Moorish and Art Deco architecture.  It reopened as a 1,870-seat performing arts venue in 2010.
-
-Tallinn City Theatre: Tallinn City Theatre (Estonian: "Tallinna Linnateater" ) is a repertory theatre located in the medieval old town of Tallinn, Estonia.  Tallinn City Theatre was established in 1965 as Estonian SSR State Youth Theatre.  In 1992, after the reindependence of Estonia, Elmo Nüganen became the artistic director, holding this position until today.  In 1994, it became a municipal theatre named Tallinn City Theatre.  Tallinn City Theatre's house is unique, consisting of 16 interconnected medieval merchant's houses.  Tallinn City Theatre organizes a biannual international theatre festival Midwinter Night's Dream, which takes place in December.
-
-Lacey Street Theatre: The Lacey Street Theatre building, now hosting the Fairbanks Ice Museum, is an Art Deco architectural showpiece theatre located at 500 Second Avenue in Fairbanks, Alaska.  It was designed by noted theatre designer B. Marcus Priteca, and built in 1939 by C.W. Hufeisen for Austin E. "Cap" Lathrop.  It was one of a chain of movie theaters built by Lathrop across Alaska, and was one of only two in Fairbanks into the 1960s.  It closed in 1981, and was repurposed to house the museum in 1992.
-
-Amas Musical Theatre: Amas Musical Theatre, also known as the Rosetta LeNoire Theatre Academy and the Mainstage Musical Theatre, and formerly known as the Amas Repertory Theatre, Inc. and the Eubie Blake Youth Theatre, is a non-profit Manhattan-based theatre organization founded by Rosetta LeNoire.  The name stems from the Latin word "amare", meaning "to love".  "Amas" is the active indicative present form of "you love".  The Academy puts on both a showcase and an off-off-Broadway performance at the end of the year, featuring inner-city and other teenagers.  Amas is an anchor theatre tenant of the Players Theatre, a theatre located in Greenwich Village.  The theatre has produced over 60 original musicals, including "Bubbling Brown Sugar" and "Bojangles!" .
-
-Gateway Playhouse: Gateway Playhouse is a summer theatre located on the eastern edge of Bellport, Long Island.  The street address is 215 South Country Road.  It's the oldest of three professional theatres on the island and nationally recognized as one of the top ten summer theatres in the nation.  Gateway Playhouse has been running for over sixty years.  The theatre grounds encompass the Mainstage Theatre, Barn Theatre (for acting school classes and projects), scene shop, two rehearsal studios, three dorm-style housing units, a newly remodeled kitchen, costume shop, design office/studio, paint shop, box office, business office, various storage spaces, a recreation room and a large hedge-lined lawn with outdoor swimming pool (which holds the distinction of being the first ever in-ground swimming pool on Long Island).  The Gateway Playhouse theatre seats 500 and its proscenium height is 34' holding 25 line sets for scenery and lights.
-
-Artists Repertory Theatre: Artists Repertory Theatre (Artists Rep) is a professional non-profit theatre located in Portland, Oregon, United States.  The company was established in 1982 and focuses on presenting the works of contemporary playwrights, including world premieres.  In addition to producing six to eight productions in Portland annually, the company runs special programming and collaborations.  They tour productions nationally with the support and collaboration of partnering theatre companies and the National Endowment for the Arts.
-
-Guster on Ice: Guster on Ice - Live from Portland, Maine is a live album that was released by the band Guster in May 2004.  It was recorded in December 2003 over two nights of concerts at the State Theatre in Portland, Maine.
-
-Question: Guster on Ice was recorded at the theatre located at what address in Portland, Maine?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "theatre_name": {
-      "type": "string",
-      "description": "The name of the theatre where the album was recorded."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "city": {
-      "type": "string",
-      "description": "The city where the theatre is located."
-    },
-    "state": {
-      "type": "string",
-      "description": "The state where the theatre is located."
-    },
-    "address": {
-      "type": "string",
-      "description": "The street address of the theatre."
+    {
+      "role": "user",
+      "content": "Context:\nJefferson Theatre: The Jefferson Theatre is a historic performing arts theatre located on Fannin Street in downtown Beaumont, Texas.  Designed by Emile Weil and built in 1927, it is an example of Old Spanish architecture and seats over 1400.  The theatre was built by Jefferson Amusement Company, which was owned by Saenger Amusements.  The theatre is featured on the National Register of Historic Places and recognized as a Recorded Texas Historic Landmark.  The theatre recently underwent a comprehensive multimillion-dollar renovation.  It is also one of the few theatres in the country containing its original Morton organ, produced by the Robert Morton Organ Company.\n\nWilliam B. Troubh Ice Arena: The William B. Troubh Ice Arena (formerly the Portland Ice Arena) is an ice hockey arena in Portland, Maine, USA.  Located on Park Avenue between Fitzpatrick Stadium and Hadlock Field, the Ice Arena has a seating capacity of 750 and is open year around.  Since its opening in 1984, it has been home to Portland Pirates hockey practices as well as local amateur teams and open skating hours.  The facility was funded by a 20-year bond which was repaid in 2004.  During the summer of 2012, the facility closed for energy efficiency repairs, which were the first major upgrades since the building opened in 1984.  The repairs were funded by a $625,000 bond passed by voters in 2011 and were estimated to save the city 67,000 kilowatt-hours in energy use yearly.  On January 1, 2015 the Portland Ice Arena changed its name officially to the William B. Troubh Ice Arena as a dedication to William B. Troubh.\n\nMerrimack Repertory Theatre: Merrimack Repertory Theatre (MRT) is a non-profit professional theatre located in Lowell, Massachusetts.  Known for its productions of contemporary work and world premieres, the company presents a September - May season of seven plays at the Nancy L. Donahue Theatre in the historic Liberty Hall, a 279-seat theatre located adjacent to the Lowell Memorial Auditorium.  MRT is the only professional theatre company in the Merrimack Valley region of Massachusetts and New Hampshire, and one of three League of Resident Theatres (LORT) members in Massachusetts.\n\nState Theatre (Portland, Maine): The State Theatre is a historic theater located at 609 Congress Street in downtown Portland, Maine, which features a combination of Moorish and Art Deco architecture.  It reopened as a 1,870-seat performing arts venue in 2010.\n\nTallinn City Theatre: Tallinn City Theatre (Estonian: \"Tallinna Linnateater\" ) is a repertory theatre located in the medieval old town of Tallinn, Estonia.  Tallinn City Theatre was established in 1965 as Estonian SSR State Youth Theatre.  In 1992, after the reindependence of Estonia, Elmo Nüganen became the artistic director, holding this position until today.  In 1994, it became a municipal theatre named Tallinn City Theatre.  Tallinn City Theatre's house is unique, consisting of 16 interconnected medieval merchant's houses.  Tallinn City Theatre organizes a biannual international theatre festival Midwinter Night's Dream, which takes place in December.\n\nLacey Street Theatre: The Lacey Street Theatre building, now hosting the Fairbanks Ice Museum, is an Art Deco architectural showpiece theatre located at 500 Second Avenue in Fairbanks, Alaska.  It was designed by noted theatre designer B. Marcus Priteca, and built in 1939 by C.W. Hufeisen for Austin E. \"Cap\" Lathrop.  It was one of a chain of movie theaters built by Lathrop across Alaska, and was one of only two in Fairbanks into the 1960s.  It closed in 1981, and was repurposed to house the museum in 1992.\n\nAmas Musical Theatre: Amas Musical Theatre, also known as the Rosetta LeNoire Theatre Academy and the Mainstage Musical Theatre, and formerly known as the Amas Repertory Theatre, Inc. and the Eubie Blake Youth Theatre, is a non-profit Manhattan-based theatre organization founded by Rosetta LeNoire.  The name stems from the Latin word \"amare\", meaning \"to love\".  \"Amas\" is the active indicative present form of \"you love\".  The Academy puts on both a showcase and an off-off-Broadway performance at the end of the year, featuring inner-city and other teenagers.  Amas is an anchor theatre tenant of the Players Theatre, a theatre located in Greenwich Village.  The theatre has produced over 60 original musicals, including \"Bubbling Brown Sugar\" and \"Bojangles!\" .\n\nGateway Playhouse: Gateway Playhouse is a summer theatre located on the eastern edge of Bellport, Long Island.  The street address is 215 South Country Road.  It's the oldest of three professional theatres on the island and nationally recognized as one of the top ten summer theatres in the nation.  Gateway Playhouse has been running for over sixty years.  The theatre grounds encompass the Mainstage Theatre, Barn Theatre (for acting school classes and projects), scene shop, two rehearsal studios, three dorm-style housing units, a newly remodeled kitchen, costume shop, design office/studio, paint shop, box office, business office, various storage spaces, a recreation room and a large hedge-lined lawn with outdoor swimming pool (which holds the distinction of being the first ever in-ground swimming pool on Long Island).  The Gateway Playhouse theatre seats 500 and its proscenium height is 34' holding 25 line sets for scenery and lights.\n\nArtists Repertory Theatre: Artists Repertory Theatre (Artists Rep) is a professional non-profit theatre located in Portland, Oregon, United States.  The company was established in 1982 and focuses on presenting the works of contemporary playwrights, including world premieres.  In addition to producing six to eight productions in Portland annually, the company runs special programming and collaborations.  They tour productions nationally with the support and collaboration of partnering theatre companies and the National Endowment for the Arts.\n\nGuster on Ice: Guster on Ice - Live from Portland, Maine is a live album that was released by the band Guster in May 2004.  It was recorded in December 2003 over two nights of concerts at the State Theatre in Portland, Maine.\n\nQuestion: Guster on Ice was recorded at the theatre located at what address in Portland, Maine?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"theatre_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the theatre where the album was recorded.\"\n    },\n    \"city\": {\n      \"type\": \"string\",\n      \"description\": \"The city where the theatre is located.\"\n    },\n    \"state\": {\n      \"type\": \"string\",\n      \"description\": \"The state where the theatre is located.\"\n    },\n    \"address\": {\n      \"type\": \"string\",\n      \"description\": \"The street address of the theatre.\"\n    }\n  },\n  \"required\": [\n    \"theatre_name\",\n    \"city\",\n    \"state\",\n    \"address\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "theatre_name",
-    "city",
-    "state",
-    "address"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "theatre_name": {
+        "type": "string",
+        "description": "The name of the theatre where the album was recorded."
+      },
+      "city": {
+        "type": "string",
+        "description": "The city where the theatre is located."
+      },
+      "state": {
+        "type": "string",
+        "description": "The state where the theatre is located."
+      },
+      "address": {
+        "type": "string",
+        "description": "The street address of the theatre."
+      }
+    },
+    "required": [
+      "theatre_name",
+      "city",
+      "state",
+      "address"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

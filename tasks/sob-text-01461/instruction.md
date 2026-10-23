@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Murdannia dimorphoides: Murdannia dimorphoides is a plant species endemic to Sri Lanka, known from only one location inside Wilpattu National Park.
-
-Vic &amp; Anthony's Steakhouse: Vic & Anthony’s is an American steakhouse restaurant chain with locations in Downtown Houston, ]and inside the Golden Nugget Casinos in Las Vegas and Atlantic City.  A fourth location is scheduled to open inside the new Golden Nugget Lake Charles in late 2014.  Vic & Anthony’s is owned and operated by Landry’s, Inc.
-
-Moscow Internet Exchange: The Moscow Internet Exchange (MSK-IX) is an Internet Exchange Point in Moscow, Russia.  MSK-IX was originally established in 1995 with a single location inside of the "Moscow International Telephone Exchange" (Russian: Московская международная телефонная станция , ММТС-9), but it now has eight geographically diverse locations in Moscow interconnected via Gigabit and 10 Gigabit links.
-
-Flora and Fauna of Honduras: The flora and fauna of Honduras reflects the country's geographical location inside the tropics.  This has allowed for diverse species of plants and animals to be adapted, but some of them are now in danger of extinction.  This has posed the Honduran government, offices and nature organizations to look after the protection of the local environment, like the creation of nature reserves.
-
-Treasure Island Resort &amp; Casino: Treasure Island Resort & Casino began as a bingo hall in 1984 called Island Bingo.  This building started as a 30,000-square-foot space that seated 1,400 people.  Through its time of success it began to grow further into Treasure Island after Congress passed the Indian Gaming Regulatory Act of 1988.  This act required states to negotiate gaming compacts with the Tribe as a way to strengthen tribal governments and improve the quality of life on reservations.  This act contributed to much tribal success for Prairie Island Indian Community in addition to the entire state of Minnesota.  Shortly after this in 1989, Prairie Island Indian Community signed a compact with the State of Minnesota which allowed it to expand its gaming operation.  In 1991, the 30,000-square-foot building was expanded with a 25,000-square-foot addition that created room for additional games.  Not long after this in 1992, the casino was expanded by an additional 25,000 square feet.  Growth in the Prairie Island Indian Community was shown through this with the opening of a community center, health care facility as well as improvement to tribal water and sewer systems.  In 1993, a 78,000-square-foot expansion was added which created three new restaurants, valet parking, state-of-the-art kitchen, a gift shop, players club, ballroom and a new entertainment area.  In the following year, a 137-slip marina and 95-site RV park would open.  Growth continued as 9,854-square-foot addition for business offices is established in 1995.  In 1996, Treasure Island made a big step with a $20 million addition and redesign.  A strategic marketing shift changed the name to Treasure Island Resort & Casino with the addition of new theming and a 250-room hotel transformed Treasure Island into a destination resort.  The total square footage has 350,000 with 25,000 square feet designed for meeting space.  In 2001, an additional 200,000 feet were added to the casino, which included a new great entry, higher ceilings to improve air quality, additional games, 70,000-square-foot office space and 60,000-square-foot warehouse.  An expansion that was completed in fall 2008 included 230 new hotel rooms, 30,000-square-foot event center and a bowling center complete with an arcade area.  In 2015, Tado Steakhouse was constructed, Tradewinds Buffet was remodeled and the water park & spa construction began.  The Lagoon and Wave Spa opened February 9, 2016.
-
-Mac's Steak in the Rough: Mac's Steak in the Rough is a drive-in fast-food restaurant in Albuquerque, New Mexico, that serves American and New Mexican cuisine.  It used to be a chain of restaurants, but its locations were reduced to a single restaurant.  They have begun to expand again, by opening a location inside the Latitudes gas station near the entrance of Intel in Rio Rancho.
-
-Taco Bus: Taco Bus restaurants serve Mexican food in the Tampa, Florida area.  The restaurants began as a popular food truck on Hillsborough Avenue.  A second location followed on Central Avenue in St. Petersburg, Florida and a restaurant was added on Franklin Street in downtown Tampa.  Taco Bus opened their fourth location near USF on Fletcher Avenue.  Rene Valenzuela is chef and owner of the business.  A location in Brandon at 311 South Falkengburg is scheduled to open in spring 2013.  The USF location was reported to be open 24 hours.
-
-Inthakhin (pillar): Inthakhin (Thai: อินทขีล ; lit. " Indra's pillar") is the name of the "Lak Mueang" (the "city pillar") of Chiang Mai.  It is said that the pillar was first erected by King Mangrai at the founding of the city on April 12, 1296 CE at Wat Sadue Mueang (lit.  "Temple of the Navel of the City"; also known as Wat Inthakhin) on Inthawarorot road.  It was brought to its present location inside a shrine on the temple grounds of Wat Chedi Luang by the Lanna king Kawila in 1800 CE.
-
-Golden Nugget Lake Charles: Golden Nugget Lake Charles is a 242-acre waterfront casino resort in Lake Charles, Louisiana, U.S.A., owned and operated by Houston-based Landry's, Inc. The resort features 740 guest rooms and suites housed in a 25-story tower, an 18-hole golf course, 30,000-square-feet of meeting space, more than a dozen dining and bar options, a private beach, marina, spa & salon, retail corridor and expansive 24-hour casino floor.
-
-Cameron Mitchell Restaurants: Cameron Mitchell Restaurants is a restaurant company headquartered in Columbus, Ohio.  It owns restaurants under various names, many of which are located in Central Ohio.  It formerly included the Mitchell's Steakhouse and Mitchell's Fish Market brands, but sold both of these concepts along with one Cameron's Steakhouse location to Ruth's Chris in February 2008.  The Ocean Prime concept opened in Troy, Michigan in June 2008 and has locations in Columbus, OH (under the name Mitchell's Ocean Club), Orlando, FL, Phoenix, AZ, Tampa, FL, Dallas, TX, Denver, CO, Atlanta, GA and Indianapolis, IN.  Other locations will open in Philadelphia, PA and Houston, TX in 2013 and 2014.  Cameron Mitchell Restaurants has also recently announced plans to open a new concept in the Short North Arts District of Columbus, OH in 2013.  The company also manages and co-owns a sister company, Rusty Bucket Restaurant & Tavern
-
-Question: Vic & Anthony's Steakhouse is set to open a fourth location inside a casino based in what state?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "restaurant_chain_name": {
-      "type": "string",
-      "description": "The name of the restaurant chain."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "new_location_details": {
-      "type": "object",
-      "properties": {
-        "casino_name": {
-          "type": "string",
-          "description": "The name of the casino where the new location will open."
-        },
-        "state": {
-          "type": "string",
-          "description": "The state where the casino is located."
-        },
-        "opening_year": {
-          "type": "integer",
-          "description": "The year the new location is scheduled to open."
-        }
-      },
-      "required": [
-        "casino_name",
-        "state",
-        "opening_year"
-      ],
-      "additionalProperties": false
-    },
-    "owner_company": {
-      "type": "string",
-      "description": "The company that owns and operates the restaurant chain."
+    {
+      "role": "user",
+      "content": "Context:\nMurdannia dimorphoides: Murdannia dimorphoides is a plant species endemic to Sri Lanka, known from only one location inside Wilpattu National Park.\n\nVic &amp; Anthony's Steakhouse: Vic & Anthony’s is an American steakhouse restaurant chain with locations in Downtown Houston, ]and inside the Golden Nugget Casinos in Las Vegas and Atlantic City.  A fourth location is scheduled to open inside the new Golden Nugget Lake Charles in late 2014.  Vic & Anthony’s is owned and operated by Landry’s, Inc.\n\nMoscow Internet Exchange: The Moscow Internet Exchange (MSK-IX) is an Internet Exchange Point in Moscow, Russia.  MSK-IX was originally established in 1995 with a single location inside of the \"Moscow International Telephone Exchange\" (Russian: Московская международная телефонная станция , ММТС-9), but it now has eight geographically diverse locations in Moscow interconnected via Gigabit and 10 Gigabit links.\n\nFlora and Fauna of Honduras: The flora and fauna of Honduras reflects the country's geographical location inside the tropics.  This has allowed for diverse species of plants and animals to be adapted, but some of them are now in danger of extinction.  This has posed the Honduran government, offices and nature organizations to look after the protection of the local environment, like the creation of nature reserves.\n\nTreasure Island Resort &amp; Casino: Treasure Island Resort & Casino began as a bingo hall in 1984 called Island Bingo.  This building started as a 30,000-square-foot space that seated 1,400 people.  Through its time of success it began to grow further into Treasure Island after Congress passed the Indian Gaming Regulatory Act of 1988.  This act required states to negotiate gaming compacts with the Tribe as a way to strengthen tribal governments and improve the quality of life on reservations.  This act contributed to much tribal success for Prairie Island Indian Community in addition to the entire state of Minnesota.  Shortly after this in 1989, Prairie Island Indian Community signed a compact with the State of Minnesota which allowed it to expand its gaming operation.  In 1991, the 30,000-square-foot building was expanded with a 25,000-square-foot addition that created room for additional games.  Not long after this in 1992, the casino was expanded by an additional 25,000 square feet.  Growth in the Prairie Island Indian Community was shown through this with the opening of a community center, health care facility as well as improvement to tribal water and sewer systems.  In 1993, a 78,000-square-foot expansion was added which created three new restaurants, valet parking, state-of-the-art kitchen, a gift shop, players club, ballroom and a new entertainment area.  In the following year, a 137-slip marina and 95-site RV park would open.  Growth continued as 9,854-square-foot addition for business offices is established in 1995.  In 1996, Treasure Island made a big step with a $20 million addition and redesign.  A strategic marketing shift changed the name to Treasure Island Resort & Casino with the addition of new theming and a 250-room hotel transformed Treasure Island into a destination resort.  The total square footage has 350,000 with 25,000 square feet designed for meeting space.  In 2001, an additional 200,000 feet were added to the casino, which included a new great entry, higher ceilings to improve air quality, additional games, 70,000-square-foot office space and 60,000-square-foot warehouse.  An expansion that was completed in fall 2008 included 230 new hotel rooms, 30,000-square-foot event center and a bowling center complete with an arcade area.  In 2015, Tado Steakhouse was constructed, Tradewinds Buffet was remodeled and the water park & spa construction began.  The Lagoon and Wave Spa opened February 9, 2016.\n\nMac's Steak in the Rough: Mac's Steak in the Rough is a drive-in fast-food restaurant in Albuquerque, New Mexico, that serves American and New Mexican cuisine.  It used to be a chain of restaurants, but its locations were reduced to a single restaurant.  They have begun to expand again, by opening a location inside the Latitudes gas station near the entrance of Intel in Rio Rancho.\n\nTaco Bus: Taco Bus restaurants serve Mexican food in the Tampa, Florida area.  The restaurants began as a popular food truck on Hillsborough Avenue.  A second location followed on Central Avenue in St. Petersburg, Florida and a restaurant was added on Franklin Street in downtown Tampa.  Taco Bus opened their fourth location near USF on Fletcher Avenue.  Rene Valenzuela is chef and owner of the business.  A location in Brandon at 311 South Falkengburg is scheduled to open in spring 2013.  The USF location was reported to be open 24 hours.\n\nInthakhin (pillar): Inthakhin (Thai: อินทขีล ; lit. \" Indra's pillar\") is the name of the \"Lak Mueang\" (the \"city pillar\") of Chiang Mai.  It is said that the pillar was first erected by King Mangrai at the founding of the city on April 12, 1296 CE at Wat Sadue Mueang (lit.  \"Temple of the Navel of the City\"; also known as Wat Inthakhin) on Inthawarorot road.  It was brought to its present location inside a shrine on the temple grounds of Wat Chedi Luang by the Lanna king Kawila in 1800 CE.\n\nGolden Nugget Lake Charles: Golden Nugget Lake Charles is a 242-acre waterfront casino resort in Lake Charles, Louisiana, U.S.A., owned and operated by Houston-based Landry's, Inc. The resort features 740 guest rooms and suites housed in a 25-story tower, an 18-hole golf course, 30,000-square-feet of meeting space, more than a dozen dining and bar options, a private beach, marina, spa & salon, retail corridor and expansive 24-hour casino floor.\n\nCameron Mitchell Restaurants: Cameron Mitchell Restaurants is a restaurant company headquartered in Columbus, Ohio.  It owns restaurants under various names, many of which are located in Central Ohio.  It formerly included the Mitchell's Steakhouse and Mitchell's Fish Market brands, but sold both of these concepts along with one Cameron's Steakhouse location to Ruth's Chris in February 2008.  The Ocean Prime concept opened in Troy, Michigan in June 2008 and has locations in Columbus, OH (under the name Mitchell's Ocean Club), Orlando, FL, Phoenix, AZ, Tampa, FL, Dallas, TX, Denver, CO, Atlanta, GA and Indianapolis, IN.  Other locations will open in Philadelphia, PA and Houston, TX in 2013 and 2014.  Cameron Mitchell Restaurants has also recently announced plans to open a new concept in the Short North Arts District of Columbus, OH in 2013.  The company also manages and co-owns a sister company, Rusty Bucket Restaurant & Tavern\n\nQuestion: Vic & Anthony's Steakhouse is set to open a fourth location inside a casino based in what state?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"restaurant_chain_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the restaurant chain.\"\n    },\n    \"new_location_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"casino_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the casino where the new location will open.\"\n        },\n        \"state\": {\n          \"type\": \"string\",\n          \"description\": \"The state where the casino is located.\"\n        },\n        \"opening_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the new location is scheduled to open.\"\n        }\n      },\n      \"required\": [\n        \"casino_name\",\n        \"state\",\n        \"opening_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"owner_company\": {\n      \"type\": \"string\",\n      \"description\": \"The company that owns and operates the restaurant chain.\"\n    }\n  },\n  \"required\": [\n    \"restaurant_chain_name\",\n    \"new_location_details\",\n    \"owner_company\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "restaurant_chain_name",
-    "new_location_details",
-    "owner_company"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "restaurant_chain_name": {
+        "type": "string",
+        "description": "The name of the restaurant chain."
+      },
+      "new_location_details": {
+        "type": "object",
+        "properties": {
+          "casino_name": {
+            "type": "string",
+            "description": "The name of the casino where the new location will open."
+          },
+          "state": {
+            "type": "string",
+            "description": "The state where the casino is located."
+          },
+          "opening_year": {
+            "type": "integer",
+            "description": "The year the new location is scheduled to open."
+          }
+        },
+        "required": [
+          "casino_name",
+          "state",
+          "opening_year"
+        ],
+        "additionalProperties": false
+      },
+      "owner_company": {
+        "type": "string",
+        "description": "The company that owns and operates the restaurant chain."
+      }
+    },
+    "required": [
+      "restaurant_chain_name",
+      "new_location_details",
+      "owner_company"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

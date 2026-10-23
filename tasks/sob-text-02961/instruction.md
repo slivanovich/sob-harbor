@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-1898 Georgia hurricane: The 1898 Georgia hurricane was a major hurricane that hit the U.S. state of Georgia, as well as the strongest on record in the state.  It was first known to exist on September 29, although modern researchers estimated that it developed four days earlier to the east of the Lesser Antilles.  The hurricane maintained a general northwest track throughout its duration, and it reached peak winds of 135 mph (215 km/h) on October 2.  That day, it made landfall on Cumberland Island in Camden County, Georgia, causing record storm surge flooding.  The hurricane caused heavy damage throughout the region, and killed at least 179 people.  Impact was most severe in Brunswick, where a 16 ft storm surge was recorded.  Overall damage was estimated at $1.5 million (1898 USD), most of which occurred in Georgia.  In extreme northeastern Florida, strong winds nearly destroyed the city of Fernandina, while light crop damage was reported in southern South Carolina.  After moving ashore, the hurricane quickly weakened and traversed much of North America; it continued northwestward until reaching the Ohio Valley and turning northeastward, and it was last observed on October 6 near Newfoundland.
-
-WRMK-LP: WRMK-LP (100.3 FM) is a low power broadcasting radio station in Augusta, Georgia.  The station is licensed by the Federal Communications Commission (FCC) to broadcast with an effective radiated power (ERP) of 100 watts.  The station is co-located with Good News Church at 400 Warren Road, Augusta, Georgia.  The FM signal covers a radius of four to six miles around the transmitter location on Warren Rd which allows the station to cover a majority of Augusta/Richmond County and parts of Columbia County, Georgia; as well as a small portion of Aiken County, South Carolina.  WRMK broadcasts the Word of Faith message, and powerful praise and worship music 24 hours a day in the CSRA (Central Savannah River Area).
-
-Alexander Blair: Alexander Blair III (April 22, 1867–November 16, 1931) was an American architect.  He designed the Grand Opera House (1884) in Macon, Georgia, eight Georgia county courthouses, and other buildings.  His father was also an architect and his son Algernon Blair (1873-1952) was a prominent builder.
-
-Jet by Day: Jet by Day is a post-rock band from Athens, Georgia.
-
-Third Day: Third Day is a Christian rock band formed in Marietta, Georgia during the 1990s.  The band was founded by lead singer Mac Powell, guitarist Mark Lee and former member Billy Wilkins.  Drummer David Carr is a current band member.  The band's name is a reference to the biblical accounts of Jesus' rising from the dead on the third day following his crucifixion.  The band was inducted in the Georgia Music Hall of Fame on September 19, 2009.  They have sold over 7 million albums in the United States and had 28 number one radio hits.  Their fans are known as "Gomers" after a song on their second album about Gomer.
-
-Lust for Freedom: Lust for Freedom is a 1987 "women in prison" film directed, produced and co-written by Eric Louzil, and starring Melanie Coll.  The film was originally shot at a cost of $50,000 in 1985, under the title of "Georgia County Lock-up".  In 1986, Troma Team provided $125,000 to alter the film for a theatrical release.  The film premiered at the Cannes Film Festival in 1987, before premiering theatrically the following year.
-
-St. John, Florida: St.John and Robertsville are two unincorporated communities in Gadsden County, Florida, United States.  They are located near the intersection of Old Philadelphia Road and Old Bainbridge Road.  Unlike some people think, the communities are not a part of the Mount Pleasant area.  They recently had a zipcode change which split the community into two zipcodes, however the community considers itself a part of Quincy.  They are approximately 5 miles outside of the city limits of Quincy, Florida.  St. John borders the city of Gretna and the Robertsville community borders the Georgia state line, Attapugus, Georgia, Faceville, Georgia and Chattahoochee, Florida.  These two communities are usually spoken of and thought of together although they are separate and distinct.  St.John is known for its school, St.John's elementary school, the St.John/Robertsville park, the St.John volunteer fire department and most recently the St.John Church of God in Christ.  The church has been a staple in the community for over 50 years but is noted because of its new building on Old Philadelphia highway.  The church was featured in the local newspaper The Gadsden County Times, because of its expansion.  The church was also granted St. John Church of God in Christ day in May 2010 by then commission chair Angela Sapp.  The church has launched many Christian leaders over the years, such as Nicky Yarborough These achievements have made St.John Church of God In Christ #86 among the top 1000 black (African-American) churches.  Other churches in the area include the St. John AME church.  It is also known for the McCloud’s Assisted Living Facility, which was the oldest assisted living facility in Quincy, Florida until it closed in 2006 due to health concerns of the administrator.  The community is proud of its growth and achievements.  St. John shares its facilities with Robertsville (its closest neighbor) and other communities in Gadsden County.  It also borders the city of Gretna, Florida.  The communities associate themselves with the city of Quincy as their city.
-
-Distance Diagnostics Through Digital Imaging: Distance Diagnostics through Digital Imaging (DDDI) is the name of a system, developed at the University of Georgia College of Agricultural and Environmental Sciences, to allow textual information and descriptive images to be submitted directly from Georgia county Extension offices, for rapid diagnosis of plant and pest disease issues by resource professionals at the University.  Since its inception in the late 1990s, universities throughout the United States have adapted this system for their use.
-
-Black Rock Mountain State Park: Black Rock Mountain State Park is a 1,743 acre (7.03 km²) Georgia state park located west of Mountain City in Rabun County, Georgia.  It is named after its sheer cliffs of dark-colored biotite gneiss in Georgia's Blue Ridge Mountains.  Located astride the Eastern Continental Divide at an elevation of 3,640 feet (1,109 m), the park provides many scenic overlooks and 80 mile (130 km) vistas of the southern Appalachian Mountains.  On a clear day, four states are visible: Georgia, North Carolina, South Carolina, and Tennessee.  In addition to Black Rock Mountain itself, the park includes four other peaks over 3000 ft in elevation, making it the highest state park in Georgia.
-
-Athens, Georgia: Athens (formally known as Athens-Clarke County) is a consolidated city–county in the U.S. state of Georgia, in the northeastern part of the state about an hour's drive from the global city of Atlanta, and comprising the former city of Athens proper (the county seat) and Clarke County.  The University of Georgia, the state's flagship public research university, is located in this college town, and contributed to its initial growth.  In 1991, after a vote the preceding year, the original city abandoned its charter to form a unified government with Clarke County, referred to jointly as Athens-Clarke County.  As of the 2010 census, the consolidated city-county (including all of Athens-Clarke County except Winterville and a portion of Bogart) had a total population of 115,452; all of Clarke County had a population of 116,714.  Athens is the sixth-largest city in Georgia, and the principal city of the Athens-Clarke County, Georgia Metropolitan Statistical Area, which had a population of 192,541 as of the 2010 census.  Athens-Clarke County has the smallest geographical area of a county in Georgia.
-
-Question: Jet by Day is a band from what Georgia county?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "band_name": {
-      "type": "string",
-      "description": "The name of the band."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "origin_city": {
-      "type": "string",
-      "description": "The city where the band originated."
-    },
-    "origin_state": {
-      "type": "string",
-      "description": "The state where the band originated."
-    },
-    "origin_county": {
-      "type": "string",
-      "description": "The county where the band originated."
+    {
+      "role": "user",
+      "content": "Context:\n1898 Georgia hurricane: The 1898 Georgia hurricane was a major hurricane that hit the U.S. state of Georgia, as well as the strongest on record in the state.  It was first known to exist on September 29, although modern researchers estimated that it developed four days earlier to the east of the Lesser Antilles.  The hurricane maintained a general northwest track throughout its duration, and it reached peak winds of 135 mph (215 km/h) on October 2.  That day, it made landfall on Cumberland Island in Camden County, Georgia, causing record storm surge flooding.  The hurricane caused heavy damage throughout the region, and killed at least 179 people.  Impact was most severe in Brunswick, where a 16 ft storm surge was recorded.  Overall damage was estimated at $1.5 million (1898 USD), most of which occurred in Georgia.  In extreme northeastern Florida, strong winds nearly destroyed the city of Fernandina, while light crop damage was reported in southern South Carolina.  After moving ashore, the hurricane quickly weakened and traversed much of North America; it continued northwestward until reaching the Ohio Valley and turning northeastward, and it was last observed on October 6 near Newfoundland.\n\nWRMK-LP: WRMK-LP (100.3 FM) is a low power broadcasting radio station in Augusta, Georgia.  The station is licensed by the Federal Communications Commission (FCC) to broadcast with an effective radiated power (ERP) of 100 watts.  The station is co-located with Good News Church at 400 Warren Road, Augusta, Georgia.  The FM signal covers a radius of four to six miles around the transmitter location on Warren Rd which allows the station to cover a majority of Augusta/Richmond County and parts of Columbia County, Georgia; as well as a small portion of Aiken County, South Carolina.  WRMK broadcasts the Word of Faith message, and powerful praise and worship music 24 hours a day in the CSRA (Central Savannah River Area).\n\nAlexander Blair: Alexander Blair III (April 22, 1867–November 16, 1931) was an American architect.  He designed the Grand Opera House (1884) in Macon, Georgia, eight Georgia county courthouses, and other buildings.  His father was also an architect and his son Algernon Blair (1873-1952) was a prominent builder.\n\nJet by Day: Jet by Day is a post-rock band from Athens, Georgia.\n\nThird Day: Third Day is a Christian rock band formed in Marietta, Georgia during the 1990s.  The band was founded by lead singer Mac Powell, guitarist Mark Lee and former member Billy Wilkins.  Drummer David Carr is a current band member.  The band's name is a reference to the biblical accounts of Jesus' rising from the dead on the third day following his crucifixion.  The band was inducted in the Georgia Music Hall of Fame on September 19, 2009.  They have sold over 7 million albums in the United States and had 28 number one radio hits.  Their fans are known as \"Gomers\" after a song on their second album about Gomer.\n\nLust for Freedom: Lust for Freedom is a 1987 \"women in prison\" film directed, produced and co-written by Eric Louzil, and starring Melanie Coll.  The film was originally shot at a cost of $50,000 in 1985, under the title of \"Georgia County Lock-up\".  In 1986, Troma Team provided $125,000 to alter the film for a theatrical release.  The film premiered at the Cannes Film Festival in 1987, before premiering theatrically the following year.\n\nSt. John, Florida: St.John and Robertsville are two unincorporated communities in Gadsden County, Florida, United States.  They are located near the intersection of Old Philadelphia Road and Old Bainbridge Road.  Unlike some people think, the communities are not a part of the Mount Pleasant area.  They recently had a zipcode change which split the community into two zipcodes, however the community considers itself a part of Quincy.  They are approximately 5 miles outside of the city limits of Quincy, Florida.  St. John borders the city of Gretna and the Robertsville community borders the Georgia state line, Attapugus, Georgia, Faceville, Georgia and Chattahoochee, Florida.  These two communities are usually spoken of and thought of together although they are separate and distinct.  St.John is known for its school, St.John's elementary school, the St.John/Robertsville park, the St.John volunteer fire department and most recently the St.John Church of God in Christ.  The church has been a staple in the community for over 50 years but is noted because of its new building on Old Philadelphia highway.  The church was featured in the local newspaper The Gadsden County Times, because of its expansion.  The church was also granted St. John Church of God in Christ day in May 2010 by then commission chair Angela Sapp.  The church has launched many Christian leaders over the years, such as Nicky Yarborough These achievements have made St.John Church of God In Christ #86 among the top 1000 black (African-American) churches.  Other churches in the area include the St. John AME church.  It is also known for the McCloud’s Assisted Living Facility, which was the oldest assisted living facility in Quincy, Florida until it closed in 2006 due to health concerns of the administrator.  The community is proud of its growth and achievements.  St. John shares its facilities with Robertsville (its closest neighbor) and other communities in Gadsden County.  It also borders the city of Gretna, Florida.  The communities associate themselves with the city of Quincy as their city.\n\nDistance Diagnostics Through Digital Imaging: Distance Diagnostics through Digital Imaging (DDDI) is the name of a system, developed at the University of Georgia College of Agricultural and Environmental Sciences, to allow textual information and descriptive images to be submitted directly from Georgia county Extension offices, for rapid diagnosis of plant and pest disease issues by resource professionals at the University.  Since its inception in the late 1990s, universities throughout the United States have adapted this system for their use.\n\nBlack Rock Mountain State Park: Black Rock Mountain State Park is a 1,743 acre (7.03 km²) Georgia state park located west of Mountain City in Rabun County, Georgia.  It is named after its sheer cliffs of dark-colored biotite gneiss in Georgia's Blue Ridge Mountains.  Located astride the Eastern Continental Divide at an elevation of 3,640 feet (1,109 m), the park provides many scenic overlooks and 80 mile (130 km) vistas of the southern Appalachian Mountains.  On a clear day, four states are visible: Georgia, North Carolina, South Carolina, and Tennessee.  In addition to Black Rock Mountain itself, the park includes four other peaks over 3000 ft in elevation, making it the highest state park in Georgia.\n\nAthens, Georgia: Athens (formally known as Athens-Clarke County) is a consolidated city–county in the U.S. state of Georgia, in the northeastern part of the state about an hour's drive from the global city of Atlanta, and comprising the former city of Athens proper (the county seat) and Clarke County.  The University of Georgia, the state's flagship public research university, is located in this college town, and contributed to its initial growth.  In 1991, after a vote the preceding year, the original city abandoned its charter to form a unified government with Clarke County, referred to jointly as Athens-Clarke County.  As of the 2010 census, the consolidated city-county (including all of Athens-Clarke County except Winterville and a portion of Bogart) had a total population of 115,452; all of Clarke County had a population of 116,714.  Athens is the sixth-largest city in Georgia, and the principal city of the Athens-Clarke County, Georgia Metropolitan Statistical Area, which had a population of 192,541 as of the 2010 census.  Athens-Clarke County has the smallest geographical area of a county in Georgia.\n\nQuestion: Jet by Day is a band from what Georgia county?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the band.\"\n    },\n    \"origin_city\": {\n      \"type\": \"string\",\n      \"description\": \"The city where the band originated.\"\n    },\n    \"origin_state\": {\n      \"type\": \"string\",\n      \"description\": \"The state where the band originated.\"\n    },\n    \"origin_county\": {\n      \"type\": \"string\",\n      \"description\": \"The county where the band originated.\"\n    }\n  },\n  \"required\": [\n    \"band_name\",\n    \"origin_city\",\n    \"origin_state\",\n    \"origin_county\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "band_name",
-    "origin_city",
-    "origin_state",
-    "origin_county"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "band_name": {
+        "type": "string",
+        "description": "The name of the band."
+      },
+      "origin_city": {
+        "type": "string",
+        "description": "The city where the band originated."
+      },
+      "origin_state": {
+        "type": "string",
+        "description": "The state where the band originated."
+      },
+      "origin_county": {
+        "type": "string",
+        "description": "The county where the band originated."
+      }
+    },
+    "required": [
+      "band_name",
+      "origin_city",
+      "origin_state",
+      "origin_county"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

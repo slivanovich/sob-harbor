@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Shikari (2000 film): Shikari (English: "The Hunter") is 2000 Bollywood thriller film directed by N. Chandra and starring Govinda, Karisma Kapoor, Tabu, Kiran Kumar, Johnny Lever, Sushma Seth, Shweta Menon, Nirmal Pandey, and Raja Jung Bahadur.  The film opened in 2000 to positive reviews from critics but mixed from audience who appreciated all main lead roles especially Govinda who played negative role.  Film brought back super hit jodi of Indian Hindi comedy film starring Govinda, Karisma Kapoor, Tabu of film Saajan Chale Sasural.
-
-Mere Jeevan Saathi (2006 film): Mere Jeevan Saathi (English: My lifemate) is an Indian Hindi romance film released in 2006 starring Akshay Kumar, Karisma Kapoor and Amisha Patel.  It was filmed back in 2001 and was supposed to release in 2004, but due to delays it was pushed back and was finally released on February 2006.  Sources revealed cat fight between Karisma Kapoors sister Kareena Kapoor and Amisha Patel was the main reason for delay in completing the film.  Kareena Kapoor often used to visit the film set to meet her sister.
-
-Asiavision Awards: Asiavision Movie Awards has been held annually since 2006 to honor the artistes and technicians of south Indian cinema.  More than 40,000 people across United Arab Emirates attended the 2012 movie awards which was held on November 9, 2012 at Sharjah cricket stadium.  Mohanlal and Rima Kallingal won Best Actors and Juhi Chawla and Shruti Haasan won excellence awards.  In 2013 Asiavision Movie Awards was held at Dubai festival city, where Mammootty won Best Actor for Kunjananthante kada and Kavya Madhavan won best actress for Bavuttiyude Namathil . Bollywood actor John Abraham won Icon of the year and Rani Mukerji won excellence in Hindi cinema for Talaash and Bombay talkies .  Preity Zinta won Pride of Bollywood award and Karisma Kapoor was one among the chief guests.  In 2009 first edition of Asiavision Television Awards started at Sharjah cricket stadium where Oscar Award winner Resul Pookutty attended as chief guest.4th and 5th edition of Television Awards witnessed the presence of Mohanlal and Karisma Kapoor along with the television celebrities of Malayalam television industry.  In 2014 February 8 first edition of Asiavision Radio Awards was launched, where the leading Malayalam radio stations representatives were honored also kareena kapoor khan awarded with Icon of India.
-
-Kareena Kapoor: Kareena Kapoor (] ; born 21 September 1980), also known by her married name Kareena Kapoor Khan, is an Indian actress who appears in Hindi films.  She is the daughter of actors Randhir Kapoor and Babita, and the younger sister of actress Karisma Kapoor.  Noted for playing a variety of characters in a range of film genres—from romantic comedies to crime dramas—Kapoor is the recipient of several awards, including six Filmfare Awards, and is one of Bollywood's most popular and highest-paid actresses.
-
-Saajan Chale Sasural: Saajan Chale Sasural is a 1996 Indian Hindi comedy film starring Govinda, Karisma Kapoor, Tabu, Kader Khan and Satish Kaushik.  It was directed by David Dhawan.  It is a remake of the Telugu movie "Allari Mogudu".  A French dubbing parody of this movie called "New Délire" was released in 2007. .  Biggest super hit film of 1996.
-
-Coolie No. 1 (1995 film): Coolie No. 1 is a 1995 Indian Hindi comedy film directed by David Dhawan.  The film stars Karisma Kapoor, Govinda, Shakti Kapoor, Kadar Khan, Sadashiv Amrapurkar with music by Anand-Milind.  This movie was one of the first successful movie of Karisma Kapoor.  Actor Govinda received the Star Screen Award Special Jury Award for his role in this movie as 'performer of the decade'.  Over the years the movie has become a classic in Indian film history and is now considered a cult film.  The movie is a remake of a 1993 Tamil film "Chinna Mapillai".
-
-Biwi No.1: Biwi No.1 (English: Wife No. 1 ) is a 1999 Indian Hindi comedy film directed by David Dhawan.  It stars Salman Khan, Karisma Kapoor, Sushmita Sen, Anil Kapoor and Tabu.  Saif Ali Khan has a special appearance.  It is remake of the 1995 Tamil film "Sathi Leelavathi".  The plot has inspired the 2005 comedy hit Kannada movie "Rama Shama Bhama" starring Kamal Hassan, Ramesh Aravind, Urvashi and Daisy Bopanna.  Biwi No.1 was the third title in the No. 1 (film series) directed by David Dhawan and starring Karisma Kapoor after "Coolie No.1" (1995) and "Hero No. 1" (1997).  It is also the only one of the three not to feature Govinda in the leading role.  Salman Khan replaced Govinda who had a disagreement with Sushmita Sen on the set and walked out of the film.
-
-Tabu filmography: Indian actress Tabu, also credited as Tabbu, has appeared in Hindi, Telugu, English, Tamil, Malayalam and Bengali films.  Tabu's first credited role came as a teenager in Dev Anand's "Hum Naujawan" (1985), and her first major role was in the Telugu film "Coolie No. 1" (1991).  In 1994, she starred in two Hindi filmsthe romance "Pehla Pehla Pyar" and the action drama "Vijaypath"and received the Filmfare Award for Best Female Debut for the latter.  After appearing in a series of poorly received films, including "Prem" and "Saajan Ki Baahon Mein" (both 1995), the year 1996 was key for Tabu.  Her performance as a young woman affected by the Punjab insurgency in Gulzar's "Maachis" (1996) proved to be a breakthrough for her, and won her the National Film Award for Best Actress.  Also that year, Tabu won the Filmfare Award for Best Actress – Telugu for the romance "Ninne Pelladata", and featured alongside Govinda and Karisma Kapoor in the commercially successful comedy film "Saajan Chale Sasural".
-
-Karisma Kapoor: Karisma Kapoor (born 25 June 1974) is an Indian actress, who appears in Hindi films.  One of the most popular and highest-paid actresses of India, Kapoor is particularly known for her work in the female-centric films and her film roles have been credited as a significant departure from the traditional portrayal of women in Hindi films.  Kapoor is often regarded as the nation's most beautiful actress, and is the recipient of several accolades, including a National Film Award and four Filmfare Awards.
-
-Haseena Maan Jaayegi: Haseena Maan Jaayegi (Hindi: हसीना मान जायेगी ) is a 1999 Indian Hindi comedy film, starring Govinda, Sanjay Dutt, Karisma Kapoor, Pooja Batra, Anupam Kher, Kader Khan, Aruna Irani and Paresh Rawal and directed by David Dhawan.  The film was inspired by the movie Pyar Kiye Ja and went on to become the fifth highest grossing Hindi film of 1999.  It is often regarded as being amongst Govinda's greatest performances and he won many awards for his role.  Part of the story is taken from the 1964 Tamil classic movie Kadhalikka Neramillai which had been remade as Preminchi Choodu, Pyar Kiye Jaa and Preethi Madu Thamashe Nodu.
-
-Question: Karisma Kapoor, an Indian actress, who appears in Hindi films, starred in Biwi No.1, a 1999 Indian Hindi comedy film directed by who?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_year": {
-      "type": "integer",
-      "description": "The release year of the film."
-    },
-    "director_name": {
-      "type": "string",
-      "description": "The name of the director of the film."
-    },
-    "main_actress_name": {
-      "type": "string",
-      "description": "The name of the main actress mentioned in the question."
-    },
-    "film_genre": {
-      "type": "string",
-      "description": "The genre of the film."
+    {
+      "role": "user",
+      "content": "Context:\nShikari (2000 film): Shikari (English: \"The Hunter\") is 2000 Bollywood thriller film directed by N. Chandra and starring Govinda, Karisma Kapoor, Tabu, Kiran Kumar, Johnny Lever, Sushma Seth, Shweta Menon, Nirmal Pandey, and Raja Jung Bahadur.  The film opened in 2000 to positive reviews from critics but mixed from audience who appreciated all main lead roles especially Govinda who played negative role.  Film brought back super hit jodi of Indian Hindi comedy film starring Govinda, Karisma Kapoor, Tabu of film Saajan Chale Sasural.\n\nMere Jeevan Saathi (2006 film): Mere Jeevan Saathi (English: My lifemate) is an Indian Hindi romance film released in 2006 starring Akshay Kumar, Karisma Kapoor and Amisha Patel.  It was filmed back in 2001 and was supposed to release in 2004, but due to delays it was pushed back and was finally released on February 2006.  Sources revealed cat fight between Karisma Kapoors sister Kareena Kapoor and Amisha Patel was the main reason for delay in completing the film.  Kareena Kapoor often used to visit the film set to meet her sister.\n\nAsiavision Awards: Asiavision Movie Awards has been held annually since 2006 to honor the artistes and technicians of south Indian cinema.  More than 40,000 people across United Arab Emirates attended the 2012 movie awards which was held on November 9, 2012 at Sharjah cricket stadium.  Mohanlal and Rima Kallingal won Best Actors and Juhi Chawla and Shruti Haasan won excellence awards.  In 2013 Asiavision Movie Awards was held at Dubai festival city, where Mammootty won Best Actor for Kunjananthante kada and Kavya Madhavan won best actress for Bavuttiyude Namathil . Bollywood actor John Abraham won Icon of the year and Rani Mukerji won excellence in Hindi cinema for Talaash and Bombay talkies .  Preity Zinta won Pride of Bollywood award and Karisma Kapoor was one among the chief guests.  In 2009 first edition of Asiavision Television Awards started at Sharjah cricket stadium where Oscar Award winner Resul Pookutty attended as chief guest.4th and 5th edition of Television Awards witnessed the presence of Mohanlal and Karisma Kapoor along with the television celebrities of Malayalam television industry.  In 2014 February 8 first edition of Asiavision Radio Awards was launched, where the leading Malayalam radio stations representatives were honored also kareena kapoor khan awarded with Icon of India.\n\nKareena Kapoor: Kareena Kapoor (] ; born 21 September 1980), also known by her married name Kareena Kapoor Khan, is an Indian actress who appears in Hindi films.  She is the daughter of actors Randhir Kapoor and Babita, and the younger sister of actress Karisma Kapoor.  Noted for playing a variety of characters in a range of film genres—from romantic comedies to crime dramas—Kapoor is the recipient of several awards, including six Filmfare Awards, and is one of Bollywood's most popular and highest-paid actresses.\n\nSaajan Chale Sasural: Saajan Chale Sasural is a 1996 Indian Hindi comedy film starring Govinda, Karisma Kapoor, Tabu, Kader Khan and Satish Kaushik.  It was directed by David Dhawan.  It is a remake of the Telugu movie \"Allari Mogudu\".  A French dubbing parody of this movie called \"New Délire\" was released in 2007. .  Biggest super hit film of 1996.\n\nCoolie No. 1 (1995 film): Coolie No. 1 is a 1995 Indian Hindi comedy film directed by David Dhawan.  The film stars Karisma Kapoor, Govinda, Shakti Kapoor, Kadar Khan, Sadashiv Amrapurkar with music by Anand-Milind.  This movie was one of the first successful movie of Karisma Kapoor.  Actor Govinda received the Star Screen Award Special Jury Award for his role in this movie as 'performer of the decade'.  Over the years the movie has become a classic in Indian film history and is now considered a cult film.  The movie is a remake of a 1993 Tamil film \"Chinna Mapillai\".\n\nBiwi No.1: Biwi No.1 (English: Wife No. 1 ) is a 1999 Indian Hindi comedy film directed by David Dhawan.  It stars Salman Khan, Karisma Kapoor, Sushmita Sen, Anil Kapoor and Tabu.  Saif Ali Khan has a special appearance.  It is remake of the 1995 Tamil film \"Sathi Leelavathi\".  The plot has inspired the 2005 comedy hit Kannada movie \"Rama Shama Bhama\" starring Kamal Hassan, Ramesh Aravind, Urvashi and Daisy Bopanna.  Biwi No.1 was the third title in the No. 1 (film series) directed by David Dhawan and starring Karisma Kapoor after \"Coolie No.1\" (1995) and \"Hero No. 1\" (1997).  It is also the only one of the three not to feature Govinda in the leading role.  Salman Khan replaced Govinda who had a disagreement with Sushmita Sen on the set and walked out of the film.\n\nTabu filmography: Indian actress Tabu, also credited as Tabbu, has appeared in Hindi, Telugu, English, Tamil, Malayalam and Bengali films.  Tabu's first credited role came as a teenager in Dev Anand's \"Hum Naujawan\" (1985), and her first major role was in the Telugu film \"Coolie No. 1\" (1991).  In 1994, she starred in two Hindi filmsthe romance \"Pehla Pehla Pyar\" and the action drama \"Vijaypath\"and received the Filmfare Award for Best Female Debut for the latter.  After appearing in a series of poorly received films, including \"Prem\" and \"Saajan Ki Baahon Mein\" (both 1995), the year 1996 was key for Tabu.  Her performance as a young woman affected by the Punjab insurgency in Gulzar's \"Maachis\" (1996) proved to be a breakthrough for her, and won her the National Film Award for Best Actress.  Also that year, Tabu won the Filmfare Award for Best Actress – Telugu for the romance \"Ninne Pelladata\", and featured alongside Govinda and Karisma Kapoor in the commercially successful comedy film \"Saajan Chale Sasural\".\n\nKarisma Kapoor: Karisma Kapoor (born 25 June 1974) is an Indian actress, who appears in Hindi films.  One of the most popular and highest-paid actresses of India, Kapoor is particularly known for her work in the female-centric films and her film roles have been credited as a significant departure from the traditional portrayal of women in Hindi films.  Kapoor is often regarded as the nation's most beautiful actress, and is the recipient of several accolades, including a National Film Award and four Filmfare Awards.\n\nHaseena Maan Jaayegi: Haseena Maan Jaayegi (Hindi: हसीना मान जायेगी ) is a 1999 Indian Hindi comedy film, starring Govinda, Sanjay Dutt, Karisma Kapoor, Pooja Batra, Anupam Kher, Kader Khan, Aruna Irani and Paresh Rawal and directed by David Dhawan.  The film was inspired by the movie Pyar Kiye Ja and went on to become the fifth highest grossing Hindi film of 1999.  It is often regarded as being amongst Govinda's greatest performances and he won many awards for his role.  Part of the story is taken from the 1964 Tamil classic movie Kadhalikka Neramillai which had been remade as Preminchi Choodu, Pyar Kiye Jaa and Preethi Madu Thamashe Nodu.\n\nQuestion: Karisma Kapoor, an Indian actress, who appears in Hindi films, starred in Biwi No.1, a 1999 Indian Hindi comedy film directed by who?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"film_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film.\"\n    },\n    \"director_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the director of the film.\"\n    },\n    \"main_actress_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the main actress mentioned in the question.\"\n    },\n    \"film_genre\": {\n      \"type\": \"string\",\n      \"description\": \"The genre of the film.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"film_year\",\n    \"director_name\",\n    \"main_actress_name\",\n    \"film_genre\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "film_year",
-    "director_name",
-    "main_actress_name",
-    "film_genre"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "film_year": {
+        "type": "integer",
+        "description": "The release year of the film."
+      },
+      "director_name": {
+        "type": "string",
+        "description": "The name of the director of the film."
+      },
+      "main_actress_name": {
+        "type": "string",
+        "description": "The name of the main actress mentioned in the question."
+      },
+      "film_genre": {
+        "type": "string",
+        "description": "The genre of the film."
+      }
+    },
+    "required": [
+      "film_title",
+      "film_year",
+      "director_name",
+      "main_actress_name",
+      "film_genre"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,83 +1,60 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Arthur Koestler: Arthur Koestler, ( ; ] ; Hungarian: "Kösztler Artúr" ; 5 September 1905 – 1 March 1983) was a Hungarian-British author and journalist.  Koestler was born in Budapest and, apart from his early school years, was educated in Austria.  In 1931 Koestler joined the Communist Party of Germany until, disillusioned by Stalinism, he resigned in 1938.  In 1940 he published his novel "Darkness at Noon", an anti-totalitarian work that gained him international fame.  Over the next 43 years, from his residence in Britain, Koestler espoused many political causes, and wrote novels, memoirs, biographies and numerous essays.  In 1968 he was awarded the Sonning Prize "for [his] outstanding contribution to European culture" and in 1972 he was made a Commander of the Order of the British Empire (CBE).  In 1976 he was diagnosed with Parkinson's disease and in 1979 with terminal leukaemia.  In 1983 he and his wife committed suicide at their home in London.
-
-Stranger on the Square: Stranger on the Square is the third volume of Arthur Koestler's autobiography, published posthumously in 1984.  It was co-authored with his wife Cynthia Koestler, née Jefferies, and includes autobiographical notes of her as well.  The book was published by Hutchinson, London 1984, 242 pages including Index.  ISBN  .  It was edited by Harold Harris, who wrote the Introduction and Epilogue.  He was Koestler's editor for many years.  The book is illustrated with seven monochrome photographs plus a colour and another momochrome photograph on the dustcover.
-
-Kingsley Amis: Sir Kingsley William Amis, CBE (16 April 1922 – 22 October 1995) was an English novelist, poet, critic, and teacher.  He wrote more than 20 novels, six volumes of poetry, a memoir, various short stories, radio and television scripts, along with works of social and literary criticism.  According to his biographer, Zachary Leader, Amis was "the finest English comic novelist of the second half of the twentieth century."  He is the father of British novelist Martin Amis.
-
-Arthur Koestler: The Story of a Friendship: Arthur Koestler: The Story of a Friendship is a book by George Mikes published in 1983, soon after Arthur Koestler’s suicide.  As the author states in the Introduction, the book is not a biography of the subject but a series of recollections and anecdotes of a friendship spanning more than thirty years from 1952 up to the time of Koestler’s suicide in March 1983.
-
-Spanish Testament: Spanish Testament is a 1937 book by Arthur Koestler, describing his experiences during the Spanish Civil War.  Part II of the book was subsequently published on its own, with minor modifications, under the title "Dialogue with Death" (see below).  Koestler made three trips to Spain during the civil war; the third time he was captured, sentenced to death and imprisoned by the Nationalist forces of General Franco.  Koestler was at that time working on behalf of the Comintern and as an agent of the Loyalist Government's official news agency, using for cover accreditation to the British daily "News Chronicle".
-
-The Encyclopœdia of Sexual Knowledge: The Encyclopaedia of Sexual Knowledge, under the editorship of Dr. Norman Haire (1892–1952), is the first of a trilogy of sexual encyclopaedias by Arthur Koestler writing under the pen name of ‘Dr. A. Costler’.  It is the English version, published by Koestler's cousin Francis Aldor in 1934, of the book "L'encyclopédie de la vie sexuelle" that Koestler in 1933 wrote, together with "A. Willy" (the pseudonym of his other cousin Willy Aldor) and the German Dr. Levy-Lenz.  The second book is "Sexual Anomalies and Perversions, Physical and Psychological Development, Diagnoses and Treatment".  The title of the third book is, in the original French edition of 1939, "L’Encyclopédie de la famille".  This third book was subsequently translated into English and published under various titles and with changes to the structure and text of the original edition.  The name of ‘Dr. Costler’ (or 'A. Coester') as the author or co-author of the book is omitted from later editions.
-
-Living with Koestler: Living with Koestler: Mamaine Koestler's Letters 1945–51 is a book about the author Arthur Koestler and Mamaine Paget, Koestler’s second wife.  More specifically, it is a selected compilation of Mamaine’s letters to her twin sister Celia about her life with Koestler.  The spontaneous and engaging letters reflect the intensity of her life with Koestler between 1945 and 1951.
-
-Arthur Koestler (book): "Arthur Koestler" is a book by Mark Levene published in 1984, a year after Arthur Koestler's suicide.  The book is divided into seven main chapters, of which the first of is a biography and the other six critical essays on each of Koestler's six novels, his stories and his play "Twilight Bar".
-
-Holon (philosophy): A holon (Greek: "ὅλον, holon" neuter form of "ὅλος, holos" "whole") is something that is simultaneously a whole and a part.  The word was coined by Arthur Koestler in his book "The Ghost in the Machine" (1967, p. 48).  Koestler was influenced by two observations in proposing the notion of the holon.  The first observation was influenced by Herbert A. Simon's parable of the two watchmakers—in which Simon concludes that complex systems evolve from simple systems much more rapidly when there are stable intermediate forms present in the evolutionary process than if they are not present.  The second observation was made by Koestler himself in his analysis of hierarchies and stable intermediate forms in non-living matter (atomic and molecular structure), living organisms, and social organizations.  He concluded that, although it is easy to identify sub-wholes or parts, wholes and parts in an absolute sense do not exist anywhere.  Koestler proposed the word holon to describe the hybrid nature of sub-wholes and parts within in vivo systems.  From this perspective, holons exist simultaneously as self-contained wholes in relation to their sub-ordinate parts, and as dependent parts when considered from the inverse direction.
-
-Zachary Leader: Zachary Leader (born 1946) is a professor of English Literature at the University of Roehampton.  He was an undergraduate at Northwestern University, and later pursued graduate study at Trinity College, Cambridge and at Harvard University.  Though born in the U.S. and remaining an American citizen, Leader has lived and worked for over forty years in the UK.  His best-known works are probably "The Letters of Kingsley Amis", which he edited and published in 2001, and "The Life of Kingsley Amis" (2006, UK; 2007, US), a finalist for the 2008 Pulitzer Prize in Biography.  The first volume of his two-volume biography of Saul Bellow, "The Life of Saul Bellow: To Fame and Fortune, 1915-1964", was published in May 2015 by Alfred Knopf in the US and Jonathan Cape in the UK.  "On Life-Writing", an edited collection, will be published in September by OUP.  He is General Editor of the Oxford History of Life-Writing, a seven-volume series published by OUP.  A recipient of Guggenheim, Leverhulme and British Academy Fellowships, he is also a Fellow of the Royal Society of Literature.
-
-Question: Arthur Koestler and Kingsley Amis, have occupation in which industry?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_names": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Names of the individuals mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "occupations": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "person_name": {
-            "type": "string",
-            "description": "The name of the person."
-          },
-          "roles": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "List of occupations or roles for the person."
-          }
-        },
-        "required": [
-          "person_name",
-          "roles"
-        ],
-        "additionalProperties": false
-      },
-      "description": "A list of each person and their respective occupations."
-    },
-    "common_industry": {
-      "type": "string",
-      "description": "The common industry shared by the individuals based on their occupations."
+    {
+      "role": "user",
+      "content": "Context:\nArthur Koestler: Arthur Koestler, ( ; ] ; Hungarian: \"Kösztler Artúr\" ; 5 September 1905 – 1 March 1983) was a Hungarian-British author and journalist.  Koestler was born in Budapest and, apart from his early school years, was educated in Austria.  In 1931 Koestler joined the Communist Party of Germany until, disillusioned by Stalinism, he resigned in 1938.  In 1940 he published his novel \"Darkness at Noon\", an anti-totalitarian work that gained him international fame.  Over the next 43 years, from his residence in Britain, Koestler espoused many political causes, and wrote novels, memoirs, biographies and numerous essays.  In 1968 he was awarded the Sonning Prize \"for [his] outstanding contribution to European culture\" and in 1972 he was made a Commander of the Order of the British Empire (CBE).  In 1976 he was diagnosed with Parkinson's disease and in 1979 with terminal leukaemia.  In 1983 he and his wife committed suicide at their home in London.\n\nStranger on the Square: Stranger on the Square is the third volume of Arthur Koestler's autobiography, published posthumously in 1984.  It was co-authored with his wife Cynthia Koestler, née Jefferies, and includes autobiographical notes of her as well.  The book was published by Hutchinson, London 1984, 242 pages including Index.  ISBN  .  It was edited by Harold Harris, who wrote the Introduction and Epilogue.  He was Koestler's editor for many years.  The book is illustrated with seven monochrome photographs plus a colour and another momochrome photograph on the dustcover.\n\nKingsley Amis: Sir Kingsley William Amis, CBE (16 April 1922 – 22 October 1995) was an English novelist, poet, critic, and teacher.  He wrote more than 20 novels, six volumes of poetry, a memoir, various short stories, radio and television scripts, along with works of social and literary criticism.  According to his biographer, Zachary Leader, Amis was \"the finest English comic novelist of the second half of the twentieth century.\"  He is the father of British novelist Martin Amis.\n\nArthur Koestler: The Story of a Friendship: Arthur Koestler: The Story of a Friendship is a book by George Mikes published in 1983, soon after Arthur Koestler’s suicide.  As the author states in the Introduction, the book is not a biography of the subject but a series of recollections and anecdotes of a friendship spanning more than thirty years from 1952 up to the time of Koestler’s suicide in March 1983.\n\nSpanish Testament: Spanish Testament is a 1937 book by Arthur Koestler, describing his experiences during the Spanish Civil War.  Part II of the book was subsequently published on its own, with minor modifications, under the title \"Dialogue with Death\" (see below).  Koestler made three trips to Spain during the civil war; the third time he was captured, sentenced to death and imprisoned by the Nationalist forces of General Franco.  Koestler was at that time working on behalf of the Comintern and as an agent of the Loyalist Government's official news agency, using for cover accreditation to the British daily \"News Chronicle\".\n\nThe Encyclopœdia of Sexual Knowledge: The Encyclopaedia of Sexual Knowledge, under the editorship of Dr. Norman Haire (1892–1952), is the first of a trilogy of sexual encyclopaedias by Arthur Koestler writing under the pen name of ‘Dr. A. Costler’.  It is the English version, published by Koestler's cousin Francis Aldor in 1934, of the book \"L'encyclopédie de la vie sexuelle\" that Koestler in 1933 wrote, together with \"A. Willy\" (the pseudonym of his other cousin Willy Aldor) and the German Dr. Levy-Lenz.  The second book is \"Sexual Anomalies and Perversions, Physical and Psychological Development, Diagnoses and Treatment\".  The title of the third book is, in the original French edition of 1939, \"L’Encyclopédie de la famille\".  This third book was subsequently translated into English and published under various titles and with changes to the structure and text of the original edition.  The name of ‘Dr. Costler’ (or 'A. Coester') as the author or co-author of the book is omitted from later editions.\n\nLiving with Koestler: Living with Koestler: Mamaine Koestler's Letters 1945–51 is a book about the author Arthur Koestler and Mamaine Paget, Koestler’s second wife.  More specifically, it is a selected compilation of Mamaine’s letters to her twin sister Celia about her life with Koestler.  The spontaneous and engaging letters reflect the intensity of her life with Koestler between 1945 and 1951.\n\nArthur Koestler (book): \"Arthur Koestler\" is a book by Mark Levene published in 1984, a year after Arthur Koestler's suicide.  The book is divided into seven main chapters, of which the first of is a biography and the other six critical essays on each of Koestler's six novels, his stories and his play \"Twilight Bar\".\n\nHolon (philosophy): A holon (Greek: \"ὅλον, holon\" neuter form of \"ὅλος, holos\" \"whole\") is something that is simultaneously a whole and a part.  The word was coined by Arthur Koestler in his book \"The Ghost in the Machine\" (1967, p. 48).  Koestler was influenced by two observations in proposing the notion of the holon.  The first observation was influenced by Herbert A. Simon's parable of the two watchmakers—in which Simon concludes that complex systems evolve from simple systems much more rapidly when there are stable intermediate forms present in the evolutionary process than if they are not present.  The second observation was made by Koestler himself in his analysis of hierarchies and stable intermediate forms in non-living matter (atomic and molecular structure), living organisms, and social organizations.  He concluded that, although it is easy to identify sub-wholes or parts, wholes and parts in an absolute sense do not exist anywhere.  Koestler proposed the word holon to describe the hybrid nature of sub-wholes and parts within in vivo systems.  From this perspective, holons exist simultaneously as self-contained wholes in relation to their sub-ordinate parts, and as dependent parts when considered from the inverse direction.\n\nZachary Leader: Zachary Leader (born 1946) is a professor of English Literature at the University of Roehampton.  He was an undergraduate at Northwestern University, and later pursued graduate study at Trinity College, Cambridge and at Harvard University.  Though born in the U.S. and remaining an American citizen, Leader has lived and worked for over forty years in the UK.  His best-known works are probably \"The Letters of Kingsley Amis\", which he edited and published in 2001, and \"The Life of Kingsley Amis\" (2006, UK; 2007, US), a finalist for the 2008 Pulitzer Prize in Biography.  The first volume of his two-volume biography of Saul Bellow, \"The Life of Saul Bellow: To Fame and Fortune, 1915-1964\", was published in May 2015 by Alfred Knopf in the US and Jonathan Cape in the UK.  \"On Life-Writing\", an edited collection, will be published in September by OUP.  He is General Editor of the Oxford History of Life-Writing, a seven-volume series published by OUP.  A recipient of Guggenheim, Leverhulme and British Academy Fellowships, he is also a Fellow of the Royal Society of Literature.\n\nQuestion: Arthur Koestler and Kingsley Amis, have occupation in which industry?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_names\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"Names of the individuals mentioned in the question.\"\n    },\n    \"occupations\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"person_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the person.\"\n          },\n          \"roles\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"type\": \"string\"\n            },\n            \"description\": \"List of occupations or roles for the person.\"\n          }\n        },\n        \"required\": [\n          \"person_name\",\n          \"roles\"\n        ],\n        \"additionalProperties\": false\n      },\n      \"description\": \"A list of each person and their respective occupations.\"\n    },\n    \"common_industry\": {\n      \"type\": \"string\",\n      \"description\": \"The common industry shared by the individuals based on their occupations.\"\n    }\n  },\n  \"required\": [\n    \"person_names\",\n    \"occupations\",\n    \"common_industry\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_names",
-    "occupations",
-    "common_industry"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_names": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Names of the individuals mentioned in the question."
+      },
+      "occupations": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "person_name": {
+              "type": "string",
+              "description": "The name of the person."
+            },
+            "roles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "List of occupations or roles for the person."
+            }
+          },
+          "required": [
+            "person_name",
+            "roles"
+          ],
+          "additionalProperties": false
+        },
+        "description": "A list of each person and their respective occupations."
+      },
+      "common_industry": {
+        "type": "string",
+        "description": "The common industry shared by the individuals based on their occupations."
+      }
+    },
+    "required": [
+      "person_names",
+      "occupations",
+      "common_industry"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

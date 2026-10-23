@@ -1,92 +1,69 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Need You Around: "Need You Around" is a song by the Chicago-based pop punk band the Smoking Popes, released as the second single from their 1994 album "Born to Quit".  The album was originally released by Johann's Face Records in 1994, and "Need You Around" received radio play on Chicago's Q101 and Los Angeles' KROQ.  When "Born to Quit" was re-released in July 1995 by Capitol Records after the band signed to that label, "Need You Around" and "Rubella" were remixed by Thom Wilson for release as singles (the album had been engineered, produced, and originally mixed by Phil Bonnet).  A music video for "Need You Around" was filmed, and the song was featured in the soundtrack of the film "Clueless".  It became the only Smoking Popes song to chart, reaching #35 on "Billboard"'s Modern Rock Tracks.
-
-Destination Failure: Destination Failure is the third album by the Chicago-based pop punk band the Smoking Popes, released August 26, 1997 by Capitol Records.  It was their second, and final, album for Capitol and their last before their nearly seven-year hiatus; their covers album "The Party's Over" was rejected by Capitol and the Smoking Popes disbanded in December 1998, reuniting in November 2005 to record "At Metro".  "Destination Failure" was not as successful as the band's previous album "Born to Quit"; it failed to chart despite the release a single and music video for "I Know You Love Me".  The album was recorded at the Chicago Recording Company and at Conway Studios in Hollywood with producer Jerry Finn and recording engineer Phil Bonnet.  Bonnet had worked with the band since early in their career, engineering and producing their EPs "Break Up" and "2" as well as "Born to Quit".
-
-Alkaline Trio / Smoking Popes: Alkaline Trio / Smoking Popes is a split single by the Chicago-based rock bands Alkaline Trio and Smoking Popes.  It was distributed to attendees at a New Year's Eve performance by both bands at the Metro Chicago on December 31, 2006 – January 1, 2007.  The single features each band covering one of the other's songs, with Alkaline Trio covering the Smoking Popes' "Off My Mind" (from "Get Fired") and the Smoking Popes covering Alkaline Trio's "Blue Carolina" (from "Good Mourning").
-
-Josh Caterer: Josh Caterer (born April 12, 1972) is a Chicago-area musician, best known as the lead singer, lead guitarist, and principal songwriter of punk band The Smoking Popes, which he founded in 1991 along with his brothers, Eli Caterer (b. 1975) and Matt Caterer (b. 1968).  Caterer has also written and recorded a considerable body of Christian and gospel music.  In addition to the Smoking Popes, he founded the blues band Jackson Mud.
-
-Smoking Popes: The Smoking Popes is an American pop punk band from the northwest suburbs of Chicago, Illinois, formed in 1991.  They play punk-influenced pop music with crooning vocals.  The core of the group is composed of brothers Matt Caterer (born 1968), Josh Caterer (born 1972) and Eli Caterer (born 1975).
-
-Stay Down (album): Stay Down is the fifth studio album by Chicago pop punk group Smoking Popes.  Released on Curb Appeal Records on August 5, 2008, it was the band's first studio album since their 2005 reunion and their first album of original material since 1997's "Destination Failure".  It's the only Smoking Popes album to feature drummer Ryan Chavez, who joined the band in 2006.
-
-Thirty Seconds to Mars: Thirty Seconds to Mars (commonly stylized as 30 Seconds to Mars) is an American rock band from Los Angeles, California, formed in 1998.  The band consists of Jared Leto (lead vocals, guitar, bass, keyboards), Shannon Leto (drums, percussion) and Tomo Miličević (lead guitar, bass, violin, keyboards, other instruments).
-
-30 Seconds to Mars (album): 30 Seconds to Mars is the debut studio album by American rock band Thirty Seconds to Mars.  It was first released on August 27, 2002, by Immortal Records and distributed by Virgin Records.  The album was produced by Bob Ezrin, Brian Virtue, and Thirty Seconds to Mars, and was recorded in rural Wyoming during 2001 and early 2002.  It had been in the works for a couple of years, with lead vocalist Jared Leto writing the majority of the songs.
-
-List of songs recorded by Thirty Seconds to Mars: American rock band Thirty Seconds to Mars has recorded material for four studio albums.  The band was formed in Los Angeles, California, in 1998 by brothers Jared and Shannon Leto.  The duo later expanded to a four-piece when they added guitarist Solon Bixler and bassist Matt Wachter to the line-up.  After signing a contract with record label Immortal Records in 1998, the band began to work with producers Bob Ezrin and Brian Virtue on their debut album, "30 Seconds to Mars", which was released in August 2002.  The album produced two singles, "Capricorn (A Brand New Name)" and "Edge of the Earth".  In early 2003, Bixler left the band due to issues primarily related to touring and was replaced by Tomo Miličević.  Thirty Seconds to Mars released their second studio album, "A Beautiful Lie", in August 2005.  The record, produced by Josh Abraham, was preceded by the single "Attack" and spawned two Kerrang!  Award-winning singles, "The Kill" and "From Yesterday".  The album's title track, "A Beautiful Lie", was released as the fourth single in selected territories. " Hunter", a song originally performed by Björk, was covered by the band and added to the track listing of the album.  In March 2007, Wachter left the group to spend more time with his family and was replaced by Tim Kelleher, performing live only.
-
-Smoking Popes Tribute: The Smoking Popes Tribute is a tribute album to the Chicago-based pop punk band the Smoking Popes.  It was released March 25, 2003 by Double Zero Records, a label founded by former Smoking Popes drummer Mike Felumlee.  Following the Smoking Popes' breakup in 1998, Double Zero had released several albums of previously recorded Smoking Popes material including "1991–1998", "Live", and "The Party's Over".  The "Smoking Popes Tribute" features contributions from former members of the Smoking Popes themselves: Felumlee performs a cover of "Don't Be Afraid", while Josh and Eli Caterer perform "Do Something" with their post-Smoking Popes act Duvall.  Other notable contributors to the album include Bad Astronaut, Grade, and The Ataris.
-
-Question: Is Smoking Popes or Thirty Seconds to Mars from further west?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "band_1_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the first band."
-        },
-        "origin_location": {
-          "type": "string",
-          "description": "The city and state where the first band is from."
-        }
-      },
-      "required": [
-        "name",
-        "origin_location"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "band_2_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the second band."
-        },
-        "origin_location": {
-          "type": "string",
-          "description": "The city and state where the second band is from."
-        }
-      },
-      "required": [
-        "name",
-        "origin_location"
-      ],
-      "additionalProperties": false
-    },
-    "band_further_west": {
-      "type": "string",
-      "description": "The name of the band that is from further west."
-    },
-    "comparison_summary": {
-      "type": "string",
-      "description": "A summary statement comparing the origins of the two bands."
+    {
+      "role": "user",
+      "content": "Context:\nNeed You Around: \"Need You Around\" is a song by the Chicago-based pop punk band the Smoking Popes, released as the second single from their 1994 album \"Born to Quit\".  The album was originally released by Johann's Face Records in 1994, and \"Need You Around\" received radio play on Chicago's Q101 and Los Angeles' KROQ.  When \"Born to Quit\" was re-released in July 1995 by Capitol Records after the band signed to that label, \"Need You Around\" and \"Rubella\" were remixed by Thom Wilson for release as singles (the album had been engineered, produced, and originally mixed by Phil Bonnet).  A music video for \"Need You Around\" was filmed, and the song was featured in the soundtrack of the film \"Clueless\".  It became the only Smoking Popes song to chart, reaching #35 on \"Billboard\"'s Modern Rock Tracks.\n\nDestination Failure: Destination Failure is the third album by the Chicago-based pop punk band the Smoking Popes, released August 26, 1997 by Capitol Records.  It was their second, and final, album for Capitol and their last before their nearly seven-year hiatus; their covers album \"The Party's Over\" was rejected by Capitol and the Smoking Popes disbanded in December 1998, reuniting in November 2005 to record \"At Metro\".  \"Destination Failure\" was not as successful as the band's previous album \"Born to Quit\"; it failed to chart despite the release a single and music video for \"I Know You Love Me\".  The album was recorded at the Chicago Recording Company and at Conway Studios in Hollywood with producer Jerry Finn and recording engineer Phil Bonnet.  Bonnet had worked with the band since early in their career, engineering and producing their EPs \"Break Up\" and \"2\" as well as \"Born to Quit\".\n\nAlkaline Trio / Smoking Popes: Alkaline Trio / Smoking Popes is a split single by the Chicago-based rock bands Alkaline Trio and Smoking Popes.  It was distributed to attendees at a New Year's Eve performance by both bands at the Metro Chicago on December 31, 2006 – January 1, 2007.  The single features each band covering one of the other's songs, with Alkaline Trio covering the Smoking Popes' \"Off My Mind\" (from \"Get Fired\") and the Smoking Popes covering Alkaline Trio's \"Blue Carolina\" (from \"Good Mourning\").\n\nJosh Caterer: Josh Caterer (born April 12, 1972) is a Chicago-area musician, best known as the lead singer, lead guitarist, and principal songwriter of punk band The Smoking Popes, which he founded in 1991 along with his brothers, Eli Caterer (b. 1975) and Matt Caterer (b. 1968).  Caterer has also written and recorded a considerable body of Christian and gospel music.  In addition to the Smoking Popes, he founded the blues band Jackson Mud.\n\nSmoking Popes: The Smoking Popes is an American pop punk band from the northwest suburbs of Chicago, Illinois, formed in 1991.  They play punk-influenced pop music with crooning vocals.  The core of the group is composed of brothers Matt Caterer (born 1968), Josh Caterer (born 1972) and Eli Caterer (born 1975).\n\nStay Down (album): Stay Down is the fifth studio album by Chicago pop punk group Smoking Popes.  Released on Curb Appeal Records on August 5, 2008, it was the band's first studio album since their 2005 reunion and their first album of original material since 1997's \"Destination Failure\".  It's the only Smoking Popes album to feature drummer Ryan Chavez, who joined the band in 2006.\n\nThirty Seconds to Mars: Thirty Seconds to Mars (commonly stylized as 30 Seconds to Mars) is an American rock band from Los Angeles, California, formed in 1998.  The band consists of Jared Leto (lead vocals, guitar, bass, keyboards), Shannon Leto (drums, percussion) and Tomo Miličević (lead guitar, bass, violin, keyboards, other instruments).\n\n30 Seconds to Mars (album): 30 Seconds to Mars is the debut studio album by American rock band Thirty Seconds to Mars.  It was first released on August 27, 2002, by Immortal Records and distributed by Virgin Records.  The album was produced by Bob Ezrin, Brian Virtue, and Thirty Seconds to Mars, and was recorded in rural Wyoming during 2001 and early 2002.  It had been in the works for a couple of years, with lead vocalist Jared Leto writing the majority of the songs.\n\nList of songs recorded by Thirty Seconds to Mars: American rock band Thirty Seconds to Mars has recorded material for four studio albums.  The band was formed in Los Angeles, California, in 1998 by brothers Jared and Shannon Leto.  The duo later expanded to a four-piece when they added guitarist Solon Bixler and bassist Matt Wachter to the line-up.  After signing a contract with record label Immortal Records in 1998, the band began to work with producers Bob Ezrin and Brian Virtue on their debut album, \"30 Seconds to Mars\", which was released in August 2002.  The album produced two singles, \"Capricorn (A Brand New Name)\" and \"Edge of the Earth\".  In early 2003, Bixler left the band due to issues primarily related to touring and was replaced by Tomo Miličević.  Thirty Seconds to Mars released their second studio album, \"A Beautiful Lie\", in August 2005.  The record, produced by Josh Abraham, was preceded by the single \"Attack\" and spawned two Kerrang!  Award-winning singles, \"The Kill\" and \"From Yesterday\".  The album's title track, \"A Beautiful Lie\", was released as the fourth single in selected territories. \" Hunter\", a song originally performed by Björk, was covered by the band and added to the track listing of the album.  In March 2007, Wachter left the group to spend more time with his family and was replaced by Tim Kelleher, performing live only.\n\nSmoking Popes Tribute: The Smoking Popes Tribute is a tribute album to the Chicago-based pop punk band the Smoking Popes.  It was released March 25, 2003 by Double Zero Records, a label founded by former Smoking Popes drummer Mike Felumlee.  Following the Smoking Popes' breakup in 1998, Double Zero had released several albums of previously recorded Smoking Popes material including \"1991–1998\", \"Live\", and \"The Party's Over\".  The \"Smoking Popes Tribute\" features contributions from former members of the Smoking Popes themselves: Felumlee performs a cover of \"Don't Be Afraid\", while Josh and Eli Caterer perform \"Do Something\" with their post-Smoking Popes act Duvall.  Other notable contributors to the album include Bad Astronaut, Grade, and The Ataris.\n\nQuestion: Is Smoking Popes or Thirty Seconds to Mars from further west?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"band_1_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the first band.\"\n        },\n        \"origin_location\": {\n          \"type\": \"string\",\n          \"description\": \"The city and state where the first band is from.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"origin_location\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"band_2_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the second band.\"\n        },\n        \"origin_location\": {\n          \"type\": \"string\",\n          \"description\": \"The city and state where the second band is from.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"origin_location\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"band_further_west\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the band that is from further west.\"\n    },\n    \"comparison_summary\": {\n      \"type\": \"string\",\n      \"description\": \"A summary statement comparing the origins of the two bands.\"\n    }\n  },\n  \"required\": [\n    \"band_1_details\",\n    \"band_2_details\",\n    \"band_further_west\",\n    \"comparison_summary\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "band_1_details",
-    "band_2_details",
-    "band_further_west",
-    "comparison_summary"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "band_1_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the first band."
+          },
+          "origin_location": {
+            "type": "string",
+            "description": "The city and state where the first band is from."
+          }
+        },
+        "required": [
+          "name",
+          "origin_location"
+        ],
+        "additionalProperties": false
+      },
+      "band_2_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the second band."
+          },
+          "origin_location": {
+            "type": "string",
+            "description": "The city and state where the second band is from."
+          }
+        },
+        "required": [
+          "name",
+          "origin_location"
+        ],
+        "additionalProperties": false
+      },
+      "band_further_west": {
+        "type": "string",
+        "description": "The name of the band that is from further west."
+      },
+      "comparison_summary": {
+        "type": "string",
+        "description": "A summary statement comparing the origins of the two bands."
+      }
+    },
+    "required": [
+      "band_1_details",
+      "band_2_details",
+      "band_further_west",
+      "comparison_summary"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

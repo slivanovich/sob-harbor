@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Exquisite Corpse (EP): Exquisite Corpse is the debut EP by American alternative rock band Warpaint, self-released in late 2008 and subsequently re-released on October 6, 2009 on Manimal Vinyl.  Recorded in 2007, the EP was mixed by then-Red Hot Chili Peppers guitarist John Frusciante, and features current Red Hot Chili Peppers guitarist Josh Klinghoffer performing drums on "Billie Holiday" and guitar on "Krimson".
-
-Stuff (film): Stuff is a 12-minute documentary about the house of Red Hot Chili Peppers guitarist John Frusciante.  It was made in 1993 by Johnny Depp and Gibby Haynes, the lead singer of the Butthole Surfers.  Dr. Timothy Leary is also present in the video.  The film's main purpose was to depict the chaos and instability of Frusciante's life.
-
-John Frusciante discography: The discography of John Frusciante, who is best known as the former guitarist of the rock band Red Hot Chili Peppers, consists of eleven solo albums and four EPs, as well as two albums with collaborators Joe Lally and Josh Klinghoffer under the name Ataxia and one EP and one album under the alias of Trickfinger.  Frusciante left the Red Hot Chili Peppers in 1992 after he got tired of the growing success of the band.  He released his first solo album, "Niandra LaDes and Usually Just a T-Shirt", in 1994 on American Recordings.  His second record, "Smile From the Streets You Hold", was released in 1997 and later taken off the market at his request in 1999.  After returning to the Red Hot Chili Peppers in 1998, Frusciante recorded "Californication" with the band and subsequently released his third solo album, "To Record Only Water for Ten Days", in February 2001 on Warner Music Group.
-
-Ataxia (band): Ataxia was a short-lived American experimental rock band formed in 2004 by guitarist John Frusciante (Red Hot Chili Peppers), bassist Joe Lally (Fugazi) and drummer Josh Klinghoffer (Red Hot Chili Peppers, Dot Hacker, The Bicycle Thief), who later succeeded Frusciante as the lead guitarist of the Red Hot Chili Peppers.
-
-Omar Rodriguez Lopez &amp; John Frusciante: Omar Rodriguez Lopez & John Frusciante is a collaborative studio album by Omar Rodríguez-López, guitarist of The Mars Volta, and the former Red Hot Chili Peppers guitarist, John Frusciante.  The record was digitally released on April 30, 2010.  It is the twentieth release by Omar, and their second collaboration following 2005's "0=2" vinyl single, which appears on this record along with its b-side, "0".  These two tracks have been available digitally since October 3, 2006.  This album was a free download with the option to donate for a period of time.  All money raised has gone to "Keep Music In Schools".  The album can now be downloaded for $3.99.
-
-Hump de Bump: "Hump de Bump" is a song by the Red Hot Chili Peppers from their 2006 double album, "Stadium Arcadium".  The song is the fifth and final single released from "Stadium Arcadium" and final single the band would release with John Frusciante, who quit the band two years later.  Originally expected to be the fourth single for the US, Canada and Australia, ("Desecration Smile" was the fourth single released internationally) the Red Hot Chili Peppers decided to make the single and video a worldwide release thanks to the positive feedback on the video, which was directed by comedian and good friend Chris Rock.  The single was released in the US on April 7, 2007 while it was released May 10, 2007 in the rest of the world.
-
-Dave Navarro: David Michael Navarro (born June 7, 1967) is an American guitarist, singer, songwriter, and actor.
-
-Automatic Writing (album): Automatic Writing is the debut studio album by American experimental rock band Ataxia, released on August 10, 2004 on Record Collection.  Ataxia consisted of then-Red Hot Chili Peppers guitarist John Frusciante, Joe Lally of Fugazi, and Josh Klinghoffer, Frusciante's subsequent successor in the Red Hot Chili Peppers.
-
-Red Hot Chili Peppers 1984 Tour: Red Hot Chili Peppers 1984 Tour was a concert tour by Red Hot Chili Peppers to support their 1984 debut album, "The Red Hot Chili Peppers".  Following the band's brief first tour the previous year, original members, Hillel Slovak and Jack Irons left the band to tour and record with their own band, What Is This?  who had also obtained a record contract shortly before the Chili Peppers did.  Slovak and Irons considered the Chili Peppers a side project and What Is This?  to have the brighter future.  In late 1983, auditions were held and Irons was quickly replaced by Cliff Martinez, best known for his work with The Weirdos, The Dickies and Captain Beefheart.  Dix Denney, Martinez's Weirdo's bandmate was close to becoming the band's new guitarist however after a few rehearsals they felt Denney's style didn't match what the band wanted.  Through further auditions it came down to a guy named Mark Nine and Jack Sherman.  The band had no clue as to who Sherman was or how he got to the audition but knew he was the best fit because he instantly clicked musically with bassist Flea and Martinez.
-
-Californication (album): Californication is the seventh studio album by American rock band Red Hot Chili Peppers.  It was released on June 8, 1999, on Warner Bros.  Records and was produced by Rick Rubin.  "Californication" marked the return of John Frusciante, who had previously appeared on "Mother's Milk" and "Blood Sugar Sex Magik", to replace Dave Navarro as the band's guitarist.  Frusciante's return was credited with changing the band's sound altogether, producing a notable shift in style from the music recorded with Navarro.  The album's subject material incorporated various sexual innuendos commonly associated with the band, but also contained more varied themes than previous outings, including lust, death, contemplations of suicide, California, drugs, globalization, and travel.
-
-Question: What is the birth date of the man who John Frusciante replaced as the Red Hot Chili Peppers guitarist?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_replaced_name": {
-      "type": "string",
-      "description": "The name of the person John Frusciante replaced as guitarist."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "person_replaced_role": {
-      "type": "string",
-      "description": "The role of the person in the band."
-    },
-    "band_name": {
-      "type": "string",
-      "description": "The name of the band where the replacement occurred."
-    },
-    "birth_date": {
-      "type": "string",
-      "description": "The birth date of the person who was replaced."
+    {
+      "role": "user",
+      "content": "Context:\nExquisite Corpse (EP): Exquisite Corpse is the debut EP by American alternative rock band Warpaint, self-released in late 2008 and subsequently re-released on October 6, 2009 on Manimal Vinyl.  Recorded in 2007, the EP was mixed by then-Red Hot Chili Peppers guitarist John Frusciante, and features current Red Hot Chili Peppers guitarist Josh Klinghoffer performing drums on \"Billie Holiday\" and guitar on \"Krimson\".\n\nStuff (film): Stuff is a 12-minute documentary about the house of Red Hot Chili Peppers guitarist John Frusciante.  It was made in 1993 by Johnny Depp and Gibby Haynes, the lead singer of the Butthole Surfers.  Dr. Timothy Leary is also present in the video.  The film's main purpose was to depict the chaos and instability of Frusciante's life.\n\nJohn Frusciante discography: The discography of John Frusciante, who is best known as the former guitarist of the rock band Red Hot Chili Peppers, consists of eleven solo albums and four EPs, as well as two albums with collaborators Joe Lally and Josh Klinghoffer under the name Ataxia and one EP and one album under the alias of Trickfinger.  Frusciante left the Red Hot Chili Peppers in 1992 after he got tired of the growing success of the band.  He released his first solo album, \"Niandra LaDes and Usually Just a T-Shirt\", in 1994 on American Recordings.  His second record, \"Smile From the Streets You Hold\", was released in 1997 and later taken off the market at his request in 1999.  After returning to the Red Hot Chili Peppers in 1998, Frusciante recorded \"Californication\" with the band and subsequently released his third solo album, \"To Record Only Water for Ten Days\", in February 2001 on Warner Music Group.\n\nAtaxia (band): Ataxia was a short-lived American experimental rock band formed in 2004 by guitarist John Frusciante (Red Hot Chili Peppers), bassist Joe Lally (Fugazi) and drummer Josh Klinghoffer (Red Hot Chili Peppers, Dot Hacker, The Bicycle Thief), who later succeeded Frusciante as the lead guitarist of the Red Hot Chili Peppers.\n\nOmar Rodriguez Lopez &amp; John Frusciante: Omar Rodriguez Lopez & John Frusciante is a collaborative studio album by Omar Rodríguez-López, guitarist of The Mars Volta, and the former Red Hot Chili Peppers guitarist, John Frusciante.  The record was digitally released on April 30, 2010.  It is the twentieth release by Omar, and their second collaboration following 2005's \"0=2\" vinyl single, which appears on this record along with its b-side, \"0\".  These two tracks have been available digitally since October 3, 2006.  This album was a free download with the option to donate for a period of time.  All money raised has gone to \"Keep Music In Schools\".  The album can now be downloaded for $3.99.\n\nHump de Bump: \"Hump de Bump\" is a song by the Red Hot Chili Peppers from their 2006 double album, \"Stadium Arcadium\".  The song is the fifth and final single released from \"Stadium Arcadium\" and final single the band would release with John Frusciante, who quit the band two years later.  Originally expected to be the fourth single for the US, Canada and Australia, (\"Desecration Smile\" was the fourth single released internationally) the Red Hot Chili Peppers decided to make the single and video a worldwide release thanks to the positive feedback on the video, which was directed by comedian and good friend Chris Rock.  The single was released in the US on April 7, 2007 while it was released May 10, 2007 in the rest of the world.\n\nDave Navarro: David Michael Navarro (born June 7, 1967) is an American guitarist, singer, songwriter, and actor.\n\nAutomatic Writing (album): Automatic Writing is the debut studio album by American experimental rock band Ataxia, released on August 10, 2004 on Record Collection.  Ataxia consisted of then-Red Hot Chili Peppers guitarist John Frusciante, Joe Lally of Fugazi, and Josh Klinghoffer, Frusciante's subsequent successor in the Red Hot Chili Peppers.\n\nRed Hot Chili Peppers 1984 Tour: Red Hot Chili Peppers 1984 Tour was a concert tour by Red Hot Chili Peppers to support their 1984 debut album, \"The Red Hot Chili Peppers\".  Following the band's brief first tour the previous year, original members, Hillel Slovak and Jack Irons left the band to tour and record with their own band, What Is This?  who had also obtained a record contract shortly before the Chili Peppers did.  Slovak and Irons considered the Chili Peppers a side project and What Is This?  to have the brighter future.  In late 1983, auditions were held and Irons was quickly replaced by Cliff Martinez, best known for his work with The Weirdos, The Dickies and Captain Beefheart.  Dix Denney, Martinez's Weirdo's bandmate was close to becoming the band's new guitarist however after a few rehearsals they felt Denney's style didn't match what the band wanted.  Through further auditions it came down to a guy named Mark Nine and Jack Sherman.  The band had no clue as to who Sherman was or how he got to the audition but knew he was the best fit because he instantly clicked musically with bassist Flea and Martinez.\n\nCalifornication (album): Californication is the seventh studio album by American rock band Red Hot Chili Peppers.  It was released on June 8, 1999, on Warner Bros.  Records and was produced by Rick Rubin.  \"Californication\" marked the return of John Frusciante, who had previously appeared on \"Mother's Milk\" and \"Blood Sugar Sex Magik\", to replace Dave Navarro as the band's guitarist.  Frusciante's return was credited with changing the band's sound altogether, producing a notable shift in style from the music recorded with Navarro.  The album's subject material incorporated various sexual innuendos commonly associated with the band, but also contained more varied themes than previous outings, including lust, death, contemplations of suicide, California, drugs, globalization, and travel.\n\nQuestion: What is the birth date of the man who John Frusciante replaced as the Red Hot Chili Peppers guitarist?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_replaced_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person John Frusciante replaced as guitarist.\"\n    },\n    \"person_replaced_role\": {\n      \"type\": \"string\",\n      \"description\": \"The role of the person in the band.\"\n    },\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the band where the replacement occurred.\"\n    },\n    \"birth_date\": {\n      \"type\": \"string\",\n      \"description\": \"The birth date of the person who was replaced.\"\n    }\n  },\n  \"required\": [\n    \"person_replaced_name\",\n    \"person_replaced_role\",\n    \"band_name\",\n    \"birth_date\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_replaced_name",
-    "person_replaced_role",
-    "band_name",
-    "birth_date"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_replaced_name": {
+        "type": "string",
+        "description": "The name of the person John Frusciante replaced as guitarist."
+      },
+      "person_replaced_role": {
+        "type": "string",
+        "description": "The role of the person in the band."
+      },
+      "band_name": {
+        "type": "string",
+        "description": "The name of the band where the replacement occurred."
+      },
+      "birth_date": {
+        "type": "string",
+        "description": "The birth date of the person who was replaced."
+      }
+    },
+    "required": [
+      "person_replaced_name",
+      "person_replaced_role",
+      "band_name",
+      "birth_date"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

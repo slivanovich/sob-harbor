@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Toy Story Toons: Toy Story Toons is a series of short animated films based on the "Toy Story" franchise.  The plotline of the series begins after "Toy Story 3".  The films are set at Bonnie's house, the new home of Andy's toys.  As of 2015, three shorts have been released as part of the series – "Hawaiian Vacation" and "Small Fry" in 2011 and "Partysaurus Rex" in 2012.  A fourth short, titled "Mythic Rock", was rumored in 2013, but was scrapped.
-
-Barbie (film series): There have been several American computer animated and motion capture-based direct-to-video films based on and featuring the doll Barbie.  Since her film debut appearance in 1987's "", Barbie has been a computer animated virtual actress starring in several feature films and short films (including a 1998 video game, "", that contains a short film).  After a fourteen-year absence, Mattel commissioned films to feature Barbie as a heroine of several princess or fairy-themed stories to accompany a franchise of related dolls and accessories.  Barbie also made appearances in "My Scene", "Toy Story 2", "Toy Story 3" and the upcoming "Toy Story 4".
-
-Small Fry (film): Toy Story Toons: Small Fry is a 2011 Pixar computer animated short directed by Angus MacLane.  It premiered with the theatrical release of "The Muppets" on November 23, 2011.  "Small Fry" is the second short in the "Toy Story Toons" series, based on the characters from the "Toy Story" feature films.  The short involves Buzz getting trapped at a fast food restaurant, where there is a support group for discarded kids' meal toys from over the years, with a kids' meal toy version of Buzz taking his place.
-
-Partysaurus Rex: Toy Story Toons: Partysaurus Rex is a 2012 Pixar computer animated short film directed by Mark Walsh.  It was first screened in theaters ahead of the 3-D theatrical re-release of "Finding Nemo".  "Partysaurus Rex" is the third short in the "Toy Story Toons" series, based on the characters from the "Toy Story" feature films.  The short involves Rex getting left in the bathroom and making friends with bath toys.  It is one of the final roles of Don Rickles as Mr. Potato Head, before his passing in 2017, followed by "Toy Story of Terror! ", "Toy Story That Time Forgot" and "Toy Story 4".
-
-Toy Story Land: Toy Story" Land (known as Toy Story" Playland at Walt Disney Studios Park) is a themed land at Walt Disney Studios Park, Hong Kong Disneyland, and soon-to-be at Disney's Hollywood Studios and Shanghai Disneyland Park.  The area is based on the Disney·Pixar film series, "Toy Story".  In France, it is part of Toon Studio and opened on August 17, 2010 at a cost of 79 million euros.  In Hong Kong, "Toy Story" Land opened on November 18, 2011.  A version of "Toy Story" Land for Disney's Hollywood Studios was announced on August 15, 2015 at the D23 Expo.
-
-Toy Story 3: Toy Story 3 is a 2010 American 3D computer-animated comedy-drama film produced by Pixar Animation Studios for Walt Disney Pictures.  It is the third installment in Pixar's "Toy Story" series, and the sequel to 1999's "Toy Story 2".  It was directed by Lee Unkrich, the editor of the first two films and the co-director of "Toy Story 2", written by Michael Arndt, while Unkrich wrote the story along with John Lasseter and Andrew Stanton, respectively director and co-writer of the first two films.  The plot focuses on the toys Woody, Buzz Lightyear, and their friends dealing with an uncertain future as their owner, Andy, prepares to leave for college.  The film features an ensemble voice cast with Tom Hanks, Tim Allen, Joan Cusack, Don Rickles, Wallace Shawn, John Ratzenberger, Estelle Harris, Jodi Benson, and John Morris reprising their roles from the previous films, along with Blake Clark as the voice of Slinky Dog (because Jim Varney died ten years before the release of the film) and Ned Beatty, Michael Keaton, Whoopi Goldberg, Timothy Dalton, Kristen Schaal, Bonnie Hunt, and Jeff Garlin voicing the new characters introduced in this film.
-
-Toy Story of Terror!: Toy Story of Terror!  is a 21-minute Halloween television special, based on the Disney Pixar "Toy Story" movies.  It is set shortly after the events of "Toy Story 3" and "Toy Story Toons", and premiered on the American television network ABC on Wednesday, October 16, 2013.  It was written and directed by Angus MacLane, produced by Galyn Susman, with Tom Hanks, Tim Allen, Joan Cusack, Don Rickles, Wallace Shawn, Timothy Dalton, and Kristen Schaal reprising their roles of Woody, Buzz Lightyear, Jessie, Mr. Potato Head, Rex, Mr. Pricklepants, and Trixie with Carl Weathers as Combat Carl and Stephen Tobolowsky as the motel manager.  Michael Giacchino composed the music for the special.  The film's soundtrack was released on October 15, 2013, on Amazon.com and iTunes in digital format.
-
-Lifted (2006 film): Lifted is a 2006 Pixar computer-animated short film directed by Gary Rydstrom.  This is the first film directed by Rydstrom, a seven-time Academy Award-winning sound editor and mixer, and the first produced by Katherine Sarafian, who went on to produce Pixar's "Brave" released in 2012.
-
-Strange Magic (film): Strange Magic is a 2015 American computer-animated musical fantasy romantic comedy film directed by Gary Rydstrom, produced by Lucasfilm, with feature animation by Lucasfilm Animation and Industrial Light & Magic.  The film's screenplay was written by Rydstrom, David Berenbaum and Irene Mecchi, from a story by George Lucas inspired by William Shakespeare's "A Midsummer Night's Dream".  The film stars Alan Cumming, Evan Rachel Wood, Kristin Chenoweth, Maya Rudolph and Alfred Molina.  The score was composed by Marius de Vries and includes contemporary songs, such as "Love Is Strange".
-
-Hawaiian Vacation: Toy Story Toons: Hawaiian Vacation is a 2011 Pixar computer animated short film directed by Gary Rydstrom.  It is the first short in the "Toy Story Toons" series.  The short features characters from the "Toy Story" films and takes place after the events of "Toy Story 3".  It was first screened in theaters with Pixar's "Cars 2", and was included on the film's media release.
-
-Question: Toy Story Toons includes which 2011 short film directed by Gary Rydstrom?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "short_film_title": {
-      "type": "string",
-      "description": "The title of the short film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the short film was released."
-    },
-    "director": {
-      "type": "string",
-      "description": "The director of the short film."
-    },
-    "series_name": {
-      "type": "string",
-      "description": "The name of the series the short film belongs to."
-    },
-    "shorts_released_in_year_count": {
-      "type": "integer",
-      "description": "The total number of shorts released in the specified series during that year."
+    {
+      "role": "user",
+      "content": "Context:\nToy Story Toons: Toy Story Toons is a series of short animated films based on the \"Toy Story\" franchise.  The plotline of the series begins after \"Toy Story 3\".  The films are set at Bonnie's house, the new home of Andy's toys.  As of 2015, three shorts have been released as part of the series – \"Hawaiian Vacation\" and \"Small Fry\" in 2011 and \"Partysaurus Rex\" in 2012.  A fourth short, titled \"Mythic Rock\", was rumored in 2013, but was scrapped.\n\nBarbie (film series): There have been several American computer animated and motion capture-based direct-to-video films based on and featuring the doll Barbie.  Since her film debut appearance in 1987's \"\", Barbie has been a computer animated virtual actress starring in several feature films and short films (including a 1998 video game, \"\", that contains a short film).  After a fourteen-year absence, Mattel commissioned films to feature Barbie as a heroine of several princess or fairy-themed stories to accompany a franchise of related dolls and accessories.  Barbie also made appearances in \"My Scene\", \"Toy Story 2\", \"Toy Story 3\" and the upcoming \"Toy Story 4\".\n\nSmall Fry (film): Toy Story Toons: Small Fry is a 2011 Pixar computer animated short directed by Angus MacLane.  It premiered with the theatrical release of \"The Muppets\" on November 23, 2011.  \"Small Fry\" is the second short in the \"Toy Story Toons\" series, based on the characters from the \"Toy Story\" feature films.  The short involves Buzz getting trapped at a fast food restaurant, where there is a support group for discarded kids' meal toys from over the years, with a kids' meal toy version of Buzz taking his place.\n\nPartysaurus Rex: Toy Story Toons: Partysaurus Rex is a 2012 Pixar computer animated short film directed by Mark Walsh.  It was first screened in theaters ahead of the 3-D theatrical re-release of \"Finding Nemo\".  \"Partysaurus Rex\" is the third short in the \"Toy Story Toons\" series, based on the characters from the \"Toy Story\" feature films.  The short involves Rex getting left in the bathroom and making friends with bath toys.  It is one of the final roles of Don Rickles as Mr. Potato Head, before his passing in 2017, followed by \"Toy Story of Terror! \", \"Toy Story That Time Forgot\" and \"Toy Story 4\".\n\nToy Story Land: Toy Story\" Land (known as Toy Story\" Playland at Walt Disney Studios Park) is a themed land at Walt Disney Studios Park, Hong Kong Disneyland, and soon-to-be at Disney's Hollywood Studios and Shanghai Disneyland Park.  The area is based on the Disney·Pixar film series, \"Toy Story\".  In France, it is part of Toon Studio and opened on August 17, 2010 at a cost of 79 million euros.  In Hong Kong, \"Toy Story\" Land opened on November 18, 2011.  A version of \"Toy Story\" Land for Disney's Hollywood Studios was announced on August 15, 2015 at the D23 Expo.\n\nToy Story 3: Toy Story 3 is a 2010 American 3D computer-animated comedy-drama film produced by Pixar Animation Studios for Walt Disney Pictures.  It is the third installment in Pixar's \"Toy Story\" series, and the sequel to 1999's \"Toy Story 2\".  It was directed by Lee Unkrich, the editor of the first two films and the co-director of \"Toy Story 2\", written by Michael Arndt, while Unkrich wrote the story along with John Lasseter and Andrew Stanton, respectively director and co-writer of the first two films.  The plot focuses on the toys Woody, Buzz Lightyear, and their friends dealing with an uncertain future as their owner, Andy, prepares to leave for college.  The film features an ensemble voice cast with Tom Hanks, Tim Allen, Joan Cusack, Don Rickles, Wallace Shawn, John Ratzenberger, Estelle Harris, Jodi Benson, and John Morris reprising their roles from the previous films, along with Blake Clark as the voice of Slinky Dog (because Jim Varney died ten years before the release of the film) and Ned Beatty, Michael Keaton, Whoopi Goldberg, Timothy Dalton, Kristen Schaal, Bonnie Hunt, and Jeff Garlin voicing the new characters introduced in this film.\n\nToy Story of Terror!: Toy Story of Terror!  is a 21-minute Halloween television special, based on the Disney Pixar \"Toy Story\" movies.  It is set shortly after the events of \"Toy Story 3\" and \"Toy Story Toons\", and premiered on the American television network ABC on Wednesday, October 16, 2013.  It was written and directed by Angus MacLane, produced by Galyn Susman, with Tom Hanks, Tim Allen, Joan Cusack, Don Rickles, Wallace Shawn, Timothy Dalton, and Kristen Schaal reprising their roles of Woody, Buzz Lightyear, Jessie, Mr. Potato Head, Rex, Mr. Pricklepants, and Trixie with Carl Weathers as Combat Carl and Stephen Tobolowsky as the motel manager.  Michael Giacchino composed the music for the special.  The film's soundtrack was released on October 15, 2013, on Amazon.com and iTunes in digital format.\n\nLifted (2006 film): Lifted is a 2006 Pixar computer-animated short film directed by Gary Rydstrom.  This is the first film directed by Rydstrom, a seven-time Academy Award-winning sound editor and mixer, and the first produced by Katherine Sarafian, who went on to produce Pixar's \"Brave\" released in 2012.\n\nStrange Magic (film): Strange Magic is a 2015 American computer-animated musical fantasy romantic comedy film directed by Gary Rydstrom, produced by Lucasfilm, with feature animation by Lucasfilm Animation and Industrial Light & Magic.  The film's screenplay was written by Rydstrom, David Berenbaum and Irene Mecchi, from a story by George Lucas inspired by William Shakespeare's \"A Midsummer Night's Dream\".  The film stars Alan Cumming, Evan Rachel Wood, Kristin Chenoweth, Maya Rudolph and Alfred Molina.  The score was composed by Marius de Vries and includes contemporary songs, such as \"Love Is Strange\".\n\nHawaiian Vacation: Toy Story Toons: Hawaiian Vacation is a 2011 Pixar computer animated short film directed by Gary Rydstrom.  It is the first short in the \"Toy Story Toons\" series.  The short features characters from the \"Toy Story\" films and takes place after the events of \"Toy Story 3\".  It was first screened in theaters with Pixar's \"Cars 2\", and was included on the film's media release.\n\nQuestion: Toy Story Toons includes which 2011 short film directed by Gary Rydstrom?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"short_film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the short film.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the short film was released.\"\n    },\n    \"director\": {\n      \"type\": \"string\",\n      \"description\": \"The director of the short film.\"\n    },\n    \"series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the series the short film belongs to.\"\n    },\n    \"shorts_released_in_year_count\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of shorts released in the specified series during that year.\"\n    }\n  },\n  \"required\": [\n    \"short_film_title\",\n    \"release_year\",\n    \"director\",\n    \"series_name\",\n    \"shorts_released_in_year_count\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "short_film_title",
-    "release_year",
-    "director",
-    "series_name",
-    "shorts_released_in_year_count"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "short_film_title": {
+        "type": "string",
+        "description": "The title of the short film."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the short film was released."
+      },
+      "director": {
+        "type": "string",
+        "description": "The director of the short film."
+      },
+      "series_name": {
+        "type": "string",
+        "description": "The name of the series the short film belongs to."
+      },
+      "shorts_released_in_year_count": {
+        "type": "integer",
+        "description": "The total number of shorts released in the specified series during that year."
+      }
+    },
+    "required": [
+      "short_film_title",
+      "release_year",
+      "director",
+      "series_name",
+      "shorts_released_in_year_count"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

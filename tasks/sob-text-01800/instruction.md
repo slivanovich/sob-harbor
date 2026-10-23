@@ -1,100 +1,77 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-List of accolades received by Zero Dark Thirty: "Zero Dark Thirty" is a 2012 American action thriller directed and co-produced by Kathryn Bigelow with screenplay by Mark Boal.  The film was released in the United States on December 19, 2012, with a limited release at five theaters in Los Angeles and New York City.  It made $124,848 in its limited release weekend, making it one of the biggest limited mid-week openings ever.  As of March 6, 2013, "Zero Dark Thirty" has grossed a worldwide total of $106.8 million.  "Zero Dark Thirty" also received a high critical acclaim, accumulating an approval rating of 93% on the review aggregator site Rotten Tomatoes.
-
-Chris Pratt: Christopher Michael Pratt (born June 21, 1979) is an American actor.  Pratt came to prominence with his television roles; he is best known for his roles as Owen Grady in "Jurassic World", Jim Preston in "Passengers" and Andy Dwyer in the NBC sitcom "Parks and Recreation" from 2009–2015, for which he received critical acclaim and was nominated for the Critics' Choice Television Award for Best Supporting Actor in a Comedy Series in 2013.  He also starred earlier in his career as Bright Abbott in The WB drama series "Everwood" (2002–2006).  His early film career began with supporting roles in such mainstream films as "Wanted" (2008), "Jennifer's Body" (2009), "Moneyball" (2011), "The Five-Year Engagement" (2012), "Zero Dark Thirty" (2013), "Delivery Man" (2013), and "Her" (2013).
-
-Jonathan Tucker: Jonathan Moss Tucker (born May 31, 1982) is an American film and television actor.  He is known for his roles in the films "The Virgin Suicides" (1999), "The Texas Chainsaw Massacre" (2003), "Hostage" (2005), "In the Valley of Elah" (2007), and "The Ruins" (2008).  He has appeared in the television series "The Black Donnellys" (2007) and "Parenthood" (2011–2013).  As of October 2014, he co-stars in the DirecTV drama series "Kingdom" created by Byron Balasco.
-
-Kingdom (U.S. TV series): Kingdom (previously titled Navy St.) is an American drama television series created by Byron Balasco.  The series premiered on October 8, 2014 on the Audience Network and concluded on August 2, 2017.  It stars Frank Grillo, Kiele Sanchez, Matt Lauria, Jonathan Tucker, Nick Jonas, and Joanna Going.  Season one consists of ten episodes.
-
-Byron Balasco: Byron Balasco is an American television producer and screenwriter.  He has written and produced for the shows "Without a Trace" (20062009), "FlashForward" (2010), and "Detroit 1-8-7" (20102011).  In 2014, he signed on to executive produce and write for the series he created "Kingdom" featuring Frank Grillo.
-
-Westside (TV pilot): Westside is an American drama television pilot which was created by Byron Balasco and produced by Balasco, McG, Ilene Chaiken, and Peter Johnson.  It was developed by Ilene Chaiken for ABC.  ABC had ordered the pilot episode on January 22, 2013.  The pilot was directed by McG, but it was not picked up to series.
-
-List of Kingdom (U.S. TV series) episodes: "Kingdom" is an American drama television series created by Byron Balasco.  The series premiered on October 8, 2014 on the Audience Network and concluded on August 2, 2017.  It stars Frank Grillo, Kiele Sanchez, Matt Lauria, Jonathan Tucker, Nick Jonas with Joanna Going.  Season one consists of ten episodes.  DirecTV renewed the series for a 20-episode second season, 10 of which aired in 2015 and 10 in 2016.  On July 7, 2016, it was renewed for a third and final season.
-
-Frank Grillo: Frank Anthony Grillo (born June 8, 1965) is an American actor known for his roles in films such as "Warrior" (2011), "The Grey" (2012), "End of Watch" (2012) and "Zero Dark Thirty" (2012).  He had his first leading role in the action horror film "" (2014), portraying Sergeant Leo Barnes, a role he reprised in "" (2016).  He also plays the Marvel supervillain Brock Rumlow / Crossbones in the Marvel Cinematic Universe, and Big Daddy in the Chinese action film "Wolf Warriors 2" (2017), the highest-grossing non-Hollywood film of all time.
-
-Jason Clarke: Jason Clarke (born 17 July 1969) is an Australian film and television actor.  Clarke has appeared in many TV series, and is known for playing Tommy Caffee on the television series "Brotherhood."  He has also appeared in many films, often as an antagonist.  Some of his film roles include "Death Race" (2008), "Public Enemies" (2009), "Zero Dark Thirty" (2013), "White House Down" (2013), "Dawn of the Planet of the Apes" (2014), "Terminator Genisys" (2015) and "Everest" (2015).
-
-Harold Perrineau: Harold Perrineau (formerly Harold Williams; born August 7, 1963) is an American actor, known for the roles of Michael Dawson in the U.S. television series "Lost", Link in "The Matrix" films and games, Augustus Hill in the American television series "Oz", Damon Pope in the FX bike gang drama "Sons of Anarchy", and Mercutio in Baz Luhrmann's "Romeo + Juliet".  He starred in ABC's comedy-drama television series "The Unusuals", playing NYPD homicide detective Leo Banks and has appeared in several high-profile films, including "The Best Man", "28 Weeks Later", "", and "Zero Dark Thirty".  He also starred alongside Anthony Hopkins and Alec Baldwin in the survival drama "The Edge".
-
-Question: Which of Byron Balasco's series featured an actor who also played in Zero Dark Thirty?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "creator_name": {
-      "type": "string",
-      "description": "The name of the creator whose series is being identified."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "series_identified": {
-      "type": "string",
-      "description": "The name of the series created by Byron Balasco that features an actor also in Zero Dark Thirty."
-    },
-    "linking_actor": {
-      "type": "object",
-      "properties": {
-        "actor_name": {
-          "type": "string",
-          "description": "The name of the actor who appeared in both the identified series and Zero Dark Thirty."
-        },
-        "roles": {
-          "type": "array",
-          "description": "A list of roles the linking actor played, including the identified series and Zero Dark Thirty.",
-          "items": {
-            "type": "object",
-            "properties": {
-              "title": {
-                "type": "string",
-                "description": "The title of the film or series."
-              },
-              "type": {
-                "type": "string",
-                "enum": [
-                  "film",
-                  "series"
-                ],
-                "description": "The type of production (film or series)."
-              },
-              "year": {
-                "type": "integer",
-                "description": "The release or premiere year of the production."
-              }
-            },
-            "required": [
-              "title",
-              "type",
-              "year"
-            ],
-            "additionalProperties": false
-          }
-        }
-      },
-      "required": [
-        "actor_name",
-        "roles"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nList of accolades received by Zero Dark Thirty: \"Zero Dark Thirty\" is a 2012 American action thriller directed and co-produced by Kathryn Bigelow with screenplay by Mark Boal.  The film was released in the United States on December 19, 2012, with a limited release at five theaters in Los Angeles and New York City.  It made $124,848 in its limited release weekend, making it one of the biggest limited mid-week openings ever.  As of March 6, 2013, \"Zero Dark Thirty\" has grossed a worldwide total of $106.8 million.  \"Zero Dark Thirty\" also received a high critical acclaim, accumulating an approval rating of 93% on the review aggregator site Rotten Tomatoes.\n\nChris Pratt: Christopher Michael Pratt (born June 21, 1979) is an American actor.  Pratt came to prominence with his television roles; he is best known for his roles as Owen Grady in \"Jurassic World\", Jim Preston in \"Passengers\" and Andy Dwyer in the NBC sitcom \"Parks and Recreation\" from 2009–2015, for which he received critical acclaim and was nominated for the Critics' Choice Television Award for Best Supporting Actor in a Comedy Series in 2013.  He also starred earlier in his career as Bright Abbott in The WB drama series \"Everwood\" (2002–2006).  His early film career began with supporting roles in such mainstream films as \"Wanted\" (2008), \"Jennifer's Body\" (2009), \"Moneyball\" (2011), \"The Five-Year Engagement\" (2012), \"Zero Dark Thirty\" (2013), \"Delivery Man\" (2013), and \"Her\" (2013).\n\nJonathan Tucker: Jonathan Moss Tucker (born May 31, 1982) is an American film and television actor.  He is known for his roles in the films \"The Virgin Suicides\" (1999), \"The Texas Chainsaw Massacre\" (2003), \"Hostage\" (2005), \"In the Valley of Elah\" (2007), and \"The Ruins\" (2008).  He has appeared in the television series \"The Black Donnellys\" (2007) and \"Parenthood\" (2011–2013).  As of October 2014, he co-stars in the DirecTV drama series \"Kingdom\" created by Byron Balasco.\n\nKingdom (U.S. TV series): Kingdom (previously titled Navy St.) is an American drama television series created by Byron Balasco.  The series premiered on October 8, 2014 on the Audience Network and concluded on August 2, 2017.  It stars Frank Grillo, Kiele Sanchez, Matt Lauria, Jonathan Tucker, Nick Jonas, and Joanna Going.  Season one consists of ten episodes.\n\nByron Balasco: Byron Balasco is an American television producer and screenwriter.  He has written and produced for the shows \"Without a Trace\" (20062009), \"FlashForward\" (2010), and \"Detroit 1-8-7\" (20102011).  In 2014, he signed on to executive produce and write for the series he created \"Kingdom\" featuring Frank Grillo.\n\nWestside (TV pilot): Westside is an American drama television pilot which was created by Byron Balasco and produced by Balasco, McG, Ilene Chaiken, and Peter Johnson.  It was developed by Ilene Chaiken for ABC.  ABC had ordered the pilot episode on January 22, 2013.  The pilot was directed by McG, but it was not picked up to series.\n\nList of Kingdom (U.S. TV series) episodes: \"Kingdom\" is an American drama television series created by Byron Balasco.  The series premiered on October 8, 2014 on the Audience Network and concluded on August 2, 2017.  It stars Frank Grillo, Kiele Sanchez, Matt Lauria, Jonathan Tucker, Nick Jonas with Joanna Going.  Season one consists of ten episodes.  DirecTV renewed the series for a 20-episode second season, 10 of which aired in 2015 and 10 in 2016.  On July 7, 2016, it was renewed for a third and final season.\n\nFrank Grillo: Frank Anthony Grillo (born June 8, 1965) is an American actor known for his roles in films such as \"Warrior\" (2011), \"The Grey\" (2012), \"End of Watch\" (2012) and \"Zero Dark Thirty\" (2012).  He had his first leading role in the action horror film \"\" (2014), portraying Sergeant Leo Barnes, a role he reprised in \"\" (2016).  He also plays the Marvel supervillain Brock Rumlow / Crossbones in the Marvel Cinematic Universe, and Big Daddy in the Chinese action film \"Wolf Warriors 2\" (2017), the highest-grossing non-Hollywood film of all time.\n\nJason Clarke: Jason Clarke (born 17 July 1969) is an Australian film and television actor.  Clarke has appeared in many TV series, and is known for playing Tommy Caffee on the television series \"Brotherhood.\"  He has also appeared in many films, often as an antagonist.  Some of his film roles include \"Death Race\" (2008), \"Public Enemies\" (2009), \"Zero Dark Thirty\" (2013), \"White House Down\" (2013), \"Dawn of the Planet of the Apes\" (2014), \"Terminator Genisys\" (2015) and \"Everest\" (2015).\n\nHarold Perrineau: Harold Perrineau (formerly Harold Williams; born August 7, 1963) is an American actor, known for the roles of Michael Dawson in the U.S. television series \"Lost\", Link in \"The Matrix\" films and games, Augustus Hill in the American television series \"Oz\", Damon Pope in the FX bike gang drama \"Sons of Anarchy\", and Mercutio in Baz Luhrmann's \"Romeo + Juliet\".  He starred in ABC's comedy-drama television series \"The Unusuals\", playing NYPD homicide detective Leo Banks and has appeared in several high-profile films, including \"The Best Man\", \"28 Weeks Later\", \"\", and \"Zero Dark Thirty\".  He also starred alongside Anthony Hopkins and Alec Baldwin in the survival drama \"The Edge\".\n\nQuestion: Which of Byron Balasco's series featured an actor who also played in Zero Dark Thirty?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"creator_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the creator whose series is being identified.\"\n    },\n    \"series_identified\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the series created by Byron Balasco that features an actor also in Zero Dark Thirty.\"\n    },\n    \"linking_actor\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"actor_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the actor who appeared in both the identified series and Zero Dark Thirty.\"\n        },\n        \"roles\": {\n          \"type\": \"array\",\n          \"description\": \"A list of roles the linking actor played, including the identified series and Zero Dark Thirty.\",\n          \"items\": {\n            \"type\": \"object\",\n            \"properties\": {\n              \"title\": {\n                \"type\": \"string\",\n                \"description\": \"The title of the film or series.\"\n              },\n              \"type\": {\n                \"type\": \"string\",\n                \"enum\": [\n                  \"film\",\n                  \"series\"\n                ],\n                \"description\": \"The type of production (film or series).\"\n              },\n              \"year\": {\n                \"type\": \"integer\",\n                \"description\": \"The release or premiere year of the production.\"\n              }\n            },\n            \"required\": [\n              \"title\",\n              \"type\",\n              \"year\"\n            ],\n            \"additionalProperties\": false\n          }\n        }\n      },\n      \"required\": [\n        \"actor_name\",\n        \"roles\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"creator_name\",\n    \"series_identified\",\n    \"linking_actor\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "creator_name",
-    "series_identified",
-    "linking_actor"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "creator_name": {
+        "type": "string",
+        "description": "The name of the creator whose series is being identified."
+      },
+      "series_identified": {
+        "type": "string",
+        "description": "The name of the series created by Byron Balasco that features an actor also in Zero Dark Thirty."
+      },
+      "linking_actor": {
+        "type": "object",
+        "properties": {
+          "actor_name": {
+            "type": "string",
+            "description": "The name of the actor who appeared in both the identified series and Zero Dark Thirty."
+          },
+          "roles": {
+            "type": "array",
+            "description": "A list of roles the linking actor played, including the identified series and Zero Dark Thirty.",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "description": "The title of the film or series."
+                },
+                "type": {
+                  "type": "string",
+                  "enum": [
+                    "film",
+                    "series"
+                  ],
+                  "description": "The type of production (film or series)."
+                },
+                "year": {
+                  "type": "integer",
+                  "description": "The release or premiere year of the production."
+                }
+              },
+              "required": [
+                "title",
+                "type",
+                "year"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": [
+          "actor_name",
+          "roles"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "creator_name",
+      "series_identified",
+      "linking_actor"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

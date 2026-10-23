@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Sex comedy: Sex comedy or more broadly sexual comedy is a genre in which comedy is motivated by sexual situations and love affairs.  Although "sex comedy" is primarily a description of dramatic forms such as theatre and film, literary works such as those of Ovid and Chaucer may be considered sex comedies.
-
-Nina Girado videography: Filipina singer Nina has released five video albums and appeared in forty-five music videos, three films and twelve television shows.  After signing a record deal with Warner Music Philippines, Nina released her first single, "Heaven," in 2002.  Its music video was inspired by the cover art of her debut album of the same name where she is dancing in front of the camera while animations appear in the background.  In 2003, the music videos for "Jealous" and "Foolish Heart" gained popularity in the Philippines, topping various music video charts in the country.  "Jealous" featured actors Cedric Carreon and Angel Jacob, playing the roles of ex-boyfriend and other girl in the music video.  It won Favorite New Artist in a Video at the 2003 MTV Pilipinas Music Award.  The music video for "Loving You" depicts Nina on a journey in a fantasy world to find her dream guy.  All music videos from the album "Heaven" (2002) were directed by Avid Liongoren, except "Foolish Heart." " A Girl Can Dream," the second single from her second studio album "Smile" (2003) featured singer Christian Bautista as her love interest in a school-themed music video.  In 2004, Nina appeared in a cameo appearance for the comedy film "Masikip sa Dibdib."
-
-Nothing but Life: Nothing but Life is a 2004 bilingual English and Malayalam film directed by Rajiv Anchal for an Indian production house dealing with matters of health.  The experimental film featured actors R. Madhavan, Neha Pendse, Kaveri, Nassar and Sreenivasan.
-
-Critics Adult Film Association: The Critics Adult Film Association (CAFA) was a New York-based group of East Coast adult sex film critics, which bestowed awards upon those working in pornographic film during the 1980s.  The awards were first presented in 1981, honoring the movies of the previous year.  "Talk Dirty to Me," a sex comedy starring John Leslie, who won Best Actor, was voted best film of 1980.  Samantha Fox was the first Best Actress, winning for her role in "This Lady Is A Tramp," another sex comedy.
-
-Sex with a Smile II: Sex with a Smile II (originally titled Spogliamoci così, senza pudor) is a 1976 "commedia sexy all'italiana" film directed by Sergio Martino.  Like its predecessor, "Sex with a Smile", it is an anthology sex comedy film with a series of four comedic sketches that parody Italian sexual mores.
-
-Porky's: Porky's is a 1981 Canadian-American sex comedy film written and directed by Bob Clark about the escapades of teenagers in 1954 at the fictional Angel Beach High School in Florida.  Released in the United States in 1982 with an R rating, the film spawned two sequels: "" (1983) and "Porky's Revenge! " (1985) and a remake of the original titled, "Porky's Pimpin' Pee Wee" (2009) and influenced many writers in the teen film genre.  "Porky's" was the fifth highest-grossing film of 1982.
-
-Sex Drive (film): Sex Drive is a 2008 sex comedy film about a high school graduate who goes on a road trip to have sex with a girl he met online.  It is based on the young adult novel "All the Way" by American author Andy Behrens.  The film was directed by Sean Anders, and stars Josh Zuckerman, Amanda Crew, Clark Duke, Seth Green, and James Marsden, while Katrina Bowden, Alice Greczyn, Michael Cudlitz, Dave Sheridan, and David Koechner appear in supporting roles.  It was released in North America on October 17, 2008, and in the United Kingdom on January 9, 2009.
-
-Up the Creek (1984 film): Up the Creek is a 1984 comedy film, directed by Robert Butler.  Although the film itself was not as popular as other "college romp" films, the four lead parts all came to the film with experience in popular comedies, most notably "Animal House" and "Porky's".
-
-A Midsummer Night's Sex Comedy: A Midsummer Night's Sex Comedy is a 1982 sex comedy film written, directed by and starring Woody Allen.
-
-What's Up Superdoc!: What's Up Superdoc!  is a 1978 British sex comedy film, directed by sexploitation director Derek Ford and produced by Michael L. Green.  The film was a sequel to the 1977 film "What's Up Nurse! ", with Christopher Mitchell replacing Nicholas Field as the oversexed Dr. Todd.  The cast included Harry H. Corbett, Hughie Green, and a brief appearance by sex film star Mary Millington.
-
-Question: What Canadian-American sex comedy film featured actors who went on to star in Up the Creek?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the Canadian-American sex comedy film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the film was released."
-    },
-    "nationality": {
-      "type": "string",
-      "description": "The nationality of the film (e.g., Canadian-American)."
-    },
-    "genre": {
-      "type": "string",
-      "description": "The genre of the film."
-    },
-    "director": {
-      "type": "string",
-      "description": "The director of the film."
-    },
-    "actors_connection_to_up_the_creek": {
-      "type": "boolean",
-      "description": "Indicates if actors from this film also starred in 'Up the Creek'."
+    {
+      "role": "user",
+      "content": "Context:\nSex comedy: Sex comedy or more broadly sexual comedy is a genre in which comedy is motivated by sexual situations and love affairs.  Although \"sex comedy\" is primarily a description of dramatic forms such as theatre and film, literary works such as those of Ovid and Chaucer may be considered sex comedies.\n\nNina Girado videography: Filipina singer Nina has released five video albums and appeared in forty-five music videos, three films and twelve television shows.  After signing a record deal with Warner Music Philippines, Nina released her first single, \"Heaven,\" in 2002.  Its music video was inspired by the cover art of her debut album of the same name where she is dancing in front of the camera while animations appear in the background.  In 2003, the music videos for \"Jealous\" and \"Foolish Heart\" gained popularity in the Philippines, topping various music video charts in the country.  \"Jealous\" featured actors Cedric Carreon and Angel Jacob, playing the roles of ex-boyfriend and other girl in the music video.  It won Favorite New Artist in a Video at the 2003 MTV Pilipinas Music Award.  The music video for \"Loving You\" depicts Nina on a journey in a fantasy world to find her dream guy.  All music videos from the album \"Heaven\" (2002) were directed by Avid Liongoren, except \"Foolish Heart.\" \" A Girl Can Dream,\" the second single from her second studio album \"Smile\" (2003) featured singer Christian Bautista as her love interest in a school-themed music video.  In 2004, Nina appeared in a cameo appearance for the comedy film \"Masikip sa Dibdib.\"\n\nNothing but Life: Nothing but Life is a 2004 bilingual English and Malayalam film directed by Rajiv Anchal for an Indian production house dealing with matters of health.  The experimental film featured actors R. Madhavan, Neha Pendse, Kaveri, Nassar and Sreenivasan.\n\nCritics Adult Film Association: The Critics Adult Film Association (CAFA) was a New York-based group of East Coast adult sex film critics, which bestowed awards upon those working in pornographic film during the 1980s.  The awards were first presented in 1981, honoring the movies of the previous year.  \"Talk Dirty to Me,\" a sex comedy starring John Leslie, who won Best Actor, was voted best film of 1980.  Samantha Fox was the first Best Actress, winning for her role in \"This Lady Is A Tramp,\" another sex comedy.\n\nSex with a Smile II: Sex with a Smile II (originally titled Spogliamoci così, senza pudor) is a 1976 \"commedia sexy all'italiana\" film directed by Sergio Martino.  Like its predecessor, \"Sex with a Smile\", it is an anthology sex comedy film with a series of four comedic sketches that parody Italian sexual mores.\n\nPorky's: Porky's is a 1981 Canadian-American sex comedy film written and directed by Bob Clark about the escapades of teenagers in 1954 at the fictional Angel Beach High School in Florida.  Released in the United States in 1982 with an R rating, the film spawned two sequels: \"\" (1983) and \"Porky's Revenge! \" (1985) and a remake of the original titled, \"Porky's Pimpin' Pee Wee\" (2009) and influenced many writers in the teen film genre.  \"Porky's\" was the fifth highest-grossing film of 1982.\n\nSex Drive (film): Sex Drive is a 2008 sex comedy film about a high school graduate who goes on a road trip to have sex with a girl he met online.  It is based on the young adult novel \"All the Way\" by American author Andy Behrens.  The film was directed by Sean Anders, and stars Josh Zuckerman, Amanda Crew, Clark Duke, Seth Green, and James Marsden, while Katrina Bowden, Alice Greczyn, Michael Cudlitz, Dave Sheridan, and David Koechner appear in supporting roles.  It was released in North America on October 17, 2008, and in the United Kingdom on January 9, 2009.\n\nUp the Creek (1984 film): Up the Creek is a 1984 comedy film, directed by Robert Butler.  Although the film itself was not as popular as other \"college romp\" films, the four lead parts all came to the film with experience in popular comedies, most notably \"Animal House\" and \"Porky's\".\n\nA Midsummer Night's Sex Comedy: A Midsummer Night's Sex Comedy is a 1982 sex comedy film written, directed by and starring Woody Allen.\n\nWhat's Up Superdoc!: What's Up Superdoc!  is a 1978 British sex comedy film, directed by sexploitation director Derek Ford and produced by Michael L. Green.  The film was a sequel to the 1977 film \"What's Up Nurse! \", with Christopher Mitchell replacing Nicholas Field as the oversexed Dr. Todd.  The cast included Harry H. Corbett, Hughie Green, and a brief appearance by sex film star Mary Millington.\n\nQuestion: What Canadian-American sex comedy film featured actors who went on to star in Up the Creek?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the Canadian-American sex comedy film.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the film was released.\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the film (e.g., Canadian-American).\"\n    },\n    \"genre\": {\n      \"type\": \"string\",\n      \"description\": \"The genre of the film.\"\n    },\n    \"director\": {\n      \"type\": \"string\",\n      \"description\": \"The director of the film.\"\n    },\n    \"actors_connection_to_up_the_creek\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if actors from this film also starred in 'Up the Creek'.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"release_year\",\n    \"nationality\",\n    \"genre\",\n    \"director\",\n    \"actors_connection_to_up_the_creek\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "release_year",
-    "nationality",
-    "genre",
-    "director",
-    "actors_connection_to_up_the_creek"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the Canadian-American sex comedy film."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the film was released."
+      },
+      "nationality": {
+        "type": "string",
+        "description": "The nationality of the film (e.g., Canadian-American)."
+      },
+      "genre": {
+        "type": "string",
+        "description": "The genre of the film."
+      },
+      "director": {
+        "type": "string",
+        "description": "The director of the film."
+      },
+      "actors_connection_to_up_the_creek": {
+        "type": "boolean",
+        "description": "Indicates if actors from this film also starred in 'Up the Creek'."
+      }
+    },
+    "required": [
+      "film_title",
+      "release_year",
+      "nationality",
+      "genre",
+      "director",
+      "actors_connection_to_up_the_creek"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

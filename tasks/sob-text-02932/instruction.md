@@ -1,122 +1,99 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Equatorial Guinea national football team: The Equatorial Guinea national football team, nicknamed "Nzalang Nacional", is the national team of Equatorial Guinea and is controlled by the Federación Ecuatoguineana de Fútbol.  It is a member of Confederation of African Football (CAF).  Though Equatorial Guinea has traditionally been one of the lowest ranked teams in Africa, the recent influx of Spanish-born players of Equatoguinean heritage has strengthened the national team and resulted in some solid performances.  They qualified as co-hosts for the 2012 Africa Cup of Nations.  The hosting of the tournament lead to the construction of two new football stadia in the country: Estadio de Bata in Bata on the mainland, and Estadio de Malabo in Malabo.  The national team managed a creditable fourth place at the 2015 Africa Cup of Nations, which held in Equatorial Guinea.
-
-Mariana Kovacevic: Mariana Kovacevic is a Serbian traditional healer who has specialized in the use of horse placenta treatment to heal athletes.  During the duration of the 2012 African Cup of Nations in Gabon and Equatorial Guinea she used the horse placenta treatment to heal Ghana's Asamoah Gyan, who had been injured and was supposed to be off football for four weeks.  She is reported to have nursed him back to health in four hours.  She was also reportedly enlisted by the Serbia during the world of 2010 in south Africa.  Other footballers who are reported to have been treated by Mariana include Pablo Zabaleta, Vincent Kompany, Nigel de Jong and Robin Van Persie of Manchester United.  There has been some doubt as to whether Mariana's therapies work.  But more footballers are turning to her for help.
-
-Mohamed Ahmed Bashir: Mohammed Ahmed Bashir, also known as Bisha, (born 23 May 1987) is a Sudanese footballer who plays for the Sudanese club Al-hilal Omdurman.  He plays as a striker and also a winger.  He is a member of the Sudan national football team.  He was brought from Al-Mourada SC to Al-Hilal in December 2010.  After having a brilliant season with Al-Hilal in 2011, he was linked with Leyton Orient and Arsenal.He scored Sudan first goal in 36 years in the 2012 African Cup Of Nations against Angola in the group B which ended in a 2 : 2 .  He was transferred to Saudi club Al-Wehda in June 2012.  He scored his first goal for Al-Wehda against Al-Ahli in a friendly match which Al-Wehda won 0 : 4.  Bisha later scored his first league, competitive goal for his new side with a beauty against the Saudi League champions Al-Shabab but the team lost 2: 5.  He has been a fan favourite in Makkah and in Sudan as he scored his national team since playing his trade in Saudi Arabia against Ethiopia which Sudan won the match 5:3 in a qualifier match for the 2013 AFCON to be helding in South Africa.
-
-Central African Republic national football team: The Central African Republic national football team, nicknamed "Les Fauves", is the national team of the Central African Republic and is controlled by the Fédération Centrafricaine de Football.  They are a member of CAF.  Despite being traditionally one of the weakest teams in Africa and the world, they recently achieved success.  They won the 2009 CEMAC Cup by beating Gabon in the semi-finals and Equatorial Guinea in the final 3–0.  Their ranking rose from 202 in August 2010 to 89 by July 2011.  On 10 October 2010 they earned a shock 2012 Africa Cup of Nations qualification win at home against Algeria 2–0, which put them top of their qualification group.  The team won its first FIFA World Cup qualifier on 2 June 2012 after beating Botswana 2–0 at home.
-
-Asamoah Gyan: Asamoah Gyan ( , , born 22 November 1985 in Accra) is a Ghanaian professional footballer who plays as a striker for Kayserispor and captains the Ghanaian national team.
-
-Christian Atsu: Christian Atsu Twasam (born 10 January 1992) is a Ghanaian professional footballer who plays for Premier League club Newcastle United, and the Ghanaian national team.  He primarily plays as a winger, although he has also been deployed as an attacking midfielder.
-
-2015 Africa Cup of Nations Group A: Group A of the 2015 Africa Cup of Nations was played from 17 January until 25 January in Equatorial Guinea.  The group consisted of the hosts Equatorial Guinea, Burkina Faso, Gabon, and Congo.  Congo and Equatorial Guinea advanced as group winners and runners-up respectively, while Gabon and Burkina Faso were eliminated.
-
-2012 Africa Cup of Nations qualification: This page details the process of the 2012 Africa Cup of Nations qualification phase.  Forty-six African nations, including hosts Gabon and Equatorial Guinea, entered the competition.  Gabon and Equatorial Guinea automatically qualified as host countries.  The other 44 nations were drawn into eleven groups, each containing 4 teams.  Togo was later added to Group K after its reinstatement.
-
-Stade de Franceville: The Stade de Franceville is a stadium in Franceville, Gabon.  The 22,000 capacity stadium was opened in January 2012, in time for its use in the 2012 African Cup of Nations.  The opening game was a friendly between Gabon and Sudan.
-
-Football in Equatorial Guinea: Association football (soccer) is the most popular sport in Equatorial Guinea.  It was during the Spanish colonialism that football arrived to Equatorial Guinea.  Football is now a very popular sport in the country.  Recently the national team has made a few surprising results.  In the qualification for the FIFA World Cup in 2006 Togo (who later qualified for the World Cup) was beaten 1-0, and in the qualification for the African Cup of Nations they beat Cameroon 1-0.
-
-Question: Mariana Kovacevic is a Serbian traditional healer who has specialized in the use of horse placenta treatment to heal athletes, during the duration of the 2012 African Cup of Nations in Gabon and Equatorial Guinea she used the horse placenta treatment to heal Asamoah Gyan, a Ghanaian professional footballer who plays as a striker for which team, and captains the Ghanaian national team?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "healer_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "nationality": {
-          "type": "string"
-        },
-        "specialization": {
-          "type": "string"
-        },
-        "treatment_method": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "name",
-        "nationality",
-        "specialization",
-        "treatment_method"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "athlete_treated": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "nationality": {
-          "type": "string"
-        },
-        "position": {
-          "type": "string"
-        },
-        "club_team": {
-          "type": "string"
-        },
-        "is_national_team_captain": {
-          "type": "boolean"
-        }
-      },
-      "required": [
-        "name",
-        "nationality",
-        "position",
-        "club_team",
-        "is_national_team_captain"
-      ],
-      "additionalProperties": false
-    },
-    "treatment_event": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "year": {
-          "type": "integer"
-        },
-        "host_countries": {
-          "type": "array",
-          "items": {
+    {
+      "role": "user",
+      "content": "Context:\nEquatorial Guinea national football team: The Equatorial Guinea national football team, nicknamed \"Nzalang Nacional\", is the national team of Equatorial Guinea and is controlled by the Federación Ecuatoguineana de Fútbol.  It is a member of Confederation of African Football (CAF).  Though Equatorial Guinea has traditionally been one of the lowest ranked teams in Africa, the recent influx of Spanish-born players of Equatoguinean heritage has strengthened the national team and resulted in some solid performances.  They qualified as co-hosts for the 2012 Africa Cup of Nations.  The hosting of the tournament lead to the construction of two new football stadia in the country: Estadio de Bata in Bata on the mainland, and Estadio de Malabo in Malabo.  The national team managed a creditable fourth place at the 2015 Africa Cup of Nations, which held in Equatorial Guinea.\n\nMariana Kovacevic: Mariana Kovacevic is a Serbian traditional healer who has specialized in the use of horse placenta treatment to heal athletes.  During the duration of the 2012 African Cup of Nations in Gabon and Equatorial Guinea she used the horse placenta treatment to heal Ghana's Asamoah Gyan, who had been injured and was supposed to be off football for four weeks.  She is reported to have nursed him back to health in four hours.  She was also reportedly enlisted by the Serbia during the world of 2010 in south Africa.  Other footballers who are reported to have been treated by Mariana include Pablo Zabaleta, Vincent Kompany, Nigel de Jong and Robin Van Persie of Manchester United.  There has been some doubt as to whether Mariana's therapies work.  But more footballers are turning to her for help.\n\nMohamed Ahmed Bashir: Mohammed Ahmed Bashir, also known as Bisha, (born 23 May 1987) is a Sudanese footballer who plays for the Sudanese club Al-hilal Omdurman.  He plays as a striker and also a winger.  He is a member of the Sudan national football team.  He was brought from Al-Mourada SC to Al-Hilal in December 2010.  After having a brilliant season with Al-Hilal in 2011, he was linked with Leyton Orient and Arsenal.He scored Sudan first goal in 36 years in the 2012 African Cup Of Nations against Angola in the group B which ended in a 2 : 2 .  He was transferred to Saudi club Al-Wehda in June 2012.  He scored his first goal for Al-Wehda against Al-Ahli in a friendly match which Al-Wehda won 0 : 4.  Bisha later scored his first league, competitive goal for his new side with a beauty against the Saudi League champions Al-Shabab but the team lost 2: 5.  He has been a fan favourite in Makkah and in Sudan as he scored his national team since playing his trade in Saudi Arabia against Ethiopia which Sudan won the match 5:3 in a qualifier match for the 2013 AFCON to be helding in South Africa.\n\nCentral African Republic national football team: The Central African Republic national football team, nicknamed \"Les Fauves\", is the national team of the Central African Republic and is controlled by the Fédération Centrafricaine de Football.  They are a member of CAF.  Despite being traditionally one of the weakest teams in Africa and the world, they recently achieved success.  They won the 2009 CEMAC Cup by beating Gabon in the semi-finals and Equatorial Guinea in the final 3–0.  Their ranking rose from 202 in August 2010 to 89 by July 2011.  On 10 October 2010 they earned a shock 2012 Africa Cup of Nations qualification win at home against Algeria 2–0, which put them top of their qualification group.  The team won its first FIFA World Cup qualifier on 2 June 2012 after beating Botswana 2–0 at home.\n\nAsamoah Gyan: Asamoah Gyan ( , , born 22 November 1985 in Accra) is a Ghanaian professional footballer who plays as a striker for Kayserispor and captains the Ghanaian national team.\n\nChristian Atsu: Christian Atsu Twasam (born 10 January 1992) is a Ghanaian professional footballer who plays for Premier League club Newcastle United, and the Ghanaian national team.  He primarily plays as a winger, although he has also been deployed as an attacking midfielder.\n\n2015 Africa Cup of Nations Group A: Group A of the 2015 Africa Cup of Nations was played from 17 January until 25 January in Equatorial Guinea.  The group consisted of the hosts Equatorial Guinea, Burkina Faso, Gabon, and Congo.  Congo and Equatorial Guinea advanced as group winners and runners-up respectively, while Gabon and Burkina Faso were eliminated.\n\n2012 Africa Cup of Nations qualification: This page details the process of the 2012 Africa Cup of Nations qualification phase.  Forty-six African nations, including hosts Gabon and Equatorial Guinea, entered the competition.  Gabon and Equatorial Guinea automatically qualified as host countries.  The other 44 nations were drawn into eleven groups, each containing 4 teams.  Togo was later added to Group K after its reinstatement.\n\nStade de Franceville: The Stade de Franceville is a stadium in Franceville, Gabon.  The 22,000 capacity stadium was opened in January 2012, in time for its use in the 2012 African Cup of Nations.  The opening game was a friendly between Gabon and Sudan.\n\nFootball in Equatorial Guinea: Association football (soccer) is the most popular sport in Equatorial Guinea.  It was during the Spanish colonialism that football arrived to Equatorial Guinea.  Football is now a very popular sport in the country.  Recently the national team has made a few surprising results.  In the qualification for the FIFA World Cup in 2006 Togo (who later qualified for the World Cup) was beaten 1-0, and in the qualification for the African Cup of Nations they beat Cameroon 1-0.\n\nQuestion: Mariana Kovacevic is a Serbian traditional healer who has specialized in the use of horse placenta treatment to heal athletes, during the duration of the 2012 African Cup of Nations in Gabon and Equatorial Guinea she used the horse placenta treatment to heal Asamoah Gyan, a Ghanaian professional footballer who plays as a striker for which team, and captains the Ghanaian national team?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"healer_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\"\n        },\n        \"nationality\": {\n          \"type\": \"string\"\n        },\n        \"specialization\": {\n          \"type\": \"string\"\n        },\n        \"treatment_method\": {\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"nationality\",\n        \"specialization\",\n        \"treatment_method\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"athlete_treated\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\"\n        },\n        \"nationality\": {\n          \"type\": \"string\"\n        },\n        \"position\": {\n          \"type\": \"string\"\n        },\n        \"club_team\": {\n          \"type\": \"string\"\n        },\n        \"is_national_team_captain\": {\n          \"type\": \"boolean\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"nationality\",\n        \"position\",\n        \"club_team\",\n        \"is_national_team_captain\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"treatment_event\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\"\n        },\n        \"year\": {\n          \"type\": \"integer\"\n        },\n        \"host_countries\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          }\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"year\",\n        \"host_countries\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"healer_details\",\n    \"athlete_treated\",\n    \"treatment_event\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "healer_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "nationality": {
+            "type": "string"
+          },
+          "specialization": {
+            "type": "string"
+          },
+          "treatment_method": {
             "type": "string"
           }
-        }
+        },
+        "required": [
+          "name",
+          "nationality",
+          "specialization",
+          "treatment_method"
+        ],
+        "additionalProperties": false
       },
-      "required": [
-        "name",
-        "year",
-        "host_countries"
-      ],
-      "additionalProperties": false
-    }
+      "athlete_treated": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "nationality": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "club_team": {
+            "type": "string"
+          },
+          "is_national_team_captain": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "name",
+          "nationality",
+          "position",
+          "club_team",
+          "is_national_team_captain"
+        ],
+        "additionalProperties": false
+      },
+      "treatment_event": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "host_countries": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "name",
+          "year",
+          "host_countries"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "healer_details",
+      "athlete_treated",
+      "treatment_event"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "healer_details",
-    "athlete_treated",
-    "treatment_event"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

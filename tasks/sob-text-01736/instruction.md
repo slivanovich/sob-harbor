@@ -1,80 +1,57 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Jarkko Ahola: Jarkko Kalevi Ahola (Toijala, 24 August 1977) is a performing artist, a composer and a singer.  He is the vocalist and bass player and one of the three songwriters of the band Teräsbetoni.  He is also a member of a Finnish symphonic metal cover supergroup Northern Kings together with Marco Hietala from Nightwish, Tarot and Sapattivuosi, Tony Kakko from Sonata Arctica and Juha-Pekka Leppäluoto from Charon and Harmaja.
-
-Fire-Hearted: Fire-Hearted is the third studio album by metal musician Elias Viljanen as solo artist.  The album features Marco Hietala (Nightwish, Tarot, Northern Kings) and Tony Kakko (Sonata Arctica, Northern Kings) on vocals.  Also contributing is Jari Kainulainen (Evergrey, Ex-Stratovarius) on bass, Henrik Klingenberg (Sonata Arctica) on keyboards and Mikko Sirén (Apocalyptica) on drums.  The album was out in June 2009.  The song "Last Breath of Love" with Marco on vocals can be heard on Elias' Myspace together with the title-track.
-
-Northern Kings: Northern Kings was a Finnish symphonic metal cover supergroup, made up of four well known musicians: Jarkko Ahola from Teräsbetoni, ex-Dreamtale, Marco Hietala from Nightwish and Tarot, Tony Kakko from Sonata Arctica and Juha-Pekka Leppäluoto from Charon and Harmaja.
-
-Babyface (musician): Kenneth Brian Edmonds (born April 10, 1959), known professionally as Babyface, is an American singer, songwriter and record producer.  He has written and produced over 26 number-one R&B hits throughout his career, and has won 11 Grammy Awards.
-
-Raskasta Joulua: Raskasta Joulua is a band from Finland who have recorded traditional Christmas carols and Christmas hits in a Heavy metal style.  Raskasta Joulua is a term in Finnish which means "Heavy Christmas" in English.  The concept was founded by guitarist Erkka Korhonen in 2004.  "Raskasta Joulua" - albums and tours have featured appearances of many notable Finnish metal vocalists as Marco Hietala, Jarkko Ahola, Ari Koivunen, Juha-Pekka Leppaluoto and Tony Kakko.
-
-Nuclear Blast All-Stars: Into the Light: Into the Light is a compilation album from Nuclear Blast Records to commemorate their 20 years as a record label.  Produced by Rage guitarist Victor Smolski, with singers Tobias Sammet (of Edguy), Peter "Peavy" Wagner (Rage) - who has also written the lyrics for all songs -, Tony Kakko (Sonata Arctica), Mats Levén (Therion), Marcel "Schmier" Schirmer (Destruction), Hansi Kürsch (Blind Guardian), Andi Deris (Helloween), Oddleif Stensland (Communic), Marco Hietala (Nightwish and Tarot), and Tarja Turunen (Ex-Nightwish).  It features a variable collection of "All Stars" much in the same vein as Roadrunner United.  The whole album was written by Victor Smolski (however, two songs, "In the Picture" and "Slaves to the Desert" – originally "Slaves of the Desert" – are remakes of songs he had already recorded with Mind Odyssey), who also recorded all the guitars, some bass and keyboards.  The drums were done by Volker Schultz and André Hilgers.
-
-End of Innocence (Nightwish): End of Innocence is the second official DVD release of Finnish symphonic metal band Nightwish.  The DVD features numerous clips of the band performing livetracks, including a recording of the band performing one of their first songs; "Beauty and the Beast", with bassist Marco Hietala performing the male vocal part (in the past this part was performed by Tuomas Holopainen or Tony Kakko, from Sonata Arctica).
-
-Kakko (instrument): The kakko (羯鼓 or 鞨鼓 ) is a Japanese double-headed drum.  One way in which the "kakko" differs from the regular taiko drum is in the way in which it is made taut.  Like the Shime-Daiko and "tsuzumi", the skin of the heads are first stretched over metal hoops before they are placed on the body, tying them to each other and tightening them making them taut.  "Kakko" drums are usually laid on their sides on stands so that it can be played with sticks called "bachi" on both heads.  Kakko drums have been used in taiko ensembles, but they are also used in older Japanese court music called gagaku.
-
-Tony Kakko: Toni Kristian "Tony" Kakko (born 16 May 1975) is a Finnish musician, composer and vocalist.  He is mainly known as the vocalist, primary songwriter, and creative force in the band Sonata Arctica since 1996.
-
-Stones Grow Her Name: Stones Grow Her Name is the 7th full-length studio album by Finnish power metal band Sonata Arctica.  It was released in Finland on May 16, 2012, in Europe on May 18, 2012, in North America on May 22, 2012 and in Japan on May 23, 2012.  It was the last album to feature longtime bassist Marko Paasikoski.  In a 2014 interview about the album's successor "Pariah's Child", vocalist and songwriter Tony Kakko referred to it as "a rock album [more] than anything else", comparing it to the more back-to-the roots sound of the 2014 band's release.
-
-Question: Babyface and Tony Kakko, are in the music industry?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "is_in_music_industry": {
-      "type": "boolean",
-      "description": "True if both individuals are confirmed to be in the music industry, false otherwise."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "musicians_involved": {
-      "type": "array",
-      "description": "Details about the musicians mentioned in the question.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the musician."
-          },
-          "roles": {
-            "type": "array",
-            "items": {
-              "type": "string"
+    {
+      "role": "user",
+      "content": "Context:\nJarkko Ahola: Jarkko Kalevi Ahola (Toijala, 24 August 1977) is a performing artist, a composer and a singer.  He is the vocalist and bass player and one of the three songwriters of the band Teräsbetoni.  He is also a member of a Finnish symphonic metal cover supergroup Northern Kings together with Marco Hietala from Nightwish, Tarot and Sapattivuosi, Tony Kakko from Sonata Arctica and Juha-Pekka Leppäluoto from Charon and Harmaja.\n\nFire-Hearted: Fire-Hearted is the third studio album by metal musician Elias Viljanen as solo artist.  The album features Marco Hietala (Nightwish, Tarot, Northern Kings) and Tony Kakko (Sonata Arctica, Northern Kings) on vocals.  Also contributing is Jari Kainulainen (Evergrey, Ex-Stratovarius) on bass, Henrik Klingenberg (Sonata Arctica) on keyboards and Mikko Sirén (Apocalyptica) on drums.  The album was out in June 2009.  The song \"Last Breath of Love\" with Marco on vocals can be heard on Elias' Myspace together with the title-track.\n\nNorthern Kings: Northern Kings was a Finnish symphonic metal cover supergroup, made up of four well known musicians: Jarkko Ahola from Teräsbetoni, ex-Dreamtale, Marco Hietala from Nightwish and Tarot, Tony Kakko from Sonata Arctica and Juha-Pekka Leppäluoto from Charon and Harmaja.\n\nBabyface (musician): Kenneth Brian Edmonds (born April 10, 1959), known professionally as Babyface, is an American singer, songwriter and record producer.  He has written and produced over 26 number-one R&B hits throughout his career, and has won 11 Grammy Awards.\n\nRaskasta Joulua: Raskasta Joulua is a band from Finland who have recorded traditional Christmas carols and Christmas hits in a Heavy metal style.  Raskasta Joulua is a term in Finnish which means \"Heavy Christmas\" in English.  The concept was founded by guitarist Erkka Korhonen in 2004.  \"Raskasta Joulua\" - albums and tours have featured appearances of many notable Finnish metal vocalists as Marco Hietala, Jarkko Ahola, Ari Koivunen, Juha-Pekka Leppaluoto and Tony Kakko.\n\nNuclear Blast All-Stars: Into the Light: Into the Light is a compilation album from Nuclear Blast Records to commemorate their 20 years as a record label.  Produced by Rage guitarist Victor Smolski, with singers Tobias Sammet (of Edguy), Peter \"Peavy\" Wagner (Rage) - who has also written the lyrics for all songs -, Tony Kakko (Sonata Arctica), Mats Levén (Therion), Marcel \"Schmier\" Schirmer (Destruction), Hansi Kürsch (Blind Guardian), Andi Deris (Helloween), Oddleif Stensland (Communic), Marco Hietala (Nightwish and Tarot), and Tarja Turunen (Ex-Nightwish).  It features a variable collection of \"All Stars\" much in the same vein as Roadrunner United.  The whole album was written by Victor Smolski (however, two songs, \"In the Picture\" and \"Slaves to the Desert\" – originally \"Slaves of the Desert\" – are remakes of songs he had already recorded with Mind Odyssey), who also recorded all the guitars, some bass and keyboards.  The drums were done by Volker Schultz and André Hilgers.\n\nEnd of Innocence (Nightwish): End of Innocence is the second official DVD release of Finnish symphonic metal band Nightwish.  The DVD features numerous clips of the band performing livetracks, including a recording of the band performing one of their first songs; \"Beauty and the Beast\", with bassist Marco Hietala performing the male vocal part (in the past this part was performed by Tuomas Holopainen or Tony Kakko, from Sonata Arctica).\n\nKakko (instrument): The kakko (羯鼓 or 鞨鼓 ) is a Japanese double-headed drum.  One way in which the \"kakko\" differs from the regular taiko drum is in the way in which it is made taut.  Like the Shime-Daiko and \"tsuzumi\", the skin of the heads are first stretched over metal hoops before they are placed on the body, tying them to each other and tightening them making them taut.  \"Kakko\" drums are usually laid on their sides on stands so that it can be played with sticks called \"bachi\" on both heads.  Kakko drums have been used in taiko ensembles, but they are also used in older Japanese court music called gagaku.\n\nTony Kakko: Toni Kristian \"Tony\" Kakko (born 16 May 1975) is a Finnish musician, composer and vocalist.  He is mainly known as the vocalist, primary songwriter, and creative force in the band Sonata Arctica since 1996.\n\nStones Grow Her Name: Stones Grow Her Name is the 7th full-length studio album by Finnish power metal band Sonata Arctica.  It was released in Finland on May 16, 2012, in Europe on May 18, 2012, in North America on May 22, 2012 and in Japan on May 23, 2012.  It was the last album to feature longtime bassist Marko Paasikoski.  In a 2014 interview about the album's successor \"Pariah's Child\", vocalist and songwriter Tony Kakko referred to it as \"a rock album [more] than anything else\", comparing it to the more back-to-the roots sound of the 2014 band's release.\n\nQuestion: Babyface and Tony Kakko, are in the music industry?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"is_in_music_industry\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if both individuals are confirmed to be in the music industry, false otherwise.\"\n    },\n    \"musicians_involved\": {\n      \"type\": \"array\",\n      \"description\": \"Details about the musicians mentioned in the question.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the musician.\"\n          },\n          \"roles\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"type\": \"string\"\n            },\n            \"description\": \"Their professional roles in the music industry.\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"roles\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"reasoning\": {\n      \"type\": \"string\",\n      \"description\": \"Explanation of why the individuals are considered to be in the music industry.\"\n    }\n  },\n  \"required\": [\n    \"is_in_music_industry\",\n    \"musicians_involved\",\n    \"reasoning\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "is_in_music_industry": {
+        "type": "boolean",
+        "description": "True if both individuals are confirmed to be in the music industry, false otherwise."
+      },
+      "musicians_involved": {
+        "type": "array",
+        "description": "Details about the musicians mentioned in the question.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the musician."
             },
-            "description": "Their professional roles in the music industry."
-          }
-        },
-        "required": [
-          "name",
-          "roles"
-        ],
-        "additionalProperties": false
+            "roles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Their professional roles in the music industry."
+            }
+          },
+          "required": [
+            "name",
+            "roles"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "reasoning": {
+        "type": "string",
+        "description": "Explanation of why the individuals are considered to be in the music industry."
       }
     },
-    "reasoning": {
-      "type": "string",
-      "description": "Explanation of why the individuals are considered to be in the music industry."
-    }
+    "required": [
+      "is_in_music_industry",
+      "musicians_involved",
+      "reasoning"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "is_in_music_industry",
-    "musicians_involved",
-    "reasoning"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

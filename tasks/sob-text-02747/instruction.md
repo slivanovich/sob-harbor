@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-HMS King George V (41): HMS "King George V" (pennant number 41) was the lead ship of the five British "King George V"-class battleships of the Royal Navy.  Laid down in 1937 and commissioned in 1940, "King George V" operated during the Second World War in all three major theatres of war, the Atlantic, Mediterranean and Pacific, as well as part of the British Home Fleet and Pacific Fleets.  In May 1941, along with HMS "Rodney" , "King George V" was involved in the hunt for and pursuit of the  , eventually inflicting severe damage which led to the German vessel sinking.  On 1 May 1942 the destroyer HMS "Punjabi" sank after a collision with "King George V" in foggy conditions.  "King George V" took part in Operation Husky (the allied landings in Sicily) and bombarded the island of Levanzo and the port of Trapani.  She also escorted part of the surrendered Italian Fleet, which included the battleships "Andrea Doria" and "Caio Duilio" , to Malta.  In 1945 "King George V" took part in operations against the Japanese in the Pacific.
-
-HMS M33: HMS M33 is an "M29"-class monitor of the Royal Navy built in 1915.  She saw active service in the Mediterranean during the First World War and in Russia during the Allied Intervention in 1919.  She was used subsequently as a mine-laying training ship, fuelling hulk, boom defence workshop and floating office, being renamed HMS "Minerva and Hulk "C23 during her long life.  She passed to Hampshire County Council in the 1980s and was then handed over to the National Museum of the Royal Navy in 2014.  A programme of conservation was undertaken to enable her to be opened to the public.  "HMS M.33" is located within Portsmouth Historic Dockyard and opened to visitors on 7 August 2015 following a service of dedication.  She is one of only three surviving Royal Navy warships of the First World War and the only surviving ship from the Gallipoli Campaign.
-
-Erzherzog Karl-class battleship: The "Erzherzog Karl" class was a class of pre-dreadnought battleships of the Austro-Hungarian Navy built before World War I.  All of the battleships of the "Erzherzog Karl"-class were built in the Stabilimento Tecnico Triestino shipyards in Trieste.  The first battleship, "Erzherzog Karl" was laid down in 1902.  Construction on the remaining two battleships, "Erzherzog Ferdinand Max" and "Erzherzog Friedrich" continued up to 1905.  "Erzherzog Karl" was commissioned in 1906, while "Erzherzog Ferdinand Max" and "Erzherzog Friedrich" were commissioned in 1907.  The three "Erzherzog Karl"-class battleships were considered relatively modern by the time they were commissioned.  However, small docking space and budget restraints resulted in the class being fairly compact.  Nevertheless, they were well designed and properly protected.  The "Erzherzog Karl" class were the last and largest pre-dreadnoughts built by the Austrian Navy.  They were named after members of the Austrian Royal family.
-
-All or nothing (armor): All or nothing is a method of armoring battleships, which involves heavily armoring the areas most important to a ship while the rest of the ship receives significantly less armor.  The "all or nothing" concept avoided light or moderate thicknesses of armor: armor was used in the greatest practicable thickness or not at all, thereby providing "either total or negligible protection".  Compared to previous armoring systems, "all or nothing" ships had thicker armor covering a smaller proportion of the hull.  The ironclad battleship HMS "Inflexible" launched in 1876 had featured a heavily armored central citadel, with relatively unarmored ends; however, by the era of HMS "Dreadnought" , battleships were armored over the length of the ship with varying zones of heavy, moderate or light armor.  The U.S. Navy adopted what was formally called "all or nothing" armor in the Standard-type battleships, starting with the "Nevada" class laid down in 1912.  "All or nothing" armor was later adopted by other navies after the First World War, beginning with the Royal Navy in its "Nelson" class .
-
-Prince Consort-class ironclad: The "Prince Consort" class of battleship were four Royal Navy wooden-hulled broadside ironclads: HMS "Royal Oak", HMS "Prince Consort", HMS "Ocean", and HMS "Caledonia".  They were originally laid down as "Bulwark"-class battleships, but were converted to ironclads.  "Royal Oak" was Britain's fifth ironclad battleship completed.
-
-HMS Royal Oak (1892): HMS "Royal Oak" was one of seven "Royal Sovereign"-class pre-dreadnought battleships built for the Royal Navy during the 1890s.  Upon her completion in 1894, she was initially placed in reserve until mobilised in 1896 for service with the Flying Squadron.  After returning briefly to reserve, the ship was assigned the following year to the Mediterranean Fleet.  "Royal Oak" remained there until 1902 when she returned home; after a refit, the ship was assigned to the Home Fleet, where she served as the flagship of the fleet's second-in-command in 1904–05.  "Royal Oak" was then reduced to reserve until she was taken out of service in 1911.  The ship was sold for scrap in early 1914.
-
-Revenge-class battleship: The Revenge"-class battleships (listed as Royal Sovereign" class in several editions of "Jane's Fighting Ships", as with the 1919 and 1931 editions, and sometimes also known as the "R" class) were five battleships of the Royal Navy, ordered as the First World War loomed, and launched in 1914–16.  There were originally to have been eight of the class, but two were later redesigned, becoming the "Renown"-class battlecruiser s, while the other, which was to have been named HMS "Resistance", was cancelled.
-
-Colossus-class battleship (1910): The "Colossus"-class battleships were a pair of dreadnought battleships built for the Royal Navy (RN) at the end of the first decade of the 20th century, the last 12 in battleships built for the RN.  The sister ships spent their whole careers assigned to the Home and Grand Fleets, often serving as flagships. Aside from participating in the Battle of Jutland in May 1916, and the inconclusive Action of 19 August several months later, their service during the First World War generally consisted of routine patrols and training in the North Sea.
-
-HMS Royal Oak (08): HMS "Royal Oak" was one of five "Revenge"-class battleship s built for the Royal Navy during the First World War.  Launched in 1914 and completed in 1916, "Royal Oak" first saw combat at the Battle of Jutland as part of the Grand Fleet.  In peacetime, she served in the Atlantic, Home and Mediterranean fleets, more than once coming under accidental attack.  The ship drew worldwide attention in 1928 when her senior officers were controversially court-martialled.  Attempts to modernise "Royal Oak" throughout her 25-year career could not fix her fundamental lack of speed and by the start of the Second World War, she was no longer suited to front-line duty.
-
-Queen Elizabeth-class battleship: The "Queen Elizabeth"-class battleships were a class of five super-dreadnoughts of the Royal Navy commissioned in 1915–16.  The lead ship was named after Elizabeth I of England.  These battleships were superior in firepower, protection and speed to their Royal Navy predecessors of the "Iron Duke" class as well as preceding German classes such as the "König" class , although the corresponding "Bayern"-class ships were competitive except for being 2 kn slower.  As such, the "Queen Elizabeth"s are generally considered the first fast battleships.
-
-Question: HMS "Royal Oak" was one of how many, "Revenge"-class battleships, built for the Royal Navy during the First World War?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "ship_name": {
-      "type": "string",
-      "description": "The name of the specific ship mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "ship_class": {
-      "type": "string",
-      "description": "The class of battleship the ship belongs to."
-    },
-    "navy": {
-      "type": "string",
-      "description": "The navy the ship served in."
-    },
-    "period_of_construction": {
-      "type": "string",
-      "description": "The historical period during which the ships of the class were built."
-    },
-    "total_ships_in_class": {
-      "type": "integer",
-      "description": "The total number of battleships in the specified class."
+    {
+      "role": "user",
+      "content": "Context:\nHMS King George V (41): HMS \"King George V\" (pennant number 41) was the lead ship of the five British \"King George V\"-class battleships of the Royal Navy.  Laid down in 1937 and commissioned in 1940, \"King George V\" operated during the Second World War in all three major theatres of war, the Atlantic, Mediterranean and Pacific, as well as part of the British Home Fleet and Pacific Fleets.  In May 1941, along with HMS \"Rodney\" , \"King George V\" was involved in the hunt for and pursuit of the  , eventually inflicting severe damage which led to the German vessel sinking.  On 1 May 1942 the destroyer HMS \"Punjabi\" sank after a collision with \"King George V\" in foggy conditions.  \"King George V\" took part in Operation Husky (the allied landings in Sicily) and bombarded the island of Levanzo and the port of Trapani.  She also escorted part of the surrendered Italian Fleet, which included the battleships \"Andrea Doria\" and \"Caio Duilio\" , to Malta.  In 1945 \"King George V\" took part in operations against the Japanese in the Pacific.\n\nHMS M33: HMS M33 is an \"M29\"-class monitor of the Royal Navy built in 1915.  She saw active service in the Mediterranean during the First World War and in Russia during the Allied Intervention in 1919.  She was used subsequently as a mine-laying training ship, fuelling hulk, boom defence workshop and floating office, being renamed HMS \"Minerva and Hulk \"C23 during her long life.  She passed to Hampshire County Council in the 1980s and was then handed over to the National Museum of the Royal Navy in 2014.  A programme of conservation was undertaken to enable her to be opened to the public.  \"HMS M.33\" is located within Portsmouth Historic Dockyard and opened to visitors on 7 August 2015 following a service of dedication.  She is one of only three surviving Royal Navy warships of the First World War and the only surviving ship from the Gallipoli Campaign.\n\nErzherzog Karl-class battleship: The \"Erzherzog Karl\" class was a class of pre-dreadnought battleships of the Austro-Hungarian Navy built before World War I.  All of the battleships of the \"Erzherzog Karl\"-class were built in the Stabilimento Tecnico Triestino shipyards in Trieste.  The first battleship, \"Erzherzog Karl\" was laid down in 1902.  Construction on the remaining two battleships, \"Erzherzog Ferdinand Max\" and \"Erzherzog Friedrich\" continued up to 1905.  \"Erzherzog Karl\" was commissioned in 1906, while \"Erzherzog Ferdinand Max\" and \"Erzherzog Friedrich\" were commissioned in 1907.  The three \"Erzherzog Karl\"-class battleships were considered relatively modern by the time they were commissioned.  However, small docking space and budget restraints resulted in the class being fairly compact.  Nevertheless, they were well designed and properly protected.  The \"Erzherzog Karl\" class were the last and largest pre-dreadnoughts built by the Austrian Navy.  They were named after members of the Austrian Royal family.\n\nAll or nothing (armor): All or nothing is a method of armoring battleships, which involves heavily armoring the areas most important to a ship while the rest of the ship receives significantly less armor.  The \"all or nothing\" concept avoided light or moderate thicknesses of armor: armor was used in the greatest practicable thickness or not at all, thereby providing \"either total or negligible protection\".  Compared to previous armoring systems, \"all or nothing\" ships had thicker armor covering a smaller proportion of the hull.  The ironclad battleship HMS \"Inflexible\" launched in 1876 had featured a heavily armored central citadel, with relatively unarmored ends; however, by the era of HMS \"Dreadnought\" , battleships were armored over the length of the ship with varying zones of heavy, moderate or light armor.  The U.S. Navy adopted what was formally called \"all or nothing\" armor in the Standard-type battleships, starting with the \"Nevada\" class laid down in 1912.  \"All or nothing\" armor was later adopted by other navies after the First World War, beginning with the Royal Navy in its \"Nelson\" class .\n\nPrince Consort-class ironclad: The \"Prince Consort\" class of battleship were four Royal Navy wooden-hulled broadside ironclads: HMS \"Royal Oak\", HMS \"Prince Consort\", HMS \"Ocean\", and HMS \"Caledonia\".  They were originally laid down as \"Bulwark\"-class battleships, but were converted to ironclads.  \"Royal Oak\" was Britain's fifth ironclad battleship completed.\n\nHMS Royal Oak (1892): HMS \"Royal Oak\" was one of seven \"Royal Sovereign\"-class pre-dreadnought battleships built for the Royal Navy during the 1890s.  Upon her completion in 1894, she was initially placed in reserve until mobilised in 1896 for service with the Flying Squadron.  After returning briefly to reserve, the ship was assigned the following year to the Mediterranean Fleet.  \"Royal Oak\" remained there until 1902 when she returned home; after a refit, the ship was assigned to the Home Fleet, where she served as the flagship of the fleet's second-in-command in 1904–05.  \"Royal Oak\" was then reduced to reserve until she was taken out of service in 1911.  The ship was sold for scrap in early 1914.\n\nRevenge-class battleship: The Revenge\"-class battleships (listed as Royal Sovereign\" class in several editions of \"Jane's Fighting Ships\", as with the 1919 and 1931 editions, and sometimes also known as the \"R\" class) were five battleships of the Royal Navy, ordered as the First World War loomed, and launched in 1914–16.  There were originally to have been eight of the class, but two were later redesigned, becoming the \"Renown\"-class battlecruiser s, while the other, which was to have been named HMS \"Resistance\", was cancelled.\n\nColossus-class battleship (1910): The \"Colossus\"-class battleships were a pair of dreadnought battleships built for the Royal Navy (RN) at the end of the first decade of the 20th century, the last 12 in battleships built for the RN.  The sister ships spent their whole careers assigned to the Home and Grand Fleets, often serving as flagships. Aside from participating in the Battle of Jutland in May 1916, and the inconclusive Action of 19 August several months later, their service during the First World War generally consisted of routine patrols and training in the North Sea.\n\nHMS Royal Oak (08): HMS \"Royal Oak\" was one of five \"Revenge\"-class battleship s built for the Royal Navy during the First World War.  Launched in 1914 and completed in 1916, \"Royal Oak\" first saw combat at the Battle of Jutland as part of the Grand Fleet.  In peacetime, she served in the Atlantic, Home and Mediterranean fleets, more than once coming under accidental attack.  The ship drew worldwide attention in 1928 when her senior officers were controversially court-martialled.  Attempts to modernise \"Royal Oak\" throughout her 25-year career could not fix her fundamental lack of speed and by the start of the Second World War, she was no longer suited to front-line duty.\n\nQueen Elizabeth-class battleship: The \"Queen Elizabeth\"-class battleships were a class of five super-dreadnoughts of the Royal Navy commissioned in 1915–16.  The lead ship was named after Elizabeth I of England.  These battleships were superior in firepower, protection and speed to their Royal Navy predecessors of the \"Iron Duke\" class as well as preceding German classes such as the \"König\" class , although the corresponding \"Bayern\"-class ships were competitive except for being 2 kn slower.  As such, the \"Queen Elizabeth\"s are generally considered the first fast battleships.\n\nQuestion: HMS \"Royal Oak\" was one of how many, \"Revenge\"-class battleships, built for the Royal Navy during the First World War?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"ship_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the specific ship mentioned in the question.\"\n    },\n    \"ship_class\": {\n      \"type\": \"string\",\n      \"description\": \"The class of battleship the ship belongs to.\"\n    },\n    \"navy\": {\n      \"type\": \"string\",\n      \"description\": \"The navy the ship served in.\"\n    },\n    \"period_of_construction\": {\n      \"type\": \"string\",\n      \"description\": \"The historical period during which the ships of the class were built.\"\n    },\n    \"total_ships_in_class\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of battleships in the specified class.\"\n    }\n  },\n  \"required\": [\n    \"ship_name\",\n    \"ship_class\",\n    \"navy\",\n    \"period_of_construction\",\n    \"total_ships_in_class\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "ship_name",
-    "ship_class",
-    "navy",
-    "period_of_construction",
-    "total_ships_in_class"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "ship_name": {
+        "type": "string",
+        "description": "The name of the specific ship mentioned in the question."
+      },
+      "ship_class": {
+        "type": "string",
+        "description": "The class of battleship the ship belongs to."
+      },
+      "navy": {
+        "type": "string",
+        "description": "The navy the ship served in."
+      },
+      "period_of_construction": {
+        "type": "string",
+        "description": "The historical period during which the ships of the class were built."
+      },
+      "total_ships_in_class": {
+        "type": "integer",
+        "description": "The total number of battleships in the specified class."
+      }
+    },
+    "required": [
+      "ship_name",
+      "ship_class",
+      "navy",
+      "period_of_construction",
+      "total_ships_in_class"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

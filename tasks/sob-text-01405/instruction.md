@@ -1,80 +1,57 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-GrassrootsPA: GrassrootsPA is a political news website centered on the politics of Pennsylvania.  It was founded in 2004 by then law student Chris Lilik, a Pat Toomey supporter and became a "must-click resource" for Pennsylvania's conservative community.  Even though Toomey lost that race, the website continued as a gathering place for conservatives and Specter's foes.  The website also gained mainstream media attention as a source of breaking political news.  Political commentator Chris Bravacos noted that GrassrootsPA attracted significantly higher readership than the official websites for the two major political parties.
-
-Pat Toomey: Patrick Joseph Toomey (born November 17, 1961) is an American businessman, politician, and the junior United States Senator from Pennsylvania, in office since 2011.  A member of the Republican Party, Toomey served as the United States Representative for Pennsylvania 's 15 congressional district for three terms, from 1999 to 2005, but he did not seek a fourth term in compliance with a term limits pledge he had made while running for office in 1998.
-
-George Toomey: George Emanuel Toomey (October 17, 1873 – c. 1932) was an American football coach.  He served as the head football coach at Colorado Agricultural College—now known as Colorado State University for one season, in 1900, compiling a record of 1–3.  He forced to resign following a scandal in 1901 regarding his playing a professional player.  Toomey graduated from Denver University in 1898, where he was a member of the baseball team, the Beta Theta Pi fraternity, and leader of the glee club.  His hometown was Cottonwood Falls, Kansas, and he had previously attended Baker University.  In 1900, Toomey had also been named professor of Oratory at Colorado State.
-
-Candy Desk: The Candy Desk has been a tradition of the United States Senate since 1968, whereby a senator who sits at a particular desk near a busy entrance keeps a drawer full of candy for members of the body.  The current occupant of the Candy Desk is Pennsylvania Senator Pat Toomey.
-
-Joe Sestak: Joseph Ambrose "Joe" Sestak Jr. (born December 12, 1951) is an American politician and retired U.S. Navy officer.  A member of the Democratic Party, he represented Pennsylvania 's 7 congressional district in the United States House of Representatives from 2007 to 2011 and was the Democratic nominee for the United States Senate in 2010, losing to Republican nominee Pat Toomey.  A two-star admiral, he was the highest-ranking military official ever elected to the United States Congress at the time of his election.
-
-Pat Meehan: Patrick Leo Meehan (born October 20, 1955) is a Republican member of the United States House of Representatives, representing Pennsylvania 's 7 congressional district since January 3, 2011.  The district includes parts of Delaware County, Chester, Montgomery County, Berks and Lancaster.  He succeeded Democrat Joe Sestak, who ran unsuccessfully for the United States Senate.
-
-Tony Podesta: Anthony T. Podesta (born October 24, 1943), commonly known as Tony Podesta, is an American lobbyist best known for founding the Podesta Group.  Podesta has lobbied for a variety of groups, including Bank of America, BP, and Egypt in addition to political campaigns such as Ted Kennedy, George McGovern, Michael Dukakis, and Bill Clinton.  More recently, he has worked for Pennsylvania Democratic representatives Joe Sestak, Chris Carney, and Patrick Murphy, and chaired former Pennsylvania Gov. Ed Rendell's reelection campaign.  He is closely connected with the Barack Obama White House and has repeatedly been named one of Washington's most powerful lobbyists and fundraisers.
-
-Curt Weldon: Wayne Curtis "Curt" Weldon (born July 22, 1947) is an American politician.  He served as a Republican member of the United States House of Representatives from 1987 to 2007, representing the 7th district of Pennsylvania.  He was defeated in November 2006 for reelection by Joe Sestak.  Weldon was vice-chair of the Armed Services Committee and the House Homeland Security Committee.  He was also the co-chair of the Duma-Congress Study Group, the official inter-parliamentary relationship between the United States and Russia.
-
-Simple Machines: Simple Machines was a record label that operated out of Arlington, Virginia.  The label was founded by Jenny Toomey and Brad Sigal while both were living in the Positive Force House in north Arlington, but Sigal soon stepped back from involvement.  Kristin Thomson stepped up and co-masterminded the project with Toomey and they started a new group house near Positive Force's.  At its peak, the label had four paid workers- Toomey, Thomson, Pat Graham and Mickey Menard.  The label was formed to 'find creative ways to avoid the established and boring music business'.
-
-United States Navy dog handler hazing scandal: The United States Navy dog handler hazing scandal was a pattern of misconduct engaged in by members of the United States Navy at Naval Support Activity Bahrain between 2004 and 2006.  Naval investigators documented nearly 100 incidents of abuse committed against several members of a Military Working Dog (MWD) unit stationed at the United States military base at Juffair.  Documented incidents of abuse include racial intimidation, sexual harassment, physical abuse and anti-gay harassment.  One sailor, Master-At-Arms 3rd Class Joseph Rocha, suffered post-traumatic stress disorder because of his abuse at the hands of fellow sailors, and he alleges that another sailor committed suicide because of her treatment.  The Navy investigated the allegations in 2007 and documented the abuse, but took little substantive action.  However, Pennsylvania Congressman Joe Sestak, a former Vice Admiral, demanded a new examination of the report's findings which led to the disciplining of Rocha's former superior, Chief Petty Officer Michael Toussaint (later Senior Chief Petty Officer).  The scandal came to widespread public attention as United States President Barack Obama faced increased pressure to repeal the military's gay-exclusionary policy known as "don't ask, don't tell" (DADT).
-
-Question: Which state did both Joe Sestak and Pat Toomey serve in politics?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "state_name": {
-      "type": "string",
-      "description": "The name of the state where both politicians served."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "politicians_served": {
-      "type": "array",
-      "description": "List of politicians who served in the specified state.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the politician."
-          },
-          "roles": {
-            "type": "array",
-            "description": "A list of political roles held by the politician in that state.",
-            "items": {
-              "type": "string"
+    {
+      "role": "user",
+      "content": "Context:\nGrassrootsPA: GrassrootsPA is a political news website centered on the politics of Pennsylvania.  It was founded in 2004 by then law student Chris Lilik, a Pat Toomey supporter and became a \"must-click resource\" for Pennsylvania's conservative community.  Even though Toomey lost that race, the website continued as a gathering place for conservatives and Specter's foes.  The website also gained mainstream media attention as a source of breaking political news.  Political commentator Chris Bravacos noted that GrassrootsPA attracted significantly higher readership than the official websites for the two major political parties.\n\nPat Toomey: Patrick Joseph Toomey (born November 17, 1961) is an American businessman, politician, and the junior United States Senator from Pennsylvania, in office since 2011.  A member of the Republican Party, Toomey served as the United States Representative for Pennsylvania 's 15 congressional district for three terms, from 1999 to 2005, but he did not seek a fourth term in compliance with a term limits pledge he had made while running for office in 1998.\n\nGeorge Toomey: George Emanuel Toomey (October 17, 1873 – c. 1932) was an American football coach.  He served as the head football coach at Colorado Agricultural College—now known as Colorado State University for one season, in 1900, compiling a record of 1–3.  He forced to resign following a scandal in 1901 regarding his playing a professional player.  Toomey graduated from Denver University in 1898, where he was a member of the baseball team, the Beta Theta Pi fraternity, and leader of the glee club.  His hometown was Cottonwood Falls, Kansas, and he had previously attended Baker University.  In 1900, Toomey had also been named professor of Oratory at Colorado State.\n\nCandy Desk: The Candy Desk has been a tradition of the United States Senate since 1968, whereby a senator who sits at a particular desk near a busy entrance keeps a drawer full of candy for members of the body.  The current occupant of the Candy Desk is Pennsylvania Senator Pat Toomey.\n\nJoe Sestak: Joseph Ambrose \"Joe\" Sestak Jr. (born December 12, 1951) is an American politician and retired U.S. Navy officer.  A member of the Democratic Party, he represented Pennsylvania 's 7 congressional district in the United States House of Representatives from 2007 to 2011 and was the Democratic nominee for the United States Senate in 2010, losing to Republican nominee Pat Toomey.  A two-star admiral, he was the highest-ranking military official ever elected to the United States Congress at the time of his election.\n\nPat Meehan: Patrick Leo Meehan (born October 20, 1955) is a Republican member of the United States House of Representatives, representing Pennsylvania 's 7 congressional district since January 3, 2011.  The district includes parts of Delaware County, Chester, Montgomery County, Berks and Lancaster.  He succeeded Democrat Joe Sestak, who ran unsuccessfully for the United States Senate.\n\nTony Podesta: Anthony T. Podesta (born October 24, 1943), commonly known as Tony Podesta, is an American lobbyist best known for founding the Podesta Group.  Podesta has lobbied for a variety of groups, including Bank of America, BP, and Egypt in addition to political campaigns such as Ted Kennedy, George McGovern, Michael Dukakis, and Bill Clinton.  More recently, he has worked for Pennsylvania Democratic representatives Joe Sestak, Chris Carney, and Patrick Murphy, and chaired former Pennsylvania Gov. Ed Rendell's reelection campaign.  He is closely connected with the Barack Obama White House and has repeatedly been named one of Washington's most powerful lobbyists and fundraisers.\n\nCurt Weldon: Wayne Curtis \"Curt\" Weldon (born July 22, 1947) is an American politician.  He served as a Republican member of the United States House of Representatives from 1987 to 2007, representing the 7th district of Pennsylvania.  He was defeated in November 2006 for reelection by Joe Sestak.  Weldon was vice-chair of the Armed Services Committee and the House Homeland Security Committee.  He was also the co-chair of the Duma-Congress Study Group, the official inter-parliamentary relationship between the United States and Russia.\n\nSimple Machines: Simple Machines was a record label that operated out of Arlington, Virginia.  The label was founded by Jenny Toomey and Brad Sigal while both were living in the Positive Force House in north Arlington, but Sigal soon stepped back from involvement.  Kristin Thomson stepped up and co-masterminded the project with Toomey and they started a new group house near Positive Force's.  At its peak, the label had four paid workers- Toomey, Thomson, Pat Graham and Mickey Menard.  The label was formed to 'find creative ways to avoid the established and boring music business'.\n\nUnited States Navy dog handler hazing scandal: The United States Navy dog handler hazing scandal was a pattern of misconduct engaged in by members of the United States Navy at Naval Support Activity Bahrain between 2004 and 2006.  Naval investigators documented nearly 100 incidents of abuse committed against several members of a Military Working Dog (MWD) unit stationed at the United States military base at Juffair.  Documented incidents of abuse include racial intimidation, sexual harassment, physical abuse and anti-gay harassment.  One sailor, Master-At-Arms 3rd Class Joseph Rocha, suffered post-traumatic stress disorder because of his abuse at the hands of fellow sailors, and he alleges that another sailor committed suicide because of her treatment.  The Navy investigated the allegations in 2007 and documented the abuse, but took little substantive action.  However, Pennsylvania Congressman Joe Sestak, a former Vice Admiral, demanded a new examination of the report's findings which led to the disciplining of Rocha's former superior, Chief Petty Officer Michael Toussaint (later Senior Chief Petty Officer).  The scandal came to widespread public attention as United States President Barack Obama faced increased pressure to repeal the military's gay-exclusionary policy known as \"don't ask, don't tell\" (DADT).\n\nQuestion: Which state did both Joe Sestak and Pat Toomey serve in politics?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"state_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the state where both politicians served.\"\n    },\n    \"politicians_served\": {\n      \"type\": \"array\",\n      \"description\": \"List of politicians who served in the specified state.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the politician.\"\n          },\n          \"roles\": {\n            \"type\": \"array\",\n            \"description\": \"A list of political roles held by the politician in that state.\",\n            \"items\": {\n              \"type\": \"string\"\n            }\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"roles\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"level_of_service\": {\n      \"type\": \"string\",\n      \"description\": \"The level of government service (e.g., 'federal', 'state', 'local').\"\n    }\n  },\n  \"required\": [\n    \"state_name\",\n    \"politicians_served\",\n    \"level_of_service\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "state_name": {
+        "type": "string",
+        "description": "The name of the state where both politicians served."
+      },
+      "politicians_served": {
+        "type": "array",
+        "description": "List of politicians who served in the specified state.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the politician."
+            },
+            "roles": {
+              "type": "array",
+              "description": "A list of political roles held by the politician in that state.",
+              "items": {
+                "type": "string"
+              }
             }
-          }
-        },
-        "required": [
-          "name",
-          "roles"
-        ],
-        "additionalProperties": false
+          },
+          "required": [
+            "name",
+            "roles"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "level_of_service": {
+        "type": "string",
+        "description": "The level of government service (e.g., 'federal', 'state', 'local')."
       }
     },
-    "level_of_service": {
-      "type": "string",
-      "description": "The level of government service (e.g., 'federal', 'state', 'local')."
-    }
+    "required": [
+      "state_name",
+      "politicians_served",
+      "level_of_service"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "state_name",
-    "politicians_served",
-    "level_of_service"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

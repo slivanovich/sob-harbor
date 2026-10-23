@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-InSpectres: InSpectres is a humorous paranormal investigation-themed role-playing game created by Jared Sorensen and independently published by Memento Mori Theatricks. The game's story line follows the player's work in a supernatural investigation and elimination company.
-
-The Way to Dusty Death: The Way to Dusty Death is a thriller novel written by Scottish author Alistair MacLean.  It was originally published in 1973.  The title is a quotation from the famous soliloquy in Act 5, Scene 5 in Shakespeare’s play "Macbeth".
-
-What Dreams May Come (film): What Dreams May Come is a 1998 American fantasy drama film, starring Robin Williams and Cuba Gooding Jr. The film is based on the 1978 novel of the same name by Richard Matheson, and was directed by Vincent Ward.  It won the Academy Award for Best Visual Effects and the Art Directors Guild Award for Excellence in Production Design.  It was also nominated for the Academy Award for Best Art Direction.  The title is from a line in "Hamlet"' s "To be, or not to be" soliloquy.
-
-List of Muhyo &amp; Roji's Bureau of Supernatural Investigation chapters: List of Muhyo &amp; Roji's Bureau of Supernatural Investigation chapters
-
-To be, or not to be: To be, or not to be is the opening phrase of a soliloquy spoken by Prince Hamlet in the so-called "nunnery scene" of William Shakespeare's play "Hamlet".  Act III, Scene I.
-
-Muhyo &amp; Roji's Bureau of Supernatural Investigation: Muhyo &amp; Roji's Bureau of Supernatural Investigation
-
-What Dreams May Come (1983 novel): What Dreams May Come is a novel by American author Manly Wade Wellman.  It is the second of three books featuring supernatural investigator John Thunstone.  The book derives its title from a line in Hamlet's famous "To be, or not to be..." soliloquy.
-
-Hamlet (Liszt): Hamlet, S.104, is a symphonic poem by Franz Liszt, written in 1858 and published as No. 10.  It was not performed until 2 July 1876.  Like all but one of Liszt's 13 symphonic poems, "Hamlet" was written while Liszt was working in Weimar and is dedicated to Carolyne zu Sayn-Wittgenstein.  After viewing Bogumil Dawison play Hamlet in Weimar (1856), Liszt wrote: "He does not make him into an indecisive dreamer who collapses under the power of his mission, as he is regarded since Goethe's theory in "Wilhelm Meister", but much more as a gifted, enterprising prince with important political views who is waiting for the right moment to complete his work of revenge and come to the aim of his ambition, that is, to be crowned king in place of his uncle.  This goal can naturally not be reached in twenty-four hours and the clever anticipation which Shakespeare has put into the role of Hamlet and the negotiations with England which come clearly to the light of day at the end of the drama according to my view justify Dawson's interpretation, which Herr von Goethe and the aesthetes should not take too badly.  Regarding Ophelia, Liszt wrote: "She is loved by Hamlet, but Hamlet, like every exceptional person, imperiously demands the wine of life and will not content himself with the buttermilk.  He wishes to be understood by her without the obligation of explaining himself to her.  She collapses under her mission, because she is incapable of loving him in the way that he must be loved, and her madness is only the decrescendo of her feeling, whose lack of sureness has not allowed her to remain on the level of Hamlet."  Liszt's "Hamlet" is meant as a psychological study of the title character; only two brief references are made to Ophelia, both marked as "to be played as quietly as possible and sound like a shadowy picture."
-
-Yoshiyuki Nishi: Yoshiyuki Nishi (西 義之 , Nishi Yoshiyuki , born December 27, 1976) is a Japanese manga artist best known for his work, "Muhyo and Roji's Bureau of Supernatural Investigation".  He is the former assistant of Takeshi Obata.  Born and raised in Hachioji, Tokyo.
-
-Undiscovered Country: Undiscovered Country is a 1979 Tom Stoppard play first produced at the Olivier Theatre in London.  The play is an adaptation of "Das Weite Land" by the Austrian playwright Arthur Schnitzler, which focuses on 1890s Viennese society, demonstrating the effects of upper class codes of behavior on human relationships.  The main character is a self-made businessman named Friedrich Hofreiter who manages to be both charming and chauvinistic.  Stoppard's alterations to the play consist of adding humor while lessening the melodrama.  The title of the play is a reference to the concept of the afterlife as the "undiscovered country" from the "To be, or not to be" soliloquy in "Hamlet".
-
-Question: Who wrote the supernatural investigation novel which derives its title from a line in the "nunnery scene" soliloquy of the play "Hamlet"?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "author_name": {
-      "type": "string",
-      "description": "The name of the author who wrote the novel."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "novel_title": {
-      "type": "string",
-      "description": "The title of the novel."
-    },
-    "novel_genre": {
-      "type": "string",
-      "description": "The genre of the novel."
-    },
-    "title_derivation": {
-      "type": "object",
-      "properties": {
-        "source_play": {
-          "type": "string",
-          "description": "The play from which the novel's title is derived."
-        },
-        "source_soliloquy": {
-          "type": "string",
-          "description": "The specific soliloquy from which the novel's title is derived."
-        }
-      },
-      "required": [
-        "source_play",
-        "source_soliloquy"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nInSpectres: InSpectres is a humorous paranormal investigation-themed role-playing game created by Jared Sorensen and independently published by Memento Mori Theatricks. The game's story line follows the player's work in a supernatural investigation and elimination company.\n\nThe Way to Dusty Death: The Way to Dusty Death is a thriller novel written by Scottish author Alistair MacLean.  It was originally published in 1973.  The title is a quotation from the famous soliloquy in Act 5, Scene 5 in Shakespeare’s play \"Macbeth\".\n\nWhat Dreams May Come (film): What Dreams May Come is a 1998 American fantasy drama film, starring Robin Williams and Cuba Gooding Jr. The film is based on the 1978 novel of the same name by Richard Matheson, and was directed by Vincent Ward.  It won the Academy Award for Best Visual Effects and the Art Directors Guild Award for Excellence in Production Design.  It was also nominated for the Academy Award for Best Art Direction.  The title is from a line in \"Hamlet\"' s \"To be, or not to be\" soliloquy.\n\nList of Muhyo &amp; Roji's Bureau of Supernatural Investigation chapters: List of Muhyo &amp; Roji's Bureau of Supernatural Investigation chapters\n\nTo be, or not to be: To be, or not to be is the opening phrase of a soliloquy spoken by Prince Hamlet in the so-called \"nunnery scene\" of William Shakespeare's play \"Hamlet\".  Act III, Scene I.\n\nMuhyo &amp; Roji's Bureau of Supernatural Investigation: Muhyo &amp; Roji's Bureau of Supernatural Investigation\n\nWhat Dreams May Come (1983 novel): What Dreams May Come is a novel by American author Manly Wade Wellman.  It is the second of three books featuring supernatural investigator John Thunstone.  The book derives its title from a line in Hamlet's famous \"To be, or not to be...\" soliloquy.\n\nHamlet (Liszt): Hamlet, S.104, is a symphonic poem by Franz Liszt, written in 1858 and published as No. 10.  It was not performed until 2 July 1876.  Like all but one of Liszt's 13 symphonic poems, \"Hamlet\" was written while Liszt was working in Weimar and is dedicated to Carolyne zu Sayn-Wittgenstein.  After viewing Bogumil Dawison play Hamlet in Weimar (1856), Liszt wrote: \"He does not make him into an indecisive dreamer who collapses under the power of his mission, as he is regarded since Goethe's theory in \"Wilhelm Meister\", but much more as a gifted, enterprising prince with important political views who is waiting for the right moment to complete his work of revenge and come to the aim of his ambition, that is, to be crowned king in place of his uncle.  This goal can naturally not be reached in twenty-four hours and the clever anticipation which Shakespeare has put into the role of Hamlet and the negotiations with England which come clearly to the light of day at the end of the drama according to my view justify Dawson's interpretation, which Herr von Goethe and the aesthetes should not take too badly.  Regarding Ophelia, Liszt wrote: \"She is loved by Hamlet, but Hamlet, like every exceptional person, imperiously demands the wine of life and will not content himself with the buttermilk.  He wishes to be understood by her without the obligation of explaining himself to her.  She collapses under her mission, because she is incapable of loving him in the way that he must be loved, and her madness is only the decrescendo of her feeling, whose lack of sureness has not allowed her to remain on the level of Hamlet.\"  Liszt's \"Hamlet\" is meant as a psychological study of the title character; only two brief references are made to Ophelia, both marked as \"to be played as quietly as possible and sound like a shadowy picture.\"\n\nYoshiyuki Nishi: Yoshiyuki Nishi (西 義之 , Nishi Yoshiyuki , born December 27, 1976) is a Japanese manga artist best known for his work, \"Muhyo and Roji's Bureau of Supernatural Investigation\".  He is the former assistant of Takeshi Obata.  Born and raised in Hachioji, Tokyo.\n\nUndiscovered Country: Undiscovered Country is a 1979 Tom Stoppard play first produced at the Olivier Theatre in London.  The play is an adaptation of \"Das Weite Land\" by the Austrian playwright Arthur Schnitzler, which focuses on 1890s Viennese society, demonstrating the effects of upper class codes of behavior on human relationships.  The main character is a self-made businessman named Friedrich Hofreiter who manages to be both charming and chauvinistic.  Stoppard's alterations to the play consist of adding humor while lessening the melodrama.  The title of the play is a reference to the concept of the afterlife as the \"undiscovered country\" from the \"To be, or not to be\" soliloquy in \"Hamlet\".\n\nQuestion: Who wrote the supernatural investigation novel which derives its title from a line in the \"nunnery scene\" soliloquy of the play \"Hamlet\"?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"author_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the author who wrote the novel.\"\n    },\n    \"novel_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the novel.\"\n    },\n    \"novel_genre\": {\n      \"type\": \"string\",\n      \"description\": \"The genre of the novel.\"\n    },\n    \"title_derivation\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"source_play\": {\n          \"type\": \"string\",\n          \"description\": \"The play from which the novel's title is derived.\"\n        },\n        \"source_soliloquy\": {\n          \"type\": \"string\",\n          \"description\": \"The specific soliloquy from which the novel's title is derived.\"\n        }\n      },\n      \"required\": [\n        \"source_play\",\n        \"source_soliloquy\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"author_name\",\n    \"novel_title\",\n    \"novel_genre\",\n    \"title_derivation\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "author_name",
-    "novel_title",
-    "novel_genre",
-    "title_derivation"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "author_name": {
+        "type": "string",
+        "description": "The name of the author who wrote the novel."
+      },
+      "novel_title": {
+        "type": "string",
+        "description": "The title of the novel."
+      },
+      "novel_genre": {
+        "type": "string",
+        "description": "The genre of the novel."
+      },
+      "title_derivation": {
+        "type": "object",
+        "properties": {
+          "source_play": {
+            "type": "string",
+            "description": "The play from which the novel's title is derived."
+          },
+          "source_soliloquy": {
+            "type": "string",
+            "description": "The specific soliloquy from which the novel's title is derived."
+          }
+        },
+        "required": [
+          "source_play",
+          "source_soliloquy"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "author_name",
+      "novel_title",
+      "novel_genre",
+      "title_derivation"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

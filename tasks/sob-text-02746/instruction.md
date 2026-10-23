@@ -1,82 +1,59 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-1961 Cannes Film Festival: The 14th Cannes Film Festival was held from 3 to 18 May 1961.  The Palme d'Or went to the "Une aussi longue absence", directed by Henri Colpi and "Viridiana", directed by Luis Buñuel.  The festival opened with "Che gioia vivere", directed by René Clément.
-
-François Boyer: François Boyer (1920 - 24 May 2003) was a French screenwriter.  He achieved considerable success with his first attempt at screenwriting, "Forbidden Games" (1952).  Initially, he found no studio interested in his work, so he redesigned the screenplay as a novel and published it in 1947 under the title "The Secret Game".  Although the novel achieved little or no success in its native country, it became a huge commercial success in America.  All of a sudden, Boyer's novel was a hot property, so director René Clément, in conjunction with two writers Jean Aurenche and Pierre Bost, helped turn it into a screenplay.  While Boyer receives story credit for the film, little is known of how much of his own screenplay made it to the screen.  The film was a huge international success, and won an Honorary Oscar for the best foreign language film of its year.
-
-The Joy of Living: The Joy of Living (Italian: "Che gioia vivere" , French: "Quelle joie de vivre" ) is a 1961 Italian-French comedy film directed by René Clément.  It was entered into the 1961 Cannes Film Festival.
-
-The Sea Wall: The Sea Wall (French: Un barrage contre le Pacifique ) is a 2008 film by Cambodian director Rithy Panh in a French/Cambodian/Belgian co-production.  The film opened on 7 January 2009 in France.  It was adapted from the 1950 novel "The Sea Wall" by Marguerite Duras.  The novel had previously been adapted as "This Angry Age" by René Clément in 1958.
-
-This Angry Age: This Angry Age (also known as The Sea Wall, Barrage contre le Pacifique and La diga sul Pacifico) is a 1958 drama film directed by René Clément and produced by Dino De Laurentiis.  It is an adaptation of Marguerite Duras' 1950 novel, "The Sea Wall".  The film stars Anthony Perkins and Silvana Mangano.  The original novel was adapted again in 2008 by Rithy Panh as "The Sea Wall", starring Isabelle Huppert.
-
-René Clément: René Clément (] ; 18 March 1913 – 17 March 1996) was a French film director and screenwriter.
-
-The Deadly Trap: The Deadly Trap (French: La Maison sous les arbres ) is a 1971 French drama film directed by René Clément.  It was screened at the 1971 Cannes Film Festival, but was not entered into the main competition.
-
-Le Château de verre: Le Château de verre (English title: The Glass Castle) is a 1950 French language motion picture romantic drama directed by René Clément who co-wrote the screenplay with Gian Bistolfi and Pierre Bost, based on the novel "Das große Einmaleins" by Vicki Baum.  The film stars Michèle Morgan and Jean Marais, Jean Servais (French version), Fosco Giachetti (Italian version) and Elisa Cegani.
-
-The Day and the Hour: The Day and the Hour (French: "Le jour et l'heure" ) is a 1963 French war-time drama film directed by René Clément and starring Simone Signoret and Stuart Whitman.  Set in occupied France in 1944 a French woman finds herself helping a downed American pilot as he searches for a way to leave the country.
-
-Ted Sharks: Ted Sharks (born January 25) is a Japanese film director, producer, screenwriter and editor.  He is best known for writing and directing "Hard to Say", "Save the Underprivileged" and "An Ideal Marriage".
-
-Question: Which director is from Japan, René Clément or Ted Sharks?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "question_asked": {
-      "type": "string",
-      "description": "The original question posed."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "directors_compared": {
-      "type": "array",
-      "description": "Details of the directors mentioned in the question.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the director."
+    {
+      "role": "user",
+      "content": "Context:\n1961 Cannes Film Festival: The 14th Cannes Film Festival was held from 3 to 18 May 1961.  The Palme d'Or went to the \"Une aussi longue absence\", directed by Henri Colpi and \"Viridiana\", directed by Luis Buñuel.  The festival opened with \"Che gioia vivere\", directed by René Clément.\n\nFrançois Boyer: François Boyer (1920 - 24 May 2003) was a French screenwriter.  He achieved considerable success with his first attempt at screenwriting, \"Forbidden Games\" (1952).  Initially, he found no studio interested in his work, so he redesigned the screenplay as a novel and published it in 1947 under the title \"The Secret Game\".  Although the novel achieved little or no success in its native country, it became a huge commercial success in America.  All of a sudden, Boyer's novel was a hot property, so director René Clément, in conjunction with two writers Jean Aurenche and Pierre Bost, helped turn it into a screenplay.  While Boyer receives story credit for the film, little is known of how much of his own screenplay made it to the screen.  The film was a huge international success, and won an Honorary Oscar for the best foreign language film of its year.\n\nThe Joy of Living: The Joy of Living (Italian: \"Che gioia vivere\" , French: \"Quelle joie de vivre\" ) is a 1961 Italian-French comedy film directed by René Clément.  It was entered into the 1961 Cannes Film Festival.\n\nThe Sea Wall: The Sea Wall (French: Un barrage contre le Pacifique ) is a 2008 film by Cambodian director Rithy Panh in a French/Cambodian/Belgian co-production.  The film opened on 7 January 2009 in France.  It was adapted from the 1950 novel \"The Sea Wall\" by Marguerite Duras.  The novel had previously been adapted as \"This Angry Age\" by René Clément in 1958.\n\nThis Angry Age: This Angry Age (also known as The Sea Wall, Barrage contre le Pacifique and La diga sul Pacifico) is a 1958 drama film directed by René Clément and produced by Dino De Laurentiis.  It is an adaptation of Marguerite Duras' 1950 novel, \"The Sea Wall\".  The film stars Anthony Perkins and Silvana Mangano.  The original novel was adapted again in 2008 by Rithy Panh as \"The Sea Wall\", starring Isabelle Huppert.\n\nRené Clément: René Clément (] ; 18 March 1913 – 17 March 1996) was a French film director and screenwriter.\n\nThe Deadly Trap: The Deadly Trap (French: La Maison sous les arbres ) is a 1971 French drama film directed by René Clément.  It was screened at the 1971 Cannes Film Festival, but was not entered into the main competition.\n\nLe Château de verre: Le Château de verre (English title: The Glass Castle) is a 1950 French language motion picture romantic drama directed by René Clément who co-wrote the screenplay with Gian Bistolfi and Pierre Bost, based on the novel \"Das große Einmaleins\" by Vicki Baum.  The film stars Michèle Morgan and Jean Marais, Jean Servais (French version), Fosco Giachetti (Italian version) and Elisa Cegani.\n\nThe Day and the Hour: The Day and the Hour (French: \"Le jour et l'heure\" ) is a 1963 French war-time drama film directed by René Clément and starring Simone Signoret and Stuart Whitman.  Set in occupied France in 1944 a French woman finds herself helping a downed American pilot as he searches for a way to leave the country.\n\nTed Sharks: Ted Sharks (born January 25) is a Japanese film director, producer, screenwriter and editor.  He is best known for writing and directing \"Hard to Say\", \"Save the Underprivileged\" and \"An Ideal Marriage\".\n\nQuestion: Which director is from Japan, René Clément or Ted Sharks?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"question_asked\": {\n      \"type\": \"string\",\n      \"description\": \"The original question posed.\"\n    },\n    \"directors_compared\": {\n      \"type\": \"array\",\n      \"description\": \"Details of the directors mentioned in the question.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the director.\"\n          },\n          \"nationality\": {\n            \"type\": \"string\",\n            \"description\": \"The nationality of the director.\"\n          },\n          \"is_japanese\": {\n            \"type\": \"boolean\",\n            \"description\": \"True if the director is Japanese, false otherwise.\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"nationality\",\n          \"is_japanese\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"japanese_director_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the director who is from Japan.\"\n    }\n  },\n  \"required\": [\n    \"question_asked\",\n    \"directors_compared\",\n    \"japanese_director_name\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "question_asked": {
+        "type": "string",
+        "description": "The original question posed."
+      },
+      "directors_compared": {
+        "type": "array",
+        "description": "Details of the directors mentioned in the question.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the director."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the director."
+            },
+            "is_japanese": {
+              "type": "boolean",
+              "description": "True if the director is Japanese, false otherwise."
+            }
           },
-          "nationality": {
-            "type": "string",
-            "description": "The nationality of the director."
-          },
-          "is_japanese": {
-            "type": "boolean",
-            "description": "True if the director is Japanese, false otherwise."
-          }
-        },
-        "required": [
-          "name",
-          "nationality",
-          "is_japanese"
-        ],
-        "additionalProperties": false
+          "required": [
+            "name",
+            "nationality",
+            "is_japanese"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "japanese_director_name": {
+        "type": "string",
+        "description": "The name of the director who is from Japan."
       }
     },
-    "japanese_director_name": {
-      "type": "string",
-      "description": "The name of the director who is from Japan."
-    }
+    "required": [
+      "question_asked",
+      "directors_compared",
+      "japanese_director_name"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "question_asked",
-    "directors_compared",
-    "japanese_director_name"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

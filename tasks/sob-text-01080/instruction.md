@@ -1,73 +1,50 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Barry Barish: Barry Clark Barish (born January 27, 1936) is an American experimental physicist.  He is a Linde Professor of Physics, emeritus at California Institute of Technology.  He is a leading expert on gravitational waves.
-
-Bernard F. Schutz: Bernard F. Schutz (born August 11, 1946, in Paterson, New Jersey) is an American physicist.  His research is on Einstein's theory of general relativity, more concretely on the physics of gravitational waves.  He is one of the directors and head of the astrophysics group at the Max Planck Institute for Gravitational Physics in Potsdam, Germany.  He is principal investigator in charge of data analysis for the GEO600 collaboration (which, in turn, is part of the LIGO Scientific Collaboration, the largest concerted effort to directly detect gravitational waves).  Schutz is also a member of the science team coordinating the planning and development for the space-borne gravitational wave detector LISA (Laser Interferometer Space Antenna), and he was instrumental in the foundation of the electronic, open access review journal "Living Reviews in Relativity".
-
-David Reitze: David Reitze (born January 6, 1961 in Washington, Pennsylvania) is an American laser physicist who is Professor of Physics at the University of Florida and served as the scientific spokesman of the Laser Interferometer Gravitational-Wave Observatory (LIGO) experiment in 2007-2011.  In August 2011, he took a leave of absence from the University of Florida to be the Executive Director of LIGO, stationed at the California Institute of Technology, Pasadena, California.  He obtained his BA in 1983 from Northwestern University, his PhD in Physics from the University of Texas at Austin in 1990, and had positions at Bell Communications Research and Lawrence Livermore National Laboratory, before taking his faculty position at the University of Florida.  He is a Fellow of the American Physical Society and The Optical Society.
-
-Gabriela González: Gabriela González, (born 24 February 1965 in Cordoba, Argentina ) is a professor of physics and astronomy at the Louisiana State University and was the spokesperson for the LIGO Scientific Collaboration from March 2011 until March 2017.  She has published several papers on Brownian motion as a limit to the sensitivity of gravitational-wave detectors, and has an interest in data analysis for gravitational-wave astronomy.
-
-Bruce Allen (physicist): Bruce Allen (born May 11, 1959) is an American physicist and director of the Max Planck Institute for Gravitational Physics in Hannover Germany and leader of the Einstein@Home project for the LIGO Scientific Collaboration.  He is also a physics professor at the University of Wisconsin–Milwaukee.
-
-Alan Fairlamb: Alan Hutchinson Fairlamb, CBE, FRSE, FLS, FMedSci, FRSB (born 30 April 1947, Newcastle upon Tyne, England) is a Wellcome Trust Principal Research Fellow and Professor of Biochemistry in the Division of Biological Chemistry and Drug Discovery at the University of Dundee, Scotland.  From 2006-2011 he was a member of the Scientific and Technical Advisory Committee of the Special Programme for Research and Training in Tropical Diseases (TDR) -- an independent global programme of scientific collaboration co-sponsored by UNICEF, UNDP, the World Bank and WHO.  Currently he is a member of the governing board of the Tres Cantos Open Lab Foundation, whose aim is to accelerate the discovery and development of medicines to tackle diseases of the developing world in an open collaborative manner.
-
-LIGO Scientific Collaboration: The LIGO Scientific Collaboration (LSC) is a scientific collaboration of international physics institutes and research groups dedicated to the search for gravitational waves.  The LSC was established in 1997, under the leadership of Barry Barish.  Its mission is to ensure equal scientific opportunity for individual participants and institutions by organizing research, publications, and all other scientific activities, and it includes scientists from both LIGO Laboratory and collaborating institutions.  Barish appointed Rainer Weiss as the first spokesperson.
-
-Alessandra Buonanno: Alessandra Buonanno is a theoretical physicist working in gravitational-wave physics and cosmology.  She is a director at the Max Planck Institute for Gravitational Physics (Albert Einstein Institute) in Potsdam, Germany, leading the "Astrophysical and Cosmological Relativity" division.  She holds a College Park professorship at the University of Maryland, College Park in College Park, Maryland, and is a meber of the LIGO Scientific Collaboration.
-
-Ibercivis: Ibercivis is a distributed computing platform which allows internet users to participate in scientific research by donating unused computer cycles to run scientific simulations and other tasks.  The project, which became operational in 2008, is a scientific collaboration between the Portuguese and Spanish governments, but it is open to the general public and scientific community, both within and beyond the Iberian Peninsula.  The project's name is a portmanteau of "Iberia" and the Latin word "civis", meaning "citizen".
-
-Scientific collaboration network: Scientific collaboration network is a social network where nodes are scientists and links are co-authorships as the latter is one of the most well documented forms of scientific collaboration.  It is an undirected, scale-free network where the degree distribution follows a power law with an exponential cutoff – most authors are sparsely connected while a few authors are intensively connected.  The network has an assortative nature – hubs tend to link to other hubs and low-degree nodes tend to link to low-degree nodes.  Assortativity is not structural, meaning that it is not a consequence of the degree distribution, but it is generated by some process that governs the network’s evolution.
-
-Question: LIGO Scientific Collaboration was established under the leadership of a physicist born in which year ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "collaboration_name": {
-      "type": "string",
-      "description": "The name of the scientific collaboration."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "establishment_year": {
-      "type": "integer",
-      "description": "The year the collaboration was established."
-    },
-    "leader_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the physicist who led the establishment."
-        },
-        "birth_year": {
-          "type": "integer",
-          "description": "The birth year of the physicist."
-        }
-      },
-      "required": [
-        "name",
-        "birth_year"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nBarry Barish: Barry Clark Barish (born January 27, 1936) is an American experimental physicist.  He is a Linde Professor of Physics, emeritus at California Institute of Technology.  He is a leading expert on gravitational waves.\n\nBernard F. Schutz: Bernard F. Schutz (born August 11, 1946, in Paterson, New Jersey) is an American physicist.  His research is on Einstein's theory of general relativity, more concretely on the physics of gravitational waves.  He is one of the directors and head of the astrophysics group at the Max Planck Institute for Gravitational Physics in Potsdam, Germany.  He is principal investigator in charge of data analysis for the GEO600 collaboration (which, in turn, is part of the LIGO Scientific Collaboration, the largest concerted effort to directly detect gravitational waves).  Schutz is also a member of the science team coordinating the planning and development for the space-borne gravitational wave detector LISA (Laser Interferometer Space Antenna), and he was instrumental in the foundation of the electronic, open access review journal \"Living Reviews in Relativity\".\n\nDavid Reitze: David Reitze (born January 6, 1961 in Washington, Pennsylvania) is an American laser physicist who is Professor of Physics at the University of Florida and served as the scientific spokesman of the Laser Interferometer Gravitational-Wave Observatory (LIGO) experiment in 2007-2011.  In August 2011, he took a leave of absence from the University of Florida to be the Executive Director of LIGO, stationed at the California Institute of Technology, Pasadena, California.  He obtained his BA in 1983 from Northwestern University, his PhD in Physics from the University of Texas at Austin in 1990, and had positions at Bell Communications Research and Lawrence Livermore National Laboratory, before taking his faculty position at the University of Florida.  He is a Fellow of the American Physical Society and The Optical Society.\n\nGabriela González: Gabriela González, (born 24 February 1965 in Cordoba, Argentina ) is a professor of physics and astronomy at the Louisiana State University and was the spokesperson for the LIGO Scientific Collaboration from March 2011 until March 2017.  She has published several papers on Brownian motion as a limit to the sensitivity of gravitational-wave detectors, and has an interest in data analysis for gravitational-wave astronomy.\n\nBruce Allen (physicist): Bruce Allen (born May 11, 1959) is an American physicist and director of the Max Planck Institute for Gravitational Physics in Hannover Germany and leader of the Einstein@Home project for the LIGO Scientific Collaboration.  He is also a physics professor at the University of Wisconsin–Milwaukee.\n\nAlan Fairlamb: Alan Hutchinson Fairlamb, CBE, FRSE, FLS, FMedSci, FRSB (born 30 April 1947, Newcastle upon Tyne, England) is a Wellcome Trust Principal Research Fellow and Professor of Biochemistry in the Division of Biological Chemistry and Drug Discovery at the University of Dundee, Scotland.  From 2006-2011 he was a member of the Scientific and Technical Advisory Committee of the Special Programme for Research and Training in Tropical Diseases (TDR) -- an independent global programme of scientific collaboration co-sponsored by UNICEF, UNDP, the World Bank and WHO.  Currently he is a member of the governing board of the Tres Cantos Open Lab Foundation, whose aim is to accelerate the discovery and development of medicines to tackle diseases of the developing world in an open collaborative manner.\n\nLIGO Scientific Collaboration: The LIGO Scientific Collaboration (LSC) is a scientific collaboration of international physics institutes and research groups dedicated to the search for gravitational waves.  The LSC was established in 1997, under the leadership of Barry Barish.  Its mission is to ensure equal scientific opportunity for individual participants and institutions by organizing research, publications, and all other scientific activities, and it includes scientists from both LIGO Laboratory and collaborating institutions.  Barish appointed Rainer Weiss as the first spokesperson.\n\nAlessandra Buonanno: Alessandra Buonanno is a theoretical physicist working in gravitational-wave physics and cosmology.  She is a director at the Max Planck Institute for Gravitational Physics (Albert Einstein Institute) in Potsdam, Germany, leading the \"Astrophysical and Cosmological Relativity\" division.  She holds a College Park professorship at the University of Maryland, College Park in College Park, Maryland, and is a meber of the LIGO Scientific Collaboration.\n\nIbercivis: Ibercivis is a distributed computing platform which allows internet users to participate in scientific research by donating unused computer cycles to run scientific simulations and other tasks.  The project, which became operational in 2008, is a scientific collaboration between the Portuguese and Spanish governments, but it is open to the general public and scientific community, both within and beyond the Iberian Peninsula.  The project's name is a portmanteau of \"Iberia\" and the Latin word \"civis\", meaning \"citizen\".\n\nScientific collaboration network: Scientific collaboration network is a social network where nodes are scientists and links are co-authorships as the latter is one of the most well documented forms of scientific collaboration.  It is an undirected, scale-free network where the degree distribution follows a power law with an exponential cutoff – most authors are sparsely connected while a few authors are intensively connected.  The network has an assortative nature – hubs tend to link to other hubs and low-degree nodes tend to link to low-degree nodes.  Assortativity is not structural, meaning that it is not a consequence of the degree distribution, but it is generated by some process that governs the network’s evolution.\n\nQuestion: LIGO Scientific Collaboration was established under the leadership of a physicist born in which year ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"collaboration_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the scientific collaboration.\"\n    },\n    \"establishment_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the collaboration was established.\"\n    },\n    \"leader_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the physicist who led the establishment.\"\n        },\n        \"birth_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The birth year of the physicist.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"birth_year\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"collaboration_name\",\n    \"establishment_year\",\n    \"leader_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "collaboration_name",
-    "establishment_year",
-    "leader_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "collaboration_name": {
+        "type": "string",
+        "description": "The name of the scientific collaboration."
+      },
+      "establishment_year": {
+        "type": "integer",
+        "description": "The year the collaboration was established."
+      },
+      "leader_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the physicist who led the establishment."
+          },
+          "birth_year": {
+            "type": "integer",
+            "description": "The birth year of the physicist."
+          }
+        },
+        "required": [
+          "name",
+          "birth_year"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "collaboration_name",
+      "establishment_year",
+      "leader_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

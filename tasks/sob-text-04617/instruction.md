@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-New York Film Festival: The New York Film Festival (NYFF) is an annual film festival held every autumn in New York City, presented by the Film Society of Lincoln Center (FSLC).  Founded in 1963 by Richard Roud and Amos Vogel with the support of Lincoln Center president William Schuman, it is one of the longest-running and most prestigious film festival in the United States.  The non-competitive festival is centered around a “Main Slate” of typically 20-30 feature films, with sidebars for experimental cinema and retrospectives, and recently introduced documentary and trans-media sections.  Programming is led by a rotating Selection Committee, chaired by the Director of the New York Film Festival, with many committee members remaining from year to year.  Separate committees and individuals program the short film, experimental, and trans-media sections.
-
-Nairi Sedrakyan: Nairi Sedrakyan (born 1961 in Ninotsminda, USSR) is an Armenian mathematician involved in national and international Olympiads of mathematics, having been the president of Armenian Mathematics Olympiads, the Leader of Armenian IMO Team, jury member and problem selection committee member of International Mathematical Olympiad, jury member and problem selection committee member of Zhautykov International Mathematical Olympiad (ZIMO), jury member and problem selection committee member of the 1st International Olympiad of Metropolises, the president of International Mathematical Olympiad Tournament of the Towns in Armenia.  He has also authored a large number of problems proposed in these Olympiads.  Nairi Sedrakyan is the author of one of the hardest problems ever proposed in the history of International Mathematical Olympiad, 5th problem of 37th International Mathematical Olympiad.  This problem is considered as one of the hardest problems ever, because none of the members of the strongest teams, i.e. National Olympic Teams of the USA, Russia or China has succeeded to solve it correctly.  Moreover, the National Olympic Team of People's Republic of China has obtained a cumulative result equal to 0 points and was ranked the 6th in the final ranking of the countries instead of the usual 1st or 2nd place.  The British 2014 film X+Y, released in the USA as A Brilliant Young Mind, inspired by, Beautiful Young Minds focuses on an English mathematical genius chosen to represent the United Kingdom at the IMO.  In the film this problem is stated to be the hardest problem ever proposed in the history of International Mathematical Olympiad (minutes 9:40-10:30).  Other outstanding results of the author are having 4 problems in the Shortlist of the worldwide selected 27 problems of the 40th IMO (1999) in Romania and having 5 medals winner students in 41st IMO in South Korea, i.e. 2 silver medals and 3 bronze medals.  Moreover, only 1 point was missing for Sevak Mkrtchyan to obtain a Gold Medal (currently he is an assistant professor of mathematics in United States, Sevak received his PhD in mathematics from University of California, Berkley).  Nevertheless, Arthur Barkhoudarian, one of the first students of Nairi Sedrakyan has received a Gold Medal in International Mathematical Olympiad, later on Arthur received his PhD degree in mathematics from Charles University in Prague.  As all winner students were from the same school, where Nairi Sedrakyan was teaching mathematics, the government of the Republic of Armenia gave to the author the title of the best teacher of the Republic of Armenia and he received a special gift from the Prime Minister.
-
-Bell's theorem: Bell's theorem is a "no-go theorem" that draws an important distinction between quantum mechanics (QM) and the world as described by classical mechanics.  This theorem is named after John Stewart Bell.
-
-Charles Haldat: Charles Nicolas Alexandre Haldat du Lys (24 December 1770 – 26 November 1852) was a French physicist who performed experimental work in hydrostatics.
-
-Alain Aspect: Alain Aspect (] ; born 15 June 1947) is a French physicist noted for his experimental work on quantum entanglement.
-
-John Stewart Bell: John Stewart Bell FRS (28 June 1928 – 1 October 1990) was a Northern Irish physicist, and the originator of Bell's theorem, an important theorem in quantum physics regarding hidden variable theories.
-
-College Football Playoff National Championship: The College Football Playoff National Championship is a post-season college football bowl game, used to determine a national champion of the NCAA Division I Football Bowl Subdivision (FBS), which began play in the 2014 college football season.  The game serves as the final of the College Football Playoff, a bracket tournament between the top four teams in the country as determined by a selection committee, which was established as a successor to the Bowl Championship Series and its similar BCS National Championship Game.  Unlike the BCS championship, the participating teams in the College Football Playoff National Championship are determined by two semi-final bowls—hosted by two of the consortium's six member bowls yearly—and the top two teams as determined by the selection committee do not automatically advance to the game in lieu of other bowls.
-
-John Stewart Bell Prize: The John Stewart Bell Prize for Research on Fundamental Issues in Quantum Mechanics and their Applications (short form: "Bell Prize") was established in 2009, funded and managed by the University of Toronto, Centre for Quantum Information & Quantum Control ("CQIQC").  It is awarded every odd-numbered year, for significant contributions relating to the foundations of quantum mechanics and to the applications of these principles – this covers, but is not limited to, quantum information theory, quantum computation, quantum foundations, quantum cryptography, and quantum control.  The selection committee has included Gilles Brassard, Peter Zoller, Alain Aspect, John Preskill, and Juan Ignacio Cirac Sasturain, in addition to previous winners Sandu Popescu, Michel Devoret, and Nicolas Gisin.
-
-Ruth Lyttle Satter Prize in Mathematics: The Ruth Lyttle Satter Prize in Mathematics, also called the Satter Prize, is one of 21 prizes given out by the American Mathematical Society (AMS).  The prize is presented bi-annually in recognition of an outstanding contribution to mathematics research by a woman in the previous six years.  The award was established in 1990 using a donation from Joan Birman, in memory of her sister, Ruth Lyttle Satter.  Satter, who worked primarily in biological sciences, was a proponent for equal opportunities for women in science.  First awarded in 1991, the award is intended to "honor [Satter's] commitment to research and to encourage women in science".  The winner is selected by the council of the AMS, based on the recommendation of a selection committee.  The prize is awarded at the Joint Mathematics Meetings during odd numbered years, and has always carried a modest cash reward.  Since 2003, the prize has been $5,000, while from 1997 to 2001, the prize came with $1,200, and prior to that it was $4,000.  If a joint award is made, the prize money is split between the recipients.
-
-France national football team manager: The France national football team manager was first established on 25 April 1964 following the appointment of the country's first national team manager Henri Guérin.  Before this, the France national team was selected by a selection committee, a process in which the French Football Federation would select coaches and trainers from within the country or abroad to prepare the side for single games and tournaments, but with all decisions ultimately remaining under the control of the committee.  From 1904–1913, the USFSA headed the committee, which was referred to as the "Commission Centrale d'Association".  The committee was controlled by André Espir and André Billy and featured little to no physical preparation for upcoming matches.  In 1913, the "Comité Français Interfédéral", a precursor to the French Football Federation, took over the committee following the USFSA becoming affiliated with the organization and secretary general Henri Delaunay took control.
-
-Question: What experimental work is the French physicist, born in 1947 who serves on the selection committee for the John Stewart Bell Prize established in 2009, well-known for?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "physicist_name": {
-      "type": "string",
-      "description": "The name of the physicist."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "nationality": {
-      "type": "string",
-      "description": "The nationality of the physicist."
-    },
-    "birth_year": {
-      "type": "integer",
-      "description": "The birth year of the physicist."
-    },
-    "prize_committee_role": {
-      "type": "string",
-      "description": "The role of the physicist in the specified prize's committee."
-    },
-    "prize_name": {
-      "type": "string",
-      "description": "The name of the prize associated with the committee."
-    },
-    "experimental_work": {
-      "type": "string",
-      "description": "The experimental work the physicist is noted for."
+    {
+      "role": "user",
+      "content": "Context:\nNew York Film Festival: The New York Film Festival (NYFF) is an annual film festival held every autumn in New York City, presented by the Film Society of Lincoln Center (FSLC).  Founded in 1963 by Richard Roud and Amos Vogel with the support of Lincoln Center president William Schuman, it is one of the longest-running and most prestigious film festival in the United States.  The non-competitive festival is centered around a “Main Slate” of typically 20-30 feature films, with sidebars for experimental cinema and retrospectives, and recently introduced documentary and trans-media sections.  Programming is led by a rotating Selection Committee, chaired by the Director of the New York Film Festival, with many committee members remaining from year to year.  Separate committees and individuals program the short film, experimental, and trans-media sections.\n\nNairi Sedrakyan: Nairi Sedrakyan (born 1961 in Ninotsminda, USSR) is an Armenian mathematician involved in national and international Olympiads of mathematics, having been the president of Armenian Mathematics Olympiads, the Leader of Armenian IMO Team, jury member and problem selection committee member of International Mathematical Olympiad, jury member and problem selection committee member of Zhautykov International Mathematical Olympiad (ZIMO), jury member and problem selection committee member of the 1st International Olympiad of Metropolises, the president of International Mathematical Olympiad Tournament of the Towns in Armenia.  He has also authored a large number of problems proposed in these Olympiads.  Nairi Sedrakyan is the author of one of the hardest problems ever proposed in the history of International Mathematical Olympiad, 5th problem of 37th International Mathematical Olympiad.  This problem is considered as one of the hardest problems ever, because none of the members of the strongest teams, i.e. National Olympic Teams of the USA, Russia or China has succeeded to solve it correctly.  Moreover, the National Olympic Team of People's Republic of China has obtained a cumulative result equal to 0 points and was ranked the 6th in the final ranking of the countries instead of the usual 1st or 2nd place.  The British 2014 film X+Y, released in the USA as A Brilliant Young Mind, inspired by, Beautiful Young Minds focuses on an English mathematical genius chosen to represent the United Kingdom at the IMO.  In the film this problem is stated to be the hardest problem ever proposed in the history of International Mathematical Olympiad (minutes 9:40-10:30).  Other outstanding results of the author are having 4 problems in the Shortlist of the worldwide selected 27 problems of the 40th IMO (1999) in Romania and having 5 medals winner students in 41st IMO in South Korea, i.e. 2 silver medals and 3 bronze medals.  Moreover, only 1 point was missing for Sevak Mkrtchyan to obtain a Gold Medal (currently he is an assistant professor of mathematics in United States, Sevak received his PhD in mathematics from University of California, Berkley).  Nevertheless, Arthur Barkhoudarian, one of the first students of Nairi Sedrakyan has received a Gold Medal in International Mathematical Olympiad, later on Arthur received his PhD degree in mathematics from Charles University in Prague.  As all winner students were from the same school, where Nairi Sedrakyan was teaching mathematics, the government of the Republic of Armenia gave to the author the title of the best teacher of the Republic of Armenia and he received a special gift from the Prime Minister.\n\nBell's theorem: Bell's theorem is a \"no-go theorem\" that draws an important distinction between quantum mechanics (QM) and the world as described by classical mechanics.  This theorem is named after John Stewart Bell.\n\nCharles Haldat: Charles Nicolas Alexandre Haldat du Lys (24 December 1770 – 26 November 1852) was a French physicist who performed experimental work in hydrostatics.\n\nAlain Aspect: Alain Aspect (] ; born 15 June 1947) is a French physicist noted for his experimental work on quantum entanglement.\n\nJohn Stewart Bell: John Stewart Bell FRS (28 June 1928 – 1 October 1990) was a Northern Irish physicist, and the originator of Bell's theorem, an important theorem in quantum physics regarding hidden variable theories.\n\nCollege Football Playoff National Championship: The College Football Playoff National Championship is a post-season college football bowl game, used to determine a national champion of the NCAA Division I Football Bowl Subdivision (FBS), which began play in the 2014 college football season.  The game serves as the final of the College Football Playoff, a bracket tournament between the top four teams in the country as determined by a selection committee, which was established as a successor to the Bowl Championship Series and its similar BCS National Championship Game.  Unlike the BCS championship, the participating teams in the College Football Playoff National Championship are determined by two semi-final bowls—hosted by two of the consortium's six member bowls yearly—and the top two teams as determined by the selection committee do not automatically advance to the game in lieu of other bowls.\n\nJohn Stewart Bell Prize: The John Stewart Bell Prize for Research on Fundamental Issues in Quantum Mechanics and their Applications (short form: \"Bell Prize\") was established in 2009, funded and managed by the University of Toronto, Centre for Quantum Information & Quantum Control (\"CQIQC\").  It is awarded every odd-numbered year, for significant contributions relating to the foundations of quantum mechanics and to the applications of these principles – this covers, but is not limited to, quantum information theory, quantum computation, quantum foundations, quantum cryptography, and quantum control.  The selection committee has included Gilles Brassard, Peter Zoller, Alain Aspect, John Preskill, and Juan Ignacio Cirac Sasturain, in addition to previous winners Sandu Popescu, Michel Devoret, and Nicolas Gisin.\n\nRuth Lyttle Satter Prize in Mathematics: The Ruth Lyttle Satter Prize in Mathematics, also called the Satter Prize, is one of 21 prizes given out by the American Mathematical Society (AMS).  The prize is presented bi-annually in recognition of an outstanding contribution to mathematics research by a woman in the previous six years.  The award was established in 1990 using a donation from Joan Birman, in memory of her sister, Ruth Lyttle Satter.  Satter, who worked primarily in biological sciences, was a proponent for equal opportunities for women in science.  First awarded in 1991, the award is intended to \"honor [Satter's] commitment to research and to encourage women in science\".  The winner is selected by the council of the AMS, based on the recommendation of a selection committee.  The prize is awarded at the Joint Mathematics Meetings during odd numbered years, and has always carried a modest cash reward.  Since 2003, the prize has been $5,000, while from 1997 to 2001, the prize came with $1,200, and prior to that it was $4,000.  If a joint award is made, the prize money is split between the recipients.\n\nFrance national football team manager: The France national football team manager was first established on 25 April 1964 following the appointment of the country's first national team manager Henri Guérin.  Before this, the France national team was selected by a selection committee, a process in which the French Football Federation would select coaches and trainers from within the country or abroad to prepare the side for single games and tournaments, but with all decisions ultimately remaining under the control of the committee.  From 1904–1913, the USFSA headed the committee, which was referred to as the \"Commission Centrale d'Association\".  The committee was controlled by André Espir and André Billy and featured little to no physical preparation for upcoming matches.  In 1913, the \"Comité Français Interfédéral\", a precursor to the French Football Federation, took over the committee following the USFSA becoming affiliated with the organization and secretary general Henri Delaunay took control.\n\nQuestion: What experimental work is the French physicist, born in 1947 who serves on the selection committee for the John Stewart Bell Prize established in 2009, well-known for?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"physicist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the physicist.\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the physicist.\"\n    },\n    \"birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the physicist.\"\n    },\n    \"prize_committee_role\": {\n      \"type\": \"string\",\n      \"description\": \"The role of the physicist in the specified prize's committee.\"\n    },\n    \"prize_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the prize associated with the committee.\"\n    },\n    \"experimental_work\": {\n      \"type\": \"string\",\n      \"description\": \"The experimental work the physicist is noted for.\"\n    }\n  },\n  \"required\": [\n    \"physicist_name\",\n    \"nationality\",\n    \"birth_year\",\n    \"prize_committee_role\",\n    \"prize_name\",\n    \"experimental_work\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "physicist_name",
-    "nationality",
-    "birth_year",
-    "prize_committee_role",
-    "prize_name",
-    "experimental_work"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "physicist_name": {
+        "type": "string",
+        "description": "The name of the physicist."
+      },
+      "nationality": {
+        "type": "string",
+        "description": "The nationality of the physicist."
+      },
+      "birth_year": {
+        "type": "integer",
+        "description": "The birth year of the physicist."
+      },
+      "prize_committee_role": {
+        "type": "string",
+        "description": "The role of the physicist in the specified prize's committee."
+      },
+      "prize_name": {
+        "type": "string",
+        "description": "The name of the prize associated with the committee."
+      },
+      "experimental_work": {
+        "type": "string",
+        "description": "The experimental work the physicist is noted for."
+      }
+    },
+    "required": [
+      "physicist_name",
+      "nationality",
+      "birth_year",
+      "prize_committee_role",
+      "prize_name",
+      "experimental_work"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

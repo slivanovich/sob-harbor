@@ -1,98 +1,75 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-List of Philadelphia 76ers head coaches: The Philadelphia 76ers are an American professional basketball team based in Philadelphia, Pennsylvania.  They are a member of the Atlantic Division of the Eastern Conference in the National Basketball Association (NBA).  Formerly known as the Syracuse Nationals, the 76ers joined the NBA when it was founded in 1949.  The Nationals had a record of 51–13 in their first NBA season under coach Al Cervi and won the Eastern Division crown.  The franchise were purchased by Philadelphian Irv Kosloff and Ike Richma in the spring of 1963; the NBA approved their franchise shift on May 22 and name change to the Philadelphia 76ers on August 6.  This brought professional basketball back to the city, which had been without a team since the Golden State Warriors left Philadelphia in 1962.  After coaching the 76ers since , Doug Collins resigned as head coach on April 18, 2013 following the 2012–13 season.  Brett Brown was hired to be the head coach of the 76ers on August 15, 2013 prior to the start of the 2013-14 season.
-
-1976 NBA draft: The 1976 NBA draft was the 30th annual draft of the National Basketball Association (NBA).  The draft was held on June 8, 1976, before the 1976–77 season.  In this draft, 18 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The first two picks in the draft belonged to the teams that finished last in each conference, with the order determined by a coin flip.  The Atlanta Hawks won the coin flip and were awarded the first overall pick, while the Chicago Bulls were awarded the second pick.  The Hawks then traded the first pick to the Houston Rockets before the draft.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  The New York Knicks forfeited their first-round draft pick due to their illegal signing of George McGinnis whose rights were held by the Philadelphia 76ers.  The 76ers, the Golden State Warriors and the Buffalo Braves also forfeited their second, third and fourth-round pick respectively due to their participation in 1975 supplementary draft American Basketball Association (ABA) players who had never been drafted in the NBA.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  Before the draft, 26 college underclassmen were declared eligible for selection under the "hardship" rule.  13 of them withdrew before the draft, leaving only 13 early entry candidates eligible for selection.  These players had applied and gave evidence of financial hardship to the league, which granted them the right to start earning their living by starting their professional careers earlier.  The draft consisted of 10 rounds comprising the selection of 173 players.  On August 8, 1976, the league also hosted a Dispersal draft for ABA players from the Kentucky Colonels and Spirits of St. Louis, who were not included in the ABA–NBA merger.
-
-1984 NBA draft: The 1984 NBA draft was the 37th annual draft of the National Basketball Association (NBA).  It was held at the Felt Forum at Madison Square Garden in New York City, New York, on June 19, 1984, before the 1984–85 season.  The draft was broadcast in the United States on the USA Network.  In this draft, 23 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The Houston Rockets won the coin flip and were awarded the first overall pick, while the Portland Trail Blazers, who obtained the Indiana Pacers' first-round pick in a trade, were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  The Cleveland Cavaliers were awarded an extra first-round draft pick as compensation for the draft picks traded away by their previous owner, Ted Stepien.  A player who had finished his four-year college eligibility was automatically eligible for selection.  Before the draft, five college underclassmen announced that they would leave college early and would be eligible for selection.  Prior to the draft, the San Diego Clippers relocated to Los Angeles and became the Los Angeles Clippers.  The draft consisted of 10 rounds comprising the selection of 228 players.  This draft was the last to be held before the creation of the Draft Lottery in 1985.  It was also the first NBA Draft to be overseen by David Stern.
-
-1973 NBA draft: The 1973 NBA draft was the 27th annual draft of the National Basketball Association (NBA).  The draft was held on April 24 and May 5, 1973, before the 1973–74 season.  In this draft, 17 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The first two picks in the draft belonged to the teams that finished last in each conference, with the order determined by a coin flip.  The Philadelphia 76ers won the coin flip and were awarded the first overall pick, while the Portland Trail Blazers were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  Prior to the draft, the Baltimore Bullets relocated to Landover, Maryland, and became the Capital Bullets.  The Philadelphia 76ers were awarded an extra first-round draft pick as compensation when the Seattle SuperSonics signed John Brisker.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  Before the draft, 11 college underclassmen were declared eligible for selection under the "hardship" rule.  These players had applied and gave evidence of financial hardship to the league, which granted them the right to start earning their living by starting their professional careers earlier.  The draft consisted of 20 rounds comprising the selection of 211 players.
-
-Joel Embiid: Joel Hans Embiid ( ; born 16 March 1994) is a Cameroonian professional basketball player for the Philadelphia 76ers of the National Basketball Association (NBA).  After one year of college basketball at the University of Kansas, he was drafted with the third overall pick in the 2014 NBA draft by the 76ers.  He has nicknamed himself "The Process" in response to a refrain from 76ers fans during the Sam Hinkie-era to "trust the process".
-
-Willie Green: Willie J. Green (born July 28, 1981) is an American retired professional basketball player and current assistant coach with the Golden State Warriors of the National Basketball Association (NBA).  During his professional career, Green has previously played for the Philadelphia 76ers, New Orleans Hornets, Atlanta Hawks, Los Angeles Clippers and Orlando Magic of the National Basketball Association (NBA).  He was selected in the second round (41st pick overall) of the 2003 NBA draft by the Seattle SuperSonics and later acquired by the Philadelphia 76ers from Seattle in a draft-night trade for the draft rights to Paccelis Morlende (50th pick overall) and cash considerations.
-
-Charles Barkley: Charles Wade Barkley (born February 20, 1963) is an American retired professional basketball player who is currently the analyst on "Inside the NBA".  Nicknamed "Chuck", "Sir Charles", and "The Round Mound of Rebound", Barkley established himself as one of the National Basketball Association's dominant power forwards.  An All-American center at Auburn, he was drafted as a junior by the Philadelphia 76ers with the 5th pick of the 1984 NBA draft.  He was selected to the All-NBA First Team five times, the All-NBA Second Team five times, and once to the All-NBA Third Team.  He earned eleven NBA All-Star Game appearances and was named the All-Star MVP in 1991.  In 1993, he was voted the league's Most Valuable Player and during the NBA's 50th anniversary, named one of the 50 Greatest Players in NBA History.  He competed in the 1992 and 1996 Olympic Games and won two gold medals as a member of the United States' "Dream Team".  Barkley is a two-time inductee into the Naismith Memorial Basketball Hall of Fame, being inducted in 2006 for his individual career, and in 2010 as a member of the "Dream Team".
-
-1974 NBA draft: The 1974 NBA draft was the 28th annual draft of the National Basketball Association (NBA).  The draft was held on May 28, 1974, before the 1974–75 season.  In this draft, 18 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The first two picks in the draft belonged to the teams that finished last in each conference, with the order determined by a coin flip.  The Portland Trail Blazers won the coin flip and were awarded the first overall pick, while the Philadelphia 76ers were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  Prior to the draft, the Capital Bullets were renamed the Washington Bullets.  An expansion franchise, the New Orleans Jazz, took part in the NBA Draft for the first time and were assigned the tenth pick in each round.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  Before the draft, 20 college underclassmen were declared eligible for selection under the "hardship" rule.  These players had applied and gave evidence of financial hardship to the league, which granted them the right to start earning their living by starting their professional careers earlier.  The draft consisted of 10 rounds comprising the selection of 178 players.
-
-Dana Pagett: Dana P. Pagett (born March 29, 1949) is a retired professional basketball player who spent one season in the American Basketball Association (ABA) as a member of the Virginia Squires during the 1971–72 season.  He attended University of Southern California where he was drafted by the Philadelphia 76ers during the eleventh round of the 1971 NBA Draft.  After that season he signed with the Portland Trail Blazers, but was released before the start of the 1972–73 National Basketball Association (NBA) season.  He was an assistant coach for the Loyola Marymount Lions, Long Beach State 49ers and Utah State Aggies men's basketball teams.  He was also the assistant coach for Rancho Santiago Community College District men's basketball team and was later promoted to the head coach position.
-
-1963 NBA draft: The 1963 NBA draft was the 17th annual draft of the National Basketball Association (NBA).  The draft was held on April 30 and May 7, 1963, before the 1963–64 season.  In this draft, nine NBA teams took turns selecting amateur U.S. college basketball players.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  In each round, the teams select in reverse order of their win–loss record in the previous season.  Before the draft, a team could forfeit its first-round draft pick and then select any player from within a 50-mile radius of its home arena as their territorial pick.  The Chicago Zephyrs relocated to Baltimore and became the Baltimore Bullets prior to the draft.  The Syracuse Nationals participated in the draft, but relocated to Philadelphia and became the Philadelphia 76ers prior to the start of the season.  The draft consisted of 15 rounds comprising 84 players selected.  <br> This draft holds the record for the least number of non-territorial picks who later debuted in the NBA, with 17 (18 if the territorial pick Tom Thacker is included).
-
-Question:  Where was the 37th annual draft of the National Basketball Association held, that an American retired professional basketball player who is currently the analyst on "Inside the NBA" was drafted as a junior by the Philadelphia 76ers?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "draft_year": {
-      "type": "integer",
-      "description": "The year the NBA draft was held."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "draft_annual_number": {
-      "type": "integer",
-      "description": "The annual number of the NBA draft."
-    },
-    "draft_location": {
-      "type": "string",
-      "description": "The specific venue where the draft was held."
-    },
-    "city": {
-      "type": "string",
-      "description": "The city where the draft was held."
-    },
-    "state": {
-      "type": "string",
-      "description": "The state where the draft was held."
-    },
-    "player_drafted": {
-      "type": "object",
-      "properties": {
-        "player_name": {
-          "type": "string",
-          "description": "The name of the player drafted."
-        },
-        "draft_pick_number": {
-          "type": "integer",
-          "description": "The overall pick number the player was drafted."
-        },
-        "drafting_team": {
-          "type": "string",
-          "description": "The team that drafted the player."
-        },
-        "current_role": {
-          "type": "string",
-          "description": "The player's current role as mentioned in the context."
-        }
-      },
-      "required": [
-        "player_name",
-        "draft_pick_number",
-        "drafting_team",
-        "current_role"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nList of Philadelphia 76ers head coaches: The Philadelphia 76ers are an American professional basketball team based in Philadelphia, Pennsylvania.  They are a member of the Atlantic Division of the Eastern Conference in the National Basketball Association (NBA).  Formerly known as the Syracuse Nationals, the 76ers joined the NBA when it was founded in 1949.  The Nationals had a record of 51–13 in their first NBA season under coach Al Cervi and won the Eastern Division crown.  The franchise were purchased by Philadelphian Irv Kosloff and Ike Richma in the spring of 1963; the NBA approved their franchise shift on May 22 and name change to the Philadelphia 76ers on August 6.  This brought professional basketball back to the city, which had been without a team since the Golden State Warriors left Philadelphia in 1962.  After coaching the 76ers since , Doug Collins resigned as head coach on April 18, 2013 following the 2012–13 season.  Brett Brown was hired to be the head coach of the 76ers on August 15, 2013 prior to the start of the 2013-14 season.\n\n1976 NBA draft: The 1976 NBA draft was the 30th annual draft of the National Basketball Association (NBA).  The draft was held on June 8, 1976, before the 1976–77 season.  In this draft, 18 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The first two picks in the draft belonged to the teams that finished last in each conference, with the order determined by a coin flip.  The Atlanta Hawks won the coin flip and were awarded the first overall pick, while the Chicago Bulls were awarded the second pick.  The Hawks then traded the first pick to the Houston Rockets before the draft.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  The New York Knicks forfeited their first-round draft pick due to their illegal signing of George McGinnis whose rights were held by the Philadelphia 76ers.  The 76ers, the Golden State Warriors and the Buffalo Braves also forfeited their second, third and fourth-round pick respectively due to their participation in 1975 supplementary draft American Basketball Association (ABA) players who had never been drafted in the NBA.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  Before the draft, 26 college underclassmen were declared eligible for selection under the \"hardship\" rule.  13 of them withdrew before the draft, leaving only 13 early entry candidates eligible for selection.  These players had applied and gave evidence of financial hardship to the league, which granted them the right to start earning their living by starting their professional careers earlier.  The draft consisted of 10 rounds comprising the selection of 173 players.  On August 8, 1976, the league also hosted a Dispersal draft for ABA players from the Kentucky Colonels and Spirits of St. Louis, who were not included in the ABA–NBA merger.\n\n1984 NBA draft: The 1984 NBA draft was the 37th annual draft of the National Basketball Association (NBA).  It was held at the Felt Forum at Madison Square Garden in New York City, New York, on June 19, 1984, before the 1984–85 season.  The draft was broadcast in the United States on the USA Network.  In this draft, 23 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The Houston Rockets won the coin flip and were awarded the first overall pick, while the Portland Trail Blazers, who obtained the Indiana Pacers' first-round pick in a trade, were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  The Cleveland Cavaliers were awarded an extra first-round draft pick as compensation for the draft picks traded away by their previous owner, Ted Stepien.  A player who had finished his four-year college eligibility was automatically eligible for selection.  Before the draft, five college underclassmen announced that they would leave college early and would be eligible for selection.  Prior to the draft, the San Diego Clippers relocated to Los Angeles and became the Los Angeles Clippers.  The draft consisted of 10 rounds comprising the selection of 228 players.  This draft was the last to be held before the creation of the Draft Lottery in 1985.  It was also the first NBA Draft to be overseen by David Stern.\n\n1973 NBA draft: The 1973 NBA draft was the 27th annual draft of the National Basketball Association (NBA).  The draft was held on April 24 and May 5, 1973, before the 1973–74 season.  In this draft, 17 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The first two picks in the draft belonged to the teams that finished last in each conference, with the order determined by a coin flip.  The Philadelphia 76ers won the coin flip and were awarded the first overall pick, while the Portland Trail Blazers were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  Prior to the draft, the Baltimore Bullets relocated to Landover, Maryland, and became the Capital Bullets.  The Philadelphia 76ers were awarded an extra first-round draft pick as compensation when the Seattle SuperSonics signed John Brisker.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  Before the draft, 11 college underclassmen were declared eligible for selection under the \"hardship\" rule.  These players had applied and gave evidence of financial hardship to the league, which granted them the right to start earning their living by starting their professional careers earlier.  The draft consisted of 20 rounds comprising the selection of 211 players.\n\nJoel Embiid: Joel Hans Embiid ( ; born 16 March 1994) is a Cameroonian professional basketball player for the Philadelphia 76ers of the National Basketball Association (NBA).  After one year of college basketball at the University of Kansas, he was drafted with the third overall pick in the 2014 NBA draft by the 76ers.  He has nicknamed himself \"The Process\" in response to a refrain from 76ers fans during the Sam Hinkie-era to \"trust the process\".\n\nWillie Green: Willie J. Green (born July 28, 1981) is an American retired professional basketball player and current assistant coach with the Golden State Warriors of the National Basketball Association (NBA).  During his professional career, Green has previously played for the Philadelphia 76ers, New Orleans Hornets, Atlanta Hawks, Los Angeles Clippers and Orlando Magic of the National Basketball Association (NBA).  He was selected in the second round (41st pick overall) of the 2003 NBA draft by the Seattle SuperSonics and later acquired by the Philadelphia 76ers from Seattle in a draft-night trade for the draft rights to Paccelis Morlende (50th pick overall) and cash considerations.\n\nCharles Barkley: Charles Wade Barkley (born February 20, 1963) is an American retired professional basketball player who is currently the analyst on \"Inside the NBA\".  Nicknamed \"Chuck\", \"Sir Charles\", and \"The Round Mound of Rebound\", Barkley established himself as one of the National Basketball Association's dominant power forwards.  An All-American center at Auburn, he was drafted as a junior by the Philadelphia 76ers with the 5th pick of the 1984 NBA draft.  He was selected to the All-NBA First Team five times, the All-NBA Second Team five times, and once to the All-NBA Third Team.  He earned eleven NBA All-Star Game appearances and was named the All-Star MVP in 1991.  In 1993, he was voted the league's Most Valuable Player and during the NBA's 50th anniversary, named one of the 50 Greatest Players in NBA History.  He competed in the 1992 and 1996 Olympic Games and won two gold medals as a member of the United States' \"Dream Team\".  Barkley is a two-time inductee into the Naismith Memorial Basketball Hall of Fame, being inducted in 2006 for his individual career, and in 2010 as a member of the \"Dream Team\".\n\n1974 NBA draft: The 1974 NBA draft was the 28th annual draft of the National Basketball Association (NBA).  The draft was held on May 28, 1974, before the 1974–75 season.  In this draft, 18 NBA teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The first two picks in the draft belonged to the teams that finished last in each conference, with the order determined by a coin flip.  The Portland Trail Blazers won the coin flip and were awarded the first overall pick, while the Philadelphia 76ers were awarded the second pick.  The remaining first-round picks and the subsequent rounds were assigned to teams in reverse order of their win–loss record in the previous season.  Prior to the draft, the Capital Bullets were renamed the Washington Bullets.  An expansion franchise, the New Orleans Jazz, took part in the NBA Draft for the first time and were assigned the tenth pick in each round.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  Before the draft, 20 college underclassmen were declared eligible for selection under the \"hardship\" rule.  These players had applied and gave evidence of financial hardship to the league, which granted them the right to start earning their living by starting their professional careers earlier.  The draft consisted of 10 rounds comprising the selection of 178 players.\n\nDana Pagett: Dana P. Pagett (born March 29, 1949) is a retired professional basketball player who spent one season in the American Basketball Association (ABA) as a member of the Virginia Squires during the 1971–72 season.  He attended University of Southern California where he was drafted by the Philadelphia 76ers during the eleventh round of the 1971 NBA Draft.  After that season he signed with the Portland Trail Blazers, but was released before the start of the 1972–73 National Basketball Association (NBA) season.  He was an assistant coach for the Loyola Marymount Lions, Long Beach State 49ers and Utah State Aggies men's basketball teams.  He was also the assistant coach for Rancho Santiago Community College District men's basketball team and was later promoted to the head coach position.\n\n1963 NBA draft: The 1963 NBA draft was the 17th annual draft of the National Basketball Association (NBA).  The draft was held on April 30 and May 7, 1963, before the 1963–64 season.  In this draft, nine NBA teams took turns selecting amateur U.S. college basketball players.  A player who had finished his four-year college eligibility was eligible for selection.  If a player left college early, he would not be eligible for selection until his college class graduated.  In each round, the teams select in reverse order of their win–loss record in the previous season.  Before the draft, a team could forfeit its first-round draft pick and then select any player from within a 50-mile radius of its home arena as their territorial pick.  The Chicago Zephyrs relocated to Baltimore and became the Baltimore Bullets prior to the draft.  The Syracuse Nationals participated in the draft, but relocated to Philadelphia and became the Philadelphia 76ers prior to the start of the season.  The draft consisted of 15 rounds comprising 84 players selected.  <br> This draft holds the record for the least number of non-territorial picks who later debuted in the NBA, with 17 (18 if the territorial pick Tom Thacker is included).\n\nQuestion:  Where was the 37th annual draft of the National Basketball Association held, that an American retired professional basketball player who is currently the analyst on \"Inside the NBA\" was drafted as a junior by the Philadelphia 76ers?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"draft_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the NBA draft was held.\"\n    },\n    \"draft_annual_number\": {\n      \"type\": \"integer\",\n      \"description\": \"The annual number of the NBA draft.\"\n    },\n    \"draft_location\": {\n      \"type\": \"string\",\n      \"description\": \"The specific venue where the draft was held.\"\n    },\n    \"city\": {\n      \"type\": \"string\",\n      \"description\": \"The city where the draft was held.\"\n    },\n    \"state\": {\n      \"type\": \"string\",\n      \"description\": \"The state where the draft was held.\"\n    },\n    \"player_drafted\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"player_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the player drafted.\"\n        },\n        \"draft_pick_number\": {\n          \"type\": \"integer\",\n          \"description\": \"The overall pick number the player was drafted.\"\n        },\n        \"drafting_team\": {\n          \"type\": \"string\",\n          \"description\": \"The team that drafted the player.\"\n        },\n        \"current_role\": {\n          \"type\": \"string\",\n          \"description\": \"The player's current role as mentioned in the context.\"\n        }\n      },\n      \"required\": [\n        \"player_name\",\n        \"draft_pick_number\",\n        \"drafting_team\",\n        \"current_role\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"draft_year\",\n    \"draft_annual_number\",\n    \"draft_location\",\n    \"city\",\n    \"state\",\n    \"player_drafted\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "draft_year",
-    "draft_annual_number",
-    "draft_location",
-    "city",
-    "state",
-    "player_drafted"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "draft_year": {
+        "type": "integer",
+        "description": "The year the NBA draft was held."
+      },
+      "draft_annual_number": {
+        "type": "integer",
+        "description": "The annual number of the NBA draft."
+      },
+      "draft_location": {
+        "type": "string",
+        "description": "The specific venue where the draft was held."
+      },
+      "city": {
+        "type": "string",
+        "description": "The city where the draft was held."
+      },
+      "state": {
+        "type": "string",
+        "description": "The state where the draft was held."
+      },
+      "player_drafted": {
+        "type": "object",
+        "properties": {
+          "player_name": {
+            "type": "string",
+            "description": "The name of the player drafted."
+          },
+          "draft_pick_number": {
+            "type": "integer",
+            "description": "The overall pick number the player was drafted."
+          },
+          "drafting_team": {
+            "type": "string",
+            "description": "The team that drafted the player."
+          },
+          "current_role": {
+            "type": "string",
+            "description": "The player's current role as mentioned in the context."
+          }
+        },
+        "required": [
+          "player_name",
+          "draft_pick_number",
+          "drafting_team",
+          "current_role"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "draft_year",
+      "draft_annual_number",
+      "draft_location",
+      "city",
+      "state",
+      "player_drafted"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

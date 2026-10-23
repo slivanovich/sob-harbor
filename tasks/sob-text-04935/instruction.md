@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-K. C. Cariappa: Air Marshal K C "Nanda" Cariappa is the son of Field Marshal K. M. Cariappa, the first Indian Army Commander-in-Chief.  Air Marshal Cariappa was a Squadron Leader with No.20 Squadron during the 1965 Indo-Pakistan War.  He was shot down while carrying out air attacks during the 1965 war with Pakistan and was taken prisoner.  President Ayub Khan, former colleague of General Cariappa before the 1947 Partition, offered to release his son.  But the General's terse reply was: "The POWs are all my sons, look after them well."  After repatriation K C Cariappa went on to helicopters for a short while, commanding No.111 Helicopter Unit at Hasimara during the 1971 War.  He would later command No.8 Squadron in the mid 70s at Pune.  He wrote a biography on his father, Field Marshal K. M. Cariappa in 2007.  He presently lives in his deceased father's house Roshanara in Madikeri.  He takes an active part in forest conservation measures.
-
-Sarath Fonseka: Field Marshal Gardihewa Sarath Chandralal Fonseka, RWP, RSP, VSV, USP, MP, rcds, psc (Sarath Fonseka) (Sinhalese: ෆීල්ඩ් මාෂල් සරත් ෆොන්සේකා , Tamil: பீல்ட் மார்ஷல் சரத் பொன்சேகா , born 18 December 1950) is a Sri Lanka's highest rank soldier and politician who was the first Sri Lankan Army officer to be promoted to the rank of Field Marshal.  He was the eighteenth Commander of Sri Lankan Army, and under his command the Sri Lankan Army ended the 26-year Sri Lankan Civil War in 2009, defeating the rebel Liberation Tigers of Tamil Eelam; he thereafter briefly served as the Chief of Defence Staff.  After retiring from the Army with the rank of General, he entered politics as the common opposition candidate in the 2010 presidential election contesting against President Mahinda Rajapaksa.  Following his controversial defeat in the presidential election he was elected to Parliament in the general election that followed.  Soon after he was made a political prisoner and lost his parliamentary seat.  Fonseka supported Maithripala Sirisena in the 2015 presidential election and following his victory, the newly appointed President Sirisena gave Fonseka a full pardon reinstating his civic rights, military rank and decorations.  Later he was promoted to the newly created rank of Field Marshal on 22 March 2015.  On 9 February 2016 he was appointed to Parliament, and he was appointed Cabinet Minister for Regional Development on 25 February 2016.
-
-List of Generalobersts: Generaloberst, in English Colonel General, was, in Germany and Austria-Hungary—the German "Reichswehr" and "Wehrmacht", the Austro-Hungarian Common Army, and the East German National People's Army, as well as the respective police services—the second highest general officer rank, ranking above full general but below general field marshal.  It was equivalent to "Generaladmiral" in the "Kriegsmarine" until 1945, or to Flottenadmiral in the "Volksmarine" until 1990.  The rank was the highest ordinary military rank and the highest military rank awarded in peacetime; the higher rank of general field marshal was only awarded in wartime by the head of state.  In general, a Generaloberst had the same privileges as a general field marshal.
-
-Lieutenant field marshal: Lieutenant field marshal, also frequently historically field marshal lieutenant (German: "Feldmarschall-Leutnant" , formerly "Feldmarschallleutnant", historically also "Feldmarschall-Lieutenant" and, in official Imperial and Royal Austrian army documents from 1867 always "Feldmarschalleutnant", abbreviated "FML"), was a senior army rank in certain European armies of the 17th to 20th centuries.  It emerged as the rank of field marshal (German: "Feldmarschall" ) came to be used for the highest army commander in the 17th century (having originally been the equivalent of a cavalry colonel).  In German-speaking countries the commander-in-chief usually appointed an "under marshal" ("Untermarschall") or "lieutenant field marshal" to support and represent the field marshal.  Amongst his functions as the personal deputy to the field marshal, were the supervision of supply depots and routes, and inspection of the guards.
-
-Nir Shamsher Jang Bahadur Rana: Born on 11 Poush, 1970 B.S. (1913) in Jawalakhel Durbar, Jawalakhel, Lalitpur, Field Marshal Rana died at the age of 99.  He was son of the then ruling Rana Prime Minister Judha Shumsher Rana and his third wife Mahila Maharani (née Musa "Nani Sahib").  According to a statement, the centenarian Field Marshal had joined the then Royal Nepal Army (RNA) at the age of 18 on 1 Shrawan 1988 B.S (1931) and was appointed to the post of Major at the Shri Pashupati Prasad Battalion.  He became the Commander-in-Chief of the RNA on 15 Baisakh, 2017 B.S (1960) and retired on 15 Baisakh in 2022 B.S (1965).  He was appointed Field Marshal after his retirement in 2022 B.S.
-
-Erwin Rommel: Erwin Rommel (15 November 1891 – 14 October 1944) was a German general and military theorist.  Popularly known as the Desert Fox, he served as field marshal in the Wehrmacht of Nazi Germany during World War II.
-
-Kodandera M. Cariappa: Field Marshal Kodandera "Kipper" Madappa Cariappa, OBE (28 January 1899 – 15 May 1993) was the first Indian commander-in-chief (C-in-C) of the Indian Army.  He led Indian forces on the Western Front during the Indo-Pakistani War of 1947.  He is one of only two Indian Army officers to hold the five-star rank of field marshal; the other being Field Marshal Sam Manekshaw.  He was appointed commander-in-chief of the Indian Army in 1949.
-
-Infantry Attacks: Infantry Attacks (German: Infanterie Greift An) is a classic book on military tactics written by Erwin Rommel about his experiences in World War I.  At the time of the book's writing in the mid-1930s, Rommel's rank was lieutenant colonel.  Rommel had planned to write a successor called "Panzer greift an" (in English: "Tank Attacks") about tank warfare, and gathered much material during the North Africa Campaign.  However, he was forced to commit suicide before completing this work.
-
-Field marshal (India): Field marshal (or field marshal, abbreviated as FM) ( , ) is a five–star general officer rank and the highest attainable rank in the Indian Army.  Field marshal is ranked immediately above general, but not exercised in the regular army structure.  It is a largely ceremonial or wartime rank, having been awarded only twice.  A field marshal's insignia consists of the national emblem over a crossed baton and sabre in a lotus blossom wreath.
-
-Walther von Reichenau: Walter Karl Ernst August von Reichenau (8 October 1884 – 17 January 1942) was a field marshal in the Wehrmacht of Nazi Germany during World War II.  A professional solider and veteran of World War I and the Reichswehr, he was one of twelve officers promoted at the 1940 Field Marshal Ceremony, and the most junior.  An avid sportsman and athlete he was a member of the International Olympic Committee.  He is widely cited for his support of genocidal policies on the Eastern front and for his Severity Order, which he issued while in command of the German 6th Army.
-
-Question: What field marshal in the Wehrmacht wrote Infrantry Attacks?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "author_name": {
-      "type": "string",
-      "description": "The name of the field marshal who wrote the book."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "author_rank": {
-      "type": "string",
-      "description": "The highest military rank held by the author."
-    },
-    "military_affiliation": {
-      "type": "string",
-      "description": "The military force the author served in."
-    },
-    "book_title": {
-      "type": "string",
-      "description": "The title of the book written by the author."
+    {
+      "role": "user",
+      "content": "Context:\nK. C. Cariappa: Air Marshal K C \"Nanda\" Cariappa is the son of Field Marshal K. M. Cariappa, the first Indian Army Commander-in-Chief.  Air Marshal Cariappa was a Squadron Leader with No.20 Squadron during the 1965 Indo-Pakistan War.  He was shot down while carrying out air attacks during the 1965 war with Pakistan and was taken prisoner.  President Ayub Khan, former colleague of General Cariappa before the 1947 Partition, offered to release his son.  But the General's terse reply was: \"The POWs are all my sons, look after them well.\"  After repatriation K C Cariappa went on to helicopters for a short while, commanding No.111 Helicopter Unit at Hasimara during the 1971 War.  He would later command No.8 Squadron in the mid 70s at Pune.  He wrote a biography on his father, Field Marshal K. M. Cariappa in 2007.  He presently lives in his deceased father's house Roshanara in Madikeri.  He takes an active part in forest conservation measures.\n\nSarath Fonseka: Field Marshal Gardihewa Sarath Chandralal Fonseka, RWP, RSP, VSV, USP, MP, rcds, psc (Sarath Fonseka) (Sinhalese: ෆීල්ඩ් මාෂල් සරත් ෆොන්සේකා , Tamil: பீல்ட் மார்ஷல் சரத் பொன்சேகா , born 18 December 1950) is a Sri Lanka's highest rank soldier and politician who was the first Sri Lankan Army officer to be promoted to the rank of Field Marshal.  He was the eighteenth Commander of Sri Lankan Army, and under his command the Sri Lankan Army ended the 26-year Sri Lankan Civil War in 2009, defeating the rebel Liberation Tigers of Tamil Eelam; he thereafter briefly served as the Chief of Defence Staff.  After retiring from the Army with the rank of General, he entered politics as the common opposition candidate in the 2010 presidential election contesting against President Mahinda Rajapaksa.  Following his controversial defeat in the presidential election he was elected to Parliament in the general election that followed.  Soon after he was made a political prisoner and lost his parliamentary seat.  Fonseka supported Maithripala Sirisena in the 2015 presidential election and following his victory, the newly appointed President Sirisena gave Fonseka a full pardon reinstating his civic rights, military rank and decorations.  Later he was promoted to the newly created rank of Field Marshal on 22 March 2015.  On 9 February 2016 he was appointed to Parliament, and he was appointed Cabinet Minister for Regional Development on 25 February 2016.\n\nList of Generalobersts: Generaloberst, in English Colonel General, was, in Germany and Austria-Hungary—the German \"Reichswehr\" and \"Wehrmacht\", the Austro-Hungarian Common Army, and the East German National People's Army, as well as the respective police services—the second highest general officer rank, ranking above full general but below general field marshal.  It was equivalent to \"Generaladmiral\" in the \"Kriegsmarine\" until 1945, or to Flottenadmiral in the \"Volksmarine\" until 1990.  The rank was the highest ordinary military rank and the highest military rank awarded in peacetime; the higher rank of general field marshal was only awarded in wartime by the head of state.  In general, a Generaloberst had the same privileges as a general field marshal.\n\nLieutenant field marshal: Lieutenant field marshal, also frequently historically field marshal lieutenant (German: \"Feldmarschall-Leutnant\" , formerly \"Feldmarschallleutnant\", historically also \"Feldmarschall-Lieutenant\" and, in official Imperial and Royal Austrian army documents from 1867 always \"Feldmarschalleutnant\", abbreviated \"FML\"), was a senior army rank in certain European armies of the 17th to 20th centuries.  It emerged as the rank of field marshal (German: \"Feldmarschall\" ) came to be used for the highest army commander in the 17th century (having originally been the equivalent of a cavalry colonel).  In German-speaking countries the commander-in-chief usually appointed an \"under marshal\" (\"Untermarschall\") or \"lieutenant field marshal\" to support and represent the field marshal.  Amongst his functions as the personal deputy to the field marshal, were the supervision of supply depots and routes, and inspection of the guards.\n\nNir Shamsher Jang Bahadur Rana: Born on 11 Poush, 1970 B.S. (1913) in Jawalakhel Durbar, Jawalakhel, Lalitpur, Field Marshal Rana died at the age of 99.  He was son of the then ruling Rana Prime Minister Judha Shumsher Rana and his third wife Mahila Maharani (née Musa \"Nani Sahib\").  According to a statement, the centenarian Field Marshal had joined the then Royal Nepal Army (RNA) at the age of 18 on 1 Shrawan 1988 B.S (1931) and was appointed to the post of Major at the Shri Pashupati Prasad Battalion.  He became the Commander-in-Chief of the RNA on 15 Baisakh, 2017 B.S (1960) and retired on 15 Baisakh in 2022 B.S (1965).  He was appointed Field Marshal after his retirement in 2022 B.S.\n\nErwin Rommel: Erwin Rommel (15 November 1891 – 14 October 1944) was a German general and military theorist.  Popularly known as the Desert Fox, he served as field marshal in the Wehrmacht of Nazi Germany during World War II.\n\nKodandera M. Cariappa: Field Marshal Kodandera \"Kipper\" Madappa Cariappa, OBE (28 January 1899 – 15 May 1993) was the first Indian commander-in-chief (C-in-C) of the Indian Army.  He led Indian forces on the Western Front during the Indo-Pakistani War of 1947.  He is one of only two Indian Army officers to hold the five-star rank of field marshal; the other being Field Marshal Sam Manekshaw.  He was appointed commander-in-chief of the Indian Army in 1949.\n\nInfantry Attacks: Infantry Attacks (German: Infanterie Greift An) is a classic book on military tactics written by Erwin Rommel about his experiences in World War I.  At the time of the book's writing in the mid-1930s, Rommel's rank was lieutenant colonel.  Rommel had planned to write a successor called \"Panzer greift an\" (in English: \"Tank Attacks\") about tank warfare, and gathered much material during the North Africa Campaign.  However, he was forced to commit suicide before completing this work.\n\nField marshal (India): Field marshal (or field marshal, abbreviated as FM) ( , ) is a five–star general officer rank and the highest attainable rank in the Indian Army.  Field marshal is ranked immediately above general, but not exercised in the regular army structure.  It is a largely ceremonial or wartime rank, having been awarded only twice.  A field marshal's insignia consists of the national emblem over a crossed baton and sabre in a lotus blossom wreath.\n\nWalther von Reichenau: Walter Karl Ernst August von Reichenau (8 October 1884 – 17 January 1942) was a field marshal in the Wehrmacht of Nazi Germany during World War II.  A professional solider and veteran of World War I and the Reichswehr, he was one of twelve officers promoted at the 1940 Field Marshal Ceremony, and the most junior.  An avid sportsman and athlete he was a member of the International Olympic Committee.  He is widely cited for his support of genocidal policies on the Eastern front and for his Severity Order, which he issued while in command of the German 6th Army.\n\nQuestion: What field marshal in the Wehrmacht wrote Infrantry Attacks?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"author_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the field marshal who wrote the book.\"\n    },\n    \"author_rank\": {\n      \"type\": \"string\",\n      \"description\": \"The highest military rank held by the author.\"\n    },\n    \"military_affiliation\": {\n      \"type\": \"string\",\n      \"description\": \"The military force the author served in.\"\n    },\n    \"book_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the book written by the author.\"\n    }\n  },\n  \"required\": [\n    \"author_name\",\n    \"author_rank\",\n    \"military_affiliation\",\n    \"book_title\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "author_name",
-    "author_rank",
-    "military_affiliation",
-    "book_title"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "author_name": {
+        "type": "string",
+        "description": "The name of the field marshal who wrote the book."
+      },
+      "author_rank": {
+        "type": "string",
+        "description": "The highest military rank held by the author."
+      },
+      "military_affiliation": {
+        "type": "string",
+        "description": "The military force the author served in."
+      },
+      "book_title": {
+        "type": "string",
+        "description": "The title of the book written by the author."
+      }
+    },
+    "required": [
+      "author_name",
+      "author_rank",
+      "military_affiliation",
+      "book_title"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

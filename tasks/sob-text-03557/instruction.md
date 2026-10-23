@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Jericho (missile): Jericho is a general designation given to a loosely related family of deployed ballistic missiles developed by Israel from the 1960s forward.  The name is taken from the first development contract for the Jericho I signed between Israel and Dassault in 1963, with the codename as a reference to the Biblical city of Jericho.  As with most Israeli unconventional weapons systems, exact details are classified, though there are observed test data, public statements by government officials, and details in open literature especially about the Shavit satellite launch vehicle.  The later Jericho family development is related to the Shavit and Shavit II space launch vehicles believed to be derivatives of the Jericho II IRBM and which preceded the development of the Jericho III ICBM.  The Lawrence Livermore National Laboratory concluded that the Shavit could be adapted as an ICBM carrying 500 kg warhead over 7500 km.  Additional insight into the Jericho program was revealed by the South African series of missiles, of which the RSA-3 are believed to be licensed copies of the Jericho II/Shavit, and the RSA-4 that used part of these systems in their stack with a heavy first stage.  Subsequent to the declaration and disarming of the Nuclear programme of South Africa, the RSA series missiles were offered commercially as satellite launch vehicles, resulting in the advertised specifications becoming part of the public knowledge.  The civilian space launch version of the Jericho, the Shavit, has been studied in an air launched version piggybacked on a Boeing 747 similar to a US experimental launch of the Minuteman ICBM from a C-5 Galaxy.
-
-Fri Norsk Scene: Fri Norsk Scene was a theatre group consisting of Norwegian actors residing as refugees in Sweden during World War II.  It was established in 1944, and was active until May 1945.  The group was led by Halfdan Christensen.  Among the theatre's productions were Ibsen's play "The Master Builder" (Norwegian: "Bygmester Solness" ), Bjørnson's "Geografi og Kjærlighet" and Arnulf Øverland's "Venner".
-
-Hemming Halfdansson: Hemming Halfdansson (died 837) was "of the Danish race, a most Christian leader".  He was probably a son of Halfdan, a leading Dane who became a vassal of Charlemagne in 807.  He was probably related to the Danish royal family, as "Hemming" was one of their favoured names.  The onomastic evidence includes the Danish king Hemming I (reigned 810–12) and then a Hemming II, who was recalled to Denmark from Francia by his brothers Harald Klak and Reginfrid after Hemming I's death.  This Hemming was probably the same person as Hemming Halfdansson.  He probably soon returned to Francia, since there is no evidence of him in Danish politics after he and his brothers were driven out by the sons of Godfrid in 813.
-
-Consumer Credit Protection Act of 1968: The Consumer Credit Protection Act, is a United States law Pub.L.  90–321 , 82 Stat.  146 , enacted  29, 1968 , composed of several titles relating to consumer credit, mainly title I, the Truth in Lending Act, title II related to extortionate credit transactions, title III related to restrictions on wage garnishment, and title IV related to the National Commission on Consumer Finance.
-
-Listed buildings in Whitegate and Marton: Whitegate and Marton is a civil parish in Cheshire West and Chester, England.  It contains 33 buildings that are recorded in the National Heritage List for England as designated listed buildings.  One of these, Vale Royal Abbey is listed at Grade II*, and the others are at Grade II.  The parish is almost entirely rural, and most of the listed buildings are domestic or related to farming.  The older houses and cottages are frequently wholly or partly timber-framed.  The River Weaver and the Weaver Navigation run through the parish, and some of the listed structures are related to these waterways.  Other listed buildings in the parish include ancient stones, monuments, structures related to Vale Royal Abbey, and St Mary's Church, Whitegate, its gatepiers, and its lychgate.
-
-List of AMD Phenom microprocessors: The AMD Phenom family is a 64-bit microprocessor family from AMD, based on the K10 microarchitecture.  It includes the Phenom II X6 hex-core series, Phenom X4 and Phenom II X4 quad-core series, Phenom X3 and Phenom II X3 tri-core series, and Phenom II X2 dual-core series.  Other related processors based on the K10 microarchitecture include the Athlon X2 "Kuma" processors, Athlon II processors, and various Opteron, Sempron, and Turion series.  The first Phenoms were released in November 2007.  An improved second generation was released in December 2008, named Phenom II.  Processors with an "e" following the model number (e.g., 245e) are low-power models, typically 45 W for Athlons, 65 W for Phenoms.
-
-1942–43 Coppa Italia: The 1942–43 Coppa Italia was the tenth edition of the tournament and the last before the suspension of football competitions in Italy due to World War II related events.  The Coppa Italia would have restored only several years later, in the summer of 1958.
-
-Reginfrid: Reginfrid (or Ragnfrid) (died 814) was a co-King of Denmark from 812, when Hemming I died, to 813, when he and his brothers were ousted by the sons of a previous king, Gudfred.  He was probably a son of Halfdan, a Danish leader who became a vassal of Charlemagne in 807, and brother of Anulo (died 812), Hemming (died 837), and Harald Klak (died "c".  852).  He was probably also related to the Danish king he succeeded.
-
-Fridlevus II: Fridleif (Ynglinga saga) was a son of Fróði of the Skjöldung (Scylding) lineage.  In that work he was the brother of Halfdan and the father of Áli the Strong.
-
-Halfdan: Halfdan (Old Norse: "Halfdan" , Old English: "Healfdene" , Medieval , Proto-Norse: "*Halbadaniz", "half Dane") was a late 5th and early 6th century legendary Danish king of the Scylding (Skjöldung) lineage, the son of king named Fróði in many accounts, noted mainly as the father to the two kings who succeeded him in the rule of Denmark, kings named Hroðgar and Halga in the Old English poem "Beowulf" and named Hróar and Helgi in Old Norse accounts.
-
-Question: How was Fridlevus II related to Halfdan?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_1_name": {
-      "type": "string",
-      "description": "The name of the first person mentioned in the relationship."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "person_2_name": {
-      "type": "string",
-      "description": "The name of the second person mentioned in the relationship."
-    },
-    "relationship_type": {
-      "type": "string",
-      "description": "The type of relationship between the two people."
-    },
-    "source_of_relationship_information": {
-      "type": "string",
-      "description": "The specific source or work where the relationship is stated."
+    {
+      "role": "user",
+      "content": "Context:\nJericho (missile): Jericho is a general designation given to a loosely related family of deployed ballistic missiles developed by Israel from the 1960s forward.  The name is taken from the first development contract for the Jericho I signed between Israel and Dassault in 1963, with the codename as a reference to the Biblical city of Jericho.  As with most Israeli unconventional weapons systems, exact details are classified, though there are observed test data, public statements by government officials, and details in open literature especially about the Shavit satellite launch vehicle.  The later Jericho family development is related to the Shavit and Shavit II space launch vehicles believed to be derivatives of the Jericho II IRBM and which preceded the development of the Jericho III ICBM.  The Lawrence Livermore National Laboratory concluded that the Shavit could be adapted as an ICBM carrying 500 kg warhead over 7500 km.  Additional insight into the Jericho program was revealed by the South African series of missiles, of which the RSA-3 are believed to be licensed copies of the Jericho II/Shavit, and the RSA-4 that used part of these systems in their stack with a heavy first stage.  Subsequent to the declaration and disarming of the Nuclear programme of South Africa, the RSA series missiles were offered commercially as satellite launch vehicles, resulting in the advertised specifications becoming part of the public knowledge.  The civilian space launch version of the Jericho, the Shavit, has been studied in an air launched version piggybacked on a Boeing 747 similar to a US experimental launch of the Minuteman ICBM from a C-5 Galaxy.\n\nFri Norsk Scene: Fri Norsk Scene was a theatre group consisting of Norwegian actors residing as refugees in Sweden during World War II.  It was established in 1944, and was active until May 1945.  The group was led by Halfdan Christensen.  Among the theatre's productions were Ibsen's play \"The Master Builder\" (Norwegian: \"Bygmester Solness\" ), Bjørnson's \"Geografi og Kjærlighet\" and Arnulf Øverland's \"Venner\".\n\nHemming Halfdansson: Hemming Halfdansson (died 837) was \"of the Danish race, a most Christian leader\".  He was probably a son of Halfdan, a leading Dane who became a vassal of Charlemagne in 807.  He was probably related to the Danish royal family, as \"Hemming\" was one of their favoured names.  The onomastic evidence includes the Danish king Hemming I (reigned 810–12) and then a Hemming II, who was recalled to Denmark from Francia by his brothers Harald Klak and Reginfrid after Hemming I's death.  This Hemming was probably the same person as Hemming Halfdansson.  He probably soon returned to Francia, since there is no evidence of him in Danish politics after he and his brothers were driven out by the sons of Godfrid in 813.\n\nConsumer Credit Protection Act of 1968: The Consumer Credit Protection Act, is a United States law Pub.L.  90–321 , 82 Stat.  146 , enacted  29, 1968 , composed of several titles relating to consumer credit, mainly title I, the Truth in Lending Act, title II related to extortionate credit transactions, title III related to restrictions on wage garnishment, and title IV related to the National Commission on Consumer Finance.\n\nListed buildings in Whitegate and Marton: Whitegate and Marton is a civil parish in Cheshire West and Chester, England.  It contains 33 buildings that are recorded in the National Heritage List for England as designated listed buildings.  One of these, Vale Royal Abbey is listed at Grade II*, and the others are at Grade II.  The parish is almost entirely rural, and most of the listed buildings are domestic or related to farming.  The older houses and cottages are frequently wholly or partly timber-framed.  The River Weaver and the Weaver Navigation run through the parish, and some of the listed structures are related to these waterways.  Other listed buildings in the parish include ancient stones, monuments, structures related to Vale Royal Abbey, and St Mary's Church, Whitegate, its gatepiers, and its lychgate.\n\nList of AMD Phenom microprocessors: The AMD Phenom family is a 64-bit microprocessor family from AMD, based on the K10 microarchitecture.  It includes the Phenom II X6 hex-core series, Phenom X4 and Phenom II X4 quad-core series, Phenom X3 and Phenom II X3 tri-core series, and Phenom II X2 dual-core series.  Other related processors based on the K10 microarchitecture include the Athlon X2 \"Kuma\" processors, Athlon II processors, and various Opteron, Sempron, and Turion series.  The first Phenoms were released in November 2007.  An improved second generation was released in December 2008, named Phenom II.  Processors with an \"e\" following the model number (e.g., 245e) are low-power models, typically 45 W for Athlons, 65 W for Phenoms.\n\n1942–43 Coppa Italia: The 1942–43 Coppa Italia was the tenth edition of the tournament and the last before the suspension of football competitions in Italy due to World War II related events.  The Coppa Italia would have restored only several years later, in the summer of 1958.\n\nReginfrid: Reginfrid (or Ragnfrid) (died 814) was a co-King of Denmark from 812, when Hemming I died, to 813, when he and his brothers were ousted by the sons of a previous king, Gudfred.  He was probably a son of Halfdan, a Danish leader who became a vassal of Charlemagne in 807, and brother of Anulo (died 812), Hemming (died 837), and Harald Klak (died \"c\".  852).  He was probably also related to the Danish king he succeeded.\n\nFridlevus II: Fridleif (Ynglinga saga) was a son of Fróði of the Skjöldung (Scylding) lineage.  In that work he was the brother of Halfdan and the father of Áli the Strong.\n\nHalfdan: Halfdan (Old Norse: \"Halfdan\" , Old English: \"Healfdene\" , Medieval , Proto-Norse: \"*Halbadaniz\", \"half Dane\") was a late 5th and early 6th century legendary Danish king of the Scylding (Skjöldung) lineage, the son of king named Fróði in many accounts, noted mainly as the father to the two kings who succeeded him in the rule of Denmark, kings named Hroðgar and Halga in the Old English poem \"Beowulf\" and named Hróar and Helgi in Old Norse accounts.\n\nQuestion: How was Fridlevus II related to Halfdan?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_1_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the first person mentioned in the relationship.\"\n    },\n    \"person_2_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the second person mentioned in the relationship.\"\n    },\n    \"relationship_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of relationship between the two people.\"\n    },\n    \"source_of_relationship_information\": {\n      \"type\": \"string\",\n      \"description\": \"The specific source or work where the relationship is stated.\"\n    }\n  },\n  \"required\": [\n    \"person_1_name\",\n    \"person_2_name\",\n    \"relationship_type\",\n    \"source_of_relationship_information\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_1_name",
-    "person_2_name",
-    "relationship_type",
-    "source_of_relationship_information"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_1_name": {
+        "type": "string",
+        "description": "The name of the first person mentioned in the relationship."
+      },
+      "person_2_name": {
+        "type": "string",
+        "description": "The name of the second person mentioned in the relationship."
+      },
+      "relationship_type": {
+        "type": "string",
+        "description": "The type of relationship between the two people."
+      },
+      "source_of_relationship_information": {
+        "type": "string",
+        "description": "The specific source or work where the relationship is stated."
+      }
+    },
+    "required": [
+      "person_1_name",
+      "person_2_name",
+      "relationship_type",
+      "source_of_relationship_information"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,116 +1,93 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Family of Gediminas: The family of Gediminas is a group of family members of Gediminas, Grand Duke of Lithuania (ca. 1275–1341), who interacted in the 14th century.  The family included the siblings, children, and grandchildren of the Grand Duke and played the pivotal role in the history of Lithuania for the period as the Lithuanian nobility had not yet acquired its influence.  Gediminas was also the forefather of the Gediminid dynasty, which ruled the Grand Duchy of Lithuania from 1310s or 1280s to 1572.
-
-Book of Negroes: The Book of Negroes is a historical document that records names and descriptions of 3,000 Black Loyalists, the African-American slaves who escaped to the British lines during the American Revolution and were evacuated to points in Nova Scotia as free people of colour.
-
-Memecylaceae: Memecylaceae was a family of flowering plants.  The family included about 430 species of trees and shrubs in seven genera.  Memecylaceae are widespread in the tropics.  The family has now been included within the Melastomataceae under the APG III system of classification, When classified alone, this family included the following genera:
-
-The Ballads (group): The Ballads were an American vocal group formed in 1961 in Oakland.  Band members included Nathaniel Romerson, Jon Foster, Rico Thompson, and Lesley LaPalma.  The band had one hit single in 1968, entitled "God Bless Our Love".  This song reached #65 on the Billboard pop singles charts and #8 on the R&B Singles charts.  This song was picked by WDIA program director Bill Thomas as a "Biggest Leftfield Happening" in Billboard's programming aids.  The B side of this record was the song "My Baby Knows How to Love Her Man."  This record was released on Venture Records #615.
-
-Martín De León: Martín De León (1765–1833) was a rancher and wealthy Mexican empresario descended from Spanish aristocracy.  He was the patriarch of one of the prominent founding families of early Texas.  De León and his wife Patricia de la Garza established De León's Colony, the only predominantly Mexican colony in Texas.  They founded the town of Victoria, on the Guadalupe River, originally named "Villa de Nuestra Señora de Guadalupe Victoria Nombre de Jesús".  The name on the land grant acknowledged both the river and Mexico's president Guadalupe Victoria.  Martín's first career was as a supplier of basic necessities to Real de San Nicolás mine workers.  He joined the Fieles de Burgos regiment in 1790, being promoted to Captain.  The De León E–J (Espíritu de Jesús) cattle brand became the first registered brand in what was to become Texas.  The extended De León family included politicians and freedom fighters who helped alter the course of history both in Texas and in Mexico.  Recorded Texas Historic Landmark number 6542 placed at Evergreen Cemetery in 1936 acknowledges Don Martin de León's contribution to Texas.  Recorded Texas Historic Landmark number 6543 placed at Church and Bridge Streets in 1936 denotes Don Martin de León's home in Victoria.
-
-Ogle baronets: The Ogle Baronetcy, of Worthy, was a title in the Baronetage of the United Kingdom.  It was created on 12 March 1816 for Admiral Chaloner Ogle, of Kings Worthy, Hampshire.  The Ogles were a prominent Northumberland family from before the time of the Norman Conquest.  They settled at Ogle, Northumberland and in 1341 were granted licence to fortify their manor house, which became known as Ogle Castle.  In the 14th and 15th centuries the family included seven medieval Barons (see Baron Ogle).  Their estates including Ogle and Bothal Castle fell by marriage to the Cavendish family ( later Dukes of Portland) on the death of the 7th and last Baron, without male heir in 1597.
-
-Botrychiaceae: Botrychiaceae (moonwort family) was recognized as a segregate family of ferns.  The family included the genera "Botrychium" (the moonworts), "Botrypus" (the rattlesnake fern), and "Sceptridium" (the grape-ferns).  Older fern classifications took a broad circumscription of "Botrychium" and included the genus in family Ophioglossaceae.
-
-Hypsiprymnodontidae: The Hypsiprymnodontidae are a family of macropods, one of two families containing animals commonly referred to as rat-kangaroos.  The single known extant genus and species in this family, the musky rat-kangaroo, "Hypsiprymnodon moschatus", occurs in northern Australia.  During the Pleistocene, this family included the megafauna genus "propleopus".
-
-Vaez: The Vaez family was a prominent Jewish family of Lisbon, whose foremost members, the four brothers Immanuel, Pedro, Ayres, and Salvador, resided in Portugal as Marranos during the sixteenth century.  The family included several Jewish scholars and physicians for the royal family.
-
-Snowball family (Sierra Leone): The Snowball family was a prominent settler Creole family of Nova Scotian descent.  The Snowballs were originally African-American slaves from "Princess Ann County, Virginia" and were formerly the property of Richard Murray.  Nathaniel Snowball, who was the son of Violet Snowball and the brother of Mary Snowball, was only 12 years old when he was recorded in the Book of Negroes and described as a "fine boy.  Formerly the property of Richard Murray of Princess Ann County, Virginia; left him 7 years ago".  Nathaniel became a prominent settler and the patriarch of the Snowball family in Settler Town, Sierra Leone.
-
-Question: The Snowball family included Nathaniel, who was recorded in a document that held names and descriptions of what?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "family_name": {
-      "type": "string",
-      "description": "The name of the family mentioned in the context."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "individual_recorded": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the individual from the family who was recorded."
-        },
-        "document_recorded_in": {
-          "type": "string",
-          "description": "The name of the document in which the individual was recorded."
-        }
-      },
-      "required": [
-        "name",
-        "document_recorded_in"
-      ],
-      "additionalProperties": false
-    },
-    "document_details": {
-      "type": "object",
-      "properties": {
-        "document_name": {
-          "type": "string",
-          "description": "The name of the historical document."
-        },
-        "content_description": {
-          "type": "string",
-          "description": "A general description of what the document records."
-        },
-        "recorded_group": {
-          "type": "object",
-          "properties": {
-            "group_name": {
-              "type": "string",
-              "description": "The name of the group whose names and descriptions were recorded."
-            },
-            "number_of_individuals": {
-              "type": "integer",
-              "description": "The total number of individuals recorded in the document for this group."
-            },
-            "group_origin": {
-              "type": "string",
-              "description": "The original status or background of the group members."
-            },
-            "group_status_after_escape": {
-              "type": "string",
-              "description": "The status of the group members after their escape and evacuation."
-            }
-          },
-          "required": [
-            "group_name",
-            "number_of_individuals",
-            "group_origin",
-            "group_status_after_escape"
-          ],
-          "additionalProperties": false
-        }
-      },
-      "required": [
-        "document_name",
-        "content_description",
-        "recorded_group"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nFamily of Gediminas: The family of Gediminas is a group of family members of Gediminas, Grand Duke of Lithuania (ca. 1275–1341), who interacted in the 14th century.  The family included the siblings, children, and grandchildren of the Grand Duke and played the pivotal role in the history of Lithuania for the period as the Lithuanian nobility had not yet acquired its influence.  Gediminas was also the forefather of the Gediminid dynasty, which ruled the Grand Duchy of Lithuania from 1310s or 1280s to 1572.\n\nBook of Negroes: The Book of Negroes is a historical document that records names and descriptions of 3,000 Black Loyalists, the African-American slaves who escaped to the British lines during the American Revolution and were evacuated to points in Nova Scotia as free people of colour.\n\nMemecylaceae: Memecylaceae was a family of flowering plants.  The family included about 430 species of trees and shrubs in seven genera.  Memecylaceae are widespread in the tropics.  The family has now been included within the Melastomataceae under the APG III system of classification, When classified alone, this family included the following genera:\n\nThe Ballads (group): The Ballads were an American vocal group formed in 1961 in Oakland.  Band members included Nathaniel Romerson, Jon Foster, Rico Thompson, and Lesley LaPalma.  The band had one hit single in 1968, entitled \"God Bless Our Love\".  This song reached #65 on the Billboard pop singles charts and #8 on the R&B Singles charts.  This song was picked by WDIA program director Bill Thomas as a \"Biggest Leftfield Happening\" in Billboard's programming aids.  The B side of this record was the song \"My Baby Knows How to Love Her Man.\"  This record was released on Venture Records #615.\n\nMartín De León: Martín De León (1765–1833) was a rancher and wealthy Mexican empresario descended from Spanish aristocracy.  He was the patriarch of one of the prominent founding families of early Texas.  De León and his wife Patricia de la Garza established De León's Colony, the only predominantly Mexican colony in Texas.  They founded the town of Victoria, on the Guadalupe River, originally named \"Villa de Nuestra Señora de Guadalupe Victoria Nombre de Jesús\".  The name on the land grant acknowledged both the river and Mexico's president Guadalupe Victoria.  Martín's first career was as a supplier of basic necessities to Real de San Nicolás mine workers.  He joined the Fieles de Burgos regiment in 1790, being promoted to Captain.  The De León E–J (Espíritu de Jesús) cattle brand became the first registered brand in what was to become Texas.  The extended De León family included politicians and freedom fighters who helped alter the course of history both in Texas and in Mexico.  Recorded Texas Historic Landmark number 6542 placed at Evergreen Cemetery in 1936 acknowledges Don Martin de León's contribution to Texas.  Recorded Texas Historic Landmark number 6543 placed at Church and Bridge Streets in 1936 denotes Don Martin de León's home in Victoria.\n\nOgle baronets: The Ogle Baronetcy, of Worthy, was a title in the Baronetage of the United Kingdom.  It was created on 12 March 1816 for Admiral Chaloner Ogle, of Kings Worthy, Hampshire.  The Ogles were a prominent Northumberland family from before the time of the Norman Conquest.  They settled at Ogle, Northumberland and in 1341 were granted licence to fortify their manor house, which became known as Ogle Castle.  In the 14th and 15th centuries the family included seven medieval Barons (see Baron Ogle).  Their estates including Ogle and Bothal Castle fell by marriage to the Cavendish family ( later Dukes of Portland) on the death of the 7th and last Baron, without male heir in 1597.\n\nBotrychiaceae: Botrychiaceae (moonwort family) was recognized as a segregate family of ferns.  The family included the genera \"Botrychium\" (the moonworts), \"Botrypus\" (the rattlesnake fern), and \"Sceptridium\" (the grape-ferns).  Older fern classifications took a broad circumscription of \"Botrychium\" and included the genus in family Ophioglossaceae.\n\nHypsiprymnodontidae: The Hypsiprymnodontidae are a family of macropods, one of two families containing animals commonly referred to as rat-kangaroos.  The single known extant genus and species in this family, the musky rat-kangaroo, \"Hypsiprymnodon moschatus\", occurs in northern Australia.  During the Pleistocene, this family included the megafauna genus \"propleopus\".\n\nVaez: The Vaez family was a prominent Jewish family of Lisbon, whose foremost members, the four brothers Immanuel, Pedro, Ayres, and Salvador, resided in Portugal as Marranos during the sixteenth century.  The family included several Jewish scholars and physicians for the royal family.\n\nSnowball family (Sierra Leone): The Snowball family was a prominent settler Creole family of Nova Scotian descent.  The Snowballs were originally African-American slaves from \"Princess Ann County, Virginia\" and were formerly the property of Richard Murray.  Nathaniel Snowball, who was the son of Violet Snowball and the brother of Mary Snowball, was only 12 years old when he was recorded in the Book of Negroes and described as a \"fine boy.  Formerly the property of Richard Murray of Princess Ann County, Virginia; left him 7 years ago\".  Nathaniel became a prominent settler and the patriarch of the Snowball family in Settler Town, Sierra Leone.\n\nQuestion: The Snowball family included Nathaniel, who was recorded in a document that held names and descriptions of what?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"family_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the family mentioned in the context.\"\n    },\n    \"individual_recorded\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the individual from the family who was recorded.\"\n        },\n        \"document_recorded_in\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the document in which the individual was recorded.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"document_recorded_in\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"document_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"document_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the historical document.\"\n        },\n        \"content_description\": {\n          \"type\": \"string\",\n          \"description\": \"A general description of what the document records.\"\n        },\n        \"recorded_group\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"group_name\": {\n              \"type\": \"string\",\n              \"description\": \"The name of the group whose names and descriptions were recorded.\"\n            },\n            \"number_of_individuals\": {\n              \"type\": \"integer\",\n              \"description\": \"The total number of individuals recorded in the document for this group.\"\n            },\n            \"group_origin\": {\n              \"type\": \"string\",\n              \"description\": \"The original status or background of the group members.\"\n            },\n            \"group_status_after_escape\": {\n              \"type\": \"string\",\n              \"description\": \"The status of the group members after their escape and evacuation.\"\n            }\n          },\n          \"required\": [\n            \"group_name\",\n            \"number_of_individuals\",\n            \"group_origin\",\n            \"group_status_after_escape\"\n          ],\n          \"additionalProperties\": false\n        }\n      },\n      \"required\": [\n        \"document_name\",\n        \"content_description\",\n        \"recorded_group\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"family_name\",\n    \"individual_recorded\",\n    \"document_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "family_name",
-    "individual_recorded",
-    "document_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "family_name": {
+        "type": "string",
+        "description": "The name of the family mentioned in the context."
+      },
+      "individual_recorded": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the individual from the family who was recorded."
+          },
+          "document_recorded_in": {
+            "type": "string",
+            "description": "The name of the document in which the individual was recorded."
+          }
+        },
+        "required": [
+          "name",
+          "document_recorded_in"
+        ],
+        "additionalProperties": false
+      },
+      "document_details": {
+        "type": "object",
+        "properties": {
+          "document_name": {
+            "type": "string",
+            "description": "The name of the historical document."
+          },
+          "content_description": {
+            "type": "string",
+            "description": "A general description of what the document records."
+          },
+          "recorded_group": {
+            "type": "object",
+            "properties": {
+              "group_name": {
+                "type": "string",
+                "description": "The name of the group whose names and descriptions were recorded."
+              },
+              "number_of_individuals": {
+                "type": "integer",
+                "description": "The total number of individuals recorded in the document for this group."
+              },
+              "group_origin": {
+                "type": "string",
+                "description": "The original status or background of the group members."
+              },
+              "group_status_after_escape": {
+                "type": "string",
+                "description": "The status of the group members after their escape and evacuation."
+              }
+            },
+            "required": [
+              "group_name",
+              "number_of_individuals",
+              "group_origin",
+              "group_status_after_escape"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "document_name",
+          "content_description",
+          "recorded_group"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "family_name",
+      "individual_recorded",
+      "document_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

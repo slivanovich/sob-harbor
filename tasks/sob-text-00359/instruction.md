@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Yevgeny S. Levitin: Yevgeny S. Levitin (1930-1998) - art historian.  He worked at the Pushkin State Museum of Fine Arts in Moscow.  Author of the book "Modern graphics capitalist countries of Europe and America" (Wiley, 1959).  Levitin also compiled catalogs of exhibitions of contemporary artists of Switzerland, Brazil, Mexico and other countries.  He created the catalog "Lenin Prize winner, People's Artist of the USSR Vladimir Favorsky" (Wiley, 1964), prepared album "Rembrandt Harmens van Rijn, 1606-1669 and“Etchings" (L., 1972).  As well as albums dedicated to Western European drawings from Museum funds.  Levitin prepared an exhibition dedicated to Boris Pasternak (see Pasternak . : World / Comp Levitin M. et al., 1989.)  As well as the edition: Pasternak “Not I write poetry ...” Levitin also translated from foreign languages into Russian.  Nadezhda Mandelstam wrote about Levitin (without mentioning his name) as a "first messenger revival of the intelligentsia, which awakens, rewriting and reading poetry" (Mandelstam NY Memories M., 1999, pp 396.; cm.  and c. 391-393).  In her will Nadezhda Mandelstam mentioned Levitin among future guardians of Osip Mandelstam archive.  Levitin died in Jerusalem.
-
-Lenin Prize: The Lenin Prize (Russian: Ленинская премия , "Leninskaya premiya") was one of the most prestigious awards of the Soviet Union, presented to individuals for accomplishments relating to science, literature, arts, architecture, and technology.  It was created on June 23, 1925 and was awarded until 1934.  During the period from 1935 to 1956, the Lenin Prize was not awarded, being replaced largely by the Stalin Prize.  On August 15, 1956, it was reestablished, and continued to be awarded on every even-numbered year until 1990.  The award ceremony was April 22, Lenin's birthday.
-
-V Put: "V Put'" (Russian: В путь , English: Onwards, En route, Let's go ) is a song written in 1954 by Soviet composer Vasily Solovyov-Sedoi and poet Mikhail Dudin.  It was originally written for the film "Maxim Perepelitsa" starring Leonid Bykov.  The movie itself was released in 1955, and the song has achieved fame and popularity independently of it ever since.  To this day it is still used as a so-called "drill song" (somewhat similar to a cadence call in the US Army).  In 1959, Vasili Solovyov-Sedoy received the Lenin Prize for this song.
-
-State Prize of the Russian Federation: The State Prize of the Russian Federation (Russian: Государственная Премия Российской Федерации , "Gosudarstvennaya Premiya Rossiyskoy Federatsii"; official translation in Russia: Russian Federation National Award) is a state honorary prize established in 1992 as the successor for the USSR State Prize following the breakup of the Soviet Union.  In 2004 the rules for selection of laureates and the status of the award were significantly changed making them closer to such awards as the Nobel Prize or the Soviet Lenin Prize
-
-Lenin Peace Prize: The International Lenin Peace Prize (Russian: международная Ленинская премия мира , "mezhdunarodnaya Leninskaya premiya mira)" was a Soviet Union award named in honor of Vladimir Lenin.  It was awarded by a panel appointed by the Soviet government, to notable individuals whom the panel indicated had "strengthened peace among comrades".  It was founded as the International Stalin Prize for Strengthening Peace Among Peoples, but was renamed the International Lenin Prize for Strengthening Peace Among Peoples (Russian: Международная Ленинская премия «За укрепление мира между народами» , "Mezhdunarodnaya Leninskaya premiya «za ukrepleniye mira mezhdu narodami»" ) as a result of destalinization.  Unlike the Nobel Prize, the Lenin Peace Prize was usually awarded to several people a year rather than to just one individual.  The prize was mainly awarded to prominent Communists and supporters of the Soviet Union who were not Soviet citizens.  Notable recipients include: W. E. B. Du Bois, Fidel Castro, Salvador Allende, Mikis Theodorakis, Sean MacBride, Angela Davis, Pablo Picasso, Oscar Niemeyer, Faiz Ahmad Faiz, Abdul Sattar Edhi and Nelson Mandela.
-
-Rodion Shchedrin: Rodion Konstantinovich Shchedrin (Russian: Родио́н Константи́нович Щедри́н , "Rodion Konstantinovič Ščedrin", ] ; born 16 December 1932) is a Russian composer and pianist, winner of the Lenin Prize (1984), USSR State Prize (1972), and the State Prize of the Russian Federation (1992), and is a former member of the Interregional Deputy Group (1989–1991).  He is also a citizen of Lithuania and Spain.
-
-Vladimir Kleiman: Vladimir Leonidovich Kleiman (Russian: Владимир Леонидович Клейман ; November 11, 1930 - April 7, 2014) was a Soviet and Russian scientist and designer in the field of rocketry, Hero of Socialist Labor (1975), winner of the Lenin Prize (1964), USSR State Prize (1980), the USSR Council of Ministers Prize (1986).
-
-Isaak Kikoin: Isaak Konstantinovich Kikoin (Russian: Исаак Константинович Кикоин ) (March 28, 1908, Žagarė, Lithuania, Russian Empire – December 28, 1984, Moscow, USSR) was a leading Soviet physicist and academician of the Academy of Sciences of the USSR.  He was awarded the Stalin State Prize a total of four times (1942, 1949, 1951, 1953), the Lenin Prize in 1959, and the USSR State Prize in 1967 and 1980.  Kikoin was named a Hero of Socialist Labor (1951); he also won the Kurchatov Medal (1971).
-
-Mikhail Golant: Mikhail Borisovich Golant (Russian: Михаи́л Бори́сович Го́лант ; 3 February 1923 – 7 February 2001) was a Soviet and Russian scientist and engineer.  Best known as a leader of Soviet design of backward-wave tubes, he was awarded the Lenin Prize, the USSR State Prize, and the State Prize of the Russian Federation.  He worked with Nikolay Devyatkov on the application of EHF therapy.
-
-Nadezhda Agaltsova: Nadezhda Alekseyevna Agaltsova (Russian: Надежда Алексеевна Агальцова ; born 1938) is a Russian scientist, the Lenin Prize winner for participation in the development of wide-angle aerial survey lenses of the third, fourth and fifth generations for cartographic purposes.
-
-Question: On what day and month of the year did Nadezhda Alekseyevna Agaltsova receive the Lenin Prize?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "recipient_name": {
-      "type": "string",
-      "description": "The full name of the person who received the prize."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "prize_name": {
-      "type": "string",
-      "description": "The name of the prize awarded."
-    },
-    "award_date": {
-      "type": "string",
-      "description": "The day and month the prize was awarded, in 'Month Day' format."
-    },
-    "award_reason": {
-      "type": "string",
-      "description": "The specific accomplishment for which the prize was awarded."
+    {
+      "role": "user",
+      "content": "Context:\nYevgeny S. Levitin: Yevgeny S. Levitin (1930-1998) - art historian.  He worked at the Pushkin State Museum of Fine Arts in Moscow.  Author of the book \"Modern graphics capitalist countries of Europe and America\" (Wiley, 1959).  Levitin also compiled catalogs of exhibitions of contemporary artists of Switzerland, Brazil, Mexico and other countries.  He created the catalog \"Lenin Prize winner, People's Artist of the USSR Vladimir Favorsky\" (Wiley, 1964), prepared album \"Rembrandt Harmens van Rijn, 1606-1669 and“Etchings\" (L., 1972).  As well as albums dedicated to Western European drawings from Museum funds.  Levitin prepared an exhibition dedicated to Boris Pasternak (see Pasternak . : World / Comp Levitin M. et al., 1989.)  As well as the edition: Pasternak “Not I write poetry ...” Levitin also translated from foreign languages into Russian.  Nadezhda Mandelstam wrote about Levitin (without mentioning his name) as a \"first messenger revival of the intelligentsia, which awakens, rewriting and reading poetry\" (Mandelstam NY Memories M., 1999, pp 396.; cm.  and c. 391-393).  In her will Nadezhda Mandelstam mentioned Levitin among future guardians of Osip Mandelstam archive.  Levitin died in Jerusalem.\n\nLenin Prize: The Lenin Prize (Russian: Ленинская премия , \"Leninskaya premiya\") was one of the most prestigious awards of the Soviet Union, presented to individuals for accomplishments relating to science, literature, arts, architecture, and technology.  It was created on June 23, 1925 and was awarded until 1934.  During the period from 1935 to 1956, the Lenin Prize was not awarded, being replaced largely by the Stalin Prize.  On August 15, 1956, it was reestablished, and continued to be awarded on every even-numbered year until 1990.  The award ceremony was April 22, Lenin's birthday.\n\nV Put: \"V Put'\" (Russian: В путь , English: Onwards, En route, Let's go ) is a song written in 1954 by Soviet composer Vasily Solovyov-Sedoi and poet Mikhail Dudin.  It was originally written for the film \"Maxim Perepelitsa\" starring Leonid Bykov.  The movie itself was released in 1955, and the song has achieved fame and popularity independently of it ever since.  To this day it is still used as a so-called \"drill song\" (somewhat similar to a cadence call in the US Army).  In 1959, Vasili Solovyov-Sedoy received the Lenin Prize for this song.\n\nState Prize of the Russian Federation: The State Prize of the Russian Federation (Russian: Государственная Премия Российской Федерации , \"Gosudarstvennaya Premiya Rossiyskoy Federatsii\"; official translation in Russia: Russian Federation National Award) is a state honorary prize established in 1992 as the successor for the USSR State Prize following the breakup of the Soviet Union.  In 2004 the rules for selection of laureates and the status of the award were significantly changed making them closer to such awards as the Nobel Prize or the Soviet Lenin Prize\n\nLenin Peace Prize: The International Lenin Peace Prize (Russian: международная Ленинская премия мира , \"mezhdunarodnaya Leninskaya premiya mira)\" was a Soviet Union award named in honor of Vladimir Lenin.  It was awarded by a panel appointed by the Soviet government, to notable individuals whom the panel indicated had \"strengthened peace among comrades\".  It was founded as the International Stalin Prize for Strengthening Peace Among Peoples, but was renamed the International Lenin Prize for Strengthening Peace Among Peoples (Russian: Международная Ленинская премия «За укрепление мира между народами» , \"Mezhdunarodnaya Leninskaya premiya «za ukrepleniye mira mezhdu narodami»\" ) as a result of destalinization.  Unlike the Nobel Prize, the Lenin Peace Prize was usually awarded to several people a year rather than to just one individual.  The prize was mainly awarded to prominent Communists and supporters of the Soviet Union who were not Soviet citizens.  Notable recipients include: W. E. B. Du Bois, Fidel Castro, Salvador Allende, Mikis Theodorakis, Sean MacBride, Angela Davis, Pablo Picasso, Oscar Niemeyer, Faiz Ahmad Faiz, Abdul Sattar Edhi and Nelson Mandela.\n\nRodion Shchedrin: Rodion Konstantinovich Shchedrin (Russian: Родио́н Константи́нович Щедри́н , \"Rodion Konstantinovič Ščedrin\", ] ; born 16 December 1932) is a Russian composer and pianist, winner of the Lenin Prize (1984), USSR State Prize (1972), and the State Prize of the Russian Federation (1992), and is a former member of the Interregional Deputy Group (1989–1991).  He is also a citizen of Lithuania and Spain.\n\nVladimir Kleiman: Vladimir Leonidovich Kleiman (Russian: Владимир Леонидович Клейман ; November 11, 1930 - April 7, 2014) was a Soviet and Russian scientist and designer in the field of rocketry, Hero of Socialist Labor (1975), winner of the Lenin Prize (1964), USSR State Prize (1980), the USSR Council of Ministers Prize (1986).\n\nIsaak Kikoin: Isaak Konstantinovich Kikoin (Russian: Исаак Константинович Кикоин ) (March 28, 1908, Žagarė, Lithuania, Russian Empire – December 28, 1984, Moscow, USSR) was a leading Soviet physicist and academician of the Academy of Sciences of the USSR.  He was awarded the Stalin State Prize a total of four times (1942, 1949, 1951, 1953), the Lenin Prize in 1959, and the USSR State Prize in 1967 and 1980.  Kikoin was named a Hero of Socialist Labor (1951); he also won the Kurchatov Medal (1971).\n\nMikhail Golant: Mikhail Borisovich Golant (Russian: Михаи́л Бори́сович Го́лант ; 3 February 1923 – 7 February 2001) was a Soviet and Russian scientist and engineer.  Best known as a leader of Soviet design of backward-wave tubes, he was awarded the Lenin Prize, the USSR State Prize, and the State Prize of the Russian Federation.  He worked with Nikolay Devyatkov on the application of EHF therapy.\n\nNadezhda Agaltsova: Nadezhda Alekseyevna Agaltsova (Russian: Надежда Алексеевна Агальцова ; born 1938) is a Russian scientist, the Lenin Prize winner for participation in the development of wide-angle aerial survey lenses of the third, fourth and fifth generations for cartographic purposes.\n\nQuestion: On what day and month of the year did Nadezhda Alekseyevna Agaltsova receive the Lenin Prize?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"recipient_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the person who received the prize.\"\n    },\n    \"prize_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the prize awarded.\"\n    },\n    \"award_date\": {\n      \"type\": \"string\",\n      \"description\": \"The day and month the prize was awarded, in 'Month Day' format.\"\n    },\n    \"award_reason\": {\n      \"type\": \"string\",\n      \"description\": \"The specific accomplishment for which the prize was awarded.\"\n    }\n  },\n  \"required\": [\n    \"recipient_name\",\n    \"prize_name\",\n    \"award_date\",\n    \"award_reason\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "recipient_name",
-    "prize_name",
-    "award_date",
-    "award_reason"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "recipient_name": {
+        "type": "string",
+        "description": "The full name of the person who received the prize."
+      },
+      "prize_name": {
+        "type": "string",
+        "description": "The name of the prize awarded."
+      },
+      "award_date": {
+        "type": "string",
+        "description": "The day and month the prize was awarded, in 'Month Day' format."
+      },
+      "award_reason": {
+        "type": "string",
+        "description": "The specific accomplishment for which the prize was awarded."
+      }
+    },
+    "required": [
+      "recipient_name",
+      "prize_name",
+      "award_date",
+      "award_reason"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

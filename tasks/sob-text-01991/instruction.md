@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Inkerman, Renfrewshire: Inkerman was a small hamlet set up in 1858 in the Abbey Parish of Paisley to house ironstone miners.  Later employment came from ancillary operations, including shale coal and oilworks.  There were seven pits in all in Inkerman.  The hamlet was named after a recent (1854) British military victory, the Battle of Inkerman, in the Crimean War.  Similarly, the nearby Balaklava settlement housed miners for the "Clippens" mines (now in Linwood) from 1855.  The hamlet of "Redan" was named to commemorate the storming of the fortifications - Redan - in the Siege of Sevastopol (1854–1855).  The miners from these settlements had their own rivalries.  On Saturday 12 July 1859 the miners from "The Redan" in Linwood, on one side of the The Black Cart Water, and their rivals from "Inkerman", on the other side, met in the (grandly called) "Battle of Linwood Bridge".  (The bridge is still there at the end of "Bridge Street, Linwood").  The men were armed with various weapons such as mining tools, swords and cudgels.  A bloody battle was fought resulting in the death of one man and several others were badly injured
-
-Khoon Ka Khoon: Khoon Ka Khoon (Blood for Blood) also called Hamlet is the first Hindi/Urdu 1935 sound film adaptation of a Shakespeare play.  Directed by Sohrab Modi under his Stage Film Company banner, it is cited as one of the earliest talkie versions of this play.  Credited as "the man who brought Shakespeare to the Indian screen", it was Modi's debut feature film as a director.  The story and script were by Mehdi Hassan Ahsan from his Urdu adaptation of Shakespeare's "Hamlet".  Starring Sohrab Modi, "Khoon Ka Khoon" was also the debut in films of Naseem Banu who played Ophelia.  The other star cast included Shamshadbai, Ghulam Hussain, Obali Mai, Fazal Karim and Eruch Tarapore.
-
-Brave New World (1980 film): Brave New World is an American television film first shown in 1980.  It was also shown on the BBC that same year.  An adaptation of the novel with the same name by Aldous Huxley, it was directed by Burt Brinckerhoff for Universal Television and first shown on NBC on 7 March 1980.  The screen adaptation was written by Doran William Cannon.  The filming location was entirely in Universal City, California.
-
-Middle-earth in film: J. R. R. Tolkien's novels "The Hobbit" and "The Lord of the Rings", set in Middle-earth, have been the subject of various film adaptations.  There were many early failed attempts to bring the fictional universe to life in screen, some even rejected by the author himself.  The first depictions of Middle-earth on film were realized in 1966 as a short cartoon film.  In 1978 the first big screen adaptation of the fictional setting was introduced in "The Lord of the Rings".  The story was more or less completed with the animated television special "The Return of the King".  In 1985, Middle-earth was depicted in a live-action film for the first time by an adaptation produced in the Soviet Union.  In 1993, a live-action television miniseries titled "Hobitit" was aired by the Finnish broadcaster Yle.
-
-Kill the Poor (film): Kill the Poor is director Alan Taylor's screen adaptation of a novel by Joel Rose.  The film is set in Manhattan's Alphabet City in the early 1980s, when the neighborhood was a center of illegal drug activity.  The film's title comes from the Dead Kennedys song "Kill the Poor".
-
-Hamlet (2000 film): Hamlet, also known as Hamlet 2000, is a 2000 American drama film written and directed by Michael Almereyda, set in contemporary New York City, and based on the Shakespeare play of the same name.  Ethan Hawke plays Hamlet as a film student, Kyle MacLachlan co-stars as Uncle Claudius, with Diane Venora as Gertrude, Liev Schreiber as Laertes, Julia Stiles as Ophelia, Steve Zahn as Rosencrantz, Bill Murray as Polonius, and Sam Shepard as Hamlet's father.
-
-Hamlet on screen: Over fifty films of William Shakespeare's "Hamlet" have been made since 1900.  Seven post-war "Hamlet" films have had a theatrical release: Laurence Olivier's "Hamlet" of 1948; Grigori Kozintsev's 1964 Russian adaptation; a film of the John Gielgud-directed 1964 Broadway production, "Richard Burton's Hamlet", which played limited engagements that same year; Tony Richardson's 1969 version (the first in colour) featuring Nicol Williamson as Hamlet and Anthony Hopkins as Claudius; Franco Zeffirelli's 1990 version starring Mel Gibson; Kenneth Branagh's full-text 1996 version; and Michael Almereyda's 2000 modernisation, starring Ethan Hawke.
-
-Heart of Darkness (1993 film): Heart of Darkness is a 1993 television adaptation of Joseph Conrad’s famous novella written by Benedict Fitzgerald, directed by Nicolas Roeg, and starring Tim Roth, John Malkovich, Isaach De Bankolé and James Fox.  The show is the third screen adaptation of the novella, following a 1958 television adaptation for the anthology series "Playhouse 90" starring Boris Karloff, and 1979's "Apocalypse Now" with Marlon Brando, which loosely adapted it and updated it to the Vietnam War.
-
-Marat/Sade (film): The Persecution and Assassination of Jean-Paul Marat as Performed by the Inmates of the Asylum of Charenton Under the Direction of the Marquis de Sade, usually shortened to Marat/Sade (] ), is a 1967 British film adaptation of Peter Weiss' play "Marat/Sade".  The screen adaptation is directed by Peter Brook, and originated in his theatre production for the Royal Shakespeare Company.  The English version was written by Adrian Mitchell from a translation by Geoffrey Skelton.
-
-Bombaiyer Bombete (film): Bombaiyer Bombete (Bengali: বোম্বাইয়ের বোম্বে ) is a 2003 Indian Bengali thriller film directed by Sandip Ray based on the story of the same name by Satyajit Ray.  It was the third big screen adaptation of the fictional detective character Feluda after 25 years of the second Feluda movie "Joi Baba Felunath" (1979), directed by his (Sandip Ray) father Satyajit Ray.  It was the first big screen adaptation of the Feluda new film series (Continuation of the original series) though Sabyasachi played Feluda in all the ten TV films of Feluda TV film series (1996-2000) directed by Sandip Ray.  The movie was a sequel to the Feluda TV film series (1996-2000) which was a sequel to the Satyajit Ray's Feluda film series (1974-1979).  Previously Feluda was played by Soumitra Chatterjee in two films "Sonar Kella" (1974) and "Joi Baba Felunath" (1979), directed by Satyajit Ray.  First of the Feluda TV film series, "Baksho Rahashya" (1996) in which Sabyasachi Chakrabarty starred as Feluda for the first time, was released in theaters before releasing this movie in 2001.  "Bombaiyer Bombete" was the eleventh film of Sabyasachi Chakrabarty as Feluda.  After the huge success of "Bombaiyer Bombete" four sequels have been made till 2011.  They are "Kailashey Kelenkari" (2007), "Tintorettor Jishu" (2008), "Gorosthaney Sabdhan" (2010) and "Royal Bengal Rohosso" (2011).  A fifth sequel is announced by Sandip Ray where Sabyasachi Chakrabarty will return as the Bengali sleuth Feluda after five years and the film is named "Double Feluda" which is heading to release in 2016.
-
-Question: In which city was the latest screen adaptation of Shakespeare's "Hamlet set?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film adaptation."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "release_year": {
-      "type": "integer",
-      "description": "The release year of the film."
-    },
-    "director": {
-      "type": "string",
-      "description": "The director of the film."
-    },
-    "setting_city": {
-      "type": "string",
-      "description": "The city where the film was set."
-    },
-    "original_play": {
-      "type": "string",
-      "description": "The original play that was adapted."
+    {
+      "role": "user",
+      "content": "Context:\nInkerman, Renfrewshire: Inkerman was a small hamlet set up in 1858 in the Abbey Parish of Paisley to house ironstone miners.  Later employment came from ancillary operations, including shale coal and oilworks.  There were seven pits in all in Inkerman.  The hamlet was named after a recent (1854) British military victory, the Battle of Inkerman, in the Crimean War.  Similarly, the nearby Balaklava settlement housed miners for the \"Clippens\" mines (now in Linwood) from 1855.  The hamlet of \"Redan\" was named to commemorate the storming of the fortifications - Redan - in the Siege of Sevastopol (1854–1855).  The miners from these settlements had their own rivalries.  On Saturday 12 July 1859 the miners from \"The Redan\" in Linwood, on one side of the The Black Cart Water, and their rivals from \"Inkerman\", on the other side, met in the (grandly called) \"Battle of Linwood Bridge\".  (The bridge is still there at the end of \"Bridge Street, Linwood\").  The men were armed with various weapons such as mining tools, swords and cudgels.  A bloody battle was fought resulting in the death of one man and several others were badly injured\n\nKhoon Ka Khoon: Khoon Ka Khoon (Blood for Blood) also called Hamlet is the first Hindi/Urdu 1935 sound film adaptation of a Shakespeare play.  Directed by Sohrab Modi under his Stage Film Company banner, it is cited as one of the earliest talkie versions of this play.  Credited as \"the man who brought Shakespeare to the Indian screen\", it was Modi's debut feature film as a director.  The story and script were by Mehdi Hassan Ahsan from his Urdu adaptation of Shakespeare's \"Hamlet\".  Starring Sohrab Modi, \"Khoon Ka Khoon\" was also the debut in films of Naseem Banu who played Ophelia.  The other star cast included Shamshadbai, Ghulam Hussain, Obali Mai, Fazal Karim and Eruch Tarapore.\n\nBrave New World (1980 film): Brave New World is an American television film first shown in 1980.  It was also shown on the BBC that same year.  An adaptation of the novel with the same name by Aldous Huxley, it was directed by Burt Brinckerhoff for Universal Television and first shown on NBC on 7 March 1980.  The screen adaptation was written by Doran William Cannon.  The filming location was entirely in Universal City, California.\n\nMiddle-earth in film: J. R. R. Tolkien's novels \"The Hobbit\" and \"The Lord of the Rings\", set in Middle-earth, have been the subject of various film adaptations.  There were many early failed attempts to bring the fictional universe to life in screen, some even rejected by the author himself.  The first depictions of Middle-earth on film were realized in 1966 as a short cartoon film.  In 1978 the first big screen adaptation of the fictional setting was introduced in \"The Lord of the Rings\".  The story was more or less completed with the animated television special \"The Return of the King\".  In 1985, Middle-earth was depicted in a live-action film for the first time by an adaptation produced in the Soviet Union.  In 1993, a live-action television miniseries titled \"Hobitit\" was aired by the Finnish broadcaster Yle.\n\nKill the Poor (film): Kill the Poor is director Alan Taylor's screen adaptation of a novel by Joel Rose.  The film is set in Manhattan's Alphabet City in the early 1980s, when the neighborhood was a center of illegal drug activity.  The film's title comes from the Dead Kennedys song \"Kill the Poor\".\n\nHamlet (2000 film): Hamlet, also known as Hamlet 2000, is a 2000 American drama film written and directed by Michael Almereyda, set in contemporary New York City, and based on the Shakespeare play of the same name.  Ethan Hawke plays Hamlet as a film student, Kyle MacLachlan co-stars as Uncle Claudius, with Diane Venora as Gertrude, Liev Schreiber as Laertes, Julia Stiles as Ophelia, Steve Zahn as Rosencrantz, Bill Murray as Polonius, and Sam Shepard as Hamlet's father.\n\nHamlet on screen: Over fifty films of William Shakespeare's \"Hamlet\" have been made since 1900.  Seven post-war \"Hamlet\" films have had a theatrical release: Laurence Olivier's \"Hamlet\" of 1948; Grigori Kozintsev's 1964 Russian adaptation; a film of the John Gielgud-directed 1964 Broadway production, \"Richard Burton's Hamlet\", which played limited engagements that same year; Tony Richardson's 1969 version (the first in colour) featuring Nicol Williamson as Hamlet and Anthony Hopkins as Claudius; Franco Zeffirelli's 1990 version starring Mel Gibson; Kenneth Branagh's full-text 1996 version; and Michael Almereyda's 2000 modernisation, starring Ethan Hawke.\n\nHeart of Darkness (1993 film): Heart of Darkness is a 1993 television adaptation of Joseph Conrad’s famous novella written by Benedict Fitzgerald, directed by Nicolas Roeg, and starring Tim Roth, John Malkovich, Isaach De Bankolé and James Fox.  The show is the third screen adaptation of the novella, following a 1958 television adaptation for the anthology series \"Playhouse 90\" starring Boris Karloff, and 1979's \"Apocalypse Now\" with Marlon Brando, which loosely adapted it and updated it to the Vietnam War.\n\nMarat/Sade (film): The Persecution and Assassination of Jean-Paul Marat as Performed by the Inmates of the Asylum of Charenton Under the Direction of the Marquis de Sade, usually shortened to Marat/Sade (] ), is a 1967 British film adaptation of Peter Weiss' play \"Marat/Sade\".  The screen adaptation is directed by Peter Brook, and originated in his theatre production for the Royal Shakespeare Company.  The English version was written by Adrian Mitchell from a translation by Geoffrey Skelton.\n\nBombaiyer Bombete (film): Bombaiyer Bombete (Bengali: বোম্বাইয়ের বোম্বে ) is a 2003 Indian Bengali thriller film directed by Sandip Ray based on the story of the same name by Satyajit Ray.  It was the third big screen adaptation of the fictional detective character Feluda after 25 years of the second Feluda movie \"Joi Baba Felunath\" (1979), directed by his (Sandip Ray) father Satyajit Ray.  It was the first big screen adaptation of the Feluda new film series (Continuation of the original series) though Sabyasachi played Feluda in all the ten TV films of Feluda TV film series (1996-2000) directed by Sandip Ray.  The movie was a sequel to the Feluda TV film series (1996-2000) which was a sequel to the Satyajit Ray's Feluda film series (1974-1979).  Previously Feluda was played by Soumitra Chatterjee in two films \"Sonar Kella\" (1974) and \"Joi Baba Felunath\" (1979), directed by Satyajit Ray.  First of the Feluda TV film series, \"Baksho Rahashya\" (1996) in which Sabyasachi Chakrabarty starred as Feluda for the first time, was released in theaters before releasing this movie in 2001.  \"Bombaiyer Bombete\" was the eleventh film of Sabyasachi Chakrabarty as Feluda.  After the huge success of \"Bombaiyer Bombete\" four sequels have been made till 2011.  They are \"Kailashey Kelenkari\" (2007), \"Tintorettor Jishu\" (2008), \"Gorosthaney Sabdhan\" (2010) and \"Royal Bengal Rohosso\" (2011).  A fifth sequel is announced by Sandip Ray where Sabyasachi Chakrabarty will return as the Bengali sleuth Feluda after five years and the film is named \"Double Feluda\" which is heading to release in 2016.\n\nQuestion: In which city was the latest screen adaptation of Shakespeare's \"Hamlet set?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film adaptation.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film.\"\n    },\n    \"director\": {\n      \"type\": \"string\",\n      \"description\": \"The director of the film.\"\n    },\n    \"setting_city\": {\n      \"type\": \"string\",\n      \"description\": \"The city where the film was set.\"\n    },\n    \"original_play\": {\n      \"type\": \"string\",\n      \"description\": \"The original play that was adapted.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"release_year\",\n    \"director\",\n    \"setting_city\",\n    \"original_play\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "release_year",
-    "director",
-    "setting_city",
-    "original_play"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film adaptation."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The release year of the film."
+      },
+      "director": {
+        "type": "string",
+        "description": "The director of the film."
+      },
+      "setting_city": {
+        "type": "string",
+        "description": "The city where the film was set."
+      },
+      "original_play": {
+        "type": "string",
+        "description": "The original play that was adapted."
+      }
+    },
+    "required": [
+      "film_title",
+      "release_year",
+      "director",
+      "setting_city",
+      "original_play"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

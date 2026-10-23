@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Daniel J. Jones: Daniel J. Jones is President of the Penn Quarter Group, a research investigative advisory based in Washington, D.C.  He previously worked as a researcher and investigator for the U.S. Senate and the U.S. Federal Bureau of Investigation (FBI).  As a staff member of the U.S. Senate Select Committee on Intelligence, he led several prominent investigations, including the largest investigative review in U.S. Senate history, The Committee Study of the Central Intelligence Agency's Detention and Interrogation Program (aka, the Senate Torture Report).  The investigation, which was based on more than 6.3 million pages of classified documents, was described by the "Los Angeles Times" as the "most extensive review of U.S. intelligence-gathering tactics in generations..." Jones was the subject of a three-part series in "The Guardian" in September 2016.
-
-Church Committee: The Church Committee was the United States Senate Select Committee to Study Governmental Operations with Respect to Intelligence Activities, a U.S. Senate committee chaired by Idaho Senator Frank Church (D-ID) in 1975.  The committee investigated abuses by the Central Intelligence Agency (CIA), National Security Agency (NSA), Federal Bureau of Investigation (FBI), and the Internal Revenue Service (IRS).  The committee was part of a series of investigations into intelligence abuses during the mid-1970s, including the Watergate Hearings, the Rockefeller Commission, and the Pike Committee.  One result of the committee's efforts was the establishment of the permanent U.S. Senate Select Committee on Intelligence.
-
-Saddam Hussein and al-Qaeda link allegations: Saddam Hussein and al-Qaeda link allegations were made by the U.S. government officials who claimed that a highly secretive relationship existed between former Iraqi President Saddam Hussein and the radical Islamist militant organization Al-Qaeda from 1992 to 2003, specifically through a series of meetings reportedly involving the Iraqi Intelligence Service (IIS).  In the lead up to the Iraq War, U.S. President George W. Bush alleged that Iraqi President Saddam Hussein and militant group al-Qaeda might conspire to launch terrorist attacks on the United States, basing the administration's rationale for war, in part, on this allegation .  The consensus of intelligence experts has been that these contacts never led to an operational relationship, and that consensus is backed up by reports from the independent 9/11 Commission and by declassified Defense Department reports as well as by the Senate Select Committee on Intelligence, whose 2006 report of Phase II of its investigation into prewar intelligence reports concluded that there was no evidence of ties between Saddam Hussein and al-Qaeda.  Critics of the Bush Administration have said Bush was intentionally building a case for war with Iraq without regard to factual evidence.  On April 29, 2007, former Director of Central Intelligence George Tenet said on "60 Minutes", "We could never verify that there was any Iraqi authority, direction and control, complicity with al-Qaeda for 9/11 or any operational act against America, period."
-
-The 28 Pages: The 28 Pages refers to a section at the end of the December 2002 report of the Joint Inquiry into Intelligence Community Activities before and after the Terrorist Attacks of September 11, 2001, conducted by the Senate Select Committee on Intelligence and the House Permanent Select Committee on Intelligence that contains details of foreign state sponsor support for Al-Qaeda prior to the attack and the Saudi connection to the hijackers.  The pages explain that some of the September 11 hijackers received assistance and financial support from individuals connected to the Saudi Arabian government, including Saudi intelligence officers, embassy staff, and members of the Saudi royal family.
-
-Intelligence Oversight Act: The Intelligence Oversight Act of 1980 is a United States federal law that amended the Hughes–Ryan Act and requires United States government agencies to report covert actions to the House Permanent Select Committee on Intelligence (HPSCI) and the Senate Select Committee on Intelligence (SSCI).  The previous requirement to notify six to eight other committees was eliminated.
-
-Senate Report on Pre-war Intelligence on Iraq: The Senate Report on Iraqi WMD Intelligence (formally, the "Report of the Select Committee on Intelligence on the U.S. Intelligence Community's Prewar Intelligence Assessments on Iraq") was the report by the United States Senate Select Committee on Intelligence concerning the U.S. intelligence community's assessments of Iraq during the time leading up to the 2003 invasion of Iraq.  The report, which was released on July 9, 2004, identified numerous failures in the intelligence-gathering and -analysis process.  The report found that these failures led to the creation of inaccurate materials that misled both government policy makers and the American public.
-
-Oklahoma Housing Finance Agency: The Oklahoma Housing Finance Agency (OHFA) is a non-profit organization which serves the people of Oklahoma by offering affordable housing resources, including loans and rent assistance.  OHFA was created in 1975 when Governor of Oklahoma David L. Boren approved the agency's first trust indenture.  OHFA is a public trust with the State of Oklahoma as the beneficiary.  The Trust was established to better the housing stock and the housing conditions in the State of Oklahoma and administers the Section 8 housing program for the State.
-
-David L. Boren: David Lyle Boren (born April 21, 1941) is an American university administrator and politician from the state of Oklahoma.  A member of the Democratic Party, he served as the 21st governor of Oklahoma from 1975 to 1979 and in the United States Senate from 1979 to 1994.  He is currently the 13th president of the University of Oklahoma.  He was the longest serving chairman of the Senate Select Committee on Intelligence.  David Boren officially announced his retirement as president of the University of Oklahoma, effective June 30, 2018.
-
-Chris Rector: Christopher W. Rector (born July 12, 1951) is an American politician and entrepreneur.  Rector served as a Republican State Senator from Maine's 22nd District, representing much of Knox County, including Rockland and his residence in Thomaston.  He graduated from the Boston University College of General Studies and earned a B.A. from the University of Southern Maine.  He attended the Kennedy School of Government at Harvard University in 2006 on a Brooks Fellowship.  He served in the Maine House of Representatives from 2002-2006.  He served as Chairman of the Joint Standing Committee on Labor, Commerce, Research and Economic Development, and also served on the Joint Standing Committee on Energy, Utilities and Technology and Joint Select Committee on Regulatory Reform.  He serves on the Community Preservation Advisory Committee, the Maine Economic Growth Council, and the board of the Maine Compact for Higher Education.  He is co-chair of Maine Solutions, a consensus building training and facilitation group for legislators and public officials.  He helped to develop the Midcoast Leadership Academy which is offered classes in leadership development.  He was appointed to and has served on the Joint Select Committee on Research, Development and the Innovation Economy in the summer of 2006 the Joint Select Committee on Prosperity in the summer of 2007, and the Joint Select Committee on Maine's Energy Future in the winter of 2009.
-
-United States Senate Select Committee on Ethics: The U.S. Senate Select Committee on Ethics is a select committee of the United States Senate charged with dealing with matters related to senatorial ethics.  It is also commonly referred to as the Senate Ethics Committee.  Senate rules require the Ethics Committee to be evenly divided between the Democrats and the Republicans, no matter who controls the Senate, although the chairman always comes from the majority party.
-
-Question: This person founded the OHFA and was both governor Oklahoma and later the Senate Select Committee on Intelligence chairman?  
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The full name of the individual."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "governor_of_state": {
-      "type": "string",
-      "description": "The state for which the person served as governor."
-    },
-    "senate_committee_chaired": {
-      "type": "string",
-      "description": "The name of the Senate committee the person chaired."
-    },
-    "founded_organization_details": {
-      "type": "object",
-      "properties": {
-        "organization_name": {
-          "type": "string",
-          "description": "The name of the organization founded or established by the person."
-        },
-        "founding_year": {
-          "type": "integer",
-          "description": "The year the organization was created or its first trust indenture approved."
-        }
-      },
-      "required": [
-        "organization_name",
-        "founding_year"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nDaniel J. Jones: Daniel J. Jones is President of the Penn Quarter Group, a research investigative advisory based in Washington, D.C.  He previously worked as a researcher and investigator for the U.S. Senate and the U.S. Federal Bureau of Investigation (FBI).  As a staff member of the U.S. Senate Select Committee on Intelligence, he led several prominent investigations, including the largest investigative review in U.S. Senate history, The Committee Study of the Central Intelligence Agency's Detention and Interrogation Program (aka, the Senate Torture Report).  The investigation, which was based on more than 6.3 million pages of classified documents, was described by the \"Los Angeles Times\" as the \"most extensive review of U.S. intelligence-gathering tactics in generations...\" Jones was the subject of a three-part series in \"The Guardian\" in September 2016.\n\nChurch Committee: The Church Committee was the United States Senate Select Committee to Study Governmental Operations with Respect to Intelligence Activities, a U.S. Senate committee chaired by Idaho Senator Frank Church (D-ID) in 1975.  The committee investigated abuses by the Central Intelligence Agency (CIA), National Security Agency (NSA), Federal Bureau of Investigation (FBI), and the Internal Revenue Service (IRS).  The committee was part of a series of investigations into intelligence abuses during the mid-1970s, including the Watergate Hearings, the Rockefeller Commission, and the Pike Committee.  One result of the committee's efforts was the establishment of the permanent U.S. Senate Select Committee on Intelligence.\n\nSaddam Hussein and al-Qaeda link allegations: Saddam Hussein and al-Qaeda link allegations were made by the U.S. government officials who claimed that a highly secretive relationship existed between former Iraqi President Saddam Hussein and the radical Islamist militant organization Al-Qaeda from 1992 to 2003, specifically through a series of meetings reportedly involving the Iraqi Intelligence Service (IIS).  In the lead up to the Iraq War, U.S. President George W. Bush alleged that Iraqi President Saddam Hussein and militant group al-Qaeda might conspire to launch terrorist attacks on the United States, basing the administration's rationale for war, in part, on this allegation .  The consensus of intelligence experts has been that these contacts never led to an operational relationship, and that consensus is backed up by reports from the independent 9/11 Commission and by declassified Defense Department reports as well as by the Senate Select Committee on Intelligence, whose 2006 report of Phase II of its investigation into prewar intelligence reports concluded that there was no evidence of ties between Saddam Hussein and al-Qaeda.  Critics of the Bush Administration have said Bush was intentionally building a case for war with Iraq without regard to factual evidence.  On April 29, 2007, former Director of Central Intelligence George Tenet said on \"60 Minutes\", \"We could never verify that there was any Iraqi authority, direction and control, complicity with al-Qaeda for 9/11 or any operational act against America, period.\"\n\nThe 28 Pages: The 28 Pages refers to a section at the end of the December 2002 report of the Joint Inquiry into Intelligence Community Activities before and after the Terrorist Attacks of September 11, 2001, conducted by the Senate Select Committee on Intelligence and the House Permanent Select Committee on Intelligence that contains details of foreign state sponsor support for Al-Qaeda prior to the attack and the Saudi connection to the hijackers.  The pages explain that some of the September 11 hijackers received assistance and financial support from individuals connected to the Saudi Arabian government, including Saudi intelligence officers, embassy staff, and members of the Saudi royal family.\n\nIntelligence Oversight Act: The Intelligence Oversight Act of 1980 is a United States federal law that amended the Hughes–Ryan Act and requires United States government agencies to report covert actions to the House Permanent Select Committee on Intelligence (HPSCI) and the Senate Select Committee on Intelligence (SSCI).  The previous requirement to notify six to eight other committees was eliminated.\n\nSenate Report on Pre-war Intelligence on Iraq: The Senate Report on Iraqi WMD Intelligence (formally, the \"Report of the Select Committee on Intelligence on the U.S. Intelligence Community's Prewar Intelligence Assessments on Iraq\") was the report by the United States Senate Select Committee on Intelligence concerning the U.S. intelligence community's assessments of Iraq during the time leading up to the 2003 invasion of Iraq.  The report, which was released on July 9, 2004, identified numerous failures in the intelligence-gathering and -analysis process.  The report found that these failures led to the creation of inaccurate materials that misled both government policy makers and the American public.\n\nOklahoma Housing Finance Agency: The Oklahoma Housing Finance Agency (OHFA) is a non-profit organization which serves the people of Oklahoma by offering affordable housing resources, including loans and rent assistance.  OHFA was created in 1975 when Governor of Oklahoma David L. Boren approved the agency's first trust indenture.  OHFA is a public trust with the State of Oklahoma as the beneficiary.  The Trust was established to better the housing stock and the housing conditions in the State of Oklahoma and administers the Section 8 housing program for the State.\n\nDavid L. Boren: David Lyle Boren (born April 21, 1941) is an American university administrator and politician from the state of Oklahoma.  A member of the Democratic Party, he served as the 21st governor of Oklahoma from 1975 to 1979 and in the United States Senate from 1979 to 1994.  He is currently the 13th president of the University of Oklahoma.  He was the longest serving chairman of the Senate Select Committee on Intelligence.  David Boren officially announced his retirement as president of the University of Oklahoma, effective June 30, 2018.\n\nChris Rector: Christopher W. Rector (born July 12, 1951) is an American politician and entrepreneur.  Rector served as a Republican State Senator from Maine's 22nd District, representing much of Knox County, including Rockland and his residence in Thomaston.  He graduated from the Boston University College of General Studies and earned a B.A. from the University of Southern Maine.  He attended the Kennedy School of Government at Harvard University in 2006 on a Brooks Fellowship.  He served in the Maine House of Representatives from 2002-2006.  He served as Chairman of the Joint Standing Committee on Labor, Commerce, Research and Economic Development, and also served on the Joint Standing Committee on Energy, Utilities and Technology and Joint Select Committee on Regulatory Reform.  He serves on the Community Preservation Advisory Committee, the Maine Economic Growth Council, and the board of the Maine Compact for Higher Education.  He is co-chair of Maine Solutions, a consensus building training and facilitation group for legislators and public officials.  He helped to develop the Midcoast Leadership Academy which is offered classes in leadership development.  He was appointed to and has served on the Joint Select Committee on Research, Development and the Innovation Economy in the summer of 2006 the Joint Select Committee on Prosperity in the summer of 2007, and the Joint Select Committee on Maine's Energy Future in the winter of 2009.\n\nUnited States Senate Select Committee on Ethics: The U.S. Senate Select Committee on Ethics is a select committee of the United States Senate charged with dealing with matters related to senatorial ethics.  It is also commonly referred to as the Senate Ethics Committee.  Senate rules require the Ethics Committee to be evenly divided between the Democrats and the Republicans, no matter who controls the Senate, although the chairman always comes from the majority party.\n\nQuestion: This person founded the OHFA and was both governor Oklahoma and later the Senate Select Committee on Intelligence chairman?  \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the individual.\"\n    },\n    \"governor_of_state\": {\n      \"type\": \"string\",\n      \"description\": \"The state for which the person served as governor.\"\n    },\n    \"senate_committee_chaired\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Senate committee the person chaired.\"\n    },\n    \"founded_organization_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"organization_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the organization founded or established by the person.\"\n        },\n        \"founding_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the organization was created or its first trust indenture approved.\"\n        }\n      },\n      \"required\": [\n        \"organization_name\",\n        \"founding_year\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"governor_of_state\",\n    \"senate_committee_chaired\",\n    \"founded_organization_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "governor_of_state",
-    "senate_committee_chaired",
-    "founded_organization_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The full name of the individual."
+      },
+      "governor_of_state": {
+        "type": "string",
+        "description": "The state for which the person served as governor."
+      },
+      "senate_committee_chaired": {
+        "type": "string",
+        "description": "The name of the Senate committee the person chaired."
+      },
+      "founded_organization_details": {
+        "type": "object",
+        "properties": {
+          "organization_name": {
+            "type": "string",
+            "description": "The name of the organization founded or established by the person."
+          },
+          "founding_year": {
+            "type": "integer",
+            "description": "The year the organization was created or its first trust indenture approved."
+          }
+        },
+        "required": [
+          "organization_name",
+          "founding_year"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "person_name",
+      "governor_of_state",
+      "senate_committee_chaired",
+      "founded_organization_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

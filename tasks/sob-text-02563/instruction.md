@@ -1,72 +1,49 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Valachi hearings: The Valachi hearings, also known as the McClellan hearings, investigated organized crime activities across America and investigated leading mafia figures of the era such as Sam Giancana of Chicago.  The hearings were initiated by Arkansas Senator John L. McClellan in 1963.  The hearings were named after the major government witness against the American Mafia, Joseph Valachi.
-
-Albanian mafia: The Albanian Mafia or Albanian organized crime (Albanian: "Mafia Shqiptare" ) are the general terms used for criminal organizations based in Albania or composed of ethnic Albanians.  Albanian organized crime is highly active in Europe, North America, South America, and various other parts of the world including the Middle East and Asia.  The Albanian Mafia participates in a diverse range of criminal enterprises including trafficking in drugs, arms, humans, and human organs.  The Albanian criminal scenario is characterized by diversified criminal plans which, in their complexity, show one of the highest criminal capacities in the world.  In Albania alone, there are over 15 mafia families that control organized crime.  According to Wikileaks reports, the Albanian mafia has monopolized various international affiliations from as far east as Israel, to as far west as South America.  These reports primarily indicate a strong connection between politicians and various Albanian mafia families.  According to the Research Institute for European and American Studies (RIEAS), Albanian mafia groups are actually hybrid organizations (various sectors of society), often involved in both criminal and political activities.
-
-Gambino crime family: The Gambino crime family (pronounced ] ) is one of the "Five Families" that dominates organized crime activities in New York City, United States, within the nationwide criminal phenomenon known as the Mafia (or "Cosa Nostra").  The group, which went through three bosses between 1910 and 1957, is named after Carlo Gambino, boss of the family at the time of the McClellan hearings in 1963, when the structure of organized crime first gained public attention.  The group's operations extend from New York and the eastern seaboard to California.  Its illicit activities include labor and construction racketeering, gambling, loansharking, extortion, money laundering, prostitution, fraud, hijacking, pier thefts, and fencing.
-
-Joseph Valachi: Joseph Michael "Joe Cargo" Valachi (September 22, 1904 – April 3, 1971) was an American gangster, notable as the first member of the Italian-American Mafia to publicly acknowledge its existence, and credited with popularization of the term "Cosa Nostra".
-
-The Valachi Papers (book): The Valachi Papers is a biography written by Peter Maas, telling the true story of former mafia member Joe Valachi, a low-ranking member of the New York-based Genovese crime family, who was the first ever government witness coming from the American Mafia itself.  His account of his criminal past revealed many previously unknown details of the Mafia.  The book was made into a film ("The Valachi Papers"), released in 1972, starring Charles Bronson as Valachi.
-
-Black Mafia: The Black Mafia, also known as the Muslim Mafia, Muslim Mob, Philadelphia Black Mafia, or PBM is a Philadelphia-based African-American organized crime syndicate.  The organization began as a small criminal collective, known for holding up neighborhood craps games and dealing in the illegal drug business, but at its height of operation until about 1975, it managed to consolidate power and control a large portion of criminal activity in various African-American neighborhoods throughout Philadelphia, the Delaware Valley, and South Jersey, including Atlantic City.  In addition to drug trafficking, burglary, and armed robbery, the Black Mafia was also engaged in traditional organized crime activities such as extortion, racketeering, prostitution, loansharking, number running and other illegal gambling rackets.
-
-Anthony Casso: Anthony Salvatore "Gaspipe" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family.  During his career in organized crime, Casso was regarded as a "homicidal maniac" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders.  Former Lucchese captain and government witness Anthony Accetturo once said of Casso, "all he wanted to do is kill, kill, get what you can, even if you didn't earn it."  In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov.  Casso has also admitted to several attempts to murder Gambino family boss John Gotti.
-
-Colombo crime family: The Colombo crime family (pronounced ] ) is the youngest of the "Five Families" that dominates organized crime activities in New York City, United States, within the nationwide criminal organization known as the Mafia (or "Cosa Nostra").  It was during Lucky Luciano's organisation of the American Mafia after the Castellammarese War, and the assassinations of Giuseppe "Joe The Boss" Masseria and Salvatore Maranzano, that the gang run by Joseph Profaci was recognized as the "Profaci crime family"
-
-Murder, Inc.: Murder, Inc. (or Murder Incorporated) was the name the news media gave to organized crime groups in the 1930s and 40s that acted as the enforcement arm of the Italian-American Mafia, Jewish mob, and connected organized crime groups in New York and elsewhere.  The groups were largely composed of Italian-American and Jewish gangsters from the Brooklyn neighborhoods of Brownsville, East New York, and Ocean Hill.  Originally headed by Louis "Lepke" Buchalter, and later by Albert "The Mad Hatter" Anastasia, Murder, Inc. was believed to be responsible for between 400 and 1,000 contract killings, until the group was exposed in the early 1940s by former group member Abe "Kid Twist" Reles.  In the trials that followed, many members were convicted and executed, and Abe Reles himself died after "falling out of a window".  Thomas E. Dewey first came to prominence as a prosecutor of Murder, Inc. and other organized crime cases.
-
-American Mafia: The American Mafia (commonly shortened to the Mafia or Mob) or Italian-American Mafia, is a highly organized Italian-American criminal society.  The organization is often referred to by members as Cosa Nostra (] , "our thing") and by the government as La Cosa Nostra (LCN).  The organization's name is derived from the original ""Mafia"" or "Cosa nostra", the Sicilian Mafia, and it originally emerged as an offshoot of the Sicilian Mafia; however, the organization eventually encompassed or absorbed other Italian-American gangsters and Italian-American crime groups (such as the American Camorra) living in the United States and Canada that are not of Sicilian origin.  It is often referred to as the Italian Mafia or Italian Mob, though these terms may also apply to the separate yet related organized crime groups in Italy.
-
-Question: The Valachi hearings, also known as the McClellan hearings, investigated organized crime activities across America, the hearings were named after which American gangster, notable as the first member of the Italian-American Mafia to publicly acknowledge its existence,was a major government witness against the American Mafia?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "gangster_name": {
-      "type": "string",
-      "description": "The full name of the American gangster."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "aliases": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Any known aliases for the gangster."
-    },
-    "role_in_hearings": {
-      "type": "string",
-      "description": "The gangster's role in the Valachi/McClellan hearings."
-    },
-    "notable_contribution": {
-      "type": "string",
-      "description": "A significant historical contribution or fact about the gangster related to the Mafia."
-    },
-    "hearings_named_after_individual": {
-      "type": "boolean",
-      "description": "Indicates if the hearings were named after this individual."
+    {
+      "role": "user",
+      "content": "Context:\nValachi hearings: The Valachi hearings, also known as the McClellan hearings, investigated organized crime activities across America and investigated leading mafia figures of the era such as Sam Giancana of Chicago.  The hearings were initiated by Arkansas Senator John L. McClellan in 1963.  The hearings were named after the major government witness against the American Mafia, Joseph Valachi.\n\nAlbanian mafia: The Albanian Mafia or Albanian organized crime (Albanian: \"Mafia Shqiptare\" ) are the general terms used for criminal organizations based in Albania or composed of ethnic Albanians.  Albanian organized crime is highly active in Europe, North America, South America, and various other parts of the world including the Middle East and Asia.  The Albanian Mafia participates in a diverse range of criminal enterprises including trafficking in drugs, arms, humans, and human organs.  The Albanian criminal scenario is characterized by diversified criminal plans which, in their complexity, show one of the highest criminal capacities in the world.  In Albania alone, there are over 15 mafia families that control organized crime.  According to Wikileaks reports, the Albanian mafia has monopolized various international affiliations from as far east as Israel, to as far west as South America.  These reports primarily indicate a strong connection between politicians and various Albanian mafia families.  According to the Research Institute for European and American Studies (RIEAS), Albanian mafia groups are actually hybrid organizations (various sectors of society), often involved in both criminal and political activities.\n\nGambino crime family: The Gambino crime family (pronounced ] ) is one of the \"Five Families\" that dominates organized crime activities in New York City, United States, within the nationwide criminal phenomenon known as the Mafia (or \"Cosa Nostra\").  The group, which went through three bosses between 1910 and 1957, is named after Carlo Gambino, boss of the family at the time of the McClellan hearings in 1963, when the structure of organized crime first gained public attention.  The group's operations extend from New York and the eastern seaboard to California.  Its illicit activities include labor and construction racketeering, gambling, loansharking, extortion, money laundering, prostitution, fraud, hijacking, pier thefts, and fencing.\n\nJoseph Valachi: Joseph Michael \"Joe Cargo\" Valachi (September 22, 1904 – April 3, 1971) was an American gangster, notable as the first member of the Italian-American Mafia to publicly acknowledge its existence, and credited with popularization of the term \"Cosa Nostra\".\n\nThe Valachi Papers (book): The Valachi Papers is a biography written by Peter Maas, telling the true story of former mafia member Joe Valachi, a low-ranking member of the New York-based Genovese crime family, who was the first ever government witness coming from the American Mafia itself.  His account of his criminal past revealed many previously unknown details of the Mafia.  The book was made into a film (\"The Valachi Papers\"), released in 1972, starring Charles Bronson as Valachi.\n\nBlack Mafia: The Black Mafia, also known as the Muslim Mafia, Muslim Mob, Philadelphia Black Mafia, or PBM is a Philadelphia-based African-American organized crime syndicate.  The organization began as a small criminal collective, known for holding up neighborhood craps games and dealing in the illegal drug business, but at its height of operation until about 1975, it managed to consolidate power and control a large portion of criminal activity in various African-American neighborhoods throughout Philadelphia, the Delaware Valley, and South Jersey, including Atlantic City.  In addition to drug trafficking, burglary, and armed robbery, the Black Mafia was also engaged in traditional organized crime activities such as extortion, racketeering, prostitution, loansharking, number running and other illegal gambling rackets.\n\nAnthony Casso: Anthony Salvatore \"Gaspipe\" Casso (born May 21, 1940 in Brooklyn, New York City) is an Italian-American mobster and former underboss of the Lucchese crime family.  During his career in organized crime, Casso was regarded as a \"homicidal maniac\" in the American Mafia, single-handedly killing over 40 to 50 people, and ordering as many as 100 or more murders.  Former Lucchese captain and government witness Anthony Accetturo once said of Casso, \"all he wanted to do is kill, kill, get what you can, even if you didn't earn it.\"  In interviews and on the witness stand, Casso has confessed involvement in the murders of Frank DeCicco, Roy DeMeo, and Vladimir Reznikov.  Casso has also admitted to several attempts to murder Gambino family boss John Gotti.\n\nColombo crime family: The Colombo crime family (pronounced ] ) is the youngest of the \"Five Families\" that dominates organized crime activities in New York City, United States, within the nationwide criminal organization known as the Mafia (or \"Cosa Nostra\").  It was during Lucky Luciano's organisation of the American Mafia after the Castellammarese War, and the assassinations of Giuseppe \"Joe The Boss\" Masseria and Salvatore Maranzano, that the gang run by Joseph Profaci was recognized as the \"Profaci crime family\"\n\nMurder, Inc.: Murder, Inc. (or Murder Incorporated) was the name the news media gave to organized crime groups in the 1930s and 40s that acted as the enforcement arm of the Italian-American Mafia, Jewish mob, and connected organized crime groups in New York and elsewhere.  The groups were largely composed of Italian-American and Jewish gangsters from the Brooklyn neighborhoods of Brownsville, East New York, and Ocean Hill.  Originally headed by Louis \"Lepke\" Buchalter, and later by Albert \"The Mad Hatter\" Anastasia, Murder, Inc. was believed to be responsible for between 400 and 1,000 contract killings, until the group was exposed in the early 1940s by former group member Abe \"Kid Twist\" Reles.  In the trials that followed, many members were convicted and executed, and Abe Reles himself died after \"falling out of a window\".  Thomas E. Dewey first came to prominence as a prosecutor of Murder, Inc. and other organized crime cases.\n\nAmerican Mafia: The American Mafia (commonly shortened to the Mafia or Mob) or Italian-American Mafia, is a highly organized Italian-American criminal society.  The organization is often referred to by members as Cosa Nostra (] , \"our thing\") and by the government as La Cosa Nostra (LCN).  The organization's name is derived from the original \"\"Mafia\"\" or \"Cosa nostra\", the Sicilian Mafia, and it originally emerged as an offshoot of the Sicilian Mafia; however, the organization eventually encompassed or absorbed other Italian-American gangsters and Italian-American crime groups (such as the American Camorra) living in the United States and Canada that are not of Sicilian origin.  It is often referred to as the Italian Mafia or Italian Mob, though these terms may also apply to the separate yet related organized crime groups in Italy.\n\nQuestion: The Valachi hearings, also known as the McClellan hearings, investigated organized crime activities across America, the hearings were named after which American gangster, notable as the first member of the Italian-American Mafia to publicly acknowledge its existence,was a major government witness against the American Mafia?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"gangster_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the American gangster.\"\n    },\n    \"aliases\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"Any known aliases for the gangster.\"\n    },\n    \"role_in_hearings\": {\n      \"type\": \"string\",\n      \"description\": \"The gangster's role in the Valachi/McClellan hearings.\"\n    },\n    \"notable_contribution\": {\n      \"type\": \"string\",\n      \"description\": \"A significant historical contribution or fact about the gangster related to the Mafia.\"\n    },\n    \"hearings_named_after_individual\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the hearings were named after this individual.\"\n    }\n  },\n  \"required\": [\n    \"gangster_name\",\n    \"aliases\",\n    \"role_in_hearings\",\n    \"notable_contribution\",\n    \"hearings_named_after_individual\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "gangster_name",
-    "aliases",
-    "role_in_hearings",
-    "notable_contribution",
-    "hearings_named_after_individual"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "gangster_name": {
+        "type": "string",
+        "description": "The full name of the American gangster."
+      },
+      "aliases": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Any known aliases for the gangster."
+      },
+      "role_in_hearings": {
+        "type": "string",
+        "description": "The gangster's role in the Valachi/McClellan hearings."
+      },
+      "notable_contribution": {
+        "type": "string",
+        "description": "A significant historical contribution or fact about the gangster related to the Mafia."
+      },
+      "hearings_named_after_individual": {
+        "type": "boolean",
+        "description": "Indicates if the hearings were named after this individual."
+      }
+    },
+    "required": [
+      "gangster_name",
+      "aliases",
+      "role_in_hearings",
+      "notable_contribution",
+      "hearings_named_after_individual"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

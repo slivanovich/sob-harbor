@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Safety property: In distributed computing, safety properties informally require that "something bad will never happen" in a distributed system or distributed algorithm.  Unlike liveness properties, safety properties can be violated by a finite execution of a distributed system.  In a database system, a promise to never return data with null fields is an example of a safety guarantee.  All properties can be expressed as the intersection of safety and liveness properties.
-
-Brett James: Brett James Cornelius (born June 5, 1968) is an American singer, songwriter, and record producer based in Nashville.  James' compositions have been credited on 494 recordings by a wide variety of artists.Signed to Career Records (a division of Arista Nashville) as a solo artist in 1995, James charted three singles and released a self-titled debut album that year.  He returned to Arista as a recording artist in 2002, releasing two more singles.
-
-Pulsa diNura: Pulsa D'Nura, Pulsa diNura or Pulsa Denoura (Aramaic: פולסי דנורא "lashes of fire") is a purportedly Kabbalistic ceremony in which the angels of destruction are invoked to block heavenly forgiveness of the subject’s sins, causing all the curses named in the Bible to befall him resulting in his death.  However, the Torah prohibits praying that something bad should happen to another person .  Rather it offers the solution to pray that the bad in the person die and he become a righteous person.  The source for this modern ritual is not to be found in Kabbalah, but among the Hebrew magical manuals of antiquity, such as Sefer ha-Razim and Harba de-Moshe.
-
-Somethin' Bad: "Somethin' Bad" is a song recorded as a duet by American country music artists Miranda Lambert and Carrie Underwood.  The song was written by Chris DeStefano, Brett James, and Priscilla Renea.  It was released as the second single from Lambert's fifth studio album "Platinum" in advance of the album's release two weeks later.  The song premiered at the 2014 Billboard Music Awards on May 18, 2014, and was released for sale the next day.
-
-Brett James (album): Brett James is the self-titled debut album of American country music singer-songwriter Brett James.  It was released on September 12, 1995 via Arista Nashville's Career Records division.  The singles "Female Bonding", "If I Could See Love" and "Worth the Fall" all entered the Hot Country Songs charts.
-
-Don't throw the baby out with the bathwater: Don't throw the baby out with the bathwater is an idiomatic expression for an avoidable error in which something good is eliminated when trying to get rid of something bad, or in other words, rejecting the essential along with the inessential.
-
-D'oh!: "D'oh!"  ( ) is a catchphrase used by the fictional character Homer Simpson, from the long-running American animated sitcom "The Simpsons" (1989–present).  It is typically used when Homer injures himself, realizes that he has done something stupid, or when something bad has happened or is about to happen to him.  All his prominent blood relations—son Bart, daughters Lisa and Maggie, his father, his mother and half-brother—have also been heard to use it themselves in similar circumstances.  On a few occasions Homer's wife Marge and even non-related characters such as Mr. Burns and Sideshow Bob have also used this phrase.
-
-Honkytonkville: Honkytonkville is the twenty-second studio album by American country singer George Strait, released in 2003 by MCA Nashville.  One of only a few albums of his career not to produce a Number One single, the album was certified platinum by the RIAA.  It produced the singles "Tell Me Something Bad About Tulsa", "Cowboys Like Us" and "Desperately", at #11, #2 and #6 respectively on the country charts.  "Honk If You Honky Tonk" also charted at #45 based on unsolicited airplay.
-
-Uh oh: Uh-oh (    ,    ) is a ubiquitous interjection or expression of dismay in the English language, usually said in anticipation of something bad about to happen, with the sly admittance of guilt that one may have caused something bad to happen, or perceiving that something bad has already happened.  The speaker often gives vent to the expression immediately upon learning or perceiving of something that presages disaster.  It is an expression usually acquired very early in life, typically as early as the toddler stage.  It is one of only a few words or phrases in American English commonly pronounced with a glottal stop.
-
-Tell Me Something Bad About Tulsa: "Tell Me Something Bad About Tulsa" is a song written by Red Lane.  It was first recorded by American country music artist Merle Haggard on his 1986 album, "Out Among the Stars".  Haggard's son, Noel Haggard, covered the song on his 1997 debut album, "One Lifetime", and released it as his second single.  It peaked at number 75 on the "Billboard" Hot Country Singles & Tracks chart in August 1997.  George Strait also recorded a version of the song for his 2003 album, "Honkytonkville".  Released as the album's first single, Strait's rendition peaked at number 11 on the "Billboard" Hot Country Singles & Tracks chart in July 2003.
-
-Question: "Something Bad" is one of how many recordings credited to compositions by Brett James?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "composer_name": {
-      "type": "string",
-      "description": "The name of the composer."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "song_title": {
-      "type": "string",
-      "description": "The title of the specific song mentioned in the question."
-    },
-    "total_compositions_credited_recordings": {
-      "type": "integer",
-      "description": "The total number of recordings credited to the composer's compositions."
+    {
+      "role": "user",
+      "content": "Context:\nSafety property: In distributed computing, safety properties informally require that \"something bad will never happen\" in a distributed system or distributed algorithm.  Unlike liveness properties, safety properties can be violated by a finite execution of a distributed system.  In a database system, a promise to never return data with null fields is an example of a safety guarantee.  All properties can be expressed as the intersection of safety and liveness properties.\n\nBrett James: Brett James Cornelius (born June 5, 1968) is an American singer, songwriter, and record producer based in Nashville.  James' compositions have been credited on 494 recordings by a wide variety of artists.Signed to Career Records (a division of Arista Nashville) as a solo artist in 1995, James charted three singles and released a self-titled debut album that year.  He returned to Arista as a recording artist in 2002, releasing two more singles.\n\nPulsa diNura: Pulsa D'Nura, Pulsa diNura or Pulsa Denoura (Aramaic: פולסי דנורא \"lashes of fire\") is a purportedly Kabbalistic ceremony in which the angels of destruction are invoked to block heavenly forgiveness of the subject’s sins, causing all the curses named in the Bible to befall him resulting in his death.  However, the Torah prohibits praying that something bad should happen to another person .  Rather it offers the solution to pray that the bad in the person die and he become a righteous person.  The source for this modern ritual is not to be found in Kabbalah, but among the Hebrew magical manuals of antiquity, such as Sefer ha-Razim and Harba de-Moshe.\n\nSomethin' Bad: \"Somethin' Bad\" is a song recorded as a duet by American country music artists Miranda Lambert and Carrie Underwood.  The song was written by Chris DeStefano, Brett James, and Priscilla Renea.  It was released as the second single from Lambert's fifth studio album \"Platinum\" in advance of the album's release two weeks later.  The song premiered at the 2014 Billboard Music Awards on May 18, 2014, and was released for sale the next day.\n\nBrett James (album): Brett James is the self-titled debut album of American country music singer-songwriter Brett James.  It was released on September 12, 1995 via Arista Nashville's Career Records division.  The singles \"Female Bonding\", \"If I Could See Love\" and \"Worth the Fall\" all entered the Hot Country Songs charts.\n\nDon't throw the baby out with the bathwater: Don't throw the baby out with the bathwater is an idiomatic expression for an avoidable error in which something good is eliminated when trying to get rid of something bad, or in other words, rejecting the essential along with the inessential.\n\nD'oh!: \"D'oh!\"  ( ) is a catchphrase used by the fictional character Homer Simpson, from the long-running American animated sitcom \"The Simpsons\" (1989–present).  It is typically used when Homer injures himself, realizes that he has done something stupid, or when something bad has happened or is about to happen to him.  All his prominent blood relations—son Bart, daughters Lisa and Maggie, his father, his mother and half-brother—have also been heard to use it themselves in similar circumstances.  On a few occasions Homer's wife Marge and even non-related characters such as Mr. Burns and Sideshow Bob have also used this phrase.\n\nHonkytonkville: Honkytonkville is the twenty-second studio album by American country singer George Strait, released in 2003 by MCA Nashville.  One of only a few albums of his career not to produce a Number One single, the album was certified platinum by the RIAA.  It produced the singles \"Tell Me Something Bad About Tulsa\", \"Cowboys Like Us\" and \"Desperately\", at #11, #2 and #6 respectively on the country charts.  \"Honk If You Honky Tonk\" also charted at #45 based on unsolicited airplay.\n\nUh oh: Uh-oh (    ,    ) is a ubiquitous interjection or expression of dismay in the English language, usually said in anticipation of something bad about to happen, with the sly admittance of guilt that one may have caused something bad to happen, or perceiving that something bad has already happened.  The speaker often gives vent to the expression immediately upon learning or perceiving of something that presages disaster.  It is an expression usually acquired very early in life, typically as early as the toddler stage.  It is one of only a few words or phrases in American English commonly pronounced with a glottal stop.\n\nTell Me Something Bad About Tulsa: \"Tell Me Something Bad About Tulsa\" is a song written by Red Lane.  It was first recorded by American country music artist Merle Haggard on his 1986 album, \"Out Among the Stars\".  Haggard's son, Noel Haggard, covered the song on his 1997 debut album, \"One Lifetime\", and released it as his second single.  It peaked at number 75 on the \"Billboard\" Hot Country Singles & Tracks chart in August 1997.  George Strait also recorded a version of the song for his 2003 album, \"Honkytonkville\".  Released as the album's first single, Strait's rendition peaked at number 11 on the \"Billboard\" Hot Country Singles & Tracks chart in July 2003.\n\nQuestion: \"Something Bad\" is one of how many recordings credited to compositions by Brett James?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"composer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the composer.\"\n    },\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the specific song mentioned in the question.\"\n    },\n    \"total_compositions_credited_recordings\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of recordings credited to the composer's compositions.\"\n    }\n  },\n  \"required\": [\n    \"composer_name\",\n    \"song_title\",\n    \"total_compositions_credited_recordings\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "composer_name",
-    "song_title",
-    "total_compositions_credited_recordings"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "composer_name": {
+        "type": "string",
+        "description": "The name of the composer."
+      },
+      "song_title": {
+        "type": "string",
+        "description": "The title of the specific song mentioned in the question."
+      },
+      "total_compositions_credited_recordings": {
+        "type": "integer",
+        "description": "The total number of recordings credited to the composer's compositions."
+      }
+    },
+    "required": [
+      "composer_name",
+      "song_title",
+      "total_compositions_credited_recordings"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Sam Clemmett: Sam Clemmett is a British actor.  Born in Brundall, Norfolk, Clemmett began his acting career in 2013.  He is known for being cast as Albus Potter in 2015 for the British play Harry Potter and the Cursed Child.  His performance in the play has made him popular with Harry Potter fans, as well as the creator of Harry Potter, J.K. Rowling.  Rowling stated that, "There's much I could say about Sam-as-Albus, but we'd be into spoiler territory so quickly I'll just say we couldn't have cast better."  He played the role in the West End, until late-Spring 2017.
-
-Rubeus Hagrid: Rubeus Hagrid is a fictional character in the "Harry Potter" book series written by J. K. Rowling.  He is introduced in "Harry Potter and the Philosophers Stone" as a half-giant and half-human who is the gamekeeper and Keeper of Keys and Grounds of Hogwarts, the primary setting for the first six novels.  In the third novel "Harry Potter and the Prisoner of Azkaban", Hagrid is promoted to Care of Magical Creatures teacher, and is later revealed to be a member of the Order of the Phoenix.
-
-Peter Mullan: Peter Mullan (born 2 November 1959) is a Scottish actor and filmmaker.  He is best known for his role in Ken Loach's "My Name Is Joe" (1998), for which he won Best Actor Award at 1998 Cannes Film Festival and "The Claim" (2000).  He is also winner of the World Dramatic Special Jury Prize for Breakout Performances at 2011 Sundance Film Festival for his work on Paddy Considine's "Tyrannosaur" (2011).  Mullan appeared as supporting or guest actor in numerous cult movies, including "Riff-Raff" (1991), "Braveheart" (1995), "Trainspotting" (1996), "Young Adam" (2003), "Children of Men" (2006), "War Horse" (2011) and the "Harry Potter" film series (2010–11).
-
-Daniel Radcliffe: Daniel Jacob Radcliffe (born 23 July 1989) is an English actor best known for his role as Harry Potter in the film series of the same name.  He made his acting debut at 10 years of age in BBC One's 1999 television film "David Copperfield", followed by his cinematic debut in 2001's "The Tailor of Panama".  At age 11, he was cast as Harry Potter in the first "Harry Potter" film, and starred in the series for 10 years until the release of the eighth and final film in 2011.
-
-Robbie Coltrane: Robbie Coltrane, OBE (born Anthony Robert McMillan; 30 March 1950) is a Scottish actor and author.  He is known for his roles as Rubeus Hagrid in the "Harry Potter" films, as Valentin Dmitrovich Zukovsky in the James Bond films "GoldenEye" and "The World Is Not Enough," and as Dr. Eddie "Fitz" Fitzgerald in the British TV series "Cracker" during the 1990s.
-
-David Tennant: David Tennant (born David John McDonald; 18 April 1971) is a Scottish actor and voice actor.  He is best known for his roles as the Tenth Doctor in the British television series "Doctor Who", Alec Hardy in "Broadchurch", Giacomo Casanova in the TV serial "Casanova", Kilgrave in "Jessica Jones", and Barty Crouch, Jr.  in the film "Harry Potter and the Goblet of Fire".  In addition to his appearances on screen, he has worked as a voice actor and in theatre, including Prince Hamlet in a critically acclaimed 2008 stage production of "Hamlet" and as the voice of Scrooge McDuck in the new "DuckTales" series starting in 2017.  In January 2015, Tennant received the National Television Award for Special Recognition.
-
-List of Harry Potter cast members: Several actors of the United Kingdom and Ireland have voiced or portrayed characters appearing in the "Harry Potter" film series based on the book series by J. K. Rowling.  Daniel Radcliffe, Rupert Grint and Emma Watson have played Harry Potter, Ron Weasley and Hermione Granger in all the films.  When they were cast only Radcliffe had previously acted in a film.  Complementing them on screen are such actors as Helena Bonham Carter, Jim Broadbent, John Cleese, Robbie Coltrane, Warwick Davis, Ralph Fiennes, Michael Gambon, Brendan Gleeson, Richard Griffiths, Richard Harris, John Hurt, Jason Isaacs, Miriam Margolyes, Helen McCrory, Gary Oldman, Alan Rickman, Fiona Shaw, Maggie Smith, Timothy Spall, Imelda Staunton, David Thewlis, Emma Thompson, and Julie Walters, among others.  Thirteen actors have appeared as the same character in all eight films of the series.
-
-Tom Felton: Thomas Andrew Felton (born September 22, 1987) is an English actor.  Felton began appearing in commercials when he was eight years old for companies such as Commercial Union and Barclaycard.  He made his screen debut in the role of Peagreen Clock in "The Borrowers" (1997) and he portrayed Louis T. Leonowens in "Anna and the King" (1999).  He rose to prominence for his role as Draco Malfoy in the film adaptions of the best-selling "Harry Potter" fantasy novels by J.K. Rowling.  His performances in "Harry Potter and the Half-Blood Prince" and "Harry Potter and the Deathly Hallows – Part 1" won him two consecutive MTV Movie Awards for Best Villain in 2010 and 2011.
-
-Harry Potter (film series): Harry Potter is a British-American film series based on the "Harry Potter" novels by author J. K. Rowling.  The series is distributed by Warner Bros. and consists of eight fantasy films, beginning with "Harry Potter and the Philosopher's Stone" (2001) and culminating with "Harry Potter and the Deathly Hallows – Part 2" (2011).  A spin-off prequel series will consist of five films, starting with "Fantastic Beasts and Where to Find Them" (2016).  The "Fantastic Beasts" films mark the beginning of a shared media franchise known as J. K. Rowling's Wizarding World.
-
-Sara Bennett: Sara Bennett is a British visual effects artist.  Best known for her works in "Harry Potter and the Chamber of Secrets" (2002), "Harry Potter and the Prisoner of Azkaban" (2004), "Harry Potter and the Goblet of Fire" (2005), "Doctor Who" (2005), "Merlin" (2008), "Jonathan Strange & Mr Norrell" (2009), "Skellig" (2009), "The Martian" (2015) and "Ex Machina" (2015).
-
-Question: The Scottish actor and author Robbie Coltrane is best known for this role in the "Harry Potter" films whose responsibility is the gamekeeper and Keeper of Keys and Grounds of what?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "character_name": {
-      "type": "string",
-      "description": "The name of the character portrayed by the actor."
-    },
-    "character_responsibilities": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of responsibilities held by the character."
-    },
-    "location_of_responsibilities": {
-      "type": "string",
-      "description": "The location where the character holds their responsibilities."
+    {
+      "role": "user",
+      "content": "Context:\nSam Clemmett: Sam Clemmett is a British actor.  Born in Brundall, Norfolk, Clemmett began his acting career in 2013.  He is known for being cast as Albus Potter in 2015 for the British play Harry Potter and the Cursed Child.  His performance in the play has made him popular with Harry Potter fans, as well as the creator of Harry Potter, J.K. Rowling.  Rowling stated that, \"There's much I could say about Sam-as-Albus, but we'd be into spoiler territory so quickly I'll just say we couldn't have cast better.\"  He played the role in the West End, until late-Spring 2017.\n\nRubeus Hagrid: Rubeus Hagrid is a fictional character in the \"Harry Potter\" book series written by J. K. Rowling.  He is introduced in \"Harry Potter and the Philosophers Stone\" as a half-giant and half-human who is the gamekeeper and Keeper of Keys and Grounds of Hogwarts, the primary setting for the first six novels.  In the third novel \"Harry Potter and the Prisoner of Azkaban\", Hagrid is promoted to Care of Magical Creatures teacher, and is later revealed to be a member of the Order of the Phoenix.\n\nPeter Mullan: Peter Mullan (born 2 November 1959) is a Scottish actor and filmmaker.  He is best known for his role in Ken Loach's \"My Name Is Joe\" (1998), for which he won Best Actor Award at 1998 Cannes Film Festival and \"The Claim\" (2000).  He is also winner of the World Dramatic Special Jury Prize for Breakout Performances at 2011 Sundance Film Festival for his work on Paddy Considine's \"Tyrannosaur\" (2011).  Mullan appeared as supporting or guest actor in numerous cult movies, including \"Riff-Raff\" (1991), \"Braveheart\" (1995), \"Trainspotting\" (1996), \"Young Adam\" (2003), \"Children of Men\" (2006), \"War Horse\" (2011) and the \"Harry Potter\" film series (2010–11).\n\nDaniel Radcliffe: Daniel Jacob Radcliffe (born 23 July 1989) is an English actor best known for his role as Harry Potter in the film series of the same name.  He made his acting debut at 10 years of age in BBC One's 1999 television film \"David Copperfield\", followed by his cinematic debut in 2001's \"The Tailor of Panama\".  At age 11, he was cast as Harry Potter in the first \"Harry Potter\" film, and starred in the series for 10 years until the release of the eighth and final film in 2011.\n\nRobbie Coltrane: Robbie Coltrane, OBE (born Anthony Robert McMillan; 30 March 1950) is a Scottish actor and author.  He is known for his roles as Rubeus Hagrid in the \"Harry Potter\" films, as Valentin Dmitrovich Zukovsky in the James Bond films \"GoldenEye\" and \"The World Is Not Enough,\" and as Dr. Eddie \"Fitz\" Fitzgerald in the British TV series \"Cracker\" during the 1990s.\n\nDavid Tennant: David Tennant (born David John McDonald; 18 April 1971) is a Scottish actor and voice actor.  He is best known for his roles as the Tenth Doctor in the British television series \"Doctor Who\", Alec Hardy in \"Broadchurch\", Giacomo Casanova in the TV serial \"Casanova\", Kilgrave in \"Jessica Jones\", and Barty Crouch, Jr.  in the film \"Harry Potter and the Goblet of Fire\".  In addition to his appearances on screen, he has worked as a voice actor and in theatre, including Prince Hamlet in a critically acclaimed 2008 stage production of \"Hamlet\" and as the voice of Scrooge McDuck in the new \"DuckTales\" series starting in 2017.  In January 2015, Tennant received the National Television Award for Special Recognition.\n\nList of Harry Potter cast members: Several actors of the United Kingdom and Ireland have voiced or portrayed characters appearing in the \"Harry Potter\" film series based on the book series by J. K. Rowling.  Daniel Radcliffe, Rupert Grint and Emma Watson have played Harry Potter, Ron Weasley and Hermione Granger in all the films.  When they were cast only Radcliffe had previously acted in a film.  Complementing them on screen are such actors as Helena Bonham Carter, Jim Broadbent, John Cleese, Robbie Coltrane, Warwick Davis, Ralph Fiennes, Michael Gambon, Brendan Gleeson, Richard Griffiths, Richard Harris, John Hurt, Jason Isaacs, Miriam Margolyes, Helen McCrory, Gary Oldman, Alan Rickman, Fiona Shaw, Maggie Smith, Timothy Spall, Imelda Staunton, David Thewlis, Emma Thompson, and Julie Walters, among others.  Thirteen actors have appeared as the same character in all eight films of the series.\n\nTom Felton: Thomas Andrew Felton (born September 22, 1987) is an English actor.  Felton began appearing in commercials when he was eight years old for companies such as Commercial Union and Barclaycard.  He made his screen debut in the role of Peagreen Clock in \"The Borrowers\" (1997) and he portrayed Louis T. Leonowens in \"Anna and the King\" (1999).  He rose to prominence for his role as Draco Malfoy in the film adaptions of the best-selling \"Harry Potter\" fantasy novels by J.K. Rowling.  His performances in \"Harry Potter and the Half-Blood Prince\" and \"Harry Potter and the Deathly Hallows – Part 1\" won him two consecutive MTV Movie Awards for Best Villain in 2010 and 2011.\n\nHarry Potter (film series): Harry Potter is a British-American film series based on the \"Harry Potter\" novels by author J. K. Rowling.  The series is distributed by Warner Bros. and consists of eight fantasy films, beginning with \"Harry Potter and the Philosopher's Stone\" (2001) and culminating with \"Harry Potter and the Deathly Hallows – Part 2\" (2011).  A spin-off prequel series will consist of five films, starting with \"Fantastic Beasts and Where to Find Them\" (2016).  The \"Fantastic Beasts\" films mark the beginning of a shared media franchise known as J. K. Rowling's Wizarding World.\n\nSara Bennett: Sara Bennett is a British visual effects artist.  Best known for her works in \"Harry Potter and the Chamber of Secrets\" (2002), \"Harry Potter and the Prisoner of Azkaban\" (2004), \"Harry Potter and the Goblet of Fire\" (2005), \"Doctor Who\" (2005), \"Merlin\" (2008), \"Jonathan Strange & Mr Norrell\" (2009), \"Skellig\" (2009), \"The Martian\" (2015) and \"Ex Machina\" (2015).\n\nQuestion: The Scottish actor and author Robbie Coltrane is best known for this role in the \"Harry Potter\" films whose responsibility is the gamekeeper and Keeper of Keys and Grounds of what?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor.\"\n    },\n    \"character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character portrayed by the actor.\"\n    },\n    \"character_responsibilities\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of responsibilities held by the character.\"\n    },\n    \"location_of_responsibilities\": {\n      \"type\": \"string\",\n      \"description\": \"The location where the character holds their responsibilities.\"\n    }\n  },\n  \"required\": [\n    \"actor_name\",\n    \"character_name\",\n    \"character_responsibilities\",\n    \"location_of_responsibilities\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actor_name",
-    "character_name",
-    "character_responsibilities",
-    "location_of_responsibilities"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor."
+      },
+      "character_name": {
+        "type": "string",
+        "description": "The name of the character portrayed by the actor."
+      },
+      "character_responsibilities": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of responsibilities held by the character."
+      },
+      "location_of_responsibilities": {
+        "type": "string",
+        "description": "The location where the character holds their responsibilities."
+      }
+    },
+    "required": [
+      "actor_name",
+      "character_name",
+      "character_responsibilities",
+      "location_of_responsibilities"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-World on a Wire: World on a Wire (German: Welt am Draht), is a 1973 science fiction television serial directed by Rainer Werner Fassbinder.  Shot in 16 mm, it was made for German television and originally aired in 1973, as a two-part miniseries.  Starring Klaus Löwitsch, it was based on the novel "Simulacron-3" by Daniel F. Galouye.  An adaptation of the Fassbinder version was presented as the play "World of Wires", directed by Jay Scheib, in 2012.  Its focus is not on action, but on sophistic and philosophic aspects of the human mind, simulation, and the role of scientific research.  A theatrical remake entitled "The Thirteenth Floor" featuring Vincent D'Onofrio was released in 1999.
-
-Wing Commander (film): Wing Commander is a 1999 science fiction film loosely based on the video game series of the same name.  It was directed by Chris Roberts, the creator of the game series, and stars Freddie Prinze, Jr., Matthew Lillard, Saffron Burrows, Tchéky Karyo, Jürgen Prochnow, David Suchet, and David Warner.
-
-Razorblade Romance: Razorblade Romance is the second studio album by Finnish gothic rock band HIM.  Released on 24 January 2000, HIM initially began recording the album with producer Hiili Hiilesmaa, who helmed the group's 1997 debut album.  These sessions proved unsuccessful, however, and HIM parted ways with Hiilesmaa and recruited John Fryer, with whom the band relocated to Rockfield Studios in Wales to begin recording.  Musically, the album featured a sleeker production and a more melodic sound compared to their debut.  The album's lead single "Join Me in Death" would prove to be HIM's breakthrough single, reaching number one in Finland and Germany.  The song also found its way on to the soundtrack of the 1999 science fiction film "The Thirteenth Floor".
-
-Alien Cargo: Alien Cargo is a 1999 science fiction film starring Jason London, Missy Crider, Elizabeth Alexander and Alan Dale, as the crew of a space-cargo transport ship, which is attacked by an unknown alien life form that manipulates all organic life into releasing their inner evil psyche.
-
-Join Me in Death: "Join Me in Death" is a single by the Finnish band HIM, taken from their second studio album "Razorblade Romance".  It was also released as "Join Me", since they were not allowed to include "Death" in the title for the US version.  It was featured in the end credits of the European version of the sci-fi movie "The Thirteenth Floor" (The US version featured The Cardigans' "Erase/Rewind" instead).  It is the fifteenth-best-selling single of all time in Finland.
-
-The Thirteenth Floor: The Thirteenth Floor is a 1999 science fiction crime thriller film directed by Josef Rusnak and loosely based upon "Simulacron-3" (1964), a novel by Daniel F. Galouye.  The film stars Craig Bierko, Gretchen Mol, Armin Mueller-Stahl, Vincent D'Onofrio, and Dennis Haysbert.  In 2000, "The Thirteenth Floor" was nominated for the Saturn Award for Best Science Fiction Film, but lost to "The Matrix."
-
-Deep Blue Sea (soundtrack): Deep Blue Sea is the soundtrack to the 1999 science fiction thriller film "Deep Blue Sea".  It was released on June 27, 1999 through Warner Bros.  Records and consisted of hip hop and R&B music.  The soundtrack didn't find much success, only making it to #55 on the Top R&B/Hip-Hop Albums.  The lone single was LL Cool J's "Deepest Bluest", but it was unsuccessful to make it to any Billboard charts.  LL was quoted as saying "This was my finest shark-related song ever.  I can't believe it didn't chart."
-
-Genghis Khan (song): "Genghis Khan" is a single by hip hop group Jedi Mind Tricks.  The original press, distributed through JMT's Superegular Recordings, was released as a promo in early 2000.  The group's second and former label, Babygrande Records, re-released the single in 2003 with wider distribution.  The track is named after 13th century Mongol leader Genghis Khan.  The song contains a sample from "Downloading", a symphonic composition by Harald Kloser, taken from the film "The Thirteenth Floor".
-
-HIM (Finnish band): HIM is a Finnish gothic rock band from Helsinki.  Formed in 1991 by vocalist Ville Valo and bassist Mikko "Mige" Paananen under the name His Infernal Majesty, the band broke-up in 1993 however, before being reformed in 1995 by Valo and guitarist Mikko "Linde" Lindström.  After being rejoined by Mige, as well new additions keyboardist Antto Melasniemi and drummer Juhana "Pätkä" Rantala, the band, now called HIM, released their debut album "Greatest Lovesongs Vol.  666" in 1997.  In 2000, now with drummer Mika "Gas Lipstick" Karppinen and keyboardist Juska Salminen, the band released the album "Razorblade Romance", which reached the number one spot in Finland, Austria and Germany.  Its first single, "Join Me in Death", also charted at number one in Finland and Germany, eventually going platinum and gold respectively.  Following the addition of Janne "Burton" Puurtinen on keyboards, HIM released "Deep Shadows and Brilliant Highlights" and "Love Metal" in 2001 and 2003 respectively.  Both cracked the top ten in several countries, and allowed the band to tour the United Kingdom and the United States for the first time.
-
-Erase/Rewind: "Erase/Rewind" is a song written by Peter Svensson and Nina Persson for The Cardigans' 1998 album "Gran Turismo".  The song is the album's second track, and was released as its second single.  It was also featured in "The Thirteenth Floor" during the ending credits.
-
-Question: What city is the band from who had a song on the soundtrack of the 1999 science fiction film "The Thirteenth Floor"?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the science fiction film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "soundtrack_song": {
-      "type": "string",
-      "description": "The title of the song featured on the film's soundtrack."
-    },
-    "band_info": {
-      "type": "object",
-      "properties": {
-        "band_name": {
-          "type": "string",
-          "description": "The name of the band."
-        },
-        "band_origin_city": {
-          "type": "string",
-          "description": "The city where the band is from."
-        },
-        "band_origin_country": {
-          "type": "string",
-          "description": "The country where the band is from."
-        }
-      },
-      "required": [
-        "band_name",
-        "band_origin_city",
-        "band_origin_country"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nWorld on a Wire: World on a Wire (German: Welt am Draht), is a 1973 science fiction television serial directed by Rainer Werner Fassbinder.  Shot in 16 mm, it was made for German television and originally aired in 1973, as a two-part miniseries.  Starring Klaus Löwitsch, it was based on the novel \"Simulacron-3\" by Daniel F. Galouye.  An adaptation of the Fassbinder version was presented as the play \"World of Wires\", directed by Jay Scheib, in 2012.  Its focus is not on action, but on sophistic and philosophic aspects of the human mind, simulation, and the role of scientific research.  A theatrical remake entitled \"The Thirteenth Floor\" featuring Vincent D'Onofrio was released in 1999.\n\nWing Commander (film): Wing Commander is a 1999 science fiction film loosely based on the video game series of the same name.  It was directed by Chris Roberts, the creator of the game series, and stars Freddie Prinze, Jr., Matthew Lillard, Saffron Burrows, Tchéky Karyo, Jürgen Prochnow, David Suchet, and David Warner.\n\nRazorblade Romance: Razorblade Romance is the second studio album by Finnish gothic rock band HIM.  Released on 24 January 2000, HIM initially began recording the album with producer Hiili Hiilesmaa, who helmed the group's 1997 debut album.  These sessions proved unsuccessful, however, and HIM parted ways with Hiilesmaa and recruited John Fryer, with whom the band relocated to Rockfield Studios in Wales to begin recording.  Musically, the album featured a sleeker production and a more melodic sound compared to their debut.  The album's lead single \"Join Me in Death\" would prove to be HIM's breakthrough single, reaching number one in Finland and Germany.  The song also found its way on to the soundtrack of the 1999 science fiction film \"The Thirteenth Floor\".\n\nAlien Cargo: Alien Cargo is a 1999 science fiction film starring Jason London, Missy Crider, Elizabeth Alexander and Alan Dale, as the crew of a space-cargo transport ship, which is attacked by an unknown alien life form that manipulates all organic life into releasing their inner evil psyche.\n\nJoin Me in Death: \"Join Me in Death\" is a single by the Finnish band HIM, taken from their second studio album \"Razorblade Romance\".  It was also released as \"Join Me\", since they were not allowed to include \"Death\" in the title for the US version.  It was featured in the end credits of the European version of the sci-fi movie \"The Thirteenth Floor\" (The US version featured The Cardigans' \"Erase/Rewind\" instead).  It is the fifteenth-best-selling single of all time in Finland.\n\nThe Thirteenth Floor: The Thirteenth Floor is a 1999 science fiction crime thriller film directed by Josef Rusnak and loosely based upon \"Simulacron-3\" (1964), a novel by Daniel F. Galouye.  The film stars Craig Bierko, Gretchen Mol, Armin Mueller-Stahl, Vincent D'Onofrio, and Dennis Haysbert.  In 2000, \"The Thirteenth Floor\" was nominated for the Saturn Award for Best Science Fiction Film, but lost to \"The Matrix.\"\n\nDeep Blue Sea (soundtrack): Deep Blue Sea is the soundtrack to the 1999 science fiction thriller film \"Deep Blue Sea\".  It was released on June 27, 1999 through Warner Bros.  Records and consisted of hip hop and R&B music.  The soundtrack didn't find much success, only making it to #55 on the Top R&B/Hip-Hop Albums.  The lone single was LL Cool J's \"Deepest Bluest\", but it was unsuccessful to make it to any Billboard charts.  LL was quoted as saying \"This was my finest shark-related song ever.  I can't believe it didn't chart.\"\n\nGenghis Khan (song): \"Genghis Khan\" is a single by hip hop group Jedi Mind Tricks.  The original press, distributed through JMT's Superegular Recordings, was released as a promo in early 2000.  The group's second and former label, Babygrande Records, re-released the single in 2003 with wider distribution.  The track is named after 13th century Mongol leader Genghis Khan.  The song contains a sample from \"Downloading\", a symphonic composition by Harald Kloser, taken from the film \"The Thirteenth Floor\".\n\nHIM (Finnish band): HIM is a Finnish gothic rock band from Helsinki.  Formed in 1991 by vocalist Ville Valo and bassist Mikko \"Mige\" Paananen under the name His Infernal Majesty, the band broke-up in 1993 however, before being reformed in 1995 by Valo and guitarist Mikko \"Linde\" Lindström.  After being rejoined by Mige, as well new additions keyboardist Antto Melasniemi and drummer Juhana \"Pätkä\" Rantala, the band, now called HIM, released their debut album \"Greatest Lovesongs Vol.  666\" in 1997.  In 2000, now with drummer Mika \"Gas Lipstick\" Karppinen and keyboardist Juska Salminen, the band released the album \"Razorblade Romance\", which reached the number one spot in Finland, Austria and Germany.  Its first single, \"Join Me in Death\", also charted at number one in Finland and Germany, eventually going platinum and gold respectively.  Following the addition of Janne \"Burton\" Puurtinen on keyboards, HIM released \"Deep Shadows and Brilliant Highlights\" and \"Love Metal\" in 2001 and 2003 respectively.  Both cracked the top ten in several countries, and allowed the band to tour the United Kingdom and the United States for the first time.\n\nErase/Rewind: \"Erase/Rewind\" is a song written by Peter Svensson and Nina Persson for The Cardigans' 1998 album \"Gran Turismo\".  The song is the album's second track, and was released as its second single.  It was also featured in \"The Thirteenth Floor\" during the ending credits.\n\nQuestion: What city is the band from who had a song on the soundtrack of the 1999 science fiction film \"The Thirteenth Floor\"?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the science fiction film.\"\n    },\n    \"soundtrack_song\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song featured on the film's soundtrack.\"\n    },\n    \"band_info\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"band_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the band.\"\n        },\n        \"band_origin_city\": {\n          \"type\": \"string\",\n          \"description\": \"The city where the band is from.\"\n        },\n        \"band_origin_country\": {\n          \"type\": \"string\",\n          \"description\": \"The country where the band is from.\"\n        }\n      },\n      \"required\": [\n        \"band_name\",\n        \"band_origin_city\",\n        \"band_origin_country\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"soundtrack_song\",\n    \"band_info\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "soundtrack_song",
-    "band_info"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the science fiction film."
+      },
+      "soundtrack_song": {
+        "type": "string",
+        "description": "The title of the song featured on the film's soundtrack."
+      },
+      "band_info": {
+        "type": "object",
+        "properties": {
+          "band_name": {
+            "type": "string",
+            "description": "The name of the band."
+          },
+          "band_origin_city": {
+            "type": "string",
+            "description": "The city where the band is from."
+          },
+          "band_origin_country": {
+            "type": "string",
+            "description": "The country where the band is from."
+          }
+        },
+        "required": [
+          "band_name",
+          "band_origin_city",
+          "band_origin_country"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "film_title",
+      "soundtrack_song",
+      "band_info"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

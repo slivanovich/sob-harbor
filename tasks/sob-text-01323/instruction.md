@@ -1,83 +1,60 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Michelle Burke: Michelle Burke (born Michelle Gray; November 30, 1970) is an American actress.  She is best known for her roles as Jodi Kramer in the 1993 Richard Linklater film "Dazed and Confused" and as Connie Conehead in the 1993 movie "Coneheads".  She also appeared in the 1994 sequel to "Major League", "Major League II".
-
-Mark Buntzman: Mark Buntzman is the film director, writer, producer and actor of the cult classic movie "Exterminator 2", and was also the producer of the first, "The Exterminator".  Other than those two movies, he hasn't produced, directed, or written any other prominent films.  He did, though, have a cameo in the 1993 movie "Posse" as Deputy Buntzman, as well as playing a reporter in the 1995 movie "Panther".  Both movies starred Mario Van Peebles, who also played a large role in "Exterminator 2".
-
-Schindler's List: Schindler's List is a 1993 American epic historical period drama film directed and co-produced by Steven Spielberg and scripted by Steven Zaillian.  It is based on the novel "Schindler's Ark" by Australian novelist Thomas Keneally.  The film relates a period in the life of Oskar Schindler, an ethnic German businessman, during which he saved the lives of more than a thousand mostly Polish-Jewish refugees from the Holocaust by employing them in his factories during World War II.  It stars Liam Neeson as Schindler, Ralph Fiennes as SS officer Amon Göth, and Ben Kingsley as Schindler's Jewish accountant Itzhak Stern.
-
-Promises and Lies: Promises and Lies is the tenth album by the British reggae band UB40, released in 1993.  It includes the hit from the soundtrack of the 1993 movie "Sliver", "Can't Help Falling in Love", originally sung by Elvis Presley.  The album reached No. 1 in the UK and No. 6 in the United States.  It is the band's best-selling album (over 9 million copies).
-
-Streiht Up Menace: "Streiht Up Menace" is a 1993 single by MC Eiht off the soundtrack of 1993 movie "Menace II Society".  The lyrics of the song focus on the life of the characters in the movie, acting as a sort of plot summary for the film.  Compton's Most Wanted also did this with another song from a soundtrack with the song "Growin' Up In The Hood" from the "Boyz n the Hood" soundtrack.
-
-Erika Rosenberg: Erika Rosenberg (born 24 June 1951 in Buenos Aires, Argentina) is an author, interpreter and journalist.  She wrote a biography of Emilie Schindler.
-
-Schindler's Ark: Schindler's Ark (released in America as Schindler's List) is a Booker Prize-winning historical fiction novel published in 1982 by Australian novelist Thomas Keneally, which was later adapted into the highly successful movie "Schindler's List" directed by Steven Spielberg.  The United States version of the book was called "Schindler's List" from the beginning; it was later re-issued in Commonwealth countries under that name as well.  The novel was also awarded the Los Angeles Times Book Prize for Fiction in 1983.
-
-Oskar Schindler: Oskar Schindler (28 April 1908 – 9 October 1974) was a German industrialist, spy, and member of the Nazi Party who is credited with saving the lives of 1,200 Jews during the Holocaust by employing them in his enamelware and ammunitions factories, which were located in occupied Poland and the Protectorate of Bohemia and Moravia.  He is the subject of the 1982 novel "Schindler's Ark" and its 1993 film adaptation, "Schindler's List", which reflected his life as an opportunist initially motivated by profit, who came to show extraordinary initiative, tenacity, and dedication to save the lives of his Jewish employees.
-
-Jennifer Ward-Lealand: Jennifer Cecily Ward-Lealand, ONZM (born 8 November 1962 ), is a New Zealand screen and theatre actress whose screen CV includes starring in 1993 movie "Desperate Remedies", and appearances in "The Footstep Man", soap "Shortland Street" and Australian comedy series "Full Frontal".
-
-Emilie Schindler: Emilie Schindler (22 October 1907 – 5 October 2001) was a Sudeten German-born woman who, with her husband Oskar Schindler, helped to save the lives of 1,200 to 1,700 Jews during World War II by employing them in his enamelware and munitions factories, providing them immunity from the Nazis.  She was recognized as Righteous Among the Nations by Israel's Yad Vashem in 1994.
-
-Question: What 1993 movie was Emilie Schindler's husband the subject of?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "movie_title": {
-      "type": "string",
-      "description": "The title of the movie."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the movie was released."
-    },
-    "subject_person": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the person who is the subject of the movie."
-        },
-        "relationship_to_emilie_schindler": {
-          "type": "string",
-          "description": "The relationship of the subject person to Emilie Schindler."
-        }
-      },
-      "required": [
-        "name",
-        "relationship_to_emilie_schindler"
-      ],
-      "additionalProperties": false
-    },
-    "based_on_novel": {
-      "type": "string",
-      "description": "The title of the novel the movie is based on."
-    },
-    "director": {
-      "type": "string",
-      "description": "The director of the movie."
+    {
+      "role": "user",
+      "content": "Context:\nMichelle Burke: Michelle Burke (born Michelle Gray; November 30, 1970) is an American actress.  She is best known for her roles as Jodi Kramer in the 1993 Richard Linklater film \"Dazed and Confused\" and as Connie Conehead in the 1993 movie \"Coneheads\".  She also appeared in the 1994 sequel to \"Major League\", \"Major League II\".\n\nMark Buntzman: Mark Buntzman is the film director, writer, producer and actor of the cult classic movie \"Exterminator 2\", and was also the producer of the first, \"The Exterminator\".  Other than those two movies, he hasn't produced, directed, or written any other prominent films.  He did, though, have a cameo in the 1993 movie \"Posse\" as Deputy Buntzman, as well as playing a reporter in the 1995 movie \"Panther\".  Both movies starred Mario Van Peebles, who also played a large role in \"Exterminator 2\".\n\nSchindler's List: Schindler's List is a 1993 American epic historical period drama film directed and co-produced by Steven Spielberg and scripted by Steven Zaillian.  It is based on the novel \"Schindler's Ark\" by Australian novelist Thomas Keneally.  The film relates a period in the life of Oskar Schindler, an ethnic German businessman, during which he saved the lives of more than a thousand mostly Polish-Jewish refugees from the Holocaust by employing them in his factories during World War II.  It stars Liam Neeson as Schindler, Ralph Fiennes as SS officer Amon Göth, and Ben Kingsley as Schindler's Jewish accountant Itzhak Stern.\n\nPromises and Lies: Promises and Lies is the tenth album by the British reggae band UB40, released in 1993.  It includes the hit from the soundtrack of the 1993 movie \"Sliver\", \"Can't Help Falling in Love\", originally sung by Elvis Presley.  The album reached No. 1 in the UK and No. 6 in the United States.  It is the band's best-selling album (over 9 million copies).\n\nStreiht Up Menace: \"Streiht Up Menace\" is a 1993 single by MC Eiht off the soundtrack of 1993 movie \"Menace II Society\".  The lyrics of the song focus on the life of the characters in the movie, acting as a sort of plot summary for the film.  Compton's Most Wanted also did this with another song from a soundtrack with the song \"Growin' Up In The Hood\" from the \"Boyz n the Hood\" soundtrack.\n\nErika Rosenberg: Erika Rosenberg (born 24 June 1951 in Buenos Aires, Argentina) is an author, interpreter and journalist.  She wrote a biography of Emilie Schindler.\n\nSchindler's Ark: Schindler's Ark (released in America as Schindler's List) is a Booker Prize-winning historical fiction novel published in 1982 by Australian novelist Thomas Keneally, which was later adapted into the highly successful movie \"Schindler's List\" directed by Steven Spielberg.  The United States version of the book was called \"Schindler's List\" from the beginning; it was later re-issued in Commonwealth countries under that name as well.  The novel was also awarded the Los Angeles Times Book Prize for Fiction in 1983.\n\nOskar Schindler: Oskar Schindler (28 April 1908 – 9 October 1974) was a German industrialist, spy, and member of the Nazi Party who is credited with saving the lives of 1,200 Jews during the Holocaust by employing them in his enamelware and ammunitions factories, which were located in occupied Poland and the Protectorate of Bohemia and Moravia.  He is the subject of the 1982 novel \"Schindler's Ark\" and its 1993 film adaptation, \"Schindler's List\", which reflected his life as an opportunist initially motivated by profit, who came to show extraordinary initiative, tenacity, and dedication to save the lives of his Jewish employees.\n\nJennifer Ward-Lealand: Jennifer Cecily Ward-Lealand, ONZM (born 8 November 1962 ), is a New Zealand screen and theatre actress whose screen CV includes starring in 1993 movie \"Desperate Remedies\", and appearances in \"The Footstep Man\", soap \"Shortland Street\" and Australian comedy series \"Full Frontal\".\n\nEmilie Schindler: Emilie Schindler (22 October 1907 – 5 October 2001) was a Sudeten German-born woman who, with her husband Oskar Schindler, helped to save the lives of 1,200 to 1,700 Jews during World War II by employing them in his enamelware and munitions factories, providing them immunity from the Nazis.  She was recognized as Righteous Among the Nations by Israel's Yad Vashem in 1994.\n\nQuestion: What 1993 movie was Emilie Schindler's husband the subject of?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"movie_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the movie.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the movie was released.\"\n    },\n    \"subject_person\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the person who is the subject of the movie.\"\n        },\n        \"relationship_to_emilie_schindler\": {\n          \"type\": \"string\",\n          \"description\": \"The relationship of the subject person to Emilie Schindler.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"relationship_to_emilie_schindler\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"based_on_novel\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the novel the movie is based on.\"\n    },\n    \"director\": {\n      \"type\": \"string\",\n      \"description\": \"The director of the movie.\"\n    }\n  },\n  \"required\": [\n    \"movie_title\",\n    \"release_year\",\n    \"subject_person\",\n    \"based_on_novel\",\n    \"director\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "movie_title",
-    "release_year",
-    "subject_person",
-    "based_on_novel",
-    "director"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "movie_title": {
+        "type": "string",
+        "description": "The title of the movie."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the movie was released."
+      },
+      "subject_person": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the person who is the subject of the movie."
+          },
+          "relationship_to_emilie_schindler": {
+            "type": "string",
+            "description": "The relationship of the subject person to Emilie Schindler."
+          }
+        },
+        "required": [
+          "name",
+          "relationship_to_emilie_schindler"
+        ],
+        "additionalProperties": false
+      },
+      "based_on_novel": {
+        "type": "string",
+        "description": "The title of the novel the movie is based on."
+      },
+      "director": {
+        "type": "string",
+        "description": "The director of the movie."
+      }
+    },
+    "required": [
+      "movie_title",
+      "release_year",
+      "subject_person",
+      "based_on_novel",
+      "director"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

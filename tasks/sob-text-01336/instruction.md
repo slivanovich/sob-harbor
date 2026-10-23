@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Emperor Mozhu of Western Xia: Emperor Mozhu ("last ruler") or Emperor Modi ("last emperor") of Western Xia was the last emperor of the Tangut-founded Western Xia dynasty and reigned from 1226 to 1227.  His personal name was Lǐ Xiàn 李睍.  His rule saw the destruction of the Western Xia as the Mongol forces under Genghis Khan overran and conquered it following the defiance and rebellion of earlier emperors.
-
-George VI: George VI (Albert Frederick Arthur George; 14 December 1895 – 6 February 1952) was King of the United Kingdom and the Dominions of the British Commonwealth from 11 December 1936 until his death.  He was the last Emperor of India and the first Head of the Commonwealth.
-
-Li Congke: Li Congke () (11 February 885 – 11 January 937), also known posthumously as Emperor Mo of Later Tang (後唐末帝, "last emperor of Later Tang"), Emperor Fei of Later Tang (後唐廢帝, "deposed emperor of Later Tang"), Wang Congke (王從珂) (particularly during succeeding Later Jin, which did not recognize him as a legitimate Later Tang emperor), or Prince of Lu (潞王, a title Li Congke carried prior to his reign), nickname Ershisan (二十三, "23") or, in short, Asan (阿三), was the last emperor of the Later Tang - the second of the Five Dynasties following the fall of the Tang Dynasty.  He was an adoptive son of Li Siyuan (Emperor Mingzong) and took the throne after overthrowing Emperor Mingzong's biological son Emperor Min of Later Tang (Li Conghou).  He was later himself overthrown by his brother-in-law Shi Jingtang, who was supported by Khitan troops (and whose Later Jin succeeded his).  When the combined Later Jin and Khitan forces defeated Later Tang forces, Li Congke and his family members, as well as the guards most loyal to him, ascended a tower and set it on fire, dying in the fire.
-
-Emperor Bing of Song: Zhao Bing (12 February 1272 – 19 March 1279), also known as Emperor Bing of Song, was the 18th and last emperor of the Song dynasty in China.  He was also the ninth and last emperor of the Southern Song dynasty.  He reigned for about 313 days from 1278 to 1279 until his death.
-
-Murong Xi: Murong Xi (; 385–407), courtesy name Daowen (道文), formally Emperor Zhaowen of (Later) Yan ((後)燕昭文帝), was an emperor of the Xianbei state Later Yan.  He was one of the youngest sons of Murong Chui (Emperor Wucheng), and after the death of his nephew Murong Sheng (Emperor Zhaowu) became emperor due to his affair with Murong Sheng's mother, Empress Dowager Ding.  He was regarded as a cruel and capricious ruler, who acted at the whims of himself and his wife, Empress Fu Xunying, greatly damaging the Later Yan state.  After Empress Fu died in 407, he left the capital Longcheng (龍城, in modern Jinzhou, Liaoning) to bury her, and the soldiers in Longcheng took this chance to rebel and replace him with Murong Bao's adopted son Murong Yun (Emperor Huiyi), and Murong Xi himself was captured and killed.  (Because Murong Yun was an adopted son who later changed his name back to Gao Yun, some historians treat Murong Xi as the last emperor of Later Yan and Gao Yun as the first emperor of Northern Yan, while others treat Gao Yun as the last emperor of Later Yan and his successor Feng Ba as the first emperor of Northern Yan.)
-
-Emperor Gong of Sui: Emperor Gong of Sui (隋恭帝) (605 – 14 September 619), personal name Yang You (楊侑), was an emperor of the Chinese Sui Dynasty.  Traditionally, he was considered the last emperor of the dynasty because he was the one who formally yielded the throne to the founding emperor to the succeeding Tang Dynasty, Emperor Gaozu of Tang (Li Yuan), although after him, his brother Yang Tong claimed the throne and continued to do so until 619.  Li had rebelled against the rule of Yang You's grandfather Emperor Yang of Sui in 617 and captured the capital Chang'an later that year, seizing Yang You and declaring him emperor, although only the commanderies under Li's control recognized him as emperor; the rest of the commanderies continued to recognize Emperor Yang as emperor.  In 618, after news arrived that Emperor Yang had been killed by the general Yuwen Huaji, Li had the young emperor yield the throne to him.  The former emperor died the following year, probably on the new emperor's orders.
-
-Coins of the Australian pound: Federation in 1901 gave the Commonwealth a constitutional power to issue coins and removed this power from the States.  However, British coins continued in use until 1910, when Australian silver coins were introduced.  These included florins, shillings, sixpences and threepences.  They had a portrait of King Edward VII on one side.  Australian pennies and half-pennies were introduced into circulation the following year.  In 1931 gold sovereigns stopped being minted in Australia.  A crown or five-shilling coin was minted in 1937 and 1938.
-
-Zhu Youzhen: Zhu Zhen (朱瑱) (20 October 888 – 18 November 923), often referred to in traditional histories as Emperor Mo of Later Liang (後梁末帝, "last emperor") and sometimes by his princely title Prince of Jun (均王), né Zhu Youzhen (朱友貞), known as Zhu Huang (朱鍠) from 913 to 915, was the emperor of the Chinese Five Dynasties and Ten Kingdoms period state Later Liang from 913 to 923.  He was the third and last emperor of Later Liang, the first of the Five Dynasties.  He ordered his general Huangfu Lin (皇甫麟) to kill him in 923 when Emperor Zhuangzong of Later Tang (Li Cunxu), the emperor of Later Liang's enemy Later Tang to the north, was on the cusp of capturing the Later Liang capital Daliang.  His death marked the end of Later Liang, which was to be the longest among the Five Dynasties.  Despite his ten-year reign being the longest of all the Five Dynasties emperors (if one does not count Li Cunxu's reign as the Prince of Jin prior to taking imperial title) sources on his era are relatively scarce, as many Later Liang records were destroyed following the Later Tang conquest of Later Liang (as Later Tang viewed Later Liang as an illegitimate regime).
-
-Jia Yinghua: Jia Yinghua () was a Chinese writer and researcher who focused on the late Qing Dynasty.  He served as Vice President of the Biography Society of China, commissioner of National Commission of the Chinese Writers’ Association, President of China's Electrical Power Writers' Association.  Representative works of his include "The Later Half of the Last Emperor's Life" (), "The Last Eunuch of China: The Life of Sun Yaoting]]" (), "The Last Emperor’s Brother: The Life of Pujie" ().  The Japanese version of The Later Half of the Last Emperor's Life is a bestseller in Japan, attracting great attention and garnering enormous popularity.  According to authoritative media and press organizations in more than 100 countries and regions, including China, the United Kingdom, the United States, France, Japan, Hong Kong, Macao, and Taiwan this book is a successful continuation of "From Emperor to Citizen" (): The Autobiography of Aisin-Gioro Pu Yi () written by Pu Yi himself.  The Chinese version of "The Later Half of the Last Emperor’s Life" is always a domestic bestseller and has been published nine times in total, and also won the Gold Key Award in the 5th Chinese Books Fair.  His calligraphic works were also incorporated into "First Exhibition of Chinese Celebrities’ Calligraphic Works", "Exhibition of Contemporary Celebrities’ Paintings and Calligraphies", etc.
-
-Australian five-shilling note: Five shilling notes were first proposed in 1916, when the value of silver was estimated to become too expensive to use for making coins due to a possible decrease in Australia's supply of silver.  The proposed note was designed to have a portrait of George VI, the King of the United Kingdom and Emperor of India, displayed on its front side.  However, the need for paper notes did not arise, and by 1953, all the notes were destroyed, other than those now in the possession of Reserve Bank of Australia.
-
-Question: The proposed Australian five-shilling note, was designed to have the portrait of the individual who was the last Emperor of India and the first, what?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the individual whose portrait was designed for the note."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "title_held": {
-      "type": "string",
-      "description": "The title the individual held, as mentioned in the question."
-    },
-    "additional_title": {
-      "type": "string",
-      "description": "The other significant title held by the individual."
-    },
-    "note_denomination": {
-      "type": "string",
-      "description": "The denomination of the proposed Australian note."
-    },
-    "note_status": {
-      "type": "string",
-      "description": "The final status of the proposed note."
+    {
+      "role": "user",
+      "content": "Context:\nEmperor Mozhu of Western Xia: Emperor Mozhu (\"last ruler\") or Emperor Modi (\"last emperor\") of Western Xia was the last emperor of the Tangut-founded Western Xia dynasty and reigned from 1226 to 1227.  His personal name was Lǐ Xiàn 李睍.  His rule saw the destruction of the Western Xia as the Mongol forces under Genghis Khan overran and conquered it following the defiance and rebellion of earlier emperors.\n\nGeorge VI: George VI (Albert Frederick Arthur George; 14 December 1895 – 6 February 1952) was King of the United Kingdom and the Dominions of the British Commonwealth from 11 December 1936 until his death.  He was the last Emperor of India and the first Head of the Commonwealth.\n\nLi Congke: Li Congke () (11 February 885 – 11 January 937), also known posthumously as Emperor Mo of Later Tang (後唐末帝, \"last emperor of Later Tang\"), Emperor Fei of Later Tang (後唐廢帝, \"deposed emperor of Later Tang\"), Wang Congke (王從珂) (particularly during succeeding Later Jin, which did not recognize him as a legitimate Later Tang emperor), or Prince of Lu (潞王, a title Li Congke carried prior to his reign), nickname Ershisan (二十三, \"23\") or, in short, Asan (阿三), was the last emperor of the Later Tang - the second of the Five Dynasties following the fall of the Tang Dynasty.  He was an adoptive son of Li Siyuan (Emperor Mingzong) and took the throne after overthrowing Emperor Mingzong's biological son Emperor Min of Later Tang (Li Conghou).  He was later himself overthrown by his brother-in-law Shi Jingtang, who was supported by Khitan troops (and whose Later Jin succeeded his).  When the combined Later Jin and Khitan forces defeated Later Tang forces, Li Congke and his family members, as well as the guards most loyal to him, ascended a tower and set it on fire, dying in the fire.\n\nEmperor Bing of Song: Zhao Bing (12 February 1272 – 19 March 1279), also known as Emperor Bing of Song, was the 18th and last emperor of the Song dynasty in China.  He was also the ninth and last emperor of the Southern Song dynasty.  He reigned for about 313 days from 1278 to 1279 until his death.\n\nMurong Xi: Murong Xi (; 385–407), courtesy name Daowen (道文), formally Emperor Zhaowen of (Later) Yan ((後)燕昭文帝), was an emperor of the Xianbei state Later Yan.  He was one of the youngest sons of Murong Chui (Emperor Wucheng), and after the death of his nephew Murong Sheng (Emperor Zhaowu) became emperor due to his affair with Murong Sheng's mother, Empress Dowager Ding.  He was regarded as a cruel and capricious ruler, who acted at the whims of himself and his wife, Empress Fu Xunying, greatly damaging the Later Yan state.  After Empress Fu died in 407, he left the capital Longcheng (龍城, in modern Jinzhou, Liaoning) to bury her, and the soldiers in Longcheng took this chance to rebel and replace him with Murong Bao's adopted son Murong Yun (Emperor Huiyi), and Murong Xi himself was captured and killed.  (Because Murong Yun was an adopted son who later changed his name back to Gao Yun, some historians treat Murong Xi as the last emperor of Later Yan and Gao Yun as the first emperor of Northern Yan, while others treat Gao Yun as the last emperor of Later Yan and his successor Feng Ba as the first emperor of Northern Yan.)\n\nEmperor Gong of Sui: Emperor Gong of Sui (隋恭帝) (605 – 14 September 619), personal name Yang You (楊侑), was an emperor of the Chinese Sui Dynasty.  Traditionally, he was considered the last emperor of the dynasty because he was the one who formally yielded the throne to the founding emperor to the succeeding Tang Dynasty, Emperor Gaozu of Tang (Li Yuan), although after him, his brother Yang Tong claimed the throne and continued to do so until 619.  Li had rebelled against the rule of Yang You's grandfather Emperor Yang of Sui in 617 and captured the capital Chang'an later that year, seizing Yang You and declaring him emperor, although only the commanderies under Li's control recognized him as emperor; the rest of the commanderies continued to recognize Emperor Yang as emperor.  In 618, after news arrived that Emperor Yang had been killed by the general Yuwen Huaji, Li had the young emperor yield the throne to him.  The former emperor died the following year, probably on the new emperor's orders.\n\nCoins of the Australian pound: Federation in 1901 gave the Commonwealth a constitutional power to issue coins and removed this power from the States.  However, British coins continued in use until 1910, when Australian silver coins were introduced.  These included florins, shillings, sixpences and threepences.  They had a portrait of King Edward VII on one side.  Australian pennies and half-pennies were introduced into circulation the following year.  In 1931 gold sovereigns stopped being minted in Australia.  A crown or five-shilling coin was minted in 1937 and 1938.\n\nZhu Youzhen: Zhu Zhen (朱瑱) (20 October 888 – 18 November 923), often referred to in traditional histories as Emperor Mo of Later Liang (後梁末帝, \"last emperor\") and sometimes by his princely title Prince of Jun (均王), né Zhu Youzhen (朱友貞), known as Zhu Huang (朱鍠) from 913 to 915, was the emperor of the Chinese Five Dynasties and Ten Kingdoms period state Later Liang from 913 to 923.  He was the third and last emperor of Later Liang, the first of the Five Dynasties.  He ordered his general Huangfu Lin (皇甫麟) to kill him in 923 when Emperor Zhuangzong of Later Tang (Li Cunxu), the emperor of Later Liang's enemy Later Tang to the north, was on the cusp of capturing the Later Liang capital Daliang.  His death marked the end of Later Liang, which was to be the longest among the Five Dynasties.  Despite his ten-year reign being the longest of all the Five Dynasties emperors (if one does not count Li Cunxu's reign as the Prince of Jin prior to taking imperial title) sources on his era are relatively scarce, as many Later Liang records were destroyed following the Later Tang conquest of Later Liang (as Later Tang viewed Later Liang as an illegitimate regime).\n\nJia Yinghua: Jia Yinghua () was a Chinese writer and researcher who focused on the late Qing Dynasty.  He served as Vice President of the Biography Society of China, commissioner of National Commission of the Chinese Writers’ Association, President of China's Electrical Power Writers' Association.  Representative works of his include \"The Later Half of the Last Emperor's Life\" (), \"The Last Eunuch of China: The Life of Sun Yaoting]]\" (), \"The Last Emperor’s Brother: The Life of Pujie\" ().  The Japanese version of The Later Half of the Last Emperor's Life is a bestseller in Japan, attracting great attention and garnering enormous popularity.  According to authoritative media and press organizations in more than 100 countries and regions, including China, the United Kingdom, the United States, France, Japan, Hong Kong, Macao, and Taiwan this book is a successful continuation of \"From Emperor to Citizen\" (): The Autobiography of Aisin-Gioro Pu Yi () written by Pu Yi himself.  The Chinese version of \"The Later Half of the Last Emperor’s Life\" is always a domestic bestseller and has been published nine times in total, and also won the Gold Key Award in the 5th Chinese Books Fair.  His calligraphic works were also incorporated into \"First Exhibition of Chinese Celebrities’ Calligraphic Works\", \"Exhibition of Contemporary Celebrities’ Paintings and Calligraphies\", etc.\n\nAustralian five-shilling note: Five shilling notes were first proposed in 1916, when the value of silver was estimated to become too expensive to use for making coins due to a possible decrease in Australia's supply of silver.  The proposed note was designed to have a portrait of George VI, the King of the United Kingdom and Emperor of India, displayed on its front side.  However, the need for paper notes did not arise, and by 1953, all the notes were destroyed, other than those now in the possession of Reserve Bank of Australia.\n\nQuestion: The proposed Australian five-shilling note, was designed to have the portrait of the individual who was the last Emperor of India and the first, what?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the individual whose portrait was designed for the note.\"\n    },\n    \"title_held\": {\n      \"type\": \"string\",\n      \"description\": \"The title the individual held, as mentioned in the question.\"\n    },\n    \"additional_title\": {\n      \"type\": \"string\",\n      \"description\": \"The other significant title held by the individual.\"\n    },\n    \"note_denomination\": {\n      \"type\": \"string\",\n      \"description\": \"The denomination of the proposed Australian note.\"\n    },\n    \"note_status\": {\n      \"type\": \"string\",\n      \"description\": \"The final status of the proposed note.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"title_held\",\n    \"additional_title\",\n    \"note_denomination\",\n    \"note_status\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "title_held",
-    "additional_title",
-    "note_denomination",
-    "note_status"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the individual whose portrait was designed for the note."
+      },
+      "title_held": {
+        "type": "string",
+        "description": "The title the individual held, as mentioned in the question."
+      },
+      "additional_title": {
+        "type": "string",
+        "description": "The other significant title held by the individual."
+      },
+      "note_denomination": {
+        "type": "string",
+        "description": "The denomination of the proposed Australian note."
+      },
+      "note_status": {
+        "type": "string",
+        "description": "The final status of the proposed note."
+      }
+    },
+    "required": [
+      "person_name",
+      "title_held",
+      "additional_title",
+      "note_denomination",
+      "note_status"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

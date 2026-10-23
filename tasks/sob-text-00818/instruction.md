@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2008 Kids' Choice Awards: The 21st annual Nickelodeon Kids' Choice Awards were held at the Pauley Pavilion, Los Angeles, California on March 29, 2008.  The show was the first live-action/animated Kids Choice Awards show.  The event was hosted by Jack Black.  Voting began March 3 on Nick.com and Nicktropolis.  A "Bring on the Nominees" special hosted by Lil' JJ aired also.  The Naked Brothers Band and Miley Cyrus were musical performances for the show.  A sweepstakes was announced to promote the show.  The number of votes cast broke the record previously set in 2007.  86,708,020 kids cast 88,254,272 votes (since kids were allowed to vote multiple times) between March 3–29 in 18 categories, to honor and vote for their favorites.  Votes were cast via Nick.com, Nicktropolis, TurboNick, and for the first time via Nick's new mobile website (wap.nick.com).  The award show attracted 7.7 million viewers.
-
-Victorious: Victorious (stylized as "VICTORiOUS") is an American sitcom created by Dan Schneider that originally aired on Nickelodeon from March 27, 2010 to February 2, 2013.  The series revolves around aspiring singer Tori Vega (portrayed by Victoria Justice), a teenager who attends a performing arts high school called Hollywood Arts High School, after taking her older sister Trina's (Daniella Monet) place in a showcase while getting into screwball situations on a daily basis.  On her first day at Hollywood Arts, she meets Andre Harris (Leon Thomas III), Robbie Shapiro (Matt Bennett), Rex Powers (Robbie's puppet), Jade West (Elizabeth Gillies), Cat Valentine (Ariana Grande), and Beck Oliver (Avan Jogia).  The series premiered after the 2010 Kids' Choice Awards.  The series won for Favorite TV Show award at the 2012 Kids' Choice Awards and 2013 Kids' Choice Awards, even beating out "iCarly".  "Victorious" has had four Emmy nominations.
-
-The Fairly OddParents (season 9): The ninth season of "The Fairly OddParents" premiered on March 23, 2013 with the episode "Fairly OddPet" which aired after the 2013 Nickelodeon Kids' Choice Awards if you were tuned to Nickelodeon while the Nickelodeon Kids' Choice Awards was airing.  Nickelodeon renewed this season on March 14, 2012 during its upfront.  A sequel to the live action movie "" called "A Fairly Odd Christmas" premiered on November 29, 2012, as part of the season.
-
-Nickelodeon Kids' Choice Awards: The Nickelodeon Kids' Choice Awards (also known as the KCAs, Kids' Choice , or Kids' Choice Awards) is an American 90-minute-long annual awards show that airs on Nickelodeon.  Usually held on a Saturday day, morning, or night in late March or early April, the show that honors the year's biggest television, movie, and music acts as voted by Nickelodeon viewers.  Winners receive a hollow orange blimp figurine, a logo outline for much of the network's 1984–2009 era, which also functions as a kaleidoscope.
-
-2011 Kids' Choice Awards: Nickelodeon's 24th Annual Kids' Choice Awards were held on April 2, 2011, at 8 p.m. ET at the Galen Center at the University of Southern California in Los Angeles, California, US's University Park neighborhood due to renovations disallowing use of traditional venue Pauley Pavilion until at least 2013.  Jack Black returned as host for the third time since 2006.  The 2011 telecast was the first Kids' Choice Awards to take place in the month of April since 2006, as the previous four Kids' Choice telecasts from 2007 to 2010 were held on the last Saturday in March.  Nominees were announced on February 10, 2011, for twenty categories.  During the show, the Big Green Help Award was presented to Justin Timberlake, an honor given each year.  More than 200 million record-breaking votes were cast for this year's 20-category awards.
-
-1993 Kids' Choice Awards: The 1993 Nickelodeon Kids' Choice Awards was the sixth annual "Kids Choice Awards" event, which took place on November 14, 1993.  It was hosted by Brian Austin Green, Holly Robinson Peete, and Tori Spelling The event was held at the Pauley Pavilion at UCLA in Los Angeles, California.  So far, this is the latest Kids' Choice Awards ceremony date to take place, with the earliest being the 2017 ceremony (March 11, 2017).
-
-2010 Kids' Choice Awards: Nickelodeon's 23rd Annual Kids' Choice Awards (Nickelodeon Kids' Choice Awards 2010) were held on March 27, 2010 (aired live from 8-9:30 p.m. ET) on the Nell and John Wooden Court of Pauley Pavilion, on the campus of UCLA in Los Angeles, California.  With the launch of Nickelodeon Canada in late 2009, Canada broadcast the awards live as it aired in the Eastern, Central, and Mountain time zones of the United States (it was tape-delayed for the Pacific Time Zone) and the awards will be rebroadcast on YTV on April 2, 2010 at 7 p.m. ET.  As a result, Canadian kids were able to vote on candidates for the first time.  Nickelodeon's sister channels TeenNick and Nicktoons suspended regular programming during the 90-minute duration of the award show to allow viewers to see the awards.  The 2010 awards were hosted by Kevin James, who is a first-time "Kids' Choice" host.
-
-Help Wanted (SpongeBob SquarePants): "Help Wanted" is the pilot episode of the American animated television series "SpongeBob SquarePants".  It originally aired on Nickelodeon in the United States on May 1, 1999, following the television airing of the 1999 Kids' Choice Awards.  The episode follows the protagonist, an anthropomorphic sea sponge named SpongeBob SquarePants, attempting to get a job at a local restaurant called the Krusty Krab.  However, he is tasked to find a seemingly non-existent high-caliber spatula because the owner, Mr. Krabs, considers him unqualified for the position.  Eventually, crowds of ravenous anchovies stop by the Krusty Krab and demand meals.  SpongeBob returns from his errand, having fulfilled the request of Mr. Krabs and found a mechanical spatula.  He utilizes the spatula to fulfill the anchovies' hunger.  SpongeBob is then welcomed by Mr. Krabs as a Krusty Krab employee.
-
-1999 Kids' Choice Awards: The 1999 Kids' Choice Awards was the 12th annual edition of the awards on May 1, 1999.  It was once again held at Pauley Pavilion at UCLA in Los Angeles, California.  Britney Spears, TLC, and NSYNC performed live from Orlando, Florida.  About 6.2 million children participated in voting.  Immediately following the awards was the series premiere of "SpongeBob SquarePants", which remains Nickelodeon's longest running animated series.
-
-2009 Kids' Choice Awards: Nickelodeon's 22nd Annual Kids' Choice Awards (Nickelodeon Kids' Choice Awards 2009) were held on March 28, 2009 at 8 p.m. on the Nell and John Wooden Court of Pauley Pavilion.  Dwayne Johnson hosted this awards show which lasted for more than one and half hours.  Voting commenced on March 2, 2009.  Performers and presenters have been listed at the official site.  The Jonas Brothers sang their song, "Lovebug", but changed the line "catch this lovebug again" to "catch this slime time again".  By the end of the program, they were named the "slime gods".  This year marks the last time that the Nickelodeon Orange Blimp was used on the Kids' Choice Awards logo for 4 years.  The Nickelodeon Blimp was not used on the Kids' Choice Awards logo again until 2013.
-
-Question: When did the episode which followed the 1999 Kids' Choice Awards aired 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "awards_show_year": {
-      "type": "integer",
-      "description": "The year of the Kids' Choice Awards."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "awards_show_date": {
-      "type": "string",
-      "description": "The date the Kids' Choice Awards were held."
-    },
-    "following_episode_title": {
-      "type": "string",
-      "description": "The title of the episode that aired immediately after the awards show."
-    },
-    "episode_air_date": {
-      "type": "string",
-      "description": "The original air date of the episode that followed the awards show."
+    {
+      "role": "user",
+      "content": "Context:\n2008 Kids' Choice Awards: The 21st annual Nickelodeon Kids' Choice Awards were held at the Pauley Pavilion, Los Angeles, California on March 29, 2008.  The show was the first live-action/animated Kids Choice Awards show.  The event was hosted by Jack Black.  Voting began March 3 on Nick.com and Nicktropolis.  A \"Bring on the Nominees\" special hosted by Lil' JJ aired also.  The Naked Brothers Band and Miley Cyrus were musical performances for the show.  A sweepstakes was announced to promote the show.  The number of votes cast broke the record previously set in 2007.  86,708,020 kids cast 88,254,272 votes (since kids were allowed to vote multiple times) between March 3–29 in 18 categories, to honor and vote for their favorites.  Votes were cast via Nick.com, Nicktropolis, TurboNick, and for the first time via Nick's new mobile website (wap.nick.com).  The award show attracted 7.7 million viewers.\n\nVictorious: Victorious (stylized as \"VICTORiOUS\") is an American sitcom created by Dan Schneider that originally aired on Nickelodeon from March 27, 2010 to February 2, 2013.  The series revolves around aspiring singer Tori Vega (portrayed by Victoria Justice), a teenager who attends a performing arts high school called Hollywood Arts High School, after taking her older sister Trina's (Daniella Monet) place in a showcase while getting into screwball situations on a daily basis.  On her first day at Hollywood Arts, she meets Andre Harris (Leon Thomas III), Robbie Shapiro (Matt Bennett), Rex Powers (Robbie's puppet), Jade West (Elizabeth Gillies), Cat Valentine (Ariana Grande), and Beck Oliver (Avan Jogia).  The series premiered after the 2010 Kids' Choice Awards.  The series won for Favorite TV Show award at the 2012 Kids' Choice Awards and 2013 Kids' Choice Awards, even beating out \"iCarly\".  \"Victorious\" has had four Emmy nominations.\n\nThe Fairly OddParents (season 9): The ninth season of \"The Fairly OddParents\" premiered on March 23, 2013 with the episode \"Fairly OddPet\" which aired after the 2013 Nickelodeon Kids' Choice Awards if you were tuned to Nickelodeon while the Nickelodeon Kids' Choice Awards was airing.  Nickelodeon renewed this season on March 14, 2012 during its upfront.  A sequel to the live action movie \"\" called \"A Fairly Odd Christmas\" premiered on November 29, 2012, as part of the season.\n\nNickelodeon Kids' Choice Awards: The Nickelodeon Kids' Choice Awards (also known as the KCAs, Kids' Choice , or Kids' Choice Awards) is an American 90-minute-long annual awards show that airs on Nickelodeon.  Usually held on a Saturday day, morning, or night in late March or early April, the show that honors the year's biggest television, movie, and music acts as voted by Nickelodeon viewers.  Winners receive a hollow orange blimp figurine, a logo outline for much of the network's 1984–2009 era, which also functions as a kaleidoscope.\n\n2011 Kids' Choice Awards: Nickelodeon's 24th Annual Kids' Choice Awards were held on April 2, 2011, at 8 p.m. ET at the Galen Center at the University of Southern California in Los Angeles, California, US's University Park neighborhood due to renovations disallowing use of traditional venue Pauley Pavilion until at least 2013.  Jack Black returned as host for the third time since 2006.  The 2011 telecast was the first Kids' Choice Awards to take place in the month of April since 2006, as the previous four Kids' Choice telecasts from 2007 to 2010 were held on the last Saturday in March.  Nominees were announced on February 10, 2011, for twenty categories.  During the show, the Big Green Help Award was presented to Justin Timberlake, an honor given each year.  More than 200 million record-breaking votes were cast for this year's 20-category awards.\n\n1993 Kids' Choice Awards: The 1993 Nickelodeon Kids' Choice Awards was the sixth annual \"Kids Choice Awards\" event, which took place on November 14, 1993.  It was hosted by Brian Austin Green, Holly Robinson Peete, and Tori Spelling The event was held at the Pauley Pavilion at UCLA in Los Angeles, California.  So far, this is the latest Kids' Choice Awards ceremony date to take place, with the earliest being the 2017 ceremony (March 11, 2017).\n\n2010 Kids' Choice Awards: Nickelodeon's 23rd Annual Kids' Choice Awards (Nickelodeon Kids' Choice Awards 2010) were held on March 27, 2010 (aired live from 8-9:30 p.m. ET) on the Nell and John Wooden Court of Pauley Pavilion, on the campus of UCLA in Los Angeles, California.  With the launch of Nickelodeon Canada in late 2009, Canada broadcast the awards live as it aired in the Eastern, Central, and Mountain time zones of the United States (it was tape-delayed for the Pacific Time Zone) and the awards will be rebroadcast on YTV on April 2, 2010 at 7 p.m. ET.  As a result, Canadian kids were able to vote on candidates for the first time.  Nickelodeon's sister channels TeenNick and Nicktoons suspended regular programming during the 90-minute duration of the award show to allow viewers to see the awards.  The 2010 awards were hosted by Kevin James, who is a first-time \"Kids' Choice\" host.\n\nHelp Wanted (SpongeBob SquarePants): \"Help Wanted\" is the pilot episode of the American animated television series \"SpongeBob SquarePants\".  It originally aired on Nickelodeon in the United States on May 1, 1999, following the television airing of the 1999 Kids' Choice Awards.  The episode follows the protagonist, an anthropomorphic sea sponge named SpongeBob SquarePants, attempting to get a job at a local restaurant called the Krusty Krab.  However, he is tasked to find a seemingly non-existent high-caliber spatula because the owner, Mr. Krabs, considers him unqualified for the position.  Eventually, crowds of ravenous anchovies stop by the Krusty Krab and demand meals.  SpongeBob returns from his errand, having fulfilled the request of Mr. Krabs and found a mechanical spatula.  He utilizes the spatula to fulfill the anchovies' hunger.  SpongeBob is then welcomed by Mr. Krabs as a Krusty Krab employee.\n\n1999 Kids' Choice Awards: The 1999 Kids' Choice Awards was the 12th annual edition of the awards on May 1, 1999.  It was once again held at Pauley Pavilion at UCLA in Los Angeles, California.  Britney Spears, TLC, and NSYNC performed live from Orlando, Florida.  About 6.2 million children participated in voting.  Immediately following the awards was the series premiere of \"SpongeBob SquarePants\", which remains Nickelodeon's longest running animated series.\n\n2009 Kids' Choice Awards: Nickelodeon's 22nd Annual Kids' Choice Awards (Nickelodeon Kids' Choice Awards 2009) were held on March 28, 2009 at 8 p.m. on the Nell and John Wooden Court of Pauley Pavilion.  Dwayne Johnson hosted this awards show which lasted for more than one and half hours.  Voting commenced on March 2, 2009.  Performers and presenters have been listed at the official site.  The Jonas Brothers sang their song, \"Lovebug\", but changed the line \"catch this lovebug again\" to \"catch this slime time again\".  By the end of the program, they were named the \"slime gods\".  This year marks the last time that the Nickelodeon Orange Blimp was used on the Kids' Choice Awards logo for 4 years.  The Nickelodeon Blimp was not used on the Kids' Choice Awards logo again until 2013.\n\nQuestion: When did the episode which followed the 1999 Kids' Choice Awards aired \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"awards_show_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year of the Kids' Choice Awards.\"\n    },\n    \"awards_show_date\": {\n      \"type\": \"string\",\n      \"description\": \"The date the Kids' Choice Awards were held.\"\n    },\n    \"following_episode_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the episode that aired immediately after the awards show.\"\n    },\n    \"episode_air_date\": {\n      \"type\": \"string\",\n      \"description\": \"The original air date of the episode that followed the awards show.\"\n    }\n  },\n  \"required\": [\n    \"awards_show_year\",\n    \"awards_show_date\",\n    \"following_episode_title\",\n    \"episode_air_date\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "awards_show_year",
-    "awards_show_date",
-    "following_episode_title",
-    "episode_air_date"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "awards_show_year": {
+        "type": "integer",
+        "description": "The year of the Kids' Choice Awards."
+      },
+      "awards_show_date": {
+        "type": "string",
+        "description": "The date the Kids' Choice Awards were held."
+      },
+      "following_episode_title": {
+        "type": "string",
+        "description": "The title of the episode that aired immediately after the awards show."
+      },
+      "episode_air_date": {
+        "type": "string",
+        "description": "The original air date of the episode that followed the awards show."
+      }
+    },
+    "required": [
+      "awards_show_year",
+      "awards_show_date",
+      "following_episode_title",
+      "episode_air_date"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

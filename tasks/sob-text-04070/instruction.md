@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-House of Night: House of Night is a series of young adult vampire-themed fantasy novels by American author P. C. Cast and her daughter Kristin Cast.  It follows the adventures of Zoey Redbird, a sixteen-year-old girl who has just become a "fledgling vampyre" and is required to attend the House of Night boarding school in Tulsa, Oklahoma.  Books in the series have been on the "New York Times" Best Seller list for 63 weeks and have sold over seven million copies in North America, and more than ten million books worldwide, in 39 countries.  The series, published by St Martin's Press, is planned to include thirteen books.
-
-Fancy Nancy: Fancy Nancy is a 2005 children's picture book written by Jane O'Connor and illustrated by Robin Preiss Glasser.  The book spent nearly 100 weeks on the New York Times Best Seller list, launching a series that now numbers upwards of 80 books, selling 30 million volumes.  "Fancy Nancy" has been on Publishers Weekly's bestseller list for picture books, was a Children's Book-of-the-Month Club selection and a Junior Library Guild Selection.  It also won a "Borders 2006 Original Voices" award and has been translated into 20 languages, including Hungarian and Hebrew.  In April 2012, Nancy was featured in her first chapter book, "Nancy Clancy: Super Sleuth".  Books in the "Fancy Nancy" series have now spent 330 weeks on the New York Times Best Seller list, and in the fall of 2012, "Fancy Nancy the Musical" was produced by Vital Theatre Company in New York City.
-
-1636: The Kremlin Games: 1636: The Kremlin Games is a novel in the 1632 series written by Gorg Huff and Paula Goodlett along with Eric Flint.  It is the fourth book in the series to be listed on the New York Times Best Seller list for hardcover fiction.  This book reached number 30 on the NY Times list during a single week in June 2012.  Besides being listed on the NY Times Best Seller list, 1636: The Kremlin Games was also listed on the Locus Hardcovers Bestsellers List for the month of September in 2012 at number 6.
-
-Anne McCaffrey: Anne Inez McCaffrey (1 April 1926 – 21 November 2011) was an American-born writer who emigrated to Ireland and was best known for the "Dragonriders of Pern" fantasy series.  Early in McCaffrey's 46-year career as a writer, she became the first woman to win a Hugo Award for fiction and the first to win a Nebula Award.  Her 1978 novel "The White Dragon" became one of the first science-fiction books to appear on the New York Times Best Seller list.
-
-Marked (novel): Marked is the first novel of the "House of Night" fantasy series written by P.C. Cast and Kristin Cast.
-
-Seizure (Cook novel): Seizure is a 2003 novel by American author Robin Cook which explores the concerns raised by advances in therapeutic cloning.  It debuted at Number 6 on The New York Times Best Seller list on August 3, 2003.  It remained on the best seller list for three weeks.  In November 2004 it appeared on the paperback best seller list.
-
-11/22/63: 11/22/63 is a novel by Stephen King about a time traveler who attempts to prevent the assassination of President John F. Kennedy, which occurred on November 22, 1963 (the novel's titular date).  It's the 60th book published by Stephen King, it is his 49th novel and the 42nd under his own name.  The novel was announced on King's official site on March 2, 2011.  A short excerpt was released online on June 1, 2011, and another excerpt was published in the October 28, 2011, issue of "Entertainment Weekly".  The novel was published on November 8, 2011 and quickly became a number-one bestseller.  It stayed on The New York Times Best Seller list for 16 weeks.  "11/22/63" won the 2011 Los Angeles Times Book Prize for Best Mystery/Thriller and the 2012 International Thriller Writers Award for Best Novel, and was nominated for the 2012 British Fantasy Award for Best Novel and the 2012 Locus Award for Best Science Fiction Novel.
-
-Lisa Miller (psychologist): Lisa Jane Miller is a professor, researcher and clinical psychologist, best known as a research scholar on spirituality in psychology.  Miller has worked for two decades to integrate spirituality into mainstream research on mental health and wellness publishing over 85 empirical peer review article on spirituality and mental health in leading medical and psychology journals, including the "American Journal of Psychiatry" and "Journal of the American Academy of Child and Adolescent Psychiatry".  Her work focuses on the spiritual awareness of children, adolescents and parents, and benefits to mental health and wellness of spiritual awareness.  She founded the Spirituality Mind Body Institute at Teachers College, Columbia University, the first Ivy League graduate program in spirituality and psychology.  Dr. Miller is best known as the author of the New York Times Best Seller "The Spiritual Child: The New Science of Parenting for Health and Lifelong Thriving" (St. Martin's Press) which also hit #1 Family Nielsen Ratings, Psychology Best Seller USA Today and Non-Fiction Best Seller Publishers Weekly.
-
-Women Who Run With the Wolves: "Women Who Run With the Wolves: Myths and Stories of the Wild Woman Archetype" is a book by Jungian analyst, author and poet Clarissa Pinkola Estés, Ph.D, published in 1992 by Ballantine Books.  It spent 145 weeks on The New York Times Best Seller list over a three-year span, a record at the time.  .  Estés won a Las Primeras Award from the Mexican American Women's Foundation for being the First Latina on the "New York Times" Best Seller list.  The book also appeared on other best seller lists, including "USA Today", "Publishers Weekly", and "Library Journal".
-
-J. L. King: J.L. King is a New York Times best selling author, publisher, and HIV/STD activist.  Subjects of his work include the nature of human behavior, effects of health issues on minorities, and sexual orientation and its impact on schools.  King’s first book, "" appeared on The New York Times best seller list for more than 30 consecutive weeks.
-
-Question: What is the name of the first novel of the fantasy series which has been a new york times best seller for 63 weeks
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "series_name": {
-      "type": "string",
-      "description": "The name of the fantasy series."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "series_genre": {
-      "type": "string",
-      "description": "The genre of the series."
-    },
-    "nyt_bestseller_weeks": {
-      "type": "integer",
-      "description": "The total number of weeks the series has spent on the New York Times Best Seller list."
-    },
-    "first_novel_name": {
-      "type": "string",
-      "description": "The name of the first novel in the identified series."
+    {
+      "role": "user",
+      "content": "Context:\nHouse of Night: House of Night is a series of young adult vampire-themed fantasy novels by American author P. C. Cast and her daughter Kristin Cast.  It follows the adventures of Zoey Redbird, a sixteen-year-old girl who has just become a \"fledgling vampyre\" and is required to attend the House of Night boarding school in Tulsa, Oklahoma.  Books in the series have been on the \"New York Times\" Best Seller list for 63 weeks and have sold over seven million copies in North America, and more than ten million books worldwide, in 39 countries.  The series, published by St Martin's Press, is planned to include thirteen books.\n\nFancy Nancy: Fancy Nancy is a 2005 children's picture book written by Jane O'Connor and illustrated by Robin Preiss Glasser.  The book spent nearly 100 weeks on the New York Times Best Seller list, launching a series that now numbers upwards of 80 books, selling 30 million volumes.  \"Fancy Nancy\" has been on Publishers Weekly's bestseller list for picture books, was a Children's Book-of-the-Month Club selection and a Junior Library Guild Selection.  It also won a \"Borders 2006 Original Voices\" award and has been translated into 20 languages, including Hungarian and Hebrew.  In April 2012, Nancy was featured in her first chapter book, \"Nancy Clancy: Super Sleuth\".  Books in the \"Fancy Nancy\" series have now spent 330 weeks on the New York Times Best Seller list, and in the fall of 2012, \"Fancy Nancy the Musical\" was produced by Vital Theatre Company in New York City.\n\n1636: The Kremlin Games: 1636: The Kremlin Games is a novel in the 1632 series written by Gorg Huff and Paula Goodlett along with Eric Flint.  It is the fourth book in the series to be listed on the New York Times Best Seller list for hardcover fiction.  This book reached number 30 on the NY Times list during a single week in June 2012.  Besides being listed on the NY Times Best Seller list, 1636: The Kremlin Games was also listed on the Locus Hardcovers Bestsellers List for the month of September in 2012 at number 6.\n\nAnne McCaffrey: Anne Inez McCaffrey (1 April 1926 – 21 November 2011) was an American-born writer who emigrated to Ireland and was best known for the \"Dragonriders of Pern\" fantasy series.  Early in McCaffrey's 46-year career as a writer, she became the first woman to win a Hugo Award for fiction and the first to win a Nebula Award.  Her 1978 novel \"The White Dragon\" became one of the first science-fiction books to appear on the New York Times Best Seller list.\n\nMarked (novel): Marked is the first novel of the \"House of Night\" fantasy series written by P.C. Cast and Kristin Cast.\n\nSeizure (Cook novel): Seizure is a 2003 novel by American author Robin Cook which explores the concerns raised by advances in therapeutic cloning.  It debuted at Number 6 on The New York Times Best Seller list on August 3, 2003.  It remained on the best seller list for three weeks.  In November 2004 it appeared on the paperback best seller list.\n\n11/22/63: 11/22/63 is a novel by Stephen King about a time traveler who attempts to prevent the assassination of President John F. Kennedy, which occurred on November 22, 1963 (the novel's titular date).  It's the 60th book published by Stephen King, it is his 49th novel and the 42nd under his own name.  The novel was announced on King's official site on March 2, 2011.  A short excerpt was released online on June 1, 2011, and another excerpt was published in the October 28, 2011, issue of \"Entertainment Weekly\".  The novel was published on November 8, 2011 and quickly became a number-one bestseller.  It stayed on The New York Times Best Seller list for 16 weeks.  \"11/22/63\" won the 2011 Los Angeles Times Book Prize for Best Mystery/Thriller and the 2012 International Thriller Writers Award for Best Novel, and was nominated for the 2012 British Fantasy Award for Best Novel and the 2012 Locus Award for Best Science Fiction Novel.\n\nLisa Miller (psychologist): Lisa Jane Miller is a professor, researcher and clinical psychologist, best known as a research scholar on spirituality in psychology.  Miller has worked for two decades to integrate spirituality into mainstream research on mental health and wellness publishing over 85 empirical peer review article on spirituality and mental health in leading medical and psychology journals, including the \"American Journal of Psychiatry\" and \"Journal of the American Academy of Child and Adolescent Psychiatry\".  Her work focuses on the spiritual awareness of children, adolescents and parents, and benefits to mental health and wellness of spiritual awareness.  She founded the Spirituality Mind Body Institute at Teachers College, Columbia University, the first Ivy League graduate program in spirituality and psychology.  Dr. Miller is best known as the author of the New York Times Best Seller \"The Spiritual Child: The New Science of Parenting for Health and Lifelong Thriving\" (St. Martin's Press) which also hit #1 Family Nielsen Ratings, Psychology Best Seller USA Today and Non-Fiction Best Seller Publishers Weekly.\n\nWomen Who Run With the Wolves: \"Women Who Run With the Wolves: Myths and Stories of the Wild Woman Archetype\" is a book by Jungian analyst, author and poet Clarissa Pinkola Estés, Ph.D, published in 1992 by Ballantine Books.  It spent 145 weeks on The New York Times Best Seller list over a three-year span, a record at the time.  .  Estés won a Las Primeras Award from the Mexican American Women's Foundation for being the First Latina on the \"New York Times\" Best Seller list.  The book also appeared on other best seller lists, including \"USA Today\", \"Publishers Weekly\", and \"Library Journal\".\n\nJ. L. King: J.L. King is a New York Times best selling author, publisher, and HIV/STD activist.  Subjects of his work include the nature of human behavior, effects of health issues on minorities, and sexual orientation and its impact on schools.  King’s first book, \"\" appeared on The New York Times best seller list for more than 30 consecutive weeks.\n\nQuestion: What is the name of the first novel of the fantasy series which has been a new york times best seller for 63 weeks\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the fantasy series.\"\n    },\n    \"series_genre\": {\n      \"type\": \"string\",\n      \"description\": \"The genre of the series.\"\n    },\n    \"nyt_bestseller_weeks\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of weeks the series has spent on the New York Times Best Seller list.\"\n    },\n    \"first_novel_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the first novel in the identified series.\"\n    }\n  },\n  \"required\": [\n    \"series_name\",\n    \"series_genre\",\n    \"nyt_bestseller_weeks\",\n    \"first_novel_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "series_name",
-    "series_genre",
-    "nyt_bestseller_weeks",
-    "first_novel_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "series_name": {
+        "type": "string",
+        "description": "The name of the fantasy series."
+      },
+      "series_genre": {
+        "type": "string",
+        "description": "The genre of the series."
+      },
+      "nyt_bestseller_weeks": {
+        "type": "integer",
+        "description": "The total number of weeks the series has spent on the New York Times Best Seller list."
+      },
+      "first_novel_name": {
+        "type": "string",
+        "description": "The name of the first novel in the identified series."
+      }
+    },
+    "required": [
+      "series_name",
+      "series_genre",
+      "nyt_bestseller_weeks",
+      "first_novel_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,82 +1,59 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-The Gnome-Mobile: The Gnome-Mobile is a 1967 Walt Disney Productions comedy-fantasy film directed by Robert Stevenson.  It was one of the last films personally produced by Walt Disney.  It was based on a 1936 book by Upton Sinclair titled "The Gnomobile."
-
-Media type: A media type (also MIME type and content type) is a two-part identifier for file formats and format contents transmitted on the Internet.  The Internet Assigned Numbers Authority (IANA) is the official authority for the standardization and publication of these classifications.  Media types were originally defined in Request for Comments 2045 in November 1996 as a part of "MIME (Multipurpose Internet Mail Extensions)" specification, for denoting type of email message content and attachments; hence the name "MIME type".  Media types are also used by other internet protocols such as HTTP and document file formats such as HTML, for similar purpose.
-
-Write strategy: In DVD authoring, a write strategy is a set of low-level parameters that enables an optical disc drive to write on a specific type of blank media according to its optimum specifications.  The media type is identified by the manufacturer and media ID, which is often unrelated to the brand of the media due to rebadging.  Write strategies are essential for compatibility with various types of blank media, and are typically stored in the drive's firmware.  If a drive lacks a write strategy for a media type, it will only be able to write using minimum speed.  Drive manufacturers typically include new or improved write strategies as part of a firmware upgrade, in order to extend or improve compatibility with blank media.  In cases where official support for a drive has been discontinued or is deemed unsatisfactory, users have come up with ways to patch the write strategies by modding the drive's firmware.
-
-List of dragons in film and television: This is a list of dragons from film and television.  The dragons are organized by either film or television and further by whether the media is animation or live-action.  They are sorted alphabetically by name or if there is none, by the name of the media.  Further information is the title of the media, the type of dragon, whether it transforms to/from something else, the voice actor if it has one and additional notes.  In the type of dragon there may be an indicator with a number followed by "H" this means the dragon has multiple heads.
-
-Dumbo (2019 film): Dumbo is an upcoming American fantasy adventure film directed by Tim Burton, with a screenplay written by Ehren Kruger.  It is based upon a storyline written by Helen Aberson and is largely inspired by Walt Disney's 1941 animated film of the same name.  The film stars Colin Farrell, Eva Green, Michael Keaton, Danny DeVito and Alan Arkin.  The film will be released on March 29, 2019.
-
-Non-linear media: Non-linear media is a form of media that can be interacted with by the consumer, such as by selecting television shows to watch through a video on demand type service, by playing a video game, by clicking through a website, or by interacting through social media.  Non-linear media is a move away from traditional linear media, in which content is selected by the publisher to be consumed and is then done so passively.  There is no single specific form of non-linear media; rather, what might be considered non-linear changes as technology changes.
-
-Parental portrayals in the media: The portrayal of the family structure in the media is important because the media reinforces different gender stereotypes in society today.  The media tends to highlight the "traditional American family" as opposed to nonconventional configurations.  Social Scientists have found that home, family and romance are three of the most important components of the way characters are presented.  Moreover, these qualities are often presented in a stereotypical and traditional fashion.  In the past few years, the traditional American family has shifted from its original patriarchal structure to a more gender-equivalent dynamic.  For example, two-married-parent families were the most common type of family unit a generation ago; however, in the year 2000 that particular family structure could only be found in one out of four households.  The depictions of these changes in the media can reinforce or debunk society's views on raising a family.  Media channels such as children's books, television, movies and advertisements are direct touch points for both youth and parents to process shifting gender roles within the family.  More specifically, as roles such as "dumb" fathers, single mothers, step mothers and stay-at-home dads continue to be portrayed in the media, these roles will mirror and shift in reality as well.
-
-Poliomyelitis eradication: A public health effort to eliminate all cases of poliomyelitis (polio) infection around the world, begun in 1988 and led by the World Health Organization (WHO), UNICEF and the Rotary Foundation, has reduced the number of annual diagnosed cases from the hundreds of thousands to 37 confirmed cases in 2016.  Of the three strains of polio virus, the last recorded wild case caused by type 2 (WPV2) was in 1999.  Type 3 (WPV3) is last known to have caused polio on 11 November 2012, with all wild-virus cases since that date being due to type 1 (WPV1).  Mutated vaccine strains can also result in polio, and so-called circulating vaccine-derived cases of type 1 (cVDPV1) and 2 (cVDPV2) continue to be detected.  If polio is the next disease to be successfully eradicated, this will represent only the third time this has ever been achieved, after smallpox and rinderpest.  The goal of eradicating polio worldwide has attracted international and media attention, with a reduction of some 99% of cases in the last quarter of the 20th century.  The first 10 years of the 21st century saw only erratic progress in further reducing the number of cases, which led to getting rid of the last 1% being described as "like trying to squeeze Jell-O to death".  Since 2011 incidence rates of the disease have dramatically reduced, and with large reductions continuing through to 2017, hopes for eliminating polio have been rekindled.  India is the latest country to have officially stopped endemic transmission of polio—with its last reported case in 2011.  Only three countries remain where the disease is endemic—Afghanistan, Pakistan and Nigeria.  The number of wild polio cases reported in 2015 was less than a third of the previous lowest year, 2012, while 2016 halved this figure to 37 cases.
-
-Windows Media Connect: Windows Media Connect (WMC) is a UPnP AV server from Microsoft for Windows XP and later Windows operating systems, to share and stream media on a Windows computer to WMC clients.  The first two releases of WMC were made available as stand-alone software, and included a client as well.  Following that, it was renamed to Home Media Ecosystem (HME) and the media server component was integrated into Windows Media Player and Windows Home Server.  WMC version 2.0 can be manually installed on Windows Server 2008 or Windows Server 2008 R2 32bit or 64bit operating system but this type of installation is not officially supported by Microsoft and requires manual tweaking of NT Services' dependencies in order to run.
-
-Content storage management: Content storage management (CSM) is a technique for the evolution of traditional media archive technology used by media companies and content owners to store and protect valuable file-based media assets.  CSM solutions focus on active management of content and media assets regardless of format, type and source, interfaces between proprietary content source/destination devices and any format and type of commodity IT centric storage technology.  These digital media files (or assets) most often contain video but in rarer cases may be still pictures or sound.  A CSM system may be directed manually but is more often directed by upper level systems, which may include media asset management (MAM), automation, or traffic.
-
-Question: The Gnome-Mobile and Dumbo, are a type of which media?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "common_media_type": {
-      "type": "string",
-      "description": "The common media type that both items belong to."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "media_items": {
-      "type": "array",
-      "description": "A list of the specific media items mentioned.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "description": "The title of the media item."
+    {
+      "role": "user",
+      "content": "Context:\nThe Gnome-Mobile: The Gnome-Mobile is a 1967 Walt Disney Productions comedy-fantasy film directed by Robert Stevenson.  It was one of the last films personally produced by Walt Disney.  It was based on a 1936 book by Upton Sinclair titled \"The Gnomobile.\"\n\nMedia type: A media type (also MIME type and content type) is a two-part identifier for file formats and format contents transmitted on the Internet.  The Internet Assigned Numbers Authority (IANA) is the official authority for the standardization and publication of these classifications.  Media types were originally defined in Request for Comments 2045 in November 1996 as a part of \"MIME (Multipurpose Internet Mail Extensions)\" specification, for denoting type of email message content and attachments; hence the name \"MIME type\".  Media types are also used by other internet protocols such as HTTP and document file formats such as HTML, for similar purpose.\n\nWrite strategy: In DVD authoring, a write strategy is a set of low-level parameters that enables an optical disc drive to write on a specific type of blank media according to its optimum specifications.  The media type is identified by the manufacturer and media ID, which is often unrelated to the brand of the media due to rebadging.  Write strategies are essential for compatibility with various types of blank media, and are typically stored in the drive's firmware.  If a drive lacks a write strategy for a media type, it will only be able to write using minimum speed.  Drive manufacturers typically include new or improved write strategies as part of a firmware upgrade, in order to extend or improve compatibility with blank media.  In cases where official support for a drive has been discontinued or is deemed unsatisfactory, users have come up with ways to patch the write strategies by modding the drive's firmware.\n\nList of dragons in film and television: This is a list of dragons from film and television.  The dragons are organized by either film or television and further by whether the media is animation or live-action.  They are sorted alphabetically by name or if there is none, by the name of the media.  Further information is the title of the media, the type of dragon, whether it transforms to/from something else, the voice actor if it has one and additional notes.  In the type of dragon there may be an indicator with a number followed by \"H\" this means the dragon has multiple heads.\n\nDumbo (2019 film): Dumbo is an upcoming American fantasy adventure film directed by Tim Burton, with a screenplay written by Ehren Kruger.  It is based upon a storyline written by Helen Aberson and is largely inspired by Walt Disney's 1941 animated film of the same name.  The film stars Colin Farrell, Eva Green, Michael Keaton, Danny DeVito and Alan Arkin.  The film will be released on March 29, 2019.\n\nNon-linear media: Non-linear media is a form of media that can be interacted with by the consumer, such as by selecting television shows to watch through a video on demand type service, by playing a video game, by clicking through a website, or by interacting through social media.  Non-linear media is a move away from traditional linear media, in which content is selected by the publisher to be consumed and is then done so passively.  There is no single specific form of non-linear media; rather, what might be considered non-linear changes as technology changes.\n\nParental portrayals in the media: The portrayal of the family structure in the media is important because the media reinforces different gender stereotypes in society today.  The media tends to highlight the \"traditional American family\" as opposed to nonconventional configurations.  Social Scientists have found that home, family and romance are three of the most important components of the way characters are presented.  Moreover, these qualities are often presented in a stereotypical and traditional fashion.  In the past few years, the traditional American family has shifted from its original patriarchal structure to a more gender-equivalent dynamic.  For example, two-married-parent families were the most common type of family unit a generation ago; however, in the year 2000 that particular family structure could only be found in one out of four households.  The depictions of these changes in the media can reinforce or debunk society's views on raising a family.  Media channels such as children's books, television, movies and advertisements are direct touch points for both youth and parents to process shifting gender roles within the family.  More specifically, as roles such as \"dumb\" fathers, single mothers, step mothers and stay-at-home dads continue to be portrayed in the media, these roles will mirror and shift in reality as well.\n\nPoliomyelitis eradication: A public health effort to eliminate all cases of poliomyelitis (polio) infection around the world, begun in 1988 and led by the World Health Organization (WHO), UNICEF and the Rotary Foundation, has reduced the number of annual diagnosed cases from the hundreds of thousands to 37 confirmed cases in 2016.  Of the three strains of polio virus, the last recorded wild case caused by type 2 (WPV2) was in 1999.  Type 3 (WPV3) is last known to have caused polio on 11 November 2012, with all wild-virus cases since that date being due to type 1 (WPV1).  Mutated vaccine strains can also result in polio, and so-called circulating vaccine-derived cases of type 1 (cVDPV1) and 2 (cVDPV2) continue to be detected.  If polio is the next disease to be successfully eradicated, this will represent only the third time this has ever been achieved, after smallpox and rinderpest.  The goal of eradicating polio worldwide has attracted international and media attention, with a reduction of some 99% of cases in the last quarter of the 20th century.  The first 10 years of the 21st century saw only erratic progress in further reducing the number of cases, which led to getting rid of the last 1% being described as \"like trying to squeeze Jell-O to death\".  Since 2011 incidence rates of the disease have dramatically reduced, and with large reductions continuing through to 2017, hopes for eliminating polio have been rekindled.  India is the latest country to have officially stopped endemic transmission of polio—with its last reported case in 2011.  Only three countries remain where the disease is endemic—Afghanistan, Pakistan and Nigeria.  The number of wild polio cases reported in 2015 was less than a third of the previous lowest year, 2012, while 2016 halved this figure to 37 cases.\n\nWindows Media Connect: Windows Media Connect (WMC) is a UPnP AV server from Microsoft for Windows XP and later Windows operating systems, to share and stream media on a Windows computer to WMC clients.  The first two releases of WMC were made available as stand-alone software, and included a client as well.  Following that, it was renamed to Home Media Ecosystem (HME) and the media server component was integrated into Windows Media Player and Windows Home Server.  WMC version 2.0 can be manually installed on Windows Server 2008 or Windows Server 2008 R2 32bit or 64bit operating system but this type of installation is not officially supported by Microsoft and requires manual tweaking of NT Services' dependencies in order to run.\n\nContent storage management: Content storage management (CSM) is a technique for the evolution of traditional media archive technology used by media companies and content owners to store and protect valuable file-based media assets.  CSM solutions focus on active management of content and media assets regardless of format, type and source, interfaces between proprietary content source/destination devices and any format and type of commodity IT centric storage technology.  These digital media files (or assets) most often contain video but in rarer cases may be still pictures or sound.  A CSM system may be directed manually but is more often directed by upper level systems, which may include media asset management (MAM), automation, or traffic.\n\nQuestion: The Gnome-Mobile and Dumbo, are a type of which media?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"common_media_type\": {\n      \"type\": \"string\",\n      \"description\": \"The common media type that both items belong to.\"\n    },\n    \"media_items\": {\n      \"type\": \"array\",\n      \"description\": \"A list of the specific media items mentioned.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"title\": {\n            \"type\": \"string\",\n            \"description\": \"The title of the media item.\"\n          },\n          \"release_year\": {\n            \"type\": \"integer\",\n            \"description\": \"The release year of the media item.\"\n          },\n          \"director\": {\n            \"type\": \"string\",\n            \"description\": \"The director of the media item.\"\n          }\n        },\n        \"required\": [\n          \"title\",\n          \"release_year\",\n          \"director\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"number_of_media_items\": {\n      \"type\": \"integer\",\n      \"description\": \"The total count of media items identified.\"\n    }\n  },\n  \"required\": [\n    \"common_media_type\",\n    \"media_items\",\n    \"number_of_media_items\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "common_media_type": {
+        "type": "string",
+        "description": "The common media type that both items belong to."
+      },
+      "media_items": {
+        "type": "array",
+        "description": "A list of the specific media items mentioned.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "description": "The title of the media item."
+            },
+            "release_year": {
+              "type": "integer",
+              "description": "The release year of the media item."
+            },
+            "director": {
+              "type": "string",
+              "description": "The director of the media item."
+            }
           },
-          "release_year": {
-            "type": "integer",
-            "description": "The release year of the media item."
-          },
-          "director": {
-            "type": "string",
-            "description": "The director of the media item."
-          }
-        },
-        "required": [
-          "title",
-          "release_year",
-          "director"
-        ],
-        "additionalProperties": false
+          "required": [
+            "title",
+            "release_year",
+            "director"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "number_of_media_items": {
+        "type": "integer",
+        "description": "The total count of media items identified."
       }
     },
-    "number_of_media_items": {
-      "type": "integer",
-      "description": "The total count of media items identified."
-    }
+    "required": [
+      "common_media_type",
+      "media_items",
+      "number_of_media_items"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "common_media_type",
-    "media_items",
-    "number_of_media_items"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

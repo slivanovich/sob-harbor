@@ -1,86 +1,63 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Dr Pepper Snapple Group: Dr Pepper Snapple Group Inc. is an American soft drink company, based in Plano, Texas.  Formerly called Cadbury Schweppes Americas Beverages, on May 5, 2008, it was spun off from Britain's Cadbury Schweppes, with trading in its shares starting on May 7, 2008.  Cadbury Schweppes plc went on to become Cadbury plc on May 5, 2008.
-
-Tab Energy: Tab Energy is marketed as a low calorie energy drink named after Tab, Coca-Cola's original low-calorie cola brand.  While it shares the Tab name, it is not a cola product like the original Tab. " Fashion Week Daily" describes it as a “sweet and sour beverage” with a taste “reminiscent of a liquid Jolly Rancher”.  It is sweetened with sucralose (rather than saccharin), is pale pink, and lightly carbonated.
-
-Schweppes Australia: Schweppes Australia is the Australian branch of beverage company Schweppes, having arrived in the country in 1850.  In 1877, the first factory was built in Sydney.  After an international merger with Cadbury in 1969, forming Cadbury Schweppes, the company was eventually re-separated on 27 February 2009 and, in April 2009, Schweppes Australia was acquired by Asahi Breweries.
-
-Gorilla (advertisement): Gorilla is a British advertising campaign launched by Cadbury Schweppes in 2007 to promote Cadbury Dairy Milk-brand chocolate.  The 90-second television and cinema advertisement, which formed the centrepiece of the £6.2 million campaign, was created and directed by Juan Cabral and starred actor Garon Michael.  The campaign itself, which comprised appearances on billboards, print newspapers and magazines, television and cinema spots, event sponsorships and an internet presence, was handled by advertising agency Fallon London, with the online segment contracted out to Hyper.
-
-Will Radcliff: Willard Lawson Radcliff (December 20, 1939 – September 18, 2014) was an American businessman who created the Slush Puppie, a frozen slush drink.  He also founded Slush Puppie Corp. in 1970, which grew to $25 million in worldwide annual sales by 1999.  In 2000, Radcliff sold Slush Puppie to Cadbury Schweppes for $16.6 million.  Slush Puppie was acquired by J & J Snack Foods in 2006.
-
-Stewart's Fountain Classics: Stewart's Fountain Classics are a brand of premium soft drinks made in the United States.  Stewart's are nostalgic "old fashioned" fountain sodas, having originated at the Stewart's Restaurants, a chain of root beer stands started in 1924 by Frank Stewart in Mansfield, Ohio.  In 1990, the bottling rights to Stewart's were acquired by the Cable Car Beverage Corporation.  Cream Soda and Ginger Beer flavors were introduced in 1992.  Other flavors have been added since then.  Cable Car Beverage Corporation, in November 1997, was purchased by Triarc.  Cadbury Schweppes PLC acquired the Stewart's brands in 2000 along with Snapple and Mistic Brands for $1.45 billion.
-
-Gini (soft drink): Gini is a French lemon soft drink created in 1971 by Perrier and which was purchased by Cadbury Schweppes in 1989.  In 2008 Cadbury Schweppes spun off its soft drink division which became Dr Pepper Snapple Group that same year.
-
-Export Cola: Export Cola was an Australian carbonated cola drink Manufactured by Cadbury Schweppes (now Cadbury plc) during the 1970s and early 1980s.  A series of TV advertisements for the drink featured the Australian cricketer Jeff Thomson.  It enjoyed a brief resurgence in popularity when it was re-launched in 1993, but the drink was discontinued in 1999.
-
-Stewart's Restaurants: Stewart's Restaurants are classic 1950s style fast-food restaurants located throughout the United States.  Restaurants are branded as Stewart's Root Beer or Stewart's Drive-In or similar variations.  Started in 1924 in Mansfield, Ohio by Frank Stewart, the chain became a franchise in 1931.  Stewart's is famous for its Stewart's Fountain Classics root beer and hot dogs.  It has over 60 locations in the United States, 38 of them in New Jersey with the rest in Maryland, Missouri, Kentucky, Oklahoma, Ohio, West Virginia and Pennsylvania.
-
-Adrian Cadbury: Sir George Adrian Hayhurst Cadbury {'1': ", '2': ", '3': ", '4': "} (15 April 1929 – 3 September 2015) was a British Olympic rower and Chairman of Cadbury and Cadbury Schweppes for 24 years.  He was a pioneer in raising the awareness and stimulating the debate on corporate governance and produced the Cadbury Report, a code of best practice which served as a basis for reform of corporate governance around the world.
-
-Question: In between Stewart's Fountain Classics and Tab Energy, which one was acquired by Cadbury Schweppes PLC in 2000?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "acquired_entity_name": {
-      "type": "string",
-      "description": "The name of the entity that was acquired."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "acquiring_company_name": {
-      "type": "string",
-      "description": "The name of the company that performed the acquisition."
-    },
-    "acquisition_year": {
-      "type": "integer",
-      "description": "The year the acquisition took place."
-    },
-    "acquisition_details": {
-      "type": "object",
-      "properties": {
-        "acquisition_amount_usd": {
-          "type": "number",
-          "description": "The total amount of the acquisition in USD, if specified."
-        },
-        "other_acquired_brands": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A list of other brands acquired in the same deal."
-        }
-      },
-      "required": [
-        "acquisition_amount_usd",
-        "other_acquired_brands"
-      ],
-      "additionalProperties": false
-    },
-    "acquisition_confirmed": {
-      "type": "boolean",
-      "description": "True if the acquisition by the specified company in the specified year is confirmed by the context."
+    {
+      "role": "user",
+      "content": "Context:\nDr Pepper Snapple Group: Dr Pepper Snapple Group Inc. is an American soft drink company, based in Plano, Texas.  Formerly called Cadbury Schweppes Americas Beverages, on May 5, 2008, it was spun off from Britain's Cadbury Schweppes, with trading in its shares starting on May 7, 2008.  Cadbury Schweppes plc went on to become Cadbury plc on May 5, 2008.\n\nTab Energy: Tab Energy is marketed as a low calorie energy drink named after Tab, Coca-Cola's original low-calorie cola brand.  While it shares the Tab name, it is not a cola product like the original Tab. \" Fashion Week Daily\" describes it as a “sweet and sour beverage” with a taste “reminiscent of a liquid Jolly Rancher”.  It is sweetened with sucralose (rather than saccharin), is pale pink, and lightly carbonated.\n\nSchweppes Australia: Schweppes Australia is the Australian branch of beverage company Schweppes, having arrived in the country in 1850.  In 1877, the first factory was built in Sydney.  After an international merger with Cadbury in 1969, forming Cadbury Schweppes, the company was eventually re-separated on 27 February 2009 and, in April 2009, Schweppes Australia was acquired by Asahi Breweries.\n\nGorilla (advertisement): Gorilla is a British advertising campaign launched by Cadbury Schweppes in 2007 to promote Cadbury Dairy Milk-brand chocolate.  The 90-second television and cinema advertisement, which formed the centrepiece of the £6.2 million campaign, was created and directed by Juan Cabral and starred actor Garon Michael.  The campaign itself, which comprised appearances on billboards, print newspapers and magazines, television and cinema spots, event sponsorships and an internet presence, was handled by advertising agency Fallon London, with the online segment contracted out to Hyper.\n\nWill Radcliff: Willard Lawson Radcliff (December 20, 1939 – September 18, 2014) was an American businessman who created the Slush Puppie, a frozen slush drink.  He also founded Slush Puppie Corp. in 1970, which grew to $25 million in worldwide annual sales by 1999.  In 2000, Radcliff sold Slush Puppie to Cadbury Schweppes for $16.6 million.  Slush Puppie was acquired by J & J Snack Foods in 2006.\n\nStewart's Fountain Classics: Stewart's Fountain Classics are a brand of premium soft drinks made in the United States.  Stewart's are nostalgic \"old fashioned\" fountain sodas, having originated at the Stewart's Restaurants, a chain of root beer stands started in 1924 by Frank Stewart in Mansfield, Ohio.  In 1990, the bottling rights to Stewart's were acquired by the Cable Car Beverage Corporation.  Cream Soda and Ginger Beer flavors were introduced in 1992.  Other flavors have been added since then.  Cable Car Beverage Corporation, in November 1997, was purchased by Triarc.  Cadbury Schweppes PLC acquired the Stewart's brands in 2000 along with Snapple and Mistic Brands for $1.45 billion.\n\nGini (soft drink): Gini is a French lemon soft drink created in 1971 by Perrier and which was purchased by Cadbury Schweppes in 1989.  In 2008 Cadbury Schweppes spun off its soft drink division which became Dr Pepper Snapple Group that same year.\n\nExport Cola: Export Cola was an Australian carbonated cola drink Manufactured by Cadbury Schweppes (now Cadbury plc) during the 1970s and early 1980s.  A series of TV advertisements for the drink featured the Australian cricketer Jeff Thomson.  It enjoyed a brief resurgence in popularity when it was re-launched in 1993, but the drink was discontinued in 1999.\n\nStewart's Restaurants: Stewart's Restaurants are classic 1950s style fast-food restaurants located throughout the United States.  Restaurants are branded as Stewart's Root Beer or Stewart's Drive-In or similar variations.  Started in 1924 in Mansfield, Ohio by Frank Stewart, the chain became a franchise in 1931.  Stewart's is famous for its Stewart's Fountain Classics root beer and hot dogs.  It has over 60 locations in the United States, 38 of them in New Jersey with the rest in Maryland, Missouri, Kentucky, Oklahoma, Ohio, West Virginia and Pennsylvania.\n\nAdrian Cadbury: Sir George Adrian Hayhurst Cadbury {'1': \", '2': \", '3': \", '4': \"} (15 April 1929 – 3 September 2015) was a British Olympic rower and Chairman of Cadbury and Cadbury Schweppes for 24 years.  He was a pioneer in raising the awareness and stimulating the debate on corporate governance and produced the Cadbury Report, a code of best practice which served as a basis for reform of corporate governance around the world.\n\nQuestion: In between Stewart's Fountain Classics and Tab Energy, which one was acquired by Cadbury Schweppes PLC in 2000?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"acquired_entity_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the entity that was acquired.\"\n    },\n    \"acquiring_company_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the company that performed the acquisition.\"\n    },\n    \"acquisition_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the acquisition took place.\"\n    },\n    \"acquisition_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"acquisition_amount_usd\": {\n          \"type\": \"number\",\n          \"description\": \"The total amount of the acquisition in USD, if specified.\"\n        },\n        \"other_acquired_brands\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"A list of other brands acquired in the same deal.\"\n        }\n      },\n      \"required\": [\n        \"acquisition_amount_usd\",\n        \"other_acquired_brands\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"acquisition_confirmed\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if the acquisition by the specified company in the specified year is confirmed by the context.\"\n    }\n  },\n  \"required\": [\n    \"acquired_entity_name\",\n    \"acquiring_company_name\",\n    \"acquisition_year\",\n    \"acquisition_details\",\n    \"acquisition_confirmed\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "acquired_entity_name",
-    "acquiring_company_name",
-    "acquisition_year",
-    "acquisition_details",
-    "acquisition_confirmed"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "acquired_entity_name": {
+        "type": "string",
+        "description": "The name of the entity that was acquired."
+      },
+      "acquiring_company_name": {
+        "type": "string",
+        "description": "The name of the company that performed the acquisition."
+      },
+      "acquisition_year": {
+        "type": "integer",
+        "description": "The year the acquisition took place."
+      },
+      "acquisition_details": {
+        "type": "object",
+        "properties": {
+          "acquisition_amount_usd": {
+            "type": "number",
+            "description": "The total amount of the acquisition in USD, if specified."
+          },
+          "other_acquired_brands": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of other brands acquired in the same deal."
+          }
+        },
+        "required": [
+          "acquisition_amount_usd",
+          "other_acquired_brands"
+        ],
+        "additionalProperties": false
+      },
+      "acquisition_confirmed": {
+        "type": "boolean",
+        "description": "True if the acquisition by the specified company in the specified year is confirmed by the context."
+      }
+    },
+    "required": [
+      "acquired_entity_name",
+      "acquiring_company_name",
+      "acquisition_year",
+      "acquisition_details",
+      "acquisition_confirmed"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

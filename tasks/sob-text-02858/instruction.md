@@ -1,82 +1,59 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Kamehameha IV: Kamehameha IV, born Alexander ʻIolani Liholiho (1834–1863), reigned as the fourth monarch of Hawaii under the title: "Ke Aliʻi o ko Hawaiʻi Pae ʻAina" of the Kingdom of Hawaii from January 11, 1855 to November 30, 1863.  His full Hawaiian name was Alekanetero ʻIolani Kalanikualiholiho Maka o ʻIouli Kūnuiākea o Kūkāʻilimoku.
-
-Hanford Community Medical Center: Adventist Medical Center - Hanford is located in the city of Hanford, California.  Adventist Medical Center - Hanford is a part of the Seventh-day Adventist hospital system.  Adventist Medical Center - Hanford is part of a division of Adventist Health known as the "Adventist Health/Central Valley Network," consisting of Adventist Medical Center - Hanford , Adventist Medical Center - Reedley, Adventist Medical Center - Selma, and seventeen Adventist Health/Community Care clinics throughout a 2500 sqmi region in the Central Valley.
-
-Memorial Hermann–Texas Medical Center: Memorial Hermann–Texas Medical Center is a nationally ranked hospital at the Texas Medical Center.  It is the first hospital founded in the Texas Medical Center in Houston, Texas (and its founding predates the Texas Medical Center).  Founded in 1925, it is the primary teaching hospital for McGovern Medical School (formerly The University of Texas Medical School at Houston (UTHealth Medical School)) and the flagship location of 13 hospitals in the Memorial Hermann Healthcare System.  It is one of three certified Level I Trauma Centers in the greater Houston area.  The Memorial Hermann Life Flight air ambulance service operates its fleet of helicopters from Memorial Hermann–Texas Medical Center.  The hospital has 33,614 admissions and performs 14,937 inpatient and 3,972 outpatient surgeries.
-
-Banner University Medical Center Tucson: Banner - University Medical Center Tucson (BUMCT), formerly University Medical Center and the University of Arizona Medical Center, is a private, non-profit, 487-bed acute-care hospital located on the campus of the University of Arizona in Tucson, Arizona.  BUMCT is part of the University of Arizona Health Sciences (UAHS) center campus which includes the university's Colleges of Medicine, Nursing, Pharmacy and Public Health.  It is Southern Arizona's only Level I trauma center for both adult and pediatric patients.  BUMCT is one of two University of Arizona affiliated academic medical centers in Tucson with Banner - University Medical Center South (formerly Kino Community Hospital, University Physicians Healthcare Hospital, and University of Arizona Medical Center - South Campus) being the other such institution.  The area's only dedicated Children's hospital, Banner Children's at Diamond Children's Medical Center, is located within and adjacent to BUMCT.
-
-Mercy Hospital and Medical Center: Mercy Hospital and Medical Center is a 292 bed general medical and surgical Catholic teaching hospital in Chicago, Illinois.  Established in 1852, The hospital was the first chartered hospital in Chicago.  In 1859, Mercy Hospital became the first Catholic hospital to affiliate with a medical school—Lind Medical School—and the first to require a graded curriculum.  Today, Mercy Hospital and Medical Center is part of a nationwide network of Mercy Healthcare facilities.  Mercy also is the hospital used by the Daley family: all of their children were born there.  Mercy sold a plot of land to the north of their hospital for 60 million dollars in 2008.  It is also the main women's cancer center in Illinois.  It accepted patients from Michael Reese Hospital and Medical Center and absorbed the ambulance routes when the hospital closed in 2008.  Mercy follows Catholic teaching but does give birth control to rape patients.
-
-Baylor College of Medicine: Baylor College of Medicine (BCM), located in the Texas Medical Center in Houston, Texas, US, is a health sciences university.  It includes a medical school, Baylor College of Medicine; the Graduate School of Biomedical Sciences; the School of Allied Health Sciences; and the National School of Tropical Medicine.  The school, located in the middle of the world's largest medical center (Texas Medical Center), is part owner of Baylor St. Luke's Medical Center, part of the CHI St. Luke's Health system, and has hospital affiliations with: Harris Health System, Texas Children's Hospital, The University of Texas MD Anderson Cancer Center, Memorial Hermann - The Institute for Rehabilitation and Research, Menninger Clinic, the Michael E. DeBakey Veterans Affairs Medical Center and Children's Hospital of San Antonio.
-
-University of Maryland St. Joseph Medical Center: University of Maryland St. Joseph Medical Center is a 300-bed regional medical center in Towson, Maryland formerly operated by Catholic Health Initiatives.  On December 1, 2012, University of Maryland Medical System acquired all the assets of St. Joseph Medical Center from Catholic Health Initiatives and renamed the hospital to University of Maryland St. Joseph Medical Center.  An agreement was made between University of Maryland Medical System and the Archdiocese of Baltimore to continue the religious mission and Catholic traditions at University of Maryland St. Joseph Medical Center.
-
-VCU Medical Center: The VCU Medical Center is Virginia Commonwealth University's medical campus located in downtown Richmond, Virginia in the Court End neighborhood.  The VCU Medical Center used to be known as the Medical College of Virginia, which merged with the Richmond Professional Institute in 1968 to create Virginia Commonwealth University.  In the 1990s, an authority controlling MCV Hospitals was created called the Medical College of Virginia Hospitals Authority.  In 2004, the name of this authority was changed to VCU Health System and the MCV Hospitals and surrounding campus were branded VCU Medical Center.  This authority controls the employees and real estate occupied by the five schools within the VCU Medical Center.  It was at this time that MCV Campus moniker was created.  West Hospital houses various clinical, administrative and support services of the hospitals of VCU Medical Center; clinical, academic and administrative units of the School of Medicine; and academic and administrative units of the School of Allied Health Professions.
-
-Tufts University School of Medicine: The Tufts University School of Medicine is one of the eight schools that constitute Tufts University.  The "Times Higher Education (THE)" and the "Academic Ranking of World Universities (ARWU)" consistently rank Tufts among the world's best medical research institutions for clinical medicine.  Located on the university's health sciences campus in downtown Boston, Massachusetts, the medical school has clinical affiliations with thousands of doctors and researchers in the United States and around the world, as well as at its affiliated hospitals in both Massachusetts (including Tufts Medical Center, St. Elizabeth's Medical Center, Lahey Hospital and Medical Center and Baystate Medical Center), and Maine (Maine Medical Center).  According to Thomson Reuters' "Science Watch", Tufts University School of Medicine's research impact rates sixth among U.S medical schools for its overall medical research and within the top 5 for specialized research areas such as chronic obstructive pulmonary disorder, urology, cholera, public health & health care science, and pediatrics.  In addition, Tufts University School of Medicine is ranked 44th in research and 38th in primary care according to "U.S. News & World Report".
-
-The Queen's Medical Center: The Queen's Medical Center, originally named and still commonly referred to as Queen's Hospital, is the largest private non-profit hospital in Honolulu, Hawaii.  The institution was founded in 1859 by Queen Emma and King Kamehameha IV, and is located in Downtown Honolulu.
-
-Question: The Queen's Medical Center was founded in 1859 by the fourth monarch of Hawaii and what Queen?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "hospital_name": {
-      "type": "string",
-      "description": "The name of the medical center."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "founding_year": {
-      "type": "integer",
-      "description": "The year the medical center was founded."
-    },
-    "founders": {
-      "type": "array",
-      "description": "A list of individuals who founded the medical center.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the founder."
+    {
+      "role": "user",
+      "content": "Context:\nKamehameha IV: Kamehameha IV, born Alexander ʻIolani Liholiho (1834–1863), reigned as the fourth monarch of Hawaii under the title: \"Ke Aliʻi o ko Hawaiʻi Pae ʻAina\" of the Kingdom of Hawaii from January 11, 1855 to November 30, 1863.  His full Hawaiian name was Alekanetero ʻIolani Kalanikualiholiho Maka o ʻIouli Kūnuiākea o Kūkāʻilimoku.\n\nHanford Community Medical Center: Adventist Medical Center - Hanford is located in the city of Hanford, California.  Adventist Medical Center - Hanford is a part of the Seventh-day Adventist hospital system.  Adventist Medical Center - Hanford is part of a division of Adventist Health known as the \"Adventist Health/Central Valley Network,\" consisting of Adventist Medical Center - Hanford , Adventist Medical Center - Reedley, Adventist Medical Center - Selma, and seventeen Adventist Health/Community Care clinics throughout a 2500 sqmi region in the Central Valley.\n\nMemorial Hermann–Texas Medical Center: Memorial Hermann–Texas Medical Center is a nationally ranked hospital at the Texas Medical Center.  It is the first hospital founded in the Texas Medical Center in Houston, Texas (and its founding predates the Texas Medical Center).  Founded in 1925, it is the primary teaching hospital for McGovern Medical School (formerly The University of Texas Medical School at Houston (UTHealth Medical School)) and the flagship location of 13 hospitals in the Memorial Hermann Healthcare System.  It is one of three certified Level I Trauma Centers in the greater Houston area.  The Memorial Hermann Life Flight air ambulance service operates its fleet of helicopters from Memorial Hermann–Texas Medical Center.  The hospital has 33,614 admissions and performs 14,937 inpatient and 3,972 outpatient surgeries.\n\nBanner University Medical Center Tucson: Banner - University Medical Center Tucson (BUMCT), formerly University Medical Center and the University of Arizona Medical Center, is a private, non-profit, 487-bed acute-care hospital located on the campus of the University of Arizona in Tucson, Arizona.  BUMCT is part of the University of Arizona Health Sciences (UAHS) center campus which includes the university's Colleges of Medicine, Nursing, Pharmacy and Public Health.  It is Southern Arizona's only Level I trauma center for both adult and pediatric patients.  BUMCT is one of two University of Arizona affiliated academic medical centers in Tucson with Banner - University Medical Center South (formerly Kino Community Hospital, University Physicians Healthcare Hospital, and University of Arizona Medical Center - South Campus) being the other such institution.  The area's only dedicated Children's hospital, Banner Children's at Diamond Children's Medical Center, is located within and adjacent to BUMCT.\n\nMercy Hospital and Medical Center: Mercy Hospital and Medical Center is a 292 bed general medical and surgical Catholic teaching hospital in Chicago, Illinois.  Established in 1852, The hospital was the first chartered hospital in Chicago.  In 1859, Mercy Hospital became the first Catholic hospital to affiliate with a medical school—Lind Medical School—and the first to require a graded curriculum.  Today, Mercy Hospital and Medical Center is part of a nationwide network of Mercy Healthcare facilities.  Mercy also is the hospital used by the Daley family: all of their children were born there.  Mercy sold a plot of land to the north of their hospital for 60 million dollars in 2008.  It is also the main women's cancer center in Illinois.  It accepted patients from Michael Reese Hospital and Medical Center and absorbed the ambulance routes when the hospital closed in 2008.  Mercy follows Catholic teaching but does give birth control to rape patients.\n\nBaylor College of Medicine: Baylor College of Medicine (BCM), located in the Texas Medical Center in Houston, Texas, US, is a health sciences university.  It includes a medical school, Baylor College of Medicine; the Graduate School of Biomedical Sciences; the School of Allied Health Sciences; and the National School of Tropical Medicine.  The school, located in the middle of the world's largest medical center (Texas Medical Center), is part owner of Baylor St. Luke's Medical Center, part of the CHI St. Luke's Health system, and has hospital affiliations with: Harris Health System, Texas Children's Hospital, The University of Texas MD Anderson Cancer Center, Memorial Hermann - The Institute for Rehabilitation and Research, Menninger Clinic, the Michael E. DeBakey Veterans Affairs Medical Center and Children's Hospital of San Antonio.\n\nUniversity of Maryland St. Joseph Medical Center: University of Maryland St. Joseph Medical Center is a 300-bed regional medical center in Towson, Maryland formerly operated by Catholic Health Initiatives.  On December 1, 2012, University of Maryland Medical System acquired all the assets of St. Joseph Medical Center from Catholic Health Initiatives and renamed the hospital to University of Maryland St. Joseph Medical Center.  An agreement was made between University of Maryland Medical System and the Archdiocese of Baltimore to continue the religious mission and Catholic traditions at University of Maryland St. Joseph Medical Center.\n\nVCU Medical Center: The VCU Medical Center is Virginia Commonwealth University's medical campus located in downtown Richmond, Virginia in the Court End neighborhood.  The VCU Medical Center used to be known as the Medical College of Virginia, which merged with the Richmond Professional Institute in 1968 to create Virginia Commonwealth University.  In the 1990s, an authority controlling MCV Hospitals was created called the Medical College of Virginia Hospitals Authority.  In 2004, the name of this authority was changed to VCU Health System and the MCV Hospitals and surrounding campus were branded VCU Medical Center.  This authority controls the employees and real estate occupied by the five schools within the VCU Medical Center.  It was at this time that MCV Campus moniker was created.  West Hospital houses various clinical, administrative and support services of the hospitals of VCU Medical Center; clinical, academic and administrative units of the School of Medicine; and academic and administrative units of the School of Allied Health Professions.\n\nTufts University School of Medicine: The Tufts University School of Medicine is one of the eight schools that constitute Tufts University.  The \"Times Higher Education (THE)\" and the \"Academic Ranking of World Universities (ARWU)\" consistently rank Tufts among the world's best medical research institutions for clinical medicine.  Located on the university's health sciences campus in downtown Boston, Massachusetts, the medical school has clinical affiliations with thousands of doctors and researchers in the United States and around the world, as well as at its affiliated hospitals in both Massachusetts (including Tufts Medical Center, St. Elizabeth's Medical Center, Lahey Hospital and Medical Center and Baystate Medical Center), and Maine (Maine Medical Center).  According to Thomson Reuters' \"Science Watch\", Tufts University School of Medicine's research impact rates sixth among U.S medical schools for its overall medical research and within the top 5 for specialized research areas such as chronic obstructive pulmonary disorder, urology, cholera, public health & health care science, and pediatrics.  In addition, Tufts University School of Medicine is ranked 44th in research and 38th in primary care according to \"U.S. News & World Report\".\n\nThe Queen's Medical Center: The Queen's Medical Center, originally named and still commonly referred to as Queen's Hospital, is the largest private non-profit hospital in Honolulu, Hawaii.  The institution was founded in 1859 by Queen Emma and King Kamehameha IV, and is located in Downtown Honolulu.\n\nQuestion: The Queen's Medical Center was founded in 1859 by the fourth monarch of Hawaii and what Queen?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"hospital_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the medical center.\"\n    },\n    \"founding_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the medical center was founded.\"\n    },\n    \"founders\": {\n      \"type\": \"array\",\n      \"description\": \"A list of individuals who founded the medical center.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the founder.\"\n          },\n          \"title\": {\n            \"type\": \"string\",\n            \"description\": \"The title of the founder (e.g., King, Queen).\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"title\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"monarch_ordinal\": {\n      \"type\": \"string\",\n      \"description\": \"The ordinal number of the monarch founder (e.g., 'fourth').\"\n    }\n  },\n  \"required\": [\n    \"hospital_name\",\n    \"founding_year\",\n    \"founders\",\n    \"monarch_ordinal\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "hospital_name": {
+        "type": "string",
+        "description": "The name of the medical center."
+      },
+      "founding_year": {
+        "type": "integer",
+        "description": "The year the medical center was founded."
+      },
+      "founders": {
+        "type": "array",
+        "description": "A list of individuals who founded the medical center.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the founder."
+            },
+            "title": {
+              "type": "string",
+              "description": "The title of the founder (e.g., King, Queen)."
+            }
           },
-          "title": {
-            "type": "string",
-            "description": "The title of the founder (e.g., King, Queen)."
-          }
-        },
-        "required": [
-          "name",
-          "title"
-        ],
-        "additionalProperties": false
+          "required": [
+            "name",
+            "title"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "monarch_ordinal": {
+        "type": "string",
+        "description": "The ordinal number of the monarch founder (e.g., 'fourth')."
       }
     },
-    "monarch_ordinal": {
-      "type": "string",
-      "description": "The ordinal number of the monarch founder (e.g., 'fourth')."
-    }
+    "required": [
+      "hospital_name",
+      "founding_year",
+      "founders",
+      "monarch_ordinal"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "hospital_name",
-    "founding_year",
-    "founders",
-    "monarch_ordinal"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

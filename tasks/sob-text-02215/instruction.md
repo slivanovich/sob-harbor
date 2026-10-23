@@ -1,62 +1,39 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Dr. Jekyll and Mr. Hyde (video game): Dr. Jekyll and Mr. Hyde is a 1988 side-scrolling action video game for the Nintendo Entertainment System loosely based on the novel "Strange Case of Dr Jekyll and Mr Hyde".  Gameplay alternates between the characters of Dr. Jekyll and Mr. Hyde based on the player's ability to either avoid or cause damage.
-
-Dr. Jekyll and Sister Hyde: Dr. Jekyll and Sister Hyde is a 1971 British film directed by Roy Ward Baker based on the novella "Strange Case of Dr Jekyll and Mr Hyde" by Robert Louis Stevenson.  The film was made by British studio Hammer Film Productions and was their third adaptation of the story after "The Ugly Duckling" and "The Two Faces of Dr. Jekyll".  The film is notable for showing Jekyll transform into a female Hyde; it also incorporates into the plot aspects of the historical Jack the Ripper and Burke and Hare cases.  The two characters were played by the film's stars, Ralph Bates and Martine Beswick.
-
-Dr. Jekyll y el Hombre Lobo: Dr. Jekyll y el Hombre Lobo (Dr. Jekyll and the Wolfman), also known as "Dr. Jekyll and the Werewolf", is a 1971 Spanish horror film, the sixth in the series, about the werewolf Count Waldemar Daninsky, played by Paul Naschy.  It was followed by a sequel, "El retorno de Walpurgis".
-
-Dr. Jekyll and Mr. Hyde (1887 play): Dr. Jekyll and Mr. Hyde is a four-act play written by Thomas Russell Sullivan in collaboration with the actor Richard Mansfield.  It is an adaptation of "Strange Case of Dr Jekyll and Mr Hyde", an 1886 novella by the Scottish author Robert Louis Stevenson.  The story focuses on the respected London doctor Henry Jekyll and his involvement with Edward Hyde, a loathsome criminal.  After Hyde murders the father of Jekyll's fiancée, Jekyll's friends discover that he and Jekyll are the same person; Jekyll has developed a potion that allows him to transform himself into Hyde and back again.  When he runs out of the potion, he is trapped as Hyde and commits suicide before he can be arrested.
-
-Edgar Norton: Edgar Norton (August 11, 1868 – February 6, 1953) was an English-born American character actor.  Born in London, England on August 11, 1868, he was active on both stage and screen, his theater performances were on both the London and Broadway stages, and his film career spanned both the silent and "talkie" eras in Hollywood.  During his thirty-year film career, he appeared in at least ninety films.  Many consider his most memorable role to be that of Poole, the butler to Dr. Jekyll in the 1931 classic, "Dr. Jekyll and Mr. Hyde"—a role he had been playing on-stage since 1898, opposite Richard Mansfield as Jekyll.  He died in the Woodland Hills section of Los Angeles in February 1953.
-
-The Two Faces of Dr. Jekyll: The Two Faces of Dr. Jekyll is a 1960 horror film by Hammer Film Productions.  It was directed by Terence Fisher, and stars Paul Massie as Dr. Jekyll, and co-stars Dawn Addams, Christopher Lee and David Kossoff.  It was written by Wolf Mankowitz, based on the 1886 novella "Strange Case of Dr Jekyll and Mr Hyde" by Robert Louis Stevenson.
-
-Batman: Two Faces: Batman: Two Faces is a DC Comics "Elseworlds" comic book, published in 1998.  Written by Dan Abnett and Andy Lanning, with art by Anthony Williams and Tom Palmer.  The story is based on the novel "Strange Case of Dr Jekyll and Mr Hyde" by Robert Louis Stevenson.  A Victorian-era Bruce Wayne, tries to purge both his own evil side and that of Two-Face, while a serial killer named the Joker roams the streets.  "Batman: Two Faces" is the prequel to "The Superman Monster" comic book.
-
-Strange Case of Dr Jekyll and Mr Hyde: Strange Case of Dr Jekyll and Mr Hyde is a gothic novella by the Scottish author Robert Louis Stevenson first published in 1886.  The work is also known as The Strange Case of Dr. Jekyll and Mr. Hyde, Dr. Jekyll and Mr. Hyde, or simply Jekyll & Hyde.  It is about a London lawyer named Gabriel John Utterson who investigates strange occurrences between his old friend, Dr Henry Jekyll, and the evil Edward Hyde.  The novella's impact is such that it has become a part of the language, with the very phrase "Jekyll and Hyde" coming to mean a person who is vastly different in moral character from one situation to the next.
-
-Dr. Jekyll and Mr. Hyde (1913 film): Dr. Jekyll and Mr. Hyde is a 1913 horror film, directed by Herbert Brenon and Carl Laemmle, written by Brenon and produced by Laemmle.  The picture is based on the Robert Louis Stevenson story "The Strange Case of Dr. Jekyll and Mr. Hyde" and stars King Baggot in the dual role of Jekyll and Hyde.  The film was re-released in the US in August 1927.
-
-David Kossoff: David Kossoff (24 November 1919 – 23 March 2005) was a British actor.  In 1954 he won a BAFTA for his appearance in "The Young Lovers".  Perhaps his best-known roles were Alf Larkin in "The Larkins" and Professor Kokintz in "The Mouse that Roared" (1959) and its sequel "The Mouse on the Moon" (1963).
-
-Question: Which British actor starred in both The Two Faces of Dr. Jekyll and The Larkins?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "nationality": {
-      "type": "string",
-      "description": "The nationality of the actor."
-    },
-    "starred_in_productions": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of productions the actor starred in, as per the question."
+    {
+      "role": "user",
+      "content": "Context:\nDr. Jekyll and Mr. Hyde (video game): Dr. Jekyll and Mr. Hyde is a 1988 side-scrolling action video game for the Nintendo Entertainment System loosely based on the novel \"Strange Case of Dr Jekyll and Mr Hyde\".  Gameplay alternates between the characters of Dr. Jekyll and Mr. Hyde based on the player's ability to either avoid or cause damage.\n\nDr. Jekyll and Sister Hyde: Dr. Jekyll and Sister Hyde is a 1971 British film directed by Roy Ward Baker based on the novella \"Strange Case of Dr Jekyll and Mr Hyde\" by Robert Louis Stevenson.  The film was made by British studio Hammer Film Productions and was their third adaptation of the story after \"The Ugly Duckling\" and \"The Two Faces of Dr. Jekyll\".  The film is notable for showing Jekyll transform into a female Hyde; it also incorporates into the plot aspects of the historical Jack the Ripper and Burke and Hare cases.  The two characters were played by the film's stars, Ralph Bates and Martine Beswick.\n\nDr. Jekyll y el Hombre Lobo: Dr. Jekyll y el Hombre Lobo (Dr. Jekyll and the Wolfman), also known as \"Dr. Jekyll and the Werewolf\", is a 1971 Spanish horror film, the sixth in the series, about the werewolf Count Waldemar Daninsky, played by Paul Naschy.  It was followed by a sequel, \"El retorno de Walpurgis\".\n\nDr. Jekyll and Mr. Hyde (1887 play): Dr. Jekyll and Mr. Hyde is a four-act play written by Thomas Russell Sullivan in collaboration with the actor Richard Mansfield.  It is an adaptation of \"Strange Case of Dr Jekyll and Mr Hyde\", an 1886 novella by the Scottish author Robert Louis Stevenson.  The story focuses on the respected London doctor Henry Jekyll and his involvement with Edward Hyde, a loathsome criminal.  After Hyde murders the father of Jekyll's fiancée, Jekyll's friends discover that he and Jekyll are the same person; Jekyll has developed a potion that allows him to transform himself into Hyde and back again.  When he runs out of the potion, he is trapped as Hyde and commits suicide before he can be arrested.\n\nEdgar Norton: Edgar Norton (August 11, 1868 – February 6, 1953) was an English-born American character actor.  Born in London, England on August 11, 1868, he was active on both stage and screen, his theater performances were on both the London and Broadway stages, and his film career spanned both the silent and \"talkie\" eras in Hollywood.  During his thirty-year film career, he appeared in at least ninety films.  Many consider his most memorable role to be that of Poole, the butler to Dr. Jekyll in the 1931 classic, \"Dr. Jekyll and Mr. Hyde\"—a role he had been playing on-stage since 1898, opposite Richard Mansfield as Jekyll.  He died in the Woodland Hills section of Los Angeles in February 1953.\n\nThe Two Faces of Dr. Jekyll: The Two Faces of Dr. Jekyll is a 1960 horror film by Hammer Film Productions.  It was directed by Terence Fisher, and stars Paul Massie as Dr. Jekyll, and co-stars Dawn Addams, Christopher Lee and David Kossoff.  It was written by Wolf Mankowitz, based on the 1886 novella \"Strange Case of Dr Jekyll and Mr Hyde\" by Robert Louis Stevenson.\n\nBatman: Two Faces: Batman: Two Faces is a DC Comics \"Elseworlds\" comic book, published in 1998.  Written by Dan Abnett and Andy Lanning, with art by Anthony Williams and Tom Palmer.  The story is based on the novel \"Strange Case of Dr Jekyll and Mr Hyde\" by Robert Louis Stevenson.  A Victorian-era Bruce Wayne, tries to purge both his own evil side and that of Two-Face, while a serial killer named the Joker roams the streets.  \"Batman: Two Faces\" is the prequel to \"The Superman Monster\" comic book.\n\nStrange Case of Dr Jekyll and Mr Hyde: Strange Case of Dr Jekyll and Mr Hyde is a gothic novella by the Scottish author Robert Louis Stevenson first published in 1886.  The work is also known as The Strange Case of Dr. Jekyll and Mr. Hyde, Dr. Jekyll and Mr. Hyde, or simply Jekyll & Hyde.  It is about a London lawyer named Gabriel John Utterson who investigates strange occurrences between his old friend, Dr Henry Jekyll, and the evil Edward Hyde.  The novella's impact is such that it has become a part of the language, with the very phrase \"Jekyll and Hyde\" coming to mean a person who is vastly different in moral character from one situation to the next.\n\nDr. Jekyll and Mr. Hyde (1913 film): Dr. Jekyll and Mr. Hyde is a 1913 horror film, directed by Herbert Brenon and Carl Laemmle, written by Brenon and produced by Laemmle.  The picture is based on the Robert Louis Stevenson story \"The Strange Case of Dr. Jekyll and Mr. Hyde\" and stars King Baggot in the dual role of Jekyll and Hyde.  The film was re-released in the US in August 1927.\n\nDavid Kossoff: David Kossoff (24 November 1919 – 23 March 2005) was a British actor.  In 1954 he won a BAFTA for his appearance in \"The Young Lovers\".  Perhaps his best-known roles were Alf Larkin in \"The Larkins\" and Professor Kokintz in \"The Mouse that Roared\" (1959) and its sequel \"The Mouse on the Moon\" (1963).\n\nQuestion: Which British actor starred in both The Two Faces of Dr. Jekyll and The Larkins?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor.\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the actor.\"\n    },\n    \"starred_in_productions\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of productions the actor starred in, as per the question.\"\n    }\n  },\n  \"required\": [\n    \"actor_name\",\n    \"nationality\",\n    \"starred_in_productions\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actor_name",
-    "nationality",
-    "starred_in_productions"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor."
+      },
+      "nationality": {
+        "type": "string",
+        "description": "The nationality of the actor."
+      },
+      "starred_in_productions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of productions the actor starred in, as per the question."
+      }
+    },
+    "required": [
+      "actor_name",
+      "nationality",
+      "starred_in_productions"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

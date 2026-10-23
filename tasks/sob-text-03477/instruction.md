@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2011 FIA GT1 World Championship: The 2011 FIA GT1 World Championship season was the second season of the SRO Group's FIA GT1 World Championship, an auto racing series for grand tourer cars complying with Fédération Internationale de l'Automobile (FIA) GT1 regulations.  The championship comprised two titles: GT1 World Champion for Drivers and GT1 World Champion for Teams.  Five of the six manufacturers represented in the 2010 championship returned for the second season, however Maserati was not represented and 2010 Teams World Champions Vitaphone Racing Team did not defend their title.
-
-Xavier Maassen: Xavier Maassen (born 22 June 1980 in Heerlen) is a Dutch racing driver who previously competed in the FIA GT1 World Championship for Mad-Croc Racing.  Recently, he has participated in the Blancpain Endurance Series for Prospeed Competition.  He lives in Lanaken in Belgium.
-
-2016 Blancpain GT Series Sprint Cup: The 2016 Blancpain GT Series Sprint Cup was the fourth season following on from the demise of the SRO Group's FIA GT1 World Championship (an auto racing series for grand tourer cars), the third with the designation of Blancpain Sprint Series or Blancpain GT Series Sprint Cup.  After developing their partnership, Blancpain and the SRO decided that 2016 would see both the Sprint and Endurance Series further integrated into the Blancpain GT Series, putting the emphasis on the prestigious overall drivers' and manufacturers' titles causing the Sprint Series name to change from Blancpain Sprint Series to Blancpain GT Series Sprint Cup.
-
-2015 GT Sports Club: The 2015 GT Sports Club is the first season of the SRO Group's GT Sports Club, an auto racing series for grand tourer cars.  The GT Sports Club is a championship for Bronze and Iron drivers only.  Platinum, Gold, Silver and Bronze indicate how professional a driver is.  The SRO introduced the new "Iron" categorisation within the Bronze category, for drivers over the age of 60.  All drivers must participate with GT3-spec cars, RACB G3 cars or GTE-spec cars.  The series maiden race weekend was from 17 to 19 April during the Espíritu de Montjuïc event at Circuit de Barcelona-Catalunya.  Max Bianchi won the first overall championship and Martin Lanting won the Iron Cup after the last race of the championship at Misano.
-
-2017 Blancpain GT Series Sprint Cup: The 2017 Blancpain GT Series Sprint Cup was the fifth season of the Blancpain GT Series Sprint Cup following on from the demise of the SRO Group's FIA GT1 World Championship (an auto racing series for grand tourer cars), the fourth with the designation of Blancpain Sprint Series or Blancpain GT Series Sprint Cup.
-
-Group GT3: Group GT3, known technically as Cup Grand Touring Cars and commonly referred to as simply GT3, is a set of regulations maintained by the Fédération Internationale de l'Automobile (FIA) for grand tourer racing cars designed for use in various auto racing series throughout the world.  The GT3 category was initially created in 2005 by the SRO Group as a third rung in the ladder of grand touring motorsport, below the Group GT1 and Group GT2 categories which were utilized in the SRO's FIA GT Championship, and launched its own series in 2006, the FIA GT3 European Championship.  Since then, Group GT3 has expanded to become the de facto category for many national and international grand touring series, although some series modify the ruleset from the FIA standard.  By 2013, nearly 20 automobile manufacturers have built or been represented with GT3 machines.
-
-FIA GT1 World Championship: The FIA GT1 World Championship was a world championship sports car racing series developed by the SRO Group and regulated by the Fédération Internationale de l'Automobile (FIA), held from 2010 to 2012.  It featured multiple grand tourer race cars based on production road cars and conforming with the GT1 (2010–2011) and GT3 (2012) regulations competing in one-hour races on multiple continents.  All cars were performance balanced with weight and restrictor adjustments to artificially equalise their performance.  Championships were awarded each season for drivers and teams.
-
-2013 FIA GT Series: The 2013 FIA GT Series was the first season following on from the demise of the SRO Group's FIA GT1 World Championship, an auto racing series for grand tourer cars.  The series underwent changes in 2013, retaining GT3 cars as the mainstay, but creating sub-classes for Pro, Pro-Am and Gentleman driver line-ups.  All-Inkl. com Münnich Motorsport did not return to defend their Teams' World Champions, instead moving to the World Touring Car Championship with one of the Drivers' World Champions Marc Basseng beside René Münnich, team director of All-Inkl. com Münnich Motorsport, and defending 2012 WTCC champion Rob Huff.
-
-Mad-Croc Racing: Mad-Croc Racing was an auto racing team that competed in the FIA GT1 World Championship.  It was formed as the result of a collaboration between the Belgian Selleslagh Racing Team (SRT) and DKR Engineering of Luxembourg.  The team took its name from the Mad-Croc brand of energy products that sponsored the team.  The team ran a pair of Corvette C6.Rs in the championship, with SRT and DKR taking responsibility for one car each.
-
-2012 FIA GT1 World Championship: The 2012 FIA GT1 World Championship was the third and final season of the SRO Group's FIA GT1 World Championship, an auto racing series for grand tourer cars.  The 2012 championship, which opened to GT3 Series Grand Touring cars, featured two titles awarded to the highest scoring competitors over the course of the season: the GT1 World Championship for Drivers and the GT1 World Championship for Teams.  The series underwent regulation changes in 2012 with GT3 cars replacing the GT1 category vehicles used in the previous two seasons of the World Championship.  Hexis AMR, now under the title Hexis Racing, returned as the defending Teams' World Champions, while German drivers Michael Krumm and Lucas Luhr didn't return to the series to defend their Drivers' World Championships.
-
-Question: What world championship developed by the SRO Group did Mad-Croc Racing compete in?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "championship_name": {
-      "type": "string",
-      "description": "The name of the world championship."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "developer_group": {
-      "type": "string",
-      "description": "The group that developed the championship."
-    },
-    "team_name": {
-      "type": "string",
-      "description": "The name of the racing team that competed in the championship."
-    },
-    "championship_duration": {
-      "type": "object",
-      "properties": {
-        "start_year": {
-          "type": "integer",
-          "description": "The start year of the championship."
-        },
-        "end_year": {
-          "type": "integer",
-          "description": "The end year of the championship."
-        }
-      },
-      "required": [
-        "start_year",
-        "end_year"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\n2011 FIA GT1 World Championship: The 2011 FIA GT1 World Championship season was the second season of the SRO Group's FIA GT1 World Championship, an auto racing series for grand tourer cars complying with Fédération Internationale de l'Automobile (FIA) GT1 regulations.  The championship comprised two titles: GT1 World Champion for Drivers and GT1 World Champion for Teams.  Five of the six manufacturers represented in the 2010 championship returned for the second season, however Maserati was not represented and 2010 Teams World Champions Vitaphone Racing Team did not defend their title.\n\nXavier Maassen: Xavier Maassen (born 22 June 1980 in Heerlen) is a Dutch racing driver who previously competed in the FIA GT1 World Championship for Mad-Croc Racing.  Recently, he has participated in the Blancpain Endurance Series for Prospeed Competition.  He lives in Lanaken in Belgium.\n\n2016 Blancpain GT Series Sprint Cup: The 2016 Blancpain GT Series Sprint Cup was the fourth season following on from the demise of the SRO Group's FIA GT1 World Championship (an auto racing series for grand tourer cars), the third with the designation of Blancpain Sprint Series or Blancpain GT Series Sprint Cup.  After developing their partnership, Blancpain and the SRO decided that 2016 would see both the Sprint and Endurance Series further integrated into the Blancpain GT Series, putting the emphasis on the prestigious overall drivers' and manufacturers' titles causing the Sprint Series name to change from Blancpain Sprint Series to Blancpain GT Series Sprint Cup.\n\n2015 GT Sports Club: The 2015 GT Sports Club is the first season of the SRO Group's GT Sports Club, an auto racing series for grand tourer cars.  The GT Sports Club is a championship for Bronze and Iron drivers only.  Platinum, Gold, Silver and Bronze indicate how professional a driver is.  The SRO introduced the new \"Iron\" categorisation within the Bronze category, for drivers over the age of 60.  All drivers must participate with GT3-spec cars, RACB G3 cars or GTE-spec cars.  The series maiden race weekend was from 17 to 19 April during the Espíritu de Montjuïc event at Circuit de Barcelona-Catalunya.  Max Bianchi won the first overall championship and Martin Lanting won the Iron Cup after the last race of the championship at Misano.\n\n2017 Blancpain GT Series Sprint Cup: The 2017 Blancpain GT Series Sprint Cup was the fifth season of the Blancpain GT Series Sprint Cup following on from the demise of the SRO Group's FIA GT1 World Championship (an auto racing series for grand tourer cars), the fourth with the designation of Blancpain Sprint Series or Blancpain GT Series Sprint Cup.\n\nGroup GT3: Group GT3, known technically as Cup Grand Touring Cars and commonly referred to as simply GT3, is a set of regulations maintained by the Fédération Internationale de l'Automobile (FIA) for grand tourer racing cars designed for use in various auto racing series throughout the world.  The GT3 category was initially created in 2005 by the SRO Group as a third rung in the ladder of grand touring motorsport, below the Group GT1 and Group GT2 categories which were utilized in the SRO's FIA GT Championship, and launched its own series in 2006, the FIA GT3 European Championship.  Since then, Group GT3 has expanded to become the de facto category for many national and international grand touring series, although some series modify the ruleset from the FIA standard.  By 2013, nearly 20 automobile manufacturers have built or been represented with GT3 machines.\n\nFIA GT1 World Championship: The FIA GT1 World Championship was a world championship sports car racing series developed by the SRO Group and regulated by the Fédération Internationale de l'Automobile (FIA), held from 2010 to 2012.  It featured multiple grand tourer race cars based on production road cars and conforming with the GT1 (2010–2011) and GT3 (2012) regulations competing in one-hour races on multiple continents.  All cars were performance balanced with weight and restrictor adjustments to artificially equalise their performance.  Championships were awarded each season for drivers and teams.\n\n2013 FIA GT Series: The 2013 FIA GT Series was the first season following on from the demise of the SRO Group's FIA GT1 World Championship, an auto racing series for grand tourer cars.  The series underwent changes in 2013, retaining GT3 cars as the mainstay, but creating sub-classes for Pro, Pro-Am and Gentleman driver line-ups.  All-Inkl. com Münnich Motorsport did not return to defend their Teams' World Champions, instead moving to the World Touring Car Championship with one of the Drivers' World Champions Marc Basseng beside René Münnich, team director of All-Inkl. com Münnich Motorsport, and defending 2012 WTCC champion Rob Huff.\n\nMad-Croc Racing: Mad-Croc Racing was an auto racing team that competed in the FIA GT1 World Championship.  It was formed as the result of a collaboration between the Belgian Selleslagh Racing Team (SRT) and DKR Engineering of Luxembourg.  The team took its name from the Mad-Croc brand of energy products that sponsored the team.  The team ran a pair of Corvette C6.Rs in the championship, with SRT and DKR taking responsibility for one car each.\n\n2012 FIA GT1 World Championship: The 2012 FIA GT1 World Championship was the third and final season of the SRO Group's FIA GT1 World Championship, an auto racing series for grand tourer cars.  The 2012 championship, which opened to GT3 Series Grand Touring cars, featured two titles awarded to the highest scoring competitors over the course of the season: the GT1 World Championship for Drivers and the GT1 World Championship for Teams.  The series underwent regulation changes in 2012 with GT3 cars replacing the GT1 category vehicles used in the previous two seasons of the World Championship.  Hexis AMR, now under the title Hexis Racing, returned as the defending Teams' World Champions, while German drivers Michael Krumm and Lucas Luhr didn't return to the series to defend their Drivers' World Championships.\n\nQuestion: What world championship developed by the SRO Group did Mad-Croc Racing compete in?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"championship_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the world championship.\"\n    },\n    \"developer_group\": {\n      \"type\": \"string\",\n      \"description\": \"The group that developed the championship.\"\n    },\n    \"team_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the racing team that competed in the championship.\"\n    },\n    \"championship_duration\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"start_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The start year of the championship.\"\n        },\n        \"end_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The end year of the championship.\"\n        }\n      },\n      \"required\": [\n        \"start_year\",\n        \"end_year\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"championship_name\",\n    \"developer_group\",\n    \"team_name\",\n    \"championship_duration\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "championship_name",
-    "developer_group",
-    "team_name",
-    "championship_duration"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "championship_name": {
+        "type": "string",
+        "description": "The name of the world championship."
+      },
+      "developer_group": {
+        "type": "string",
+        "description": "The group that developed the championship."
+      },
+      "team_name": {
+        "type": "string",
+        "description": "The name of the racing team that competed in the championship."
+      },
+      "championship_duration": {
+        "type": "object",
+        "properties": {
+          "start_year": {
+            "type": "integer",
+            "description": "The start year of the championship."
+          },
+          "end_year": {
+            "type": "integer",
+            "description": "The end year of the championship."
+          }
+        },
+        "required": [
+          "start_year",
+          "end_year"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "championship_name",
+      "developer_group",
+      "team_name",
+      "championship_duration"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

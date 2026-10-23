@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Ice Prince: Panshak Zamani (born 23 October 1986), better known by his stage name Ice Prince, is a Nigerian hip hop recording artist and actor.  He rose to fame after releasing "Oleku", one of Nigeria's most remixed songs of all time.  He won the 2009 Hennessy Artistry Club Tour.  His achievements include one BET Award, one Ghana Music Award, three The Headies Awards, two Nigeria Entertainment Awards and two Channel O Music Video Awards.  Ice Prince is currently signed to Chocolate City.  His debut studio album, "Everybody Loves Ice Prince", was released in 2011.  It was supported by the singles "Oleku", "Superstar", "Juju" and "Magician".  In 2013, Ice Prince released "Fire of Zamani" as his second studio album.  The album contained the singles "Aboki", "More", "Gimme Dat" and "I Swear".  On 1 July 2015, Ice Prince was announced as the new Vice President of Chocolate City.
-
-Midnight Fire: Midnight Fire is the second studio album by American country music artist Steve Wariner.  It was released in 1983 by RCA Records.  The album produced five singles on the "Billboard" Hot Country Singles chart including two top ten singles: "Don't Your Memory Ever Sleep at Night" at number 23, "Midnight Fire" at number 5, "Lonely Women Make Good Lovers" at number 4, "Why Goodbye" at number 12, and "Don't You Give Up on Love" at number 49.  The song "Overnight Sensation" is a duet with country superstar Barbara Mandrell, and also appears on her 1983 MCA record "Spun Gold".
-
-Davis Daniel: Robert Andrykowski (born March 1, 1961) is an American country music artist who records under the name Davis Daniel.  Between 1991 and 1996, he recorded three studio albums on various divisions of Mercury Records: 1991's "Fighting Fire with Fire", 1994's "Davis Daniel", and 1995's "I Know a Place".  In that same time span, seven of his singles entered the "Billboard" Hot Country Singles & Tracks (now Hot Country Songs) charts, including the Top 40 hits "Picture Me", "For Crying Out Loud" and "Fighting Fire with Fire."
-
-Fighting Fire with Fire (song): "Fighting Fire with Fire" is a song recorded by American country music artist Davis Daniel.  It was released in January 1992 as the third single and title track from the album "Fighting Fire with Fire".  The song reached #27 on the "Billboard" Hot Country Singles & Tracks chart.  The song was written by Michael White and Conley White.
-
-Two Ways to Fall: Two Ways to Fall is the second studio album released by American country music artist Ty England.  His second and final album for the RCA Records label, it produced the singles "Irresistible You" and "All of the Above", which peaked at #22 and #46, respectively, on the "Billboard" Hot Country Singles & Tracks (now Hot Country Songs) charts.  "I'll Take Today" was originally recorded by Tanya Tucker on her 1994 album "Fire to Fire", and would later be released as a single by Gary Allan from his 1998 album "It Would Be You".
-
-Fire in the Dark: Fire in the Dark is the title of the third studio album recorded by American country music artist Billy Dean.  It was released in 1993 on SBK/Liberty Records and like his previous two albums, it was certified gold by the RIAA.  Unlike his first two albums, which were produced by Tom Shapiro, this one was produced by Liberty Records' then-president Jimmy Bowen, with Dean as co-producer.  Singles from this album include "Tryin' to Hide a Fire in the Dark", "I Wanna Take Care of You", "I'm Not Built That Way" and a cover of Dave Mason's 1977 pop hit "We Just Disagree".  Also covered here is James Taylor's "Steamroller Blues."  Of these singles, "Tryin' to Hide a Fire in the Dark" and "We Just Disagree" were both Top Ten hits on the country music charts.
-
-Elton John: Sir Elton Hercules John, (born Reginald Kenneth Dwight; 25 March 1947), is an English singer, pianist, and composer.  He has worked with lyricist Bernie Taupin as his songwriting partner since 1967; they have collaborated on more than 30 albums to date.  In his five-decade career Elton John has sold more than 300million records, making him one of the best-selling music artists in the world.  He has more than fifty Top 40 hits, including seven consecutive No. 1 US albums, 58 "Billboard" Top 40 singles, 27 Top 10, four No. 2 and nine No. 1.  For 31 consecutive years (1970–2000) he had at least one song in the "Billboard" Hot 100.  His tribute single, re-penned in dedication to the late Princess Diana, "Candle in the Wind 1997" sold over 33million copies worldwide and is the best-selling single in the history of the UK and US singles charts.  He has also composed music, produced records, and has occasionally acted in films.  John owned Watford Football Club from 1976 to 1987, and 1997 to 2002.  He is an honorary Life President of the club, and in 2014 had a stand named after him at the club's home stadium.
-
-Tryin' to Hide a Fire in the Dark: "Tryin' to Hide a Fire in the Dark" is a song co-written and recorded by American country music artist Billy Dean.  It was released in November 1992 as the first single from Dean's album "Fire in the Dark".  The song reached number 6 on the "Billboard" Hot Country Singles & Tracks chart in March 1993 and number 1 on the "RPM" Country Tracks chart in Canada.  It was written by Dean and Tim Nichols.
-
-Ice on Fire: Ice on Fire, released in November 1985, is the nineteenth official album release for Elton John.  Recorded at Sol Studios, it was his first album since "Blue Moves" produced by his original long-time producer, Gus Dudgeon, who was responsible for John's success in that timespan, but it was met with little praise, and only reached #48 on the US charts, although it reached #3 in the UK.  George Michael, then of Wham! , appears on two tracks on the album: "Nikita" and "Wrap Her Up".
-
-At This Moment (album): At This Moment is the debut album of American country music artist Neal McCoy, released in 1990 on Atlantic Records Nashville.  "If I Built You a Fire", "Hillbilly Blue" and "This Time I Hurt Her More Than She Loves Me" were all released as singles from this album.  Although "Hillbilly Blue" did not chart, the other two singles both entered the lower regions of the Hot Country Songs charts.  "If I Built You a Fire" was a Top 20 country hit in Canada as well.
-
-Question: In what country is the artist who released Ice on Fire born?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "album_name": {
-      "type": "string",
-      "description": "The name of the album mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "artist_name": {
-      "type": "string",
-      "description": "The name of the artist who released the album."
-    },
-    "artist_birth_country": {
-      "type": "string",
-      "description": "The country where the artist was born."
-    },
-    "artist_birth_year": {
-      "type": "integer",
-      "description": "The year the artist was born."
+    {
+      "role": "user",
+      "content": "Context:\nIce Prince: Panshak Zamani (born 23 October 1986), better known by his stage name Ice Prince, is a Nigerian hip hop recording artist and actor.  He rose to fame after releasing \"Oleku\", one of Nigeria's most remixed songs of all time.  He won the 2009 Hennessy Artistry Club Tour.  His achievements include one BET Award, one Ghana Music Award, three The Headies Awards, two Nigeria Entertainment Awards and two Channel O Music Video Awards.  Ice Prince is currently signed to Chocolate City.  His debut studio album, \"Everybody Loves Ice Prince\", was released in 2011.  It was supported by the singles \"Oleku\", \"Superstar\", \"Juju\" and \"Magician\".  In 2013, Ice Prince released \"Fire of Zamani\" as his second studio album.  The album contained the singles \"Aboki\", \"More\", \"Gimme Dat\" and \"I Swear\".  On 1 July 2015, Ice Prince was announced as the new Vice President of Chocolate City.\n\nMidnight Fire: Midnight Fire is the second studio album by American country music artist Steve Wariner.  It was released in 1983 by RCA Records.  The album produced five singles on the \"Billboard\" Hot Country Singles chart including two top ten singles: \"Don't Your Memory Ever Sleep at Night\" at number 23, \"Midnight Fire\" at number 5, \"Lonely Women Make Good Lovers\" at number 4, \"Why Goodbye\" at number 12, and \"Don't You Give Up on Love\" at number 49.  The song \"Overnight Sensation\" is a duet with country superstar Barbara Mandrell, and also appears on her 1983 MCA record \"Spun Gold\".\n\nDavis Daniel: Robert Andrykowski (born March 1, 1961) is an American country music artist who records under the name Davis Daniel.  Between 1991 and 1996, he recorded three studio albums on various divisions of Mercury Records: 1991's \"Fighting Fire with Fire\", 1994's \"Davis Daniel\", and 1995's \"I Know a Place\".  In that same time span, seven of his singles entered the \"Billboard\" Hot Country Singles & Tracks (now Hot Country Songs) charts, including the Top 40 hits \"Picture Me\", \"For Crying Out Loud\" and \"Fighting Fire with Fire.\"\n\nFighting Fire with Fire (song): \"Fighting Fire with Fire\" is a song recorded by American country music artist Davis Daniel.  It was released in January 1992 as the third single and title track from the album \"Fighting Fire with Fire\".  The song reached #27 on the \"Billboard\" Hot Country Singles & Tracks chart.  The song was written by Michael White and Conley White.\n\nTwo Ways to Fall: Two Ways to Fall is the second studio album released by American country music artist Ty England.  His second and final album for the RCA Records label, it produced the singles \"Irresistible You\" and \"All of the Above\", which peaked at #22 and #46, respectively, on the \"Billboard\" Hot Country Singles & Tracks (now Hot Country Songs) charts.  \"I'll Take Today\" was originally recorded by Tanya Tucker on her 1994 album \"Fire to Fire\", and would later be released as a single by Gary Allan from his 1998 album \"It Would Be You\".\n\nFire in the Dark: Fire in the Dark is the title of the third studio album recorded by American country music artist Billy Dean.  It was released in 1993 on SBK/Liberty Records and like his previous two albums, it was certified gold by the RIAA.  Unlike his first two albums, which were produced by Tom Shapiro, this one was produced by Liberty Records' then-president Jimmy Bowen, with Dean as co-producer.  Singles from this album include \"Tryin' to Hide a Fire in the Dark\", \"I Wanna Take Care of You\", \"I'm Not Built That Way\" and a cover of Dave Mason's 1977 pop hit \"We Just Disagree\".  Also covered here is James Taylor's \"Steamroller Blues.\"  Of these singles, \"Tryin' to Hide a Fire in the Dark\" and \"We Just Disagree\" were both Top Ten hits on the country music charts.\n\nElton John: Sir Elton Hercules John, (born Reginald Kenneth Dwight; 25 March 1947), is an English singer, pianist, and composer.  He has worked with lyricist Bernie Taupin as his songwriting partner since 1967; they have collaborated on more than 30 albums to date.  In his five-decade career Elton John has sold more than 300million records, making him one of the best-selling music artists in the world.  He has more than fifty Top 40 hits, including seven consecutive No. 1 US albums, 58 \"Billboard\" Top 40 singles, 27 Top 10, four No. 2 and nine No. 1.  For 31 consecutive years (1970–2000) he had at least one song in the \"Billboard\" Hot 100.  His tribute single, re-penned in dedication to the late Princess Diana, \"Candle in the Wind 1997\" sold over 33million copies worldwide and is the best-selling single in the history of the UK and US singles charts.  He has also composed music, produced records, and has occasionally acted in films.  John owned Watford Football Club from 1976 to 1987, and 1997 to 2002.  He is an honorary Life President of the club, and in 2014 had a stand named after him at the club's home stadium.\n\nTryin' to Hide a Fire in the Dark: \"Tryin' to Hide a Fire in the Dark\" is a song co-written and recorded by American country music artist Billy Dean.  It was released in November 1992 as the first single from Dean's album \"Fire in the Dark\".  The song reached number 6 on the \"Billboard\" Hot Country Singles & Tracks chart in March 1993 and number 1 on the \"RPM\" Country Tracks chart in Canada.  It was written by Dean and Tim Nichols.\n\nIce on Fire: Ice on Fire, released in November 1985, is the nineteenth official album release for Elton John.  Recorded at Sol Studios, it was his first album since \"Blue Moves\" produced by his original long-time producer, Gus Dudgeon, who was responsible for John's success in that timespan, but it was met with little praise, and only reached #48 on the US charts, although it reached #3 in the UK.  George Michael, then of Wham! , appears on two tracks on the album: \"Nikita\" and \"Wrap Her Up\".\n\nAt This Moment (album): At This Moment is the debut album of American country music artist Neal McCoy, released in 1990 on Atlantic Records Nashville.  \"If I Built You a Fire\", \"Hillbilly Blue\" and \"This Time I Hurt Her More Than She Loves Me\" were all released as singles from this album.  Although \"Hillbilly Blue\" did not chart, the other two singles both entered the lower regions of the Hot Country Songs charts.  \"If I Built You a Fire\" was a Top 20 country hit in Canada as well.\n\nQuestion: In what country is the artist who released Ice on Fire born?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"album_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the album mentioned in the question.\"\n    },\n    \"artist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the artist who released the album.\"\n    },\n    \"artist_birth_country\": {\n      \"type\": \"string\",\n      \"description\": \"The country where the artist was born.\"\n    },\n    \"artist_birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the artist was born.\"\n    }\n  },\n  \"required\": [\n    \"album_name\",\n    \"artist_name\",\n    \"artist_birth_country\",\n    \"artist_birth_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "album_name",
-    "artist_name",
-    "artist_birth_country",
-    "artist_birth_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "album_name": {
+        "type": "string",
+        "description": "The name of the album mentioned in the question."
+      },
+      "artist_name": {
+        "type": "string",
+        "description": "The name of the artist who released the album."
+      },
+      "artist_birth_country": {
+        "type": "string",
+        "description": "The country where the artist was born."
+      },
+      "artist_birth_year": {
+        "type": "integer",
+        "description": "The year the artist was born."
+      }
+    },
+    "required": [
+      "album_name",
+      "artist_name",
+      "artist_birth_country",
+      "artist_birth_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

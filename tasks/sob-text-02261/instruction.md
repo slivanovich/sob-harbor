@@ -1,97 +1,74 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Miss Hong Kong 2008: Miss Hong Kong 2008 The 36th Miss Hong Kong Pageant which was televised live internationally from the Hong Kong Convention and Exhibition Centre on 19 July 2008.  Twenty-two-year-old Edelweiss Cheung became the new Miss Hong Kong and the tallest Miss Hong Kong, in the history of the paeant.  Skye Chan the first runner-up and replaced Edelweiss during her duties due to Edelweiss not showing up.  Skye Chan represented Hong Kong in Miss World 2008, and Miss Chinese International 2009.  Second runner-up Sire Ma represented Hong Kong at Miss International 2008
-
-Xen Coffee: Xen Coffee is an independent siphon coffee bar in Hong Kong.  Xen Coffee's first coffee shop was in Quarry Bay.  Xen Coffee serves highly selective coffee varieties from Africa, Indonesia, Central and South Americas.  Xen Coffee was awarded Best Fair Trade Cafe in Hong Kong for its effort as a pioneer in promoting Fair Trade products like chocolate from Ghana, organic coffee from Ethiopian Yirgacheffe and the rainforest of Guatemala in Hong Kong. " Time Out" magazine (Hong Kong edition) has selected Xen Coffee as one of Hong Kong's 20 Best Coffee Spots.  Xen Coffee has also been covered in "My Coffee Guide" written by Moses Chan, a coffee geek and celebrity in Hong Kong.  Helen Chow, the head Siphonist of Xen Coffee was awarded the title of World Siphonist by the Specialty Coffee Association of Japan (SCAJ) to honor her achievement as second runner-up in the World Siphonist Championship (WSC) 2010.  The founder of Xen Coffee, Dixon Ip, is the first person in China to obtain certifications from both the Specialty Coffee Association of America (SCAA) and Coffee Quality Institute (CQI) as SCAA Cupping Judge and CQI Licensed Q Grader.  Xen Coffee focuses on educating the local community on coffee beyond espresso and promoting the concept of enjoying specialty coffee from single origins.
-
-Miss Hong Kong 2009: The Miss Hong Kong 2009 pageant, the 37th Miss Hong Kong pageant was held in the Hong Kong Coliseum on August 22, 2009.  Ten delegates completed for the title.  The winner was Sandy Lau and she competed at Miss World 2010, but not Miss Chinese International 2010, because the pageant was postponed until after Sandy Lau crowned her successor.  The first runner-up was Germaine Li, and she represented Hong Kong in the Miss International 2010 pageant.  The second runner-up was Mizuni Hung.
-
-Miss Hong Kong 2011: The Miss Hong Kong 2011 pageant was held in the TVB City on August 7, 2011.  Fifteen delegates completed for the title.  The winner was Rebecca Zhu, who competed at Miss Chinese International 2010.  The first runner-up was Hyman Chu, and she represented Hong Kong in the Miss World 2011.  The second runner-up was Whitney Hui, and she was Hong Kong representative in the Miss International 2011.
-
-Olivia Cheng: Olivia Cheng (Chinese: 鄭文雅, Pinyin: Zheng Wenya), born 14 February 1960, is a Hong Kong based former actress.  She won the 1979 Miss Hong Kong Pageant and was also elected "Miss Photogenic."  She represented Hong Kong in Miss Universe 1979 in Perth, Western Australia, where she went unplaced but ranked a very respectable 21st place in the preliminary swimsuit competition.  Olivia created a controversy when she joined ATV (the arch-rival of TVB, the organiser of the Miss Hong Kong pageant) immediately after crowning her successor in 1980.  This incident embarrassed TVB so much that in 1981, TVB decided to sign 1.5-year contracts with all Miss Hong Kong winners so that they had to stay with TVB for at least 6 months after their reign was over.
-
-Noel Leung: Noel Leung Siu-bing (born 7 December 1969 in Macau) is a Hong Kong actress known for her roles in TVB television.  She was the second runner-up in Miss Hong Kong 1990.
-
-Hoyan Mok: Hoyan Mok (莫可欣) was the winner of the 1993 Miss Hong Kong Pageant and a TVB Hong Kong actress.  She beat Kenix Kwok, who was considered a favourite to win, having won two side awards including Media's Favourite and Potential Artist.  She is Alex Fong Chung-Sun (方中信)'s wife, and has a daughter named Ka Ching.  As Miss Hong Kong, she also competed at the Miss Universe 1994 pageant.  She placed 45th at the pageant, same as her successor Halina Tam.  Mok also competed at the Miss Chinese International Pageant 1994 where she made the top 10 only, becoming the first Miss Hong Kong to not place in the top 3.
-
-Revelation of the Last Hero: Revelation of the Last Hero is a 1992 Hong Kong "wuxia" romance television series produced by TVB and starring Aaron Kwok, Noel Leung, Ada Choi, , Frankie Lam and Bryan Leung.  The theme song of the series, titled "Breeze in the Frost" (霧裡清風) by was sung by Kwok.
-
-Miss Hong Kong 2010: The Miss Hong Kong 2010 pageant was held in the Hong Kong Coliseum on August 1, 2010.  Ten delegates completed for the title.  The winner was Toby Chan, who competed at Miss World 2011 and Miss Chinese International 2010.  The first runner-up was Sammi Cheung, and she represented Hong Kong in the Miss International 2010 pageant.  The second runner-up was Lisa Ch'ng.
-
-Koni Lui: Koni Lui (呂慧儀) (born 3 September 1982 in Hong Kong) also known as Koni Lui Wai Yee is a model and 2nd runner up at the Miss Hong Kong 2006 pageant.  She represented Hong Kong at Miss International 2006 in Tokyo, Japan and Beijing, China.  She received 2 awards, Most Beautiful Smile and the Miss Friendship award.  She continued the friendly streak as Hong Kong had won four Miss Friendship titles (1981, 2002, 2004, and 2005).  With her win, Hong Kong is tied with Japan as the only nations at Miss International to win more than 4 Miss Friendships and at any international pageant.
-
-Question: What is the theme song of the 1992 Hong Kong tv series starring the second runner-up of the 1990 Miss Hong Kong pagent?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "tv_series_details": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "The title of the Hong Kong TV series."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year the TV series was produced."
-        },
-        "theme_song": {
-          "type": "string",
-          "description": "The title of the theme song for the TV series."
-        }
-      },
-      "required": [
-        "title",
-        "year",
-        "theme_song"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "starring_actress_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the actress starring in the TV series."
-        },
-        "miss_hong_kong_year": {
-          "type": "integer",
-          "description": "The year the actress competed in the Miss Hong Kong pageant."
-        },
-        "miss_hong_kong_placement": {
-          "type": "string",
-          "description": "The placement of the actress in the Miss Hong Kong pageant (e.g., 'winner', 'first runner-up', 'second runner-up')."
-        }
-      },
-      "required": [
-        "name",
-        "miss_hong_kong_year",
-        "miss_hong_kong_placement"
-      ],
-      "additionalProperties": false
-    },
-    "final_answer": {
-      "type": "string",
-      "description": "The theme song of the specified TV series."
+    {
+      "role": "user",
+      "content": "Context:\nMiss Hong Kong 2008: Miss Hong Kong 2008 The 36th Miss Hong Kong Pageant which was televised live internationally from the Hong Kong Convention and Exhibition Centre on 19 July 2008.  Twenty-two-year-old Edelweiss Cheung became the new Miss Hong Kong and the tallest Miss Hong Kong, in the history of the paeant.  Skye Chan the first runner-up and replaced Edelweiss during her duties due to Edelweiss not showing up.  Skye Chan represented Hong Kong in Miss World 2008, and Miss Chinese International 2009.  Second runner-up Sire Ma represented Hong Kong at Miss International 2008\n\nXen Coffee: Xen Coffee is an independent siphon coffee bar in Hong Kong.  Xen Coffee's first coffee shop was in Quarry Bay.  Xen Coffee serves highly selective coffee varieties from Africa, Indonesia, Central and South Americas.  Xen Coffee was awarded Best Fair Trade Cafe in Hong Kong for its effort as a pioneer in promoting Fair Trade products like chocolate from Ghana, organic coffee from Ethiopian Yirgacheffe and the rainforest of Guatemala in Hong Kong. \" Time Out\" magazine (Hong Kong edition) has selected Xen Coffee as one of Hong Kong's 20 Best Coffee Spots.  Xen Coffee has also been covered in \"My Coffee Guide\" written by Moses Chan, a coffee geek and celebrity in Hong Kong.  Helen Chow, the head Siphonist of Xen Coffee was awarded the title of World Siphonist by the Specialty Coffee Association of Japan (SCAJ) to honor her achievement as second runner-up in the World Siphonist Championship (WSC) 2010.  The founder of Xen Coffee, Dixon Ip, is the first person in China to obtain certifications from both the Specialty Coffee Association of America (SCAA) and Coffee Quality Institute (CQI) as SCAA Cupping Judge and CQI Licensed Q Grader.  Xen Coffee focuses on educating the local community on coffee beyond espresso and promoting the concept of enjoying specialty coffee from single origins.\n\nMiss Hong Kong 2009: The Miss Hong Kong 2009 pageant, the 37th Miss Hong Kong pageant was held in the Hong Kong Coliseum on August 22, 2009.  Ten delegates completed for the title.  The winner was Sandy Lau and she competed at Miss World 2010, but not Miss Chinese International 2010, because the pageant was postponed until after Sandy Lau crowned her successor.  The first runner-up was Germaine Li, and she represented Hong Kong in the Miss International 2010 pageant.  The second runner-up was Mizuni Hung.\n\nMiss Hong Kong 2011: The Miss Hong Kong 2011 pageant was held in the TVB City on August 7, 2011.  Fifteen delegates completed for the title.  The winner was Rebecca Zhu, who competed at Miss Chinese International 2010.  The first runner-up was Hyman Chu, and she represented Hong Kong in the Miss World 2011.  The second runner-up was Whitney Hui, and she was Hong Kong representative in the Miss International 2011.\n\nOlivia Cheng: Olivia Cheng (Chinese: 鄭文雅, Pinyin: Zheng Wenya), born 14 February 1960, is a Hong Kong based former actress.  She won the 1979 Miss Hong Kong Pageant and was also elected \"Miss Photogenic.\"  She represented Hong Kong in Miss Universe 1979 in Perth, Western Australia, where she went unplaced but ranked a very respectable 21st place in the preliminary swimsuit competition.  Olivia created a controversy when she joined ATV (the arch-rival of TVB, the organiser of the Miss Hong Kong pageant) immediately after crowning her successor in 1980.  This incident embarrassed TVB so much that in 1981, TVB decided to sign 1.5-year contracts with all Miss Hong Kong winners so that they had to stay with TVB for at least 6 months after their reign was over.\n\nNoel Leung: Noel Leung Siu-bing (born 7 December 1969 in Macau) is a Hong Kong actress known for her roles in TVB television.  She was the second runner-up in Miss Hong Kong 1990.\n\nHoyan Mok: Hoyan Mok (莫可欣) was the winner of the 1993 Miss Hong Kong Pageant and a TVB Hong Kong actress.  She beat Kenix Kwok, who was considered a favourite to win, having won two side awards including Media's Favourite and Potential Artist.  She is Alex Fong Chung-Sun (方中信)'s wife, and has a daughter named Ka Ching.  As Miss Hong Kong, she also competed at the Miss Universe 1994 pageant.  She placed 45th at the pageant, same as her successor Halina Tam.  Mok also competed at the Miss Chinese International Pageant 1994 where she made the top 10 only, becoming the first Miss Hong Kong to not place in the top 3.\n\nRevelation of the Last Hero: Revelation of the Last Hero is a 1992 Hong Kong \"wuxia\" romance television series produced by TVB and starring Aaron Kwok, Noel Leung, Ada Choi, , Frankie Lam and Bryan Leung.  The theme song of the series, titled \"Breeze in the Frost\" (霧裡清風) by was sung by Kwok.\n\nMiss Hong Kong 2010: The Miss Hong Kong 2010 pageant was held in the Hong Kong Coliseum on August 1, 2010.  Ten delegates completed for the title.  The winner was Toby Chan, who competed at Miss World 2011 and Miss Chinese International 2010.  The first runner-up was Sammi Cheung, and she represented Hong Kong in the Miss International 2010 pageant.  The second runner-up was Lisa Ch'ng.\n\nKoni Lui: Koni Lui (呂慧儀) (born 3 September 1982 in Hong Kong) also known as Koni Lui Wai Yee is a model and 2nd runner up at the Miss Hong Kong 2006 pageant.  She represented Hong Kong at Miss International 2006 in Tokyo, Japan and Beijing, China.  She received 2 awards, Most Beautiful Smile and the Miss Friendship award.  She continued the friendly streak as Hong Kong had won four Miss Friendship titles (1981, 2002, 2004, and 2005).  With her win, Hong Kong is tied with Japan as the only nations at Miss International to win more than 4 Miss Friendships and at any international pageant.\n\nQuestion: What is the theme song of the 1992 Hong Kong tv series starring the second runner-up of the 1990 Miss Hong Kong pagent?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"tv_series_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the Hong Kong TV series.\"\n        },\n        \"year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the TV series was produced.\"\n        },\n        \"theme_song\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the theme song for the TV series.\"\n        }\n      },\n      \"required\": [\n        \"title\",\n        \"year\",\n        \"theme_song\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"starring_actress_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the actress starring in the TV series.\"\n        },\n        \"miss_hong_kong_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the actress competed in the Miss Hong Kong pageant.\"\n        },\n        \"miss_hong_kong_placement\": {\n          \"type\": \"string\",\n          \"description\": \"The placement of the actress in the Miss Hong Kong pageant (e.g., 'winner', 'first runner-up', 'second runner-up').\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"miss_hong_kong_year\",\n        \"miss_hong_kong_placement\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"final_answer\": {\n      \"type\": \"string\",\n      \"description\": \"The theme song of the specified TV series.\"\n    }\n  },\n  \"required\": [\n    \"tv_series_details\",\n    \"starring_actress_details\",\n    \"final_answer\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "tv_series_details",
-    "starring_actress_details",
-    "final_answer"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "tv_series_details": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the Hong Kong TV series."
+          },
+          "year": {
+            "type": "integer",
+            "description": "The year the TV series was produced."
+          },
+          "theme_song": {
+            "type": "string",
+            "description": "The title of the theme song for the TV series."
+          }
+        },
+        "required": [
+          "title",
+          "year",
+          "theme_song"
+        ],
+        "additionalProperties": false
+      },
+      "starring_actress_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the actress starring in the TV series."
+          },
+          "miss_hong_kong_year": {
+            "type": "integer",
+            "description": "The year the actress competed in the Miss Hong Kong pageant."
+          },
+          "miss_hong_kong_placement": {
+            "type": "string",
+            "description": "The placement of the actress in the Miss Hong Kong pageant (e.g., 'winner', 'first runner-up', 'second runner-up')."
+          }
+        },
+        "required": [
+          "name",
+          "miss_hong_kong_year",
+          "miss_hong_kong_placement"
+        ],
+        "additionalProperties": false
+      },
+      "final_answer": {
+        "type": "string",
+        "description": "The theme song of the specified TV series."
+      }
+    },
+    "required": [
+      "tv_series_details",
+      "starring_actress_details",
+      "final_answer"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

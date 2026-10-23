@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Terry Richards: David Terence "Terry" Richards (2 November 1932 – 14 June 2014) was a British actor and stuntman, best known for his appearance as the Arabian swordsman in the 1981 Indiana Jones film "Raiders of the Lost Ark".  During his career, Richards worked on over 100 productions across film and television; worked in nine James Bond films; fought as a stuntman in scenes with Indiana Jones, James Bond, Luke Skywalker and Rambo; and doubled for Donald Sutherland, Tom Selleck and Christopher Lee.
-
-Shero Rauf: Shero Rauf (born 15 May 1979) is a Kurdish-Iraqi actor and stuntman.  He is the first Kurdish Iraqi to work as an actor, stuntman, 3D visual effects animator, lead artist, and assistant director in Hollywood movies.
-
-Rocky Taylor: Rocky Taylor (born Laurie Taylor in 1946) is an English stuntman and actor.  Taylor was born in Weybridge Surrey in the south-east of England.  His first appearance as a stuntman was an uncredited role in "Dr. No".  He has since been a stuntman for many famous and successful films including multiple James Bond and Indiana Jones films, "A Bridge Too Far", "Titanic", "The Da Vinci Code", "Harry Potter and the Deathly Hallows Part 1" and the HBO television series "Game of Thrones".  He has also had minor acting roles in 40 films, including doubling for Roger Moore and Sean Connery in James Bond films.  He is also known as being the voice of the original Honey Monster in a series of commercials for Sugar Puffs.
-
-Tom Savini: Thomas Vincent Savini (born November 3, 1946) is an American actor, stuntman, director, and award-winning special make-up effects creator.  He is known for his makeup and special effects work on many films directed by George A. Romero, including "Martin", "Dawn of the Dead", "Day of the Dead", "Creepshow" and "Monkey Shines"; he also created the special effects and makeup for many cult classics like "Friday the 13th" (parts I and IV), "Maniac", "The Burning", "The Prowler" and "The Texas Chainsaw Massacre 2".
-
-Ted Mapes: Ted Mapes (November 25, 1901 – September 9, 1984) was an American character actor, who was also a prolific stuntman and body double.  Born on November 25, 1901 in St. Edward, Nebraska, he moved to Los Angeles in his mid-20s, and entered the film industry in 1929, first as a grip, and then as a stuntman and actor.  He doubled for many famous actors, including Jimmy Stewart and Gary Cooper.  His film and television career spanned forty years, during which time he appeared in hundreds of films and television shows, either as an actor, stuntman or body double.  After his career in front of the camera ended in 1969, Mapes became an advocate for animal safety in films, working as an observer on sets for the American Humane Association.
-
-Horrorween: Horrorween is a 2010 horror comedy film directed by Joe Estevez and written by Mike Muscat, Judd Rubin, Jason Sanchez and Ed Meyer.  It stars Lloyd Kaufman, Kathy Garver and Tom Savini.
-
-The Mad Stuntman: Mark Quashie (born January 24, 1967), better known as The Mad Stuntman, is a multi-platinum selling American electronic dance artist born in Trinidad and Tobago.  Quashie's moniker was inspired by the 1980s action/adventure television program "The Fall Guy" which starred actor Lee Majors as a Hollywood stuntman, moonlighting as a bounty hunter.  Making his home in Brooklyn, NY, The Mad Stuntman was introduced to platinum-selling producer/DJ Erick Morillo by popular Panamanian reggae artist El General, who is dubbed the "Father of Reggaeton".  Morillo was looking for an act to be featured on his upcoming single "Go On Move" and to ultimately join him on tour as a group.
-
-Joe Robinson (actor): Joseph Robinson (31 May 1927 – 3 July 2017) was an English actor and stuntman born in Newcastle upon Tyne, Northumberland.  He was a champion professional wrestler, as were his father and grandfather.  His brother, Doug Robinson, is also an actor and stuntman.
-
-Alain Moussi: Alain Moussi (born 29 March 1981) is an actor and stuntman.  He plays the lead role of Kurt Sloane in the reboot of "Kickboxer", "", a role that was originated by Jean-Claude Van Damme, who portrays his mentor in the film.  As a stuntman, he has worked on films such as "", "Brick Mansions", among countless others.  He has trained in jujutsu, kickboxing, Brazilian jiu-jitsu and mixed martial arts.  In addition to stunts and acting, Moussi owns and operates K2 Martial Arts (formerly NX Martial Arts and Fitness) in Orleans, Ottawa, Canada.
-
-Neil Fanning: Neil Fanning (born 12 April 1967) is an Australian voice actor, stuntman and actor.  He is most known for voicing Scooby-Doo in both of the theatrical live-action international blockbusters, "Scooby-Doo" and "".  Neil's entertainment career has spanned over 25 years and over 50 movie, television and commercial roles.  Among his stunt credits are "Daybreakers", "", and "Ghost Ship".  TV appearances include "Sea Patrol" and the 1998 TV movie "Chameleon".  Neil has also performed as an actor and stuntman on shows including "Nim's Island", "Peter Pan", and "Jackie Chan's First Strike".
-
-Question: Horrorween starred which actor and stuntman?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "movie_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "actor_stuntman_name": {
-      "type": "string",
-      "description": "The name of the individual who starred in the film and is also an actor and stuntman."
-    },
-    "person_roles": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of roles performed by the individual."
-    },
-    "birth_date": {
-      "type": "string",
-      "description": "The birth date of the individual."
+    {
+      "role": "user",
+      "content": "Context:\nTerry Richards: David Terence \"Terry\" Richards (2 November 1932 – 14 June 2014) was a British actor and stuntman, best known for his appearance as the Arabian swordsman in the 1981 Indiana Jones film \"Raiders of the Lost Ark\".  During his career, Richards worked on over 100 productions across film and television; worked in nine James Bond films; fought as a stuntman in scenes with Indiana Jones, James Bond, Luke Skywalker and Rambo; and doubled for Donald Sutherland, Tom Selleck and Christopher Lee.\n\nShero Rauf: Shero Rauf (born 15 May 1979) is a Kurdish-Iraqi actor and stuntman.  He is the first Kurdish Iraqi to work as an actor, stuntman, 3D visual effects animator, lead artist, and assistant director in Hollywood movies.\n\nRocky Taylor: Rocky Taylor (born Laurie Taylor in 1946) is an English stuntman and actor.  Taylor was born in Weybridge Surrey in the south-east of England.  His first appearance as a stuntman was an uncredited role in \"Dr. No\".  He has since been a stuntman for many famous and successful films including multiple James Bond and Indiana Jones films, \"A Bridge Too Far\", \"Titanic\", \"The Da Vinci Code\", \"Harry Potter and the Deathly Hallows Part 1\" and the HBO television series \"Game of Thrones\".  He has also had minor acting roles in 40 films, including doubling for Roger Moore and Sean Connery in James Bond films.  He is also known as being the voice of the original Honey Monster in a series of commercials for Sugar Puffs.\n\nTom Savini: Thomas Vincent Savini (born November 3, 1946) is an American actor, stuntman, director, and award-winning special make-up effects creator.  He is known for his makeup and special effects work on many films directed by George A. Romero, including \"Martin\", \"Dawn of the Dead\", \"Day of the Dead\", \"Creepshow\" and \"Monkey Shines\"; he also created the special effects and makeup for many cult classics like \"Friday the 13th\" (parts I and IV), \"Maniac\", \"The Burning\", \"The Prowler\" and \"The Texas Chainsaw Massacre 2\".\n\nTed Mapes: Ted Mapes (November 25, 1901 – September 9, 1984) was an American character actor, who was also a prolific stuntman and body double.  Born on November 25, 1901 in St. Edward, Nebraska, he moved to Los Angeles in his mid-20s, and entered the film industry in 1929, first as a grip, and then as a stuntman and actor.  He doubled for many famous actors, including Jimmy Stewart and Gary Cooper.  His film and television career spanned forty years, during which time he appeared in hundreds of films and television shows, either as an actor, stuntman or body double.  After his career in front of the camera ended in 1969, Mapes became an advocate for animal safety in films, working as an observer on sets for the American Humane Association.\n\nHorrorween: Horrorween is a 2010 horror comedy film directed by Joe Estevez and written by Mike Muscat, Judd Rubin, Jason Sanchez and Ed Meyer.  It stars Lloyd Kaufman, Kathy Garver and Tom Savini.\n\nThe Mad Stuntman: Mark Quashie (born January 24, 1967), better known as The Mad Stuntman, is a multi-platinum selling American electronic dance artist born in Trinidad and Tobago.  Quashie's moniker was inspired by the 1980s action/adventure television program \"The Fall Guy\" which starred actor Lee Majors as a Hollywood stuntman, moonlighting as a bounty hunter.  Making his home in Brooklyn, NY, The Mad Stuntman was introduced to platinum-selling producer/DJ Erick Morillo by popular Panamanian reggae artist El General, who is dubbed the \"Father of Reggaeton\".  Morillo was looking for an act to be featured on his upcoming single \"Go On Move\" and to ultimately join him on tour as a group.\n\nJoe Robinson (actor): Joseph Robinson (31 May 1927 – 3 July 2017) was an English actor and stuntman born in Newcastle upon Tyne, Northumberland.  He was a champion professional wrestler, as were his father and grandfather.  His brother, Doug Robinson, is also an actor and stuntman.\n\nAlain Moussi: Alain Moussi (born 29 March 1981) is an actor and stuntman.  He plays the lead role of Kurt Sloane in the reboot of \"Kickboxer\", \"\", a role that was originated by Jean-Claude Van Damme, who portrays his mentor in the film.  As a stuntman, he has worked on films such as \"\", \"Brick Mansions\", among countless others.  He has trained in jujutsu, kickboxing, Brazilian jiu-jitsu and mixed martial arts.  In addition to stunts and acting, Moussi owns and operates K2 Martial Arts (formerly NX Martial Arts and Fitness) in Orleans, Ottawa, Canada.\n\nNeil Fanning: Neil Fanning (born 12 April 1967) is an Australian voice actor, stuntman and actor.  He is most known for voicing Scooby-Doo in both of the theatrical live-action international blockbusters, \"Scooby-Doo\" and \"\".  Neil's entertainment career has spanned over 25 years and over 50 movie, television and commercial roles.  Among his stunt credits are \"Daybreakers\", \"\", and \"Ghost Ship\".  TV appearances include \"Sea Patrol\" and the 1998 TV movie \"Chameleon\".  Neil has also performed as an actor and stuntman on shows including \"Nim's Island\", \"Peter Pan\", and \"Jackie Chan's First Strike\".\n\nQuestion: Horrorween starred which actor and stuntman?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"movie_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"actor_stuntman_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the individual who starred in the film and is also an actor and stuntman.\"\n    },\n    \"person_roles\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of roles performed by the individual.\"\n    },\n    \"birth_date\": {\n      \"type\": \"string\",\n      \"description\": \"The birth date of the individual.\"\n    }\n  },\n  \"required\": [\n    \"movie_title\",\n    \"actor_stuntman_name\",\n    \"person_roles\",\n    \"birth_date\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "movie_title",
-    "actor_stuntman_name",
-    "person_roles",
-    "birth_date"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "movie_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "actor_stuntman_name": {
+        "type": "string",
+        "description": "The name of the individual who starred in the film and is also an actor and stuntman."
+      },
+      "person_roles": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of roles performed by the individual."
+      },
+      "birth_date": {
+        "type": "string",
+        "description": "The birth date of the individual."
+      }
+    },
+    "required": [
+      "movie_title",
+      "actor_stuntman_name",
+      "person_roles",
+      "birth_date"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

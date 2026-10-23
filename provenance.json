@@ -12,7 +12,7 @@
     "modality": "text",
     "task_count": 5000
   },
-  "protocol": "agent writes /tmp/answer.json; upstream SOB text evaluator",
+  "protocol": "single model request with response_format=json_schema and strict=true; raw response saved to /tmp/answer.json; upstream SOB text evaluator",
   "primary_metric": "leaf_value_em",
   "aggregation": "unweighted per-metric arithmetic mean"
 }

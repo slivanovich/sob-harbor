@@ -6,7 +6,9 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from convert import ROOT, generate_task
+from jsonschema import Draft7Validator
+
+from convert import ROOT, SYSTEM_PROMPT, build_user_message, generate_task
 
 sys.path.insert(0, str(ROOT / "vendor"))
 from evaluate import evaluate_record  # noqa: E402
@@ -42,7 +44,18 @@ class ConversionTest(unittest.TestCase):
                 (task / "tests/record.json").read_bytes(),
                 (second / "tests/record.json").read_bytes(),
             )
-            self.assertIn(record["context"], (task / "instruction.md").read_text())
+            request = json.loads((task / "instruction.md").read_text())
+            self.assertEqual(
+                request,
+                {
+                    "messages": [
+                        {"role": "system", "content": SYSTEM_PROMPT},
+                        {"role": "user", "content": build_user_message(record)},
+                    ],
+                    "json_schema": json.loads(record["json_schema"]),
+                    "answer_path": "/tmp/answer.json",
+                },
+            )
             self.assertEqual(
                 (task / "tests/evaluate.py").read_bytes(),
                 (ROOT / "vendor/evaluate.py").read_bytes(),
@@ -93,6 +106,9 @@ class ConversionTest(unittest.TestCase):
             output = Path(directory)
             for record_path in tasks:
                 record = json.loads(record_path.read_text())
+                request = json.loads((record_path.parent.parent / "instruction.md").read_text())
+                self.assertEqual(request["json_schema"], record["input"]["json_schema"])
+                Draft7Validator.check_schema(request["json_schema"])
                 answer = record_path.parent.parent / "solution/answer.json"
                 record["output"]["candidate_response"] = json.loads(answer.read_text())
                 expected = evaluate_record(record, "text").row

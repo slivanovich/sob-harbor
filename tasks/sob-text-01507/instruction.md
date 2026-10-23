@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Leaving Normal (film): Leaving Normal is a 1992 American comedy-drama road film directed by Edward Zwick and starring Christine Lahti and Meg Tilly.  Written by Ed Solomon, the film is about the cross country adventure of two women and the hardships and characters they encounter.
-
-Peggy Feury: Peggy Feury (30 June 1924 — 20 November 1985) (born Margaret Feury) was an actress on Broadway, in films, and on television.  She became a highly regarded acting teacher in New York and then in Los Angeles.  Her students included Sean Penn, Meg Ryan, Johnny Depp, Ellen Burstyn, Jeff Goldblum, Vonetta McGee, Lou Gossett, Jr., James Cromwell, Crispin Glover, Eric Stoltz, Laura Dern, Lily Tomlin, Charlie Sheen, Annette O'Toole, Anjelica Huston, Meg Tilly, Nicolas Cage, Michelle Pfeiffer, and Oscar-winning screenwriters Bobby Moresco and Callie Khouri.
-
-Journey (1995 film): Journey is a 1995 American made-for-television drama film produced by Hallmark Hall of Fame that aired on CBS on December 10, 1995.  The film was directed by Tom McLoughlin and starred Jason Robards, Brenda Fricker and Meg Tilly.
-
-Sleep with Me: Sleep With Me is a 1994 American comedy-drama film directed by Rory Kelly and starring Meg Tilly, Eric Stoltz and Craig Sheffer, who play good friends that become involved in a love triangle, a relationship complicated by the marriage of Tilly's and Stoltz's characters.
-
-Psycho II (film): Psycho II is a 1983 American slasher film directed by Richard Franklin and written by Tom Holland.  It is the first sequel to Alfred Hitchcock's "Psycho" and the second film in the "Psycho" series.  It stars Anthony Perkins, Vera Miles, Robert Loggia, and Meg Tilly.  The original music score was composed by Jerry Goldsmith.  Set 22 years after the first film, Norman Bates is released from the mental institution and returns to the house and Bates Motel to continue a normal life.  However, his troubled past continues to haunt him.  It is unrelated to the 1982 novel "Psycho II" by Robert Bloch, which he wrote as a sequel to his original novel "Psycho".  "Psycho II" grossed over $34 million at the box office.  The film was followed by "Psycho III" (1986) and "" (1990).
-
-Antibirth: Antibirth is a 2016 American-Canadian psychedelic body horror film written and directed by Danny Perez, and starring Natasha Lyonne, Chloë Sevigny, Meg Tilly, Mark Webber, Maxwell McCabe-Lokos and Emmanuel Kabongo.  The film follows a drug-addled woman in a remote Michigan town who becomes pregnant after taking a strange drug.  The film premiered at the Sundance Film Festival in January 2016.  The film was released in the United States on September 2, 2016, by IFC Midnight.
-
-Valmont (film): Valmont is a 1989 French-American drama film directed by Miloš Forman and starring Colin Firth, Annette Bening, and Meg Tilly.  Based on the 1782 French novel "Les Liaisons dangereuses" by Choderlos de Laclos, and adapted for the screen by Jean-Claude Carrière, the film is about a scheming widow who bets her lover that he cannot corrupt a recently married honorable woman.  During the process of seducing the married woman, he ends up falling in love with her.  "Valmont" received an Academy Award nomination for Best Costume Design (Theodor Pištěk).
-
-Masquerade (1988 film): Masquerade is a 1988 American romance mystery thriller film directed by Bob Swaim and starring Rob Lowe, Meg Tilly, Kim Cattrall, and Doug Savant.  Written by Dick Wolf, the film is about a recently orphaned millionairess who falls in love with a young yacht racing captain who isn't completely truthful with her about his past.  The film was nominated for the Edgar Allan Poe Award for Best (Mystery) Motion Picture in 1989.
-
-Steven Peros: Steven Peros is an American playwright, screenwriter, director, and television writer.  He is the author of both the stage play and screenplay for "The Cat's Meow", which was made into the 2002 Lionsgate film directed by Peter Bogdanovich and starring Kirsten Dunst, Eddie Izzard, Edward Herrmann, Carey Elwes, Jennifer Tilly, and Joanna Lumley.
-
-Jennifer Tilly: Jennifer Tilly (born Jennifer Ellen Chan; September 16, 1958) is an American-Canadian actress and poker player.  She is a World Series of Poker Ladies' Event bracelet winner.  She was nominated for an Academy Award for Best Supporting Actress for her role as Olive Neal in the film "Bullets over Broadway" (1994).  Her other film roles include "Let It Ride" (1989) "Made in America" (1993), "Bound" (1996), "Liar Liar" (1997) and "Bride of Chucky" (1998).  She has done extensive voice-over work including Celia in "Monsters, Inc." (2001).  She is the older sister of actress Meg Tilly.
-
-Question: Which actor and older sister of Meg Tilly starred in the 2002 Lionsgate film, The Cat's Meow?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "relationship_to_meg_tilly": {
-      "type": "string",
-      "description": "The familial relationship of the actor to Meg Tilly."
-    },
-    "film_details": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "The title of the film."
-        },
-        "release_year": {
-          "type": "integer",
-          "description": "The release year of the film."
-        },
-        "production_company": {
-          "type": "string",
-          "description": "The production company of the film."
-        }
-      },
-      "required": [
-        "title",
-        "release_year",
-        "production_company"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nLeaving Normal (film): Leaving Normal is a 1992 American comedy-drama road film directed by Edward Zwick and starring Christine Lahti and Meg Tilly.  Written by Ed Solomon, the film is about the cross country adventure of two women and the hardships and characters they encounter.\n\nPeggy Feury: Peggy Feury (30 June 1924 — 20 November 1985) (born Margaret Feury) was an actress on Broadway, in films, and on television.  She became a highly regarded acting teacher in New York and then in Los Angeles.  Her students included Sean Penn, Meg Ryan, Johnny Depp, Ellen Burstyn, Jeff Goldblum, Vonetta McGee, Lou Gossett, Jr., James Cromwell, Crispin Glover, Eric Stoltz, Laura Dern, Lily Tomlin, Charlie Sheen, Annette O'Toole, Anjelica Huston, Meg Tilly, Nicolas Cage, Michelle Pfeiffer, and Oscar-winning screenwriters Bobby Moresco and Callie Khouri.\n\nJourney (1995 film): Journey is a 1995 American made-for-television drama film produced by Hallmark Hall of Fame that aired on CBS on December 10, 1995.  The film was directed by Tom McLoughlin and starred Jason Robards, Brenda Fricker and Meg Tilly.\n\nSleep with Me: Sleep With Me is a 1994 American comedy-drama film directed by Rory Kelly and starring Meg Tilly, Eric Stoltz and Craig Sheffer, who play good friends that become involved in a love triangle, a relationship complicated by the marriage of Tilly's and Stoltz's characters.\n\nPsycho II (film): Psycho II is a 1983 American slasher film directed by Richard Franklin and written by Tom Holland.  It is the first sequel to Alfred Hitchcock's \"Psycho\" and the second film in the \"Psycho\" series.  It stars Anthony Perkins, Vera Miles, Robert Loggia, and Meg Tilly.  The original music score was composed by Jerry Goldsmith.  Set 22 years after the first film, Norman Bates is released from the mental institution and returns to the house and Bates Motel to continue a normal life.  However, his troubled past continues to haunt him.  It is unrelated to the 1982 novel \"Psycho II\" by Robert Bloch, which he wrote as a sequel to his original novel \"Psycho\".  \"Psycho II\" grossed over $34 million at the box office.  The film was followed by \"Psycho III\" (1986) and \"\" (1990).\n\nAntibirth: Antibirth is a 2016 American-Canadian psychedelic body horror film written and directed by Danny Perez, and starring Natasha Lyonne, Chloë Sevigny, Meg Tilly, Mark Webber, Maxwell McCabe-Lokos and Emmanuel Kabongo.  The film follows a drug-addled woman in a remote Michigan town who becomes pregnant after taking a strange drug.  The film premiered at the Sundance Film Festival in January 2016.  The film was released in the United States on September 2, 2016, by IFC Midnight.\n\nValmont (film): Valmont is a 1989 French-American drama film directed by Miloš Forman and starring Colin Firth, Annette Bening, and Meg Tilly.  Based on the 1782 French novel \"Les Liaisons dangereuses\" by Choderlos de Laclos, and adapted for the screen by Jean-Claude Carrière, the film is about a scheming widow who bets her lover that he cannot corrupt a recently married honorable woman.  During the process of seducing the married woman, he ends up falling in love with her.  \"Valmont\" received an Academy Award nomination for Best Costume Design (Theodor Pištěk).\n\nMasquerade (1988 film): Masquerade is a 1988 American romance mystery thriller film directed by Bob Swaim and starring Rob Lowe, Meg Tilly, Kim Cattrall, and Doug Savant.  Written by Dick Wolf, the film is about a recently orphaned millionairess who falls in love with a young yacht racing captain who isn't completely truthful with her about his past.  The film was nominated for the Edgar Allan Poe Award for Best (Mystery) Motion Picture in 1989.\n\nSteven Peros: Steven Peros is an American playwright, screenwriter, director, and television writer.  He is the author of both the stage play and screenplay for \"The Cat's Meow\", which was made into the 2002 Lionsgate film directed by Peter Bogdanovich and starring Kirsten Dunst, Eddie Izzard, Edward Herrmann, Carey Elwes, Jennifer Tilly, and Joanna Lumley.\n\nJennifer Tilly: Jennifer Tilly (born Jennifer Ellen Chan; September 16, 1958) is an American-Canadian actress and poker player.  She is a World Series of Poker Ladies' Event bracelet winner.  She was nominated for an Academy Award for Best Supporting Actress for her role as Olive Neal in the film \"Bullets over Broadway\" (1994).  Her other film roles include \"Let It Ride\" (1989) \"Made in America\" (1993), \"Bound\" (1996), \"Liar Liar\" (1997) and \"Bride of Chucky\" (1998).  She has done extensive voice-over work including Celia in \"Monsters, Inc.\" (2001).  She is the older sister of actress Meg Tilly.\n\nQuestion: Which actor and older sister of Meg Tilly starred in the 2002 Lionsgate film, The Cat's Meow?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor.\"\n    },\n    \"relationship_to_meg_tilly\": {\n      \"type\": \"string\",\n      \"description\": \"The familial relationship of the actor to Meg Tilly.\"\n    },\n    \"film_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the film.\"\n        },\n        \"release_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The release year of the film.\"\n        },\n        \"production_company\": {\n          \"type\": \"string\",\n          \"description\": \"The production company of the film.\"\n        }\n      },\n      \"required\": [\n        \"title\",\n        \"release_year\",\n        \"production_company\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"actor_name\",\n    \"relationship_to_meg_tilly\",\n    \"film_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actor_name",
-    "relationship_to_meg_tilly",
-    "film_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor."
+      },
+      "relationship_to_meg_tilly": {
+        "type": "string",
+        "description": "The familial relationship of the actor to Meg Tilly."
+      },
+      "film_details": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the film."
+          },
+          "release_year": {
+            "type": "integer",
+            "description": "The release year of the film."
+          },
+          "production_company": {
+            "type": "string",
+            "description": "The production company of the film."
+          }
+        },
+        "required": [
+          "title",
+          "release_year",
+          "production_company"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "actor_name",
+      "relationship_to_meg_tilly",
+      "film_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

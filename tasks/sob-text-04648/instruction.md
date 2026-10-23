@@ -1,102 +1,79 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Strindheim: Strindheim is a neighborhood of Trondheim, Norway.  It is the site of Strindheim Church, Strindheim School, the confectionery factory Nidar and the home area of Strindheim IL ("Strindheim Idrettslag").
-
-Joseph Peter Wilson: Joe Pete Wilson (born May 22, 1935) skied for the US in cross-country at the 1960 Winter Olympics, but later became a well-known administrator in the United States.  Wilson also wrote several books on cross-country skiing, all co-authored by William J. Lederer.  Wilson set up the cross-country ski area at the Trapp Family Lodge in Stowe, Vermont - the lodge established by the Trapp family of "Sound of Music" fame.  In 1973, Wilson organized a meeting of 25 ski areas and established the National Ski Touring Operators' Association.  Wilson was named as its first President from 1973-1977.  After several name changes it is now called the Cross Country Ski Areas Association (CCSAA).  CCSAA is an international association of US and Canadian cross-country ski areas.  Joe Pete is also known for setting up an inn in Keene, New York, the Bark Eater Inn, and developing the ski trails around the inn.
-
-Cross-country skiing (sport): The sport of cross-country skiing encompasses a variety of formats for cross-country skiing races over courses of varying lengths according to rules sanctioned by the International Ski Federation and by various national organizations, such as the U.S. Ski and Snowboard Association (USSA) and Cross Country Ski Canada.  International competitions include the FIS Nordic World Ski Championships, the FIS Cross-Country World Cup, and at the Winter Olympic Games.  Such races occur over homologated, groomed courses designed to support classic (in-track) and freestyle events, where the skiers may employ skate skiing.  It also encompasses cross-country ski marathon events, sanctioned by the Worldloppet Ski Federation, and cross-country ski orienteering events, sanctioned by the International Orienteering Federation.  Related forms of competition are biathlon, where competitors race on cross-country skis and stop to shoot at targets with rifles, and paralympic cross-country skiing that allows athletes with disabilities to compete at cross-country skiing with adaptive equipment.
-
-Odd Martinsen: Odd-Willy Martinsen (born 20 December 1942) is a retired Norwegian cross-country skier who competed during the 1960s and 1970s.  He won three medals at the Winter Olympics, a gold in the 4×10 km relay (1968) and silvers in the 30 km (1968) and the 4×10 km relay (1976).  Martinsen won five medals at the FIS Nordic World Ski Championships, a gold in the 4×10 km relay (1966), a silver in the 15 km (1970), and bronzes in the 15 km (1966), 30 km (1970), and 4×10 km relay (1974).  At the 1969 Holmenkollen ski festival, he won the 15 km race.  For his cross-country skiing successes in Norway and abroad, Martinsen received the Holmenkollen medal in 1969.  Thirty-two years later, his daughter, Bente Skari, received the Holmenkollen medal, making them the only father-daughter combination to ever win the prestigious honor.
-
-Kikkan Randall: Kikkan Randall (born December 31, 1982) is an American cross-country skier.  She is the niece of former cross-country skiing Olympians Betsy Haines (1980) and Chris Haines (1976).  She was the first American female cross-country skier to take a top ten finish in World Cup competition, to win a World Cup race and to win a World Cup discipline title.  She won the silver medal in the individual sprint at the FIS Nordic World Ski Championships 2009 in Liberec, becoming the first American woman to win a medal in cross country skiing at the FIS Nordic World Ski Championships and in 2013 teamed up with Jessica Diggins to win the first ever American FIS Nordic World Ski Championships gold medal in the team sprint.
-
-Ole Christian Wendel: Ole Christian Wendel (born 24 January 1992) was a Norwegian cross-country skier and ski jumper.  He was National Junior Champion in both ski jumping, cross country skiing and Nordic combined in 2009, and Junior World Champion in Nordic Combined (team competition).
-
-Petter Northug: Petter Northug Jr. (born 6 January 1986) is a Norwegian cross-country skier and double Olympic champion.  He has 13 World Championship and 2 Winter Olympic gold medals with 20 medals overall (2 gold, 1 silver and 1 bronze at the Olympics, 13 gold and 3 silver at the World Ski Championships), and 18 individual FIS Cross-Country World Cup wins with 13 podium places.  He is also the record holder for most stage wins (13) in Tour de Ski.  By winning his ninth gold medal in the Nordic World Ski Championships in 4 x 10 km relay in Val di Fiemme 2013 he leveled the achievement of Bjørn Dæhlie who had been the most successful World Champion male skier up to this point.
-
-Sadie Bjornsen: Sadie Bjornsen (born November 21, 1989) is an American cross-country skier and a member of the United States Ski Team nordic programs "Cross Country A Team" roster.  Bjornsen competed at the 2014 Winter Olympics in Sochi, Russia.  In 2015, she graduated from Alaska Pacific University.
-
-Strindheim IL: Strindheim Idrettslag is a Norwegian multisports club located in Trondheim.  It has sections for athletics, handball, football, speed skating and cross-country skiing.  The cross-country ski team has several world cup competitors (see separate article for Petter Northug).
-
-David William Lane Greer: David William Lane Greer (born 1989) is a cross-country ski racer from Canada.  He lives in Whitehorse, Yukon, and is on the Canadian Junior National Cross Country Ski Team (Team 2014).
-
-Question: Strindheim Idrettslag has a cross country ski team that includes a Norwegian cross-country skier that in 2013 leveled the achievement of of who?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "club_name": {
-      "type": "string",
-      "description": "The name of the multisports club."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "skier_info": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the cross-country skier."
-        },
-        "nationality": {
-          "type": "string",
-          "description": "The nationality of the skier."
-        },
-        "achievement_year": {
-          "type": "integer",
-          "description": "The year the achievement was leveled."
-        },
-        "achievement_event": {
-          "type": "string",
-          "description": "The event where the achievement was made."
-        },
-        "gold_medals_won_in_event": {
-          "type": "integer",
-          "description": "The number of gold medals won in the specific event that leveled the achievement."
-        }
-      },
-      "required": [
-        "name",
-        "nationality",
-        "achievement_year",
-        "achievement_event",
-        "gold_medals_won_in_event"
-      ],
-      "additionalProperties": false
-    },
-    "person_whose_achievement_was_leveled": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the person whose achievement was leveled."
-        },
-        "previous_record_description": {
-          "type": "string",
-          "description": "Description of the record held by the person."
-        }
-      },
-      "required": [
-        "name",
-        "previous_record_description"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nStrindheim: Strindheim is a neighborhood of Trondheim, Norway.  It is the site of Strindheim Church, Strindheim School, the confectionery factory Nidar and the home area of Strindheim IL (\"Strindheim Idrettslag\").\n\nJoseph Peter Wilson: Joe Pete Wilson (born May 22, 1935) skied for the US in cross-country at the 1960 Winter Olympics, but later became a well-known administrator in the United States.  Wilson also wrote several books on cross-country skiing, all co-authored by William J. Lederer.  Wilson set up the cross-country ski area at the Trapp Family Lodge in Stowe, Vermont - the lodge established by the Trapp family of \"Sound of Music\" fame.  In 1973, Wilson organized a meeting of 25 ski areas and established the National Ski Touring Operators' Association.  Wilson was named as its first President from 1973-1977.  After several name changes it is now called the Cross Country Ski Areas Association (CCSAA).  CCSAA is an international association of US and Canadian cross-country ski areas.  Joe Pete is also known for setting up an inn in Keene, New York, the Bark Eater Inn, and developing the ski trails around the inn.\n\nCross-country skiing (sport): The sport of cross-country skiing encompasses a variety of formats for cross-country skiing races over courses of varying lengths according to rules sanctioned by the International Ski Federation and by various national organizations, such as the U.S. Ski and Snowboard Association (USSA) and Cross Country Ski Canada.  International competitions include the FIS Nordic World Ski Championships, the FIS Cross-Country World Cup, and at the Winter Olympic Games.  Such races occur over homologated, groomed courses designed to support classic (in-track) and freestyle events, where the skiers may employ skate skiing.  It also encompasses cross-country ski marathon events, sanctioned by the Worldloppet Ski Federation, and cross-country ski orienteering events, sanctioned by the International Orienteering Federation.  Related forms of competition are biathlon, where competitors race on cross-country skis and stop to shoot at targets with rifles, and paralympic cross-country skiing that allows athletes with disabilities to compete at cross-country skiing with adaptive equipment.\n\nOdd Martinsen: Odd-Willy Martinsen (born 20 December 1942) is a retired Norwegian cross-country skier who competed during the 1960s and 1970s.  He won three medals at the Winter Olympics, a gold in the 4×10 km relay (1968) and silvers in the 30 km (1968) and the 4×10 km relay (1976).  Martinsen won five medals at the FIS Nordic World Ski Championships, a gold in the 4×10 km relay (1966), a silver in the 15 km (1970), and bronzes in the 15 km (1966), 30 km (1970), and 4×10 km relay (1974).  At the 1969 Holmenkollen ski festival, he won the 15 km race.  For his cross-country skiing successes in Norway and abroad, Martinsen received the Holmenkollen medal in 1969.  Thirty-two years later, his daughter, Bente Skari, received the Holmenkollen medal, making them the only father-daughter combination to ever win the prestigious honor.\n\nKikkan Randall: Kikkan Randall (born December 31, 1982) is an American cross-country skier.  She is the niece of former cross-country skiing Olympians Betsy Haines (1980) and Chris Haines (1976).  She was the first American female cross-country skier to take a top ten finish in World Cup competition, to win a World Cup race and to win a World Cup discipline title.  She won the silver medal in the individual sprint at the FIS Nordic World Ski Championships 2009 in Liberec, becoming the first American woman to win a medal in cross country skiing at the FIS Nordic World Ski Championships and in 2013 teamed up with Jessica Diggins to win the first ever American FIS Nordic World Ski Championships gold medal in the team sprint.\n\nOle Christian Wendel: Ole Christian Wendel (born 24 January 1992) was a Norwegian cross-country skier and ski jumper.  He was National Junior Champion in both ski jumping, cross country skiing and Nordic combined in 2009, and Junior World Champion in Nordic Combined (team competition).\n\nPetter Northug: Petter Northug Jr. (born 6 January 1986) is a Norwegian cross-country skier and double Olympic champion.  He has 13 World Championship and 2 Winter Olympic gold medals with 20 medals overall (2 gold, 1 silver and 1 bronze at the Olympics, 13 gold and 3 silver at the World Ski Championships), and 18 individual FIS Cross-Country World Cup wins with 13 podium places.  He is also the record holder for most stage wins (13) in Tour de Ski.  By winning his ninth gold medal in the Nordic World Ski Championships in 4 x 10 km relay in Val di Fiemme 2013 he leveled the achievement of Bjørn Dæhlie who had been the most successful World Champion male skier up to this point.\n\nSadie Bjornsen: Sadie Bjornsen (born November 21, 1989) is an American cross-country skier and a member of the United States Ski Team nordic programs \"Cross Country A Team\" roster.  Bjornsen competed at the 2014 Winter Olympics in Sochi, Russia.  In 2015, she graduated from Alaska Pacific University.\n\nStrindheim IL: Strindheim Idrettslag is a Norwegian multisports club located in Trondheim.  It has sections for athletics, handball, football, speed skating and cross-country skiing.  The cross-country ski team has several world cup competitors (see separate article for Petter Northug).\n\nDavid William Lane Greer: David William Lane Greer (born 1989) is a cross-country ski racer from Canada.  He lives in Whitehorse, Yukon, and is on the Canadian Junior National Cross Country Ski Team (Team 2014).\n\nQuestion: Strindheim Idrettslag has a cross country ski team that includes a Norwegian cross-country skier that in 2013 leveled the achievement of of who?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"club_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the multisports club.\"\n    },\n    \"skier_info\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the cross-country skier.\"\n        },\n        \"nationality\": {\n          \"type\": \"string\",\n          \"description\": \"The nationality of the skier.\"\n        },\n        \"achievement_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the achievement was leveled.\"\n        },\n        \"achievement_event\": {\n          \"type\": \"string\",\n          \"description\": \"The event where the achievement was made.\"\n        },\n        \"gold_medals_won_in_event\": {\n          \"type\": \"integer\",\n          \"description\": \"The number of gold medals won in the specific event that leveled the achievement.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"nationality\",\n        \"achievement_year\",\n        \"achievement_event\",\n        \"gold_medals_won_in_event\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"person_whose_achievement_was_leveled\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the person whose achievement was leveled.\"\n        },\n        \"previous_record_description\": {\n          \"type\": \"string\",\n          \"description\": \"Description of the record held by the person.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"previous_record_description\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"club_name\",\n    \"skier_info\",\n    \"person_whose_achievement_was_leveled\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "club_name",
-    "skier_info",
-    "person_whose_achievement_was_leveled"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "club_name": {
+        "type": "string",
+        "description": "The name of the multisports club."
+      },
+      "skier_info": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the cross-country skier."
+          },
+          "nationality": {
+            "type": "string",
+            "description": "The nationality of the skier."
+          },
+          "achievement_year": {
+            "type": "integer",
+            "description": "The year the achievement was leveled."
+          },
+          "achievement_event": {
+            "type": "string",
+            "description": "The event where the achievement was made."
+          },
+          "gold_medals_won_in_event": {
+            "type": "integer",
+            "description": "The number of gold medals won in the specific event that leveled the achievement."
+          }
+        },
+        "required": [
+          "name",
+          "nationality",
+          "achievement_year",
+          "achievement_event",
+          "gold_medals_won_in_event"
+        ],
+        "additionalProperties": false
+      },
+      "person_whose_achievement_was_leveled": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the person whose achievement was leveled."
+          },
+          "previous_record_description": {
+            "type": "string",
+            "description": "Description of the record held by the person."
+          }
+        },
+        "required": [
+          "name",
+          "previous_record_description"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "club_name",
+      "skier_info",
+      "person_whose_achievement_was_leveled"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

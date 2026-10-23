@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Barbara Carrasco: Carrasco was born in El Paso, Texas to Mexican-American parents.  She was the second-oldest child and oldest girl in her family.  She had two brothers and two sisters growing up.  When she was around a year or so of age, her family moved to Los Angeles.  They lived in government Veteran's housing in Culver City since her father was a Korean War Navy veteran.  She recalls that they were poor and lived off of food stamps.  Carrasco's childhood growing up in the predominantly Mexican-American and African-American community of Mar Vista Gardens was sometimes painful, because she was teased for having lighter skin than her peers and stood out for her green eyes; being called "white girl," "green eyes" and ""güera"."  Her experiences with being simultaneously perceived as not truly Mexican-American and being told to "take advantage of being light skinned" makes up of part of her artistic subject matter later on in life.  Carrasco said that her father encouraged her to broaden her horizons, go to college and encouraged her artwork.  He had appreciated art and he was considered artistic.  Her father, who worked as a bus driver for Santa Monica Bus Lines said that "anybody could be a bus driver but not everybody could be an artist."  Carrasco's father died of a heart attack when she was twelve and it was difficult for her because she was always close to her father.  Carrasco's mother, who also volunteered as a Girl Scout leader, was also artistically inclined.  Her mother admired Japanese art and decorated the house with it.  Carrasco felt that growing up with Japanese images influenced her sense of line.  She also felt that her mother was a personal role model because she was a strong woman.  Her mother was also, however, very protective of her girls, and she expected Carrasco to act as a role model of traditional femininity for her sisters.
-
-Zach McIlwain: Zachary Paul McIlwain (born June 6, 1986) is a National Veteran Advocate, Congressional Advisor, and veteran of the United States Army and the Iraq War.  McIlwain has made multiple appearances on national television and other national media sources as an advocate trying to raise awareness on the issues currently facing veterans.  He currently works with Iraq and Afghanistan Veterans of America, Members of Congress, and other Veteran and Military Service Organizations focused on military and veteran affairs.
-
-Claude Choules: Claude Stanley Choules ( ; 3 March 1901 – 5 May 2011) was an English-born military serviceman from Perth, Australia who at the time of this death was the oldest combat veteran of the First World War from England, having served with the Royal Navy from 1915 until 1926, after having emigrated to Australia he served with the Australian Royal Navy, from 1926 until 1956, as a Chief Petty Officer and was a naturalised Australian citizen.  He was the last surviving military witness to the scuttling of the German fleet in Scapa Flow in 1919.  He was also the last surviving veteran to have served in both world wars, at the time of his death, he was also the third-oldest verified military veteran in the world and the oldest known living man in Australia.  He was the seventh-oldest living man in the world.  Choules became the oldest man born in the United Kingdom following the death of Stanley Lucas on 21 June 2010.  Choules died in at the age of 110 years and 63 days.  He had been the oldest British-born man; following his death, that honour went to Reverend Reginald Dean.  In December 2011, the landing ship HMAS "Choules" was named after him, only the second Royal Australian Navy vessel named after a sailor.
-
-Body of War: Body of War is a 2007 documentary portraying Iraq War veteran Tomas Young. " Bill Moyers Journal" featured a one-hour special about Body of War including interviews with filmmakers Ellen Spiro and Phil Donahue.
-
-Franz Künstler: Franz Künstler (Hungarian: "Künstler Ferenc" , 24 July 1900 – 27 May 2008) was, at age 107, the last known surviving veteran of the First World War who fought for the Austro-Hungarian Empire.  Following the death of 110-year-old Ottoman veteran Yakup Satar on 2 April 2008, he was also the last Central Powers veteran of any nationality.  He was born in Sósd, in the Kingdom of Hungary, now Măureni, Romania.
-
-Veteran's Monument in Covington: The Veteran's Monument, also called the War Between the States Veteran's Memorial, in Linden Grove Cemetery of Covington, Kentucky was built in remembrance of both Union and Confederate veterans of the American Civil War.  It is one of only two memorials in the Commonwealth of Kentucky that celebrate soldiers of both sides of the conflict.  The American Legion dedicated the monument on May 30, 1933, which was that year's Memorial Day.
-
-Royal Phalanx: The Royal Phalanx (Greek: Βασιλική Φάλαγξ ) was a military body composed of veteran officers of the Greek War of Independence, established on 18 September 1835.  The Phalanx entailed military garrison duties, but mostly it was an honorific appointment, and a means to sustain veteran soldiers who had no other means of upkeep.
-
-Tomas Young: Tomas Young (November 30, 1979 – November 10, 2014) was an American military veteran of the Iraq War.  He was paralyzed by a bullet to the spine while deployed in Iraq.  One of the first veterans to come out publicly against the war, he spent most of his life after the war protesting.  Young's condition worsened due to various medical complications and he chose to go into hospice care, awaiting his death.  He later reversed that decision.
-
-Alfred Anderson (veteran): Alfred Anderson (25 June 1896 – 21 November 2005) was a Scottish joiner and veteran of the First World War.  He was the last known holder of the 1914 Star (the Old Contemptibles), the last known combatant to participate in the 1914 World War I Christmas truce, Scotland's last known World War I veteran, and Scotland's oldest man for more than a year.
-
-Cole C. Kingseed: Colonel Cole C. Kingseed, Ph.D. (Ret.)  is an Army veteran, military historian, author, consultant, and professor.  He is the author of "The New York Times" bestseller, "Beyond the Band of Brothers: The War Memoirs of Major Dick Winters".  Kingseed, a 30-year army veteran, served as a Full Professor of History and Chief of Military History at the United States Military Academy at West Point.
-
-Question: In what year was the veteran portrayed in "Body of War" born?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "documentary_title": {
-      "type": "string",
-      "description": "The title of the documentary."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "veteran_name": {
-      "type": "string",
-      "description": "The name of the veteran portrayed in the documentary."
-    },
-    "veteran_birth_year": {
-      "type": "integer",
-      "description": "The birth year of the veteran."
-    },
-    "war_served_in": {
-      "type": "string",
-      "description": "The war the veteran served in."
+    {
+      "role": "user",
+      "content": "Context:\nBarbara Carrasco: Carrasco was born in El Paso, Texas to Mexican-American parents.  She was the second-oldest child and oldest girl in her family.  She had two brothers and two sisters growing up.  When she was around a year or so of age, her family moved to Los Angeles.  They lived in government Veteran's housing in Culver City since her father was a Korean War Navy veteran.  She recalls that they were poor and lived off of food stamps.  Carrasco's childhood growing up in the predominantly Mexican-American and African-American community of Mar Vista Gardens was sometimes painful, because she was teased for having lighter skin than her peers and stood out for her green eyes; being called \"white girl,\" \"green eyes\" and \"\"güera\".\"  Her experiences with being simultaneously perceived as not truly Mexican-American and being told to \"take advantage of being light skinned\" makes up of part of her artistic subject matter later on in life.  Carrasco said that her father encouraged her to broaden her horizons, go to college and encouraged her artwork.  He had appreciated art and he was considered artistic.  Her father, who worked as a bus driver for Santa Monica Bus Lines said that \"anybody could be a bus driver but not everybody could be an artist.\"  Carrasco's father died of a heart attack when she was twelve and it was difficult for her because she was always close to her father.  Carrasco's mother, who also volunteered as a Girl Scout leader, was also artistically inclined.  Her mother admired Japanese art and decorated the house with it.  Carrasco felt that growing up with Japanese images influenced her sense of line.  She also felt that her mother was a personal role model because she was a strong woman.  Her mother was also, however, very protective of her girls, and she expected Carrasco to act as a role model of traditional femininity for her sisters.\n\nZach McIlwain: Zachary Paul McIlwain (born June 6, 1986) is a National Veteran Advocate, Congressional Advisor, and veteran of the United States Army and the Iraq War.  McIlwain has made multiple appearances on national television and other national media sources as an advocate trying to raise awareness on the issues currently facing veterans.  He currently works with Iraq and Afghanistan Veterans of America, Members of Congress, and other Veteran and Military Service Organizations focused on military and veteran affairs.\n\nClaude Choules: Claude Stanley Choules ( ; 3 March 1901 – 5 May 2011) was an English-born military serviceman from Perth, Australia who at the time of this death was the oldest combat veteran of the First World War from England, having served with the Royal Navy from 1915 until 1926, after having emigrated to Australia he served with the Australian Royal Navy, from 1926 until 1956, as a Chief Petty Officer and was a naturalised Australian citizen.  He was the last surviving military witness to the scuttling of the German fleet in Scapa Flow in 1919.  He was also the last surviving veteran to have served in both world wars, at the time of his death, he was also the third-oldest verified military veteran in the world and the oldest known living man in Australia.  He was the seventh-oldest living man in the world.  Choules became the oldest man born in the United Kingdom following the death of Stanley Lucas on 21 June 2010.  Choules died in at the age of 110 years and 63 days.  He had been the oldest British-born man; following his death, that honour went to Reverend Reginald Dean.  In December 2011, the landing ship HMAS \"Choules\" was named after him, only the second Royal Australian Navy vessel named after a sailor.\n\nBody of War: Body of War is a 2007 documentary portraying Iraq War veteran Tomas Young. \" Bill Moyers Journal\" featured a one-hour special about Body of War including interviews with filmmakers Ellen Spiro and Phil Donahue.\n\nFranz Künstler: Franz Künstler (Hungarian: \"Künstler Ferenc\" , 24 July 1900 – 27 May 2008) was, at age 107, the last known surviving veteran of the First World War who fought for the Austro-Hungarian Empire.  Following the death of 110-year-old Ottoman veteran Yakup Satar on 2 April 2008, he was also the last Central Powers veteran of any nationality.  He was born in Sósd, in the Kingdom of Hungary, now Măureni, Romania.\n\nVeteran's Monument in Covington: The Veteran's Monument, also called the War Between the States Veteran's Memorial, in Linden Grove Cemetery of Covington, Kentucky was built in remembrance of both Union and Confederate veterans of the American Civil War.  It is one of only two memorials in the Commonwealth of Kentucky that celebrate soldiers of both sides of the conflict.  The American Legion dedicated the monument on May 30, 1933, which was that year's Memorial Day.\n\nRoyal Phalanx: The Royal Phalanx (Greek: Βασιλική Φάλαγξ ) was a military body composed of veteran officers of the Greek War of Independence, established on 18 September 1835.  The Phalanx entailed military garrison duties, but mostly it was an honorific appointment, and a means to sustain veteran soldiers who had no other means of upkeep.\n\nTomas Young: Tomas Young (November 30, 1979 – November 10, 2014) was an American military veteran of the Iraq War.  He was paralyzed by a bullet to the spine while deployed in Iraq.  One of the first veterans to come out publicly against the war, he spent most of his life after the war protesting.  Young's condition worsened due to various medical complications and he chose to go into hospice care, awaiting his death.  He later reversed that decision.\n\nAlfred Anderson (veteran): Alfred Anderson (25 June 1896 – 21 November 2005) was a Scottish joiner and veteran of the First World War.  He was the last known holder of the 1914 Star (the Old Contemptibles), the last known combatant to participate in the 1914 World War I Christmas truce, Scotland's last known World War I veteran, and Scotland's oldest man for more than a year.\n\nCole C. Kingseed: Colonel Cole C. Kingseed, Ph.D. (Ret.)  is an Army veteran, military historian, author, consultant, and professor.  He is the author of \"The New York Times\" bestseller, \"Beyond the Band of Brothers: The War Memoirs of Major Dick Winters\".  Kingseed, a 30-year army veteran, served as a Full Professor of History and Chief of Military History at the United States Military Academy at West Point.\n\nQuestion: In what year was the veteran portrayed in \"Body of War\" born?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"documentary_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the documentary.\"\n    },\n    \"veteran_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the veteran portrayed in the documentary.\"\n    },\n    \"veteran_birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the veteran.\"\n    },\n    \"war_served_in\": {\n      \"type\": \"string\",\n      \"description\": \"The war the veteran served in.\"\n    }\n  },\n  \"required\": [\n    \"documentary_title\",\n    \"veteran_name\",\n    \"veteran_birth_year\",\n    \"war_served_in\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "documentary_title",
-    "veteran_name",
-    "veteran_birth_year",
-    "war_served_in"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "documentary_title": {
+        "type": "string",
+        "description": "The title of the documentary."
+      },
+      "veteran_name": {
+        "type": "string",
+        "description": "The name of the veteran portrayed in the documentary."
+      },
+      "veteran_birth_year": {
+        "type": "integer",
+        "description": "The birth year of the veteran."
+      },
+      "war_served_in": {
+        "type": "string",
+        "description": "The war the veteran served in."
+      }
+    },
+    "required": [
+      "documentary_title",
+      "veteran_name",
+      "veteran_birth_year",
+      "war_served_in"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

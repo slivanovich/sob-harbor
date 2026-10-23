@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Smoke Gets in Your Eyes: "Smoke Gets in Your Eyes" is a show tune written by American composer Jerome Kern and lyricist Otto Harbach for their 1933 musical "Roberta".  The song was sung in the original Broadway show by Tamara Drasin.  Its first recorded performance was by Gertrude Niesen, who recorded the song with orchestral direction from Ray Sinatra, Frank Sinatra's second cousin, on October 13, 1933.  Niesen's recording of the song was released by Victor, catalog# VE B 24454, with the B-side, "Jealousy", featuring Isham Jones and his Orchestra.
-
-Red Dragon (1595): Scourge of Malice or Malice Scourge or Mare Scourge was a 38-gun ship ordered by George Clifford, 3rd Earl of Cumberland.  She was built and launched at Deptford Dockyard in 1595.  The Earl used her as his flagship during raids on the Spanish Main, where she provided additional force to support his fleet.  She was later renamed Red Dragon and used by the East India Company during at least five voyages to the East Indies.  The first recorded performance of the play Hamlet took place on the ship in 1607, as it was anchored off the coast of Sierra Leone.
-
-Twelfth Night: Twelfth Night, or What You Will is a comedy by William Shakespeare, believed to have been written around 1601–02 as a Twelfth Night's entertainment for the close of the Christmas season.  The play centres on the twins Viola and Sebastian, who are separated in a shipwreck.  Viola (who is disguised as Cesario) falls in love with Duke Orsino, who in turn is in love with the Countess Olivia.  Upon meeting Viola, Countess Olivia falls in love with her thinking she is a man.  The play expanded on the musical interludes and riotous disorder expected of the occasion, with plot elements drawn from the short story "Of Apollonius and Silla" by Barnabe Rich, based on a story by Matteo Bandello.  The first recorded performance was on 2 February 1602, at Candlemas, the formal end of Christmastide in the year's calendar.  The play was not published until its inclusion in the 1623 First Folio.
-
-Per Brahe the Younger: Count Per Brahe the Younger (18 February 1602 – 2 September 1680) was a Swedish soldier, statesman, and author.  He was a Privy Councillor from 1630 and Lord High Steward from 1640.
-
-Jane Rhodes: Jane Marie Andrée Rhodes (March 13, 1929 – May 7, 2011) was a French opera singer whose voice encompassed both the soprano and high mezzo-soprano ranges.  Her most celebrated role was Carmen, which she sang in the opera's first ever staging at the Palais Garnier.  She also created the roles of Isadora in Marcel Landowski's "Le Fou" and Maguelone in Georges Delerue's "Le Chevalier de Neige" and sang Renata in the first recorded performance of Prokofiev's "The Fiery Angel".  Admired for both her voice and her glamorous stage presence, she was nicknamed the "Bardot of the Opéra".  She was married to conductor Roberto Benzi.
-
-Rønnaug Alten: Rønnaug Alten (9 February 1910 – 20 January 2001) was a Norwegian actress and stage instructor.  She was born in Tromsø.  She made her stage debut at Den Nationale Scene in 1930 as "Viola" in Shakespeare's play "Twelfth Night".  During her career she worked for various theatres, including Det Nye Teater, Nationaltheatret, Trøndelag Teater, Riksteatret, Folketeatret, Oslo Nye Teater and Teatret Vårt.  She made her film debut in 1936.  Her first stage production was at Folketeatret in 1954.  She was decorated Knight, First Class of the Order of St. Olav in 1982.
-
-Measure for Measure: Measure for Measure is a play by William Shakespeare, believed to have been written in 1603 or 1604.  Originally published in the "First Folio" of 1623, where it was listed as a comedy, the play's first recorded performance occurred in 1604.  The play's main themes include justice, "mortality and mercy in Vienna," and the dichotomy between corruption and purity: "some rise by sin, and some by virtue fall."  Mercy and virtue prevail, as the play does not end tragically, with virtues such as compassion and forgiveness being exercised at the end of the production.  While the play focuses on justice overall, the final scene illustrates that Shakespeare intended for moral justice to temper strict civil justice: a number of the characters receive understanding and leniency, instead of the harsh punishment to which they, according to the law, could have been sentenced.
-
-The Christian Brothers Band (Memphis): The Christian Brothers Band of Christian Brothers High School (Memphis, Tennessee) is the oldest high school band in America, having a continuous existence since its founding in 1872.  The band was founded in the fall of 1872 by Br.  Maurelian, who served as the first band director.  The first recorded performance of the group was in the Memphis St. Patrick's Day Parade of 1873, and the band has performed every year since.  The band has an unbroken lineage of ten band directors.
-
-Michelangelo Cerquozzi: Michelangelo Cerquozzi, known as Michelangelo delle Battaglie (12 February 1602 – 6 April 1660) was an Italian Baroque painter known for his genre scenes, battle pictures, small religious and mythological works and still lifes.  His genre scenes were influenced by the work of the Flemish and Dutch genre artists referred to as the Bamboccianti active in Rome who created small cabinet paintings and prints of the everyday life of the lower classes in Rome and its countryside.  One of the leading battle painters active in Italy in the first half of the 17th century, Michelangelo Cerquozzi earned the nickname 'Michelangelo delle Battaglie' ('Michelangelo of the Battles').
-
-Jeanne des Anges: Jeanne des Anges, also known as Jeanne de Belcier (2 February 1602 – 29 January 1665), was a French Ursuline nun in Loudun, France.  She became mother superior of the convent at a young age, but is chiefly remembered as a central figure in the case of the possessed of Loudun in 1632, which led, after witch trials, to the burning at the stake of the priest Urbain Grandier two years later.
-
-Question: Which play starring Rønnaug Alten had its first recorded performance on 2 February 1602?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "play_title": {
-      "type": "string",
-      "description": "The title of the play."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor who starred in the play."
-    },
-    "role_played": {
-      "type": "string",
-      "description": "The character role played by the actor in the play."
-    },
-    "first_recorded_performance_date": {
-      "type": "string",
-      "description": "The full date of the play's first recorded performance."
-    },
-    "first_recorded_performance_year": {
-      "type": "integer",
-      "description": "The year of the play's first recorded performance."
+    {
+      "role": "user",
+      "content": "Context:\nSmoke Gets in Your Eyes: \"Smoke Gets in Your Eyes\" is a show tune written by American composer Jerome Kern and lyricist Otto Harbach for their 1933 musical \"Roberta\".  The song was sung in the original Broadway show by Tamara Drasin.  Its first recorded performance was by Gertrude Niesen, who recorded the song with orchestral direction from Ray Sinatra, Frank Sinatra's second cousin, on October 13, 1933.  Niesen's recording of the song was released by Victor, catalog# VE B 24454, with the B-side, \"Jealousy\", featuring Isham Jones and his Orchestra.\n\nRed Dragon (1595): Scourge of Malice or Malice Scourge or Mare Scourge was a 38-gun ship ordered by George Clifford, 3rd Earl of Cumberland.  She was built and launched at Deptford Dockyard in 1595.  The Earl used her as his flagship during raids on the Spanish Main, where she provided additional force to support his fleet.  She was later renamed Red Dragon and used by the East India Company during at least five voyages to the East Indies.  The first recorded performance of the play Hamlet took place on the ship in 1607, as it was anchored off the coast of Sierra Leone.\n\nTwelfth Night: Twelfth Night, or What You Will is a comedy by William Shakespeare, believed to have been written around 1601–02 as a Twelfth Night's entertainment for the close of the Christmas season.  The play centres on the twins Viola and Sebastian, who are separated in a shipwreck.  Viola (who is disguised as Cesario) falls in love with Duke Orsino, who in turn is in love with the Countess Olivia.  Upon meeting Viola, Countess Olivia falls in love with her thinking she is a man.  The play expanded on the musical interludes and riotous disorder expected of the occasion, with plot elements drawn from the short story \"Of Apollonius and Silla\" by Barnabe Rich, based on a story by Matteo Bandello.  The first recorded performance was on 2 February 1602, at Candlemas, the formal end of Christmastide in the year's calendar.  The play was not published until its inclusion in the 1623 First Folio.\n\nPer Brahe the Younger: Count Per Brahe the Younger (18 February 1602 – 2 September 1680) was a Swedish soldier, statesman, and author.  He was a Privy Councillor from 1630 and Lord High Steward from 1640.\n\nJane Rhodes: Jane Marie Andrée Rhodes (March 13, 1929 – May 7, 2011) was a French opera singer whose voice encompassed both the soprano and high mezzo-soprano ranges.  Her most celebrated role was Carmen, which she sang in the opera's first ever staging at the Palais Garnier.  She also created the roles of Isadora in Marcel Landowski's \"Le Fou\" and Maguelone in Georges Delerue's \"Le Chevalier de Neige\" and sang Renata in the first recorded performance of Prokofiev's \"The Fiery Angel\".  Admired for both her voice and her glamorous stage presence, she was nicknamed the \"Bardot of the Opéra\".  She was married to conductor Roberto Benzi.\n\nRønnaug Alten: Rønnaug Alten (9 February 1910 – 20 January 2001) was a Norwegian actress and stage instructor.  She was born in Tromsø.  She made her stage debut at Den Nationale Scene in 1930 as \"Viola\" in Shakespeare's play \"Twelfth Night\".  During her career she worked for various theatres, including Det Nye Teater, Nationaltheatret, Trøndelag Teater, Riksteatret, Folketeatret, Oslo Nye Teater and Teatret Vårt.  She made her film debut in 1936.  Her first stage production was at Folketeatret in 1954.  She was decorated Knight, First Class of the Order of St. Olav in 1982.\n\nMeasure for Measure: Measure for Measure is a play by William Shakespeare, believed to have been written in 1603 or 1604.  Originally published in the \"First Folio\" of 1623, where it was listed as a comedy, the play's first recorded performance occurred in 1604.  The play's main themes include justice, \"mortality and mercy in Vienna,\" and the dichotomy between corruption and purity: \"some rise by sin, and some by virtue fall.\"  Mercy and virtue prevail, as the play does not end tragically, with virtues such as compassion and forgiveness being exercised at the end of the production.  While the play focuses on justice overall, the final scene illustrates that Shakespeare intended for moral justice to temper strict civil justice: a number of the characters receive understanding and leniency, instead of the harsh punishment to which they, according to the law, could have been sentenced.\n\nThe Christian Brothers Band (Memphis): The Christian Brothers Band of Christian Brothers High School (Memphis, Tennessee) is the oldest high school band in America, having a continuous existence since its founding in 1872.  The band was founded in the fall of 1872 by Br.  Maurelian, who served as the first band director.  The first recorded performance of the group was in the Memphis St. Patrick's Day Parade of 1873, and the band has performed every year since.  The band has an unbroken lineage of ten band directors.\n\nMichelangelo Cerquozzi: Michelangelo Cerquozzi, known as Michelangelo delle Battaglie (12 February 1602 – 6 April 1660) was an Italian Baroque painter known for his genre scenes, battle pictures, small religious and mythological works and still lifes.  His genre scenes were influenced by the work of the Flemish and Dutch genre artists referred to as the Bamboccianti active in Rome who created small cabinet paintings and prints of the everyday life of the lower classes in Rome and its countryside.  One of the leading battle painters active in Italy in the first half of the 17th century, Michelangelo Cerquozzi earned the nickname 'Michelangelo delle Battaglie' ('Michelangelo of the Battles').\n\nJeanne des Anges: Jeanne des Anges, also known as Jeanne de Belcier (2 February 1602 – 29 January 1665), was a French Ursuline nun in Loudun, France.  She became mother superior of the convent at a young age, but is chiefly remembered as a central figure in the case of the possessed of Loudun in 1632, which led, after witch trials, to the burning at the stake of the priest Urbain Grandier two years later.\n\nQuestion: Which play starring Rønnaug Alten had its first recorded performance on 2 February 1602?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"play_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the play.\"\n    },\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor who starred in the play.\"\n    },\n    \"role_played\": {\n      \"type\": \"string\",\n      \"description\": \"The character role played by the actor in the play.\"\n    },\n    \"first_recorded_performance_date\": {\n      \"type\": \"string\",\n      \"description\": \"The full date of the play's first recorded performance.\"\n    },\n    \"first_recorded_performance_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year of the play's first recorded performance.\"\n    }\n  },\n  \"required\": [\n    \"play_title\",\n    \"actor_name\",\n    \"role_played\",\n    \"first_recorded_performance_date\",\n    \"first_recorded_performance_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "play_title",
-    "actor_name",
-    "role_played",
-    "first_recorded_performance_date",
-    "first_recorded_performance_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "play_title": {
+        "type": "string",
+        "description": "The title of the play."
+      },
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor who starred in the play."
+      },
+      "role_played": {
+        "type": "string",
+        "description": "The character role played by the actor in the play."
+      },
+      "first_recorded_performance_date": {
+        "type": "string",
+        "description": "The full date of the play's first recorded performance."
+      },
+      "first_recorded_performance_year": {
+        "type": "integer",
+        "description": "The year of the play's first recorded performance."
+      }
+    },
+    "required": [
+      "play_title",
+      "actor_name",
+      "role_played",
+      "first_recorded_performance_date",
+      "first_recorded_performance_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,7 +1,7 @@
 [project]
 name = "sob-harbor"
-version = "1.0.0"
-description = "Reproducible text-only SOB tasks for Harbor agents"
+version = "2.0.0"
+description = "SOB text tasks for schema-constrained, single-response Harbor evaluation"
 requires-python = ">=3.12"
 dependencies = ["jsonschema==4.26.0", "pyarrow==23.0.1"]
 

@@ -1,113 +1,90 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-University of Victoria: The University of Victoria (' Victoria University' , ' UVic' , or simply ' Old Blue' ) is a large public research university located in Victoria, British Columbia, Canada.  The University of Victoria, founded in 1963, is the oldest university in British Columbia and began as Victoria College in 1903, as an affiliated branch of McGill University.  The University of Victoria is a non-denominational institution which is mostly centred around the leafy suburbs of Oak Bay.  The university consists of more than 21,000 students, including many post-graduate and doctoral candidates.
-
-Wilkes University: Wilkes University is a private, non-denominational American university located in Wilkes-Barre, Pennsylvania, with branch centers in Mesa, Arizona and Bartonsville, Pennsylvania.  It has over 2,200 undergraduates and over 2,200 graduate students (both full and part-time).  Wilkes was founded in 1933 as a satellite campus of Bucknell University, and became an independent institution in 1947, naming itself Wilkes College, after English radical politician John Wilkes.  The school was granted university status in January 1990.
-
-Eugene Carlisle LeBel: The Reverend Eugene Carlisle LeBel, C.S.B., C.D., LL.D, was born in Sarnia, Ontario on July 27, 1899 to Eugene Albert LeBel and Catherine Mahoney.  LeBel spent much of his life in Catholic schools both studying and teaching.  He is best known for his “...steadfast efforts... to achieve greater academic changes” that led to Assumption College becoming Assumption University of Windsor and later the non-denominational University of Windsor”.  LeBel was not just an academic.  He also was a skilled athlete, being named “Captain and Star” of his championship winning football team at St. Michael’s and was Chaplain of the Essex Scottish Regiment in Windsor for fourteen years, including all of World War II.
-
-Carleton University: Carleton University is a comprehensive university located in Ottawa, Ontario, Canada.  The enabling legislation is "The Carleton University Act, 1952, S.O. 1952."  It was founded on rented premises in 1942, and grew to meet the needs of returning World War II veterans and later became Ontario's first private, non-denominational college.  It would expand further in the 1960s, consistent with government policy that saw increased access to higher education as a social good and means to economic growth.  Carleton is a public university that offers more than 65 academic programs across a wide range of disciplines.  Carleton is reputed for its strength in a variety of fields such as humanities, international business and many of the disciplines housed in its Faculty of Public Affairs (including international affairs, journalism, political science, political economy, political management, public policy and administration, and legal studies).
-
-University of Greenwich: The University of Greenwich is a British, United Kingdom-based university.  It has three campuses in London and Kent, England.  These are located at Greenwich, in the grounds of the Old Royal Naval College, and in Avery Hill and Medway.  Previous names include Woolwich Polytechnic and Thames Polytechnic.
-
-East–West University: East-West University is a private, non-profit, non-denominational college in Chicago's South Loop neighborhood.  The University was founded in 1980.  East-West offers two and four year degrees.  The university has been accredited by the North Central Association of Colleges and Schools since 1983.
-
-Webster University Geneva: Webster University Geneva is the Swiss campus of Webster University based in St. Louis, Missouri, USA.  Founded in 1978, Webster University Geneva was the university’s first international campus and is currently its largest one outside of the United States, with approximately 670 students from 90 countries (470 undergraduate and 200 graduate students).  Webster University operates as an independent, non-denominational university with nearly 100 campus locations around the world.  See List of Webster University Campuses.
-
-Jane Franklin Hall: Jane Franklin Hall in South Hobart, Tasmania, is a non-denominational residential college of the University of Tasmania.  Familiarly referred to as "Jane", it was founded by the Tasmanian Council of Churches in 1950 as a residential college for women before becoming co-educational in 1973.  Jane is a non-denominational Christian institution supported by chaplains of various Christian traditions and is the only college in the Oxbridge style attached to the university.
-
-Holland College: Holland College is the provincial community college for the Canadian province of Prince Edward Island (PEI).  It is named after British Army engineer and surveyor Captain Samuel Holland.  It was formed by the Government of Prince Edward Island in 1969 as a result of an education reform policy undertaken as part of the Prince Edward Island Comprehensive Development Plan which saw the closure of the province's two post-secondary institutions structured on religious lines, St. Dunstan's University and Prince of Wales College, and the creation of the non-denominational University of Prince Edward Island (UPEI) and Holland College.
-
-Yorkville University: Located in Fredericton, New Brunswick, Canada, Yorkville University is an accredited, private, non-denominational university, specializing in online university degree programs.  Yorkville University was established in 2003 under the New Brunswick Degree Granting Act, and began accepting students in the fall of 2004.
-
-Question: Which non-denominational University was founded in 1963: University of Victoria or University of Greenwich?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "matching_university": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the university that matches the criteria."
-        },
-        "founding_year": {
-          "type": "integer",
-          "description": "The year the university was founded."
-        },
-        "is_non_denominational": {
-          "type": "boolean",
-          "description": "Indicates if the university is non-denominational."
-        }
-      },
-      "required": [
-        "name",
-        "founding_year",
-        "is_non_denominational"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "question_criteria": {
-      "type": "object",
-      "properties": {
-        "required_founding_year": {
-          "type": "integer",
-          "description": "The founding year specified in the question."
-        },
-        "required_denomination_status": {
-          "type": "string",
-          "description": "The denomination status specified in the question (e.g., 'non-denominational')."
-        }
-      },
-      "required": [
-        "required_founding_year",
-        "required_denomination_status"
-      ],
-      "additionalProperties": false
-    },
-    "other_candidate_universities": {
-      "type": "array",
-      "items": {
+    {
+      "role": "user",
+      "content": "Context:\nUniversity of Victoria: The University of Victoria (' Victoria University' , ' UVic' , or simply ' Old Blue' ) is a large public research university located in Victoria, British Columbia, Canada.  The University of Victoria, founded in 1963, is the oldest university in British Columbia and began as Victoria College in 1903, as an affiliated branch of McGill University.  The University of Victoria is a non-denominational institution which is mostly centred around the leafy suburbs of Oak Bay.  The university consists of more than 21,000 students, including many post-graduate and doctoral candidates.\n\nWilkes University: Wilkes University is a private, non-denominational American university located in Wilkes-Barre, Pennsylvania, with branch centers in Mesa, Arizona and Bartonsville, Pennsylvania.  It has over 2,200 undergraduates and over 2,200 graduate students (both full and part-time).  Wilkes was founded in 1933 as a satellite campus of Bucknell University, and became an independent institution in 1947, naming itself Wilkes College, after English radical politician John Wilkes.  The school was granted university status in January 1990.\n\nEugene Carlisle LeBel: The Reverend Eugene Carlisle LeBel, C.S.B., C.D., LL.D, was born in Sarnia, Ontario on July 27, 1899 to Eugene Albert LeBel and Catherine Mahoney.  LeBel spent much of his life in Catholic schools both studying and teaching.  He is best known for his “...steadfast efforts... to achieve greater academic changes” that led to Assumption College becoming Assumption University of Windsor and later the non-denominational University of Windsor”.  LeBel was not just an academic.  He also was a skilled athlete, being named “Captain and Star” of his championship winning football team at St. Michael’s and was Chaplain of the Essex Scottish Regiment in Windsor for fourteen years, including all of World War II.\n\nCarleton University: Carleton University is a comprehensive university located in Ottawa, Ontario, Canada.  The enabling legislation is \"The Carleton University Act, 1952, S.O. 1952.\"  It was founded on rented premises in 1942, and grew to meet the needs of returning World War II veterans and later became Ontario's first private, non-denominational college.  It would expand further in the 1960s, consistent with government policy that saw increased access to higher education as a social good and means to economic growth.  Carleton is a public university that offers more than 65 academic programs across a wide range of disciplines.  Carleton is reputed for its strength in a variety of fields such as humanities, international business and many of the disciplines housed in its Faculty of Public Affairs (including international affairs, journalism, political science, political economy, political management, public policy and administration, and legal studies).\n\nUniversity of Greenwich: The University of Greenwich is a British, United Kingdom-based university.  It has three campuses in London and Kent, England.  These are located at Greenwich, in the grounds of the Old Royal Naval College, and in Avery Hill and Medway.  Previous names include Woolwich Polytechnic and Thames Polytechnic.\n\nEast–West University: East-West University is a private, non-profit, non-denominational college in Chicago's South Loop neighborhood.  The University was founded in 1980.  East-West offers two and four year degrees.  The university has been accredited by the North Central Association of Colleges and Schools since 1983.\n\nWebster University Geneva: Webster University Geneva is the Swiss campus of Webster University based in St. Louis, Missouri, USA.  Founded in 1978, Webster University Geneva was the university’s first international campus and is currently its largest one outside of the United States, with approximately 670 students from 90 countries (470 undergraduate and 200 graduate students).  Webster University operates as an independent, non-denominational university with nearly 100 campus locations around the world.  See List of Webster University Campuses.\n\nJane Franklin Hall: Jane Franklin Hall in South Hobart, Tasmania, is a non-denominational residential college of the University of Tasmania.  Familiarly referred to as \"Jane\", it was founded by the Tasmanian Council of Churches in 1950 as a residential college for women before becoming co-educational in 1973.  Jane is a non-denominational Christian institution supported by chaplains of various Christian traditions and is the only college in the Oxbridge style attached to the university.\n\nHolland College: Holland College is the provincial community college for the Canadian province of Prince Edward Island (PEI).  It is named after British Army engineer and surveyor Captain Samuel Holland.  It was formed by the Government of Prince Edward Island in 1969 as a result of an education reform policy undertaken as part of the Prince Edward Island Comprehensive Development Plan which saw the closure of the province's two post-secondary institutions structured on religious lines, St. Dunstan's University and Prince of Wales College, and the creation of the non-denominational University of Prince Edward Island (UPEI) and Holland College.\n\nYorkville University: Located in Fredericton, New Brunswick, Canada, Yorkville University is an accredited, private, non-denominational university, specializing in online university degree programs.  Yorkville University was established in 2003 under the New Brunswick Degree Granting Act, and began accepting students in the fall of 2004.\n\nQuestion: Which non-denominational University was founded in 1963: University of Victoria or University of Greenwich?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"matching_university\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the university that matches the criteria.\"\n        },\n        \"founding_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the university was founded.\"\n        },\n        \"is_non_denominational\": {\n          \"type\": \"boolean\",\n          \"description\": \"Indicates if the university is non-denominational.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"founding_year\",\n        \"is_non_denominational\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"question_criteria\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"required_founding_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The founding year specified in the question.\"\n        },\n        \"required_denomination_status\": {\n          \"type\": \"string\",\n          \"description\": \"The denomination status specified in the question (e.g., 'non-denominational').\"\n        }\n      },\n      \"required\": [\n        \"required_founding_year\",\n        \"required_denomination_status\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"other_candidate_universities\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of another university considered.\"\n          },\n          \"founding_year\": {\n            \"type\": \"integer\",\n            \"description\": \"The founding year of this university, if available.\"\n          },\n          \"is_non_denominational\": {\n            \"type\": \"boolean\",\n            \"description\": \"Indicates if this university is non-denominational, if available.\"\n          }\n        },\n        \"required\": [\n          \"name\"\n        ],\n        \"additionalProperties\": false\n      },\n      \"description\": \"A list of other universities mentioned in the question, with their known attributes.\"\n    }\n  },\n  \"required\": [\n    \"matching_university\",\n    \"question_criteria\",\n    \"other_candidate_universities\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "matching_university": {
         "type": "object",
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of another university considered."
+            "description": "The name of the university that matches the criteria."
           },
           "founding_year": {
             "type": "integer",
-            "description": "The founding year of this university, if available."
+            "description": "The year the university was founded."
           },
           "is_non_denominational": {
             "type": "boolean",
-            "description": "Indicates if this university is non-denominational, if available."
+            "description": "Indicates if the university is non-denominational."
           }
         },
         "required": [
-          "name"
+          "name",
+          "founding_year",
+          "is_non_denominational"
         ],
         "additionalProperties": false
       },
-      "description": "A list of other universities mentioned in the question, with their known attributes."
-    }
+      "question_criteria": {
+        "type": "object",
+        "properties": {
+          "required_founding_year": {
+            "type": "integer",
+            "description": "The founding year specified in the question."
+          },
+          "required_denomination_status": {
+            "type": "string",
+            "description": "The denomination status specified in the question (e.g., 'non-denominational')."
+          }
+        },
+        "required": [
+          "required_founding_year",
+          "required_denomination_status"
+        ],
+        "additionalProperties": false
+      },
+      "other_candidate_universities": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of another university considered."
+            },
+            "founding_year": {
+              "type": "integer",
+              "description": "The founding year of this university, if available."
+            },
+            "is_non_denominational": {
+              "type": "boolean",
+              "description": "Indicates if this university is non-denominational, if available."
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        },
+        "description": "A list of other universities mentioned in the question, with their known attributes."
+      }
+    },
+    "required": [
+      "matching_university",
+      "question_criteria",
+      "other_candidate_universities"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "matching_university",
-    "question_criteria",
-    "other_candidate_universities"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

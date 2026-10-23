@@ -1,82 +1,59 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-En Esch: Nicklaus Schandelmaier, known as En Esch, is a German musician and has been a member of the bands KMFDM, Pigface, Slick Idiot, and <PIG>.
-
-List of hyperbolic comets: The following is a list of parabolic and hyperbolic comets in the Solar System.  Many of these comets may come from the Oort cloud, or perhaps even have interstellar origin.  The Oort Cloud is not gravitationally attracted enough to the Sun to form into a fairly thin disk, like the inner Solar System.  Thus comets originating from the Oort Cloud can come from roughly any orientation (inclination to the ecliptic), and many even have a retrograde orbit.  By definition, a hyperbolic orbit means that the comet will only travel through the Solar System once, with the Sun acting as a gravitational slingshot, sending the comet hurtling out of the Solar System entirely unless its eccentricity is otherwise changed.  Comets orbiting in this way still originate from the Solar System, however.  Typically comets in the Oort Cloud are thought to have roughly circular orbits around the Sun, but their orbital velocity is so slow that they may easily be perturbed by passing stars and the galactic tide.
-
-List of KMFDM concert tours: KMFDM is an industrial music act, founded in 1984 by Sascha Konietzko in Hamburg, Germany.  Since then, KMFDM has performed in North America, Europe, Asia, and Australia.  KMFDM's earliest performances were as a local act in Hamburg.  Their first major tour was in support of Ministry in 1990.  Since then, KMFDM has headlined all of their tours, with support from bands such as Sister Machine Gun, Die Warzau, Chemlab, God Lives Underwater, DJ?  Acucrack, and Army of the Universe.
-
-Empire of the Sun (band): Empire of the Sun is an Australian electronic music duo from Sydney, formed in 2007.  The band is a collaboration between Luke Steele of alternative rock act The Sleepy Jackson, and Nick Littlemore of electronic dance outfit Pnau.  Their 2008 debut album "Walking on a Dream" brought the duo international success and has been certified double platinum in Australia and gold in the United Kingdom.  The album provided a number of internationally charting singles including "Walking on a Dream" which peaked at number ten on the Australian ARIA Singles Chart and reached number sixty four on the UK Singles Chart, and "We Are the People", which peaked at number fourteen on the UK Singles Chart.
-
-Chris Shepard: Chris Shepard is an American recording engineer and general manager at Chicago Recording Company.  He is best known for his work with KMFDM, having engineered some of their most popular albums.  He also worked on some of Sascha Konietzko's side projects.  In addition, he has worked with many other bands, including PIG, Treponem Pal, Prong, Kidneythieves, Wilco, Smashing Pumpkins, Peter Murphy, and Incubus.
-
-Angelspit: Angelspit is an electronic music band originally from Sydney, Australia and currently based in the United States.  The band was formed in 2004 by vocalists/synthesists Destroyx (Amelia Tan) and ZooG (Karl Learmont).  The band's music combines stylistic elements of horror, punk, pop and electronic music.  Their work contains imagery revolving around medical experiments and grotesque societies.  The band is currently based in Chicago.  Angelspit has toured with Angel Theory, Ayria, Ikon, KMFDM, Tankt and The Crüxshadows, and have also shared the stage with bands such as The Sisters of Mercy, Nitzer Ebb, Skinny Puppy and Front Line Assembly.  They performed with Lords of Acid during a 22-date U.S. tour in March 2011 and toured the United States with Blood on the Dance Floor in October 2011.
-
-Chant (band): Chant, often styled as CHANT, is a tribal-industrial drum project from Austin, Texas.  Formed in 2004, Chant has performed with bands such as Lords of Acid, Angelspit, My Life With the Thrill Kill Kult, Pigface, KMFDM, Combichrist, and more.
-
-Sun Devil Marching Band: The Sun Devil Marching Band (SDMB), also known as The Pride of the Southwest, is the athletic band of Arizona State University in Tempe, Arizona.  The Sun Devil Marching Band motto is “Expect Great Things.”  The acronym EGT is inscribed on a sign that hangs from the director’s podium towering over the band's practice field, and is a symbol of the high standards that band members strive to meet.  The ASU Band program, which includes the Marching, Pep, and Dixieland bands, is a part of the Sun Devil Athletics department.  The band is currently under the direction of Director of Athletic Bands James G. "The Hammer" Hudson, who took over the program in 2006.  The Sun Devil Marching Band is a major ambassador for Arizona State University and the state of Arizona.  Each year almost 500,000 people are entertained by the band, which plays at home football at Sun Devil Stadium and as a pep band for basketball games at Wells Fargo Arena, homecoming, bowl game parades, other community events in the Valley, across the country, and even abroad.
-
-Mind:state: Mind:state is an electronic music one man act from Sweden that popped up in the late 1990s.  Influenced by electronic bands like Front 242, Assemblage 23, KMFDM and also a wide range of metal bands such as Tiamat and Darkseed, Per Holmström creates electronic music that crosses between the lines of futurepop and darker industrial.
-
-KMFDM: KMFDM (originally Kein Mehrheit Für Die Mitleid, loosely translated by the band as "no pity for the majority") is an industrial band led by German multi-instrumentalist Sascha Konietzko, who founded the group in 1984 as a performance art project.
-
-Question: Where do the bands KMFDM and Empire of the Sun originate from ? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "query_summary": {
-      "type": "string",
-      "description": "A summary of the information being provided."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "number_of_bands_found": {
-      "type": "integer",
-      "description": "The total number of bands for which origin information was found."
-    },
-    "bands": {
-      "type": "array",
-      "description": "A list of bands and their origin locations.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "band_name": {
-            "type": "string",
-            "description": "The name of the band."
-          },
-          "origin_city": {
-            "type": "string",
-            "description": "The city where the band originated."
-          },
-          "origin_country": {
-            "type": "string",
-            "description": "The country where the band originated."
-          }
-        },
-        "required": [
-          "band_name",
-          "origin_city",
-          "origin_country"
-        ],
-        "additionalProperties": false
-      }
+    {
+      "role": "user",
+      "content": "Context:\nEn Esch: Nicklaus Schandelmaier, known as En Esch, is a German musician and has been a member of the bands KMFDM, Pigface, Slick Idiot, and <PIG>.\n\nList of hyperbolic comets: The following is a list of parabolic and hyperbolic comets in the Solar System.  Many of these comets may come from the Oort cloud, or perhaps even have interstellar origin.  The Oort Cloud is not gravitationally attracted enough to the Sun to form into a fairly thin disk, like the inner Solar System.  Thus comets originating from the Oort Cloud can come from roughly any orientation (inclination to the ecliptic), and many even have a retrograde orbit.  By definition, a hyperbolic orbit means that the comet will only travel through the Solar System once, with the Sun acting as a gravitational slingshot, sending the comet hurtling out of the Solar System entirely unless its eccentricity is otherwise changed.  Comets orbiting in this way still originate from the Solar System, however.  Typically comets in the Oort Cloud are thought to have roughly circular orbits around the Sun, but their orbital velocity is so slow that they may easily be perturbed by passing stars and the galactic tide.\n\nList of KMFDM concert tours: KMFDM is an industrial music act, founded in 1984 by Sascha Konietzko in Hamburg, Germany.  Since then, KMFDM has performed in North America, Europe, Asia, and Australia.  KMFDM's earliest performances were as a local act in Hamburg.  Their first major tour was in support of Ministry in 1990.  Since then, KMFDM has headlined all of their tours, with support from bands such as Sister Machine Gun, Die Warzau, Chemlab, God Lives Underwater, DJ?  Acucrack, and Army of the Universe.\n\nEmpire of the Sun (band): Empire of the Sun is an Australian electronic music duo from Sydney, formed in 2007.  The band is a collaboration between Luke Steele of alternative rock act The Sleepy Jackson, and Nick Littlemore of electronic dance outfit Pnau.  Their 2008 debut album \"Walking on a Dream\" brought the duo international success and has been certified double platinum in Australia and gold in the United Kingdom.  The album provided a number of internationally charting singles including \"Walking on a Dream\" which peaked at number ten on the Australian ARIA Singles Chart and reached number sixty four on the UK Singles Chart, and \"We Are the People\", which peaked at number fourteen on the UK Singles Chart.\n\nChris Shepard: Chris Shepard is an American recording engineer and general manager at Chicago Recording Company.  He is best known for his work with KMFDM, having engineered some of their most popular albums.  He also worked on some of Sascha Konietzko's side projects.  In addition, he has worked with many other bands, including PIG, Treponem Pal, Prong, Kidneythieves, Wilco, Smashing Pumpkins, Peter Murphy, and Incubus.\n\nAngelspit: Angelspit is an electronic music band originally from Sydney, Australia and currently based in the United States.  The band was formed in 2004 by vocalists/synthesists Destroyx (Amelia Tan) and ZooG (Karl Learmont).  The band's music combines stylistic elements of horror, punk, pop and electronic music.  Their work contains imagery revolving around medical experiments and grotesque societies.  The band is currently based in Chicago.  Angelspit has toured with Angel Theory, Ayria, Ikon, KMFDM, Tankt and The Crüxshadows, and have also shared the stage with bands such as The Sisters of Mercy, Nitzer Ebb, Skinny Puppy and Front Line Assembly.  They performed with Lords of Acid during a 22-date U.S. tour in March 2011 and toured the United States with Blood on the Dance Floor in October 2011.\n\nChant (band): Chant, often styled as CHANT, is a tribal-industrial drum project from Austin, Texas.  Formed in 2004, Chant has performed with bands such as Lords of Acid, Angelspit, My Life With the Thrill Kill Kult, Pigface, KMFDM, Combichrist, and more.\n\nSun Devil Marching Band: The Sun Devil Marching Band (SDMB), also known as The Pride of the Southwest, is the athletic band of Arizona State University in Tempe, Arizona.  The Sun Devil Marching Band motto is “Expect Great Things.”  The acronym EGT is inscribed on a sign that hangs from the director’s podium towering over the band's practice field, and is a symbol of the high standards that band members strive to meet.  The ASU Band program, which includes the Marching, Pep, and Dixieland bands, is a part of the Sun Devil Athletics department.  The band is currently under the direction of Director of Athletic Bands James G. \"The Hammer\" Hudson, who took over the program in 2006.  The Sun Devil Marching Band is a major ambassador for Arizona State University and the state of Arizona.  Each year almost 500,000 people are entertained by the band, which plays at home football at Sun Devil Stadium and as a pep band for basketball games at Wells Fargo Arena, homecoming, bowl game parades, other community events in the Valley, across the country, and even abroad.\n\nMind:state: Mind:state is an electronic music one man act from Sweden that popped up in the late 1990s.  Influenced by electronic bands like Front 242, Assemblage 23, KMFDM and also a wide range of metal bands such as Tiamat and Darkseed, Per Holmström creates electronic music that crosses between the lines of futurepop and darker industrial.\n\nKMFDM: KMFDM (originally Kein Mehrheit Für Die Mitleid, loosely translated by the band as \"no pity for the majority\") is an industrial band led by German multi-instrumentalist Sascha Konietzko, who founded the group in 1984 as a performance art project.\n\nQuestion: Where do the bands KMFDM and Empire of the Sun originate from ? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"query_summary\": {\n      \"type\": \"string\",\n      \"description\": \"A summary of the information being provided.\"\n    },\n    \"number_of_bands_found\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of bands for which origin information was found.\"\n    },\n    \"bands\": {\n      \"type\": \"array\",\n      \"description\": \"A list of bands and their origin locations.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"band_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the band.\"\n          },\n          \"origin_city\": {\n            \"type\": \"string\",\n            \"description\": \"The city where the band originated.\"\n          },\n          \"origin_country\": {\n            \"type\": \"string\",\n            \"description\": \"The country where the band originated.\"\n          }\n        },\n        \"required\": [\n          \"band_name\",\n          \"origin_city\",\n          \"origin_country\"\n        ],\n        \"additionalProperties\": false\n      }\n    }\n  },\n  \"required\": [\n    \"query_summary\",\n    \"number_of_bands_found\",\n    \"bands\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "query_summary",
-    "number_of_bands_found",
-    "bands"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "query_summary": {
+        "type": "string",
+        "description": "A summary of the information being provided."
+      },
+      "number_of_bands_found": {
+        "type": "integer",
+        "description": "The total number of bands for which origin information was found."
+      },
+      "bands": {
+        "type": "array",
+        "description": "A list of bands and their origin locations.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "band_name": {
+              "type": "string",
+              "description": "The name of the band."
+            },
+            "origin_city": {
+              "type": "string",
+              "description": "The city where the band originated."
+            },
+            "origin_country": {
+              "type": "string",
+              "description": "The country where the band originated."
+            }
+          },
+          "required": [
+            "band_name",
+            "origin_city",
+            "origin_country"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "query_summary",
+      "number_of_bands_found",
+      "bands"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

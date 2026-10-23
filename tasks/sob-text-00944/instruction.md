@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Ron Sayers: Ronald Sayers (born August 29, 1947) is a former American football running back who played in the American Football League (AFL) for the San Diego Chargers in 1969.  He played college football for the University of Nebraska Omaha.  He is the younger brother of Pro Football Hall of Fame running back Gale Sayers.
-
-Steve Owens (American football): Loren Everett "Steve" Owens (born December 9, 1947) is a former football player, a running back in the National Football League (NFL) for five seasons in the early 1970s.
-
-Artie Owens: Arthur Gene Owens (born January 14, 1953 in Montgomery, Alabama) was an American football running back, return specialist, and receiver that played collegiately for the West Virginia Mountaineers.  He was also a track runner for the Mountaineers.  Owens was primarily known for playing in the National Football League and also in the United States Football League.
-
-Brandon Wegher: Brandon Wegher (Way-ger) (born December 9, 1990) is an American football running back who is currently a free agent.  He played college football for one season at the University of Iowa in 2009, rushing for 641 yards and a freshman record eight touchdowns.  He also played two seasons at Morningside College in 2013-14, where he was an NAIA national All-American.  In 2014, he set a new NAIA national rushing record with 2,610 yards.  His younger brother, Jack Wegher, is currently a three-star football recruit for the 2016 class who plays at IMG Academy in Florida.  His father, Rick, played college football at South Dakota State and then professionally in Canada.
-
-Derrick Lassic: Derrick Owens Lassic (born January 26, 1970) is a former American football running back in the National Football League for the Dallas Cowboys and the Carolina Panthers.  He played college football for the University of Alabama.  He is most remembered for being the starting running back for the Cowboys for the first two games (both losses) of the 1993 season while Emmitt Smith held out in a contract dispute.
-
-Louis Carter: Louis Edward Carter (born February 6, 1953 in Laurel, Maryland) is a former running back in the National Football League.  He played for the Oakland Raiders and the Tampa Bay Buccaneers.  Was a 3rd round pick of the Raiders in 1975 having been the MVP of the Coaches' All-American college all-star game in his senior year at Maryland.  Came to the Bucs in the veteran allocation draft of 1976 and became a valuable member of the Buc offense during its first three seasons as a running back and occasional receiver out of the backfield.  Also threw the first TD pass in franchise history when he was stopped at the line of scrimmage in a game against the Seahawks and then lobbed the ball across the line to receiver Morris Owens for an unlikely one-yard score.  Carried the ball 11 times for 27 yards in his rookie season in Oakland and also had two receptions for 29 yards.  Never played again in the NFL after leaving Tampa Bay.
-
-Delano Howell: Delano Andre Howell (born November 17, 1989) is a former strong safety.  He was originally signed by the Buffalo Bills as an undrafted free agent in 2012.  Howell played his four years of college football at Stanford University first as a running back, before switching to safety.  He is the younger brother of Dan Howell, who played football for the University of Washington.
-
-Voncarie Owens: Voncarie Owens is a running back for Team Michigan of the All American Football League.  Owens was signed by the Rams as an undrafted rookie free agent on April 30, 2007 after four years as a collegiate player at Ohio University.
-
-Tatum Bell: Tatum Antoine Bell (born March 2, 1981) is a former American football running back.  He was drafted by the Denver Broncos in the second round of the 2004 NFL Draft.  He played college football at Oklahoma State.  He is son of Tony and Terry Bell.  Has a younger brother, T.J., and an older sister, Latrice Coleman.
-
-Tinker Owens: Charles Wayne "Tinker" Owens is a former professional American football player who played wide receiver for four seasons for the New Orleans Saints (1976, 1978–1980) in the National Football League.  The younger brother of Heisman Trophy winner Steve Owens, Tinker was a two-time All-American (1974, 1975) during his college career at Oklahoma.
-
-Question:  Tinker Owens was the younger brother of what running back from the 1970s?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_identified": {
-      "type": "string",
-      "description": "The full name of the person identified as Tinker Owens' brother."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "relationship_to_tinker_owens": {
-      "type": "string",
-      "description": "The familial relationship of the identified person to Tinker Owens."
-    },
-    "person_details": {
-      "type": "object",
-      "properties": {
-        "full_name": {
-          "type": "string",
-          "description": "The full name including any nicknames."
-        },
-        "primary_position": {
-          "type": "string",
-          "description": "The primary playing position of the identified person."
-        },
-        "played_in_decade": {
-          "type": "string",
-          "description": "The decade in which the person primarily played."
-        }
-      },
-      "required": [
-        "full_name",
-        "primary_position",
-        "played_in_decade"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nRon Sayers: Ronald Sayers (born August 29, 1947) is a former American football running back who played in the American Football League (AFL) for the San Diego Chargers in 1969.  He played college football for the University of Nebraska Omaha.  He is the younger brother of Pro Football Hall of Fame running back Gale Sayers.\n\nSteve Owens (American football): Loren Everett \"Steve\" Owens (born December 9, 1947) is a former football player, a running back in the National Football League (NFL) for five seasons in the early 1970s.\n\nArtie Owens: Arthur Gene Owens (born January 14, 1953 in Montgomery, Alabama) was an American football running back, return specialist, and receiver that played collegiately for the West Virginia Mountaineers.  He was also a track runner for the Mountaineers.  Owens was primarily known for playing in the National Football League and also in the United States Football League.\n\nBrandon Wegher: Brandon Wegher (Way-ger) (born December 9, 1990) is an American football running back who is currently a free agent.  He played college football for one season at the University of Iowa in 2009, rushing for 641 yards and a freshman record eight touchdowns.  He also played two seasons at Morningside College in 2013-14, where he was an NAIA national All-American.  In 2014, he set a new NAIA national rushing record with 2,610 yards.  His younger brother, Jack Wegher, is currently a three-star football recruit for the 2016 class who plays at IMG Academy in Florida.  His father, Rick, played college football at South Dakota State and then professionally in Canada.\n\nDerrick Lassic: Derrick Owens Lassic (born January 26, 1970) is a former American football running back in the National Football League for the Dallas Cowboys and the Carolina Panthers.  He played college football for the University of Alabama.  He is most remembered for being the starting running back for the Cowboys for the first two games (both losses) of the 1993 season while Emmitt Smith held out in a contract dispute.\n\nLouis Carter: Louis Edward Carter (born February 6, 1953 in Laurel, Maryland) is a former running back in the National Football League.  He played for the Oakland Raiders and the Tampa Bay Buccaneers.  Was a 3rd round pick of the Raiders in 1975 having been the MVP of the Coaches' All-American college all-star game in his senior year at Maryland.  Came to the Bucs in the veteran allocation draft of 1976 and became a valuable member of the Buc offense during its first three seasons as a running back and occasional receiver out of the backfield.  Also threw the first TD pass in franchise history when he was stopped at the line of scrimmage in a game against the Seahawks and then lobbed the ball across the line to receiver Morris Owens for an unlikely one-yard score.  Carried the ball 11 times for 27 yards in his rookie season in Oakland and also had two receptions for 29 yards.  Never played again in the NFL after leaving Tampa Bay.\n\nDelano Howell: Delano Andre Howell (born November 17, 1989) is a former strong safety.  He was originally signed by the Buffalo Bills as an undrafted free agent in 2012.  Howell played his four years of college football at Stanford University first as a running back, before switching to safety.  He is the younger brother of Dan Howell, who played football for the University of Washington.\n\nVoncarie Owens: Voncarie Owens is a running back for Team Michigan of the All American Football League.  Owens was signed by the Rams as an undrafted rookie free agent on April 30, 2007 after four years as a collegiate player at Ohio University.\n\nTatum Bell: Tatum Antoine Bell (born March 2, 1981) is a former American football running back.  He was drafted by the Denver Broncos in the second round of the 2004 NFL Draft.  He played college football at Oklahoma State.  He is son of Tony and Terry Bell.  Has a younger brother, T.J., and an older sister, Latrice Coleman.\n\nTinker Owens: Charles Wayne \"Tinker\" Owens is a former professional American football player who played wide receiver for four seasons for the New Orleans Saints (1976, 1978–1980) in the National Football League.  The younger brother of Heisman Trophy winner Steve Owens, Tinker was a two-time All-American (1974, 1975) during his college career at Oklahoma.\n\nQuestion:  Tinker Owens was the younger brother of what running back from the 1970s?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_identified\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the person identified as Tinker Owens' brother.\"\n    },\n    \"relationship_to_tinker_owens\": {\n      \"type\": \"string\",\n      \"description\": \"The familial relationship of the identified person to Tinker Owens.\"\n    },\n    \"person_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"full_name\": {\n          \"type\": \"string\",\n          \"description\": \"The full name including any nicknames.\"\n        },\n        \"primary_position\": {\n          \"type\": \"string\",\n          \"description\": \"The primary playing position of the identified person.\"\n        },\n        \"played_in_decade\": {\n          \"type\": \"string\",\n          \"description\": \"The decade in which the person primarily played.\"\n        }\n      },\n      \"required\": [\n        \"full_name\",\n        \"primary_position\",\n        \"played_in_decade\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"person_identified\",\n    \"relationship_to_tinker_owens\",\n    \"person_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_identified",
-    "relationship_to_tinker_owens",
-    "person_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_identified": {
+        "type": "string",
+        "description": "The full name of the person identified as Tinker Owens' brother."
+      },
+      "relationship_to_tinker_owens": {
+        "type": "string",
+        "description": "The familial relationship of the identified person to Tinker Owens."
+      },
+      "person_details": {
+        "type": "object",
+        "properties": {
+          "full_name": {
+            "type": "string",
+            "description": "The full name including any nicknames."
+          },
+          "primary_position": {
+            "type": "string",
+            "description": "The primary playing position of the identified person."
+          },
+          "played_in_decade": {
+            "type": "string",
+            "description": "The decade in which the person primarily played."
+          }
+        },
+        "required": [
+          "full_name",
+          "primary_position",
+          "played_in_decade"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "person_identified",
+      "relationship_to_tinker_owens",
+      "person_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

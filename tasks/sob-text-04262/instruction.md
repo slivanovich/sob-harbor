@@ -1,75 +1,52 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Shweta Mohan: Shweta Mohan (born 19 November 1985) is an Indian playback singer.  She has received four Filmfare Awards South for Best Female Playback Singer, one Kerala State Film Awards and two Tamil Nadu State Film Awards.  She has recorded songs for film music and albums in all the four South Indian languages namely, Malayalam, Tamil, Telugu, Kannada along with the Hindi language and has established herself as a leading playback singer of South Indian cinema.
-
-Rupam Bhuyan: Rupam Bhuyan (Assamese: ৰুপম ভূঞা; born 6 March 1980) is an Indian playback singer from Assam.  He is the frontman of the Indian fusion band "North East Breeze".  He sang in numerous Assamese films including Khobh, Anuradha, Mumtaz and Akash Chuboloi Mon.  He was nominated for Prag Cine Awards-2013 and Prag Cine Awards-2015 in the "Best Playback Singer (male)" category for the films Mumtaz and Khobh.  Got the Award in 2013.  He was nominated in the Best Male Playback Singer of Assam category for Ramdhenu Viewers choice award 2015-16 for the song "Enekoye Lahe Lahe".  He composed the theme song for prestigious Jeevan Kite and River Festival-2015 as a tribute to the river Brahmaputra.
-
-G. Venugopal: G Venugopal (born December 10, 1960) is an Indian playback singer known for his work in Malayalam films.  He started his singing career in the film "Odaruthammaava Aalariyaam"(1984).  Since then he has sung in more than 300 films; and has over 500 private albums to his credit.  The many awards he has won include the coveted Best Playback Singer (Kerala State) which he won thrice, the Film Critics award and the Kerala Kaumudi Gallop Poll award (twice).  He won The Kerala State award for Best Playback singer (2004) third time for the song "aadedee. . aadaadedee" from the film "Ullam". Venugopal has composed two songs, one for the album-‘Mizhiyariyathe’ and other one for the Kerala Govt.  Harithasree project, to the lyrics of poet Sugatha Kumari.
-
-List of Kannada songs recorded by Shreya Ghoshal: Shreya Ghoshal (born 12 March 1984) is an Indian playback singer.  She sings in Assamese, Bengali, Bhojpuri, Gujarati, Hindi, Kannada, Malayalam, Marathi, Nepali, Oriya, Punjabi, Tamil, Telugu, Tulu & Other Languages.  Ghoshal's career began when she won the Sa Re Ga Ma Pa contest as an adult.  Her Bollywood playback singing career began with Devdas, for which she received National Film Award for Best Female Playback Singer along with Filmfare Award for Best Female Playback Singer and Filmfare RD Burman Award for New Music Talent.  Since then, she has received many other awards.  Ghoshal was also honored from the U.S. state of Ohio , where the governor Ted Strickland declared June 26 as "Shreya Ghoshal Day".  In April 2013, she was awarded with the highest honour in London by the selected members of House of Commons of the United Kingdom.  In July 2015, John Cranley, the Mayor of the City of Cincinnati also honoured her by proclaiming July 24, 2015 as "Shreya Ghoshal Day of Entertainment and Inspiration" in Cincinnati. [1] She was also featured five times in Forbes list of the top 100 celebrities of India.  In 2017, Ghoshal became the first Indian singer to have a wax figure (statute) of her in Madame Tussauds Museum.
-
-Shreya Ghoshal: Shreya Ghoshal (born 12 March 1984) is an Indian playback singer.  She has received four National Film Awards, six Filmfare Awards including five for Best Female Playback Singer, nine Filmfare Awards South for Best Female Playback Singer (two for Tamil, four for Malayalam, two for Kannada and one for Telugu), two Tamil Nadu State Film Awards and three Kerala State Film Awards.  She has recorded songs for film music and albums in various Indian languages and has established herself as a leading playback singer of Indian cinema.
-
-Filmography of Shreya Ghoshal: Shreya Ghoshal (born 12 March 1984) is an Indian playback singer.  She has received four National Film Awards, six Filmfare Awards including five for Best Female Playback Singer, nine Filmfare Awards South for Best Female Playback Singer (two for Kannada, four for Malayalam, two for Tamil and one for Telugu), three Kerala State Film Awards and two Tamil Nadu State Film Awards.  She has recorded songs for film music and albums in various Indian languages and has established herself as a leading playback singer of Indian cinema.
-
-Viraj (actor): Viraj (also credited as Hari Prashanth) is an Indian film actor, who has appeared in Tamil language films.  The son of dubbing artiste S. N. Surendar, Viraj made his debut as a child actor by appearing in "Uyirile Kalanthathu" (2000), before working in "Anniyan" (2005) and "Chennai 600028" (2007) in supporting roles.
-
-List of Tamil songs recorded by Shreya Ghoshal: Shreya Ghoshal (born 12 March 1984) is an Indian playback singer.  She sings in Hindi , Tamil ,Telugu, Kannada, Malayalam, Marathi , Gujarati, Bengali, Assamese, Nepali, Oriya, Bhojpuri, Punjabi and Tulu.  Ghoshal's career began when she won the Sa Re Ga Ma Pa contest as an adult.  Her Bollywood playback singing career began with Devdas, for which she received National Film Award for Best Female Playback Singer along with Filmfare Award for Best Female Playback Singer and Filmfare RD Burman Award for New Music Talent.  Since then, she has received many other awards.  Ghoshal was also honored from the U.S. state of Ohio , where the governor Ted Strickland declared June 26 as "Shreya Ghoshal Day".  In April 2013, she was awarded with the highest honour in London by the selected members of House of Commons of the United Kingdom.  In July 2015, John Cranley, the Mayor of the City of Cincinnati also honoured her by proclaiming July 24, 2015 as "Shreya Ghoshal Day of Entertainment and Inspiration" in Cincinnati. [1] She was also featured five times in Forbes list of the top 100 celebrities of India.  In 2017, Ghoshal became the first Indian singer to have a wax figure (statute) of her in Madame Tussauds Museum.
-
-S. N. Surendar: S.N.Surendar is an Indian Playback singer, who primarily works in Tamil films.  He has sung over 500 songs under various music directors for Telugu, Malayalam, Kannada and Tamil languages.
-
-Geetha Madhuri: Geetha Madhuri Sonti is an Indian playback singer and dubbing artist who works primarily in South India Cinema Industry.  She became famous with the song "ninne ninne" from the movie "Nachavule" for which she won Nandi Award as the best female playback singer.  She also won two Filmfare awards.  She holds the record of winning highest number of Filmfare awards for Telugu as best female playback singer.  She has sung in Telugu, Tamil, Kannada and Malayalam.  She has recorded more than 550 songs for various films and albums.  She has participated in an MAA TV show called "Super Singer".  In film industry Geetha called as Shreya Ghosal of South.  She has worked under the supervision of music directors like Ilayaraja,Vandematharam Srinivas, Koti, M.M. Keeravani, , Raj, Mani Sharma, Ramana Gogula, S.A. Raj Kumar, Sandeep Choutha, Micky-J-Mayer, Devisri Prasad, R.P. Patnaik, Chakri, Nihal, Kalyani Malik, Anup, Sunil Kashyap, Saluri Vasu Rao, Vasanth, Ravi Sankar, Saketha Sairam,Sai karthik, Pradeep Chandra, Shekhar Chandra,Jessigift, S.S. Thaman etc.,
-
-Question: What is the name of the Indian Playback singer who is also one of Viraj (Hari Prashanth's) parents?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "singer_name": {
-      "type": "string",
-      "description": "The name of the Indian playback singer."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "relationship_to_actor": {
-      "type": "string",
-      "description": "The relationship of the singer to the actor."
-    },
-    "actor_name": {
-      "type": "string",
-      "description": "The primary name of the actor."
-    },
-    "actor_alternate_name": {
-      "type": "string",
-      "description": "An alternate name for the actor."
-    },
-    "singer_primary_occupation": {
-      "type": "string",
-      "description": "The primary occupation of the singer."
-    },
-    "singer_languages_sung_in": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of languages the singer has sung in."
+    {
+      "role": "user",
+      "content": "Context:\nShweta Mohan: Shweta Mohan (born 19 November 1985) is an Indian playback singer.  She has received four Filmfare Awards South for Best Female Playback Singer, one Kerala State Film Awards and two Tamil Nadu State Film Awards.  She has recorded songs for film music and albums in all the four South Indian languages namely, Malayalam, Tamil, Telugu, Kannada along with the Hindi language and has established herself as a leading playback singer of South Indian cinema.\n\nRupam Bhuyan: Rupam Bhuyan (Assamese: ৰুপম ভূঞা; born 6 March 1980) is an Indian playback singer from Assam.  He is the frontman of the Indian fusion band \"North East Breeze\".  He sang in numerous Assamese films including Khobh, Anuradha, Mumtaz and Akash Chuboloi Mon.  He was nominated for Prag Cine Awards-2013 and Prag Cine Awards-2015 in the \"Best Playback Singer (male)\" category for the films Mumtaz and Khobh.  Got the Award in 2013.  He was nominated in the Best Male Playback Singer of Assam category for Ramdhenu Viewers choice award 2015-16 for the song \"Enekoye Lahe Lahe\".  He composed the theme song for prestigious Jeevan Kite and River Festival-2015 as a tribute to the river Brahmaputra.\n\nG. Venugopal: G Venugopal (born December 10, 1960) is an Indian playback singer known for his work in Malayalam films.  He started his singing career in the film \"Odaruthammaava Aalariyaam\"(1984).  Since then he has sung in more than 300 films; and has over 500 private albums to his credit.  The many awards he has won include the coveted Best Playback Singer (Kerala State) which he won thrice, the Film Critics award and the Kerala Kaumudi Gallop Poll award (twice).  He won The Kerala State award for Best Playback singer (2004) third time for the song \"aadedee. . aadaadedee\" from the film \"Ullam\". Venugopal has composed two songs, one for the album-‘Mizhiyariyathe’ and other one for the Kerala Govt.  Harithasree project, to the lyrics of poet Sugatha Kumari.\n\nList of Kannada songs recorded by Shreya Ghoshal: Shreya Ghoshal (born 12 March 1984) is an Indian playback singer.  She sings in Assamese, Bengali, Bhojpuri, Gujarati, Hindi, Kannada, Malayalam, Marathi, Nepali, Oriya, Punjabi, Tamil, Telugu, Tulu & Other Languages.  Ghoshal's career began when she won the Sa Re Ga Ma Pa contest as an adult.  Her Bollywood playback singing career began with Devdas, for which she received National Film Award for Best Female Playback Singer along with Filmfare Award for Best Female Playback Singer and Filmfare RD Burman Award for New Music Talent.  Since then, she has received many other awards.  Ghoshal was also honored from the U.S. state of Ohio , where the governor Ted Strickland declared June 26 as \"Shreya Ghoshal Day\".  In April 2013, she was awarded with the highest honour in London by the selected members of House of Commons of the United Kingdom.  In July 2015, John Cranley, the Mayor of the City of Cincinnati also honoured her by proclaiming July 24, 2015 as \"Shreya Ghoshal Day of Entertainment and Inspiration\" in Cincinnati. [1] She was also featured five times in Forbes list of the top 100 celebrities of India.  In 2017, Ghoshal became the first Indian singer to have a wax figure (statute) of her in Madame Tussauds Museum.\n\nShreya Ghoshal: Shreya Ghoshal (born 12 March 1984) is an Indian playback singer.  She has received four National Film Awards, six Filmfare Awards including five for Best Female Playback Singer, nine Filmfare Awards South for Best Female Playback Singer (two for Tamil, four for Malayalam, two for Kannada and one for Telugu), two Tamil Nadu State Film Awards and three Kerala State Film Awards.  She has recorded songs for film music and albums in various Indian languages and has established herself as a leading playback singer of Indian cinema.\n\nFilmography of Shreya Ghoshal: Shreya Ghoshal (born 12 March 1984) is an Indian playback singer.  She has received four National Film Awards, six Filmfare Awards including five for Best Female Playback Singer, nine Filmfare Awards South for Best Female Playback Singer (two for Kannada, four for Malayalam, two for Tamil and one for Telugu), three Kerala State Film Awards and two Tamil Nadu State Film Awards.  She has recorded songs for film music and albums in various Indian languages and has established herself as a leading playback singer of Indian cinema.\n\nViraj (actor): Viraj (also credited as Hari Prashanth) is an Indian film actor, who has appeared in Tamil language films.  The son of dubbing artiste S. N. Surendar, Viraj made his debut as a child actor by appearing in \"Uyirile Kalanthathu\" (2000), before working in \"Anniyan\" (2005) and \"Chennai 600028\" (2007) in supporting roles.\n\nList of Tamil songs recorded by Shreya Ghoshal: Shreya Ghoshal (born 12 March 1984) is an Indian playback singer.  She sings in Hindi , Tamil ,Telugu, Kannada, Malayalam, Marathi , Gujarati, Bengali, Assamese, Nepali, Oriya, Bhojpuri, Punjabi and Tulu.  Ghoshal's career began when she won the Sa Re Ga Ma Pa contest as an adult.  Her Bollywood playback singing career began with Devdas, for which she received National Film Award for Best Female Playback Singer along with Filmfare Award for Best Female Playback Singer and Filmfare RD Burman Award for New Music Talent.  Since then, she has received many other awards.  Ghoshal was also honored from the U.S. state of Ohio , where the governor Ted Strickland declared June 26 as \"Shreya Ghoshal Day\".  In April 2013, she was awarded with the highest honour in London by the selected members of House of Commons of the United Kingdom.  In July 2015, John Cranley, the Mayor of the City of Cincinnati also honoured her by proclaiming July 24, 2015 as \"Shreya Ghoshal Day of Entertainment and Inspiration\" in Cincinnati. [1] She was also featured five times in Forbes list of the top 100 celebrities of India.  In 2017, Ghoshal became the first Indian singer to have a wax figure (statute) of her in Madame Tussauds Museum.\n\nS. N. Surendar: S.N.Surendar is an Indian Playback singer, who primarily works in Tamil films.  He has sung over 500 songs under various music directors for Telugu, Malayalam, Kannada and Tamil languages.\n\nGeetha Madhuri: Geetha Madhuri Sonti is an Indian playback singer and dubbing artist who works primarily in South India Cinema Industry.  She became famous with the song \"ninne ninne\" from the movie \"Nachavule\" for which she won Nandi Award as the best female playback singer.  She also won two Filmfare awards.  She holds the record of winning highest number of Filmfare awards for Telugu as best female playback singer.  She has sung in Telugu, Tamil, Kannada and Malayalam.  She has recorded more than 550 songs for various films and albums.  She has participated in an MAA TV show called \"Super Singer\".  In film industry Geetha called as Shreya Ghosal of South.  She has worked under the supervision of music directors like Ilayaraja,Vandematharam Srinivas, Koti, M.M. Keeravani, , Raj, Mani Sharma, Ramana Gogula, S.A. Raj Kumar, Sandeep Choutha, Micky-J-Mayer, Devisri Prasad, R.P. Patnaik, Chakri, Nihal, Kalyani Malik, Anup, Sunil Kashyap, Saluri Vasu Rao, Vasanth, Ravi Sankar, Saketha Sairam,Sai karthik, Pradeep Chandra, Shekhar Chandra,Jessigift, S.S. Thaman etc.,\n\nQuestion: What is the name of the Indian Playback singer who is also one of Viraj (Hari Prashanth's) parents?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"singer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Indian playback singer.\"\n    },\n    \"relationship_to_actor\": {\n      \"type\": \"string\",\n      \"description\": \"The relationship of the singer to the actor.\"\n    },\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The primary name of the actor.\"\n    },\n    \"actor_alternate_name\": {\n      \"type\": \"string\",\n      \"description\": \"An alternate name for the actor.\"\n    },\n    \"singer_primary_occupation\": {\n      \"type\": \"string\",\n      \"description\": \"The primary occupation of the singer.\"\n    },\n    \"singer_languages_sung_in\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of languages the singer has sung in.\"\n    }\n  },\n  \"required\": [\n    \"singer_name\",\n    \"relationship_to_actor\",\n    \"actor_name\",\n    \"singer_primary_occupation\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "singer_name",
-    "relationship_to_actor",
-    "actor_name",
-    "singer_primary_occupation"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "singer_name": {
+        "type": "string",
+        "description": "The name of the Indian playback singer."
+      },
+      "relationship_to_actor": {
+        "type": "string",
+        "description": "The relationship of the singer to the actor."
+      },
+      "actor_name": {
+        "type": "string",
+        "description": "The primary name of the actor."
+      },
+      "actor_alternate_name": {
+        "type": "string",
+        "description": "An alternate name for the actor."
+      },
+      "singer_primary_occupation": {
+        "type": "string",
+        "description": "The primary occupation of the singer."
+      },
+      "singer_languages_sung_in": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of languages the singer has sung in."
+      }
+    },
+    "required": [
+      "singer_name",
+      "relationship_to_actor",
+      "actor_name",
+      "singer_primary_occupation"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

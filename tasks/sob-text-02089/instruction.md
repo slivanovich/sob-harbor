@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2009 Baltimore Ravens season: The 2009 Baltimore Ravens season was the franchise's 14th season as a team in the National Football League (NFL).  The franchise entered the season off an 11–5 record in their previous season, a playoff berth, but a loss in the American Football Conference (AFC) Championship game against the eventual Super Bowl XLIII champions, the Pittsburgh Steelers.  The Ravens recorded nine victories to seven losses, although they were unable to win the AFC North division title.  However, due to various playoff clinching scenarios in the AFC, the Ravens were able to clinch a wild card playoff berth against the New England Patriots, which they won.  They, however, lost in the AFC playoffs divisional round against the eventual AFC Champion Indianapolis Colts; with this loss, the 2009 season came to an end for the Ravens.  For head coach John Harbaugh, this was his second year with the franchise, compiling an overall record of 20–12 in the regular season.
-
-2011 Baltimore Ravens season: The Baltimore Ravens season was the team's 16th in the National Football League and city of Baltimore, and the 14th to host home games at M&T Bank Stadium.  2011 marked one of the most successful seasons in Baltimore Ravens franchise history.  The Ravens completed the season with a 12–4 record, matching their record from 2010, and winning the AFC North division title for the third time in franchise history.  By earning a playoff berth in 2011, the Ravens set a franchise record by going to the postseason for four consecutive seasons.
-
-2012 Baltimore Ravens season: The Baltimore Ravens season was the team's 17th season in the National Football League.  While the Ravens failed to improve on their 12–4 record from 2011, they did still manage to clinch the AFC North division title in Week 16 and finish the regular season with a 10–6 record, sending them to their fifth straight playoffs, where they advanced to the AFC Championship Game for the second consecutive season, and then to the Super Bowl for the first time since 2000.  They won their second Super Bowl victory, 34–31 against the 49ers.  It was the first time in franchise history that the Ravens won consecutive division titles.  This marks head coach John Harbaugh's fifth season as the head coach of the franchise and fifth consecutive post-season appearance.  The Ravens played their home games at M&T Bank Stadium.
-
-2008 Baltimore Ravens season: The 2008 Baltimore Ravens season was the 13th season for the team in the NFL.  Despite having one of the toughest schedules in the NFL, the Ravens completed a major turnaround from the 2007 season, finishing the season with an 11–5 record and a playoff berth.  They defeated the Miami Dolphins in the Wild Card round of the playoffs, and then in the divisional round they defeated the Tennessee Titans, who had compiled the best record in the AFC over the regular season.  However, in the AFC championship game, the Ravens' season came to an end as they were defeated by eventual Super Bowl XLIII champion Pittsburgh Steelers.
-
-2015 Baltimore Ravens season: The Baltimore Ravens season was the franchise's 20th season in the National Football League (NFL) and the eighth under head coach John Harbaugh.  Although picked by some, including "Sports Illustrated"'s Peter King, to reach the Super Bowl, they had a disappointing season in part due to injuries.  14 of their games were decided by 8 points or less and Joe Flacco, Justin Forsett, Steve Smith, Sr., and Terrell Suggs all suffered season ending injuries.  They were eliminated from playoff contention in Week 14 with a loss to the Seattle Seahawks, in which they also suffered their ninth loss, resulting their first losing season in the Harbaugh–Flacco era and first since the collapse of the Brian Billick era.  Ultimately the Ravens finished with a 5–11 record and twenty-two players ended the season on Injured Reserve.
-
-2014 Baltimore Ravens season: The Baltimore Ravens season was the franchise's 19th season in the National Football League and the seventh under head coach John Harbaugh.  The Ravens improved upon their 8-8 record from 2013, when they missed the playoffs for the first time since 2007.  Additionally, the Ravens scored a franchise record 409 points and quarterback Joe Flacco passed for a career-high 27 touchdowns and 3,986 yards.
-
-2006 Baltimore Ravens season: The 2006 Baltimore Ravens season began with the team trying to improve on their 6–10 record in 2005.  The Ravens, for the first time in franchise history, started 4–0.  The Ravens' ended the regular season with a franchise record 13 wins.  The Ravens clinched the AFC North title and a 1st-round playoff bye.  Their season ended with a loss to the Indianapolis Colts in the divisional playoff game.  The Colts would go on to defeat the Chicago Bears in Super Bowl XLI.
-
-Terrell Suggs: Terrell Raymonn Suggs (born October 11, 1982), nicknamed "T-Sizzle" or "Sizzle", is an American football outside linebacker for the Baltimore Ravens of the National Football League (NFL).  He played college football at Arizona State, and was recognized as a unanimous All-American.  The Ravens selected him with the tenth overall pick in the 2003 NFL Draft, and he is now the team's all-time leader in sacks.  Suggs is a six-time Pro Bowl selection, a two time All-Pro and was the NFL Defensive Player of the Year in 2011.
-
-1988–89 Boston Celtics season: The 1988–89 Boston Celtics season was the 43rd season of the Boston Celtics in the National Basketball Association (NBA).  This was the first season for Jim Rodgers as head coach.  Rodgers had been a Celtics assistant coach prior to this season.  This year's Celtics team was severely hindered by the loss of star forward Larry Bird to a heel injury which required surgery.  Bird played only six early-season games before being lost to injury.  Initially, Bird was expected back in March, but it was delayed and ultimately became a season-ending injury.  The results were dramatic as the Celtics, who had averaged over 60 wins per season thus far in the 1980s, fell to just 42 wins in this season.  Coming into the season, the Celtics had been the Eastern Conference's #1 seed five years in a row.  This season they were the #8 seed, clinching a playoff spot in the season's final game.  This season included some bright spots, particularly the emergence of guard Reggie Lewis, who had been only a minimal bench contributor in his rookie season of 1987-88, but averaged nearly 20 points per game as a starter in 1988-89.
-
-2016 Baltimore Ravens season: The 2016 Baltimore Ravens season was the franchise's 21st season in the National Football League and the ninth under head coach John Harbaugh.  With a week 12 win over the Cincinnati Bengals, the Ravens improved upon their 5–11 record from 2015, finishing the season 8–8.  Despite the improvement, the Ravens failed to qualify for the playoffs for the second consecutive year after losing to the Steelers in Week 16.  It was the first time the Ravens missed the playoffs in consecutive seasons since 2004–2005.  They improved their position in the division, finishing in second place, after finishing in third place for the previous three seasons.  Since winning Super Bowl XLVII, they have gone a combined record of 32–34 (.484).
-
-Question: The 2015 Baltimore Ravens season included a season-ending injury to which outside linebacker?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "season_year": {
-      "type": "integer",
-      "description": "The year of the NFL season."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "team_name": {
-      "type": "string",
-      "description": "The name of the NFL team."
-    },
-    "injured_player": {
-      "type": "object",
-      "properties": {
-        "player_name": {
-          "type": "string",
-          "description": "The full name of the player who suffered a season-ending injury."
-        },
-        "position": {
-          "type": "string",
-          "description": "The position played by the injured player."
-        },
-        "injury_status": {
-          "type": "string",
-          "description": "The status of the injury, e.g., 'season-ending'."
-        }
-      },
-      "required": [
-        "player_name",
-        "position",
-        "injury_status"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\n2009 Baltimore Ravens season: The 2009 Baltimore Ravens season was the franchise's 14th season as a team in the National Football League (NFL).  The franchise entered the season off an 11–5 record in their previous season, a playoff berth, but a loss in the American Football Conference (AFC) Championship game against the eventual Super Bowl XLIII champions, the Pittsburgh Steelers.  The Ravens recorded nine victories to seven losses, although they were unable to win the AFC North division title.  However, due to various playoff clinching scenarios in the AFC, the Ravens were able to clinch a wild card playoff berth against the New England Patriots, which they won.  They, however, lost in the AFC playoffs divisional round against the eventual AFC Champion Indianapolis Colts; with this loss, the 2009 season came to an end for the Ravens.  For head coach John Harbaugh, this was his second year with the franchise, compiling an overall record of 20–12 in the regular season.\n\n2011 Baltimore Ravens season: The Baltimore Ravens season was the team's 16th in the National Football League and city of Baltimore, and the 14th to host home games at M&T Bank Stadium.  2011 marked one of the most successful seasons in Baltimore Ravens franchise history.  The Ravens completed the season with a 12–4 record, matching their record from 2010, and winning the AFC North division title for the third time in franchise history.  By earning a playoff berth in 2011, the Ravens set a franchise record by going to the postseason for four consecutive seasons.\n\n2012 Baltimore Ravens season: The Baltimore Ravens season was the team's 17th season in the National Football League.  While the Ravens failed to improve on their 12–4 record from 2011, they did still manage to clinch the AFC North division title in Week 16 and finish the regular season with a 10–6 record, sending them to their fifth straight playoffs, where they advanced to the AFC Championship Game for the second consecutive season, and then to the Super Bowl for the first time since 2000.  They won their second Super Bowl victory, 34–31 against the 49ers.  It was the first time in franchise history that the Ravens won consecutive division titles.  This marks head coach John Harbaugh's fifth season as the head coach of the franchise and fifth consecutive post-season appearance.  The Ravens played their home games at M&T Bank Stadium.\n\n2008 Baltimore Ravens season: The 2008 Baltimore Ravens season was the 13th season for the team in the NFL.  Despite having one of the toughest schedules in the NFL, the Ravens completed a major turnaround from the 2007 season, finishing the season with an 11–5 record and a playoff berth.  They defeated the Miami Dolphins in the Wild Card round of the playoffs, and then in the divisional round they defeated the Tennessee Titans, who had compiled the best record in the AFC over the regular season.  However, in the AFC championship game, the Ravens' season came to an end as they were defeated by eventual Super Bowl XLIII champion Pittsburgh Steelers.\n\n2015 Baltimore Ravens season: The Baltimore Ravens season was the franchise's 20th season in the National Football League (NFL) and the eighth under head coach John Harbaugh.  Although picked by some, including \"Sports Illustrated\"'s Peter King, to reach the Super Bowl, they had a disappointing season in part due to injuries.  14 of their games were decided by 8 points or less and Joe Flacco, Justin Forsett, Steve Smith, Sr., and Terrell Suggs all suffered season ending injuries.  They were eliminated from playoff contention in Week 14 with a loss to the Seattle Seahawks, in which they also suffered their ninth loss, resulting their first losing season in the Harbaugh–Flacco era and first since the collapse of the Brian Billick era.  Ultimately the Ravens finished with a 5–11 record and twenty-two players ended the season on Injured Reserve.\n\n2014 Baltimore Ravens season: The Baltimore Ravens season was the franchise's 19th season in the National Football League and the seventh under head coach John Harbaugh.  The Ravens improved upon their 8-8 record from 2013, when they missed the playoffs for the first time since 2007.  Additionally, the Ravens scored a franchise record 409 points and quarterback Joe Flacco passed for a career-high 27 touchdowns and 3,986 yards.\n\n2006 Baltimore Ravens season: The 2006 Baltimore Ravens season began with the team trying to improve on their 6–10 record in 2005.  The Ravens, for the first time in franchise history, started 4–0.  The Ravens' ended the regular season with a franchise record 13 wins.  The Ravens clinched the AFC North title and a 1st-round playoff bye.  Their season ended with a loss to the Indianapolis Colts in the divisional playoff game.  The Colts would go on to defeat the Chicago Bears in Super Bowl XLI.\n\nTerrell Suggs: Terrell Raymonn Suggs (born October 11, 1982), nicknamed \"T-Sizzle\" or \"Sizzle\", is an American football outside linebacker for the Baltimore Ravens of the National Football League (NFL).  He played college football at Arizona State, and was recognized as a unanimous All-American.  The Ravens selected him with the tenth overall pick in the 2003 NFL Draft, and he is now the team's all-time leader in sacks.  Suggs is a six-time Pro Bowl selection, a two time All-Pro and was the NFL Defensive Player of the Year in 2011.\n\n1988–89 Boston Celtics season: The 1988–89 Boston Celtics season was the 43rd season of the Boston Celtics in the National Basketball Association (NBA).  This was the first season for Jim Rodgers as head coach.  Rodgers had been a Celtics assistant coach prior to this season.  This year's Celtics team was severely hindered by the loss of star forward Larry Bird to a heel injury which required surgery.  Bird played only six early-season games before being lost to injury.  Initially, Bird was expected back in March, but it was delayed and ultimately became a season-ending injury.  The results were dramatic as the Celtics, who had averaged over 60 wins per season thus far in the 1980s, fell to just 42 wins in this season.  Coming into the season, the Celtics had been the Eastern Conference's #1 seed five years in a row.  This season they were the #8 seed, clinching a playoff spot in the season's final game.  This season included some bright spots, particularly the emergence of guard Reggie Lewis, who had been only a minimal bench contributor in his rookie season of 1987-88, but averaged nearly 20 points per game as a starter in 1988-89.\n\n2016 Baltimore Ravens season: The 2016 Baltimore Ravens season was the franchise's 21st season in the National Football League and the ninth under head coach John Harbaugh.  With a week 12 win over the Cincinnati Bengals, the Ravens improved upon their 5–11 record from 2015, finishing the season 8–8.  Despite the improvement, the Ravens failed to qualify for the playoffs for the second consecutive year after losing to the Steelers in Week 16.  It was the first time the Ravens missed the playoffs in consecutive seasons since 2004–2005.  They improved their position in the division, finishing in second place, after finishing in third place for the previous three seasons.  Since winning Super Bowl XLVII, they have gone a combined record of 32–34 (.484).\n\nQuestion: The 2015 Baltimore Ravens season included a season-ending injury to which outside linebacker?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"season_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year of the NFL season.\"\n    },\n    \"team_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the NFL team.\"\n    },\n    \"injured_player\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"player_name\": {\n          \"type\": \"string\",\n          \"description\": \"The full name of the player who suffered a season-ending injury.\"\n        },\n        \"position\": {\n          \"type\": \"string\",\n          \"description\": \"The position played by the injured player.\"\n        },\n        \"injury_status\": {\n          \"type\": \"string\",\n          \"description\": \"The status of the injury, e.g., 'season-ending'.\"\n        }\n      },\n      \"required\": [\n        \"player_name\",\n        \"position\",\n        \"injury_status\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"season_year\",\n    \"team_name\",\n    \"injured_player\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "season_year",
-    "team_name",
-    "injured_player"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "season_year": {
+        "type": "integer",
+        "description": "The year of the NFL season."
+      },
+      "team_name": {
+        "type": "string",
+        "description": "The name of the NFL team."
+      },
+      "injured_player": {
+        "type": "object",
+        "properties": {
+          "player_name": {
+            "type": "string",
+            "description": "The full name of the player who suffered a season-ending injury."
+          },
+          "position": {
+            "type": "string",
+            "description": "The position played by the injured player."
+          },
+          "injury_status": {
+            "type": "string",
+            "description": "The status of the injury, e.g., 'season-ending'."
+          }
+        },
+        "required": [
+          "player_name",
+          "position",
+          "injury_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "season_year",
+      "team_name",
+      "injured_player"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

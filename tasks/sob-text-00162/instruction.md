@@ -1,111 +1,88 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Alan Browning: Alan Browning (born Alan Brown; 23 March 1926 – 7 September 1979) was an English actor.  He is best remembered for portraying Alan Howard in the television series "Coronation Street", a role he played from 1969 to 1973.  He was married to his "Coronation Street" co-star Pat Phoenix from 23 December 1972, until his 1979 death from liver failure as a result of his heavy alcohol intake.  Phoenix played his on screen wife, Elsie Tanner, in "Coronation Street".
-
-The Road to Coronation Street: "The Road to Coronation Street" was written by Daran Little, a long-time archivist on "Coronation Street" who became a scriptwriter.  At the time, however, Little was a scriptwriter for "Coronation Street"' s rival, "EastEnders", broadcast on BBC One.  Though "Coronation Street" is, and always has been, broadcast on ITV, a competing network, the idea of documenting the show on the anniversary of its half century running was picked up by its natural rival, the BBC.  It has, however, been repeated several times on ITV3 and, on the occasion of Tony Warren's death, ITV.
-
-Sian Powers: Sian Powers is a fictional character from the British ITV soap opera, "Coronation Street", portrayed by Sacha Parkinson.  Sian was introduced as a love interest for Sophie Webster (Brooke Vincent).  Sian joined the cast of "Coronation Street" alongside Ben Richardson (Lucien Laviscount) in January 2009 as Sophie's schoolmates.  They soon form a new group of teenagers along with Ryan Connor (Ben Thompson).  Sian and girlfriend Sophie are "Coronation Street's" first lesbian couple.  It was announced on 29 May 2011 that Parkinson had quit her role, and she made her last on screen appearance on 30 December 2011.
-
-Ken Barlow: Kenneth "Ken" Barlow is a fictional character from the British ITV soap opera, "Coronation Street", played by William Roache.  Ken was created by Tony Warren as one of "Coronation Street's" original characters.  He debuted in the soap's first episode on 9 December 1960.  Having appeared continuously since the programme's inception, December 2010 marked Ken's 50th anniversary on-screen.  At this time, Roache officially became the longest-serving actor in a televised soap opera.  Roache was honoured at the 2010 Guinness World Records ceremony for the achievement, when he surpassed actor Don Hastings from the American soap opera "As the World Turns", who previously held this title.  Roache stated in 2010 that he has no plans to leave the role and will remain in "Coronation Street" for as long as they will have him.
-
-Bet Lynch: Elizabeth Theresa "Bet" Lynch (also Gilroy) is a fictional character from the British ITV soap opera, "Coronation Street".  Portrayed by Julie Goodyear, the character first appears on screen during the episode airing on Monday 23 May 1966.  The character returned in 1970, being made a barmaid at the Rovers Return Inn.  In 1985, she became the landlady of the pub.  In October 1995, unable to pay her debts, she fled Weatherfield.  She made brief comebacks in 2002 and 2003.
-
-Samantha Seager: Samantha Seager (born 1974) is a British actress born in Atherton, Lancashire or Greater Manchester (b. 1974), England who played the role of Jodie Morton in the soap opera "Coronation Street".
-
-Weatherfield: Weatherfield is a fictional town based on Salford, Lancashire, which is the setfting for the British ITV soap opera "Coronation Street".  Much of Weatherfield has been seen by viewers throughout the years, though the primary focus from the viewer's perspective is the Coronation Street, a cobbled street where many of the programme's characters live.  Weatherfield areas are often shot on location around Manchester, as its filming studios, the Granada Studios complex on Quay Street in Manchester city centre (closed 2013) and its new set MediaCityUK in Salford Quays (opened 2014), only house the outdoor sets of Coronation Street and its immediate surrounding streets.
-
-Julie Goodyear: Julie Goodyear, MBE (born Julie Kemp; 29 March 1942) is an English television actress and media personality.  She is known for playing pub landlady Bet Lynch (later Bet Gilroy) on British soap opera "Coronation Street".
-
-Elsie Tanner: Elsie Gregory (also Grimshaw, Tanner and Howard) is a fictional character from the British ITV soap opera, "Coronation Street", played by Pat Phoenix from the series inception in 1960 to 1973 and from 1976 until 1984.  Elsie Tanner was one of the original core characters on "Coronation Street" and appeared in the very first episode.  She is considered something of an icon in soap history and regarded as one of "Coronation Street's" greatest ever characters.
-
-Amy Barlow: Amy Katherine Barlow (also Patience Cropper and McDonald) is a fictional character from the British ITV soap opera, "Coronation Street", portrayed by Elle Mulvaney.  She was born on screen during the episode broadcast on 9 February 2004.  To date, the character has been portrayed by eight child actors; Holly Bowyer, Rebecca Pike, Louisa Morris, Rachel and Sarah Corker, Madison Hampson, Amber Chadwick and Mulvaney, making her the most recast character in Coronation Street.  Although Amy's surname has stayed Barlow, Chadwick was credited as Amy McDonald for three episodes from 2009 to 2010.
-
-Question: Where did one of the "Coronation Street" characters portrayed by an actress born in 1942 flee in 1995?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actress_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the actress."
-        },
-        "birth_year": {
-          "type": "integer",
-          "description": "The birth year of the actress."
-        }
-      },
-      "required": [
-        "name",
-        "birth_year"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "character_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the character portrayed by the actress."
-        },
-        "role": {
-          "type": "string",
-          "description": "The primary role or description of the character."
-        }
-      },
-      "required": [
-        "name",
-        "role"
-      ],
-      "additionalProperties": false
-    },
-    "event_details": {
-      "type": "object",
-      "properties": {
-        "year_of_event": {
-          "type": "integer",
-          "description": "The year the event occurred."
-        },
-        "action": {
-          "type": "string",
-          "description": "The action taken by the character."
-        },
-        "reason": {
-          "type": "string",
-          "description": "The reason for the character's action."
-        }
-      },
-      "required": [
-        "year_of_event",
-        "action",
-        "reason"
-      ],
-      "additionalProperties": false
-    },
-    "flee_location": {
-      "type": "string",
-      "description": "The location the character fled from."
+    {
+      "role": "user",
+      "content": "Context:\nAlan Browning: Alan Browning (born Alan Brown; 23 March 1926 – 7 September 1979) was an English actor.  He is best remembered for portraying Alan Howard in the television series \"Coronation Street\", a role he played from 1969 to 1973.  He was married to his \"Coronation Street\" co-star Pat Phoenix from 23 December 1972, until his 1979 death from liver failure as a result of his heavy alcohol intake.  Phoenix played his on screen wife, Elsie Tanner, in \"Coronation Street\".\n\nThe Road to Coronation Street: \"The Road to Coronation Street\" was written by Daran Little, a long-time archivist on \"Coronation Street\" who became a scriptwriter.  At the time, however, Little was a scriptwriter for \"Coronation Street\"' s rival, \"EastEnders\", broadcast on BBC One.  Though \"Coronation Street\" is, and always has been, broadcast on ITV, a competing network, the idea of documenting the show on the anniversary of its half century running was picked up by its natural rival, the BBC.  It has, however, been repeated several times on ITV3 and, on the occasion of Tony Warren's death, ITV.\n\nSian Powers: Sian Powers is a fictional character from the British ITV soap opera, \"Coronation Street\", portrayed by Sacha Parkinson.  Sian was introduced as a love interest for Sophie Webster (Brooke Vincent).  Sian joined the cast of \"Coronation Street\" alongside Ben Richardson (Lucien Laviscount) in January 2009 as Sophie's schoolmates.  They soon form a new group of teenagers along with Ryan Connor (Ben Thompson).  Sian and girlfriend Sophie are \"Coronation Street's\" first lesbian couple.  It was announced on 29 May 2011 that Parkinson had quit her role, and she made her last on screen appearance on 30 December 2011.\n\nKen Barlow: Kenneth \"Ken\" Barlow is a fictional character from the British ITV soap opera, \"Coronation Street\", played by William Roache.  Ken was created by Tony Warren as one of \"Coronation Street's\" original characters.  He debuted in the soap's first episode on 9 December 1960.  Having appeared continuously since the programme's inception, December 2010 marked Ken's 50th anniversary on-screen.  At this time, Roache officially became the longest-serving actor in a televised soap opera.  Roache was honoured at the 2010 Guinness World Records ceremony for the achievement, when he surpassed actor Don Hastings from the American soap opera \"As the World Turns\", who previously held this title.  Roache stated in 2010 that he has no plans to leave the role and will remain in \"Coronation Street\" for as long as they will have him.\n\nBet Lynch: Elizabeth Theresa \"Bet\" Lynch (also Gilroy) is a fictional character from the British ITV soap opera, \"Coronation Street\".  Portrayed by Julie Goodyear, the character first appears on screen during the episode airing on Monday 23 May 1966.  The character returned in 1970, being made a barmaid at the Rovers Return Inn.  In 1985, she became the landlady of the pub.  In October 1995, unable to pay her debts, she fled Weatherfield.  She made brief comebacks in 2002 and 2003.\n\nSamantha Seager: Samantha Seager (born 1974) is a British actress born in Atherton, Lancashire or Greater Manchester (b. 1974), England who played the role of Jodie Morton in the soap opera \"Coronation Street\".\n\nWeatherfield: Weatherfield is a fictional town based on Salford, Lancashire, which is the setfting for the British ITV soap opera \"Coronation Street\".  Much of Weatherfield has been seen by viewers throughout the years, though the primary focus from the viewer's perspective is the Coronation Street, a cobbled street where many of the programme's characters live.  Weatherfield areas are often shot on location around Manchester, as its filming studios, the Granada Studios complex on Quay Street in Manchester city centre (closed 2013) and its new set MediaCityUK in Salford Quays (opened 2014), only house the outdoor sets of Coronation Street and its immediate surrounding streets.\n\nJulie Goodyear: Julie Goodyear, MBE (born Julie Kemp; 29 March 1942) is an English television actress and media personality.  She is known for playing pub landlady Bet Lynch (later Bet Gilroy) on British soap opera \"Coronation Street\".\n\nElsie Tanner: Elsie Gregory (also Grimshaw, Tanner and Howard) is a fictional character from the British ITV soap opera, \"Coronation Street\", played by Pat Phoenix from the series inception in 1960 to 1973 and from 1976 until 1984.  Elsie Tanner was one of the original core characters on \"Coronation Street\" and appeared in the very first episode.  She is considered something of an icon in soap history and regarded as one of \"Coronation Street's\" greatest ever characters.\n\nAmy Barlow: Amy Katherine Barlow (also Patience Cropper and McDonald) is a fictional character from the British ITV soap opera, \"Coronation Street\", portrayed by Elle Mulvaney.  She was born on screen during the episode broadcast on 9 February 2004.  To date, the character has been portrayed by eight child actors; Holly Bowyer, Rebecca Pike, Louisa Morris, Rachel and Sarah Corker, Madison Hampson, Amber Chadwick and Mulvaney, making her the most recast character in Coronation Street.  Although Amy's surname has stayed Barlow, Chadwick was credited as Amy McDonald for three episodes from 2009 to 2010.\n\nQuestion: Where did one of the \"Coronation Street\" characters portrayed by an actress born in 1942 flee in 1995?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actress_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the actress.\"\n        },\n        \"birth_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The birth year of the actress.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"birth_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"character_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the character portrayed by the actress.\"\n        },\n        \"role\": {\n          \"type\": \"string\",\n          \"description\": \"The primary role or description of the character.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"role\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"event_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"year_of_event\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the event occurred.\"\n        },\n        \"action\": {\n          \"type\": \"string\",\n          \"description\": \"The action taken by the character.\"\n        },\n        \"reason\": {\n          \"type\": \"string\",\n          \"description\": \"The reason for the character's action.\"\n        }\n      },\n      \"required\": [\n        \"year_of_event\",\n        \"action\",\n        \"reason\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"flee_location\": {\n      \"type\": \"string\",\n      \"description\": \"The location the character fled from.\"\n    }\n  },\n  \"required\": [\n    \"actress_details\",\n    \"character_details\",\n    \"event_details\",\n    \"flee_location\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actress_details",
-    "character_details",
-    "event_details",
-    "flee_location"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actress_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the actress."
+          },
+          "birth_year": {
+            "type": "integer",
+            "description": "The birth year of the actress."
+          }
+        },
+        "required": [
+          "name",
+          "birth_year"
+        ],
+        "additionalProperties": false
+      },
+      "character_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the character portrayed by the actress."
+          },
+          "role": {
+            "type": "string",
+            "description": "The primary role or description of the character."
+          }
+        },
+        "required": [
+          "name",
+          "role"
+        ],
+        "additionalProperties": false
+      },
+      "event_details": {
+        "type": "object",
+        "properties": {
+          "year_of_event": {
+            "type": "integer",
+            "description": "The year the event occurred."
+          },
+          "action": {
+            "type": "string",
+            "description": "The action taken by the character."
+          },
+          "reason": {
+            "type": "string",
+            "description": "The reason for the character's action."
+          }
+        },
+        "required": [
+          "year_of_event",
+          "action",
+          "reason"
+        ],
+        "additionalProperties": false
+      },
+      "flee_location": {
+        "type": "string",
+        "description": "The location the character fled from."
+      }
+    },
+    "required": [
+      "actress_details",
+      "character_details",
+      "event_details",
+      "flee_location"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-SkyTeam: SkyTeam is an airline alliance.  Founded in June 2000, SkyTeam was the last of the three major airline alliances to be formed, the first two being Star Alliance and Oneworld.  s of 2014 , SkyTeam consists of 20 carriers from five continents and operates with the slogan "Caring more about you".  It also operates a cargo alliance named SkyTeam Cargo, which partners ten carriers, all of them SkyTeam members.  Its centralised management team, "SkyTeam Central", is based at the World Trade Center Schiphol Airport on the grounds of Amsterdam Airport Schiphol in Haarlemmermeer, Netherlands.
-
-Business alliance: A business alliance is an agreement between businesses, usually motivated by cost reduction and improved service for the customer.  Alliances are often bounded by a single agreement with equitable risk and opportunity share for all parties involved and are typically managed by an integrated project team.  An example of this is code sharing in airline alliances.
-
-Transport in Croatia: Transport in Croatia relies on several main modes, including transport by road, rail, water and air.  Road transport incorporates a comprehensive network of state, county and local routes augmented by a network of highways for long-distance travelling.  Water transport can be divided into sea, based on the ports of Rijeka, Ploče, Split and Zadar, and river transport, based on Sava, Danube and, to a lesser extent, Drava.  Croatia has 68 airports, nine of which are international.  The country also has several airlines, of which the most notable is Croatia Airlines.  Rail transport is fairly developed, with dual track and electrification not very common, although high-speed tilting trains are used on some routes.  However, bus still tends to be more common than rail as a mode of inter-city transport.
-
-Continent pass: A continent pass (usually called something like Europe (air)pass, Pacific (air)pass or American (air)pass) is a product and service of an airline alliance.  For a relatively low price the traveler can travel freely using all intra-continental flights the airline alliance offers on that continent.  There are restrictions on the number of miles, flights or stops the traveler can make.  Travelers can benefit from the extensive networks airline alliances offer and can earn reward points for each mile they fly by participating in the alliance's frequent flyer program.
-
-Round-the-world ticket: A round-the-world ticket (also known as round-the-world fare or RTW ticket in short) is a product that enables travellers to fly around the world for a relatively low price.  RTW tickets have existed for some time and in the past were generally offered through marketing agreements between airlines on several continents.  Now, they are almost universally offered by airline alliances such as SkyTeam, Star Alliance and Oneworld, or else by specialist travel agencies that will spend time helping customize a trip to the consumer's needs.  Prices vary but are generally in the range of 3000–5000 USD for an economy-class ticket.  Sometimes, depending on airline and stops, it can be as low as 1171 GBP (~ 1829.57 USD).  An alternative for a round-the-world ticket is a continent pass.
-
-Star Alliance: Star Alliance is one of the world's largest global airline alliances. Founded on 14 May 1997, its current CEO is Jeffrey Goh and its headquarters is located in Frankfurt am Main, Germany.  s of November 2016 , Star Alliance is the largest global alliance by passenger count with 689.98 million, ahead of SkyTeam (665.4 million) and Oneworld (557.4 million).  Its slogan is "The Way The Earth Connects".
-
-History of Kingfisher Airlines: Kingfisher Airlines was established in 2003.  It is owned by the Bengaluru based United Breweries Group.  The airline started commercial operations on 9 May 2005 with a fleet of four new Airbus A320-200s operating a flight from Mumbai to Delhi.  It started its international operations on 3 September 2008 by connecting Bengaluru with London.  Kingfisher's head office is located in Kingfisher House Western Express Highway Vile Parle (E) Mumbai – 400099 India and its registered office is located in UB City, Bangalore.  Its head office was previously in the Kingfisher House in Vile Parle (East), Mumbai.  In 2012 Vijay Mallya was trying to sell the Vile Parle Kingfisher House.  The airline had shut down its operations when on 20 October 2012 the DGCA suspended its flying license.  This suspension had been due to failure to give an effective response to the show-cause notice issued by DGCA.  However, The airline had locked out its employees for several days before this suspension.  On 25 October 2012, the employees agreed to return to work.  On 7 June 2010 Kingfisher became a member elect of the Oneworld airline alliance when it signed a formal membership agreement.  Kingfisher confirmed on 20 December 2011 that it will join the Oneworld airline alliance on 10 February 2012.  Kingfisher would have been the first Indian carrier to join one of the big airline alliances.  However, on 3 February 2012, owing to bad financial situation and two days after the International Air Transport Association (IATA) clearing house suspended Kingfisher Airlines; the airlines participation to Oneworld has been put on hold.
-
-Croatia Airlines: Croatia Airlines Ltd. is the state-owned flag carrier of Croatia.  It is headquartered in Buzin near Zagreb and operates domestic and international services mainly to European destinations.  Its main hub is Franjo Tuđman Airport with focus cities being Dubrovnik, Split, and Zadar.  Since November 2004, the airline has been a member of Star Alliance.
-
-Shenzhen Airlines: Shenzhen Airlines () is an airline headquartered in Shenzhen Bao'an International Airport in Bao'an District, Shenzhen, Guangdong, China.  It has been a member of Star Alliance since 2012, and is currently one of two Chinese airlines that is part of the global airline network.
-
-Royal Jordanian: Royal Jordanian Airlines (Arabic: الملكية الأردنية‎ ‎ ; transliterated: "Al-Malakiyyah al-'Urduniyyah") is the flag carrier airline of Jordan with its head office in Amman, Jordan, operating scheduled international services over four continents from its main base at Queen Alia International Airport at Amman (AMM) Jordan.  Royal Jordanian (RJ) is a member of the Arab Air Carriers Organization and of the Oneworld global airline alliance.  The airline operates over 500 flights per week, with at least 110 daily departures and was formerly known as Alia Royal Jordanian Airlines.
-
-Question: Croatia Airlines is a member of a global airline alliances headquartered in what city?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "airline_name": {
-      "type": "string",
-      "description": "The name of the airline in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "alliance_name": {
-      "type": "string",
-      "description": "The name of the airline alliance the airline is a member of."
-    },
-    "alliance_headquarters_city": {
-      "type": "string",
-      "description": "The city where the airline alliance's headquarters is located."
-    },
-    "alliance_headquarters_country": {
-      "type": "string",
-      "description": "The country where the airline alliance's headquarters is located."
-    },
-    "membership_year": {
-      "type": "integer",
-      "description": "The year the airline became a member of the alliance."
+    {
+      "role": "user",
+      "content": "Context:\nSkyTeam: SkyTeam is an airline alliance.  Founded in June 2000, SkyTeam was the last of the three major airline alliances to be formed, the first two being Star Alliance and Oneworld.  s of 2014 , SkyTeam consists of 20 carriers from five continents and operates with the slogan \"Caring more about you\".  It also operates a cargo alliance named SkyTeam Cargo, which partners ten carriers, all of them SkyTeam members.  Its centralised management team, \"SkyTeam Central\", is based at the World Trade Center Schiphol Airport on the grounds of Amsterdam Airport Schiphol in Haarlemmermeer, Netherlands.\n\nBusiness alliance: A business alliance is an agreement between businesses, usually motivated by cost reduction and improved service for the customer.  Alliances are often bounded by a single agreement with equitable risk and opportunity share for all parties involved and are typically managed by an integrated project team.  An example of this is code sharing in airline alliances.\n\nTransport in Croatia: Transport in Croatia relies on several main modes, including transport by road, rail, water and air.  Road transport incorporates a comprehensive network of state, county and local routes augmented by a network of highways for long-distance travelling.  Water transport can be divided into sea, based on the ports of Rijeka, Ploče, Split and Zadar, and river transport, based on Sava, Danube and, to a lesser extent, Drava.  Croatia has 68 airports, nine of which are international.  The country also has several airlines, of which the most notable is Croatia Airlines.  Rail transport is fairly developed, with dual track and electrification not very common, although high-speed tilting trains are used on some routes.  However, bus still tends to be more common than rail as a mode of inter-city transport.\n\nContinent pass: A continent pass (usually called something like Europe (air)pass, Pacific (air)pass or American (air)pass) is a product and service of an airline alliance.  For a relatively low price the traveler can travel freely using all intra-continental flights the airline alliance offers on that continent.  There are restrictions on the number of miles, flights or stops the traveler can make.  Travelers can benefit from the extensive networks airline alliances offer and can earn reward points for each mile they fly by participating in the alliance's frequent flyer program.\n\nRound-the-world ticket: A round-the-world ticket (also known as round-the-world fare or RTW ticket in short) is a product that enables travellers to fly around the world for a relatively low price.  RTW tickets have existed for some time and in the past were generally offered through marketing agreements between airlines on several continents.  Now, they are almost universally offered by airline alliances such as SkyTeam, Star Alliance and Oneworld, or else by specialist travel agencies that will spend time helping customize a trip to the consumer's needs.  Prices vary but are generally in the range of 3000–5000 USD for an economy-class ticket.  Sometimes, depending on airline and stops, it can be as low as 1171 GBP (~ 1829.57 USD).  An alternative for a round-the-world ticket is a continent pass.\n\nStar Alliance: Star Alliance is one of the world's largest global airline alliances. Founded on 14 May 1997, its current CEO is Jeffrey Goh and its headquarters is located in Frankfurt am Main, Germany.  s of November 2016 , Star Alliance is the largest global alliance by passenger count with 689.98 million, ahead of SkyTeam (665.4 million) and Oneworld (557.4 million).  Its slogan is \"The Way The Earth Connects\".\n\nHistory of Kingfisher Airlines: Kingfisher Airlines was established in 2003.  It is owned by the Bengaluru based United Breweries Group.  The airline started commercial operations on 9 May 2005 with a fleet of four new Airbus A320-200s operating a flight from Mumbai to Delhi.  It started its international operations on 3 September 2008 by connecting Bengaluru with London.  Kingfisher's head office is located in Kingfisher House Western Express Highway Vile Parle (E) Mumbai – 400099 India and its registered office is located in UB City, Bangalore.  Its head office was previously in the Kingfisher House in Vile Parle (East), Mumbai.  In 2012 Vijay Mallya was trying to sell the Vile Parle Kingfisher House.  The airline had shut down its operations when on 20 October 2012 the DGCA suspended its flying license.  This suspension had been due to failure to give an effective response to the show-cause notice issued by DGCA.  However, The airline had locked out its employees for several days before this suspension.  On 25 October 2012, the employees agreed to return to work.  On 7 June 2010 Kingfisher became a member elect of the Oneworld airline alliance when it signed a formal membership agreement.  Kingfisher confirmed on 20 December 2011 that it will join the Oneworld airline alliance on 10 February 2012.  Kingfisher would have been the first Indian carrier to join one of the big airline alliances.  However, on 3 February 2012, owing to bad financial situation and two days after the International Air Transport Association (IATA) clearing house suspended Kingfisher Airlines; the airlines participation to Oneworld has been put on hold.\n\nCroatia Airlines: Croatia Airlines Ltd. is the state-owned flag carrier of Croatia.  It is headquartered in Buzin near Zagreb and operates domestic and international services mainly to European destinations.  Its main hub is Franjo Tuđman Airport with focus cities being Dubrovnik, Split, and Zadar.  Since November 2004, the airline has been a member of Star Alliance.\n\nShenzhen Airlines: Shenzhen Airlines () is an airline headquartered in Shenzhen Bao'an International Airport in Bao'an District, Shenzhen, Guangdong, China.  It has been a member of Star Alliance since 2012, and is currently one of two Chinese airlines that is part of the global airline network.\n\nRoyal Jordanian: Royal Jordanian Airlines (Arabic: الملكية الأردنية‎ ‎ ; transliterated: \"Al-Malakiyyah al-'Urduniyyah\") is the flag carrier airline of Jordan with its head office in Amman, Jordan, operating scheduled international services over four continents from its main base at Queen Alia International Airport at Amman (AMM) Jordan.  Royal Jordanian (RJ) is a member of the Arab Air Carriers Organization and of the Oneworld global airline alliance.  The airline operates over 500 flights per week, with at least 110 daily departures and was formerly known as Alia Royal Jordanian Airlines.\n\nQuestion: Croatia Airlines is a member of a global airline alliances headquartered in what city?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"airline_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the airline in question.\"\n    },\n    \"alliance_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the airline alliance the airline is a member of.\"\n    },\n    \"alliance_headquarters_city\": {\n      \"type\": \"string\",\n      \"description\": \"The city where the airline alliance's headquarters is located.\"\n    },\n    \"alliance_headquarters_country\": {\n      \"type\": \"string\",\n      \"description\": \"The country where the airline alliance's headquarters is located.\"\n    },\n    \"membership_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the airline became a member of the alliance.\"\n    }\n  },\n  \"required\": [\n    \"airline_name\",\n    \"alliance_name\",\n    \"alliance_headquarters_city\",\n    \"alliance_headquarters_country\",\n    \"membership_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "airline_name",
-    "alliance_name",
-    "alliance_headquarters_city",
-    "alliance_headquarters_country",
-    "membership_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "airline_name": {
+        "type": "string",
+        "description": "The name of the airline in question."
+      },
+      "alliance_name": {
+        "type": "string",
+        "description": "The name of the airline alliance the airline is a member of."
+      },
+      "alliance_headquarters_city": {
+        "type": "string",
+        "description": "The city where the airline alliance's headquarters is located."
+      },
+      "alliance_headquarters_country": {
+        "type": "string",
+        "description": "The country where the airline alliance's headquarters is located."
+      },
+      "membership_year": {
+        "type": "integer",
+        "description": "The year the airline became a member of the alliance."
+      }
+    },
+    "required": [
+      "airline_name",
+      "alliance_name",
+      "alliance_headquarters_city",
+      "alliance_headquarters_country",
+      "membership_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

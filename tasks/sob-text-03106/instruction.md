@@ -1,72 +1,49 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Albert Pierrepoint: Albert Pierrepoint ( ; 30 March 1905 – 10 July 1992) was a long-serving hangman in England.  He executed at least 400 people, including William Joyce ("Lord Haw-Haw") and John Amery.  In Germany and Austria, after the Second World War, he executed some 200 people who had been convicted of war crimes.  In England, Pierrepoint hanged Timothy Evans for a crime committed by his neighbour John Christie, who was also hanged by Pierrepoint.
-
-Ban Khor Sign Language: Ban Khor Sign Language (BKSL) is a village sign language used by at least 400 people of a rice-farming community in the village of Ban Khor in a remote area of Isan (northeastern Thailand).  Known locally as "pasa kidd" ('language of the mute'), it developed in the 1930s due to a high number of deaf people.  Estimated number of users in 2009 was 16 deaf and approximately 400 hearing out of 2741 villagers.  It is a language isolate, independent of the other sign languages of Thailand such as Old Bangkok Sign Language and the national Thai Sign Language.
-
-Great Scottish Witch Hunt of 1597: The Great Scottish Witch Hunt of 1597 was a series of nationwide witch trials that took place in the whole of Scotland from March to October 1597.  At least 400 people were put on trial for witchcraft and various forms of diabolism during the witch hunt.  The exact number of those executed is unknown, but is believed to be about 200.  The Great Scottish Witch Hunt of 1597 was the second of five nationwide witch hunts in Scottish history, the others being The Great Scottish Witch Hunt of 1590–91, The Great Scottish Witch Hunt of 1628–1631, The Great Scottish witch hunt of 1649–50 and The Great Scottish Witch Hunt of 1661–62.
-
-Hurricane Hazel: Hurricane Hazel was the deadliest and costliest hurricane of the 1954 Atlantic hurricane season.  The storm killed at least 400 people in Haiti before striking the United States near the border between North and South Carolina, as a Category 4 hurricane.  After causing 95 fatalities in the US, Hazel struck Canada as an extratropical storm, raising the death toll by 81 people, mostly in Toronto.  As a result of the high death toll and the damage caused by Hazel, its name was retired from use for North Atlantic hurricanes.
-
-John Amery: John Amery (14 March 1912 – 19 December 1945) was a British fascist who proposed to the Wehrmacht the formation of a British volunteer force (that subsequently became the British Free Corps) and made recruitment efforts and propaganda broadcasts for Nazi Germany.  Because of such activities he was executed for treason after the war.
-
-1984 Soviet Union tornado outbreak: The 1984 Soviet Union tornado outbreak, also known as the 1984 Ivanovo tornado outbreak, was one of only three disastrous tornado outbreaks in modern Russian history (one of the others being the 1904 Moscow tornado) and the third-deadliest tornado outbreak in European history.  Occurring on June 9, 1984, the outbreak struck the Ivanovo and Yaroslavl regions north of Moscow, an area over 400,000 km.  At least two of the eleven known tornadoes were violent events, equal to F4 or F5 in intensity on the Fujita scale, based upon observed damages.  The deadliest single tornado was posthumously rated at F5 intensity and killed at least 92 people along its long path near Ivanovo and other towns.  The tornado, up to 800 m wide, caused extreme damage, reportedly annihilating steel-reinforced concrete structures and throwing heavy objects of 320000 kg for distances up to 200 m .  Another tornado, assessed to have been at least F4 and possibly F5 in intensity, occurred at Kostroma.  Severe thunderstorms also produced hail up to 1 kg in weight, among the heaviest hailstones confirmed worldwide.  In all, the entire tornado outbreak killed at least 400 people and injured 213.
-
-Eddy Brown: Edwin Brown (28 February 1926 – 12 July 2012) was an English footballer who played as a centre forward.  He played professionally for a number of clubs, but the peak of his career was spent with Birmingham City during their most successful period in the 1950s.  Over a professional career of nearly 400 appearances in the Football League, he scored at a rate of very nearly one goal every two games.  He was a pioneer of the goal celebration.
-
-Edwin Brown (actor): He had a lengthy career in television, often playing policemen or similar roles.  His film roles included a prison warder in the comedy "Two-Way Stretch" (1960), and Albert Pierrepoint, the hangman, in "10 Rillington Place" (1971).
-
-Mitch Brown (rugby league): Mitchell Ronald Edwin Brown (born 7 November 1987 in Sutherland, New South Wales) is an Australian professional footballer who currently plays for the Leigh Centurions in the Super League.  He previously played for the Canterbury-Bankstown Bulldogs, Cronulla-Sutherland Sharks and Wests Tigers.
-
-Handicraft Guild Building: The Handicraft Guild Building is located at 89 10th Street South, Minneapolis, Minnesota, United States.  It was designed in 1907 by architect William Channing Whitney in the Georgian Revival/Arts & Crafts style to house The Handicraft Guild.  An addition to the Handicraft Guild was designed in 1914 by architects Edwin Hawley Hewitt and Edwin Brown at 1000-1006 Marquette Avenue South Minneapolis, Minnesota.
-
-Question: What is the name of the movie in which Edwin Brown plays a man that executed at least 400 people, including William Joyce and John Amery?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "movie_title": {
-      "type": "string",
-      "description": "The title of the movie."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor who played the role."
-    },
-    "character_name": {
-      "type": "string",
-      "description": "The name of the character played by the actor."
-    },
-    "executions_count": {
-      "type": "integer",
-      "description": "The minimum number of people executed by the character."
-    },
-    "executed_individuals": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of specific individuals executed by the character."
+    {
+      "role": "user",
+      "content": "Context:\nAlbert Pierrepoint: Albert Pierrepoint ( ; 30 March 1905 – 10 July 1992) was a long-serving hangman in England.  He executed at least 400 people, including William Joyce (\"Lord Haw-Haw\") and John Amery.  In Germany and Austria, after the Second World War, he executed some 200 people who had been convicted of war crimes.  In England, Pierrepoint hanged Timothy Evans for a crime committed by his neighbour John Christie, who was also hanged by Pierrepoint.\n\nBan Khor Sign Language: Ban Khor Sign Language (BKSL) is a village sign language used by at least 400 people of a rice-farming community in the village of Ban Khor in a remote area of Isan (northeastern Thailand).  Known locally as \"pasa kidd\" ('language of the mute'), it developed in the 1930s due to a high number of deaf people.  Estimated number of users in 2009 was 16 deaf and approximately 400 hearing out of 2741 villagers.  It is a language isolate, independent of the other sign languages of Thailand such as Old Bangkok Sign Language and the national Thai Sign Language.\n\nGreat Scottish Witch Hunt of 1597: The Great Scottish Witch Hunt of 1597 was a series of nationwide witch trials that took place in the whole of Scotland from March to October 1597.  At least 400 people were put on trial for witchcraft and various forms of diabolism during the witch hunt.  The exact number of those executed is unknown, but is believed to be about 200.  The Great Scottish Witch Hunt of 1597 was the second of five nationwide witch hunts in Scottish history, the others being The Great Scottish Witch Hunt of 1590–91, The Great Scottish Witch Hunt of 1628–1631, The Great Scottish witch hunt of 1649–50 and The Great Scottish Witch Hunt of 1661–62.\n\nHurricane Hazel: Hurricane Hazel was the deadliest and costliest hurricane of the 1954 Atlantic hurricane season.  The storm killed at least 400 people in Haiti before striking the United States near the border between North and South Carolina, as a Category 4 hurricane.  After causing 95 fatalities in the US, Hazel struck Canada as an extratropical storm, raising the death toll by 81 people, mostly in Toronto.  As a result of the high death toll and the damage caused by Hazel, its name was retired from use for North Atlantic hurricanes.\n\nJohn Amery: John Amery (14 March 1912 – 19 December 1945) was a British fascist who proposed to the Wehrmacht the formation of a British volunteer force (that subsequently became the British Free Corps) and made recruitment efforts and propaganda broadcasts for Nazi Germany.  Because of such activities he was executed for treason after the war.\n\n1984 Soviet Union tornado outbreak: The 1984 Soviet Union tornado outbreak, also known as the 1984 Ivanovo tornado outbreak, was one of only three disastrous tornado outbreaks in modern Russian history (one of the others being the 1904 Moscow tornado) and the third-deadliest tornado outbreak in European history.  Occurring on June 9, 1984, the outbreak struck the Ivanovo and Yaroslavl regions north of Moscow, an area over 400,000 km.  At least two of the eleven known tornadoes were violent events, equal to F4 or F5 in intensity on the Fujita scale, based upon observed damages.  The deadliest single tornado was posthumously rated at F5 intensity and killed at least 92 people along its long path near Ivanovo and other towns.  The tornado, up to 800 m wide, caused extreme damage, reportedly annihilating steel-reinforced concrete structures and throwing heavy objects of 320000 kg for distances up to 200 m .  Another tornado, assessed to have been at least F4 and possibly F5 in intensity, occurred at Kostroma.  Severe thunderstorms also produced hail up to 1 kg in weight, among the heaviest hailstones confirmed worldwide.  In all, the entire tornado outbreak killed at least 400 people and injured 213.\n\nEddy Brown: Edwin Brown (28 February 1926 – 12 July 2012) was an English footballer who played as a centre forward.  He played professionally for a number of clubs, but the peak of his career was spent with Birmingham City during their most successful period in the 1950s.  Over a professional career of nearly 400 appearances in the Football League, he scored at a rate of very nearly one goal every two games.  He was a pioneer of the goal celebration.\n\nEdwin Brown (actor): He had a lengthy career in television, often playing policemen or similar roles.  His film roles included a prison warder in the comedy \"Two-Way Stretch\" (1960), and Albert Pierrepoint, the hangman, in \"10 Rillington Place\" (1971).\n\nMitch Brown (rugby league): Mitchell Ronald Edwin Brown (born 7 November 1987 in Sutherland, New South Wales) is an Australian professional footballer who currently plays for the Leigh Centurions in the Super League.  He previously played for the Canterbury-Bankstown Bulldogs, Cronulla-Sutherland Sharks and Wests Tigers.\n\nHandicraft Guild Building: The Handicraft Guild Building is located at 89 10th Street South, Minneapolis, Minnesota, United States.  It was designed in 1907 by architect William Channing Whitney in the Georgian Revival/Arts & Crafts style to house The Handicraft Guild.  An addition to the Handicraft Guild was designed in 1914 by architects Edwin Hawley Hewitt and Edwin Brown at 1000-1006 Marquette Avenue South Minneapolis, Minnesota.\n\nQuestion: What is the name of the movie in which Edwin Brown plays a man that executed at least 400 people, including William Joyce and John Amery?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"movie_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the movie.\"\n    },\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor who played the role.\"\n    },\n    \"character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character played by the actor.\"\n    },\n    \"executions_count\": {\n      \"type\": \"integer\",\n      \"description\": \"The minimum number of people executed by the character.\"\n    },\n    \"executed_individuals\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of specific individuals executed by the character.\"\n    }\n  },\n  \"required\": [\n    \"movie_title\",\n    \"actor_name\",\n    \"character_name\",\n    \"executions_count\",\n    \"executed_individuals\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "movie_title",
-    "actor_name",
-    "character_name",
-    "executions_count",
-    "executed_individuals"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "movie_title": {
+        "type": "string",
+        "description": "The title of the movie."
+      },
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor who played the role."
+      },
+      "character_name": {
+        "type": "string",
+        "description": "The name of the character played by the actor."
+      },
+      "executions_count": {
+        "type": "integer",
+        "description": "The minimum number of people executed by the character."
+      },
+      "executed_individuals": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of specific individuals executed by the character."
+      }
+    },
+    "required": [
+      "movie_title",
+      "actor_name",
+      "character_name",
+      "executions_count",
+      "executed_individuals"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

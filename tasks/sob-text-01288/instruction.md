@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Titanium (band): Titanium is a New Zealand pop boy band formed in Auckland in 2012 from the winners of "The Edge" radio station's competition to create New Zealand's second boy band.  The Edge radio station hosted auditions across New Zealand and eventually six young men were selected for the group consisting of members, Zac Taylor, Andrew Papas, Jordi Webber, Shaquille Paranihi-Ngauma, Haydn Linsley and T.K Paradza.  They released their debut single, "Come On Home".  The single debuted at number one on the official New Zealand Singles Chart on 17 September 2012.
-
-My Girl (Arashi song): "My Girl" (マイガール , Mai Gāru ) is a song recorded by Japanese pop boy band Arashi.  It was released on November 11, 2009 by their record label J Storm.  "My Girl" was used as the opening theme song to the drama of the same name which stars Arashi member, Masaki Aiba.  "My Girl" was released as a CD single in two formats: a regular edition and a limited edition.  The former comes with two B-sides and the instrumental of all the songs, while the latter comes with the B-side "Tokei Jikake no Umbrella" (時計じかけのアンブレラ , Clockwork Umbrella ) and a DVD.
-
-Everything (Arashi song): "Everything" is a song recorded by Japanese pop boy band Arashi.  It was released on July 1, 2009 by their record label J Storm.  "Everything" was used as the theme song for the au by KDDI commercials, featuring Arashi as the endorsers.  It was released as a CD single in two formats: a regular edition and a limited edition.  While both editions comes with the B-side song "Season", the former comes with the instrumental of all the songs, while the latter comes a DVD.
-
-One Direction: One Direction (commonly abbreviated as 1D) are an English-Irish pop boy band based in London, composed of Niall Horan, Liam Payne, Harry Styles, Louis Tomlinson, and previously, Zayn Malik until his departure from the band on 25 March 2015.  The group signed with Simon Cowell's record label Syco Records after forming and finishing third in the seventh series of the British televised singing competition "The X Factor" in 2010.  Propelled to international success by social media, One Direction's five albums, "Up All Night" (2011), "Take Me Home" (2012), "Midnight Memories" (2013), "Four" (2014), and "Made in the A.M." (2015), topped charts in most major markets, and generated hit singles including "What Makes You Beautiful", "Live While We're Young", "Best Song Ever", "Story of My Life", and "Drag Me Down".
-
-Lou Pearlman: Louis Jay "Lou" Pearlman (June 19, 1954 – August 19, 2016) was an American record producer and fraudster.  He was the manager of successful 1990s boy bands such as Backstreet Boys and NSYNC.  In 2006, he was accused of running one of the largest and longest-running Ponzi schemes in history, leaving more than $300 million in debts.  After being apprehended, he pleaded guilty to conspiracy, money laundering, and making false statements during a bankruptcy proceeding.  In 2008, Pearlman was convicted and sentenced to up to 25 years in prison.  He died in federal custody in 2016.
-
-Good Entertainment: Good Entertainment (official name: Good Entertainment Media Group, also known as Good!  Enter) was a record label owned by CJ Music that was formed April 2003; they produced the popular boy band Shinhwa (after the band left SM Entertainment).  The company went inactive by 2009.
-
-B3 (band): B3 was an American pop boy band from New York City.  They were formed in 2001 and were first produced by O-Jay of German dance band Real McCoy.  Original members were Timothy Andrew Cruz (2001–2004), John Steven Sutherland (2001–2004) and Rod Michael (2001–2002).  When Michael left in 2002, Blair Madison Late (2002–2004) joined in.  Tim Cruz was previously, in the late 1990s, a member of the boy band React.
-
-US5: US5 was a multinational pop boy band.  The band originated in 2005 on the German RTL II television reality show "Big in America" and debuted in June of the same year on Lou Pearlman’s Transcontinental label.  US5 became successful throughout central Europe with their first album "Here We Go" and with several hit records thereafter.
-
-Epitaph Records: Epitaph Records is a Hollywood-based independent record label owned by Bad Religion guitarist Brett Gurewitz.  The label was originally "just a logo and a P.O. box" created in the 1980s for the purpose of selling Bad Religion records, but has evolved into a large independent record label.  Gurewitz took the name from a King Crimson song of the same name.  Throughout the 1980s and 1990s most of the bands on Epitaph were punk and pop punk groups, while there are many post-hardcore and bands signed to the label as well.  A large portion of the record label, known as Hellcat Records, is owned by Tim Armstrong, frontman of the punk rock band Rancid.  Several sister-labels also exist, such as ANTI-, Burning Heart Records, Fat Possum Records, Hellcat Records and Heart & Skull Records that have signed other types of bands.  The label has recently been added to the Forza Horizon franchise as a radio station.
-
-All the Best! 1999–2009: All the Best!  1999–2009 (stylized as ALL the BEST!  1999–2009) is the third greatest hits album by Japanese pop boy band Arashi.  The album was released on August 19, 2009 in Japan under their record label J Storm in two editions, a limited 3CD version and a regular 2CD version.  The album debuted at number-one on the "Oricon" album weekly chart, selling 753,430 copies.  Thirteen days after the release of "All the Best!  1999–2009" the album sold over a million copies.  As of September 22, 2009, "All the Best!  1999–2009" had overtaken "Supermarket Fantasy" to claim the title of best-selling album of the year in Japan.  On December 18, 2009, "Oricon" officially ranked "All the Best!  1999–2009" as the bestselling album in Japan for 2009, with over 1.43 million copies sold.
-
-Question:  US5 was a multinational pop boy band that debuted in june 2005 on a record label owned by a produced who was sentenced to how many years in prison?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "band_name": {
-      "type": "string",
-      "description": "The name of the boy band."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "record_label_owner_name": {
-      "type": "string",
-      "description": "The name of the owner of the record label the band debuted on."
-    },
-    "owner_prison_sentence_years": {
-      "type": "integer",
-      "description": "The number of years the record label owner was sentenced to prison."
-    },
-    "sentence_description": {
-      "type": "string",
-      "description": "A description of the prison sentence, including any qualifiers like 'up to'."
+    {
+      "role": "user",
+      "content": "Context:\nTitanium (band): Titanium is a New Zealand pop boy band formed in Auckland in 2012 from the winners of \"The Edge\" radio station's competition to create New Zealand's second boy band.  The Edge radio station hosted auditions across New Zealand and eventually six young men were selected for the group consisting of members, Zac Taylor, Andrew Papas, Jordi Webber, Shaquille Paranihi-Ngauma, Haydn Linsley and T.K Paradza.  They released their debut single, \"Come On Home\".  The single debuted at number one on the official New Zealand Singles Chart on 17 September 2012.\n\nMy Girl (Arashi song): \"My Girl\" (マイガール , Mai Gāru ) is a song recorded by Japanese pop boy band Arashi.  It was released on November 11, 2009 by their record label J Storm.  \"My Girl\" was used as the opening theme song to the drama of the same name which stars Arashi member, Masaki Aiba.  \"My Girl\" was released as a CD single in two formats: a regular edition and a limited edition.  The former comes with two B-sides and the instrumental of all the songs, while the latter comes with the B-side \"Tokei Jikake no Umbrella\" (時計じかけのアンブレラ , Clockwork Umbrella ) and a DVD.\n\nEverything (Arashi song): \"Everything\" is a song recorded by Japanese pop boy band Arashi.  It was released on July 1, 2009 by their record label J Storm.  \"Everything\" was used as the theme song for the au by KDDI commercials, featuring Arashi as the endorsers.  It was released as a CD single in two formats: a regular edition and a limited edition.  While both editions comes with the B-side song \"Season\", the former comes with the instrumental of all the songs, while the latter comes a DVD.\n\nOne Direction: One Direction (commonly abbreviated as 1D) are an English-Irish pop boy band based in London, composed of Niall Horan, Liam Payne, Harry Styles, Louis Tomlinson, and previously, Zayn Malik until his departure from the band on 25 March 2015.  The group signed with Simon Cowell's record label Syco Records after forming and finishing third in the seventh series of the British televised singing competition \"The X Factor\" in 2010.  Propelled to international success by social media, One Direction's five albums, \"Up All Night\" (2011), \"Take Me Home\" (2012), \"Midnight Memories\" (2013), \"Four\" (2014), and \"Made in the A.M.\" (2015), topped charts in most major markets, and generated hit singles including \"What Makes You Beautiful\", \"Live While We're Young\", \"Best Song Ever\", \"Story of My Life\", and \"Drag Me Down\".\n\nLou Pearlman: Louis Jay \"Lou\" Pearlman (June 19, 1954 – August 19, 2016) was an American record producer and fraudster.  He was the manager of successful 1990s boy bands such as Backstreet Boys and NSYNC.  In 2006, he was accused of running one of the largest and longest-running Ponzi schemes in history, leaving more than $300 million in debts.  After being apprehended, he pleaded guilty to conspiracy, money laundering, and making false statements during a bankruptcy proceeding.  In 2008, Pearlman was convicted and sentenced to up to 25 years in prison.  He died in federal custody in 2016.\n\nGood Entertainment: Good Entertainment (official name: Good Entertainment Media Group, also known as Good!  Enter) was a record label owned by CJ Music that was formed April 2003; they produced the popular boy band Shinhwa (after the band left SM Entertainment).  The company went inactive by 2009.\n\nB3 (band): B3 was an American pop boy band from New York City.  They were formed in 2001 and were first produced by O-Jay of German dance band Real McCoy.  Original members were Timothy Andrew Cruz (2001–2004), John Steven Sutherland (2001–2004) and Rod Michael (2001–2002).  When Michael left in 2002, Blair Madison Late (2002–2004) joined in.  Tim Cruz was previously, in the late 1990s, a member of the boy band React.\n\nUS5: US5 was a multinational pop boy band.  The band originated in 2005 on the German RTL II television reality show \"Big in America\" and debuted in June of the same year on Lou Pearlman’s Transcontinental label.  US5 became successful throughout central Europe with their first album \"Here We Go\" and with several hit records thereafter.\n\nEpitaph Records: Epitaph Records is a Hollywood-based independent record label owned by Bad Religion guitarist Brett Gurewitz.  The label was originally \"just a logo and a P.O. box\" created in the 1980s for the purpose of selling Bad Religion records, but has evolved into a large independent record label.  Gurewitz took the name from a King Crimson song of the same name.  Throughout the 1980s and 1990s most of the bands on Epitaph were punk and pop punk groups, while there are many post-hardcore and bands signed to the label as well.  A large portion of the record label, known as Hellcat Records, is owned by Tim Armstrong, frontman of the punk rock band Rancid.  Several sister-labels also exist, such as ANTI-, Burning Heart Records, Fat Possum Records, Hellcat Records and Heart & Skull Records that have signed other types of bands.  The label has recently been added to the Forza Horizon franchise as a radio station.\n\nAll the Best! 1999–2009: All the Best!  1999–2009 (stylized as ALL the BEST!  1999–2009) is the third greatest hits album by Japanese pop boy band Arashi.  The album was released on August 19, 2009 in Japan under their record label J Storm in two editions, a limited 3CD version and a regular 2CD version.  The album debuted at number-one on the \"Oricon\" album weekly chart, selling 753,430 copies.  Thirteen days after the release of \"All the Best!  1999–2009\" the album sold over a million copies.  As of September 22, 2009, \"All the Best!  1999–2009\" had overtaken \"Supermarket Fantasy\" to claim the title of best-selling album of the year in Japan.  On December 18, 2009, \"Oricon\" officially ranked \"All the Best!  1999–2009\" as the bestselling album in Japan for 2009, with over 1.43 million copies sold.\n\nQuestion:  US5 was a multinational pop boy band that debuted in june 2005 on a record label owned by a produced who was sentenced to how many years in prison?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the boy band.\"\n    },\n    \"record_label_owner_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the owner of the record label the band debuted on.\"\n    },\n    \"owner_prison_sentence_years\": {\n      \"type\": \"integer\",\n      \"description\": \"The number of years the record label owner was sentenced to prison.\"\n    },\n    \"sentence_description\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the prison sentence, including any qualifiers like 'up to'.\"\n    }\n  },\n  \"required\": [\n    \"band_name\",\n    \"record_label_owner_name\",\n    \"owner_prison_sentence_years\",\n    \"sentence_description\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "band_name",
-    "record_label_owner_name",
-    "owner_prison_sentence_years",
-    "sentence_description"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "band_name": {
+        "type": "string",
+        "description": "The name of the boy band."
+      },
+      "record_label_owner_name": {
+        "type": "string",
+        "description": "The name of the owner of the record label the band debuted on."
+      },
+      "owner_prison_sentence_years": {
+        "type": "integer",
+        "description": "The number of years the record label owner was sentenced to prison."
+      },
+      "sentence_description": {
+        "type": "string",
+        "description": "A description of the prison sentence, including any qualifiers like 'up to'."
+      }
+    },
+    "required": [
+      "band_name",
+      "record_label_owner_name",
+      "owner_prison_sentence_years",
+      "sentence_description"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Hell's Kitchen (U.S. season 16): The sixteenth season of the American competitive reality television series "Hell's Kitchen" premiered on September 23, 2016 on Fox.  Event Chef Kimberly-Ann "Ryan" Ryan from Traverse City, Michigan won the competition and a head chef position at Yardbird Southern Table & Bar at The Venetian Las Vegas.  In addition to Gordon Ramsay, who returned as host/head chef, Marino Monferrato and Aaron Mitrano returned as maitre d' and blue kitchen sous chef respectively while Andi van Willigan-Cutspec resumed her role as sous chef for the red team after Season 10 winner Christina Wilson filled in for her in the previous season while she got married.  This was also the first season since Season 13 to take a hiatus due to Fox's coverage of the 2016 World Series in addition to the holiday breaks.  The remaining episodes of the season were moved to Thursday nights on January 5, 2017 as part of the network's midseason schedule.
-
-List of Red vs. Blue episodes: "Red vs. Blue", often abbreviated as "RvB", is a comic science fiction video web series created by Rooster Teeth Productions and distributed through the Internet and on DVD.  The story centers on two opposing teams of soldiers fighting a civil war in the middle of a desolate box canyon (Blood Gulch), in a parody of first-person shooter (FPS) games, military life, and science fiction films.  Initially intended to be a short series of six to eight episodes, the project quickly and unexpectedly achieved significant popularity following its Internet premiere on April 1, 2003.  In its run, the series has had thirteen full seasons and five mini-series that extended the series' plot.  The fifth season of the original " Blood Gulch Chronicles" series ended with episode 100, released on June 28, 2007.  Three mini-series—"", "", and "" —and the three-part "Recollection" trilogy containing the full-length "" (2008), "" (2009) and "" (2010) series (Seasons 6-8) have extended the plot.  The "Project Freelancer" saga began with "" (2011) and follows two separate stories: a continuation to the "Recollection" trilogy and a prequel set before the events of "The Blood Gulch Chronicles".  The two stories are continued in two further mini-series - "" and "" - and concluded in "" (2012).  Burnie Burns confirmed in "What's Trending" that the series will continue with "", which premiered on June 14, 2013; and Season 11 was later followed by "Season 12" and "Season 13".  In 2016, "Season 14" was released as the first anthology season, consisting of several canon and non-canon stories created by in-house writers as well as several outside writers; Freddie Wong of RocketJump, Chris Roberson (creator of iZOMBIE), Ben Singer and Chad James of ScrewAttack (hosts of DEATH BATTLE!) , Ernest Cline (author of Ready Player One and Armada), Arin Hanson and Dan Avidan of Game Grumps, etc. "Season 15" debuted in 2017, continuing the canonical story following the events of "Season 13".
-
-List of Crazy Ex-Girlfriend episodes: "Crazy Ex-Girlfriend" is an American musical comedy-drama television series created by Rachel Bloom and Aline Brosh McKenna, that premiered on The CW on October 12, 2015.  The series stars Bloom as Rebecca Bunch, a depressed young woman who decides to follow her ex-boyfriend from New York City to West Covina, California in the hopes of finding real happiness.  All episode titles follow the pattern of referring to Rebecca's ex-boyfriend, Josh.  On March 11, 2016, The CW renewed the series for a second season which premiered on October 21, 2016.
-
-Ringer (TV series): Ringer is an American television series that initially aired on The CW from September 13, 2011 to April 17, 2012.  The series stars Sarah Michelle Gellar, who plays twin sisters Bridget Kelly and Siobhan Martin.  On May 13, 2011, it was reported that the project had been picked up to series by The CW.  On October 12, 2011, The CW ordered a full first season of 22 episodes.
-
-Deutschland sucht den Superstar (season 13): During the live-shows of season 12, it was announced that the castings for season 13 will start in August 2015.  In Fall 2014, RTL gave closer details to the changes of Season 13.  The liveshows are replaced with pre-recorded concerts in clubs in Germany.  Only the announcement of the results will be broadcast live.  Like the season before the final will not take place in a TV studio in Cologne, but in the ISS Dome in Düsseldorf.
-
-Splatalot!: Splatalot!  is a Canadian/Australian/British internationally co-produced medieval-themed physical game show for kids, which made its debut in its English Canadian premiere on Monday, March 14, 2011 on YTV, where it is hosted by Jason Agnew and Matt Chin.  The Australian and UK broadcasts of the show use the same filmed footage as the original Canadian show, but with their own local presenters providing commentary.  The show premiered in the UK on CBBC on June 13, 2011, presented by Dick and Dom.  The show premiered in Australia on ABC3 on November 5, 2011, hosted by Kayne Tremills and Scotty Tweedie.  The series is a copy of "Wipeout", designed for children's audiences.
-
-Arthur (season 12): The 12th season of the television series "Arthur" was originally broadcast on PBS in the United States from October 6, 2008 to April 24, 2009 and contains 20 episodes.  The 10 episodes listed below were broadcast as season 12, and the other 10 were broadcast as season 13.  This resulted all of season 13 episodes airing in several countries such as Canada and United Kingdom for many months prior the U.S. broadcast.  This season was created and originally aired in the widescreen format though still in 480i; in the U.S., they were and continue to be aired in , with the left and right sides cropped out.  The animation was produced by Animation Services HK Ltd. instead of by AKOM.  This was also the first season where Michael Hirsh was credited as the executive producer.
-
-Supernatural: Bloodlines: Supernatural: Bloodlines was a proposed American television series, before being decided against by The CW for the 2014–15 season.  It was set to be a spin-off of "Supernatural", with the twentieth episode of the show's ninth season serving as the backdoor pilot.  The backdoor pilot was written by Andrew Dabb and directed by Robert Singer.  The series was set to explore the "clashing hunter and monster cultures in Chicago".  Although the show was not picked up by The CW for the 2014–15 television season, the network is open to another spin-off of the series in the future, and are currently planning a new spin-off called "Wayward Sisters", based on a fan idea, to be backdoor piloted in Season 13.
-
-Jaymee Sire: Jaymee Sire (born August 25, 1980) is a television host, sportscaster and blogger who previously worked for ESPN.  She anchored SportsCenter:AM, the morning installment of the network's flagship show, which aired live Monday-Friday from 7am-10am ET.  On July 25, 2017, it was announced that she would be the new floor reporter for Iron Chef Showdown, which will air in 4th quarter of 2017 on Food Network.  She also appeared on Season 12, Episode 13 of Beat Bobby Flay, which debuted on July 13, 2017 on Food Network and as a judge on Season 13 of Food Network Star with the final four contestants.  She also runs her own food blog, "E is for Eat" .
-
-Supernatural (season 13): The thirteenth season of "Supernatural", an American fantasy horror television series created by Eric Kripke, will premiere on October 12, 2017, on The CW.  The season will consist of 23 episodes and air on Thursdays at 8:00 pm (ET).  This is the second season with Andrew Dabb and Robert Singer as showrunners.
-
-Question: What show premiered Season 13 on The CW on October 12, 2017?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "show_title": {
-      "type": "string",
-      "description": "The title of the television series."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "season_number": {
-      "type": "integer",
-      "description": "The season number that premiered."
-    },
-    "premiere_date": {
-      "type": "string",
-      "format": "date",
-      "description": "The date the season premiered."
-    },
-    "network": {
-      "type": "string",
-      "description": "The television network on which the season premiered."
-    },
-    "number_of_episodes": {
-      "type": "integer",
-      "description": "The total number of episodes in the season."
-    },
-    "showrunners": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "The showrunners for this season."
+    {
+      "role": "user",
+      "content": "Context:\nHell's Kitchen (U.S. season 16): The sixteenth season of the American competitive reality television series \"Hell's Kitchen\" premiered on September 23, 2016 on Fox.  Event Chef Kimberly-Ann \"Ryan\" Ryan from Traverse City, Michigan won the competition and a head chef position at Yardbird Southern Table & Bar at The Venetian Las Vegas.  In addition to Gordon Ramsay, who returned as host/head chef, Marino Monferrato and Aaron Mitrano returned as maitre d' and blue kitchen sous chef respectively while Andi van Willigan-Cutspec resumed her role as sous chef for the red team after Season 10 winner Christina Wilson filled in for her in the previous season while she got married.  This was also the first season since Season 13 to take a hiatus due to Fox's coverage of the 2016 World Series in addition to the holiday breaks.  The remaining episodes of the season were moved to Thursday nights on January 5, 2017 as part of the network's midseason schedule.\n\nList of Red vs. Blue episodes: \"Red vs. Blue\", often abbreviated as \"RvB\", is a comic science fiction video web series created by Rooster Teeth Productions and distributed through the Internet and on DVD.  The story centers on two opposing teams of soldiers fighting a civil war in the middle of a desolate box canyon (Blood Gulch), in a parody of first-person shooter (FPS) games, military life, and science fiction films.  Initially intended to be a short series of six to eight episodes, the project quickly and unexpectedly achieved significant popularity following its Internet premiere on April 1, 2003.  In its run, the series has had thirteen full seasons and five mini-series that extended the series' plot.  The fifth season of the original \" Blood Gulch Chronicles\" series ended with episode 100, released on June 28, 2007.  Three mini-series—\"\", \"\", and \"\" —and the three-part \"Recollection\" trilogy containing the full-length \"\" (2008), \"\" (2009) and \"\" (2010) series (Seasons 6-8) have extended the plot.  The \"Project Freelancer\" saga began with \"\" (2011) and follows two separate stories: a continuation to the \"Recollection\" trilogy and a prequel set before the events of \"The Blood Gulch Chronicles\".  The two stories are continued in two further mini-series - \"\" and \"\" - and concluded in \"\" (2012).  Burnie Burns confirmed in \"What's Trending\" that the series will continue with \"\", which premiered on June 14, 2013; and Season 11 was later followed by \"Season 12\" and \"Season 13\".  In 2016, \"Season 14\" was released as the first anthology season, consisting of several canon and non-canon stories created by in-house writers as well as several outside writers; Freddie Wong of RocketJump, Chris Roberson (creator of iZOMBIE), Ben Singer and Chad James of ScrewAttack (hosts of DEATH BATTLE!) , Ernest Cline (author of Ready Player One and Armada), Arin Hanson and Dan Avidan of Game Grumps, etc. \"Season 15\" debuted in 2017, continuing the canonical story following the events of \"Season 13\".\n\nList of Crazy Ex-Girlfriend episodes: \"Crazy Ex-Girlfriend\" is an American musical comedy-drama television series created by Rachel Bloom and Aline Brosh McKenna, that premiered on The CW on October 12, 2015.  The series stars Bloom as Rebecca Bunch, a depressed young woman who decides to follow her ex-boyfriend from New York City to West Covina, California in the hopes of finding real happiness.  All episode titles follow the pattern of referring to Rebecca's ex-boyfriend, Josh.  On March 11, 2016, The CW renewed the series for a second season which premiered on October 21, 2016.\n\nRinger (TV series): Ringer is an American television series that initially aired on The CW from September 13, 2011 to April 17, 2012.  The series stars Sarah Michelle Gellar, who plays twin sisters Bridget Kelly and Siobhan Martin.  On May 13, 2011, it was reported that the project had been picked up to series by The CW.  On October 12, 2011, The CW ordered a full first season of 22 episodes.\n\nDeutschland sucht den Superstar (season 13): During the live-shows of season 12, it was announced that the castings for season 13 will start in August 2015.  In Fall 2014, RTL gave closer details to the changes of Season 13.  The liveshows are replaced with pre-recorded concerts in clubs in Germany.  Only the announcement of the results will be broadcast live.  Like the season before the final will not take place in a TV studio in Cologne, but in the ISS Dome in Düsseldorf.\n\nSplatalot!: Splatalot!  is a Canadian/Australian/British internationally co-produced medieval-themed physical game show for kids, which made its debut in its English Canadian premiere on Monday, March 14, 2011 on YTV, where it is hosted by Jason Agnew and Matt Chin.  The Australian and UK broadcasts of the show use the same filmed footage as the original Canadian show, but with their own local presenters providing commentary.  The show premiered in the UK on CBBC on June 13, 2011, presented by Dick and Dom.  The show premiered in Australia on ABC3 on November 5, 2011, hosted by Kayne Tremills and Scotty Tweedie.  The series is a copy of \"Wipeout\", designed for children's audiences.\n\nArthur (season 12): The 12th season of the television series \"Arthur\" was originally broadcast on PBS in the United States from October 6, 2008 to April 24, 2009 and contains 20 episodes.  The 10 episodes listed below were broadcast as season 12, and the other 10 were broadcast as season 13.  This resulted all of season 13 episodes airing in several countries such as Canada and United Kingdom for many months prior the U.S. broadcast.  This season was created and originally aired in the widescreen format though still in 480i; in the U.S., they were and continue to be aired in , with the left and right sides cropped out.  The animation was produced by Animation Services HK Ltd. instead of by AKOM.  This was also the first season where Michael Hirsh was credited as the executive producer.\n\nSupernatural: Bloodlines: Supernatural: Bloodlines was a proposed American television series, before being decided against by The CW for the 2014–15 season.  It was set to be a spin-off of \"Supernatural\", with the twentieth episode of the show's ninth season serving as the backdoor pilot.  The backdoor pilot was written by Andrew Dabb and directed by Robert Singer.  The series was set to explore the \"clashing hunter and monster cultures in Chicago\".  Although the show was not picked up by The CW for the 2014–15 television season, the network is open to another spin-off of the series in the future, and are currently planning a new spin-off called \"Wayward Sisters\", based on a fan idea, to be backdoor piloted in Season 13.\n\nJaymee Sire: Jaymee Sire (born August 25, 1980) is a television host, sportscaster and blogger who previously worked for ESPN.  She anchored SportsCenter:AM, the morning installment of the network's flagship show, which aired live Monday-Friday from 7am-10am ET.  On July 25, 2017, it was announced that she would be the new floor reporter for Iron Chef Showdown, which will air in 4th quarter of 2017 on Food Network.  She also appeared on Season 12, Episode 13 of Beat Bobby Flay, which debuted on July 13, 2017 on Food Network and as a judge on Season 13 of Food Network Star with the final four contestants.  She also runs her own food blog, \"E is for Eat\" .\n\nSupernatural (season 13): The thirteenth season of \"Supernatural\", an American fantasy horror television series created by Eric Kripke, will premiere on October 12, 2017, on The CW.  The season will consist of 23 episodes and air on Thursdays at 8:00 pm (ET).  This is the second season with Andrew Dabb and Robert Singer as showrunners.\n\nQuestion: What show premiered Season 13 on The CW on October 12, 2017?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"show_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the television series.\"\n    },\n    \"season_number\": {\n      \"type\": \"integer\",\n      \"description\": \"The season number that premiered.\"\n    },\n    \"premiere_date\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"The date the season premiered.\"\n    },\n    \"network\": {\n      \"type\": \"string\",\n      \"description\": \"The television network on which the season premiered.\"\n    },\n    \"number_of_episodes\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of episodes in the season.\"\n    },\n    \"showrunners\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"The showrunners for this season.\"\n    }\n  },\n  \"required\": [\n    \"show_title\",\n    \"season_number\",\n    \"premiere_date\",\n    \"network\",\n    \"number_of_episodes\",\n    \"showrunners\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "show_title",
-    "season_number",
-    "premiere_date",
-    "network",
-    "number_of_episodes",
-    "showrunners"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "show_title": {
+        "type": "string",
+        "description": "The title of the television series."
+      },
+      "season_number": {
+        "type": "integer",
+        "description": "The season number that premiered."
+      },
+      "premiere_date": {
+        "type": "string",
+        "format": "date",
+        "description": "The date the season premiered."
+      },
+      "network": {
+        "type": "string",
+        "description": "The television network on which the season premiered."
+      },
+      "number_of_episodes": {
+        "type": "integer",
+        "description": "The total number of episodes in the season."
+      },
+      "showrunners": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The showrunners for this season."
+      }
+    },
+    "required": [
+      "show_title",
+      "season_number",
+      "premiere_date",
+      "network",
+      "number_of_episodes",
+      "showrunners"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

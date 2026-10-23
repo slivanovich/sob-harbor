@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Saint Joan of the Stockyards: Saint Joan of the Stockyards (German: "Die Heilige Johanna der Schlachthöfe" ) is a play written by the German modernist playwright Bertolt Brecht between 1929 and 1931, after the success of his musical "The Threepenny Opera" and during the period of his radical experimental work with the "Lehrstücke".  It is based on the musical that he co-authored with Elisabeth Hauptmann, "Happy End" (1929).  In this version of the story of Joan of Arc, Brecht transforms her into "Joan Dark", a member of the "Black Straw Hats" (a Salvation Army-like group) in 20th-century Chicago.  The play charts Joan's battle with Pierpont Mauler, the unctuous owner of a meat-packing plant.  Like her predecessor, Joan is a doomed woman, a martyr and (initially, at least) an innocent in a world of strike-breakers, fat cats, and penniless workers.  Like many of Brecht's plays it is laced with humor and songs as part of its epic dramaturgical structure and deals with the theme of emancipation from material suffering and exploitation.
-
-Carlos and Elisabeth: Carlos and Elisabeth (German: Carlos und Elisabeth) is a 1924 German silent drama film directed by Richard Oswald and starring Conrad Veidt, Eugen Klöpfer and Aud Egede Nissen.  It is based on the play "Don Carlos" by Friedrich Schiller.  Oswald modelled the film's visuals on a staging of the play by Max Reinhardt at the Deutsches Theater.
-
-Don Carlos: Don Carlos is a five-act grand opera composed by Giuseppe Verdi to a French-language libretto by Joseph Méry and Camille du Locle, based on the dramatic play "Don Carlos, Infant von Spanien" ("Don Carlos, Infante of Spain") by Friedrich Schiller.  The opera is usually performed in an Italian translation.  In addition, it has been noted by David Kimball that the Fontainebleau scene and auto da fé "were the most substantial of several incidents borrowed from a contemporary play on Philip II by Eugène Cormon".
-
-The Visitors (opera): The Visitors is an opera in three acts and a prologue composed by Carlos Chávez to an English libretto by the American poet Chester Kallman.  The work was Chávez's only opera.  Its first version, with the title "Panfilo and Lauretta", premiered in New York City in 1957.  The final version with the title "The Visitors" was premiered in Guanajuato, Mexico in 1999, twenty years after the composer's death.  The story is set in 14th century Tuscany during the time of the Black Death.  The libretto (like those for "Pagliacci" and "Ariadne auf Naxos") uses the device of a play within a play to reflect and intensify the relationships between the protagonists, who in this case are loosely based on characters in "The Decameron".
-
-Sheikh Sanan (play): Sheikh Sanan (Azerbaijani: "Şeyx Sənan" ) – is a verse play, tragedy in five acts, written by an Azerbaijani poet and playwright Huseyn Javid about love of a Muslim sheikh - Sanan to a Georgian-Christian girl Khumar.  It is based on an old story first made famous by the Persian poet Attar Neyshapuri in The Conference of the Birds.  As it was noted, a romantic riot against the anti-humanistic reality of religion is expressed in images of the main heroes of the play – Sanan and Khumar.  Sanan, being a true believer Muslim and a notable scientist, dissuades from Islam and rejects its basis, blames all religions for separation of people.  Sheikh Sanan opposes the world of love, friendship and humanity to the world of blind faith and dead religious dogmatics.  Such anti-clerical thoughts, which had been already said by the poet in numerous lyrical works, were summed up in the play.
-
-Friedrich Schiller: Johann Christoph Friedrich von Schiller (] ; 10 November 17599 May 1805) was a German poet, philosopher, physician, historian, and playwright.  During the last seventeen years of his life (1788–1805), Schiller struck up a productive, if complicated, friendship with the already famous and influential Johann Wolfgang von Goethe.  They frequently discussed issues concerning aesthetics, and Schiller encouraged Goethe to finish works he left as sketches.  This relationship and these discussions led to a period now referred to as Weimar Classicism.  They also worked together on "Xenien", a collection of short satirical poems in which both Schiller and Goethe challenge opponents to their philosophical vision.
-
-London Rollergirls: The London Rollergirls (LRG) are an all-women flat track roller derby league.  Their legal company name: London Rollergirls Limited are a private company limited by guarantee, and a not-for-profit organisation, based in London, England.  Founded by Courtney Welch (known on the ring as 'Bette Noir'), Lauren Langston and Danielle West, the London Rollergirls are the oldest all-female roller derby league in the United Kingdom.  The aims and objectives of the skater-owned and run league includes promoting athleticism, charity, teamwork and confidence in women, and aims to represent the diverse London area in regard to body shape, occupations, sexual orientation, race and nationality.  The London Rollergirls play to the rules of - and are a member of - the Women's Flat Track Derby Association (WFTDA).
-
-Patrick Kavanagh Poetry Award: The Patrick Kavanagh Poetry Award is an Irish poetry award for a collection of poems by an author who has not previously been published in collected form.  It is confined to poets born on the island of Ireland, or of Irish nationality, or a long-term resident of Ireland.  It is based on an open competition whose closing date is in July each year.  The award was founded by the Patrick Kavanagh Society in 1971 to commemorate the poet.
-
-The Hypocrites (1923 film): The Hypocrites (Dutch: "Farizeëers" ) is a 1923 British-Dutch silent drama film directed by Charles Giblyn, based on "The Hypocrites", a 1906 play by Henry Arthur Jones.  The plot concerns the hypocrisy of a squire who tries to make his son deny he fathered a village girl's child, and instead marry an heiress.  Jones' play which had already been filmed as The Morals of Weybury (1916) directed by George Loane Tucker with Elisabeth Risdon.
-
-The Maid of Arran: The Maid of Arran, An Idyllic Irish Drama Written for the People, Irrespective of Caste or Nationality is an 1882 musical play by L. Frank Baum, writing and performing under the pseudonym, "Louis F. Baum", based on the novel "A Princess of Thule" by William Black.  It was described as "A Play to Ensnare All Hearts and Leave an Impress of Beauty and Nobility Within the Sordid Mind of Man."  The play resets the novel from Scotland's Outer Hebrides to Ireland (although Arran is actually in Scotland—Baum probably meant Aran, but never changed it).  This was a well-received melodrama with elaborate stage effects, including a storm upon a ship, and an original score by Baum himself.  Unfortunately, only the songbook for the windows use survives, which omits two of the songs referenced in the script (the manuscript did not include the lyrics).  Baum played the main character, Hugh Holcomb, originally called Frank Lavender in the novel, in its initial tour (including two stints on Broadway), and later played Con.  O'Mara, the heroine's father, in a community theatre revival.
-
-Question: Carlos and Elisabeth is based on the play by the poet of that nationality?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "based_on_play_title": {
-      "type": "string",
-      "description": "The title of the play the film is based on."
-    },
-    "playwright_name": {
-      "type": "string",
-      "description": "The name of the playwright who wrote the base play."
-    },
-    "playwright_nationality": {
-      "type": "string",
-      "description": "The nationality of the playwright."
+    {
+      "role": "user",
+      "content": "Context:\nSaint Joan of the Stockyards: Saint Joan of the Stockyards (German: \"Die Heilige Johanna der Schlachthöfe\" ) is a play written by the German modernist playwright Bertolt Brecht between 1929 and 1931, after the success of his musical \"The Threepenny Opera\" and during the period of his radical experimental work with the \"Lehrstücke\".  It is based on the musical that he co-authored with Elisabeth Hauptmann, \"Happy End\" (1929).  In this version of the story of Joan of Arc, Brecht transforms her into \"Joan Dark\", a member of the \"Black Straw Hats\" (a Salvation Army-like group) in 20th-century Chicago.  The play charts Joan's battle with Pierpont Mauler, the unctuous owner of a meat-packing plant.  Like her predecessor, Joan is a doomed woman, a martyr and (initially, at least) an innocent in a world of strike-breakers, fat cats, and penniless workers.  Like many of Brecht's plays it is laced with humor and songs as part of its epic dramaturgical structure and deals with the theme of emancipation from material suffering and exploitation.\n\nCarlos and Elisabeth: Carlos and Elisabeth (German: Carlos und Elisabeth) is a 1924 German silent drama film directed by Richard Oswald and starring Conrad Veidt, Eugen Klöpfer and Aud Egede Nissen.  It is based on the play \"Don Carlos\" by Friedrich Schiller.  Oswald modelled the film's visuals on a staging of the play by Max Reinhardt at the Deutsches Theater.\n\nDon Carlos: Don Carlos is a five-act grand opera composed by Giuseppe Verdi to a French-language libretto by Joseph Méry and Camille du Locle, based on the dramatic play \"Don Carlos, Infant von Spanien\" (\"Don Carlos, Infante of Spain\") by Friedrich Schiller.  The opera is usually performed in an Italian translation.  In addition, it has been noted by David Kimball that the Fontainebleau scene and auto da fé \"were the most substantial of several incidents borrowed from a contemporary play on Philip II by Eugène Cormon\".\n\nThe Visitors (opera): The Visitors is an opera in three acts and a prologue composed by Carlos Chávez to an English libretto by the American poet Chester Kallman.  The work was Chávez's only opera.  Its first version, with the title \"Panfilo and Lauretta\", premiered in New York City in 1957.  The final version with the title \"The Visitors\" was premiered in Guanajuato, Mexico in 1999, twenty years after the composer's death.  The story is set in 14th century Tuscany during the time of the Black Death.  The libretto (like those for \"Pagliacci\" and \"Ariadne auf Naxos\") uses the device of a play within a play to reflect and intensify the relationships between the protagonists, who in this case are loosely based on characters in \"The Decameron\".\n\nSheikh Sanan (play): Sheikh Sanan (Azerbaijani: \"Şeyx Sənan\" ) – is a verse play, tragedy in five acts, written by an Azerbaijani poet and playwright Huseyn Javid about love of a Muslim sheikh - Sanan to a Georgian-Christian girl Khumar.  It is based on an old story first made famous by the Persian poet Attar Neyshapuri in The Conference of the Birds.  As it was noted, a romantic riot against the anti-humanistic reality of religion is expressed in images of the main heroes of the play – Sanan and Khumar.  Sanan, being a true believer Muslim and a notable scientist, dissuades from Islam and rejects its basis, blames all religions for separation of people.  Sheikh Sanan opposes the world of love, friendship and humanity to the world of blind faith and dead religious dogmatics.  Such anti-clerical thoughts, which had been already said by the poet in numerous lyrical works, were summed up in the play.\n\nFriedrich Schiller: Johann Christoph Friedrich von Schiller (] ; 10 November 17599 May 1805) was a German poet, philosopher, physician, historian, and playwright.  During the last seventeen years of his life (1788–1805), Schiller struck up a productive, if complicated, friendship with the already famous and influential Johann Wolfgang von Goethe.  They frequently discussed issues concerning aesthetics, and Schiller encouraged Goethe to finish works he left as sketches.  This relationship and these discussions led to a period now referred to as Weimar Classicism.  They also worked together on \"Xenien\", a collection of short satirical poems in which both Schiller and Goethe challenge opponents to their philosophical vision.\n\nLondon Rollergirls: The London Rollergirls (LRG) are an all-women flat track roller derby league.  Their legal company name: London Rollergirls Limited are a private company limited by guarantee, and a not-for-profit organisation, based in London, England.  Founded by Courtney Welch (known on the ring as 'Bette Noir'), Lauren Langston and Danielle West, the London Rollergirls are the oldest all-female roller derby league in the United Kingdom.  The aims and objectives of the skater-owned and run league includes promoting athleticism, charity, teamwork and confidence in women, and aims to represent the diverse London area in regard to body shape, occupations, sexual orientation, race and nationality.  The London Rollergirls play to the rules of - and are a member of - the Women's Flat Track Derby Association (WFTDA).\n\nPatrick Kavanagh Poetry Award: The Patrick Kavanagh Poetry Award is an Irish poetry award for a collection of poems by an author who has not previously been published in collected form.  It is confined to poets born on the island of Ireland, or of Irish nationality, or a long-term resident of Ireland.  It is based on an open competition whose closing date is in July each year.  The award was founded by the Patrick Kavanagh Society in 1971 to commemorate the poet.\n\nThe Hypocrites (1923 film): The Hypocrites (Dutch: \"Farizeëers\" ) is a 1923 British-Dutch silent drama film directed by Charles Giblyn, based on \"The Hypocrites\", a 1906 play by Henry Arthur Jones.  The plot concerns the hypocrisy of a squire who tries to make his son deny he fathered a village girl's child, and instead marry an heiress.  Jones' play which had already been filmed as The Morals of Weybury (1916) directed by George Loane Tucker with Elisabeth Risdon.\n\nThe Maid of Arran: The Maid of Arran, An Idyllic Irish Drama Written for the People, Irrespective of Caste or Nationality is an 1882 musical play by L. Frank Baum, writing and performing under the pseudonym, \"Louis F. Baum\", based on the novel \"A Princess of Thule\" by William Black.  It was described as \"A Play to Ensnare All Hearts and Leave an Impress of Beauty and Nobility Within the Sordid Mind of Man.\"  The play resets the novel from Scotland's Outer Hebrides to Ireland (although Arran is actually in Scotland—Baum probably meant Aran, but never changed it).  This was a well-received melodrama with elaborate stage effects, including a storm upon a ship, and an original score by Baum himself.  Unfortunately, only the songbook for the windows use survives, which omits two of the songs referenced in the script (the manuscript did not include the lyrics).  Baum played the main character, Hugh Holcomb, originally called Frank Lavender in the novel, in its initial tour (including two stints on Broadway), and later played Con.  O'Mara, the heroine's father, in a community theatre revival.\n\nQuestion: Carlos and Elisabeth is based on the play by the poet of that nationality?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"based_on_play_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the play the film is based on.\"\n    },\n    \"playwright_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the playwright who wrote the base play.\"\n    },\n    \"playwright_nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the playwright.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"based_on_play_title\",\n    \"playwright_name\",\n    \"playwright_nationality\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "based_on_play_title",
-    "playwright_name",
-    "playwright_nationality"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "based_on_play_title": {
+        "type": "string",
+        "description": "The title of the play the film is based on."
+      },
+      "playwright_name": {
+        "type": "string",
+        "description": "The name of the playwright who wrote the base play."
+      },
+      "playwright_nationality": {
+        "type": "string",
+        "description": "The nationality of the playwright."
+      }
+    },
+    "required": [
+      "film_title",
+      "based_on_play_title",
+      "playwright_name",
+      "playwright_nationality"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

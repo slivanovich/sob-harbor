@@ -1,62 +1,39 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Nanchang Hangkong University: Nanchang Hangkong University (), also Nanchang Aviation University, is located in Nanchang City, Jiangxi Province, People's Republic of China.  It is an engineering-based multidisciplinary university.  It was  Nanchang Institute of Aeronautical Technology  and it was renamed in Feb. 2007.  It is a higher education institute with a distinctive feature of aeronautics and national defense under the joint supervision of Jiangxi Provincial Government and Ministry of Industry and Information Technology of the People's Republic of China.
-
-Qingyunpu Railway Station: Qingyunpu Railway Station, located in the Qingyunpu District, Nanchang, Jiangxi, China, is a station of Jingjiu Railway and terminus station of Nanchang Steel Plant Branch Line.
-
-Xiangtang, Jiangxi: Xiangtang (; ] ) is a town located to the south of Nanchang, the capital of China's Jiangxi province, under the administration of Nanchang County It is the most populous town in the province with the population more than 150,000 as of the 2010 census.  The town was established from a village, which is still remaining near the present center of the town, during the Qing Dynasty.  The village experienced fast growth when the main part of the Zhejiang–Jiangxi Railway was completed in 1935.  Nowadays, Xiangtang has two main rail stations: Xiangtang West Station as the second largest freight yard in China and Xiangtang Station as a level-1 passenger station nationwide.  It also had the only civilian airport(joint military/civilian) in Jiangxi province before Nanchang Changbei International Airport went to operation in September 10, 1999.
-
-Donghu District: Donghu District () is a district of Nanchang, the capital of Jiangxi Province, China.  The district was created in the Tang dynasty when a bridge was built across Nanchang's Taihu lake, dividing the area into the East and West Lake districts.  It covers over 22 km2 and as of 2003 had a population of 440,000.  People's Park, the largest public park in downtown Nanchang, is located in Donghu.
-
-Nanchang: Nanchang () is the capital of Jiangxi Province in southeastern China.  s of 2010 , a population of 5,042,565 live in the prefecture, in which 2,357,838 live in the area made up of all five urban districts.  Located in the north-central part of the province, it is bounded on the west by the Jiuling Mountains, and on the east by Poyang Lake.  Because of its strategic location connecting the prosperous East and South China, it has become a major railway hub in Southern China in recent decades.
-
-Dongguan Middle School-SSL School: Dongguan Middle School-SSL School (Chinese Simplified: 东莞中学松山湖学校, Traditional: 東莞中學松山湖學校) is a middle school located in Dongguan, Guangdong.  It attaches to the Bureau of Education of Dongguan.  In 2014, it became one of the top ranked middle schools in Guangdong.  The school has two main campuses: a junior high school campus that provides classes from grade 7-9; and a senior high school campus that covers grade 10-12.
-
-Dongguan: Dongguan is a prefecture-level city in central Guangdong Province of South China.  Often considered the cultural capital of the Pearl River Delta, Dongguan borders the provincial capital of Guangzhou to the north, Huizhou to the northeast, Shenzhen to the south, and the Pearl River to the west.  It is part of the Pearl River Delta megacity with more than 44.78 million inhabitants at the 2010 census spread over nine municipalities (including Macao) across an area of 17,573 km2 .  Dongguan's city administration is considered especially progressive in seeking foreign direct investment.  Dongguan ranks behind only Shenzhen, Shanghai and Suzhou in exports among Chinese cities, with $65.54 billion in shipments.  It is also home to one of the world's largest, though largely empty, shopping malls, the New South China Mall.  The majority of the population speak Mandarin due to migrants from other parts of the country.
-
-Nanchang Foreign Language School: Nanchang Foreign Language School (南昌外国语学校) is a middle and high school located in Nanchang, the capital city of Jiangxi province, China.  Designated by Ministry of Education of the People's Republic of China as one of the only 16 high schools in Mainland China that possess "direct admission” quotas(保送生) to send students directly to universities in China while waiving the National Higher Education Entrance Examination, It is the first council foreign language school in the Jiangxi province and it is also a key school in Nanchang.
-
-Meiling Town: Meiling town is located in Jiangxi province, Nanchang city, north of the Wanli District, Nanchang.  Meiling town is located inside the Meiling National Forest Park, the areas under administration including: Meiling Street, Qianjin, Lixin, DongChang, Tuanjie, Yuanjia, and Fengjin village committees.
-
-Nanchang Changbei International Airport: Nanchang Changbei International Airport (IATA: KHN, ICAO: ZSCN) is an airport serving Nanchang, the capital of Jiangxi province, China.  It is located 28 km north of Nanchang.  Construction began in October 1996 and went into operation on September 10, 1999.  It replaced Nanchang Xiangtang Airport which was a joint civilian and military airport.  It has a runway with a length of 2800 metres and a terminal building with six gates.  As of 2010, it was undergoing an expansion which includes a new terminal and a second runway.
-
-Question: Where are both Nanchang and Dongguan located?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "entities_located": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "The names of the entities whose common location is being identified."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "shared_location_type": {
-      "type": "string",
-      "description": "The type of the shared geographical location (e.g., 'country', 'province')."
-    },
-    "shared_location_name": {
-      "type": "string",
-      "description": "The name of the shared geographical location."
+    {
+      "role": "user",
+      "content": "Context:\nNanchang Hangkong University: Nanchang Hangkong University (), also Nanchang Aviation University, is located in Nanchang City, Jiangxi Province, People's Republic of China.  It is an engineering-based multidisciplinary university.  It was  Nanchang Institute of Aeronautical Technology  and it was renamed in Feb. 2007.  It is a higher education institute with a distinctive feature of aeronautics and national defense under the joint supervision of Jiangxi Provincial Government and Ministry of Industry and Information Technology of the People's Republic of China.\n\nQingyunpu Railway Station: Qingyunpu Railway Station, located in the Qingyunpu District, Nanchang, Jiangxi, China, is a station of Jingjiu Railway and terminus station of Nanchang Steel Plant Branch Line.\n\nXiangtang, Jiangxi: Xiangtang (; ] ) is a town located to the south of Nanchang, the capital of China's Jiangxi province, under the administration of Nanchang County It is the most populous town in the province with the population more than 150,000 as of the 2010 census.  The town was established from a village, which is still remaining near the present center of the town, during the Qing Dynasty.  The village experienced fast growth when the main part of the Zhejiang–Jiangxi Railway was completed in 1935.  Nowadays, Xiangtang has two main rail stations: Xiangtang West Station as the second largest freight yard in China and Xiangtang Station as a level-1 passenger station nationwide.  It also had the only civilian airport(joint military/civilian) in Jiangxi province before Nanchang Changbei International Airport went to operation in September 10, 1999.\n\nDonghu District: Donghu District () is a district of Nanchang, the capital of Jiangxi Province, China.  The district was created in the Tang dynasty when a bridge was built across Nanchang's Taihu lake, dividing the area into the East and West Lake districts.  It covers over 22 km2 and as of 2003 had a population of 440,000.  People's Park, the largest public park in downtown Nanchang, is located in Donghu.\n\nNanchang: Nanchang () is the capital of Jiangxi Province in southeastern China.  s of 2010 , a population of 5,042,565 live in the prefecture, in which 2,357,838 live in the area made up of all five urban districts.  Located in the north-central part of the province, it is bounded on the west by the Jiuling Mountains, and on the east by Poyang Lake.  Because of its strategic location connecting the prosperous East and South China, it has become a major railway hub in Southern China in recent decades.\n\nDongguan Middle School-SSL School: Dongguan Middle School-SSL School (Chinese Simplified: 东莞中学松山湖学校, Traditional: 東莞中學松山湖學校) is a middle school located in Dongguan, Guangdong.  It attaches to the Bureau of Education of Dongguan.  In 2014, it became one of the top ranked middle schools in Guangdong.  The school has two main campuses: a junior high school campus that provides classes from grade 7-9; and a senior high school campus that covers grade 10-12.\n\nDongguan: Dongguan is a prefecture-level city in central Guangdong Province of South China.  Often considered the cultural capital of the Pearl River Delta, Dongguan borders the provincial capital of Guangzhou to the north, Huizhou to the northeast, Shenzhen to the south, and the Pearl River to the west.  It is part of the Pearl River Delta megacity with more than 44.78 million inhabitants at the 2010 census spread over nine municipalities (including Macao) across an area of 17,573 km2 .  Dongguan's city administration is considered especially progressive in seeking foreign direct investment.  Dongguan ranks behind only Shenzhen, Shanghai and Suzhou in exports among Chinese cities, with $65.54 billion in shipments.  It is also home to one of the world's largest, though largely empty, shopping malls, the New South China Mall.  The majority of the population speak Mandarin due to migrants from other parts of the country.\n\nNanchang Foreign Language School: Nanchang Foreign Language School (南昌外国语学校) is a middle and high school located in Nanchang, the capital city of Jiangxi province, China.  Designated by Ministry of Education of the People's Republic of China as one of the only 16 high schools in Mainland China that possess \"direct admission” quotas(保送生) to send students directly to universities in China while waiving the National Higher Education Entrance Examination, It is the first council foreign language school in the Jiangxi province and it is also a key school in Nanchang.\n\nMeiling Town: Meiling town is located in Jiangxi province, Nanchang city, north of the Wanli District, Nanchang.  Meiling town is located inside the Meiling National Forest Park, the areas under administration including: Meiling Street, Qianjin, Lixin, DongChang, Tuanjie, Yuanjia, and Fengjin village committees.\n\nNanchang Changbei International Airport: Nanchang Changbei International Airport (IATA: KHN, ICAO: ZSCN) is an airport serving Nanchang, the capital of Jiangxi province, China.  It is located 28 km north of Nanchang.  Construction began in October 1996 and went into operation on September 10, 1999.  It replaced Nanchang Xiangtang Airport which was a joint civilian and military airport.  It has a runway with a length of 2800 metres and a terminal building with six gates.  As of 2010, it was undergoing an expansion which includes a new terminal and a second runway.\n\nQuestion: Where are both Nanchang and Dongguan located?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"entities_located\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"The names of the entities whose common location is being identified.\"\n    },\n    \"shared_location_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of the shared geographical location (e.g., 'country', 'province').\"\n    },\n    \"shared_location_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the shared geographical location.\"\n    }\n  },\n  \"required\": [\n    \"entities_located\",\n    \"shared_location_type\",\n    \"shared_location_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "entities_located",
-    "shared_location_type",
-    "shared_location_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "entities_located": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The names of the entities whose common location is being identified."
+      },
+      "shared_location_type": {
+        "type": "string",
+        "description": "The type of the shared geographical location (e.g., 'country', 'province')."
+      },
+      "shared_location_name": {
+        "type": "string",
+        "description": "The name of the shared geographical location."
+      }
+    },
+    "required": [
+      "entities_located",
+      "shared_location_type",
+      "shared_location_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

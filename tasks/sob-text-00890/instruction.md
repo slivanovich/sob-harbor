@@ -1,92 +1,69 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2016 Indianapolis Colts season: The 2016 Indianapolis Colts season was the franchise's 64th season in the National Football League and the 33rd in Indianapolis.  The Colts matched their 8-8 record from 2015, however they would miss the playoffs in consecutive seasons for the first time since 1997–1998.  This season would also see the Colts get swept by the Houston Texans for the first time in franchise history.  As a result, the Colts fired general manager Ryan Grigson after five seasons with the team.
-
-List of Indianapolis Colts seasons: The Indianapolis Colts, formerly the Baltimore Colts, are an American football team playing in the National Football League (NFL).  This list documents the season-by-season records of the Colts franchise from to present, including postseason records and league awards for individual players or head coaches.  In 1953, a Baltimore-based group led by Carroll Rosenbloom gained the rights to a new Baltimore franchise.  Rosenbloom was granted an NFL team, and was awarded the holdings of the defunct Dallas Texans organization.  The new team was named the Colts after the previous team that folded after the 1950 NFL season.  After 31 seasons in Baltimore, Colts owner Robert Irsay moved the team to Indianapolis, Indiana.
-
-Indianapolis Colts: The Indianapolis Colts are an American football team based in Indianapolis, Indiana.  The Colts compete in the National Football League (NFL) as a member club of the league's American Football Conference (AFC) South division.  Since the 2008 season, the Colts have played their games in Lucas Oil Stadium.  Previously, the team had played for over two decades (1984–2007) at the RCA Dome.  Since 1986, the Colts have been the host team for the NFL Scouting Combine.
-
-2005–06 NCAA Division I men's basketball season: The 2005–06 NCAA Division I men's basketball season began on November 6, 2005, progressed through the regular season and conference tournaments, and concluded with the 2006 NCAA Men's Division I Basketball Tournament Championship Game on April 3, 2006, at the RCA Dome in Indianapolis, Indiana.  The Florida Gators won their first NCAA national championship with a 73–56 victory over the UCLA Bruins.  This was the final Final Four site at the RCA Dome.  The Final Four will return to the city of Indianapolis, but will be held at Lucas Oil Stadium.
-
-RCA Dome: The RCA Dome (originally Hoosier Dome) was a domed stadium in Indianapolis.  It was the home of the Indianapolis Colts NFL franchise for 24 seasons (1984–2007).
-
-Indianapolis Colts Cheerleaders: The Indianapolis Colts Cheerleaders are the official cheerleading squad of the Indianapolis Colts.  The cheerleaders perform various dances at the Colts stadium Lucas Oil Stadium, and also performed at Super Bowl XLI and Super Bowl XLIV at Sun Life Stadium.  The 2016 squad currently has 28 members.  The squad was the first cheerleading squad in the NFL, being formed in the same year as the team's inception (1954) by two women.  The squad originally consisted of ten girls with white boots, crew-neck sweaters, blue scarves and a blue skirt with grey kick-pleats as uniforms.  The squad had a horse as a mascot, and often marched with the Baltimore Colts Marching Band, which was left behind in 1984 when the Colts moved to Indianapolis.  The squad's annual auditions feature hundreds of women, with the group's "Audition Showcase" taking place at venues around Indianapolis.  The squad has a show troupe, which travels to various cities to entertain fans.  The Colts Cheerleaders release an annual swimsuit calendar.  The team has a "Junior Cheerleaders" program, in which a team of 300 girls aged 7 to 14 perform at Lucas Oil Stadium and various appearances.
-
-2007 Indianapolis Colts season: The 2007 Indianapolis Colts season was the 55th season for the team in the National Football League and 24th in Indianapolis.  The 2007 Indianapolis Colts improved upon their 12–4 record from 2006 as well as won their fifth-straight AFC South Championship.  They finished the season 13–3 and lost to the San Diego Chargers in the divisional round of the playoffs.  The Colts remained under the supervision of Head Coach Tony Dungy and played all of their home games in the RCA Dome in Indianapolis, Indiana.  2007 was the Colts' final season in the RCA Dome, as they began playing home games in Lucas Oil Stadium in 2008.  In early January 2007 the Colts were the early co-favorites to win Super Bowl XLII, along with the San Diego Chargers.
-
-2009 Indianapolis Colts season: The 2009 Indianapolis Colts season was the franchise's 57th season in the National Football League and the 26th in Indianapolis.  It was the first season since 2002 that the Colts did not have Tony Dungy on their coaching staff, due to his retirement from coaching.  The 2009 Indianapolis Colts improved upon their 12–4 record from 2008 as well as winning their sixth AFC South division championship in seven years.  The Colts also clinched the #1 playoff seed in the AFC.  The Colts became the sole undefeated team after week 15.  The following week, the Colts lost to the New York Jets after benching their starters.  During the playoffs, the Colts defeated the Baltimore Ravens in the divisional round and the New York Jets in the AFC Championship game, but lost to the New Orleans Saints in Super Bowl XLIV, 31–17.
-
-Blue (NFL mascot): Blue is the official mascot of the Indianapolis Colts professional American football team of the National Football League.  He is an anthropomorphic blue horse who wears a white Colts jersey with a horseshoe on the front.  He was first introduced on September 17, 2006 in the Colts' first home regular season game against the Houston Texans at the RCA Dome, in which they won 43-24.  Indianapolis's victory over the Texans that day proved to be a sign of good things to come, both for Blue and for the team.  That season, the Colts won Super Bowl XLI, defeating the Chicago Bears and winning their first Super Bowl since arriving in Indianapolis (second Super Bowl title overall).  Since joining the Colts, Blue has served a valuable good luck charm for the team while also entertaining Colts fans.
-
-Lucas Oil Stadium: Lucas Oil Stadium is a multi-purpose stadium in downtown Indianapolis, United States.  It replaced the RCA Dome as the home field of the NFL's Indianapolis Colts.  The stadium also hosted Super Bowl XLVI in 2012.  The stadium had its ribbon-cutting ceremony August 16, 2008, and then officially opened to the public eight days later on August 24, 2008.  The stadium was constructed to allow the removal of the RCA Dome and expansion of the Indiana Convention Center on its site.  The stadium is on the south side of South Street, the block south of the site of the former RCA Dome.  The stadium is often referred to as "The House That Manning Built", due to the success of the Indianapolis Colts during the tenure of Peyton Manning as their quarterback.
-
-Question: Blue is the official mascot of the Indianapolis Colts NFL football team, he was first introduced on September 17, 2006 in the Colts' first home regular season game against the Houston Texans at the domed stadium in Indianapolis, The RCA Dome, also know as what?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "mascot_name": {
-      "type": "string",
-      "description": "The name of the official mascot."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "team_name": {
-      "type": "string",
-      "description": "The name of the NFL team the mascot represents."
-    },
-    "introduction_event": {
-      "type": "object",
-      "properties": {
-        "date": {
-          "type": "string",
-          "description": "The date the mascot was first introduced."
-        },
-        "opponent_team": {
-          "type": "string",
-          "description": "The opposing team in the game where the mascot was introduced."
-        },
-        "stadium_info": {
-          "type": "object",
-          "properties": {
-            "current_name": {
-              "type": "string",
-              "description": "The name of the stadium where the mascot was introduced."
-            },
-            "original_name": {
-              "type": "string",
-              "description": "The original name of the stadium."
-            }
-          },
-          "required": [
-            "current_name",
-            "original_name"
-          ],
-          "additionalProperties": false
-        }
-      },
-      "required": [
-        "date",
-        "opponent_team",
-        "stadium_info"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\n2016 Indianapolis Colts season: The 2016 Indianapolis Colts season was the franchise's 64th season in the National Football League and the 33rd in Indianapolis.  The Colts matched their 8-8 record from 2015, however they would miss the playoffs in consecutive seasons for the first time since 1997–1998.  This season would also see the Colts get swept by the Houston Texans for the first time in franchise history.  As a result, the Colts fired general manager Ryan Grigson after five seasons with the team.\n\nList of Indianapolis Colts seasons: The Indianapolis Colts, formerly the Baltimore Colts, are an American football team playing in the National Football League (NFL).  This list documents the season-by-season records of the Colts franchise from to present, including postseason records and league awards for individual players or head coaches.  In 1953, a Baltimore-based group led by Carroll Rosenbloom gained the rights to a new Baltimore franchise.  Rosenbloom was granted an NFL team, and was awarded the holdings of the defunct Dallas Texans organization.  The new team was named the Colts after the previous team that folded after the 1950 NFL season.  After 31 seasons in Baltimore, Colts owner Robert Irsay moved the team to Indianapolis, Indiana.\n\nIndianapolis Colts: The Indianapolis Colts are an American football team based in Indianapolis, Indiana.  The Colts compete in the National Football League (NFL) as a member club of the league's American Football Conference (AFC) South division.  Since the 2008 season, the Colts have played their games in Lucas Oil Stadium.  Previously, the team had played for over two decades (1984–2007) at the RCA Dome.  Since 1986, the Colts have been the host team for the NFL Scouting Combine.\n\n2005–06 NCAA Division I men's basketball season: The 2005–06 NCAA Division I men's basketball season began on November 6, 2005, progressed through the regular season and conference tournaments, and concluded with the 2006 NCAA Men's Division I Basketball Tournament Championship Game on April 3, 2006, at the RCA Dome in Indianapolis, Indiana.  The Florida Gators won their first NCAA national championship with a 73–56 victory over the UCLA Bruins.  This was the final Final Four site at the RCA Dome.  The Final Four will return to the city of Indianapolis, but will be held at Lucas Oil Stadium.\n\nRCA Dome: The RCA Dome (originally Hoosier Dome) was a domed stadium in Indianapolis.  It was the home of the Indianapolis Colts NFL franchise for 24 seasons (1984–2007).\n\nIndianapolis Colts Cheerleaders: The Indianapolis Colts Cheerleaders are the official cheerleading squad of the Indianapolis Colts.  The cheerleaders perform various dances at the Colts stadium Lucas Oil Stadium, and also performed at Super Bowl XLI and Super Bowl XLIV at Sun Life Stadium.  The 2016 squad currently has 28 members.  The squad was the first cheerleading squad in the NFL, being formed in the same year as the team's inception (1954) by two women.  The squad originally consisted of ten girls with white boots, crew-neck sweaters, blue scarves and a blue skirt with grey kick-pleats as uniforms.  The squad had a horse as a mascot, and often marched with the Baltimore Colts Marching Band, which was left behind in 1984 when the Colts moved to Indianapolis.  The squad's annual auditions feature hundreds of women, with the group's \"Audition Showcase\" taking place at venues around Indianapolis.  The squad has a show troupe, which travels to various cities to entertain fans.  The Colts Cheerleaders release an annual swimsuit calendar.  The team has a \"Junior Cheerleaders\" program, in which a team of 300 girls aged 7 to 14 perform at Lucas Oil Stadium and various appearances.\n\n2007 Indianapolis Colts season: The 2007 Indianapolis Colts season was the 55th season for the team in the National Football League and 24th in Indianapolis.  The 2007 Indianapolis Colts improved upon their 12–4 record from 2006 as well as won their fifth-straight AFC South Championship.  They finished the season 13–3 and lost to the San Diego Chargers in the divisional round of the playoffs.  The Colts remained under the supervision of Head Coach Tony Dungy and played all of their home games in the RCA Dome in Indianapolis, Indiana.  2007 was the Colts' final season in the RCA Dome, as they began playing home games in Lucas Oil Stadium in 2008.  In early January 2007 the Colts were the early co-favorites to win Super Bowl XLII, along with the San Diego Chargers.\n\n2009 Indianapolis Colts season: The 2009 Indianapolis Colts season was the franchise's 57th season in the National Football League and the 26th in Indianapolis.  It was the first season since 2002 that the Colts did not have Tony Dungy on their coaching staff, due to his retirement from coaching.  The 2009 Indianapolis Colts improved upon their 12–4 record from 2008 as well as winning their sixth AFC South division championship in seven years.  The Colts also clinched the #1 playoff seed in the AFC.  The Colts became the sole undefeated team after week 15.  The following week, the Colts lost to the New York Jets after benching their starters.  During the playoffs, the Colts defeated the Baltimore Ravens in the divisional round and the New York Jets in the AFC Championship game, but lost to the New Orleans Saints in Super Bowl XLIV, 31–17.\n\nBlue (NFL mascot): Blue is the official mascot of the Indianapolis Colts professional American football team of the National Football League.  He is an anthropomorphic blue horse who wears a white Colts jersey with a horseshoe on the front.  He was first introduced on September 17, 2006 in the Colts' first home regular season game against the Houston Texans at the RCA Dome, in which they won 43-24.  Indianapolis's victory over the Texans that day proved to be a sign of good things to come, both for Blue and for the team.  That season, the Colts won Super Bowl XLI, defeating the Chicago Bears and winning their first Super Bowl since arriving in Indianapolis (second Super Bowl title overall).  Since joining the Colts, Blue has served a valuable good luck charm for the team while also entertaining Colts fans.\n\nLucas Oil Stadium: Lucas Oil Stadium is a multi-purpose stadium in downtown Indianapolis, United States.  It replaced the RCA Dome as the home field of the NFL's Indianapolis Colts.  The stadium also hosted Super Bowl XLVI in 2012.  The stadium had its ribbon-cutting ceremony August 16, 2008, and then officially opened to the public eight days later on August 24, 2008.  The stadium was constructed to allow the removal of the RCA Dome and expansion of the Indiana Convention Center on its site.  The stadium is on the south side of South Street, the block south of the site of the former RCA Dome.  The stadium is often referred to as \"The House That Manning Built\", due to the success of the Indianapolis Colts during the tenure of Peyton Manning as their quarterback.\n\nQuestion: Blue is the official mascot of the Indianapolis Colts NFL football team, he was first introduced on September 17, 2006 in the Colts' first home regular season game against the Houston Texans at the domed stadium in Indianapolis, The RCA Dome, also know as what?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"mascot_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the official mascot.\"\n    },\n    \"team_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the NFL team the mascot represents.\"\n    },\n    \"introduction_event\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"date\": {\n          \"type\": \"string\",\n          \"description\": \"The date the mascot was first introduced.\"\n        },\n        \"opponent_team\": {\n          \"type\": \"string\",\n          \"description\": \"The opposing team in the game where the mascot was introduced.\"\n        },\n        \"stadium_info\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"current_name\": {\n              \"type\": \"string\",\n              \"description\": \"The name of the stadium where the mascot was introduced.\"\n            },\n            \"original_name\": {\n              \"type\": \"string\",\n              \"description\": \"The original name of the stadium.\"\n            }\n          },\n          \"required\": [\n            \"current_name\",\n            \"original_name\"\n          ],\n          \"additionalProperties\": false\n        }\n      },\n      \"required\": [\n        \"date\",\n        \"opponent_team\",\n        \"stadium_info\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"mascot_name\",\n    \"team_name\",\n    \"introduction_event\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "mascot_name",
-    "team_name",
-    "introduction_event"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "mascot_name": {
+        "type": "string",
+        "description": "The name of the official mascot."
+      },
+      "team_name": {
+        "type": "string",
+        "description": "The name of the NFL team the mascot represents."
+      },
+      "introduction_event": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "The date the mascot was first introduced."
+          },
+          "opponent_team": {
+            "type": "string",
+            "description": "The opposing team in the game where the mascot was introduced."
+          },
+          "stadium_info": {
+            "type": "object",
+            "properties": {
+              "current_name": {
+                "type": "string",
+                "description": "The name of the stadium where the mascot was introduced."
+              },
+              "original_name": {
+                "type": "string",
+                "description": "The original name of the stadium."
+              }
+            },
+            "required": [
+              "current_name",
+              "original_name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "date",
+          "opponent_team",
+          "stadium_info"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "mascot_name",
+      "team_name",
+      "introduction_event"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

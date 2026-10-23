@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Gilbert's potoroo: Gilbert's potoroo ("Potorous gilbertii"), sometimes called the "rat-kangaroo" or "garlgyte", is Australia's most endangered marsupial and one of the world's most endangered mammals.  It is a small nocturnal marsupial which lives in small groups or colonies.  It has long hind feet and front feet with curved claws which it uses to dig for food.  Its body has large amounts of fur which helps with insulation, and its fur ranges between brown and grey; the color fading on its belly.  This potoroo has a long, thin snout curving downward that it uses to smell its surroundings; this trait is common in all potoroo species.  Its eyes appear to bulge out of its face and look as though they are on an angle and its ears are almost invisible, buried under thick fur.  Male and female body types are very similar and are both within the same size range.  Adult females range in weight from 708–1205 g (including pouch young where present), whereas adult males range in weight from 845–1200 g.
-
-Piriformospora: Piriformospora is a fungal genus of the order Sebacinales.  It is a monotypic genus, containing the single endophytic root-colonising species Piriformospora indica, discovered from orchid plants in the Thar desert in Rajasthan, India by Prof. Ajit Verma and group, School of Life Sciences, Jawaharlal Nehru University, New Delhi.  The fungus has typical pear-shaped chlamydospores, and thus, named as "P. indica ".  Unlike mycorrhizal fungi, which cannot be cultured axenically, "P. indica" can be easily grown on various substrates.  It has been found to promote plant growth during its mutualistic symbiotic relationship with a wide variety of plants.  Experiments have shown that "P. indica" increases the resistance of colonized plants against fungal pathogens.  It has also been found in experiments with barley that "P. indica"-inoculated plants are tolerant to salt stress and more resistant to root pathogens.  "P. indica"-infested roots also show antioxidant capacity.  The fungus also induces systemic disease resistance in plants.  "P. indica" was found to require host cell death for proliferation during mutualistic symbiosis in barley.  Its genome has been sequenced and was published in 2011.
-
-Rondo dwarf galago: The Rondo dwarf galago ("Galagoides rondoensis") or Rondo bushbaby is a species of primate in the family Galagidae. The dwarf galagos are the smallest members of the genus Galagoides.  It weighs less than 100 grams, making it the smallest known galago.  It is endemic to Tanzania where its natural habitat is subtropical or tropical dry forests.  It lives in an area reported in 2012 to be less than 100 square kilometers and is threatened by habitat loss due to logging.  While it was discovered in the 1950s, the Rondo dwarf galago was deemed data deficient until 1996.  In 1996, the Rondo bushbaby was fully described as a species.  It is now listed as one of "The World's 25 Most Endangered Primates."  In 2010, it was also added to the Zoological Society of London's list of genetically distinct and endangered mammals.
-
-Gyromitrin: Gyromitrin is a toxin and carcinogen present in several members of the fungal genus "Gyromitra", "G. esculenta".  It is unstable and is easily hydrolyzed to the toxic compound monomethylhydrazine.  Monomethylhydrazine acts on the central nervous system and interferes with the normal use and function of vitamin B.  Poisoning results in nausea, stomach cramps, and diarrhea, while severe poisoning can result in convulsions, jaundice, or even coma or death.  Exposure to monomethylhydrazine has been shown to be carcinogenic in small mammals.
-
-Tiger quoll: The tiger quoll ("Dasyurus maculatus"), also known as the spotted-tail quoll, the spotted quoll, the spotted-tailed dasyure or the tiger cat, is a carnivorous marsupial of the quoll genus "Dasyurus" native to Australia.  With males and females weighing around 3.5 and 1.8 kg, respectively, it is mainland Australia's largest carnivorous marsupial, and the world's longest extant carnivorous marsupial (the biggest is the Tasmanian devil).  Two subspecies are recognised; the nominate is found in wet forests of southeastern Australia and Tasmania, and a northern subspecies, "D. m. gracilis", is found in a small area of northern Queensland and is endangered.
-
-Poronidulus: Poronidulus is a fungal genus in the family Polyporaceae.  It is a monotypic genus, and contains the single polypore species Poronidulus conchifer, found in North America.  The genus was circumscribed by American mycologist William Alphonso Murrill in 1904.  The generic name refers to the superficial similarity of the cup-shaped "Poronidulus" fruit bodies with those of the genus "Nidularia".  A second species, "Poronidulus bivalvis", found in Bogor, was placed in the genus by Franz Xaver Rudolf von Höhnel in 1914.  The actual identity of this taxon, however, is uncertain.
-
-Mesozoic mammals of Madagascar: Several mammals are known from the Mesozoic of Madagascar.  The Bathonian (middle Jurassic) "Ambondro", known from a piece of jaw with three teeth, is the earliest known mammal with molars showing the modern, tribosphenic pattern that is characteristic of marsupial and placental mammals.  Interpretations of its affinities have differed; one proposal places it in a group known as Australosphenida with other Mesozoic tribosphenic mammals from the southern continents (Gondwana) as well as the monotremes, while others favor closer affinities with northern (Laurasian) tribosphenic mammals or specifically with placentals.  At least five species are known from the Maastrichtian (late Cretaceous), including a yet undescribed species known from a nearly complete skeleton that may represent a completely new group of mammals.  The gondwanathere "Lavanify", known from two teeth, is most closely related to other gondwanatheres found in India and Argentina.  Two other teeth may represent another gondwanathere or a different kind of mammal.  One molar fragment is one of the few known remains of a multituberculate mammal from Gondwana and another (UA 8699) has been interpreted as either a marsupial or a placental.
-
-Gummivena: Gummivena is a fungal genus in the Mesophelliaceae family.  The genus is monotypic, containing the single truffle-like species Gummivena potorooi, found in Western Australia.  Described as new to science in 2002, "Gummivena" is intermediate in form between "Castoreum" and "Gummiglobus", and has a gleba with "veins" of gummy tissue and a three-layered peridium.  The specific epithet "potorooi" refers the fact that the fungus is found only in the range of the rare and endangered species Gilbert's potoroo ("Potorous gilbertii").
-
-Riverine rabbit: The riverine rabbit ("Bunolagus monticularis"), also known as the bushman rabbit or bushman hare, is one of the most endangered mammals in the world, with only around 250 living adults.  This rabbit has an extremely limited distribution area, found only in the central and southern regions of the Karoo Desert of South Africa's Northern Cape Province.  It is the only member of the genus Bunolagus.
-
-Claustula: Claustula is a fungal genus in the family Claustulaceae.  It is monotypic, containing the single species Claustula fischeri, described in 1926 and found in New Zealand and Tasmania.  In May 2016, it was one of two native New Zealand fungi was added to the IUCN Red List of Threatened Species as endangered.
-
-Question: what is the scientific name of Australia's most endangered marsupial and one of the world's most endangered mammals in which Gummivena is a fungal genus is found
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "scientific_name": {
-      "type": "string",
-      "description": "The scientific name of the marsupial."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "common_name": {
-      "type": "string",
-      "description": "The common name of the marsupial."
-    },
-    "conservation_status_description": {
-      "type": "string",
-      "description": "A description of the marsupial's conservation status."
-    },
-    "associated_fungal_genus": {
-      "type": "string",
-      "description": "The name of the fungal genus found in the marsupial's range."
+    {
+      "role": "user",
+      "content": "Context:\nGilbert's potoroo: Gilbert's potoroo (\"Potorous gilbertii\"), sometimes called the \"rat-kangaroo\" or \"garlgyte\", is Australia's most endangered marsupial and one of the world's most endangered mammals.  It is a small nocturnal marsupial which lives in small groups or colonies.  It has long hind feet and front feet with curved claws which it uses to dig for food.  Its body has large amounts of fur which helps with insulation, and its fur ranges between brown and grey; the color fading on its belly.  This potoroo has a long, thin snout curving downward that it uses to smell its surroundings; this trait is common in all potoroo species.  Its eyes appear to bulge out of its face and look as though they are on an angle and its ears are almost invisible, buried under thick fur.  Male and female body types are very similar and are both within the same size range.  Adult females range in weight from 708–1205 g (including pouch young where present), whereas adult males range in weight from 845–1200 g.\n\nPiriformospora: Piriformospora is a fungal genus of the order Sebacinales.  It is a monotypic genus, containing the single endophytic root-colonising species Piriformospora indica, discovered from orchid plants in the Thar desert in Rajasthan, India by Prof. Ajit Verma and group, School of Life Sciences, Jawaharlal Nehru University, New Delhi.  The fungus has typical pear-shaped chlamydospores, and thus, named as \"P. indica \".  Unlike mycorrhizal fungi, which cannot be cultured axenically, \"P. indica\" can be easily grown on various substrates.  It has been found to promote plant growth during its mutualistic symbiotic relationship with a wide variety of plants.  Experiments have shown that \"P. indica\" increases the resistance of colonized plants against fungal pathogens.  It has also been found in experiments with barley that \"P. indica\"-inoculated plants are tolerant to salt stress and more resistant to root pathogens.  \"P. indica\"-infested roots also show antioxidant capacity.  The fungus also induces systemic disease resistance in plants.  \"P. indica\" was found to require host cell death for proliferation during mutualistic symbiosis in barley.  Its genome has been sequenced and was published in 2011.\n\nRondo dwarf galago: The Rondo dwarf galago (\"Galagoides rondoensis\") or Rondo bushbaby is a species of primate in the family Galagidae. The dwarf galagos are the smallest members of the genus Galagoides.  It weighs less than 100 grams, making it the smallest known galago.  It is endemic to Tanzania where its natural habitat is subtropical or tropical dry forests.  It lives in an area reported in 2012 to be less than 100 square kilometers and is threatened by habitat loss due to logging.  While it was discovered in the 1950s, the Rondo dwarf galago was deemed data deficient until 1996.  In 1996, the Rondo bushbaby was fully described as a species.  It is now listed as one of \"The World's 25 Most Endangered Primates.\"  In 2010, it was also added to the Zoological Society of London's list of genetically distinct and endangered mammals.\n\nGyromitrin: Gyromitrin is a toxin and carcinogen present in several members of the fungal genus \"Gyromitra\", \"G. esculenta\".  It is unstable and is easily hydrolyzed to the toxic compound monomethylhydrazine.  Monomethylhydrazine acts on the central nervous system and interferes with the normal use and function of vitamin B.  Poisoning results in nausea, stomach cramps, and diarrhea, while severe poisoning can result in convulsions, jaundice, or even coma or death.  Exposure to monomethylhydrazine has been shown to be carcinogenic in small mammals.\n\nTiger quoll: The tiger quoll (\"Dasyurus maculatus\"), also known as the spotted-tail quoll, the spotted quoll, the spotted-tailed dasyure or the tiger cat, is a carnivorous marsupial of the quoll genus \"Dasyurus\" native to Australia.  With males and females weighing around 3.5 and 1.8 kg, respectively, it is mainland Australia's largest carnivorous marsupial, and the world's longest extant carnivorous marsupial (the biggest is the Tasmanian devil).  Two subspecies are recognised; the nominate is found in wet forests of southeastern Australia and Tasmania, and a northern subspecies, \"D. m. gracilis\", is found in a small area of northern Queensland and is endangered.\n\nPoronidulus: Poronidulus is a fungal genus in the family Polyporaceae.  It is a monotypic genus, and contains the single polypore species Poronidulus conchifer, found in North America.  The genus was circumscribed by American mycologist William Alphonso Murrill in 1904.  The generic name refers to the superficial similarity of the cup-shaped \"Poronidulus\" fruit bodies with those of the genus \"Nidularia\".  A second species, \"Poronidulus bivalvis\", found in Bogor, was placed in the genus by Franz Xaver Rudolf von Höhnel in 1914.  The actual identity of this taxon, however, is uncertain.\n\nMesozoic mammals of Madagascar: Several mammals are known from the Mesozoic of Madagascar.  The Bathonian (middle Jurassic) \"Ambondro\", known from a piece of jaw with three teeth, is the earliest known mammal with molars showing the modern, tribosphenic pattern that is characteristic of marsupial and placental mammals.  Interpretations of its affinities have differed; one proposal places it in a group known as Australosphenida with other Mesozoic tribosphenic mammals from the southern continents (Gondwana) as well as the monotremes, while others favor closer affinities with northern (Laurasian) tribosphenic mammals or specifically with placentals.  At least five species are known from the Maastrichtian (late Cretaceous), including a yet undescribed species known from a nearly complete skeleton that may represent a completely new group of mammals.  The gondwanathere \"Lavanify\", known from two teeth, is most closely related to other gondwanatheres found in India and Argentina.  Two other teeth may represent another gondwanathere or a different kind of mammal.  One molar fragment is one of the few known remains of a multituberculate mammal from Gondwana and another (UA 8699) has been interpreted as either a marsupial or a placental.\n\nGummivena: Gummivena is a fungal genus in the Mesophelliaceae family.  The genus is monotypic, containing the single truffle-like species Gummivena potorooi, found in Western Australia.  Described as new to science in 2002, \"Gummivena\" is intermediate in form between \"Castoreum\" and \"Gummiglobus\", and has a gleba with \"veins\" of gummy tissue and a three-layered peridium.  The specific epithet \"potorooi\" refers the fact that the fungus is found only in the range of the rare and endangered species Gilbert's potoroo (\"Potorous gilbertii\").\n\nRiverine rabbit: The riverine rabbit (\"Bunolagus monticularis\"), also known as the bushman rabbit or bushman hare, is one of the most endangered mammals in the world, with only around 250 living adults.  This rabbit has an extremely limited distribution area, found only in the central and southern regions of the Karoo Desert of South Africa's Northern Cape Province.  It is the only member of the genus Bunolagus.\n\nClaustula: Claustula is a fungal genus in the family Claustulaceae.  It is monotypic, containing the single species Claustula fischeri, described in 1926 and found in New Zealand and Tasmania.  In May 2016, it was one of two native New Zealand fungi was added to the IUCN Red List of Threatened Species as endangered.\n\nQuestion: what is the scientific name of Australia's most endangered marsupial and one of the world's most endangered mammals in which Gummivena is a fungal genus is found\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"scientific_name\": {\n      \"type\": \"string\",\n      \"description\": \"The scientific name of the marsupial.\"\n    },\n    \"common_name\": {\n      \"type\": \"string\",\n      \"description\": \"The common name of the marsupial.\"\n    },\n    \"conservation_status_description\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the marsupial's conservation status.\"\n    },\n    \"associated_fungal_genus\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the fungal genus found in the marsupial's range.\"\n    }\n  },\n  \"required\": [\n    \"scientific_name\",\n    \"common_name\",\n    \"conservation_status_description\",\n    \"associated_fungal_genus\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "scientific_name",
-    "common_name",
-    "conservation_status_description",
-    "associated_fungal_genus"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "scientific_name": {
+        "type": "string",
+        "description": "The scientific name of the marsupial."
+      },
+      "common_name": {
+        "type": "string",
+        "description": "The common name of the marsupial."
+      },
+      "conservation_status_description": {
+        "type": "string",
+        "description": "A description of the marsupial's conservation status."
+      },
+      "associated_fungal_genus": {
+        "type": "string",
+        "description": "The name of the fungal genus found in the marsupial's range."
+      }
+    },
+    "required": [
+      "scientific_name",
+      "common_name",
+      "conservation_status_description",
+      "associated_fungal_genus"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

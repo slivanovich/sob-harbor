@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Universal Transverse Mercator coordinate system: The Universal Transverse Mercator (UTM) conformal projection uses a 2-dimensional Cartesian coordinate system to give locations on the surface of the Earth.  Like the traditional method of latitude and longitude, it is a horizontal position representation, i.e. it is used to identify locations on the Earth independently of vertical position.  However, it differs from that method in several respects.
-
-South American Council of Health: The South American Council of Health, created on December 10, 2008, is a permanent council composed of Ministers from member countries of Unasur (Union of South American Nations).  This body was created in order to constitute a space of integration concerning health, incorporating the efforts and improvements from other mechanisms of regional integration, such as MERCOSUR, Organismo Andino de Salud (ORAS CONHU) and Amazon Cooperation Treaty Organization, to promote common policies and coordinated activities among member countries.  It is also a consultation and consensus body concerning health, which intends to delve deeply into relevant themes and strengthen public policies aimed at improving the living conditions of the inhabitants of the South American continent.
-
-Paul Gustafsson: Paul Verner Erkki Gustafsson (9 April 1923 Helsinki – 23 March 2002 Helsinki) was a Finnish diplomat with a law degree.  He served as Head of the Legal Department of the Ministry of Foreign Affairs 1967-1970 and 1973-1976 and was Ambassador to The Hague from 1970 to 1973, OECD Representation in Paris 1976-1977, Undersecretary of State from 1977 to 1980 and Ambassador to Stockholm 1980–1983.
-
-Momentum operator: In quantum mechanics, the momentum operator is an operator which maps the wave function "ψ"("x", "t") in a Hilbert space representing a quantum state to another function.  If this new function is a constant "p" multiplied by the original wave function "ψ" , then "p" is the eigenvalue of the momentum operator, and "ψ" is the eigenfunction of the momentum operator.  In quantum mechanics, the set of eigenvalues, the spectrum, of an operator are the possible results measured in an experiment, in this case the possible results of a measurement of linear momentum.  The momentum operator is, in the position representation, an example of a differential operator.  For the case of one particle in one dimension, the definition is
-
-Energy Technology Data Exchange: The Energy Technology Data Exchange (ETDE) was formed in 1987 and officially ended 30 June 2014.  It was initiated as a multilateral agreement under the International Energy Agency (IEA) agreement network, replacing numerous other bilateral agreements.  The multilateral agreement was for the international exchange of energy research and development and information.  The exchange resulted in a database which was the world's largest collection of energy research, technology, and development (RTD) information (ETDEWEB - described below).  The collection of information was generated from energy RTD literature published in member countries and through other partnering arrangements with organizations such as the International Nuclear Information System (a unit of the International Atomic Energy Agency).  This had the effect of creating a broad spectrum of information that was included in the ETDE database.  The range of content included fossil fuels, renewable energies (including Hydrogen), End-Use (Buildings, Industry and Transport), fusion, energy policy, conservation, and efficiency, and cross-sectional activities.  This fulfilled the need for timely exchange of global information towards the goal of a sustainable energy future.  ETDE operated under an IEA Implementing Agreement and was governed by an Executive Committee of delegates from ETDE member countries.  Officers of the Executive Committee included a Chair and two Vice-Chairs, elected to three-year terms.  Day-to-day operations were managed through an operating agent organization, which reported to the Executive Committee.
-
-N-vector: The "n"-vector representation is a three-parameter non-singular representation well-suited for replacing latitude and longitude as horizontal position representation in mathematical calculations and computer algorithms.
-
-Generalized System of Preferences: The Generalized System of Preferences, or GSP, is a preferential tariff system which provides for a formal system of exemption from the more general rules of the World Trade Organization (WTO), (formerly, the General Agreement on Tariffs and Trade or GATT).  Specifically, it's a system of exemption from the most favored nation principle (MFN) that obliges WTO member countries to treat the imports of all other WTO member countries no worse than they treat the imports of their "most favored" trading partner.  In essence, MFN requires WTO member countries to treat imports coming from all other WTO member countries equally, that is, by imposing equal tariffs on them, etc.
-
-OECD: The Organisation for Economic Co-operation and Development (OECD; French: "Organisation de coopération et de développement économiques" , "OCDE ") is an intergovernmental economic organisation with 35 member countries, founded in 1960 to stimulate economic progress and world trade.  It is a forum of countries describing themselves as committed to democracy and the market economy, providing a platform to compare policy experiences, seeking answers to common problems, identify good practices and coordinate domestic and international policies of its members.  Most OECD members are high-income economies with a very high Human Development Index (HDI) and are regarded as developed countries.  OECD is an official United Nations Observer.
-
-OPEC Fund for International Development: The OPEC Fund for International Development (OFID) is the intergovernmental development finance institution established in 1976 by the Member States of the Organization of the Petroleum Exporting Countries (OPEC).  OFID was conceived at the Conference of the Sovereigns and Heads of State of OPEC Member Countries, which was held in Algiers, Algeria, in March 1975.  A Solemn Declaration of the Conference "reaffirmed the natural solidarity which unites OPEC countries with other developing countries in their struggle to overcome underdevelopment", and called for measures to strengthen cooperation between these countries.
-
-Horizontal position representation: A position representation is the parameters used to express a position relative to a reference.  Representing position in three dimensions is often done by a Euclidean vector.  However, when representing position relative to the Earth it is often more convenient to represent vertical position as altitude or depth, and to use some other parameters to represent horizontal position.  There are also several applications where only the horizontal position is of interest, this might e.g. be the case for ships and ground vehicles/cars.
-
-Question: How many member countries does the organization for which Paul Gustafsson held the position Representation in Paris in 1976 ? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "organization_name": {
-      "type": "string",
-      "description": "The name of the organization Paul Gustafsson was associated with."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "position_held": {
-      "type": "string",
-      "description": "The specific position Paul Gustafsson held at the organization."
-    },
-    "year_of_position": {
-      "type": "integer",
-      "description": "The year Paul Gustafsson held the specified position."
-    },
-    "number_of_member_countries": {
-      "type": "integer",
-      "description": "The total number of member countries in the organization."
+    {
+      "role": "user",
+      "content": "Context:\nUniversal Transverse Mercator coordinate system: The Universal Transverse Mercator (UTM) conformal projection uses a 2-dimensional Cartesian coordinate system to give locations on the surface of the Earth.  Like the traditional method of latitude and longitude, it is a horizontal position representation, i.e. it is used to identify locations on the Earth independently of vertical position.  However, it differs from that method in several respects.\n\nSouth American Council of Health: The South American Council of Health, created on December 10, 2008, is a permanent council composed of Ministers from member countries of Unasur (Union of South American Nations).  This body was created in order to constitute a space of integration concerning health, incorporating the efforts and improvements from other mechanisms of regional integration, such as MERCOSUR, Organismo Andino de Salud (ORAS CONHU) and Amazon Cooperation Treaty Organization, to promote common policies and coordinated activities among member countries.  It is also a consultation and consensus body concerning health, which intends to delve deeply into relevant themes and strengthen public policies aimed at improving the living conditions of the inhabitants of the South American continent.\n\nPaul Gustafsson: Paul Verner Erkki Gustafsson (9 April 1923 Helsinki – 23 March 2002 Helsinki) was a Finnish diplomat with a law degree.  He served as Head of the Legal Department of the Ministry of Foreign Affairs 1967-1970 and 1973-1976 and was Ambassador to The Hague from 1970 to 1973, OECD Representation in Paris 1976-1977, Undersecretary of State from 1977 to 1980 and Ambassador to Stockholm 1980–1983.\n\nMomentum operator: In quantum mechanics, the momentum operator is an operator which maps the wave function \"ψ\"(\"x\", \"t\") in a Hilbert space representing a quantum state to another function.  If this new function is a constant \"p\" multiplied by the original wave function \"ψ\" , then \"p\" is the eigenvalue of the momentum operator, and \"ψ\" is the eigenfunction of the momentum operator.  In quantum mechanics, the set of eigenvalues, the spectrum, of an operator are the possible results measured in an experiment, in this case the possible results of a measurement of linear momentum.  The momentum operator is, in the position representation, an example of a differential operator.  For the case of one particle in one dimension, the definition is\n\nEnergy Technology Data Exchange: The Energy Technology Data Exchange (ETDE) was formed in 1987 and officially ended 30 June 2014.  It was initiated as a multilateral agreement under the International Energy Agency (IEA) agreement network, replacing numerous other bilateral agreements.  The multilateral agreement was for the international exchange of energy research and development and information.  The exchange resulted in a database which was the world's largest collection of energy research, technology, and development (RTD) information (ETDEWEB - described below).  The collection of information was generated from energy RTD literature published in member countries and through other partnering arrangements with organizations such as the International Nuclear Information System (a unit of the International Atomic Energy Agency).  This had the effect of creating a broad spectrum of information that was included in the ETDE database.  The range of content included fossil fuels, renewable energies (including Hydrogen), End-Use (Buildings, Industry and Transport), fusion, energy policy, conservation, and efficiency, and cross-sectional activities.  This fulfilled the need for timely exchange of global information towards the goal of a sustainable energy future.  ETDE operated under an IEA Implementing Agreement and was governed by an Executive Committee of delegates from ETDE member countries.  Officers of the Executive Committee included a Chair and two Vice-Chairs, elected to three-year terms.  Day-to-day operations were managed through an operating agent organization, which reported to the Executive Committee.\n\nN-vector: The \"n\"-vector representation is a three-parameter non-singular representation well-suited for replacing latitude and longitude as horizontal position representation in mathematical calculations and computer algorithms.\n\nGeneralized System of Preferences: The Generalized System of Preferences, or GSP, is a preferential tariff system which provides for a formal system of exemption from the more general rules of the World Trade Organization (WTO), (formerly, the General Agreement on Tariffs and Trade or GATT).  Specifically, it's a system of exemption from the most favored nation principle (MFN) that obliges WTO member countries to treat the imports of all other WTO member countries no worse than they treat the imports of their \"most favored\" trading partner.  In essence, MFN requires WTO member countries to treat imports coming from all other WTO member countries equally, that is, by imposing equal tariffs on them, etc.\n\nOECD: The Organisation for Economic Co-operation and Development (OECD; French: \"Organisation de coopération et de développement économiques\" , \"OCDE \") is an intergovernmental economic organisation with 35 member countries, founded in 1960 to stimulate economic progress and world trade.  It is a forum of countries describing themselves as committed to democracy and the market economy, providing a platform to compare policy experiences, seeking answers to common problems, identify good practices and coordinate domestic and international policies of its members.  Most OECD members are high-income economies with a very high Human Development Index (HDI) and are regarded as developed countries.  OECD is an official United Nations Observer.\n\nOPEC Fund for International Development: The OPEC Fund for International Development (OFID) is the intergovernmental development finance institution established in 1976 by the Member States of the Organization of the Petroleum Exporting Countries (OPEC).  OFID was conceived at the Conference of the Sovereigns and Heads of State of OPEC Member Countries, which was held in Algiers, Algeria, in March 1975.  A Solemn Declaration of the Conference \"reaffirmed the natural solidarity which unites OPEC countries with other developing countries in their struggle to overcome underdevelopment\", and called for measures to strengthen cooperation between these countries.\n\nHorizontal position representation: A position representation is the parameters used to express a position relative to a reference.  Representing position in three dimensions is often done by a Euclidean vector.  However, when representing position relative to the Earth it is often more convenient to represent vertical position as altitude or depth, and to use some other parameters to represent horizontal position.  There are also several applications where only the horizontal position is of interest, this might e.g. be the case for ships and ground vehicles/cars.\n\nQuestion: How many member countries does the organization for which Paul Gustafsson held the position Representation in Paris in 1976 ? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"organization_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the organization Paul Gustafsson was associated with.\"\n    },\n    \"position_held\": {\n      \"type\": \"string\",\n      \"description\": \"The specific position Paul Gustafsson held at the organization.\"\n    },\n    \"year_of_position\": {\n      \"type\": \"integer\",\n      \"description\": \"The year Paul Gustafsson held the specified position.\"\n    },\n    \"number_of_member_countries\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of member countries in the organization.\"\n    }\n  },\n  \"required\": [\n    \"organization_name\",\n    \"position_held\",\n    \"year_of_position\",\n    \"number_of_member_countries\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "organization_name",
-    "position_held",
-    "year_of_position",
-    "number_of_member_countries"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "organization_name": {
+        "type": "string",
+        "description": "The name of the organization Paul Gustafsson was associated with."
+      },
+      "position_held": {
+        "type": "string",
+        "description": "The specific position Paul Gustafsson held at the organization."
+      },
+      "year_of_position": {
+        "type": "integer",
+        "description": "The year Paul Gustafsson held the specified position."
+      },
+      "number_of_member_countries": {
+        "type": "integer",
+        "description": "The total number of member countries in the organization."
+      }
+    },
+    "required": [
+      "organization_name",
+      "position_held",
+      "year_of_position",
+      "number_of_member_countries"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

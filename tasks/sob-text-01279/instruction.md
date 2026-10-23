@@ -1,92 +1,69 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Sally Ride: Sally Kristen Ride (May 26, 1951 – July 23, 2012) was an American physicist and astronaut.  Born in Los Angeles, she joined NASA in 1978 and became the first American woman in space in 1983.  Ride was the third woman in space overall, after USSR cosmonauts Valentina Tereshkova (1963) and Svetlana Savitskaya (1982).  Ride remains the youngest American astronaut to have traveled to space, having done so at the age of 32.  After flying twice on the Orbiter "Challenger", she left NASA in 1987.  She worked for two years at Stanford University's Center for International Security and Arms Control, then at the University of California, San Diego as a professor of physics, primarily researching nonlinear optics and Thomson scattering.  She served on the committees that investigated the "Challenger" and "Columbia" space shuttle disasters, the only person to participate in both.  Ride died of pancreatic cancer on July 23, 2012.
-
-STS-9: STS-9 (also referred to as STS-41A and Spacelab 1) was the ninth NASA Space Shuttle mission and the sixth mission of the Space Shuttle "Columbia".  Launched on November 28, 1983, the ten-day mission carried the first Spacelab laboratory module into orbit, and was "Columbia"<nowiki>'</nowiki>s last flight until STS-61-C in January 1986.
-
-STS-32: STS-32 was the 33rd mission of NASA's Space Shuttle program, and the 9th launch of Space Shuttle "Columbia".  Launched on 9 January 1990, it marked the first use of Launch Pad A at Kennedy Space Center's Complex 39 since 1986; it also marked the first use of Mobile Launcher Platform No. 3 (MLP-3) in the Space Shuttle program.  STS-32 was, at the time, the longest shuttle mission yet conducted, with a duration of nearly 11 days.  Before STS-32, the only mission of the same duration had been STS-9 in 1983.  On 20 January 1990, STS-32 executed the third night landing of the shuttle program.
-
-STS-33: STS-33 was a NASA Space Shuttle mission, during which Space Shuttle "Discovery" deployed a payload for the United States Department of Defense (DoD).  STS-33 was the 32nd shuttle mission overall, the ninth flight of "Discovery", and the fifth shuttle mission in support of the DoD.  Due to the nature of the mission, specific details remain classified.  "Discovery" lifted off from Pad B, Launch Complex 39 at Kennedy Space Center (KSC), Florida, on 22 November 1989 at 7:23 pm EST; it landed at Edwards Air Force Base, California, on 28 November.
-
-STS-61-C: STS-61-C was the twenty-fourth mission of NASA's Space Shuttle program, and the seventh mission of Space Shuttle "Columbia".  It was the first time that "Columbia", the first operational orbiter to be constructed, had flown since STS-9.  The mission launched from Florida's Kennedy Space Center on 12 January 1986, and landed six days later on 18 January.  STS-61-C's seven-person crew included the second African-American shuttle pilot, future NASA Administrator Charles Bolden, the first Costa Rican-born astronaut, Franklin Chang-Diaz, and the second sitting politician to fly in space, Representative Bill Nelson (D-FL).  It was the last shuttle mission before the Space Shuttle "Challenger" disaster, which occurred just ten days after STS-61-C's landing.
-
-Alvin Drew: Colonel Benjamin Alvin Drew (born November 5, 1962) is a United States Air Force officer and a NASA astronaut.  He has been on two spaceflights; the first was the Space Shuttle mission STS-118 to the International Space Station, in August 2007.  Drew's second spaceflight took place in March 2011 on STS-133, another mission to the International Space Station.  STS-133 was Space Shuttle "Discovery"'s final mission.  Drew took part in two spacewalks while docked to the station.  Drew was the final African-American to fly on board a Space Shuttle, as the final two Space Shuttle missions, STS-134 and STS-135, had no African-American crew members.
-
-STS-6: STS-6 was the sixth NASA Space Shuttle mission and the maiden flight of the Space Shuttle "Challenger".  Launched from Kennedy Space Center on 4 April 1983, the mission deployed the first Tracking and Data Relay Satellite, TDRS-1, into orbit, before landing at Edwards Air Force Base on 9 April.  STS-6 was the first Space Shuttle mission during which a spacewalk was conducted, and hence was the first in which the Extravehicular Mobility Unit (EMU) was used.
-
-STS-7: STS-7 was NASA's seventh Space Shuttle mission, and the second mission for the Space Shuttle "Challenger".  During the mission, "Challenger" deployed several satellites into orbit.  The shuttle launched from Kennedy Space Center on June 18, 1983, and landed at Edwards Air Force Base on June 24.  STS-7 was notable for carrying Sally Ride, America's first female astronaut.
-
-STS-29: STS-29 was a NASA Space Shuttle mission, during which Space Shuttle "Discovery" inserted a Tracking and Data Relay Satellite (TDRS) into Earth orbit.  It was the third shuttle mission following the "Challenger" disaster of 1986, and launched from Kennedy Space Center, Florida, on 13 March 1989.  STS-29 was the eighth flight of "Discovery" and the 28th Space Shuttle mission overall; its planned predecessor, STS-28, was delayed until August 1989.
-
-STS-38: STS-38 was a Space Shuttle mission by NASA using the Space Shuttle "Atlantis".  It was the 37th shuttle mission, and carried a classified payload for the U.S. Department of Defense.  It was the 7th flight for "Atlantis" and the 7th flight dedicated to the Department of Defense.  The mission was a 4-day mission that traveled more than 2 million miles and completed 79 revolutions.  "Atlantis" landed at Kennedy Space Center's Shuttle Landing Facility's runway 33.  The launch was originally scheduled for July 1990, but was rescheduled due to a hydrogen leak found on "Columbia" during the STS-35 countdown.  During a rollback to the Orbiter Processing Facility "Atlantis" was damaged during a hail storm.  The eventual launch date of 15 November 1990 was set due to a payload problem.  The launch window was between 18:30 and 22:30 EST.  The launch occurred at 18:48 EST.
-
-Question: STS-7 was NASA's seventh Space Shuttle mission carried the first American woman in space in 1983 who name was?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "mission_info": {
-      "type": "object",
-      "properties": {
-        "mission_identifier": {
-          "type": "string",
-          "description": "The official identifier for the space shuttle mission."
-        },
-        "launch_year": {
-          "type": "integer",
-          "description": "The year the mission was launched."
-        },
-        "space_shuttle_orbiter": {
-          "type": "string",
-          "description": "The name of the Space Shuttle orbiter used for the mission."
-        }
-      },
-      "required": [
-        "mission_identifier",
-        "launch_year",
-        "space_shuttle_orbiter"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "astronaut": {
-      "type": "object",
-      "properties": {
-        "full_name": {
-          "type": "string",
-          "description": "The full name of the astronaut."
-        },
-        "key_achievement": {
-          "type": "string",
-          "description": "The significant achievement of the astronaut during this mission."
-        }
-      },
-      "required": [
-        "full_name",
-        "key_achievement"
-      ],
-      "additionalProperties": false
-    },
-    "event_description": {
-      "type": "string",
-      "description": "A brief description of the historical event related to the mission and astronaut."
+    {
+      "role": "user",
+      "content": "Context:\nSally Ride: Sally Kristen Ride (May 26, 1951 – July 23, 2012) was an American physicist and astronaut.  Born in Los Angeles, she joined NASA in 1978 and became the first American woman in space in 1983.  Ride was the third woman in space overall, after USSR cosmonauts Valentina Tereshkova (1963) and Svetlana Savitskaya (1982).  Ride remains the youngest American astronaut to have traveled to space, having done so at the age of 32.  After flying twice on the Orbiter \"Challenger\", she left NASA in 1987.  She worked for two years at Stanford University's Center for International Security and Arms Control, then at the University of California, San Diego as a professor of physics, primarily researching nonlinear optics and Thomson scattering.  She served on the committees that investigated the \"Challenger\" and \"Columbia\" space shuttle disasters, the only person to participate in both.  Ride died of pancreatic cancer on July 23, 2012.\n\nSTS-9: STS-9 (also referred to as STS-41A and Spacelab 1) was the ninth NASA Space Shuttle mission and the sixth mission of the Space Shuttle \"Columbia\".  Launched on November 28, 1983, the ten-day mission carried the first Spacelab laboratory module into orbit, and was \"Columbia\"<nowiki>'</nowiki>s last flight until STS-61-C in January 1986.\n\nSTS-32: STS-32 was the 33rd mission of NASA's Space Shuttle program, and the 9th launch of Space Shuttle \"Columbia\".  Launched on 9 January 1990, it marked the first use of Launch Pad A at Kennedy Space Center's Complex 39 since 1986; it also marked the first use of Mobile Launcher Platform No. 3 (MLP-3) in the Space Shuttle program.  STS-32 was, at the time, the longest shuttle mission yet conducted, with a duration of nearly 11 days.  Before STS-32, the only mission of the same duration had been STS-9 in 1983.  On 20 January 1990, STS-32 executed the third night landing of the shuttle program.\n\nSTS-33: STS-33 was a NASA Space Shuttle mission, during which Space Shuttle \"Discovery\" deployed a payload for the United States Department of Defense (DoD).  STS-33 was the 32nd shuttle mission overall, the ninth flight of \"Discovery\", and the fifth shuttle mission in support of the DoD.  Due to the nature of the mission, specific details remain classified.  \"Discovery\" lifted off from Pad B, Launch Complex 39 at Kennedy Space Center (KSC), Florida, on 22 November 1989 at 7:23 pm EST; it landed at Edwards Air Force Base, California, on 28 November.\n\nSTS-61-C: STS-61-C was the twenty-fourth mission of NASA's Space Shuttle program, and the seventh mission of Space Shuttle \"Columbia\".  It was the first time that \"Columbia\", the first operational orbiter to be constructed, had flown since STS-9.  The mission launched from Florida's Kennedy Space Center on 12 January 1986, and landed six days later on 18 January.  STS-61-C's seven-person crew included the second African-American shuttle pilot, future NASA Administrator Charles Bolden, the first Costa Rican-born astronaut, Franklin Chang-Diaz, and the second sitting politician to fly in space, Representative Bill Nelson (D-FL).  It was the last shuttle mission before the Space Shuttle \"Challenger\" disaster, which occurred just ten days after STS-61-C's landing.\n\nAlvin Drew: Colonel Benjamin Alvin Drew (born November 5, 1962) is a United States Air Force officer and a NASA astronaut.  He has been on two spaceflights; the first was the Space Shuttle mission STS-118 to the International Space Station, in August 2007.  Drew's second spaceflight took place in March 2011 on STS-133, another mission to the International Space Station.  STS-133 was Space Shuttle \"Discovery\"'s final mission.  Drew took part in two spacewalks while docked to the station.  Drew was the final African-American to fly on board a Space Shuttle, as the final two Space Shuttle missions, STS-134 and STS-135, had no African-American crew members.\n\nSTS-6: STS-6 was the sixth NASA Space Shuttle mission and the maiden flight of the Space Shuttle \"Challenger\".  Launched from Kennedy Space Center on 4 April 1983, the mission deployed the first Tracking and Data Relay Satellite, TDRS-1, into orbit, before landing at Edwards Air Force Base on 9 April.  STS-6 was the first Space Shuttle mission during which a spacewalk was conducted, and hence was the first in which the Extravehicular Mobility Unit (EMU) was used.\n\nSTS-7: STS-7 was NASA's seventh Space Shuttle mission, and the second mission for the Space Shuttle \"Challenger\".  During the mission, \"Challenger\" deployed several satellites into orbit.  The shuttle launched from Kennedy Space Center on June 18, 1983, and landed at Edwards Air Force Base on June 24.  STS-7 was notable for carrying Sally Ride, America's first female astronaut.\n\nSTS-29: STS-29 was a NASA Space Shuttle mission, during which Space Shuttle \"Discovery\" inserted a Tracking and Data Relay Satellite (TDRS) into Earth orbit.  It was the third shuttle mission following the \"Challenger\" disaster of 1986, and launched from Kennedy Space Center, Florida, on 13 March 1989.  STS-29 was the eighth flight of \"Discovery\" and the 28th Space Shuttle mission overall; its planned predecessor, STS-28, was delayed until August 1989.\n\nSTS-38: STS-38 was a Space Shuttle mission by NASA using the Space Shuttle \"Atlantis\".  It was the 37th shuttle mission, and carried a classified payload for the U.S. Department of Defense.  It was the 7th flight for \"Atlantis\" and the 7th flight dedicated to the Department of Defense.  The mission was a 4-day mission that traveled more than 2 million miles and completed 79 revolutions.  \"Atlantis\" landed at Kennedy Space Center's Shuttle Landing Facility's runway 33.  The launch was originally scheduled for July 1990, but was rescheduled due to a hydrogen leak found on \"Columbia\" during the STS-35 countdown.  During a rollback to the Orbiter Processing Facility \"Atlantis\" was damaged during a hail storm.  The eventual launch date of 15 November 1990 was set due to a payload problem.  The launch window was between 18:30 and 22:30 EST.  The launch occurred at 18:48 EST.\n\nQuestion: STS-7 was NASA's seventh Space Shuttle mission carried the first American woman in space in 1983 who name was?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"mission_info\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"mission_identifier\": {\n          \"type\": \"string\",\n          \"description\": \"The official identifier for the space shuttle mission.\"\n        },\n        \"launch_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the mission was launched.\"\n        },\n        \"space_shuttle_orbiter\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the Space Shuttle orbiter used for the mission.\"\n        }\n      },\n      \"required\": [\n        \"mission_identifier\",\n        \"launch_year\",\n        \"space_shuttle_orbiter\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"astronaut\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"full_name\": {\n          \"type\": \"string\",\n          \"description\": \"The full name of the astronaut.\"\n        },\n        \"key_achievement\": {\n          \"type\": \"string\",\n          \"description\": \"The significant achievement of the astronaut during this mission.\"\n        }\n      },\n      \"required\": [\n        \"full_name\",\n        \"key_achievement\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"event_description\": {\n      \"type\": \"string\",\n      \"description\": \"A brief description of the historical event related to the mission and astronaut.\"\n    }\n  },\n  \"required\": [\n    \"mission_info\",\n    \"astronaut\",\n    \"event_description\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "mission_info",
-    "astronaut",
-    "event_description"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "mission_info": {
+        "type": "object",
+        "properties": {
+          "mission_identifier": {
+            "type": "string",
+            "description": "The official identifier for the space shuttle mission."
+          },
+          "launch_year": {
+            "type": "integer",
+            "description": "The year the mission was launched."
+          },
+          "space_shuttle_orbiter": {
+            "type": "string",
+            "description": "The name of the Space Shuttle orbiter used for the mission."
+          }
+        },
+        "required": [
+          "mission_identifier",
+          "launch_year",
+          "space_shuttle_orbiter"
+        ],
+        "additionalProperties": false
+      },
+      "astronaut": {
+        "type": "object",
+        "properties": {
+          "full_name": {
+            "type": "string",
+            "description": "The full name of the astronaut."
+          },
+          "key_achievement": {
+            "type": "string",
+            "description": "The significant achievement of the astronaut during this mission."
+          }
+        },
+        "required": [
+          "full_name",
+          "key_achievement"
+        ],
+        "additionalProperties": false
+      },
+      "event_description": {
+        "type": "string",
+        "description": "A brief description of the historical event related to the mission and astronaut."
+      }
+    },
+    "required": [
+      "mission_info",
+      "astronaut",
+      "event_description"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

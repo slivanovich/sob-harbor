@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-George West: George West (February 17, 1823 – September 20, 1901) was an industrialist and a U.S. Representative from New York.
-
-Charles Shor: Shor was born in Cincinnati, Ohio on April 2nd, 1954.  His father, S. David Shor had started the Covington, Kentucky-based paper bag manufacturing business,Duro Bag Manufacturing the year before Charles was born.  At this point, the company had one location with only a handful of employees.
-
-Rock City (attraction): Rock City is a roadside attraction on Lookout Mountain in Lookout Mountain, Georgia, located near Ruby Falls.  It is well known for the many barn advertisements throughout the Southeast and Midwest United States that have the slogan "See Rock City" painted on roofs and sides.  Clark Byers painted over 900 barn roofs in nineteen states to advertise for Rock City from 1935 to 1969.
-
-Rock City Falls, New York: Rock City Falls is a hamlet in the town of Milton, Saratoga County, New York, United States.  The principal roads are Route 29 and Rock City Falls Road.  The hamlet achieved fame as the origins of Paper Bag King George West, who established his Empire Mill there in 1862.  He went on to build the Excelsior Mill next door in 1866 and a mansion across the street.  The George West House was listed on the National Register of Historic Places in 2005.
-
-George West House: George West House is a historic home located at Rock City Falls in Saratoga County, New York.  It was built in 1866 for prominent industrialist and congressman George West, and is two story, wood framed hipped roof roofed residence in the Italian Villa style.  It features a projecting full height entrance pavilion and an ornate, flat roofed entrance portico.  It also has an enclosed, hip roofed belvedere with decorative finials situated at the center of the roof.  Also on the property is a contributing carriage barn and corncrib.
-
-Charles Stilwell: Stilwell was born and raised in Fremont, Ohio.  When the Civil War broke out he joined the Union.  When the conflict ended he returned to his hometown and got a job as a mechanical engineer.  His hobby, which later turned into a future occupation, was the manufacturing of improved paper bag.  During that time, paper and grocery bags already existed, but they were cumbersome to store and fold.  Adding to it, they had a v-shaped bottom, which prevented them from standing still while someone is packing.  On June 12, 1883 he got a grant on a patent to invent a machine that will manufacture a square-bottom bag, from the U.S. Patent Office.  He named his invention "S.O.S." or the Self-Opening Sack because of the bag's ability to remain standing and open without the person's assistance.  His invention improved the paper bags for millions of people nationwide.
-
-Tallulah Gorge: The Tallulah Gorge is a gorge formed by the Tallulah River cutting through the Tallulah Dome rock formation.  The gorge is approximately 2 mi long and features rocky cliffs up to 1000 ft high.  Through it, a series of falls known as Tallulah Falls drop a total of 150 m in one mile (1.6 km).  Tallulah Falls is composed of six separate falls: l'Eau d'Or (46 ft ), Tempesta (76 ft ), Hurricane (the tallest at 96 ft ), Oceana (50 ft ), Bridal Veil (17 ft ), and Lovers Leap (16 ft ).  The Tallulah Gorge is located next to the town of Tallulah Falls, Georgia.  Tallulah Gorge State Park protects much of the gorge and its waterfalls.  The gorge is one of the Seven Natural Wonders of Georgia.
-
-Ropalidia romandi: Ropalidia romandi, also known as the yellow brown paper wasp or the yellow paper wasp.  is a species of paper wasp found in Northern and Eastern Australia.  "R. romandi "is a swarm-founding wasp, and manages perennial nests.  Its nests are known as 'paper bag nests' and have different architectural structures, depending on the substrates from which they are built.  The specific name honors Gustave, baron de Romand, a prominent French political figure and amateur entomologist.
-
-...At the Moment of Our Most Needing: ...at the moment of our most needing is the fourth album by Canadian indie rock band Rock Plaza Central, released May 28, 2009 on Paper Bag Records.
-
-The City (FemBots album): The City is the third album by Canadian indie rock group FemBots, released in 2005 on Paper Bag Records.
-
-Question: What year was the man from Rock City Falls known as the Paper Bag King born in?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the individual."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "title_or_nickname": {
-      "type": "string",
-      "description": "The title or nickname by which the person is known."
-    },
-    "origin_location": {
-      "type": "string",
-      "description": "The location associated with the person's origin or fame."
-    },
-    "birth_year": {
-      "type": "integer",
-      "description": "The year the person was born."
+    {
+      "role": "user",
+      "content": "Context:\nGeorge West: George West (February 17, 1823 – September 20, 1901) was an industrialist and a U.S. Representative from New York.\n\nCharles Shor: Shor was born in Cincinnati, Ohio on April 2nd, 1954.  His father, S. David Shor had started the Covington, Kentucky-based paper bag manufacturing business,Duro Bag Manufacturing the year before Charles was born.  At this point, the company had one location with only a handful of employees.\n\nRock City (attraction): Rock City is a roadside attraction on Lookout Mountain in Lookout Mountain, Georgia, located near Ruby Falls.  It is well known for the many barn advertisements throughout the Southeast and Midwest United States that have the slogan \"See Rock City\" painted on roofs and sides.  Clark Byers painted over 900 barn roofs in nineteen states to advertise for Rock City from 1935 to 1969.\n\nRock City Falls, New York: Rock City Falls is a hamlet in the town of Milton, Saratoga County, New York, United States.  The principal roads are Route 29 and Rock City Falls Road.  The hamlet achieved fame as the origins of Paper Bag King George West, who established his Empire Mill there in 1862.  He went on to build the Excelsior Mill next door in 1866 and a mansion across the street.  The George West House was listed on the National Register of Historic Places in 2005.\n\nGeorge West House: George West House is a historic home located at Rock City Falls in Saratoga County, New York.  It was built in 1866 for prominent industrialist and congressman George West, and is two story, wood framed hipped roof roofed residence in the Italian Villa style.  It features a projecting full height entrance pavilion and an ornate, flat roofed entrance portico.  It also has an enclosed, hip roofed belvedere with decorative finials situated at the center of the roof.  Also on the property is a contributing carriage barn and corncrib.\n\nCharles Stilwell: Stilwell was born and raised in Fremont, Ohio.  When the Civil War broke out he joined the Union.  When the conflict ended he returned to his hometown and got a job as a mechanical engineer.  His hobby, which later turned into a future occupation, was the manufacturing of improved paper bag.  During that time, paper and grocery bags already existed, but they were cumbersome to store and fold.  Adding to it, they had a v-shaped bottom, which prevented them from standing still while someone is packing.  On June 12, 1883 he got a grant on a patent to invent a machine that will manufacture a square-bottom bag, from the U.S. Patent Office.  He named his invention \"S.O.S.\" or the Self-Opening Sack because of the bag's ability to remain standing and open without the person's assistance.  His invention improved the paper bags for millions of people nationwide.\n\nTallulah Gorge: The Tallulah Gorge is a gorge formed by the Tallulah River cutting through the Tallulah Dome rock formation.  The gorge is approximately 2 mi long and features rocky cliffs up to 1000 ft high.  Through it, a series of falls known as Tallulah Falls drop a total of 150 m in one mile (1.6 km).  Tallulah Falls is composed of six separate falls: l'Eau d'Or (46 ft ), Tempesta (76 ft ), Hurricane (the tallest at 96 ft ), Oceana (50 ft ), Bridal Veil (17 ft ), and Lovers Leap (16 ft ).  The Tallulah Gorge is located next to the town of Tallulah Falls, Georgia.  Tallulah Gorge State Park protects much of the gorge and its waterfalls.  The gorge is one of the Seven Natural Wonders of Georgia.\n\nRopalidia romandi: Ropalidia romandi, also known as the yellow brown paper wasp or the yellow paper wasp.  is a species of paper wasp found in Northern and Eastern Australia.  \"R. romandi \"is a swarm-founding wasp, and manages perennial nests.  Its nests are known as 'paper bag nests' and have different architectural structures, depending on the substrates from which they are built.  The specific name honors Gustave, baron de Romand, a prominent French political figure and amateur entomologist.\n\n...At the Moment of Our Most Needing: ...at the moment of our most needing is the fourth album by Canadian indie rock band Rock Plaza Central, released May 28, 2009 on Paper Bag Records.\n\nThe City (FemBots album): The City is the third album by Canadian indie rock group FemBots, released in 2005 on Paper Bag Records.\n\nQuestion: What year was the man from Rock City Falls known as the Paper Bag King born in?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the individual.\"\n    },\n    \"title_or_nickname\": {\n      \"type\": \"string\",\n      \"description\": \"The title or nickname by which the person is known.\"\n    },\n    \"origin_location\": {\n      \"type\": \"string\",\n      \"description\": \"The location associated with the person's origin or fame.\"\n    },\n    \"birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the person was born.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"title_or_nickname\",\n    \"origin_location\",\n    \"birth_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "title_or_nickname",
-    "origin_location",
-    "birth_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the individual."
+      },
+      "title_or_nickname": {
+        "type": "string",
+        "description": "The title or nickname by which the person is known."
+      },
+      "origin_location": {
+        "type": "string",
+        "description": "The location associated with the person's origin or fame."
+      },
+      "birth_year": {
+        "type": "integer",
+        "description": "The year the person was born."
+      }
+    },
+    "required": [
+      "person_name",
+      "title_or_nickname",
+      "origin_location",
+      "birth_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

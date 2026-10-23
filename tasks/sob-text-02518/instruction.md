@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Sangeita Chauhan: Sangeita Chauhan is an Indian actress.  She was born in Very Popular Growing city Vapi , Gujarat . She made her film debut in the 2003 Hindi film Jhankaar Beats, directed by Sujoy Ghosh, where she played a supporting character alongside Sanjay Suri, Juhi Chawla, and Archana Puran Singh.  Since then she has starred in a few South Indian films.  She currently can be seen in the Hindi Colors TV show, Ek Shringaar-Swabhiman in the lead role as Meghna Solanki, produced by Sooraj Barjatya.
-
-Aasiya Kazi: Aasiya Kazi (born 12 December 1991) is an Indian television actress best known for her role of Santu Dharamraj Mahiyavanshi in the television soap opera "Bandini" on Imagine TV.  She also played the role of Saudamini in Colors TV and Hema Malini’s "Matti Ki Banno", Kastur Galla in Imagine TV's "Dharampatni", Dr. Shweta Kapoor / Shweta Rishi Kumar in Zee TV's "Hitler Didi", Ruku in Na Bole Tum Na Maine Kuch Kaha 2  on Colors TV, and as Ganga in "Balika Vadhu"
-
-Shani (TV series): Karmaphal Daata Shani (English: "The lord of the deeds Shani") is an Indian Hindi historical period drama television series, which premiered on 7 November 2016 and is broadcast on Colors TV.  The series is produced by Swastik Productions of Siddharth Kumar Tewary.  The series airs every Monday to Friday 9.00 pm The series has dubbed into Telugu on Gemini TV and it airs every Monday to Saturday 8:30 pm from 24 July 2017.
-
-Chhote Miyan: Chhote Miyan is a comedy show that airs on Colors TV hosted by Juhi Parmar and Kapil Sharma with Rahul Mahajan and Sachin Pilgaonkar serving as judges on the show.
-
-Radhika Madan: Radhika Madan is an Indian television actress.  Before her debut as Ishani (protagonist) opposite Shakti Arora on Colors TV, Madan worked as a dance instructor in New Delhi.  Madan has played the lead role of Ishani in Ekta Kapoor's show "Meri Aashiqui Tum Se Hi" on Colors TV.  She won "Best Debut Actor Award" at "Zee Gold Awards" 2015.  She was seen in the dance reality show "Jhalak Reloaded".  Daily Bhasker reported that Madan has "become a household name."
-
-Meghan Jadhav: Meghan Jadhav, is an Indian television and movie actor who is best known as his role in Colors TV show Jai Shri Krishna(2008–09) as Shri Krishna.  He has also played as Abhimanyu in the mythological serial of Sony Entertainment Television (India) Suryaputra Karn.  His performance in Dharma Production's Bollywood film Brothers (2015 film) as younger David was highly praised.  Currently portraying the role of Kartikey, son of Shiv and Parvati, in Mahakali– Anth hi Aarambh hai Colors TV
-
-Rehman Khan: Rehman Khan (born August 21, 1979) is an Indian stand up comedian and a film actor.  He participated in "Comedy Circus 2" (2008), Comedy Circus Chincpokli to China, Comedy Circus 20 20 with Rakshanda Khan, Comedy ka Mahasangram with Karishma Tanna, Jubilee Comedy Circus with Saloni Daini, Comedy Ke Superstar with Usha Nadkarni, Comedy Circus Ki Kahani with Ragini Khanna, "Comedy Circus 3 Ka Tadka" (2009) with Anoop Soni, and Shweta Tiwari on Sony Television.  Rehman was also part of Star One show, The Great Indian Laughter Challenge season 3, Comedy Champions on Sahara TV Chote Miya Bade Miya on Colors TV, Comedy Ka Maha Muqabala on Star Plus, Nautanki-The Comedy Theatre on Colors TV 2013, Mad in India with Sunil Grover on Star Plus 2014.
-
-Ali Asgar (actor): Ali Asgar is an Indian actor and stand-up comedian.He has appeared in many Indian TV serials and movies and was helped by macline castelino to grow in the industry.  He is currently doing a role of pushpa Nani in "The Kapil Sharma Show."  Asgar appeared as Kamal Agarwal in Star Plus TV show "Kahaani Ghar Ghar Ki".  He also appeared in SAB TV's show F.I.R. as Inspector Raj Aryan.  He is commonly known for his role in Colors TV show "Comedy Nights with Kapil" as Dadi.
-
-Juhi Parmar: Juhi Parmar (born 14 December 1980) is an Indian TV personality and an anchor, actress, television presenter, singer and dancer.  She is best known for her role as Kumkum in Television Series Kumkum Ek Pyara Sa Bandhan.  She is the winner of fifth season of the reality television show Bigg Boss that aired on Colors TV.  She currently appears In Colors TV's High Rated mythological Show Shani.
-
-Yukti Kapoor: Yukti Kapoor is an Indian television actress who has appeared in several television serials.  She made her film debut in 2015 with Uvaa.  She was also seen in Colors TV show Balika Vadhu and Star Plus mythological show Siya Ke Ram.  She is currently appearing in Agnifera TV show telecasting on &TV TV channel.
-
-Question: Juhi Parmar,  is an Indian TV personality and an anchor, actress, singer and dancer, currently appears In Colors TV's, High Rated mythological show, titled?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actress_name": {
-      "type": "string",
-      "description": "The name of the actress."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "tv_channel": {
-      "type": "string",
-      "description": "The television channel where the show airs."
-    },
-    "show_details": {
-      "type": "object",
-      "properties": {
-        "show_title": {
-          "type": "string",
-          "description": "The title of the television show."
-        },
-        "genre": {
-          "type": "string",
-          "description": "The genre of the television show."
-        },
-        "is_currently_appearing": {
-          "type": "boolean",
-          "description": "Indicates if the actress is currently appearing in the show."
-        }
-      },
-      "required": [
-        "show_title",
-        "genre",
-        "is_currently_appearing"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nSangeita Chauhan: Sangeita Chauhan is an Indian actress.  She was born in Very Popular Growing city Vapi , Gujarat . She made her film debut in the 2003 Hindi film Jhankaar Beats, directed by Sujoy Ghosh, where she played a supporting character alongside Sanjay Suri, Juhi Chawla, and Archana Puran Singh.  Since then she has starred in a few South Indian films.  She currently can be seen in the Hindi Colors TV show, Ek Shringaar-Swabhiman in the lead role as Meghna Solanki, produced by Sooraj Barjatya.\n\nAasiya Kazi: Aasiya Kazi (born 12 December 1991) is an Indian television actress best known for her role of Santu Dharamraj Mahiyavanshi in the television soap opera \"Bandini\" on Imagine TV.  She also played the role of Saudamini in Colors TV and Hema Malini’s \"Matti Ki Banno\", Kastur Galla in Imagine TV's \"Dharampatni\", Dr. Shweta Kapoor / Shweta Rishi Kumar in Zee TV's \"Hitler Didi\", Ruku in Na Bole Tum Na Maine Kuch Kaha 2  on Colors TV, and as Ganga in \"Balika Vadhu\"\n\nShani (TV series): Karmaphal Daata Shani (English: \"The lord of the deeds Shani\") is an Indian Hindi historical period drama television series, which premiered on 7 November 2016 and is broadcast on Colors TV.  The series is produced by Swastik Productions of Siddharth Kumar Tewary.  The series airs every Monday to Friday 9.00 pm The series has dubbed into Telugu on Gemini TV and it airs every Monday to Saturday 8:30 pm from 24 July 2017.\n\nChhote Miyan: Chhote Miyan is a comedy show that airs on Colors TV hosted by Juhi Parmar and Kapil Sharma with Rahul Mahajan and Sachin Pilgaonkar serving as judges on the show.\n\nRadhika Madan: Radhika Madan is an Indian television actress.  Before her debut as Ishani (protagonist) opposite Shakti Arora on Colors TV, Madan worked as a dance instructor in New Delhi.  Madan has played the lead role of Ishani in Ekta Kapoor's show \"Meri Aashiqui Tum Se Hi\" on Colors TV.  She won \"Best Debut Actor Award\" at \"Zee Gold Awards\" 2015.  She was seen in the dance reality show \"Jhalak Reloaded\".  Daily Bhasker reported that Madan has \"become a household name.\"\n\nMeghan Jadhav: Meghan Jadhav, is an Indian television and movie actor who is best known as his role in Colors TV show Jai Shri Krishna(2008–09) as Shri Krishna.  He has also played as Abhimanyu in the mythological serial of Sony Entertainment Television (India) Suryaputra Karn.  His performance in Dharma Production's Bollywood film Brothers (2015 film) as younger David was highly praised.  Currently portraying the role of Kartikey, son of Shiv and Parvati, in Mahakali– Anth hi Aarambh hai Colors TV\n\nRehman Khan: Rehman Khan (born August 21, 1979) is an Indian stand up comedian and a film actor.  He participated in \"Comedy Circus 2\" (2008), Comedy Circus Chincpokli to China, Comedy Circus 20 20 with Rakshanda Khan, Comedy ka Mahasangram with Karishma Tanna, Jubilee Comedy Circus with Saloni Daini, Comedy Ke Superstar with Usha Nadkarni, Comedy Circus Ki Kahani with Ragini Khanna, \"Comedy Circus 3 Ka Tadka\" (2009) with Anoop Soni, and Shweta Tiwari on Sony Television.  Rehman was also part of Star One show, The Great Indian Laughter Challenge season 3, Comedy Champions on Sahara TV Chote Miya Bade Miya on Colors TV, Comedy Ka Maha Muqabala on Star Plus, Nautanki-The Comedy Theatre on Colors TV 2013, Mad in India with Sunil Grover on Star Plus 2014.\n\nAli Asgar (actor): Ali Asgar is an Indian actor and stand-up comedian.He has appeared in many Indian TV serials and movies and was helped by macline castelino to grow in the industry.  He is currently doing a role of pushpa Nani in \"The Kapil Sharma Show.\"  Asgar appeared as Kamal Agarwal in Star Plus TV show \"Kahaani Ghar Ghar Ki\".  He also appeared in SAB TV's show F.I.R. as Inspector Raj Aryan.  He is commonly known for his role in Colors TV show \"Comedy Nights with Kapil\" as Dadi.\n\nJuhi Parmar: Juhi Parmar (born 14 December 1980) is an Indian TV personality and an anchor, actress, television presenter, singer and dancer.  She is best known for her role as Kumkum in Television Series Kumkum Ek Pyara Sa Bandhan.  She is the winner of fifth season of the reality television show Bigg Boss that aired on Colors TV.  She currently appears In Colors TV's High Rated mythological Show Shani.\n\nYukti Kapoor: Yukti Kapoor is an Indian television actress who has appeared in several television serials.  She made her film debut in 2015 with Uvaa.  She was also seen in Colors TV show Balika Vadhu and Star Plus mythological show Siya Ke Ram.  She is currently appearing in Agnifera TV show telecasting on &TV TV channel.\n\nQuestion: Juhi Parmar,  is an Indian TV personality and an anchor, actress, singer and dancer, currently appears In Colors TV's, High Rated mythological show, titled?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actress_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actress.\"\n    },\n    \"tv_channel\": {\n      \"type\": \"string\",\n      \"description\": \"The television channel where the show airs.\"\n    },\n    \"show_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"show_title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the television show.\"\n        },\n        \"genre\": {\n          \"type\": \"string\",\n          \"description\": \"The genre of the television show.\"\n        },\n        \"is_currently_appearing\": {\n          \"type\": \"boolean\",\n          \"description\": \"Indicates if the actress is currently appearing in the show.\"\n        }\n      },\n      \"required\": [\n        \"show_title\",\n        \"genre\",\n        \"is_currently_appearing\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"actress_name\",\n    \"tv_channel\",\n    \"show_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actress_name",
-    "tv_channel",
-    "show_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actress_name": {
+        "type": "string",
+        "description": "The name of the actress."
+      },
+      "tv_channel": {
+        "type": "string",
+        "description": "The television channel where the show airs."
+      },
+      "show_details": {
+        "type": "object",
+        "properties": {
+          "show_title": {
+            "type": "string",
+            "description": "The title of the television show."
+          },
+          "genre": {
+            "type": "string",
+            "description": "The genre of the television show."
+          },
+          "is_currently_appearing": {
+            "type": "boolean",
+            "description": "Indicates if the actress is currently appearing in the show."
+          }
+        },
+        "required": [
+          "show_title",
+          "genre",
+          "is_currently_appearing"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "actress_name",
+      "tv_channel",
+      "show_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

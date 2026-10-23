@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Melinda O. Fee: Melinda O. Fee (born October 7, 1942) is an American actress who has starred in films and on television.  Her first starring role was on the television series "Love of Life".  Her mother was actress Astrid Allwyn and her second husband, Charles O. Fee.
-
-Ghost Whisperer (season 4): The fourth season of "Ghost Whisperer", an American television series created by John Gray, commenced airing in the United States on October 3, 2008, concluded May 15, 2009, and consisted of 23 episodes.  The series follows the life of Melinda Gordon (Jennifer Love Hewitt), who has the ability to see and communicate with ghosts.  While trying to live as normal a life as possible—she is married and owns an antique store—Melinda helps earthbound spirits resolve their problems and cross over into the Light, or the spirit world.  Her tasks are difficult and at times she struggles with people who push her away and disbelieve her ability.  In addition, the ghosts are mysterious and sometimes menacing in the beginning and Melinda must use the clues available to her to understand the spirit's needs and help them.
-
-Ghost Whisperer (season 5): The fifth and final season of "Ghost Whisperer", an American television series created by John Gray, commenced airing in the United States on September 25, 2009, concluded May 21, 2010, and consisted of 22 episodes.  The series follows the life of Melinda Gordon (Jennifer Love Hewitt), who has the ability to see and communicate with ghosts.  While trying to live as normal a life as possible—she is married and owns an antique store—Melinda helps earthbound spirits resolve their problems and cross over into the Light, or the spirit world.  Her tasks are difficult and at times she struggles with people who push her away and disbelieve her ability.  In addition, the ghosts are mysterious and sometimes menacing in the beginning and Melinda must use the clues available to her to understand the spirit's needs and help them.
-
-Grace Fulton: Grace Caroline Fulton (born July 17, 1996) is an American actress, best known for playing Young Melinda Gordon on "Ghost Whisperer", Haley Farrell in "Bones", and Young Natalie Wood in "The Mystery of Natalie Wood".  She also played the character Sydney Briggs in "Home of the Brave".  She starred in the television film "Back When We Were Grownups", playing Young Biddy.
-
-Ghost Whisperer (season 2): The second season of "Ghost Whisperer", an American television series created by John Gray, commenced airing in the United States on September 22, 2006, concluded May 11, 2007, and consisted of 22 episodes.  The series follows the life of Melinda Gordon (Jennifer Love Hewitt), who has the ability to see and communicate with ghosts.  While trying to live as normal a life as possible—she is married and owns an antique store—Melinda helps earthbound spirits resolve their problems and cross over into the Light, or the spirit world.  Her tasks are difficult and at times she struggles with people who push her away and disbelieve her ability.  In addition, the ghosts are mysterious and sometimes menacing in the beginning and Melinda must use the clues available to her to understand the spirit's needs and help them.
-
-Christina Kirk: Christina Kirk (born November 10, 1970) in New York, New York, is an American actress.  She appeared in Woody Allen's "Melinda and Melinda" and Ira Sachs' "Love Is Strange".  She also was in "Clybourne Park", a play by Bruce Norris.  She was also a series regular on "A to Z".  She currently plays Jackie in the DC Comics TV series "Powerless".
-
-Melinda Gordon: Melinda Irene Gordon is the title character of the American paranormal television series "Ghost Whisperer" created by John Gray.  Gordon was portrayed by American actress Jennifer Love Hewitt.
-
-Jennifer Love Hewitt: Jennifer Love Hewitt (born February 21, 1979) is an American actress, television producer and director, singer/songwriter and author.  Hewitt began her acting career as a child by appearing in television commercials and the Disney Channel series "Kids Incorporated".  She rose to fame for her role as Sarah Reeves Merrin on the Fox teen drama "Party of Five" (1995–99).  She later starred in the horror film "I Know What You Did Last Summer" (1997) and its 1998 sequel.
-
-Ghost Whisperer (season 3): The third season of "Ghost Whisperer", an American television series created by John Gray, commenced airing in the United States on September 28, 2007, concluded May 16, 2008, and was originally intended to consist of 22 episodes.  However, due to the Writer's Strike it was shortened to 18 episodes.  The series follows the life of Melinda Gordon (Jennifer Love Hewitt), who has the ability to see and communicate with ghosts.  While trying to live as normal a life as possible—she is married and owns an antique store—Melinda helps earthbound spirits resolve their problems and cross over into the Light, or the spirit world.  Her tasks are difficult and at times she struggles with people who push her away and disbelieve her ability.  In addition, the ghosts are mysterious and sometimes menacing in the beginning and Melinda must use the clues available to her to understand the spirit's needs and help them.
-
-Ghost Whisperer (season 1): The first season of "Ghost Whisperer", an American television series created by John Gray, commenced airing in the United States on September 23, 2005, concluded May 5, 2006, and consisted of 22 episodes.  The series follows the life of Melinda Gordon (Jennifer Love Hewitt), who has the ability to see and communicate with ghosts.  While trying to live as normal a life as possible—she is married and owns an antique store—Melinda helps earthbound spirits resolve their problems and cross over into the Light, or the spirit world.  Her tasks are difficult and at times she struggles with people who push her away and disbelieve her ability.  In addition, the ghosts are mysterious and sometimes menacing in the beginning and Melinda must use the clues available to her to understand the spirit's needs and help them.
-
-Question: Who is the american actress that plays the life of Melinda Gordon?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "character_name": {
-      "type": "string",
-      "description": "The name of the character portrayed."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "actress_name": {
-      "type": "string",
-      "description": "The name of the actress who plays the character."
-    },
-    "actress_nationality": {
-      "type": "string",
-      "description": "The nationality of the actress."
-    },
-    "series_name": {
-      "type": "string",
-      "description": "The name of the television series where the character appears."
+    {
+      "role": "user",
+      "content": "Context:\nMelinda O. Fee: Melinda O. Fee (born October 7, 1942) is an American actress who has starred in films and on television.  Her first starring role was on the television series \"Love of Life\".  Her mother was actress Astrid Allwyn and her second husband, Charles O. Fee.\n\nGhost Whisperer (season 4): The fourth season of \"Ghost Whisperer\", an American television series created by John Gray, commenced airing in the United States on October 3, 2008, concluded May 15, 2009, and consisted of 23 episodes.  The series follows the life of Melinda Gordon (Jennifer Love Hewitt), who has the ability to see and communicate with ghosts.  While trying to live as normal a life as possible—she is married and owns an antique store—Melinda helps earthbound spirits resolve their problems and cross over into the Light, or the spirit world.  Her tasks are difficult and at times she struggles with people who push her away and disbelieve her ability.  In addition, the ghosts are mysterious and sometimes menacing in the beginning and Melinda must use the clues available to her to understand the spirit's needs and help them.\n\nGhost Whisperer (season 5): The fifth and final season of \"Ghost Whisperer\", an American television series created by John Gray, commenced airing in the United States on September 25, 2009, concluded May 21, 2010, and consisted of 22 episodes.  The series follows the life of Melinda Gordon (Jennifer Love Hewitt), who has the ability to see and communicate with ghosts.  While trying to live as normal a life as possible—she is married and owns an antique store—Melinda helps earthbound spirits resolve their problems and cross over into the Light, or the spirit world.  Her tasks are difficult and at times she struggles with people who push her away and disbelieve her ability.  In addition, the ghosts are mysterious and sometimes menacing in the beginning and Melinda must use the clues available to her to understand the spirit's needs and help them.\n\nGrace Fulton: Grace Caroline Fulton (born July 17, 1996) is an American actress, best known for playing Young Melinda Gordon on \"Ghost Whisperer\", Haley Farrell in \"Bones\", and Young Natalie Wood in \"The Mystery of Natalie Wood\".  She also played the character Sydney Briggs in \"Home of the Brave\".  She starred in the television film \"Back When We Were Grownups\", playing Young Biddy.\n\nGhost Whisperer (season 2): The second season of \"Ghost Whisperer\", an American television series created by John Gray, commenced airing in the United States on September 22, 2006, concluded May 11, 2007, and consisted of 22 episodes.  The series follows the life of Melinda Gordon (Jennifer Love Hewitt), who has the ability to see and communicate with ghosts.  While trying to live as normal a life as possible—she is married and owns an antique store—Melinda helps earthbound spirits resolve their problems and cross over into the Light, or the spirit world.  Her tasks are difficult and at times she struggles with people who push her away and disbelieve her ability.  In addition, the ghosts are mysterious and sometimes menacing in the beginning and Melinda must use the clues available to her to understand the spirit's needs and help them.\n\nChristina Kirk: Christina Kirk (born November 10, 1970) in New York, New York, is an American actress.  She appeared in Woody Allen's \"Melinda and Melinda\" and Ira Sachs' \"Love Is Strange\".  She also was in \"Clybourne Park\", a play by Bruce Norris.  She was also a series regular on \"A to Z\".  She currently plays Jackie in the DC Comics TV series \"Powerless\".\n\nMelinda Gordon: Melinda Irene Gordon is the title character of the American paranormal television series \"Ghost Whisperer\" created by John Gray.  Gordon was portrayed by American actress Jennifer Love Hewitt.\n\nJennifer Love Hewitt: Jennifer Love Hewitt (born February 21, 1979) is an American actress, television producer and director, singer/songwriter and author.  Hewitt began her acting career as a child by appearing in television commercials and the Disney Channel series \"Kids Incorporated\".  She rose to fame for her role as Sarah Reeves Merrin on the Fox teen drama \"Party of Five\" (1995–99).  She later starred in the horror film \"I Know What You Did Last Summer\" (1997) and its 1998 sequel.\n\nGhost Whisperer (season 3): The third season of \"Ghost Whisperer\", an American television series created by John Gray, commenced airing in the United States on September 28, 2007, concluded May 16, 2008, and was originally intended to consist of 22 episodes.  However, due to the Writer's Strike it was shortened to 18 episodes.  The series follows the life of Melinda Gordon (Jennifer Love Hewitt), who has the ability to see and communicate with ghosts.  While trying to live as normal a life as possible—she is married and owns an antique store—Melinda helps earthbound spirits resolve their problems and cross over into the Light, or the spirit world.  Her tasks are difficult and at times she struggles with people who push her away and disbelieve her ability.  In addition, the ghosts are mysterious and sometimes menacing in the beginning and Melinda must use the clues available to her to understand the spirit's needs and help them.\n\nGhost Whisperer (season 1): The first season of \"Ghost Whisperer\", an American television series created by John Gray, commenced airing in the United States on September 23, 2005, concluded May 5, 2006, and consisted of 22 episodes.  The series follows the life of Melinda Gordon (Jennifer Love Hewitt), who has the ability to see and communicate with ghosts.  While trying to live as normal a life as possible—she is married and owns an antique store—Melinda helps earthbound spirits resolve their problems and cross over into the Light, or the spirit world.  Her tasks are difficult and at times she struggles with people who push her away and disbelieve her ability.  In addition, the ghosts are mysterious and sometimes menacing in the beginning and Melinda must use the clues available to her to understand the spirit's needs and help them.\n\nQuestion: Who is the american actress that plays the life of Melinda Gordon?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character portrayed.\"\n    },\n    \"actress_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actress who plays the character.\"\n    },\n    \"actress_nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the actress.\"\n    },\n    \"series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the television series where the character appears.\"\n    }\n  },\n  \"required\": [\n    \"character_name\",\n    \"actress_name\",\n    \"actress_nationality\",\n    \"series_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "character_name",
-    "actress_name",
-    "actress_nationality",
-    "series_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "character_name": {
+        "type": "string",
+        "description": "The name of the character portrayed."
+      },
+      "actress_name": {
+        "type": "string",
+        "description": "The name of the actress who plays the character."
+      },
+      "actress_nationality": {
+        "type": "string",
+        "description": "The nationality of the actress."
+      },
+      "series_name": {
+        "type": "string",
+        "description": "The name of the television series where the character appears."
+      }
+    },
+    "required": [
+      "character_name",
+      "actress_name",
+      "actress_nationality",
+      "series_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

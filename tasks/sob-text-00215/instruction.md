@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-A1260 road: The A1260 is a major road that serves the city of Peterborough in Eastern England.  The road is dual-carriageway from its southern terminus with the A15 at Hampton to its northern terminus with the A47 at Longthorpe.  The road is also known as the "Nene Parkway" and serves as major route from getting from the southern end of Peterborough to the Northern end without having to travel into to the centre of the city via the A15.  The road itself starts at Hampton at a small roundabout with the A15 where after it goes past Serpentine Green at another roundabout before it very quickly heads to a major junction where its meets the A1139.  After that junction the road takes on the form of a major dual-carriageway with its own grade separated junctions where it meets the A605 on a restricted junction before passing over the River Nene before meeting the A1179 on another junction.  After that junction the road quickly heads north before coming to a major junction with the A47 where the road terminates on a large roundabout with the A47 passing over on top.
-
-A4060 road: The A4060, also known as the East of Abercynon to East of Dowlais Trunk Road, is a trunk road in Wales.  The road starts at A470 The Pentrebach Roundabout South of Merthyr Tydfil.  This first stretch is a 3 lane single carriageway road that was the old A470.  It then comes to a roundabout by the Hoover Plant and The Premier Inn where there are links to Aberfan and Troedyrhiw via the A4054, Merthyr Town Centre via the A4054 (the old A470).  The A4060 then leads to another roundabout a few yards up with turn offs to The Triangle Business Park and the Co Op Supermarket.  After this roundabout the road becomes a dual carriageway with quite a steep Hill Climb.  After about 3 miles there is another roundabout which has links to Mountain Hare and Dowlais Ind Est and the A4102.  The other link is a Mountain Road to Cwm Bargoed and Fochriw.
-
-A4080 road: The A4080 is a British A road which is located on the Island of Anglesey, Wales.  It follows a very roundabout route from the A5 road at Llanfairpwllgwyngyll via Newborough and Rhosneigr back to the A55 and the A5 about 9 miles (13 kilometres) south of Holyhead.  In all the road is about 17 miles (27 kilometres) long.
-
-Anglesey: Anglesey ( ; Welsh: "Ynys Môn" ] ) is an island off the north-west coast of Wales.  With an area of 276 sqmi , Anglesey is by far the largest island in Wales and the seventh largest in the British Isles.  Anglesey is also the largest island in the Irish Sea by area, and the second most populous island (after the Isle of Man).  The population at the 2011 census was 69,751.  Two bridges span the Menai Strait, connecting the island to the mainland: the Menai Suspension Bridge, designed by Thomas Telford in 1826, and the Britannia Bridge.
-
-Gaerwen: Gaerwen is a village on the island of Anglesey, Wales.  It is located in the south of the island 4 mi west of Llanfairpwllgwyngyll and 4 mi southeast of Llangefni .  The A5 runs through the village, and the A55 runs just a few hundred metres north.  According to the 2011 Census Gaerwen is now listed by the Office for National Statistics as Llanfihangel Ysgeifiog.  The population of the community is 1,551.
-
-A5114 road: The A5114 is a British A road which is located on the island of Anglesey, Wales.  It runs from a roundabout just off Junction 6 of the A55 (at the intersection with the A5) to the centre of the county town, Llangefni.
-
-Afon Cefni: Afon Cefni is one of the major rivers on the island of Anglesey, Wales.  It is 16.9 km long.  The river starts at the Llyn Cefni in the centre of the island and then runs south through the county town of Llangefni.  Just north of the A55 the river turns and flows south-west.  It passes through the flatlands of the Malltraeth Marshes, where the river course was altered in 1824, creating a canal-like straight stretch.  This part of the river and the surrounding marshes, part of which is a RSPB reserve, are frequented by a variety of wetland birds which in their turn are preyed on by falcons, hawks and harriers.  A cycle trail follows the straightened course of the river as it flows through the marshes.
-
-A5117 road: The A5117 is a road in Cheshire, England.  It runs between Shotwick ( ) and Helsby ( ) and connects the A550 at Woodbank to the M56.  As such it forms a northerly bypass to Chester and a shorter route between the North West and North Wales than the A55.  The road is dualled west of the M56.  There is roundabout with the A540 and at Dunkirk at the western terminus of the M56.  East of the junction the road is single carriageway and crosses the A41 by way of a roundabout at Backford Cross.  The A5117 intersects the M53 at Junction 10.  This junction is just east of Cheshire Oaks Designer Outlet.  The road then continues almost parallel to the M56, which it intersects at Junction 14, at which there is a Motorway service area.  The road then continues south east to terminate where it joins the A56 at Helsby.
-
-A55 road: The A55, also known as the North Wales Expressway (Welsh: "Gwibffordd Gogledd Cymru") and the Chester to Bangor Trunk Road, is a major road in Britain.  Its entire length is a dual carriageway primary route, with the exception of the point where it crosses the Britannia Bridge over the Menai Strait and several short sections where there are gaps in between the two carriageways.  All junctions are grade separated except for two roundabouts — one east of Penmaenmawr and one in Llanfairfechan.  The road originally ran from Chester to Bangor but was extended parallel to the A5 across Anglesey to just outside Holyhead Docks in 2001.  The road improvements have been part funded with European money, under the Trans-European Networks programme, as the route is designated part of Euroroute E22 (Holyhead - Leeds - Amsterdam - Hamburg - Malmö - Riga - Moscow - Perm - Ekaterinburg - Ishim).
-
-Magic Roundabout (Hemel Hempstead): The "Magic Roundabout" in Hemel Hempstead, Hertfordshire, England, is the familiar name given to the Plough roundabout.  The familiar name comes from the children's television programme, and is also used for a similar junction in Swindon and the M40 junction in Denham.  The official name relates to a former public house, called "The Plough Inn", which was between the junction of what is now Selden Hill and St Albans Road.  It has also been known as the Moor End Roundabout as it is adjacent to the part of Boxmoor nearest the town.  Before Hemel Hempstead became a New Town the roads met in a simple junction which was then replaced by a standard roundabout.
-
-Question: The A5114 is a British A road which is located on the island of Anglesey, Wales runs from a roundabout just off Junction 6 of the A55, also known as what expressway?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "road_identifier": {
-      "type": "string",
-      "description": "The official identifier of the road."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "alternative_names": {
-      "type": "array",
-      "description": "A list of other names or designations for the road.",
-      "items": {
-        "type": "string"
+    {
+      "role": "user",
+      "content": "Context:\nA1260 road: The A1260 is a major road that serves the city of Peterborough in Eastern England.  The road is dual-carriageway from its southern terminus with the A15 at Hampton to its northern terminus with the A47 at Longthorpe.  The road is also known as the \"Nene Parkway\" and serves as major route from getting from the southern end of Peterborough to the Northern end without having to travel into to the centre of the city via the A15.  The road itself starts at Hampton at a small roundabout with the A15 where after it goes past Serpentine Green at another roundabout before it very quickly heads to a major junction where its meets the A1139.  After that junction the road takes on the form of a major dual-carriageway with its own grade separated junctions where it meets the A605 on a restricted junction before passing over the River Nene before meeting the A1179 on another junction.  After that junction the road quickly heads north before coming to a major junction with the A47 where the road terminates on a large roundabout with the A47 passing over on top.\n\nA4060 road: The A4060, also known as the East of Abercynon to East of Dowlais Trunk Road, is a trunk road in Wales.  The road starts at A470 The Pentrebach Roundabout South of Merthyr Tydfil.  This first stretch is a 3 lane single carriageway road that was the old A470.  It then comes to a roundabout by the Hoover Plant and The Premier Inn where there are links to Aberfan and Troedyrhiw via the A4054, Merthyr Town Centre via the A4054 (the old A470).  The A4060 then leads to another roundabout a few yards up with turn offs to The Triangle Business Park and the Co Op Supermarket.  After this roundabout the road becomes a dual carriageway with quite a steep Hill Climb.  After about 3 miles there is another roundabout which has links to Mountain Hare and Dowlais Ind Est and the A4102.  The other link is a Mountain Road to Cwm Bargoed and Fochriw.\n\nA4080 road: The A4080 is a British A road which is located on the Island of Anglesey, Wales.  It follows a very roundabout route from the A5 road at Llanfairpwllgwyngyll via Newborough and Rhosneigr back to the A55 and the A5 about 9 miles (13 kilometres) south of Holyhead.  In all the road is about 17 miles (27 kilometres) long.\n\nAnglesey: Anglesey ( ; Welsh: \"Ynys Môn\" ] ) is an island off the north-west coast of Wales.  With an area of 276 sqmi , Anglesey is by far the largest island in Wales and the seventh largest in the British Isles.  Anglesey is also the largest island in the Irish Sea by area, and the second most populous island (after the Isle of Man).  The population at the 2011 census was 69,751.  Two bridges span the Menai Strait, connecting the island to the mainland: the Menai Suspension Bridge, designed by Thomas Telford in 1826, and the Britannia Bridge.\n\nGaerwen: Gaerwen is a village on the island of Anglesey, Wales.  It is located in the south of the island 4 mi west of Llanfairpwllgwyngyll and 4 mi southeast of Llangefni .  The A5 runs through the village, and the A55 runs just a few hundred metres north.  According to the 2011 Census Gaerwen is now listed by the Office for National Statistics as Llanfihangel Ysgeifiog.  The population of the community is 1,551.\n\nA5114 road: The A5114 is a British A road which is located on the island of Anglesey, Wales.  It runs from a roundabout just off Junction 6 of the A55 (at the intersection with the A5) to the centre of the county town, Llangefni.\n\nAfon Cefni: Afon Cefni is one of the major rivers on the island of Anglesey, Wales.  It is 16.9 km long.  The river starts at the Llyn Cefni in the centre of the island and then runs south through the county town of Llangefni.  Just north of the A55 the river turns and flows south-west.  It passes through the flatlands of the Malltraeth Marshes, where the river course was altered in 1824, creating a canal-like straight stretch.  This part of the river and the surrounding marshes, part of which is a RSPB reserve, are frequented by a variety of wetland birds which in their turn are preyed on by falcons, hawks and harriers.  A cycle trail follows the straightened course of the river as it flows through the marshes.\n\nA5117 road: The A5117 is a road in Cheshire, England.  It runs between Shotwick ( ) and Helsby ( ) and connects the A550 at Woodbank to the M56.  As such it forms a northerly bypass to Chester and a shorter route between the North West and North Wales than the A55.  The road is dualled west of the M56.  There is roundabout with the A540 and at Dunkirk at the western terminus of the M56.  East of the junction the road is single carriageway and crosses the A41 by way of a roundabout at Backford Cross.  The A5117 intersects the M53 at Junction 10.  This junction is just east of Cheshire Oaks Designer Outlet.  The road then continues almost parallel to the M56, which it intersects at Junction 14, at which there is a Motorway service area.  The road then continues south east to terminate where it joins the A56 at Helsby.\n\nA55 road: The A55, also known as the North Wales Expressway (Welsh: \"Gwibffordd Gogledd Cymru\") and the Chester to Bangor Trunk Road, is a major road in Britain.  Its entire length is a dual carriageway primary route, with the exception of the point where it crosses the Britannia Bridge over the Menai Strait and several short sections where there are gaps in between the two carriageways.  All junctions are grade separated except for two roundabouts — one east of Penmaenmawr and one in Llanfairfechan.  The road originally ran from Chester to Bangor but was extended parallel to the A5 across Anglesey to just outside Holyhead Docks in 2001.  The road improvements have been part funded with European money, under the Trans-European Networks programme, as the route is designated part of Euroroute E22 (Holyhead - Leeds - Amsterdam - Hamburg - Malmö - Riga - Moscow - Perm - Ekaterinburg - Ishim).\n\nMagic Roundabout (Hemel Hempstead): The \"Magic Roundabout\" in Hemel Hempstead, Hertfordshire, England, is the familiar name given to the Plough roundabout.  The familiar name comes from the children's television programme, and is also used for a similar junction in Swindon and the M40 junction in Denham.  The official name relates to a former public house, called \"The Plough Inn\", which was between the junction of what is now Selden Hill and St Albans Road.  It has also been known as the Moor End Roundabout as it is adjacent to the part of Boxmoor nearest the town.  Before Hemel Hempstead became a New Town the roads met in a simple junction which was then replaced by a standard roundabout.\n\nQuestion: The A5114 is a British A road which is located on the island of Anglesey, Wales runs from a roundabout just off Junction 6 of the A55, also known as what expressway?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"road_identifier\": {\n      \"type\": \"string\",\n      \"description\": \"The official identifier of the road.\"\n    },\n    \"alternative_names\": {\n      \"type\": \"array\",\n      \"description\": \"A list of other names or designations for the road.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"expressway_name\": {\n      \"type\": \"string\",\n      \"description\": \"The specific name of the expressway associated with the road.\"\n    },\n    \"road_location\": {\n      \"type\": \"string\",\n      \"description\": \"The country where the road is located.\"\n    }\n  },\n  \"required\": [\n    \"road_identifier\",\n    \"alternative_names\",\n    \"expressway_name\",\n    \"road_location\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "road_identifier": {
+        "type": "string",
+        "description": "The official identifier of the road."
+      },
+      "alternative_names": {
+        "type": "array",
+        "description": "A list of other names or designations for the road.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "expressway_name": {
+        "type": "string",
+        "description": "The specific name of the expressway associated with the road."
+      },
+      "road_location": {
+        "type": "string",
+        "description": "The country where the road is located."
       }
     },
-    "expressway_name": {
-      "type": "string",
-      "description": "The specific name of the expressway associated with the road."
-    },
-    "road_location": {
-      "type": "string",
-      "description": "The country where the road is located."
-    }
+    "required": [
+      "road_identifier",
+      "alternative_names",
+      "expressway_name",
+      "road_location"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "road_identifier",
-    "alternative_names",
-    "expressway_name",
-    "road_location"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

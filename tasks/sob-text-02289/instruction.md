@@ -1,94 +1,71 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Heresy in Judaism: Jewish heretics ("minim", from "minuth", Hebrew for "heretic") are Jewish individuals (often historically, philosophers) whose works have, in part or in whole, been condemned as heretical by significant persons or groups in the larger Jewish community based on the classical teachings of Rabbinic Judaism and derived from "halakha" (Jewish religious law).
-
-1948 Cairo bombings: The 1948 bombings in Cairo, which targeted Jewish areas, took place between June and September 1948 killing 70 Jews and wounding nearly 200.  Riots claimed many more lives.
-
-Holocaust victims: Holocaust victims were people who were targeted by the government of Nazi Germany for various discriminatory practices due to ethnicity, religion, political beliefs, or sexual orientation.  These institutionalized practices came to be called The Holocaust, and began with legalized social discrimination against specific groups, and involuntary hospitalization, euthanasia, and forced sterilization of those considered physically or mentally unfit for society.  These practices escalated during World War II to include non-judicial incarceration, confiscation of property, forced labor, sexual slavery, medical experimentation, and death through overwork, undernourishment, and execution through a variety of methods, with genocide of different groups as the primary goal.
-
-Ringworm affair (Israel): The ringworm affair refers to circumstances involving an alleged number of 20,000 to 200,000 Jewish individuals who were treated between 1948 and 1960 for tinea capitis (ringworm) with ionizing radiation to the head and neck area both within Israel and abroad.  The population suffering from the disease in Israel at the time was composed primarily of newly arrived immigrants and populations who were expected to emigrate, mostly from North Africa, as well as some from Middle East and elsewhere, but many Jewish children were irradiated in their home countries regardless of their intent to emigrate.  Though radiation was the standard treatment at the time, studies have shown the treatment caused cancer and other health problems.
-
-Targeted threat: Targeted threats are a class of malware destined for one specific organization or industry.  A type of crimeware, these threats are of particular concern because they are designed to capture sensitive information.  Targeted attacks may include threats delivered via SMTP e-mail, port attacks, zero day attack vulnerability exploits or phishing messages.  Government organisations are the most targeted sector.  Financial industries are the second most targeted sector, most likely because cybercriminals desire to profit from the confidential, sensitive information the financial industry IT infrastructure houses.  Similarly, online brokerage accounts have also been targeted by such attacks.
-
-Information security awareness: Information security awareness is an evolving part of information security that focuses on raising consciousness regarding potential risks of the rapidly evolving forms of information and the rapidly evolving threats to that information which target human behavior.  As threats have matured and information has increased in value, attackers have increased their capabilities and expanded to broader intentions, developed more attack methods and methodologies and are acting on more diverse motives.  As information security controls and processes have matured, attacks have matured to circumvent controls and processes.  Attackers have targeted and successfully exploited individuals human behavior to breach corporate networks and critical infrastructure systems.  Targeted individuals who are unaware of information and threats may unknowingly circumvent traditional security controls and processes and enable a breach of the organization.  In response, information security awareness is maturing.  Cybersecurity as a business problem has dominated the agenda of most chief information officers (CIO)s, exposing a need for countermeasures to today's cyber threat landscape.  The goal of Information security awareness is to make everyone aware that they are susceptible to the opportunities and challenges in today’s threat landscape, change human risk behaviors and create or enhance a secure organizational culture.
-
-Page of Testimony: A Page of Testimony is a form issued by Yad Vashem (יד ושם) that asks for information about a Jewish victim of the Holocaust.  Over 4.3 million Pages of Testimony have been submitted to Yad Vashem, beginning in the 1950s.  Most of these, as well as other forms of documentation of Holocaust victims, are searchable and viewable online through Yad Vashem's Central Database of Shoah Victims' Names.
-
-Jewish skeptics: Jewish skeptics are Jewish individuals (historically, Jewish philosophers) who have held skeptical views on matters of the Jewish religion.  In general, these skeptical views regard some or all of the "principles of faith," whatever these may be (see Maimonides, Albo), but historically Jewish skepticism is directed either at (1) the existence of the God of Judaism or (2) the authenticity and veracity of the Torah.
-
-Jewish left: The term "Jewish left" describes Jews who identify with or support left wing, occasionally liberal causes, consciously as Jews, either as individuals or through organizations.  There is no one organization or movement which constitutes the "Jewish left," however.  Jews have been major forces in the history of the labor movement, the settlement house movement, the women's rights movement, anti-racist work, and anti-fascist organizing of many forms in Europe, the United States and modern-day Israel.  The Jewish people have a rich history of involvement in socialism, Marxism, and Western liberalism.  Although the expression "on the left" covers a range of politics, many well-known figures "on the left" have been of Jews who were born into Jewish families and have various degrees of connection to Jewish communities, Jewish culture, Jewish tradition or the Jewish religion in its many variants.
-
-Livia Rothkirchen: Livia Rothkirchen (1922-2013), historian, author and archivist, made distinct contribution to documenting the Holocaust, specifically issues flowing from Nazi Germany’s peacetime take-over of the democratic Republic of Czechoslovakia.  Nearly two years before the outbreak of World War II, Germany seized the Sudeten region of Czechoslovakia with the assent of major European states.  Germany then dismembered Czechoslovakia, replacing it with German-controlled Bohemia and Moravia, and a nominally independent Slovak state, which collaborated with Nazi policy.  In all three areas, harsh regulations were imposed on Jewish citizens, most of whom were ultimately deported and killed.  Rothkirchen examines the impact of decisions of Europe's political leaders on general society, on Jewish communal leaders attempting to save their communities, and on Jewish individuals attempting to save themselves and their families from annihilation.
-
-Question: Which government targeted Jewish individuals?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "targeting_government": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the government that targeted individuals."
-        }
-      },
-      "required": [
-        "name"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "targeted_group": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the group that was targeted."
-        }
-      },
-      "required": [
-        "name"
-      ],
-      "additionalProperties": false
-    },
-    "targeting_details": {
-      "type": "object",
-      "properties": {
-        "reason_for_targeting": {
-          "type": "string",
-          "description": "The primary reason cited for the targeting."
-        },
-        "discriminatory_practices": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A list of institutionalized discriminatory practices used against the targeted group."
-        }
-      },
-      "required": [
-        "reason_for_targeting",
-        "discriminatory_practices"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nHeresy in Judaism: Jewish heretics (\"minim\", from \"minuth\", Hebrew for \"heretic\") are Jewish individuals (often historically, philosophers) whose works have, in part or in whole, been condemned as heretical by significant persons or groups in the larger Jewish community based on the classical teachings of Rabbinic Judaism and derived from \"halakha\" (Jewish religious law).\n\n1948 Cairo bombings: The 1948 bombings in Cairo, which targeted Jewish areas, took place between June and September 1948 killing 70 Jews and wounding nearly 200.  Riots claimed many more lives.\n\nHolocaust victims: Holocaust victims were people who were targeted by the government of Nazi Germany for various discriminatory practices due to ethnicity, religion, political beliefs, or sexual orientation.  These institutionalized practices came to be called The Holocaust, and began with legalized social discrimination against specific groups, and involuntary hospitalization, euthanasia, and forced sterilization of those considered physically or mentally unfit for society.  These practices escalated during World War II to include non-judicial incarceration, confiscation of property, forced labor, sexual slavery, medical experimentation, and death through overwork, undernourishment, and execution through a variety of methods, with genocide of different groups as the primary goal.\n\nRingworm affair (Israel): The ringworm affair refers to circumstances involving an alleged number of 20,000 to 200,000 Jewish individuals who were treated between 1948 and 1960 for tinea capitis (ringworm) with ionizing radiation to the head and neck area both within Israel and abroad.  The population suffering from the disease in Israel at the time was composed primarily of newly arrived immigrants and populations who were expected to emigrate, mostly from North Africa, as well as some from Middle East and elsewhere, but many Jewish children were irradiated in their home countries regardless of their intent to emigrate.  Though radiation was the standard treatment at the time, studies have shown the treatment caused cancer and other health problems.\n\nTargeted threat: Targeted threats are a class of malware destined for one specific organization or industry.  A type of crimeware, these threats are of particular concern because they are designed to capture sensitive information.  Targeted attacks may include threats delivered via SMTP e-mail, port attacks, zero day attack vulnerability exploits or phishing messages.  Government organisations are the most targeted sector.  Financial industries are the second most targeted sector, most likely because cybercriminals desire to profit from the confidential, sensitive information the financial industry IT infrastructure houses.  Similarly, online brokerage accounts have also been targeted by such attacks.\n\nInformation security awareness: Information security awareness is an evolving part of information security that focuses on raising consciousness regarding potential risks of the rapidly evolving forms of information and the rapidly evolving threats to that information which target human behavior.  As threats have matured and information has increased in value, attackers have increased their capabilities and expanded to broader intentions, developed more attack methods and methodologies and are acting on more diverse motives.  As information security controls and processes have matured, attacks have matured to circumvent controls and processes.  Attackers have targeted and successfully exploited individuals human behavior to breach corporate networks and critical infrastructure systems.  Targeted individuals who are unaware of information and threats may unknowingly circumvent traditional security controls and processes and enable a breach of the organization.  In response, information security awareness is maturing.  Cybersecurity as a business problem has dominated the agenda of most chief information officers (CIO)s, exposing a need for countermeasures to today's cyber threat landscape.  The goal of Information security awareness is to make everyone aware that they are susceptible to the opportunities and challenges in today’s threat landscape, change human risk behaviors and create or enhance a secure organizational culture.\n\nPage of Testimony: A Page of Testimony is a form issued by Yad Vashem (יד ושם) that asks for information about a Jewish victim of the Holocaust.  Over 4.3 million Pages of Testimony have been submitted to Yad Vashem, beginning in the 1950s.  Most of these, as well as other forms of documentation of Holocaust victims, are searchable and viewable online through Yad Vashem's Central Database of Shoah Victims' Names.\n\nJewish skeptics: Jewish skeptics are Jewish individuals (historically, Jewish philosophers) who have held skeptical views on matters of the Jewish religion.  In general, these skeptical views regard some or all of the \"principles of faith,\" whatever these may be (see Maimonides, Albo), but historically Jewish skepticism is directed either at (1) the existence of the God of Judaism or (2) the authenticity and veracity of the Torah.\n\nJewish left: The term \"Jewish left\" describes Jews who identify with or support left wing, occasionally liberal causes, consciously as Jews, either as individuals or through organizations.  There is no one organization or movement which constitutes the \"Jewish left,\" however.  Jews have been major forces in the history of the labor movement, the settlement house movement, the women's rights movement, anti-racist work, and anti-fascist organizing of many forms in Europe, the United States and modern-day Israel.  The Jewish people have a rich history of involvement in socialism, Marxism, and Western liberalism.  Although the expression \"on the left\" covers a range of politics, many well-known figures \"on the left\" have been of Jews who were born into Jewish families and have various degrees of connection to Jewish communities, Jewish culture, Jewish tradition or the Jewish religion in its many variants.\n\nLivia Rothkirchen: Livia Rothkirchen (1922-2013), historian, author and archivist, made distinct contribution to documenting the Holocaust, specifically issues flowing from Nazi Germany’s peacetime take-over of the democratic Republic of Czechoslovakia.  Nearly two years before the outbreak of World War II, Germany seized the Sudeten region of Czechoslovakia with the assent of major European states.  Germany then dismembered Czechoslovakia, replacing it with German-controlled Bohemia and Moravia, and a nominally independent Slovak state, which collaborated with Nazi policy.  In all three areas, harsh regulations were imposed on Jewish citizens, most of whom were ultimately deported and killed.  Rothkirchen examines the impact of decisions of Europe's political leaders on general society, on Jewish communal leaders attempting to save their communities, and on Jewish individuals attempting to save themselves and their families from annihilation.\n\nQuestion: Which government targeted Jewish individuals?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"targeting_government\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the government that targeted individuals.\"\n        }\n      },\n      \"required\": [\n        \"name\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"targeted_group\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the group that was targeted.\"\n        }\n      },\n      \"required\": [\n        \"name\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"targeting_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"reason_for_targeting\": {\n          \"type\": \"string\",\n          \"description\": \"The primary reason cited for the targeting.\"\n        },\n        \"discriminatory_practices\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"A list of institutionalized discriminatory practices used against the targeted group.\"\n        }\n      },\n      \"required\": [\n        \"reason_for_targeting\",\n        \"discriminatory_practices\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"targeting_government\",\n    \"targeted_group\",\n    \"targeting_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "targeting_government",
-    "targeted_group",
-    "targeting_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "targeting_government": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the government that targeted individuals."
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "targeted_group": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the group that was targeted."
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "targeting_details": {
+        "type": "object",
+        "properties": {
+          "reason_for_targeting": {
+            "type": "string",
+            "description": "The primary reason cited for the targeting."
+          },
+          "discriminatory_practices": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of institutionalized discriminatory practices used against the targeted group."
+          }
+        },
+        "required": [
+          "reason_for_targeting",
+          "discriminatory_practices"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "targeting_government",
+      "targeted_group",
+      "targeting_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-George Gamow: George Gamow (March 4 [O.S. February 20] 1904 August 19, 1968), born Georgiy Antonovich Gamov (Russian: Гео́ргий Анто́нович Га́мов ; ] ), was a theoretical physicist and cosmologist.  He was an early advocate and developer of Lemaître's Big Bang theory.  He discovered a theoretical explanation of alpha decay via quantum tunneling, and worked on radioactive decay of the atomic nucleus, star formation, stellar nucleosynthesis and Big Bang nucleosynthesis (which he collectively called nucleocosmogenesis), and molecular genetics.
-
-Water-sensitive urban design: Water-sensitive urban design (WSUD) is a land planning and engineering design approach which integrates the urban water cycle, including stormwater, groundwater and wastewater management and water supply, into urban design to minimise environmental degradation and improve aesthetic and recreational appeal.  WSUD is a term used in the Middle East and Australia and is similar to low-impact development (LID), a term used in the United States; and Sustainable Drainage System (SuDS), a term used in the United Kingdom.
-
-Bachelorette: Bachelorette (/ˌbætʃələˈrɛt/) is a term used in American English for a single, unmarried woman.  The term is derived from the word "bachelor", and is often used by journalists, editors of popular magazines, and some individuals.  "Bachelorette" was famously the term used to refer to female contestants on the old "The Dating Game" TV show and, more recently, "The Bachelorette".
-
-Intervention theory: Intervention theory is a term used in social studies and social policy to refer to the decision making problems of intervening effectively in a situation in order to secure desired outcomes.  Intervention theory addresses the question of when it is desirable not to intervene and when it is appropriate to do so.  It also examines the effectiveness of different types of intervention.  The term is used across a range of social and medical practices, including health care, child protection and law enforcement.  It is also used in business studies.
-
-Epistemic advantage: Epistemic Advantage is a term used within feminist theory when attempting to acquire knowledge from the individual lives and experiences of different women.  The term is used to describe the ways in which women, and other minority groups, are able to have a much clearer understanding of how the power structure works within a given society because they are not members of the dominant group.  Uma Narayan, a leading feminist theorist writes about epistemic advantage in her essay entitled, "The Project of Feminist Epistemology: Perspectives From A Nonwestern Feminist".  Narayan defines epistemic advantage as "(the oppressed) having knowledge of the practices of both their own contexts and those of their oppressors," ("Feminist Theory Reader", p. 315).  As the feminist movement has moved into the 3rd wave, women’s ‘intersecting identities’ have become increasingly important.  There has been an acknowledgement that women of different social locations (with respect to race, class, nationality, sexuality, etc.) will have different experiences.  Thus these varying perspectives provide different women with ‘advantages’ in understanding their own specific social locations within a given society’s hierarchal power structure.  Uma Narayan points out that while it is in the interest of various subordinate groups to have knowledge of the dominant group, the dominant group does not have the same need.
-
-Ylem: Ylem is a term that was used by George Gamow, his student Ralph Alpher, and their associates in the late 1940s for a hypothetical original substance or condensed state of matter, which became subatomic particles and elements as we understand them today.  The term "ylem" was actually resuscitated (it appears in Webster's Second "the first substance from which the elements were supposed to have been formed") by Ralph Alpher.
-
-Transmutation of species: Transmutation of species and transformism are terms often used to describe 19th-century evolutionary ideas for the altering of one species into another that preceded Charles Darwin's theory of natural selection.  The French "Transformisme" was a term used by Jean Baptiste Lamarck in 1809 for his theory, and other 19th century proponents of pre-Darwinian evolutionary ideas included Étienne Geoffroy Saint-Hilaire, Robert Grant, and Robert Chambers who anonymously published the book "Vestiges of the Natural History of Creation".  Opposition in the scientific community to these early theories of evolution, led by influential scientists like the anatomists Georges Cuvier and Richard Owen and the geologist Charles Lyell, was intense.  The debate over them was an important stage in the history of evolutionary thought and would influence the subsequent reaction to Darwin's theory.
-
-Nomological danglers: Nomological danglers is a term used by Scottish-Australian philosopher J.J.C. Smart in his article "Sensations and Brain Processes".  He credits the term to Herbert Feigl and his article "The "Mental" and the "Physical"".  It refers to the occurrence of something (in this case a sensation), which does not fit into the system of established laws.  He thinks that systems in which such "nomological danglers would dangle" are quite odd.  In his example the nomological danglers would be sensations such that are not able to be explained by the scientific theory of brain processes.  Some mental entities for example in a phenomenological field, are not able to be found (and do not behave in the way that is expected) in physics.  In the context Smart uses it, he is criticising dualism and epiphenomenalism as philosophies of mind, and the concerns over physical and causal laws they raise.  Smart puts forward his own theory in the form of Materialism, claiming it is a better theory, in part because it is free from these nomological danglers, making it superior in accordance with Occam's Razor.
-
-Arborescent: Arborescent is a term used by the French thinkers Deleuze and Guattari to characterize thinking marked by insistence on totalizing principles, binarism and dualism.  The term, first used in "A Thousand Plateaus" (1980) where it was opposed to the rhizome, comes from the way genealogy trees are drawn: unidirectional progress, with no possible retroactivity and continuous binary cuts (thus enforcing a dualist metaphysical conception, criticized by Deleuze).  Rhizomes, on the contrary, mark a horizontal and non-hierarchical conception, where anything may be linked to anything else, with no respect whatsoever for specific species: rhizomes are heterogeneous links between things that have nothing to do between themselves (for example, Deleuze and Guattari linked together desire and machines to create the - most surprising - concept of desiring machines).  Horizontal gene transfer is also an example of rhizomes, opposed to the arborescent evolutionism theory.  Deleuze also criticizes the Chomsky hierarchy of formal languages, which he considers a perfect example of arborescent dualistic theory.
-
-Three Represents: The Three Represents or the important thought of Three Represents is a guiding socio-political theory credited to Jiang Zemin, which was ratified by the Communist Party of China at the Sixteenth Party Congress in 2002.
-
-Question: Ylem was a term used by the physicist who was a developer of the theory credited to whom?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "term_in_question": {
-      "type": "string",
-      "description": "The term being asked about."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "physicist_who_used_term": {
-      "type": "string",
-      "description": "The physicist who used the term."
-    },
-    "theory_developed_by_physicist": {
-      "type": "string",
-      "description": "The name of the theory that the physicist helped develop."
-    },
-    "theory_credited_to": {
-      "type": "string",
-      "description": "The person to whom the theory is credited."
+    {
+      "role": "user",
+      "content": "Context:\nGeorge Gamow: George Gamow (March 4 [O.S. February 20] 1904 August 19, 1968), born Georgiy Antonovich Gamov (Russian: Гео́ргий Анто́нович Га́мов ; ] ), was a theoretical physicist and cosmologist.  He was an early advocate and developer of Lemaître's Big Bang theory.  He discovered a theoretical explanation of alpha decay via quantum tunneling, and worked on radioactive decay of the atomic nucleus, star formation, stellar nucleosynthesis and Big Bang nucleosynthesis (which he collectively called nucleocosmogenesis), and molecular genetics.\n\nWater-sensitive urban design: Water-sensitive urban design (WSUD) is a land planning and engineering design approach which integrates the urban water cycle, including stormwater, groundwater and wastewater management and water supply, into urban design to minimise environmental degradation and improve aesthetic and recreational appeal.  WSUD is a term used in the Middle East and Australia and is similar to low-impact development (LID), a term used in the United States; and Sustainable Drainage System (SuDS), a term used in the United Kingdom.\n\nBachelorette: Bachelorette (/ˌbætʃələˈrɛt/) is a term used in American English for a single, unmarried woman.  The term is derived from the word \"bachelor\", and is often used by journalists, editors of popular magazines, and some individuals.  \"Bachelorette\" was famously the term used to refer to female contestants on the old \"The Dating Game\" TV show and, more recently, \"The Bachelorette\".\n\nIntervention theory: Intervention theory is a term used in social studies and social policy to refer to the decision making problems of intervening effectively in a situation in order to secure desired outcomes.  Intervention theory addresses the question of when it is desirable not to intervene and when it is appropriate to do so.  It also examines the effectiveness of different types of intervention.  The term is used across a range of social and medical practices, including health care, child protection and law enforcement.  It is also used in business studies.\n\nEpistemic advantage: Epistemic Advantage is a term used within feminist theory when attempting to acquire knowledge from the individual lives and experiences of different women.  The term is used to describe the ways in which women, and other minority groups, are able to have a much clearer understanding of how the power structure works within a given society because they are not members of the dominant group.  Uma Narayan, a leading feminist theorist writes about epistemic advantage in her essay entitled, \"The Project of Feminist Epistemology: Perspectives From A Nonwestern Feminist\".  Narayan defines epistemic advantage as \"(the oppressed) having knowledge of the practices of both their own contexts and those of their oppressors,\" (\"Feminist Theory Reader\", p. 315).  As the feminist movement has moved into the 3rd wave, women’s ‘intersecting identities’ have become increasingly important.  There has been an acknowledgement that women of different social locations (with respect to race, class, nationality, sexuality, etc.) will have different experiences.  Thus these varying perspectives provide different women with ‘advantages’ in understanding their own specific social locations within a given society’s hierarchal power structure.  Uma Narayan points out that while it is in the interest of various subordinate groups to have knowledge of the dominant group, the dominant group does not have the same need.\n\nYlem: Ylem is a term that was used by George Gamow, his student Ralph Alpher, and their associates in the late 1940s for a hypothetical original substance or condensed state of matter, which became subatomic particles and elements as we understand them today.  The term \"ylem\" was actually resuscitated (it appears in Webster's Second \"the first substance from which the elements were supposed to have been formed\") by Ralph Alpher.\n\nTransmutation of species: Transmutation of species and transformism are terms often used to describe 19th-century evolutionary ideas for the altering of one species into another that preceded Charles Darwin's theory of natural selection.  The French \"Transformisme\" was a term used by Jean Baptiste Lamarck in 1809 for his theory, and other 19th century proponents of pre-Darwinian evolutionary ideas included Étienne Geoffroy Saint-Hilaire, Robert Grant, and Robert Chambers who anonymously published the book \"Vestiges of the Natural History of Creation\".  Opposition in the scientific community to these early theories of evolution, led by influential scientists like the anatomists Georges Cuvier and Richard Owen and the geologist Charles Lyell, was intense.  The debate over them was an important stage in the history of evolutionary thought and would influence the subsequent reaction to Darwin's theory.\n\nNomological danglers: Nomological danglers is a term used by Scottish-Australian philosopher J.J.C. Smart in his article \"Sensations and Brain Processes\".  He credits the term to Herbert Feigl and his article \"The \"Mental\" and the \"Physical\"\".  It refers to the occurrence of something (in this case a sensation), which does not fit into the system of established laws.  He thinks that systems in which such \"nomological danglers would dangle\" are quite odd.  In his example the nomological danglers would be sensations such that are not able to be explained by the scientific theory of brain processes.  Some mental entities for example in a phenomenological field, are not able to be found (and do not behave in the way that is expected) in physics.  In the context Smart uses it, he is criticising dualism and epiphenomenalism as philosophies of mind, and the concerns over physical and causal laws they raise.  Smart puts forward his own theory in the form of Materialism, claiming it is a better theory, in part because it is free from these nomological danglers, making it superior in accordance with Occam's Razor.\n\nArborescent: Arborescent is a term used by the French thinkers Deleuze and Guattari to characterize thinking marked by insistence on totalizing principles, binarism and dualism.  The term, first used in \"A Thousand Plateaus\" (1980) where it was opposed to the rhizome, comes from the way genealogy trees are drawn: unidirectional progress, with no possible retroactivity and continuous binary cuts (thus enforcing a dualist metaphysical conception, criticized by Deleuze).  Rhizomes, on the contrary, mark a horizontal and non-hierarchical conception, where anything may be linked to anything else, with no respect whatsoever for specific species: rhizomes are heterogeneous links between things that have nothing to do between themselves (for example, Deleuze and Guattari linked together desire and machines to create the - most surprising - concept of desiring machines).  Horizontal gene transfer is also an example of rhizomes, opposed to the arborescent evolutionism theory.  Deleuze also criticizes the Chomsky hierarchy of formal languages, which he considers a perfect example of arborescent dualistic theory.\n\nThree Represents: The Three Represents or the important thought of Three Represents is a guiding socio-political theory credited to Jiang Zemin, which was ratified by the Communist Party of China at the Sixteenth Party Congress in 2002.\n\nQuestion: Ylem was a term used by the physicist who was a developer of the theory credited to whom?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"term_in_question\": {\n      \"type\": \"string\",\n      \"description\": \"The term being asked about.\"\n    },\n    \"physicist_who_used_term\": {\n      \"type\": \"string\",\n      \"description\": \"The physicist who used the term.\"\n    },\n    \"theory_developed_by_physicist\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the theory that the physicist helped develop.\"\n    },\n    \"theory_credited_to\": {\n      \"type\": \"string\",\n      \"description\": \"The person to whom the theory is credited.\"\n    }\n  },\n  \"required\": [\n    \"term_in_question\",\n    \"physicist_who_used_term\",\n    \"theory_developed_by_physicist\",\n    \"theory_credited_to\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "term_in_question",
-    "physicist_who_used_term",
-    "theory_developed_by_physicist",
-    "theory_credited_to"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "term_in_question": {
+        "type": "string",
+        "description": "The term being asked about."
+      },
+      "physicist_who_used_term": {
+        "type": "string",
+        "description": "The physicist who used the term."
+      },
+      "theory_developed_by_physicist": {
+        "type": "string",
+        "description": "The name of the theory that the physicist helped develop."
+      },
+      "theory_credited_to": {
+        "type": "string",
+        "description": "The person to whom the theory is credited."
+      }
+    },
+    "required": [
+      "term_in_question",
+      "physicist_who_used_term",
+      "theory_developed_by_physicist",
+      "theory_credited_to"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

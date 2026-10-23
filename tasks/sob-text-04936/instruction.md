@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Charles Abiathar White: Charles Abiathar White (January 26, 1826 – June 29, 1910) was an American geologist, paleontologist, and writer whose publications total 238 titles.  He was born at North Dighton, Massachusetts.  He was the State geologist of Iowa in 1866-70, and professor of natural history in the State University of Iowa in 1867-73.  He held a similar position at Bowdoin College in 1873-75, and was geologist and paleontologist of the United States Geological Survey between 1874 and 1892, and after 1895 was an associate in paleontology at the United States National Museum.
-
-Ermine Cowles Case: Ermine Cowles Case (1871–1953), invariably known as E.C. Case, was a prominent American paleontologist in the second generation that succeeded Othniel Charles Marsh and Edward Drinker Cope.  A graduate of the University of Kansas, with a PhD from the University of Chicago (1896), Case became a paleontologist of international stature while working at the University of Michigan.
-
-Kenneth Lacovara: Kenneth J. Lacovara is an American paleontologist and geologist at Rowan University and fellow of the Explorers Club, known for the discovery of the titanosaurian dinosaur "Dreadnoughtus" and his involvement in the discovery and naming of the giant sauropod dinosaur "Paralititan", as well as his work applying 3D printing technology to paleontology.  Lacovara is the founder of the Edelman Fossil Park of Rowan University in Mantua Township, New Jersey and a TED speaker.  He is author of the general-audience book, Why Dinosaurs Matter (2017) (Simon & Schuster/TED Books).  Additionally, he serves as Paleontology Fellow of the Academy of Natural Sciences.
-
-Phreatophasma: Phreatophasma is an extinct genus of tetrapod from the Middle Permian of European Russia.  It includes only one species, Phreatophasma aenigmatum, which is itself known from a single femur found in a mine near the town of Belebei in Bashkortostan.  "Phreatophasma" comes from a fossil assemblage that is latest Ufimian to earliest Kazanian in age under the Russian stratigraphic scheme, correlating with the Roadian Age (earliest Middle Permian, about 270 million years ago) under the international stratigraphic timescale.  Because the species is based on a single specimen with few diagnostic anatomical features, uncertainty remains as to where it belongs in tetrapod phylogeny; originally interpreted in 1954 as an enigmatic "theromorph" synapsid (hence its species name "aenigmatum") by Soviet paleontologist Ivan Yefremov, "Phreatophasma" was later described as a therapsid "incertae sedis" by American paleontologist Alfred Romer in 1956 and then as a member of a basal synapsid family called Caseidae starting with Everett C. Olson in 1962.  Olson's classification was later supported by Canadian paleontologist Robert Reisz in 1986 and American paleontologist Robert L. Carroll in 1988.  Ivakhneneko "et al." (1997) and Maddin "et al." (2008) both considered "Phreatophasma" an indeterminate synapsid.
-
-John W. Wells: John West Wells (July 15, 1907 – January 12, 1994) was an American paleontologist, biologist and geologist who focused his research on corals.
-
-Charles Doolittle Walcott: Charles Doolittle Walcott (March 31, 1850 – February 9, 1927) was an American paleontologist, administrator of the Smithsonian Institution from 1907 to 1927, and geologist.  He is famous for his discovery in 1909 of well-preserved fossils in the Burgess Shale of British Columbia, Canada, see history of the Burgess Shale.  He was described by Stephen Jay Gould as "the finest symbol that I have ever encountered for the embodiment of conventional beliefs."
-
-Donald Prothero: Donald Ross Prothero (February 21, 1954) is an American paleontologist, geologist, and author who specializes in mammalian paleontology.  His research has been in the field of magnetostratigraphy, a technique to date rock layers of the Cenozoic era and its use to date the climate changes which occurred 30-40 million years ago.  He is the author or editor of more than 30 books and over 250 scientific papers, including five geology textbooks.
-
-Allison R. Palmer: Allison Ralph (Pete) Palmer (9 January 1927 in Bound Brook, New Jersey) is an American paleontologist and geologist.  His work has focused on the Cambrian period.  He has had a career of nearly fifty years as a geologist with the United States Geological Survey and universities.  The author of some 137 scientific articles, his research has been important in understanding of the origin and evolution of life on Earth.
-
-Rowan University: Rowan University is a public research university in Glassboro, New Jersey, United States, with a satellite campus in Camden, New Jersey.  The school was founded in 1923 as Glassboro Normal School on a twenty-five acre site donated by the town.  The school became New Jersey State Teachers College at Glassboro in the 1930s, and Glassboro State College in 1958.  Starting in the 1970s, it grew into a multi-purpose institution, adding programs in business, communications, and engineering.
-
-Rudolf Ruedemann: Rudolf Ruedemann (October 16, 1864–June 18, 1956) was a German American paleontologist, widely known as an expert in graptolites, enigmatic fossil animals.  He worked at the New York State Museum for over 40 years, including a decade as State Paleontologist of New York.  and was elected to the U.S. National Academy of Sciences in 1928.  Born in Georgenthal, Germany, he was educated in Europe, earning a PhD in 1887 from the University of Jena (Ph.D., 1887), and a second doctorate in 1889 from France's University of Strasbourg where he was an assistant in geology from 1887 to 1892.  He emigrated to the United States in 1892 and taught at the high schools of Lowville and Dolgeville, New York for several years before joining the State Museum in 1899, where he worked for the remainder of his career.  Although his primary interests were in graptolites he also made contributions to other areas of invertebrate paleontology, describing new species of fossil corals, eurypterids ("sea scorpions"), trilobites, and cephalopods.
-
-Question: When was the university, which the American paleontologist and geologist known for the discovery of Dreadnoughtus, founded?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "paleontologist_name": {
-      "type": "string",
-      "description": "The name of the paleontologist known for the specified discovery."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "discovery_associated_with_paleontologist": {
-      "type": "string",
-      "description": "The specific discovery or work the paleontologist is known for, as mentioned in the question."
-    },
-    "university_name": {
-      "type": "string",
-      "description": "The name of the university where the paleontologist works."
-    },
-    "university_founding_year": {
-      "type": "integer",
-      "description": "The year the associated university was founded."
+    {
+      "role": "user",
+      "content": "Context:\nCharles Abiathar White: Charles Abiathar White (January 26, 1826 – June 29, 1910) was an American geologist, paleontologist, and writer whose publications total 238 titles.  He was born at North Dighton, Massachusetts.  He was the State geologist of Iowa in 1866-70, and professor of natural history in the State University of Iowa in 1867-73.  He held a similar position at Bowdoin College in 1873-75, and was geologist and paleontologist of the United States Geological Survey between 1874 and 1892, and after 1895 was an associate in paleontology at the United States National Museum.\n\nErmine Cowles Case: Ermine Cowles Case (1871–1953), invariably known as E.C. Case, was a prominent American paleontologist in the second generation that succeeded Othniel Charles Marsh and Edward Drinker Cope.  A graduate of the University of Kansas, with a PhD from the University of Chicago (1896), Case became a paleontologist of international stature while working at the University of Michigan.\n\nKenneth Lacovara: Kenneth J. Lacovara is an American paleontologist and geologist at Rowan University and fellow of the Explorers Club, known for the discovery of the titanosaurian dinosaur \"Dreadnoughtus\" and his involvement in the discovery and naming of the giant sauropod dinosaur \"Paralititan\", as well as his work applying 3D printing technology to paleontology.  Lacovara is the founder of the Edelman Fossil Park of Rowan University in Mantua Township, New Jersey and a TED speaker.  He is author of the general-audience book, Why Dinosaurs Matter (2017) (Simon & Schuster/TED Books).  Additionally, he serves as Paleontology Fellow of the Academy of Natural Sciences.\n\nPhreatophasma: Phreatophasma is an extinct genus of tetrapod from the Middle Permian of European Russia.  It includes only one species, Phreatophasma aenigmatum, which is itself known from a single femur found in a mine near the town of Belebei in Bashkortostan.  \"Phreatophasma\" comes from a fossil assemblage that is latest Ufimian to earliest Kazanian in age under the Russian stratigraphic scheme, correlating with the Roadian Age (earliest Middle Permian, about 270 million years ago) under the international stratigraphic timescale.  Because the species is based on a single specimen with few diagnostic anatomical features, uncertainty remains as to where it belongs in tetrapod phylogeny; originally interpreted in 1954 as an enigmatic \"theromorph\" synapsid (hence its species name \"aenigmatum\") by Soviet paleontologist Ivan Yefremov, \"Phreatophasma\" was later described as a therapsid \"incertae sedis\" by American paleontologist Alfred Romer in 1956 and then as a member of a basal synapsid family called Caseidae starting with Everett C. Olson in 1962.  Olson's classification was later supported by Canadian paleontologist Robert Reisz in 1986 and American paleontologist Robert L. Carroll in 1988.  Ivakhneneko \"et al.\" (1997) and Maddin \"et al.\" (2008) both considered \"Phreatophasma\" an indeterminate synapsid.\n\nJohn W. Wells: John West Wells (July 15, 1907 – January 12, 1994) was an American paleontologist, biologist and geologist who focused his research on corals.\n\nCharles Doolittle Walcott: Charles Doolittle Walcott (March 31, 1850 – February 9, 1927) was an American paleontologist, administrator of the Smithsonian Institution from 1907 to 1927, and geologist.  He is famous for his discovery in 1909 of well-preserved fossils in the Burgess Shale of British Columbia, Canada, see history of the Burgess Shale.  He was described by Stephen Jay Gould as \"the finest symbol that I have ever encountered for the embodiment of conventional beliefs.\"\n\nDonald Prothero: Donald Ross Prothero (February 21, 1954) is an American paleontologist, geologist, and author who specializes in mammalian paleontology.  His research has been in the field of magnetostratigraphy, a technique to date rock layers of the Cenozoic era and its use to date the climate changes which occurred 30-40 million years ago.  He is the author or editor of more than 30 books and over 250 scientific papers, including five geology textbooks.\n\nAllison R. Palmer: Allison Ralph (Pete) Palmer (9 January 1927 in Bound Brook, New Jersey) is an American paleontologist and geologist.  His work has focused on the Cambrian period.  He has had a career of nearly fifty years as a geologist with the United States Geological Survey and universities.  The author of some 137 scientific articles, his research has been important in understanding of the origin and evolution of life on Earth.\n\nRowan University: Rowan University is a public research university in Glassboro, New Jersey, United States, with a satellite campus in Camden, New Jersey.  The school was founded in 1923 as Glassboro Normal School on a twenty-five acre site donated by the town.  The school became New Jersey State Teachers College at Glassboro in the 1930s, and Glassboro State College in 1958.  Starting in the 1970s, it grew into a multi-purpose institution, adding programs in business, communications, and engineering.\n\nRudolf Ruedemann: Rudolf Ruedemann (October 16, 1864–June 18, 1956) was a German American paleontologist, widely known as an expert in graptolites, enigmatic fossil animals.  He worked at the New York State Museum for over 40 years, including a decade as State Paleontologist of New York.  and was elected to the U.S. National Academy of Sciences in 1928.  Born in Georgenthal, Germany, he was educated in Europe, earning a PhD in 1887 from the University of Jena (Ph.D., 1887), and a second doctorate in 1889 from France's University of Strasbourg where he was an assistant in geology from 1887 to 1892.  He emigrated to the United States in 1892 and taught at the high schools of Lowville and Dolgeville, New York for several years before joining the State Museum in 1899, where he worked for the remainder of his career.  Although his primary interests were in graptolites he also made contributions to other areas of invertebrate paleontology, describing new species of fossil corals, eurypterids (\"sea scorpions\"), trilobites, and cephalopods.\n\nQuestion: When was the university, which the American paleontologist and geologist known for the discovery of Dreadnoughtus, founded?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"paleontologist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the paleontologist known for the specified discovery.\"\n    },\n    \"discovery_associated_with_paleontologist\": {\n      \"type\": \"string\",\n      \"description\": \"The specific discovery or work the paleontologist is known for, as mentioned in the question.\"\n    },\n    \"university_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the university where the paleontologist works.\"\n    },\n    \"university_founding_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the associated university was founded.\"\n    }\n  },\n  \"required\": [\n    \"paleontologist_name\",\n    \"discovery_associated_with_paleontologist\",\n    \"university_name\",\n    \"university_founding_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "paleontologist_name",
-    "discovery_associated_with_paleontologist",
-    "university_name",
-    "university_founding_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "paleontologist_name": {
+        "type": "string",
+        "description": "The name of the paleontologist known for the specified discovery."
+      },
+      "discovery_associated_with_paleontologist": {
+        "type": "string",
+        "description": "The specific discovery or work the paleontologist is known for, as mentioned in the question."
+      },
+      "university_name": {
+        "type": "string",
+        "description": "The name of the university where the paleontologist works."
+      },
+      "university_founding_year": {
+        "type": "integer",
+        "description": "The year the associated university was founded."
+      }
+    },
+    "required": [
+      "paleontologist_name",
+      "discovery_associated_with_paleontologist",
+      "university_name",
+      "university_founding_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

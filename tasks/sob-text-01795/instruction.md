@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Millennium Force: Millennium Force is a steel roller coaster built by Intamin at Cedar Point amusement park in Sandusky, Ohio, United States.  It was the fourteenth roller coaster to be built at the park since Blue Streak opened in 1964.  Upon completion in 2000, Millennium Force broke six world records and was the world's first Giga Coaster, a roller coaster that exceeds 300 ft in height and completes a full circuit.  It was briefly the tallest and fastest in the world until Steel Dragon 2000 opened later the same year.  The ride is also the third-longest roller coaster in North America after The Beast at Kings Island and Fury 325 at Carowinds.  It was the first roller coaster to use a cable lift system rather than a traditional chain lift.  The coaster has a 310 ft , 45-degree lift hill with a 300 ft drop and features two tunnels, three overbanked turns, and four hills.  It has a top speed of 93 mph .
-
-Corkscrew (Valleyfair): Corkscrew is the name of a roller coaster at Valleyfair in Shakopee, Minnesota featuring one vertical loop and two corkscrews.  Built in 1980, Corkscrew was planned to reflect the design of its sister roller coaster Corkscrew at Cedar Point.  It is notably one of the first roller coasters to feature a double corkscrew, as well as a vertical loop.  The main differences that the Valleyfair model has is the addition of a finale helix and the omission of the camelback before the loop.  Until the hypercoaster Wild Thing (the fifth highest and fastest roller coaster in the world at the time it opened in 1996), Corkscrew was the only outdoor all-steel roller coaster in Minnesota.  Corkscrew is currently the only roller coaster at Valleyfair with inversions.  The coaster's track was painted blue when it open in 1980 but was repainted orange and yellow in 2011.
-
-Lift hill: A lift hill, or chain hill, is an upward-sloping section of track on a roller coaster on which the roller coaster train is mechanically lifted to an elevated point or peak in the track.  Upon reaching the peak, the train is then propelled from the peak by gravity and is usually allowed to coast throughout the rest of the roller coaster ride's circuit on its own momentum, including most or all of the remaining uphill sections.  The initial upward-sloping section of a roller coaster track is usually a lift hill, as the train typically begins a ride with little speed, though some coasters have raised stations that permit an initial drop without a lift hill.  Although uncommon, some tracks also contain multiple lift hills.
-
-Cyclone (Revere Beach): The Cyclone was a wooden roller coaster that operated at Revere Beach in Revere, Massachusetts, from 1925 until 1969.  When Cyclone was constructed, it was the tallest roller coaster ever built, as well as being the first roller coaster in the world to reach 100 ft in height.  In addition to being the tallest roller coaster of its day, some also claim that it was the largest and fastest roller coaster in the world, with a length of 3600 ft and top speeds between 45 and 50 mph (some dispute the speed record claim and instead award that honor to the Giant Dipper).  Cyclone held the title of world's tallest roller coaster until 1964 when it was surpassed by Montaña Rusa at La Feria Chapultepec Mágico in Mexico City, Mexico.
-
-Leviathan (roller coaster): Leviathan is a steel roller coaster in the Medieval Faire section of the park at Canada's Wonderland in Vaughan, Ontario, Canada.  It is the first roller coaster designed by Swiss firm Bolliger & Mabillard to exceed a height of 300 ft , putting it in a class of roller coasters commonly referred to as "giga".  At 5486 ft long, 306 ft tall, and with a top speed of 92 mph , Leviathan is the tallest and fastest roller coaster in Canada.  s of 2015 , Leviathan is ranked as the eighth-tallest, and the eighth-fastest roller coaster in the world, and the third-tallest traditional lift-style coaster in the world.  It was the 16th roller coaster to be built at Canada's Wonderland, and the ride's track was completed in February 2012, with the first test run being completed on 15 March 2012.  The coaster opened to season pass holders on 27 April 2012, and to the general public on 6 May 2012.
-
-Moonsault Scramble: Moonsault Scramble was a shuttle roller coaster that operated from 1983 until 2000 at Fuji-Q Highland amusement park in Fujiyoshida, Yamanashi, Japan.  According to the "Guinness Book of Records", Moonsault Scramble was the tallest roller coaster in the world until 1996, when its record height was surpassed by another roller coaster at Fuji-Q Highland called Fujiyama, which reached 79 m in height.  Moonsault Scramble was the first roller coaster to surpass 61 metres (200 ft) in height, and it remains the third tallest shuttle roller coaster ever built, behind (Six Flags Magic Mountain), and Tower of Terror II (Dreamworld) The coaster was removed from the park to make way for the construction of Dodonpa in 2001.
-
-Maverick (roller coaster): Maverick is a steel roller coaster built by Intamin at Cedar Point in Sandusky, Ohio, United States.  It was the seventeenth roller coaster built at the park since Blue Streak in 1964.  It is notable as being the 500th roller coaster designed by German engineer Werner Stengel and the first roller coaster featuring a Twisted Horseshoe Roll.  Maverick's US$21-million price tag makes it Cedar Point's fourth most expensive roller coaster, behind Millennium Force, Top Thrill Dragster, and GateKeeper.  The 4450 ft course makes it the fourth longest roller coaster at Cedar Point.
-
-Krake: Krake (German for "octopus") is a steel Dive Coaster roller coaster at Heide Park in Soltau, Lower Saxony, Germany manufactured by Bolliger & Mabillard.  It is the first roller coaster of its kind in Germany.  At a cost of 12 million euros, the roller coaster features floorless trains, 476 m of track, and a maximum height of 41 m .  The attraction officially opened to the public on April 16, 2011.
-
-Roller Coaster (Dam Sen Park): Roller Coaster (Vietnamese: Tàu Lượn Siêu Tốc) is a steel roller coaster located at Dam Sen Cultural Park in Ho Chi Minh City, Vietnam.  Built in 1998, it is the first roller coaster in Vietnam.  Until the opening of a similar roller coaster at Đại Nam Văn Hiến which has 4 inversions, the Dam Sen roller coaster had the most inversions in Vietnam.
-
-Intimidator 305: Intimidator 305 is a steel roller coaster located at Kings Dominion in Doswell, Virginia, United States.  Manufactured by Intamin, Intimidator 305 opened to the public on April 2, 2010, as the park's fourteenth roller coaster.  The roller coaster is located in the Safari Village section of the park near Anaconda on the former site of the Safari Monorail ride.  Standing at 305 ft tall and reaching speeds of 90 mph , it is the second Giga Coaster to be built in North America – the first was Millennium Force at Cedar Point.  The $25 million investment was the largest of any ride in the park's history.  It is named and themed after NASCAR driver Dale Earnhardt, who was also known as the "Intimidator."
-
-Question: Millennium Force was the first roller coaster to have what kind of system?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "roller_coaster_name": {
-      "type": "string",
-      "description": "The name of the roller coaster."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "system_introduced": {
-      "type": "string",
-      "description": "The specific system or technology that the roller coaster was the first to use."
-    },
-    "is_first_to_use_system": {
-      "type": "boolean",
-      "description": "Indicates if this roller coaster was the first to use the specified system."
-    },
-    "replaced_system_type": {
-      "type": "string",
-      "description": "The type of system that was traditionally used before this new system was introduced."
+    {
+      "role": "user",
+      "content": "Context:\nMillennium Force: Millennium Force is a steel roller coaster built by Intamin at Cedar Point amusement park in Sandusky, Ohio, United States.  It was the fourteenth roller coaster to be built at the park since Blue Streak opened in 1964.  Upon completion in 2000, Millennium Force broke six world records and was the world's first Giga Coaster, a roller coaster that exceeds 300 ft in height and completes a full circuit.  It was briefly the tallest and fastest in the world until Steel Dragon 2000 opened later the same year.  The ride is also the third-longest roller coaster in North America after The Beast at Kings Island and Fury 325 at Carowinds.  It was the first roller coaster to use a cable lift system rather than a traditional chain lift.  The coaster has a 310 ft , 45-degree lift hill with a 300 ft drop and features two tunnels, three overbanked turns, and four hills.  It has a top speed of 93 mph .\n\nCorkscrew (Valleyfair): Corkscrew is the name of a roller coaster at Valleyfair in Shakopee, Minnesota featuring one vertical loop and two corkscrews.  Built in 1980, Corkscrew was planned to reflect the design of its sister roller coaster Corkscrew at Cedar Point.  It is notably one of the first roller coasters to feature a double corkscrew, as well as a vertical loop.  The main differences that the Valleyfair model has is the addition of a finale helix and the omission of the camelback before the loop.  Until the hypercoaster Wild Thing (the fifth highest and fastest roller coaster in the world at the time it opened in 1996), Corkscrew was the only outdoor all-steel roller coaster in Minnesota.  Corkscrew is currently the only roller coaster at Valleyfair with inversions.  The coaster's track was painted blue when it open in 1980 but was repainted orange and yellow in 2011.\n\nLift hill: A lift hill, or chain hill, is an upward-sloping section of track on a roller coaster on which the roller coaster train is mechanically lifted to an elevated point or peak in the track.  Upon reaching the peak, the train is then propelled from the peak by gravity and is usually allowed to coast throughout the rest of the roller coaster ride's circuit on its own momentum, including most or all of the remaining uphill sections.  The initial upward-sloping section of a roller coaster track is usually a lift hill, as the train typically begins a ride with little speed, though some coasters have raised stations that permit an initial drop without a lift hill.  Although uncommon, some tracks also contain multiple lift hills.\n\nCyclone (Revere Beach): The Cyclone was a wooden roller coaster that operated at Revere Beach in Revere, Massachusetts, from 1925 until 1969.  When Cyclone was constructed, it was the tallest roller coaster ever built, as well as being the first roller coaster in the world to reach 100 ft in height.  In addition to being the tallest roller coaster of its day, some also claim that it was the largest and fastest roller coaster in the world, with a length of 3600 ft and top speeds between 45 and 50 mph (some dispute the speed record claim and instead award that honor to the Giant Dipper).  Cyclone held the title of world's tallest roller coaster until 1964 when it was surpassed by Montaña Rusa at La Feria Chapultepec Mágico in Mexico City, Mexico.\n\nLeviathan (roller coaster): Leviathan is a steel roller coaster in the Medieval Faire section of the park at Canada's Wonderland in Vaughan, Ontario, Canada.  It is the first roller coaster designed by Swiss firm Bolliger & Mabillard to exceed a height of 300 ft , putting it in a class of roller coasters commonly referred to as \"giga\".  At 5486 ft long, 306 ft tall, and with a top speed of 92 mph , Leviathan is the tallest and fastest roller coaster in Canada.  s of 2015 , Leviathan is ranked as the eighth-tallest, and the eighth-fastest roller coaster in the world, and the third-tallest traditional lift-style coaster in the world.  It was the 16th roller coaster to be built at Canada's Wonderland, and the ride's track was completed in February 2012, with the first test run being completed on 15 March 2012.  The coaster opened to season pass holders on 27 April 2012, and to the general public on 6 May 2012.\n\nMoonsault Scramble: Moonsault Scramble was a shuttle roller coaster that operated from 1983 until 2000 at Fuji-Q Highland amusement park in Fujiyoshida, Yamanashi, Japan.  According to the \"Guinness Book of Records\", Moonsault Scramble was the tallest roller coaster in the world until 1996, when its record height was surpassed by another roller coaster at Fuji-Q Highland called Fujiyama, which reached 79 m in height.  Moonsault Scramble was the first roller coaster to surpass 61 metres (200 ft) in height, and it remains the third tallest shuttle roller coaster ever built, behind (Six Flags Magic Mountain), and Tower of Terror II (Dreamworld) The coaster was removed from the park to make way for the construction of Dodonpa in 2001.\n\nMaverick (roller coaster): Maverick is a steel roller coaster built by Intamin at Cedar Point in Sandusky, Ohio, United States.  It was the seventeenth roller coaster built at the park since Blue Streak in 1964.  It is notable as being the 500th roller coaster designed by German engineer Werner Stengel and the first roller coaster featuring a Twisted Horseshoe Roll.  Maverick's US$21-million price tag makes it Cedar Point's fourth most expensive roller coaster, behind Millennium Force, Top Thrill Dragster, and GateKeeper.  The 4450 ft course makes it the fourth longest roller coaster at Cedar Point.\n\nKrake: Krake (German for \"octopus\") is a steel Dive Coaster roller coaster at Heide Park in Soltau, Lower Saxony, Germany manufactured by Bolliger & Mabillard.  It is the first roller coaster of its kind in Germany.  At a cost of 12 million euros, the roller coaster features floorless trains, 476 m of track, and a maximum height of 41 m .  The attraction officially opened to the public on April 16, 2011.\n\nRoller Coaster (Dam Sen Park): Roller Coaster (Vietnamese: Tàu Lượn Siêu Tốc) is a steel roller coaster located at Dam Sen Cultural Park in Ho Chi Minh City, Vietnam.  Built in 1998, it is the first roller coaster in Vietnam.  Until the opening of a similar roller coaster at Đại Nam Văn Hiến which has 4 inversions, the Dam Sen roller coaster had the most inversions in Vietnam.\n\nIntimidator 305: Intimidator 305 is a steel roller coaster located at Kings Dominion in Doswell, Virginia, United States.  Manufactured by Intamin, Intimidator 305 opened to the public on April 2, 2010, as the park's fourteenth roller coaster.  The roller coaster is located in the Safari Village section of the park near Anaconda on the former site of the Safari Monorail ride.  Standing at 305 ft tall and reaching speeds of 90 mph , it is the second Giga Coaster to be built in North America – the first was Millennium Force at Cedar Point.  The $25 million investment was the largest of any ride in the park's history.  It is named and themed after NASCAR driver Dale Earnhardt, who was also known as the \"Intimidator.\"\n\nQuestion: Millennium Force was the first roller coaster to have what kind of system?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"roller_coaster_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the roller coaster.\"\n    },\n    \"system_introduced\": {\n      \"type\": \"string\",\n      \"description\": \"The specific system or technology that the roller coaster was the first to use.\"\n    },\n    \"is_first_to_use_system\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if this roller coaster was the first to use the specified system.\"\n    },\n    \"replaced_system_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of system that was traditionally used before this new system was introduced.\"\n    }\n  },\n  \"required\": [\n    \"roller_coaster_name\",\n    \"system_introduced\",\n    \"is_first_to_use_system\",\n    \"replaced_system_type\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "roller_coaster_name",
-    "system_introduced",
-    "is_first_to_use_system",
-    "replaced_system_type"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "roller_coaster_name": {
+        "type": "string",
+        "description": "The name of the roller coaster."
+      },
+      "system_introduced": {
+        "type": "string",
+        "description": "The specific system or technology that the roller coaster was the first to use."
+      },
+      "is_first_to_use_system": {
+        "type": "boolean",
+        "description": "Indicates if this roller coaster was the first to use the specified system."
+      },
+      "replaced_system_type": {
+        "type": "string",
+        "description": "The type of system that was traditionally used before this new system was introduced."
+      }
+    },
+    "required": [
+      "roller_coaster_name",
+      "system_introduced",
+      "is_first_to_use_system",
+      "replaced_system_type"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

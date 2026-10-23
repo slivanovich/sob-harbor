@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Cherry Juice: Cherry Juice (チェリージュース , Cherī Jūsu ) is a shojo manga series created by Haruka Fukushima, centered on a growing romance between two step-siblings, Minami and Otome.  It was originally serialized in "Nakayoshi", and was published by Kodansha in 2004.  The first volume of the series was released in America by Tokyopop in September 2007.
-
-Menacing Dog's: Menacing Dog's (Japanese: キョウハクDOG's , Hepburn: Kyōhaku Dog's ) is a Japanese manga series written and illustrated by Shaa, the same illustrator of the "Nogizaka Haruka no Himitsu" light novel series.  The manga was originally serialized in MediaWorks' "Dengeki Teioh" magazine, but after the magazine became defunct, it began serialization in "Dengeki G's Festival!  Comic", renamed Menacing Dog's: Another Secret (キョウハクDOG's -Another Secret- , Kyōhaku Dog's -Another Secret- ) .  The manga was serialized in the two magazines between the November 2005 and January 2012 issues.  A total of four "tankōbon" volumes were published under the Dengeki Comics imprint.  Infinity Studios licensed "Menacing Dog's" in North America, and "Menacing Dog's: Another Secret"'s chapters are digitally serialized in English on Kadokawa's Comic Walker website.
-
-Stray Little Devil: Stray Little Devil (ストレイ リトル デビル , Sutorei Ritoru Debiru ) is a Japanese manga series written and illustrated by Kotaro Mori.  The manga was originally serialized in Dengeki Comic Gao! , and was later published into five bound volumes by MediaWorks from January 2005 to March 2007.  DrMaster Publications Inc. licensed the manga series for English-language publication in North America and released the five volumes between June 2006 and November 2007.  The story is a comedic fantasy, detailing the life of a girl named Pam Akumachi, who is unintentionally drawn into the "Spirit World".  Her only hope of returning home is a mysterious individual named Remy, who promises to tell Pam the way back if she becomes a full-fledged devil by passing through the devils' educational system.
-
-Ultra Cute: Ultra Cute (うるきゅー , "Urukyū", romanized as "Ultra Cute" ) is a manga series written and illustrated Nami Akimoto.  Originally serialized in Japan in "Nakayoshi", the individual chapters were collected and published in nine "tankōbon" volumes by Kodansha between January 2000 and October 2003.  The series focus on friends Ami Uzuki and Noa Kurosawa, who compete with each other over the same potential boyfriends, usually scaring them away.  Until they meet friends Tomohiro Nakatsu and Tamon Okazaki, and fall in love with a separate boys.  However, after Ami discovers that the boys are running their own scheme against them, Ami schemes to get revenge while trying to protect Noa.
-
-The Promised Neverland: The Promised Neverland (約束のネバーランド , Yakusoku no Neverland ) is a Japanese "shōnen" manga series written by Kaiu Shirai and illustrated by Posuka Demizu.  It is published by Shueisha.  It has been serialized in "Weekly Shōnen Jump" magazine since August 1, 2016 and 5 volumes have been collected in "tankōbon" format.  It features unusual change in genres from cute shojo manga to pure horror.  The series has been licensed for English-language release by Viz Media.  and is expected in December 2017
-
-Wild Ones (manga): Wild Ones (アラクレ , Arakure ) is a Japanese manga by Kiyo Fujiwara.  It is finished with 10 volumes in Japan and is serialized in "Hana to Yume".  In December 2007 Viz began releasing the series under the name "Wild Ones" and under the Shojo Beat label in America.  A preview of the manga series was seen in the November 2007 issue of "Shojo Beat".
-
-Shojo Beat: Shojo Beat is a "shōjo" manga magazine formerly published in North America by Viz Media.  Released in June 2005 as a sister magazine to "Shonen Jump", it featured serialized chapters from six manga series, as well as articles on Japanese culture, manga, anime, fashion and beauty.  After its initial launch, "Shojo Beat" underwent two redesigns, becoming the first English anthology to use the cyan and magenta ink tones common to Japanese manga anthologies.  Viz launched related "Shojo Beat" imprints in its manga, Japanese light novel, and anime divisions to coordinate with the magazine's contents.
-
-Nakayoshi: Nakayoshi (なかよし , "good friends") is a monthly "shōjo" manga magazine published by Kodansha in Japan.  First published in December 1954, it is a long-running magazine with over 60 years of manga publication history.  The target demographic for "Nakayoshi" (like "Ribon" and "Ciao") is girls of age 8–14.  Roughly the size of a phone book (hence the term "phone book manga"), it generally comes with "furoku", or small gifts, such as popout figures, games, small bags, posters, stickers, and so on.  The "furoku" is an attempt to encourage girls to buy their own copies of the magazine rather than just share with a friend.  In the mid-1990s, Nakayoshi retailed for 400 yen and had an average of 448 pages.  The estimated circulation of Nakayoshi at this time was 1,800,000.  In 2007, its circulation was 400,000.
-
-JoJo's Bizarre Adventure: JoJo's Bizarre Adventure (Japanese: ジョジョの奇妙な冒険 , Hepburn: JoJo no Kimyō na Bōken ) is a Japanese manga series written and illustrated by Hirohiko Araki.  It was originally serialized in "Weekly Shōnen Jump" from 1987 to 2004 before being transferred to the monthly "seinen" magazine "Ultra Jump" in 2005.  The current story arc, "JoJolion", started in 2011.  "JoJo's Bizarre Adventure" is currently Shueisha's second largest manga series with its chapters collected into 119 "tankōbon" volumes and counting.
-
-Steam Detectives: Steam Detectives (Japanese: 快傑蒸気探偵団 , Hepburn: Kaiketsu Jōki Tanteidan ) is a Japanese manga series written and illustrated by Kia Asamiya.  The manga was originally serialized in "Monthly Shōnen Jump" and later moved to "Ultra Jump" at the magazines start.  It was later adapted into a 26-episode anime television series which ran from October 1998 to March 1999 on TV Tokyo.  In North America, the anime is licensed by ADV Films and the manga by Viz Media.
-
-Question: Ultra Cute was a manga series originally serialized in the shojo publication created by which company?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "manga_series_name": {
-      "type": "string",
-      "description": "The name of the manga series in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "original_publication_magazine": {
-      "type": "string",
-      "description": "The name of the magazine where the manga was originally serialized."
-    },
-    "magazine_genre": {
-      "type": "string",
-      "description": "The genre of the publication magazine."
-    },
-    "publication_company": {
-      "type": "string",
-      "description": "The company that publishes the original serialization magazine."
+    {
+      "role": "user",
+      "content": "Context:\nCherry Juice: Cherry Juice (チェリージュース , Cherī Jūsu ) is a shojo manga series created by Haruka Fukushima, centered on a growing romance between two step-siblings, Minami and Otome.  It was originally serialized in \"Nakayoshi\", and was published by Kodansha in 2004.  The first volume of the series was released in America by Tokyopop in September 2007.\n\nMenacing Dog's: Menacing Dog's (Japanese: キョウハクDOG's , Hepburn: Kyōhaku Dog's ) is a Japanese manga series written and illustrated by Shaa, the same illustrator of the \"Nogizaka Haruka no Himitsu\" light novel series.  The manga was originally serialized in MediaWorks' \"Dengeki Teioh\" magazine, but after the magazine became defunct, it began serialization in \"Dengeki G's Festival!  Comic\", renamed Menacing Dog's: Another Secret (キョウハクDOG's -Another Secret- , Kyōhaku Dog's -Another Secret- ) .  The manga was serialized in the two magazines between the November 2005 and January 2012 issues.  A total of four \"tankōbon\" volumes were published under the Dengeki Comics imprint.  Infinity Studios licensed \"Menacing Dog's\" in North America, and \"Menacing Dog's: Another Secret\"'s chapters are digitally serialized in English on Kadokawa's Comic Walker website.\n\nStray Little Devil: Stray Little Devil (ストレイ リトル デビル , Sutorei Ritoru Debiru ) is a Japanese manga series written and illustrated by Kotaro Mori.  The manga was originally serialized in Dengeki Comic Gao! , and was later published into five bound volumes by MediaWorks from January 2005 to March 2007.  DrMaster Publications Inc. licensed the manga series for English-language publication in North America and released the five volumes between June 2006 and November 2007.  The story is a comedic fantasy, detailing the life of a girl named Pam Akumachi, who is unintentionally drawn into the \"Spirit World\".  Her only hope of returning home is a mysterious individual named Remy, who promises to tell Pam the way back if she becomes a full-fledged devil by passing through the devils' educational system.\n\nUltra Cute: Ultra Cute (うるきゅー , \"Urukyū\", romanized as \"Ultra Cute\" ) is a manga series written and illustrated Nami Akimoto.  Originally serialized in Japan in \"Nakayoshi\", the individual chapters were collected and published in nine \"tankōbon\" volumes by Kodansha between January 2000 and October 2003.  The series focus on friends Ami Uzuki and Noa Kurosawa, who compete with each other over the same potential boyfriends, usually scaring them away.  Until they meet friends Tomohiro Nakatsu and Tamon Okazaki, and fall in love with a separate boys.  However, after Ami discovers that the boys are running their own scheme against them, Ami schemes to get revenge while trying to protect Noa.\n\nThe Promised Neverland: The Promised Neverland (約束のネバーランド , Yakusoku no Neverland ) is a Japanese \"shōnen\" manga series written by Kaiu Shirai and illustrated by Posuka Demizu.  It is published by Shueisha.  It has been serialized in \"Weekly Shōnen Jump\" magazine since August 1, 2016 and 5 volumes have been collected in \"tankōbon\" format.  It features unusual change in genres from cute shojo manga to pure horror.  The series has been licensed for English-language release by Viz Media.  and is expected in December 2017\n\nWild Ones (manga): Wild Ones (アラクレ , Arakure ) is a Japanese manga by Kiyo Fujiwara.  It is finished with 10 volumes in Japan and is serialized in \"Hana to Yume\".  In December 2007 Viz began releasing the series under the name \"Wild Ones\" and under the Shojo Beat label in America.  A preview of the manga series was seen in the November 2007 issue of \"Shojo Beat\".\n\nShojo Beat: Shojo Beat is a \"shōjo\" manga magazine formerly published in North America by Viz Media.  Released in June 2005 as a sister magazine to \"Shonen Jump\", it featured serialized chapters from six manga series, as well as articles on Japanese culture, manga, anime, fashion and beauty.  After its initial launch, \"Shojo Beat\" underwent two redesigns, becoming the first English anthology to use the cyan and magenta ink tones common to Japanese manga anthologies.  Viz launched related \"Shojo Beat\" imprints in its manga, Japanese light novel, and anime divisions to coordinate with the magazine's contents.\n\nNakayoshi: Nakayoshi (なかよし , \"good friends\") is a monthly \"shōjo\" manga magazine published by Kodansha in Japan.  First published in December 1954, it is a long-running magazine with over 60 years of manga publication history.  The target demographic for \"Nakayoshi\" (like \"Ribon\" and \"Ciao\") is girls of age 8–14.  Roughly the size of a phone book (hence the term \"phone book manga\"), it generally comes with \"furoku\", or small gifts, such as popout figures, games, small bags, posters, stickers, and so on.  The \"furoku\" is an attempt to encourage girls to buy their own copies of the magazine rather than just share with a friend.  In the mid-1990s, Nakayoshi retailed for 400 yen and had an average of 448 pages.  The estimated circulation of Nakayoshi at this time was 1,800,000.  In 2007, its circulation was 400,000.\n\nJoJo's Bizarre Adventure: JoJo's Bizarre Adventure (Japanese: ジョジョの奇妙な冒険 , Hepburn: JoJo no Kimyō na Bōken ) is a Japanese manga series written and illustrated by Hirohiko Araki.  It was originally serialized in \"Weekly Shōnen Jump\" from 1987 to 2004 before being transferred to the monthly \"seinen\" magazine \"Ultra Jump\" in 2005.  The current story arc, \"JoJolion\", started in 2011.  \"JoJo's Bizarre Adventure\" is currently Shueisha's second largest manga series with its chapters collected into 119 \"tankōbon\" volumes and counting.\n\nSteam Detectives: Steam Detectives (Japanese: 快傑蒸気探偵団 , Hepburn: Kaiketsu Jōki Tanteidan ) is a Japanese manga series written and illustrated by Kia Asamiya.  The manga was originally serialized in \"Monthly Shōnen Jump\" and later moved to \"Ultra Jump\" at the magazines start.  It was later adapted into a 26-episode anime television series which ran from October 1998 to March 1999 on TV Tokyo.  In North America, the anime is licensed by ADV Films and the manga by Viz Media.\n\nQuestion: Ultra Cute was a manga series originally serialized in the shojo publication created by which company?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"manga_series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the manga series in question.\"\n    },\n    \"original_publication_magazine\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the magazine where the manga was originally serialized.\"\n    },\n    \"magazine_genre\": {\n      \"type\": \"string\",\n      \"description\": \"The genre of the publication magazine.\"\n    },\n    \"publication_company\": {\n      \"type\": \"string\",\n      \"description\": \"The company that publishes the original serialization magazine.\"\n    }\n  },\n  \"required\": [\n    \"manga_series_name\",\n    \"original_publication_magazine\",\n    \"magazine_genre\",\n    \"publication_company\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "manga_series_name",
-    "original_publication_magazine",
-    "magazine_genre",
-    "publication_company"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "manga_series_name": {
+        "type": "string",
+        "description": "The name of the manga series in question."
+      },
+      "original_publication_magazine": {
+        "type": "string",
+        "description": "The name of the magazine where the manga was originally serialized."
+      },
+      "magazine_genre": {
+        "type": "string",
+        "description": "The genre of the publication magazine."
+      },
+      "publication_company": {
+        "type": "string",
+        "description": "The company that publishes the original serialization magazine."
+      }
+    },
+    "required": [
+      "manga_series_name",
+      "original_publication_magazine",
+      "magazine_genre",
+      "publication_company"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

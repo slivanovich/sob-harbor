@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-More Than Dancing: More Than Dancing is a 1982 independent release by The Captain and Tennille.  The album was released on a now-defunct Australian record label, Wizard Records.  Following the five years of international success between A&M Records and Casablanca Records, The Captain & Tennille had essentially concluded their major recording career in 1980 with the album "Keeping Our Love Warm".  The following year, Wizard Records invested in The Captain & Tennille to record "More Than Dancing".  When released in 1982, the album had limited Australian release and was not released internationally.  The album was considered extremely rare until the CD release in 2003.
-
-Shine a Light (Constantines album): Shine a Light is the second full-length album released by the Constantines, and their first to be released internationally on the Sub Pop record label.  It was the first album to feature keyboard player Will Kidman as a member of the band.  The album also features some saxophone assistance from Jonas Berkeley.
-
-Bad Sneakers and a Piña Colada: Bad Sneakers and a Piña Colada is the second full-length album by Swedish hard rock band Hardcore Superstar, released by the Music for Nations record label.  It was the first album to be released internationally and usually considered the first full-length album in general.  The title was lifted from the jazz-rock band Steely Dan's song "Bad Sneakers".
-
-Jarren Benton: Jarren Giovanni Benton (born October 26, 1981) is an American rapper from Decatur, Georgia.  In early 2012, he signed to rapper Hopsin's independent record label Funk Volume and released a mixtape called "Freebasing with Kevin Bacon" in June 2012.  A year later, on June 11, 2013 he released his debut studio album "My Grandma's Basement", which received positive critical reviews and debuted at number 152 on the "Billboard" 200.  On January 4, 2016, Jarren Benton posted a prank on Instagram, saying that he dropped his current label, "Funk Volume," for a label no longer in existence entitled "No Limits."  Fans and news outlets alike took the prank seriously, and spread the joke as truth on the internet because they refused to find solid evidence and verify confirmation of fact to the joke.  Both Funk Volume and Jarren Benton have disproved truth to the prank in the same night.  However, it has been officially confirmed the Funk Volume label has split up.  After the Funk Volume split up, Jarren has created his own record label under the name Benton Enterprises, choosing to go in his own direction to get his own brand out to the public, and to release his new album Slow Motion Vol.  2.  The album originally was scheduled to be released on July 15th, but Jarren posted on social media on July 3rd, 2016 "Due to technical difficulties, we will be releasing Slow Motion Vol.  2 on July 22nd."  The album will be released on his new website and will be his first album release under his label Benton Enterprises, his first album release since the Funk Volume departure, and his first album released on his new website.
-
-Worlds (album): Worlds is the debut studio album by the American electronic music producer Porter Robinson, released on August 12, 2014 by Astralwerks in the United States and by Virgin EMI Records internationally.  The album exhibits a shift in Robinson's music style from the heavy, bass-fueled complextro of his previous work to a more alternative form of electronic music.
-
-Lionhearted: "Lionhearted" is a song recorded by American electronic music producer Porter Robinson.  It was released on June 7, 2014 as the third single from his debut studio album "Worlds" (2014).  Robinson wrote, produced, and performed the track.  The song is different than the other songs on the record, less emotional and more pop-inspired.  The song contains vocals from Swedish pop group Urban Cone.
-
-Radiocontrolledrobot: Radiocontrolledrobot is the second studio album released by Johannesburg-based South African Indie rock band The Parlotones under its Sovereign Entertainment label.  A shorter version of the album (comprising 12 tracks instead of 18) was released internationally in 2007, making it the first international album released by the band.  The album also won the best album of the year at the 2006 South Africa Music Awards.
-
-Þvílíkt Og Annað Eins: Þvílíkt Og Annað Eins is the 1981 studio album of Mezzoforte on Steinar.  It is their third album, released only in Iceland only on LP.  Along with their first record, Mezzoforte (1979), these two weren't remastered in 1996 with the rest of their early discography, or ever released internationally or on CD, however 7 of the 9 tracks from "Þvílíkt Og Annað Eins" were released internationally in 1983 on the compilation album Catching Up With Mezzoforte which also included 7 songs from their second album, "Í Hakanum/Octopus" and peaked at #95 on the UK Album Chart.  Even though the third album’s title track was translated as "Surprise", the album is sometimes referred to in English as "Dreamland", which is the only song from the album released on a single, thus it can’t be confused with their fourth album, titled "Surprise Surprise" which was an international success, peaking at #23 on the UK Album Chart.  The song "Dreamland" was released in 1982 on a double A-side single with second album’s "Shooting Star".
-
-Odds &amp; Ends: Odds & Ends is a collection of unfinished tracks and demo recordings by British pop singer, Dido.  The collection was put together by her management team, Nettwerk, and released promotionally in late 1995, in order to gain interest from record companies so that Dido could be signed to a major record label.  All of the material was recorded between 1993 and 1995.  Dido was brought to the attention of Arista Records, who were impressed with her collaborations and songwriting for the UK dance group Faithless, her work with a UK dance act spearheaded by her brother, Rollo Armstrong, and more importantly, the album.  Arista Records signed Dido in the United States, eventually forming a deal with her brother Rollo Armstrong's record label, Cheeky Records, allowing her music to be released internationally.  The track "Worthless" later appeared on "The Highbury Fields EP", a five track sampler released to promote her debut album, "No Angel". " Take My Hand" was included on the album itself, and "Sweet Eyed Baby" was remixed to create another album track, "Don't Think Of Me".  "Worthless" and "Me" also appeared on the Japanese version of "No Angel".
-
-For Lack of a Better Name: For Lack of a Better Name is the fourth studio album and major label debut by the Canadian record producer and DJ deadmau5, released on 22 September 2009 in the United States and Canada by Ultra Records and mau5trap and internationally on 5 October 2009 by Virgin Records.  The album features collaborations with MC Flipside ("Hi Friend!")  and Rob Swire of Pendulum ("Ghosts 'n' Stuff").  The album also contains the critically acclaimed song "Strobe".  It is deadmau5's first album to be released internationally on the Virgin Records label.
-
-Question: "Lionhearted" is a song from an album released internationally under which record label ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "album_details": {
-      "type": "object",
-      "properties": {
-        "album_title": {
-          "type": "string",
-          "description": "The title of the album the song is from."
-        },
-        "release_year": {
-          "type": "integer",
-          "description": "The year the album was released."
-        },
-        "international_record_label": {
-          "type": "string",
-          "description": "The record label under which the album was released internationally."
-        }
-      },
-      "required": [
-        "album_title",
-        "release_year",
-        "international_record_label"
-      ],
-      "additionalProperties": false
-    },
-    "artist": {
-      "type": "string",
-      "description": "The artist who recorded the song and album."
+    {
+      "role": "user",
+      "content": "Context:\nMore Than Dancing: More Than Dancing is a 1982 independent release by The Captain and Tennille.  The album was released on a now-defunct Australian record label, Wizard Records.  Following the five years of international success between A&M Records and Casablanca Records, The Captain & Tennille had essentially concluded their major recording career in 1980 with the album \"Keeping Our Love Warm\".  The following year, Wizard Records invested in The Captain & Tennille to record \"More Than Dancing\".  When released in 1982, the album had limited Australian release and was not released internationally.  The album was considered extremely rare until the CD release in 2003.\n\nShine a Light (Constantines album): Shine a Light is the second full-length album released by the Constantines, and their first to be released internationally on the Sub Pop record label.  It was the first album to feature keyboard player Will Kidman as a member of the band.  The album also features some saxophone assistance from Jonas Berkeley.\n\nBad Sneakers and a Piña Colada: Bad Sneakers and a Piña Colada is the second full-length album by Swedish hard rock band Hardcore Superstar, released by the Music for Nations record label.  It was the first album to be released internationally and usually considered the first full-length album in general.  The title was lifted from the jazz-rock band Steely Dan's song \"Bad Sneakers\".\n\nJarren Benton: Jarren Giovanni Benton (born October 26, 1981) is an American rapper from Decatur, Georgia.  In early 2012, he signed to rapper Hopsin's independent record label Funk Volume and released a mixtape called \"Freebasing with Kevin Bacon\" in June 2012.  A year later, on June 11, 2013 he released his debut studio album \"My Grandma's Basement\", which received positive critical reviews and debuted at number 152 on the \"Billboard\" 200.  On January 4, 2016, Jarren Benton posted a prank on Instagram, saying that he dropped his current label, \"Funk Volume,\" for a label no longer in existence entitled \"No Limits.\"  Fans and news outlets alike took the prank seriously, and spread the joke as truth on the internet because they refused to find solid evidence and verify confirmation of fact to the joke.  Both Funk Volume and Jarren Benton have disproved truth to the prank in the same night.  However, it has been officially confirmed the Funk Volume label has split up.  After the Funk Volume split up, Jarren has created his own record label under the name Benton Enterprises, choosing to go in his own direction to get his own brand out to the public, and to release his new album Slow Motion Vol.  2.  The album originally was scheduled to be released on July 15th, but Jarren posted on social media on July 3rd, 2016 \"Due to technical difficulties, we will be releasing Slow Motion Vol.  2 on July 22nd.\"  The album will be released on his new website and will be his first album release under his label Benton Enterprises, his first album release since the Funk Volume departure, and his first album released on his new website.\n\nWorlds (album): Worlds is the debut studio album by the American electronic music producer Porter Robinson, released on August 12, 2014 by Astralwerks in the United States and by Virgin EMI Records internationally.  The album exhibits a shift in Robinson's music style from the heavy, bass-fueled complextro of his previous work to a more alternative form of electronic music.\n\nLionhearted: \"Lionhearted\" is a song recorded by American electronic music producer Porter Robinson.  It was released on June 7, 2014 as the third single from his debut studio album \"Worlds\" (2014).  Robinson wrote, produced, and performed the track.  The song is different than the other songs on the record, less emotional and more pop-inspired.  The song contains vocals from Swedish pop group Urban Cone.\n\nRadiocontrolledrobot: Radiocontrolledrobot is the second studio album released by Johannesburg-based South African Indie rock band The Parlotones under its Sovereign Entertainment label.  A shorter version of the album (comprising 12 tracks instead of 18) was released internationally in 2007, making it the first international album released by the band.  The album also won the best album of the year at the 2006 South Africa Music Awards.\n\nÞvílíkt Og Annað Eins: Þvílíkt Og Annað Eins is the 1981 studio album of Mezzoforte on Steinar.  It is their third album, released only in Iceland only on LP.  Along with their first record, Mezzoforte (1979), these two weren't remastered in 1996 with the rest of their early discography, or ever released internationally or on CD, however 7 of the 9 tracks from \"Þvílíkt Og Annað Eins\" were released internationally in 1983 on the compilation album Catching Up With Mezzoforte which also included 7 songs from their second album, \"Í Hakanum/Octopus\" and peaked at #95 on the UK Album Chart.  Even though the third album’s title track was translated as \"Surprise\", the album is sometimes referred to in English as \"Dreamland\", which is the only song from the album released on a single, thus it can’t be confused with their fourth album, titled \"Surprise Surprise\" which was an international success, peaking at #23 on the UK Album Chart.  The song \"Dreamland\" was released in 1982 on a double A-side single with second album’s \"Shooting Star\".\n\nOdds &amp; Ends: Odds & Ends is a collection of unfinished tracks and demo recordings by British pop singer, Dido.  The collection was put together by her management team, Nettwerk, and released promotionally in late 1995, in order to gain interest from record companies so that Dido could be signed to a major record label.  All of the material was recorded between 1993 and 1995.  Dido was brought to the attention of Arista Records, who were impressed with her collaborations and songwriting for the UK dance group Faithless, her work with a UK dance act spearheaded by her brother, Rollo Armstrong, and more importantly, the album.  Arista Records signed Dido in the United States, eventually forming a deal with her brother Rollo Armstrong's record label, Cheeky Records, allowing her music to be released internationally.  The track \"Worthless\" later appeared on \"The Highbury Fields EP\", a five track sampler released to promote her debut album, \"No Angel\". \" Take My Hand\" was included on the album itself, and \"Sweet Eyed Baby\" was remixed to create another album track, \"Don't Think Of Me\".  \"Worthless\" and \"Me\" also appeared on the Japanese version of \"No Angel\".\n\nFor Lack of a Better Name: For Lack of a Better Name is the fourth studio album and major label debut by the Canadian record producer and DJ deadmau5, released on 22 September 2009 in the United States and Canada by Ultra Records and mau5trap and internationally on 5 October 2009 by Virgin Records.  The album features collaborations with MC Flipside (\"Hi Friend!\")  and Rob Swire of Pendulum (\"Ghosts 'n' Stuff\").  The album also contains the critically acclaimed song \"Strobe\".  It is deadmau5's first album to be released internationally on the Virgin Records label.\n\nQuestion: \"Lionhearted\" is a song from an album released internationally under which record label ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song in question.\"\n    },\n    \"album_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"album_title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the album the song is from.\"\n        },\n        \"release_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the album was released.\"\n        },\n        \"international_record_label\": {\n          \"type\": \"string\",\n          \"description\": \"The record label under which the album was released internationally.\"\n        }\n      },\n      \"required\": [\n        \"album_title\",\n        \"release_year\",\n        \"international_record_label\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"artist\": {\n      \"type\": \"string\",\n      \"description\": \"The artist who recorded the song and album.\"\n    }\n  },\n  \"required\": [\n    \"song_title\",\n    \"album_details\",\n    \"artist\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "song_title",
-    "album_details",
-    "artist"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song in question."
+      },
+      "album_details": {
+        "type": "object",
+        "properties": {
+          "album_title": {
+            "type": "string",
+            "description": "The title of the album the song is from."
+          },
+          "release_year": {
+            "type": "integer",
+            "description": "The year the album was released."
+          },
+          "international_record_label": {
+            "type": "string",
+            "description": "The record label under which the album was released internationally."
+          }
+        },
+        "required": [
+          "album_title",
+          "release_year",
+          "international_record_label"
+        ],
+        "additionalProperties": false
+      },
+      "artist": {
+        "type": "string",
+        "description": "The artist who recorded the song and album."
+      }
+    },
+    "required": [
+      "song_title",
+      "album_details",
+      "artist"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

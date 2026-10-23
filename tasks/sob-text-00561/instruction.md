@@ -1,62 +1,39 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-George Abbot (author): George Abbot or Abbott (1604 — 2 February 1649) was an English lay writer, known as "The Puritan", and a politician who sat in the House of Commons in two periods between 1640 and 1649.  He is known also for his part in defending Caldecote House against royalist forces in the early days of the English Civil War.
-
-Burpham, Surrey: Burpham is a suburb of Guildford, a town in Surrey, England with an historic village centre.  It includes George Abbot School, a parade of small shops, and the nationally recognised Sutherland Memorial Park.
-
-George Abbot School: George Abbot School is a coeducational secondary school and sixth form with academy status in Burpham, north-east of the town centre of Guildford.  The school is named after the Guildford-native 17th-century Archbishop of Canterbury George Abbot.  Surrey County Cricket Club's Cricket Academy is in the grounds of the school.
-
-Assaad Bouab: Assaad Bouab (born 1980, Aurillac, France) is a French-Moroccan actor whose first co-starring role is "Whatever Lola Wants", directed by Nabil Ayouch and co-starring Laura Ramsey as Lola.  The film premiered 11 December 2007 at the Dubai International Film Festival.  Bouab attended Cours Florent from 1999 to 2002, and graduated from CNSAD in Paris in 2006.
-
-Whatever Lola Wants: "Whatever Lola Wants" is a popular song, sometimes rendered as "Whatever Lola Wants, Lola Gets".  The music and words were written by Richard Adler and Jerry Ross for the 1955 musical play "Damn Yankees".  The song is sung by Lola, the Devil's assistant, a part originated by Gwen Verdon, who reprised the role in the film.  The saying was inspired by Lola Montez, an Irish-born "Spanish dancer" and mistress of King Ludwig I of Bavaria, who later became a San Francisco Gold Rush vamp.
-
-Guildford County School: Guildford County School (GCS) is a co-educational day school on Farnham Road (A31), Guildford, England, 200 metres from Guildford town centre.  It has around 1050 students enrolled, including the Sixth Form.  The school's admissions policy is available on its website.  It is run by its headmaster Jack Mayhew (as of 2013).  It is one of five state secondary schools in Guildford, the others being George Abbot, Christ's College, King's College and St Peter's
-
-George Abbot (bishop): George Abbot (19 October 15625 August 1633) was an English divine who was Archbishop of Canterbury from 1611 to 1633.  He also served as the fourth Chancellor of Trinity College, Dublin, from 1612 to 1633.
-
-Whatever Lola Wants (film): Whatever Lola Wants is a 2007 French-Canadian romantic drama film directed by Nabil Ayouch.  The film had its world premiere on December 11, 2007 at the Dubai International Film Festival and stars Laura Ramsey as an American postal worker who travels to Egypt to seek out a legendary belly dancer.
-
-Damn Yankees: Damn Yankees is a musical comedy with a book by George Abbott and Douglass Wallop, music and lyrics by Richard Adler and Jerry Ross.  The story is a modern retelling of the Faust legend set during the 1950s in Washington, D.C., during a time when the New York Yankees dominated Major League Baseball.  It is based on Wallop's novel "The Year the Yankees Lost the Pennant".
-
-Wicked Bible: The Wicked Bible, sometimes called Adulterous Bible or Sinners' Bible, is the Bible published in 1631 by Robert Barker and Martin Lucas, the royal printers in London, which was meant to be a reprint of the King James Bible.  The name is derived from a mistake made by the compositors: in the Ten Commandments ( ), the word "not" in the sentence "Thou shalt not commit adultery" was omitted, thus changing the sentence into "Thou shalt commit adultery".  This blunder was spread in a number of copies.  About a year later, the publishers of the Wicked Bible were called to the Star Chamber and fined £300 (equivalent to £ as of 2015 ) and deprived of their printing license.  The fact that this edition of the Bible contained such a flagrant mistake outraged Charles I and George Abbot, the Archbishop of Canterbury, who said then:
-
-Question: What musical comedy, written by George Abbot and Douglas Wallop, contains the song, "Whatever Lola Wants"?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "musical_comedy_name": {
-      "type": "string",
-      "description": "The name of the musical comedy."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "writers": {
-      "type": "array",
-      "description": "The writers of the musical comedy's book.",
-      "items": {
-        "type": "string"
+    {
+      "role": "user",
+      "content": "Context:\nGeorge Abbot (author): George Abbot or Abbott (1604 — 2 February 1649) was an English lay writer, known as \"The Puritan\", and a politician who sat in the House of Commons in two periods between 1640 and 1649.  He is known also for his part in defending Caldecote House against royalist forces in the early days of the English Civil War.\n\nBurpham, Surrey: Burpham is a suburb of Guildford, a town in Surrey, England with an historic village centre.  It includes George Abbot School, a parade of small shops, and the nationally recognised Sutherland Memorial Park.\n\nGeorge Abbot School: George Abbot School is a coeducational secondary school and sixth form with academy status in Burpham, north-east of the town centre of Guildford.  The school is named after the Guildford-native 17th-century Archbishop of Canterbury George Abbot.  Surrey County Cricket Club's Cricket Academy is in the grounds of the school.\n\nAssaad Bouab: Assaad Bouab (born 1980, Aurillac, France) is a French-Moroccan actor whose first co-starring role is \"Whatever Lola Wants\", directed by Nabil Ayouch and co-starring Laura Ramsey as Lola.  The film premiered 11 December 2007 at the Dubai International Film Festival.  Bouab attended Cours Florent from 1999 to 2002, and graduated from CNSAD in Paris in 2006.\n\nWhatever Lola Wants: \"Whatever Lola Wants\" is a popular song, sometimes rendered as \"Whatever Lola Wants, Lola Gets\".  The music and words were written by Richard Adler and Jerry Ross for the 1955 musical play \"Damn Yankees\".  The song is sung by Lola, the Devil's assistant, a part originated by Gwen Verdon, who reprised the role in the film.  The saying was inspired by Lola Montez, an Irish-born \"Spanish dancer\" and mistress of King Ludwig I of Bavaria, who later became a San Francisco Gold Rush vamp.\n\nGuildford County School: Guildford County School (GCS) is a co-educational day school on Farnham Road (A31), Guildford, England, 200 metres from Guildford town centre.  It has around 1050 students enrolled, including the Sixth Form.  The school's admissions policy is available on its website.  It is run by its headmaster Jack Mayhew (as of 2013).  It is one of five state secondary schools in Guildford, the others being George Abbot, Christ's College, King's College and St Peter's\n\nGeorge Abbot (bishop): George Abbot (19 October 15625 August 1633) was an English divine who was Archbishop of Canterbury from 1611 to 1633.  He also served as the fourth Chancellor of Trinity College, Dublin, from 1612 to 1633.\n\nWhatever Lola Wants (film): Whatever Lola Wants is a 2007 French-Canadian romantic drama film directed by Nabil Ayouch.  The film had its world premiere on December 11, 2007 at the Dubai International Film Festival and stars Laura Ramsey as an American postal worker who travels to Egypt to seek out a legendary belly dancer.\n\nDamn Yankees: Damn Yankees is a musical comedy with a book by George Abbott and Douglass Wallop, music and lyrics by Richard Adler and Jerry Ross.  The story is a modern retelling of the Faust legend set during the 1950s in Washington, D.C., during a time when the New York Yankees dominated Major League Baseball.  It is based on Wallop's novel \"The Year the Yankees Lost the Pennant\".\n\nWicked Bible: The Wicked Bible, sometimes called Adulterous Bible or Sinners' Bible, is the Bible published in 1631 by Robert Barker and Martin Lucas, the royal printers in London, which was meant to be a reprint of the King James Bible.  The name is derived from a mistake made by the compositors: in the Ten Commandments ( ), the word \"not\" in the sentence \"Thou shalt not commit adultery\" was omitted, thus changing the sentence into \"Thou shalt commit adultery\".  This blunder was spread in a number of copies.  About a year later, the publishers of the Wicked Bible were called to the Star Chamber and fined £300 (equivalent to £ as of 2015 ) and deprived of their printing license.  The fact that this edition of the Bible contained such a flagrant mistake outraged Charles I and George Abbot, the Archbishop of Canterbury, who said then:\n\nQuestion: What musical comedy, written by George Abbot and Douglas Wallop, contains the song, \"Whatever Lola Wants\"?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"musical_comedy_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the musical comedy.\"\n    },\n    \"writers\": {\n      \"type\": \"array\",\n      \"description\": \"The writers of the musical comedy's book.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"featured_song\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the song contained within the musical comedy.\"\n    }\n  },\n  \"required\": [\n    \"musical_comedy_name\",\n    \"writers\",\n    \"featured_song\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "musical_comedy_name": {
+        "type": "string",
+        "description": "The name of the musical comedy."
+      },
+      "writers": {
+        "type": "array",
+        "description": "The writers of the musical comedy's book.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "featured_song": {
+        "type": "string",
+        "description": "The name of the song contained within the musical comedy."
       }
     },
-    "featured_song": {
-      "type": "string",
-      "description": "The name of the song contained within the musical comedy."
-    }
+    "required": [
+      "musical_comedy_name",
+      "writers",
+      "featured_song"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "musical_comedy_name",
-    "writers",
-    "featured_song"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

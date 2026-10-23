@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Touring Talkies: Touring Talkies is a 2015 Tamil anthology film written and directed by S.A.Chandrasekhar.  The film consists of two stories in which S.A.Chandrasekhar himself acted in the lead role with Kolkata actress Papri Gosh along with Abi Saravanan and Manobala.  Kerala actress Sunulekshmi, Ashwin Kumar, Roboshankar, Jayabalan, Sevvalai,form the cast in the second story.  The music score is composed by Ilaiyaraaja.  The audio launch happened on 26 January 2015.  The film was released on 30 January 2015.
-
-Yuvan Shankar Raja: Yuvan Shankar Raja (born 31 August 1979) is an Indian singer-songwriter, film score and soundtrack composer, and occasional lyricist from Chennai, Tamil Nadu.  He has predominantly scored music for Tamil films.  The youngest son of the greatest tamil film composer Ilaiyaraaja, he began his musical career in 1996, at age 16, when he composed the film score for "Aravindhan".  After initial struggle, he made his big break with the "Thulluvadho Ilamai" soundtrack (2001), and evolved as one of Tamil cinema's most sought-after composers by the mid-2000s.
-
-Silambattam (film): Silambattam (English: "Stick fighting" ) is a 2008 Indian Tamil action comedy film written and directed by cinematographer-turned-director S. Saravanan, making his directorial debut.  The film stars Silambarasan Rajendar in dual roles while Sneha, Sana Khan, Prabhu and Kishore also play lead roles.  Nedumudi Venu, Raaghav, Santhanam and Karunas play supporting roles with Premji Amaren in a special appearance.  Yuvan Shankar Raja composed the film's background score and soundtrack.  The film released on 19 December 2008.  It was later dubbed into Telugu and released as "Maa Vaadu".  Silambattam opened to mixed reviews but became a commercial superhit.
-
-Biriyani (film): Biriyani is a 2013 Indian Tamil crime-comedy film written and directed by Venkat Prabhu.  Produced by Studio Green, it features Karthi and Hansika Motwani in the lead roles alongside Ramki, Premgi Amaren, Nithin Sathya, Madhumitha and Mandy Takhar.  Yuvan Shankar Raja composed the score and soundtrack of "Biriyani", which marks his 100th film, while Sakthi Saravanan and Praveen-Srikanth handled cinematography and editing, respectively.  Filming started in November 2012, lasted for over nine months and took place primarily at Chennai, Hyderabad and Ambur.  The film was released on 20 December 2013.  The film was dubbed in Hindi as "Dum Biryani" by Goldmines Telefilms in 2016.
-
-Dhanush filmography: Dhanush is an Indian film actor, producer, lyricist and singer known for his work in Tamil cinema.  He made his acting debut in 2002 with the coming of age drama, "Thulluvadho Ilamai", directed by his father Kasthuri Raja.  His role as a mentally-disturbed man in "Kaadhal Kondein" (2003)directed by his brother Selvaraghavanwon him critical acclaim.  The following year, he starred in Subramaniam Siva's "Thiruda Thirudi", a commercial success.  This was followed by a series of commercial failures"Pudhukottaiyilirundhu Saravanan" (2004), "Sullan" (2004) and "Dreams" (2004).  He had two releases in 2005"Devathayai Kanden" and "Adhu Oru Kana Kaalam".
-
-Mankatha: Mankatha is a 2011 Indian Tamil-language black comedy action-heist film, written and directed by Venkat Prabhu.  It features Ajith Kumar in the lead role, starring in his 50th film, along with an ensemble cast including Arjun Sarja, Trisha Krishnan, Vaibhav Reddy, Lakshmi Rai, Andrea Jeremiah, Premji Amaren, Mahat Raghavendra and Anjali.  It was produced by Dhayanidhi Alagiri's Cloud Nine Movies while Yuvan Shankar Raja composed the musical score and soundtrack, with Sakthi Saravanan working as the cinematographer and the duo Praveen K. L. and N. B. Srikanth as editors.  The story, set in Mumbai, revolves around a heist of cricket betting money, executed by a gang of four thieves, who are joined by a fifth unknown man, and its aftermath.The film became a blockbuster very soon and became the first salt and pepper hit for Ajith after which he continued the same style in all his upcoming films.
-
-Pudhukottaiyilirundhu Saravanan: Pudhukottaiyilirundhu Saravanan (English: Saravanan from Pudukottai ) is a 2004 Tamil action romance film written and directed by S. S. Stanley.  The film featured Dhanush and newcomer Aparna Pillai in lead roles, while Karunas played a supporting role.  The music for the film was scored by Yuvan Shankar Raja, while Krishnakanth produced the venture.  The film was released on 16 January 2004, coinciding with Thai Pongal, and received an average response commercially and critically.  The film was later dubbed and released as "Shourya" in Telugu.
-
-Aparna Pillai: Aparna Pillai, better known mononymously as Aparna, is a Tamil film actress, who has appeared in Tamil films.  She is probably best known for her performances in "Pudhukottaiyilirundhu Saravanan" and "Nenjil Jil Jil".
-
-Ivan Veramathiri: Ivan Veramathiri (English: "He is different") is a 2013 Indian Tamil vigilante film written and directed by M. Saravanan. film presented by director N. Linguswamy and produced by his brother N. Subash Chandrabose under Thirupathi Brothers association with Ronnie Screwvala and Siddharth Roy Kapur under UTV Motion Pictures .  The film stars Vikram Prabhu, Surbhi, Ganesh Venkatraman, Vamsi Krishna and Hariraj.  The background score and soundtrack were composed by C. Sathya.  The film was released on 13 December 2013 to positive reviews.
-
-Ayan (film): Ayan (Tamil: அயன் ; English: Creator ), is a 2009 Tamil action film co-written and directed by K. V. Anand.  The film, starring Suriya, Prabhu, Tamannaah and Akashdeep Saighal in lead roles, was produced by M. Saravanan and M. S. Guhan, distributed by Sun Pictures.  The film score was composed by Harris Jayaraj, the soundtrack released on 19 January 2009.  Edited by Anthony Gonsalvez, the film was filmed by M. S. Prabhu.
-
-Question: Who composed the score for the film Pudhukottaiyilirundhu Saravanan?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "composer_name": {
-      "type": "string",
-      "description": "The name of the music composer for the film."
-    },
-    "release_year": {
-      "type": "integer",
-      "description": "The release year of the film."
+    {
+      "role": "user",
+      "content": "Context:\nTouring Talkies: Touring Talkies is a 2015 Tamil anthology film written and directed by S.A.Chandrasekhar.  The film consists of two stories in which S.A.Chandrasekhar himself acted in the lead role with Kolkata actress Papri Gosh along with Abi Saravanan and Manobala.  Kerala actress Sunulekshmi, Ashwin Kumar, Roboshankar, Jayabalan, Sevvalai,form the cast in the second story.  The music score is composed by Ilaiyaraaja.  The audio launch happened on 26 January 2015.  The film was released on 30 January 2015.\n\nYuvan Shankar Raja: Yuvan Shankar Raja (born 31 August 1979) is an Indian singer-songwriter, film score and soundtrack composer, and occasional lyricist from Chennai, Tamil Nadu.  He has predominantly scored music for Tamil films.  The youngest son of the greatest tamil film composer Ilaiyaraaja, he began his musical career in 1996, at age 16, when he composed the film score for \"Aravindhan\".  After initial struggle, he made his big break with the \"Thulluvadho Ilamai\" soundtrack (2001), and evolved as one of Tamil cinema's most sought-after composers by the mid-2000s.\n\nSilambattam (film): Silambattam (English: \"Stick fighting\" ) is a 2008 Indian Tamil action comedy film written and directed by cinematographer-turned-director S. Saravanan, making his directorial debut.  The film stars Silambarasan Rajendar in dual roles while Sneha, Sana Khan, Prabhu and Kishore also play lead roles.  Nedumudi Venu, Raaghav, Santhanam and Karunas play supporting roles with Premji Amaren in a special appearance.  Yuvan Shankar Raja composed the film's background score and soundtrack.  The film released on 19 December 2008.  It was later dubbed into Telugu and released as \"Maa Vaadu\".  Silambattam opened to mixed reviews but became a commercial superhit.\n\nBiriyani (film): Biriyani is a 2013 Indian Tamil crime-comedy film written and directed by Venkat Prabhu.  Produced by Studio Green, it features Karthi and Hansika Motwani in the lead roles alongside Ramki, Premgi Amaren, Nithin Sathya, Madhumitha and Mandy Takhar.  Yuvan Shankar Raja composed the score and soundtrack of \"Biriyani\", which marks his 100th film, while Sakthi Saravanan and Praveen-Srikanth handled cinematography and editing, respectively.  Filming started in November 2012, lasted for over nine months and took place primarily at Chennai, Hyderabad and Ambur.  The film was released on 20 December 2013.  The film was dubbed in Hindi as \"Dum Biryani\" by Goldmines Telefilms in 2016.\n\nDhanush filmography: Dhanush is an Indian film actor, producer, lyricist and singer known for his work in Tamil cinema.  He made his acting debut in 2002 with the coming of age drama, \"Thulluvadho Ilamai\", directed by his father Kasthuri Raja.  His role as a mentally-disturbed man in \"Kaadhal Kondein\" (2003)directed by his brother Selvaraghavanwon him critical acclaim.  The following year, he starred in Subramaniam Siva's \"Thiruda Thirudi\", a commercial success.  This was followed by a series of commercial failures\"Pudhukottaiyilirundhu Saravanan\" (2004), \"Sullan\" (2004) and \"Dreams\" (2004).  He had two releases in 2005\"Devathayai Kanden\" and \"Adhu Oru Kana Kaalam\".\n\nMankatha: Mankatha is a 2011 Indian Tamil-language black comedy action-heist film, written and directed by Venkat Prabhu.  It features Ajith Kumar in the lead role, starring in his 50th film, along with an ensemble cast including Arjun Sarja, Trisha Krishnan, Vaibhav Reddy, Lakshmi Rai, Andrea Jeremiah, Premji Amaren, Mahat Raghavendra and Anjali.  It was produced by Dhayanidhi Alagiri's Cloud Nine Movies while Yuvan Shankar Raja composed the musical score and soundtrack, with Sakthi Saravanan working as the cinematographer and the duo Praveen K. L. and N. B. Srikanth as editors.  The story, set in Mumbai, revolves around a heist of cricket betting money, executed by a gang of four thieves, who are joined by a fifth unknown man, and its aftermath.The film became a blockbuster very soon and became the first salt and pepper hit for Ajith after which he continued the same style in all his upcoming films.\n\nPudhukottaiyilirundhu Saravanan: Pudhukottaiyilirundhu Saravanan (English: Saravanan from Pudukottai ) is a 2004 Tamil action romance film written and directed by S. S. Stanley.  The film featured Dhanush and newcomer Aparna Pillai in lead roles, while Karunas played a supporting role.  The music for the film was scored by Yuvan Shankar Raja, while Krishnakanth produced the venture.  The film was released on 16 January 2004, coinciding with Thai Pongal, and received an average response commercially and critically.  The film was later dubbed and released as \"Shourya\" in Telugu.\n\nAparna Pillai: Aparna Pillai, better known mononymously as Aparna, is a Tamil film actress, who has appeared in Tamil films.  She is probably best known for her performances in \"Pudhukottaiyilirundhu Saravanan\" and \"Nenjil Jil Jil\".\n\nIvan Veramathiri: Ivan Veramathiri (English: \"He is different\") is a 2013 Indian Tamil vigilante film written and directed by M. Saravanan. film presented by director N. Linguswamy and produced by his brother N. Subash Chandrabose under Thirupathi Brothers association with Ronnie Screwvala and Siddharth Roy Kapur under UTV Motion Pictures .  The film stars Vikram Prabhu, Surbhi, Ganesh Venkatraman, Vamsi Krishna and Hariraj.  The background score and soundtrack were composed by C. Sathya.  The film was released on 13 December 2013 to positive reviews.\n\nAyan (film): Ayan (Tamil: அயன் ; English: Creator ), is a 2009 Tamil action film co-written and directed by K. V. Anand.  The film, starring Suriya, Prabhu, Tamannaah and Akashdeep Saighal in lead roles, was produced by M. Saravanan and M. S. Guhan, distributed by Sun Pictures.  The film score was composed by Harris Jayaraj, the soundtrack released on 19 January 2009.  Edited by Anthony Gonsalvez, the film was filmed by M. S. Prabhu.\n\nQuestion: Who composed the score for the film Pudhukottaiyilirundhu Saravanan?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"composer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the music composer for the film.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"composer_name\",\n    \"release_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "composer_name",
-    "release_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "composer_name": {
+        "type": "string",
+        "description": "The name of the music composer for the film."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The release year of the film."
+      }
+    },
+    "required": [
+      "film_title",
+      "composer_name",
+      "release_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

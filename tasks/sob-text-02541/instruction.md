@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Spaceballs: The Animated Series: Spaceballs: The Animated Series, also known as Spaceballs: The Series, is an animated television series that premiered in 2008 on G4 and Canada's Super Channel, and is loosely based on the parody science fiction film "Spaceballs".  Similarly to how the original film parodied the original "Star Wars" films and the "Star Trek" universe, each episode of the series parodies a different film or other aspect of popular culture, such as the "Star Wars" prequel trilogy, "The Lord of the Rings", or the "Grand Theft Auto" video games.
-
-Enter the Dragon: Enter the Dragon is a 1973 Hong Kong-American martial arts action film, directed by Robert Clouse, and starring Bruce Lee, John Saxon and Jim Kelly.  This was Bruce Lee's final film appearance before his death on 20 July 1973 at age 32.  The film was first released on 26 July 1973 in Hong Kong, six days after Lee's death.
-
-Enteng Kabisote: Okay ka, Fairy Ko: The Legend: Enteng Kabisote: Okay Ka, Fairy Ko: The Legend is a 2004 Philippine fantasy-comedy film directed by Tony Y. Reyes, the first installment of "Enteng Kabisote" film series and the third movie installment based on television sictom, "Okay Ka, Fairy Ko! ", which made about PhP 83.6 million.  It is also one of the films featured in the 2004 Metro Manila Film Festival.
-
-Dragon Inn: Dragon Inn, also known as Dragon Gate Inn, is a 1967 Taiwanese "wuxia" film directed by King Hu.  The film was remade in 1992, as "New Dragon Gate Inn", and again in 2011 as "The Flying Swords of Dragon Gate".
-
-Flying Swords of Dragon Gate: Flying Swords of Dragon Gate is a 2011 "wuxia" film directed by Tsui Hark and starring Jet Li, Zhou Xun, Chen Kun, Li Yuchun, Gwei Lun-mei, Louis Fan and Mavis Fan.  The film is a remake of "Dragon Gate Inn" (1966) and "New Dragon Gate Inn" (1992) but takes place three years after.  Production started on 10 October 2010 and is filmed in 3-D.  The film screened out of competition at the 62nd Berlin International Film Festival in February 2012.  The film received seven nominations at the 2012 Asian Film Awards, including Best Picture and Best Director.
-
-Enteng the Dragon: Enteng the Dragon is a 1988 Philippine comedy film directed by Romy Villaflor and written by Roy Vera Cruz.  It is a parody of the film, "Enter the Dragon".
-
-Silent Movie: Silent Movie is a 1976 American satirical comedy film co-written, directed by, and starring Mel Brooks, and released by 20th Century Fox on June 17, 1976.  The ensemble cast includes Dom DeLuise, Marty Feldman, Bernadette Peters, and Sid Caesar, with appearances by Anne Bancroft, Liza Minnelli, Burt Reynolds, James Caan, Marcel Marceau, and Paul Newman playing themselves.  While indeed silent (except for one word, music, and numerous sound effects), the film is a parody of the silent film genre, particularly the slapstick comedies of Charlie Chaplin, Mack Sennett, and Buster Keaton.  Among the film's most famous gags is the fact that the only audible word in the film is spoken by Marcel Marceau, a noted mime.  Sound is a big factor in the film's humor, as when a scene that shows the New York City skyline begins with the song "San Francisco", only to have it come to a sudden stop as if the musicians realize they are playing the wrong music.  They then go into "I'll Take Manhattan" instead.  A play on the current trend of large corporations buying up film studios is parodied by the attempt of the "Engulf and Devour Corporation" to take control of a studio (a thinly veiled reference to Gulf+Western's takeover of Paramount Pictures).
-
-Dragon Hunters (film): Dragon Hunters (French: Chasseurs de dragons) is a 2008 French-German-Luxembourgish 3D computer-animated adventure action fantasy comedy-drama family film and fantastic tale telling the adventures of two dragon hunters, written by Frédéric Engel-Lenoir, directed by creator Arthur Qwak and Guillaume Ivernel with music by Klaus Badelt and produced by Philippe Delarue and Tilo Seiffert.  It features the voices of Vincent Lindon, Patrick Timsit, Marie Drion in the French version and Forest Whitaker, Rob Paulsen and Mary Mouser in the English version.  The film was produced by Futurikon, and co-produced by LuxAnimation, Mac Guff Ligne and Trixter.  It shares the same creative universe as the "Dragon Hunters" TV series.  It was released on March 26, 2008 in France and on March 20, 2008 in Russia and New Zealand.  It was also distributed by Icon Productions and Bac Films.  The film received a Cristal Award nomination for Best Feature and it earned $12,235,843 on a €12,000,000 budget.  "Dragon Hunters" was released on DVD on November 5, 2008 in France by Warner Home Video.
-
-30 Rock: A XXX Parody: 30 Rock: A XXX Parody is an American pornographic film released on August 24, 2009 that parodies the television comedy series "30 Rock".  The film was directed by Lee Roy Myers and produced by the company New Sensations, who had also created parodies such as "Scrubs: A XXX Parody" and "".  Lisa Ann, who parodied Sarah Palin in "Who's Nailin' Paylin? ", stars as Liz Lemon the character originally played by Tina Fey, who parodied Palin herself on "Saturday Night Live".
-
-Si Agimat at si Enteng Kabisote: Si Agimat at Si Enteng Kabisote (lit.  "Agimat and Enteng Kabisote") is an action comedy fantasy crossover film directed by Tony Reyes which stars Vic Sotto and Sen. Bong Revilla Jr.  This was the union of their famous characters (Agimat and Enteng Kabisote) in one blockbuster movie which grossed a P31M on its opening day.  It is followed by a sequel, "Si Agimat, si Enteng Kabisote at si Ako".
-
-Question: Who directed the film parodied by Enteng the Dragon?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "parody_film_title": {
-      "type": "string",
-      "description": "The title of the film that is a parody."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "parodied_film_title": {
-      "type": "string",
-      "description": "The title of the film being parodied."
-    },
-    "parodied_film_director": {
-      "type": "string",
-      "description": "The director of the film that was parodied."
-    },
-    "parodied_film_release_year": {
-      "type": "integer",
-      "description": "The release year of the film that was parodied."
+    {
+      "role": "user",
+      "content": "Context:\nSpaceballs: The Animated Series: Spaceballs: The Animated Series, also known as Spaceballs: The Series, is an animated television series that premiered in 2008 on G4 and Canada's Super Channel, and is loosely based on the parody science fiction film \"Spaceballs\".  Similarly to how the original film parodied the original \"Star Wars\" films and the \"Star Trek\" universe, each episode of the series parodies a different film or other aspect of popular culture, such as the \"Star Wars\" prequel trilogy, \"The Lord of the Rings\", or the \"Grand Theft Auto\" video games.\n\nEnter the Dragon: Enter the Dragon is a 1973 Hong Kong-American martial arts action film, directed by Robert Clouse, and starring Bruce Lee, John Saxon and Jim Kelly.  This was Bruce Lee's final film appearance before his death on 20 July 1973 at age 32.  The film was first released on 26 July 1973 in Hong Kong, six days after Lee's death.\n\nEnteng Kabisote: Okay ka, Fairy Ko: The Legend: Enteng Kabisote: Okay Ka, Fairy Ko: The Legend is a 2004 Philippine fantasy-comedy film directed by Tony Y. Reyes, the first installment of \"Enteng Kabisote\" film series and the third movie installment based on television sictom, \"Okay Ka, Fairy Ko! \", which made about PhP 83.6 million.  It is also one of the films featured in the 2004 Metro Manila Film Festival.\n\nDragon Inn: Dragon Inn, also known as Dragon Gate Inn, is a 1967 Taiwanese \"wuxia\" film directed by King Hu.  The film was remade in 1992, as \"New Dragon Gate Inn\", and again in 2011 as \"The Flying Swords of Dragon Gate\".\n\nFlying Swords of Dragon Gate: Flying Swords of Dragon Gate is a 2011 \"wuxia\" film directed by Tsui Hark and starring Jet Li, Zhou Xun, Chen Kun, Li Yuchun, Gwei Lun-mei, Louis Fan and Mavis Fan.  The film is a remake of \"Dragon Gate Inn\" (1966) and \"New Dragon Gate Inn\" (1992) but takes place three years after.  Production started on 10 October 2010 and is filmed in 3-D.  The film screened out of competition at the 62nd Berlin International Film Festival in February 2012.  The film received seven nominations at the 2012 Asian Film Awards, including Best Picture and Best Director.\n\nEnteng the Dragon: Enteng the Dragon is a 1988 Philippine comedy film directed by Romy Villaflor and written by Roy Vera Cruz.  It is a parody of the film, \"Enter the Dragon\".\n\nSilent Movie: Silent Movie is a 1976 American satirical comedy film co-written, directed by, and starring Mel Brooks, and released by 20th Century Fox on June 17, 1976.  The ensemble cast includes Dom DeLuise, Marty Feldman, Bernadette Peters, and Sid Caesar, with appearances by Anne Bancroft, Liza Minnelli, Burt Reynolds, James Caan, Marcel Marceau, and Paul Newman playing themselves.  While indeed silent (except for one word, music, and numerous sound effects), the film is a parody of the silent film genre, particularly the slapstick comedies of Charlie Chaplin, Mack Sennett, and Buster Keaton.  Among the film's most famous gags is the fact that the only audible word in the film is spoken by Marcel Marceau, a noted mime.  Sound is a big factor in the film's humor, as when a scene that shows the New York City skyline begins with the song \"San Francisco\", only to have it come to a sudden stop as if the musicians realize they are playing the wrong music.  They then go into \"I'll Take Manhattan\" instead.  A play on the current trend of large corporations buying up film studios is parodied by the attempt of the \"Engulf and Devour Corporation\" to take control of a studio (a thinly veiled reference to Gulf+Western's takeover of Paramount Pictures).\n\nDragon Hunters (film): Dragon Hunters (French: Chasseurs de dragons) is a 2008 French-German-Luxembourgish 3D computer-animated adventure action fantasy comedy-drama family film and fantastic tale telling the adventures of two dragon hunters, written by Frédéric Engel-Lenoir, directed by creator Arthur Qwak and Guillaume Ivernel with music by Klaus Badelt and produced by Philippe Delarue and Tilo Seiffert.  It features the voices of Vincent Lindon, Patrick Timsit, Marie Drion in the French version and Forest Whitaker, Rob Paulsen and Mary Mouser in the English version.  The film was produced by Futurikon, and co-produced by LuxAnimation, Mac Guff Ligne and Trixter.  It shares the same creative universe as the \"Dragon Hunters\" TV series.  It was released on March 26, 2008 in France and on March 20, 2008 in Russia and New Zealand.  It was also distributed by Icon Productions and Bac Films.  The film received a Cristal Award nomination for Best Feature and it earned $12,235,843 on a €12,000,000 budget.  \"Dragon Hunters\" was released on DVD on November 5, 2008 in France by Warner Home Video.\n\n30 Rock: A XXX Parody: 30 Rock: A XXX Parody is an American pornographic film released on August 24, 2009 that parodies the television comedy series \"30 Rock\".  The film was directed by Lee Roy Myers and produced by the company New Sensations, who had also created parodies such as \"Scrubs: A XXX Parody\" and \"\".  Lisa Ann, who parodied Sarah Palin in \"Who's Nailin' Paylin? \", stars as Liz Lemon the character originally played by Tina Fey, who parodied Palin herself on \"Saturday Night Live\".\n\nSi Agimat at si Enteng Kabisote: Si Agimat at Si Enteng Kabisote (lit.  \"Agimat and Enteng Kabisote\") is an action comedy fantasy crossover film directed by Tony Reyes which stars Vic Sotto and Sen. Bong Revilla Jr.  This was the union of their famous characters (Agimat and Enteng Kabisote) in one blockbuster movie which grossed a P31M on its opening day.  It is followed by a sequel, \"Si Agimat, si Enteng Kabisote at si Ako\".\n\nQuestion: Who directed the film parodied by Enteng the Dragon?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"parody_film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film that is a parody.\"\n    },\n    \"parodied_film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film being parodied.\"\n    },\n    \"parodied_film_director\": {\n      \"type\": \"string\",\n      \"description\": \"The director of the film that was parodied.\"\n    },\n    \"parodied_film_release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film that was parodied.\"\n    }\n  },\n  \"required\": [\n    \"parody_film_title\",\n    \"parodied_film_title\",\n    \"parodied_film_director\",\n    \"parodied_film_release_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "parody_film_title",
-    "parodied_film_title",
-    "parodied_film_director",
-    "parodied_film_release_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "parody_film_title": {
+        "type": "string",
+        "description": "The title of the film that is a parody."
+      },
+      "parodied_film_title": {
+        "type": "string",
+        "description": "The title of the film being parodied."
+      },
+      "parodied_film_director": {
+        "type": "string",
+        "description": "The director of the film that was parodied."
+      },
+      "parodied_film_release_year": {
+        "type": "integer",
+        "description": "The release year of the film that was parodied."
+      }
+    },
+    "required": [
+      "parody_film_title",
+      "parodied_film_title",
+      "parodied_film_director",
+      "parodied_film_release_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

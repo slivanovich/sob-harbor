@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Derek Carr: Derek Dallas Carr (born March 28, 1991) is an American football quarterback for the Oakland Raiders of the National Football League (NFL).  He was drafted by the Raiders in the second round of the 2014 NFL Draft.  He played college football at Fresno State.  Carr is the younger brother of former NFL quarterback and fellow California State University, Fresno alumnus David Carr.
-
-Vincent Briant: Vincent Briant (born January 9, 1986 in Quimperlé, France) is a French professional football player.  He is a product of the FC Nantes training center in a show on Gol TV called Soccer Academy.  He was one of two players to sign a professional contract with FC Nantes after the show followed the everyday lives of the players in the academy.  The four favorites to gain the contract were Vincent, Dimitri Payet (a striker also from France), Fréjus Tchetgna (a defender from Cameroon) and Francisco Donzelot (a midfielder from Columbia).  With the departure of Mickaël Landreau from FC Nantes it was decided that the club would sign Briant as their third string at only 19.
-
-Will Proctor: Will Proctor is a former starting quarterback for the Clemson Tigers at Clemson University in the Atlantic Coast Conference in NCAA Division I-A, and for the Calgary Stampeders of the Canadian Football League.  He attended Trinity Preparatory School.  In 2003 at Clemson, as third string QB, he saw the field in four games at wide receiver.  He was the backup of Charlie Whitehurst until the 2006-2007 season.  In his first start at Clemson, he recorded 232 yards of total offense against the Duke Blue Devils in 2005.  In the 2006-2007 regular season, Proctor completed 60% of passes.
-
-Second String: Second String is a direct-to-TV film from 2002 about the Buffalo Bills football team who find its first string (led by real-life Bills quarterback Doug Flutie, who had left the team by the time the film was released) out for a month after a food poisoning incident, leading the team's head coach, "Chuck Dichter" (portrayed by Jon Voight), to hire an insurance salesman named Dan Heller (played by Gil Bellows) as the team's backup quarterback.  Teri Polo also appeared as Heller's wife; Flutie, Mike Ditka, Chris Berman, Van Miller, Bills cornerback Donovan Greer and Ken "Pinto Ron" Johnson appear as themselves.  The film originally aired on TNT.
-
-Balalaika: The balalaika (Russian: балала́йка , ] ) is a Russian stringed musical instrument with a characteristic triangular wooden, hollow body and three strings.  Two strings are usually tuned to the same note and the third string is a perfect fourth higher.  The higher-pitched balalaikas are used to play melodies and chords.  The instrument generally has a short sustain, necessitating rapid strumming or plucking when it is used used to play melodies.  Balalaikas are often used for Russian folk music and dancing.
-
-Ed Rutkowski: Edward John Anthony Rutkowski (born March 21, 1941) is a former American football player, and a former politician in Buffalo, New York.  Rutkowksi was a noted college and professional American football player.  A wide receiver, he was an American Football League All-Star in 1965, playing for the AFL's Buffalo Bills as a receiver, defensive back, punt and kickoff return man and backup quarterback from 1963 to 1968.  In a famous Topps football card mixup, Rutkowski was shown on two Buffalo Bills' football cards, his own, and mistakenly on the card for Ray Abruzzese.  Rutkowski closed out his Pro Football career by playing seven games as a backup quarterback with the Montreal Alouettes of the Canadian Football League in 1969.  From 1972-78 and again in 1990, Rutkowski served as a color commentator on the Bills' radio broadcasts.  In 1979, he became the County Executive of Erie County, New York, succeeding Edward Regan, who stepped down to become New York State Comptroller.  Rutkowski was elected to full terms in 1979 and 1983, following his one year unexpired term, for a total of nine years in office.  In 1987, Rutkowski was defeated for reelection by Assemblyman Dennis Gorski.
-
-Dylan Thompson: Dylan Thompson (born October 24, 1991) is an American football quarterback who is currently a free agent.  He played college football at South Carolina.  Thompson performed backup signal caller duties for the majority of his career, however after the graduation of Connor Shaw, he was named the starting quarterback for the Gamecocks during the 2014 season.
-
-Tyrod Taylor: Tyrod Di'allo Taylor (born August 3, 1989) is an American football quarterback for the Buffalo Bills of the National Football League (NFL).  He was the starting quarterback for the Virginia Tech Hokies football team from the start of the 2008 college football season through the 2011 Orange Bowl, the final game of the 2010 college football season for Virginia Tech.  He was drafted by the Baltimore Ravens in the sixth round of the 2011 NFL Draft and served as the backup to starting quarterback Joe Flacco, including during the Ravens' Super Bowl XLVII victory over the San Francisco 49ers.  Signed by Buffalo as a free agent in 2015, Taylor was named the starting quarterback for the Bills at the beginning of the 2015 NFL season.
-
-Connor Cook: Connor Cook (born January 29, 1993) is an American football quarterback for the Oakland Raiders of the National Football League (NFL).  He played college football for the Michigan State Spartans and was their starting quarterback from 2013 to 2015.  He holds the record for most career wins at Michigan State.  Cook was selected in the fourth round of the 2016 NFL Draft by the Oakland Raiders.  After initially serving as the third-string backup to Derek Carr and Matt McGloin, Cook played in his first NFL game in the Raiders' last regular season game of the 2016 NFL season after Carr and McGloin suffered injuries.  Following this, he was named the starter for the Raiders' playoff game against the Houston Texans and became the first quarterback in NFL history to make his first career start in a playoff game.
-
-Curlew River: Curlew River – A Parable for Church Performance (Op. 71) is an English music drama with music by Benjamin Britten to a libretto by William Plomer.  The first of Britten's three 'Parables for Church Performance', the work is based on the Japanese "noh" play "Sumidagawa" (Sumida River) of Juro Motomasa] (1395–1431), which Britten saw during a visit to Japan and the Far East in early 1956.  Beyond the "noh" source dramatic material, Britten incorporated elements of "noh" treatment of theatrical time into this composition.  "Curlew River" marked a departure in style for the remainder of the composer's creative life, paving the way for such works as "Owen Wingrave", "Death in Venice", and the Third String Quartet.
-
-Question: At which college did the quarterback, to whom Connor Cook was a third string backup, play his football ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "target_quarterback_name": {
-      "type": "string",
-      "description": "The name of the quarterback to whom Connor Cook was a backup."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "backup_quarterback_name": {
-      "type": "string",
-      "description": "The name of the quarterback who served as a backup."
-    },
-    "backup_role": {
-      "type": "string",
-      "description": "The specific backup role held by Connor Cook relative to the target quarterback."
-    },
-    "target_quarterback_college": {
-      "type": "string",
-      "description": "The college where the target quarterback played football."
+    {
+      "role": "user",
+      "content": "Context:\nDerek Carr: Derek Dallas Carr (born March 28, 1991) is an American football quarterback for the Oakland Raiders of the National Football League (NFL).  He was drafted by the Raiders in the second round of the 2014 NFL Draft.  He played college football at Fresno State.  Carr is the younger brother of former NFL quarterback and fellow California State University, Fresno alumnus David Carr.\n\nVincent Briant: Vincent Briant (born January 9, 1986 in Quimperlé, France) is a French professional football player.  He is a product of the FC Nantes training center in a show on Gol TV called Soccer Academy.  He was one of two players to sign a professional contract with FC Nantes after the show followed the everyday lives of the players in the academy.  The four favorites to gain the contract were Vincent, Dimitri Payet (a striker also from France), Fréjus Tchetgna (a defender from Cameroon) and Francisco Donzelot (a midfielder from Columbia).  With the departure of Mickaël Landreau from FC Nantes it was decided that the club would sign Briant as their third string at only 19.\n\nWill Proctor: Will Proctor is a former starting quarterback for the Clemson Tigers at Clemson University in the Atlantic Coast Conference in NCAA Division I-A, and for the Calgary Stampeders of the Canadian Football League.  He attended Trinity Preparatory School.  In 2003 at Clemson, as third string QB, he saw the field in four games at wide receiver.  He was the backup of Charlie Whitehurst until the 2006-2007 season.  In his first start at Clemson, he recorded 232 yards of total offense against the Duke Blue Devils in 2005.  In the 2006-2007 regular season, Proctor completed 60% of passes.\n\nSecond String: Second String is a direct-to-TV film from 2002 about the Buffalo Bills football team who find its first string (led by real-life Bills quarterback Doug Flutie, who had left the team by the time the film was released) out for a month after a food poisoning incident, leading the team's head coach, \"Chuck Dichter\" (portrayed by Jon Voight), to hire an insurance salesman named Dan Heller (played by Gil Bellows) as the team's backup quarterback.  Teri Polo also appeared as Heller's wife; Flutie, Mike Ditka, Chris Berman, Van Miller, Bills cornerback Donovan Greer and Ken \"Pinto Ron\" Johnson appear as themselves.  The film originally aired on TNT.\n\nBalalaika: The balalaika (Russian: балала́йка , ] ) is a Russian stringed musical instrument with a characteristic triangular wooden, hollow body and three strings.  Two strings are usually tuned to the same note and the third string is a perfect fourth higher.  The higher-pitched balalaikas are used to play melodies and chords.  The instrument generally has a short sustain, necessitating rapid strumming or plucking when it is used used to play melodies.  Balalaikas are often used for Russian folk music and dancing.\n\nEd Rutkowski: Edward John Anthony Rutkowski (born March 21, 1941) is a former American football player, and a former politician in Buffalo, New York.  Rutkowksi was a noted college and professional American football player.  A wide receiver, he was an American Football League All-Star in 1965, playing for the AFL's Buffalo Bills as a receiver, defensive back, punt and kickoff return man and backup quarterback from 1963 to 1968.  In a famous Topps football card mixup, Rutkowski was shown on two Buffalo Bills' football cards, his own, and mistakenly on the card for Ray Abruzzese.  Rutkowski closed out his Pro Football career by playing seven games as a backup quarterback with the Montreal Alouettes of the Canadian Football League in 1969.  From 1972-78 and again in 1990, Rutkowski served as a color commentator on the Bills' radio broadcasts.  In 1979, he became the County Executive of Erie County, New York, succeeding Edward Regan, who stepped down to become New York State Comptroller.  Rutkowski was elected to full terms in 1979 and 1983, following his one year unexpired term, for a total of nine years in office.  In 1987, Rutkowski was defeated for reelection by Assemblyman Dennis Gorski.\n\nDylan Thompson: Dylan Thompson (born October 24, 1991) is an American football quarterback who is currently a free agent.  He played college football at South Carolina.  Thompson performed backup signal caller duties for the majority of his career, however after the graduation of Connor Shaw, he was named the starting quarterback for the Gamecocks during the 2014 season.\n\nTyrod Taylor: Tyrod Di'allo Taylor (born August 3, 1989) is an American football quarterback for the Buffalo Bills of the National Football League (NFL).  He was the starting quarterback for the Virginia Tech Hokies football team from the start of the 2008 college football season through the 2011 Orange Bowl, the final game of the 2010 college football season for Virginia Tech.  He was drafted by the Baltimore Ravens in the sixth round of the 2011 NFL Draft and served as the backup to starting quarterback Joe Flacco, including during the Ravens' Super Bowl XLVII victory over the San Francisco 49ers.  Signed by Buffalo as a free agent in 2015, Taylor was named the starting quarterback for the Bills at the beginning of the 2015 NFL season.\n\nConnor Cook: Connor Cook (born January 29, 1993) is an American football quarterback for the Oakland Raiders of the National Football League (NFL).  He played college football for the Michigan State Spartans and was their starting quarterback from 2013 to 2015.  He holds the record for most career wins at Michigan State.  Cook was selected in the fourth round of the 2016 NFL Draft by the Oakland Raiders.  After initially serving as the third-string backup to Derek Carr and Matt McGloin, Cook played in his first NFL game in the Raiders' last regular season game of the 2016 NFL season after Carr and McGloin suffered injuries.  Following this, he was named the starter for the Raiders' playoff game against the Houston Texans and became the first quarterback in NFL history to make his first career start in a playoff game.\n\nCurlew River: Curlew River – A Parable for Church Performance (Op. 71) is an English music drama with music by Benjamin Britten to a libretto by William Plomer.  The first of Britten's three 'Parables for Church Performance', the work is based on the Japanese \"noh\" play \"Sumidagawa\" (Sumida River) of Juro Motomasa] (1395–1431), which Britten saw during a visit to Japan and the Far East in early 1956.  Beyond the \"noh\" source dramatic material, Britten incorporated elements of \"noh\" treatment of theatrical time into this composition.  \"Curlew River\" marked a departure in style for the remainder of the composer's creative life, paving the way for such works as \"Owen Wingrave\", \"Death in Venice\", and the Third String Quartet.\n\nQuestion: At which college did the quarterback, to whom Connor Cook was a third string backup, play his football ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"target_quarterback_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the quarterback to whom Connor Cook was a backup.\"\n    },\n    \"backup_quarterback_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the quarterback who served as a backup.\"\n    },\n    \"backup_role\": {\n      \"type\": \"string\",\n      \"description\": \"The specific backup role held by Connor Cook relative to the target quarterback.\"\n    },\n    \"target_quarterback_college\": {\n      \"type\": \"string\",\n      \"description\": \"The college where the target quarterback played football.\"\n    }\n  },\n  \"required\": [\n    \"target_quarterback_name\",\n    \"backup_quarterback_name\",\n    \"backup_role\",\n    \"target_quarterback_college\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "target_quarterback_name",
-    "backup_quarterback_name",
-    "backup_role",
-    "target_quarterback_college"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "target_quarterback_name": {
+        "type": "string",
+        "description": "The name of the quarterback to whom Connor Cook was a backup."
+      },
+      "backup_quarterback_name": {
+        "type": "string",
+        "description": "The name of the quarterback who served as a backup."
+      },
+      "backup_role": {
+        "type": "string",
+        "description": "The specific backup role held by Connor Cook relative to the target quarterback."
+      },
+      "target_quarterback_college": {
+        "type": "string",
+        "description": "The college where the target quarterback played football."
+      }
+    },
+    "required": [
+      "target_quarterback_name",
+      "backup_quarterback_name",
+      "backup_role",
+      "target_quarterback_college"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

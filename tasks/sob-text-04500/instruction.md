@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Andrei of Polotsk: Andrei of Polotsk (Belarusian: Андрэй Альгердавіч , Lithuanian: "Andrius Algirdaitis" Polish: "Andrzej Olgierdowic" , ca. 1325 – 12 August 1399, in the Battle of the Vorskla River) was the eldest son of Algirdas, Grand Duke of Lithuania, and his first wife Maria of Vitebsk.  He was Duke of Pskov (through his deputy Yuri, 1342–1348) and Polotsk (1342–1387).  As the eldest son of the Grand Duke, Andrei claimed his right to the throne after his father's death in 1377.  Algirdas left Jogaila, his eldest son with his second wife Uliana of Tver, as the rightful heir.  Andrei's rivalry with Jogaila, Grand Duke of Lithuania and later King of Poland, eventually led to his demise.
-
-Lithuanian Civil War (1389–92): The Lithuanian Civil War of 1389–92 was the second civil conflict between Jogaila, King of Poland and Grand Duke of Lithuania, and his cousin Vytautas.  At issue was control of the Grand Duchy of Lithuania, then the largest state in Europe.  Jogaila had been crowned King of Poland in 1386; he installed his brother Skirgaila as ruler of Lithuania.  Skirgaila proved unpopular and Vytautas attempted to depose him.  When his first attempt to take the capital city of Vilnius failed, Vytautas forged an alliance with the Teutonic Knights, their common enemy – just as both cousins had done during the Lithuanian Civil War between 1381 and 1384.  Vytautas and the Knights unsuccessfully besieged Vilnius in 1390.  Over the next two years it became clear that neither side could achieve a quick victory, and Jogaila proposed a compromise: Vytautas would become Grand Duke and Jogaila would remain Superior Duke.  This proposal was formalized in the Ostrów Agreement of 1392, and Vytautas turned against the Knights.  He went on to reign as Grand Duke of Lithuania for 38 years, and the cousins remained at peace.
-
-Petras Jonaitis Mantigirdaitis: Petras Jonaitis Mantigirdaitis (died after 1497) was a prominent noble of the Grand Duchy of Lithuania.  Grandson of Petras Mantigirdaitis, he first appeared in written sources in 1476 and reached his career high in 1490s when he was Voivode of Trakai (1490–97) and Grand Marshal of Lithuania (1491–97).  Chronicler Marcin Bielski described that Alexander Jagiellon was crowned and blessed as the new Grand Duke of Lithuania by the Bishop of Vilnius in 1492.  Then Mantigirdaitis presented Alexander with a naked sword and a reminder that Alexander was elected to be a just ruler.  In 1494, Mantigirdaitis was sent on the diplomatic mission to negotiate peace with the Grand Duchy of Moscow and marriage of Helena of Moscow to Alexander to end the First Muscovite–Lithuanian War.  The Bychowiec Chronicle names him as a Great Hetman who recommended Konstantin Ostrogski, the first official Great Hetman, after his death.  Therefore, it is likely that at some point Mantigirdaitis was the commander of the Lithuanian army.
-
-Marcin Kromer: Marcin Kromer (Latin: "Martinus Cromerus"; 11 November 1512 – 23 March 1589) was Prince-Bishop of Warmia (Ermland), a Polish cartographer, diplomat and historian in the Kingdom of Poland and later in the Polish-Lithuanian Commonwealth.  He was a personal secretary to two Kings of Poland, Sigismund I the Old and Sigismund II Augustus.
-
-Popiel: Prince Popiel ІІ (or Duke Popiel) was a legendary 9th century ruler of the West Slavic ("proto-Polish") tribe of Goplans and Polans and the last member of the pre-Piast dynasty, the Popielids.  According to the chroniclers Gallus Anonymus, Jan Długosz, and Marcin Kromer, as a consequence of his bad rule he was deposed, besieged by his subjects, and eaten alive by mice in a tower in Kruszwica.
-
-Riedern am Wald: Riedern am Wald is an "Ortsteil" in the Waldshut district of Baden-Württemberg, Germany.  Notable people from the area include artist Heinrich Ernst Kromer and Pope Benedict XVI's personal secretary, Msgr. Georg Gänswein.
-
-Diego Lorenzi: Fr.  Diego Lorenzi, F.D.P. (born 14 November 1939) is an Italian Roman Catholic priest who served as the personal secretary to Pope John Paul I.  Lorenzi served as Albino Cardinal Luciani's private secretary in Venice for two years previous to his election to the papacy, and remained his secretary for his brief pontificate.  During his time as John Paul I's personal secretary, he was aided by John Magee, an Irish priest who would later become a bishop.
-
-Hrvoje Vukčić Hrvatinić: Hrvoje Vukčić Hrvatinić (ca. 1350–1416) was a Ban of Croatia, Grand Duke of Bosnia and Duke of Split.  He was the most prominent member of the noble House of Hrvatinić and one of three major feudal lords in Medieval Bosnia.  He was Grand Duke of Bosnia under three Bosnian kings: King Stjepan (Stephen) Tvrtko I, King Stephen Dabiša and King Stephen Ostoja.  In 1403 he was named regent for Hungary, Croatia and Dalmatia, and was made Duke of Split.  He was Grand Duke of Bosnia under Bosnian King Tvrtko I.
-
-Orangism (Luxembourg): Orangism was a movement in the 19th century Grand Duchy of Luxembourg favouring the personal union of the Netherlands and Luxembourg under the House of Orange-Nassau.  Made up of many notable figures, mainly nobles and Roman Catholic clergy, they were moderate liberals or conservative-liberals and slightly anti-clerical.  At first they favoured maintaining the Grand Duchy's autonomous status and, especially during the Belgian Revolution, opposed it being merged into Belgium.  In the end the western part of the Grand Duchy (the present province of Luxembourg) passed to Belgium, whilst the eastern part and the Orange grand duchy continued as an independent state.  In 1890 the heads of the House of Orange were grand dukes of Luxembourg, but on the death of king and grand duke William III in 1890 he was succeeded by his relation Adolphe as grand duke since Luxembourg's constitution did not allow a woman (Princess Wilhelmina) to hold the throne.  The movement's newsletter was the "Journal de la Ville et du Pays Luxembourg".
-
-Sigismund I the Old: Sigismund I of Poland (Polish: "Zygmunt I Stary" , Lithuanian: "Žygimantas I Senasis" ; 1 January 1467 – 1 April 1548), of the Jagiellon dynasty, reigned as King of Poland and also as the Grand Duke of Lithuania from 1506 until 1548.  Earlier, Sigismund had been invested as Duke of Silesia.  A successful monarch and a great patron of arts, he established Polish suzerainty over Ducal Prussia (East Prussia) and incorporated the duchy of Mazovia into the Polish state, securing the nation's wealth, culture and power.
-
-Question: This king to which Marcin Kromer was a personal secretary was also a grand duke of what country?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "king_name": {
-      "type": "string",
-      "description": "The name of the king who was also a grand duke."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "secretary_name": {
-      "type": "string",
-      "description": "The name of the personal secretary to the king."
-    },
-    "grand_duchy_country": {
-      "type": "string",
-      "description": "The country where the king held the title of Grand Duke."
-    },
-    "king_titles": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of titles held by the king."
+    {
+      "role": "user",
+      "content": "Context:\nAndrei of Polotsk: Andrei of Polotsk (Belarusian: Андрэй Альгердавіч , Lithuanian: \"Andrius Algirdaitis\" Polish: \"Andrzej Olgierdowic\" , ca. 1325 – 12 August 1399, in the Battle of the Vorskla River) was the eldest son of Algirdas, Grand Duke of Lithuania, and his first wife Maria of Vitebsk.  He was Duke of Pskov (through his deputy Yuri, 1342–1348) and Polotsk (1342–1387).  As the eldest son of the Grand Duke, Andrei claimed his right to the throne after his father's death in 1377.  Algirdas left Jogaila, his eldest son with his second wife Uliana of Tver, as the rightful heir.  Andrei's rivalry with Jogaila, Grand Duke of Lithuania and later King of Poland, eventually led to his demise.\n\nLithuanian Civil War (1389–92): The Lithuanian Civil War of 1389–92 was the second civil conflict between Jogaila, King of Poland and Grand Duke of Lithuania, and his cousin Vytautas.  At issue was control of the Grand Duchy of Lithuania, then the largest state in Europe.  Jogaila had been crowned King of Poland in 1386; he installed his brother Skirgaila as ruler of Lithuania.  Skirgaila proved unpopular and Vytautas attempted to depose him.  When his first attempt to take the capital city of Vilnius failed, Vytautas forged an alliance with the Teutonic Knights, their common enemy – just as both cousins had done during the Lithuanian Civil War between 1381 and 1384.  Vytautas and the Knights unsuccessfully besieged Vilnius in 1390.  Over the next two years it became clear that neither side could achieve a quick victory, and Jogaila proposed a compromise: Vytautas would become Grand Duke and Jogaila would remain Superior Duke.  This proposal was formalized in the Ostrów Agreement of 1392, and Vytautas turned against the Knights.  He went on to reign as Grand Duke of Lithuania for 38 years, and the cousins remained at peace.\n\nPetras Jonaitis Mantigirdaitis: Petras Jonaitis Mantigirdaitis (died after 1497) was a prominent noble of the Grand Duchy of Lithuania.  Grandson of Petras Mantigirdaitis, he first appeared in written sources in 1476 and reached his career high in 1490s when he was Voivode of Trakai (1490–97) and Grand Marshal of Lithuania (1491–97).  Chronicler Marcin Bielski described that Alexander Jagiellon was crowned and blessed as the new Grand Duke of Lithuania by the Bishop of Vilnius in 1492.  Then Mantigirdaitis presented Alexander with a naked sword and a reminder that Alexander was elected to be a just ruler.  In 1494, Mantigirdaitis was sent on the diplomatic mission to negotiate peace with the Grand Duchy of Moscow and marriage of Helena of Moscow to Alexander to end the First Muscovite–Lithuanian War.  The Bychowiec Chronicle names him as a Great Hetman who recommended Konstantin Ostrogski, the first official Great Hetman, after his death.  Therefore, it is likely that at some point Mantigirdaitis was the commander of the Lithuanian army.\n\nMarcin Kromer: Marcin Kromer (Latin: \"Martinus Cromerus\"; 11 November 1512 – 23 March 1589) was Prince-Bishop of Warmia (Ermland), a Polish cartographer, diplomat and historian in the Kingdom of Poland and later in the Polish-Lithuanian Commonwealth.  He was a personal secretary to two Kings of Poland, Sigismund I the Old and Sigismund II Augustus.\n\nPopiel: Prince Popiel ІІ (or Duke Popiel) was a legendary 9th century ruler of the West Slavic (\"proto-Polish\") tribe of Goplans and Polans and the last member of the pre-Piast dynasty, the Popielids.  According to the chroniclers Gallus Anonymus, Jan Długosz, and Marcin Kromer, as a consequence of his bad rule he was deposed, besieged by his subjects, and eaten alive by mice in a tower in Kruszwica.\n\nRiedern am Wald: Riedern am Wald is an \"Ortsteil\" in the Waldshut district of Baden-Württemberg, Germany.  Notable people from the area include artist Heinrich Ernst Kromer and Pope Benedict XVI's personal secretary, Msgr. Georg Gänswein.\n\nDiego Lorenzi: Fr.  Diego Lorenzi, F.D.P. (born 14 November 1939) is an Italian Roman Catholic priest who served as the personal secretary to Pope John Paul I.  Lorenzi served as Albino Cardinal Luciani's private secretary in Venice for two years previous to his election to the papacy, and remained his secretary for his brief pontificate.  During his time as John Paul I's personal secretary, he was aided by John Magee, an Irish priest who would later become a bishop.\n\nHrvoje Vukčić Hrvatinić: Hrvoje Vukčić Hrvatinić (ca. 1350–1416) was a Ban of Croatia, Grand Duke of Bosnia and Duke of Split.  He was the most prominent member of the noble House of Hrvatinić and one of three major feudal lords in Medieval Bosnia.  He was Grand Duke of Bosnia under three Bosnian kings: King Stjepan (Stephen) Tvrtko I, King Stephen Dabiša and King Stephen Ostoja.  In 1403 he was named regent for Hungary, Croatia and Dalmatia, and was made Duke of Split.  He was Grand Duke of Bosnia under Bosnian King Tvrtko I.\n\nOrangism (Luxembourg): Orangism was a movement in the 19th century Grand Duchy of Luxembourg favouring the personal union of the Netherlands and Luxembourg under the House of Orange-Nassau.  Made up of many notable figures, mainly nobles and Roman Catholic clergy, they were moderate liberals or conservative-liberals and slightly anti-clerical.  At first they favoured maintaining the Grand Duchy's autonomous status and, especially during the Belgian Revolution, opposed it being merged into Belgium.  In the end the western part of the Grand Duchy (the present province of Luxembourg) passed to Belgium, whilst the eastern part and the Orange grand duchy continued as an independent state.  In 1890 the heads of the House of Orange were grand dukes of Luxembourg, but on the death of king and grand duke William III in 1890 he was succeeded by his relation Adolphe as grand duke since Luxembourg's constitution did not allow a woman (Princess Wilhelmina) to hold the throne.  The movement's newsletter was the \"Journal de la Ville et du Pays Luxembourg\".\n\nSigismund I the Old: Sigismund I of Poland (Polish: \"Zygmunt I Stary\" , Lithuanian: \"Žygimantas I Senasis\" ; 1 January 1467 – 1 April 1548), of the Jagiellon dynasty, reigned as King of Poland and also as the Grand Duke of Lithuania from 1506 until 1548.  Earlier, Sigismund had been invested as Duke of Silesia.  A successful monarch and a great patron of arts, he established Polish suzerainty over Ducal Prussia (East Prussia) and incorporated the duchy of Mazovia into the Polish state, securing the nation's wealth, culture and power.\n\nQuestion: This king to which Marcin Kromer was a personal secretary was also a grand duke of what country?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"king_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the king who was also a grand duke.\"\n    },\n    \"secretary_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the personal secretary to the king.\"\n    },\n    \"grand_duchy_country\": {\n      \"type\": \"string\",\n      \"description\": \"The country where the king held the title of Grand Duke.\"\n    },\n    \"king_titles\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of titles held by the king.\"\n    }\n  },\n  \"required\": [\n    \"king_name\",\n    \"secretary_name\",\n    \"grand_duchy_country\",\n    \"king_titles\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "king_name",
-    "secretary_name",
-    "grand_duchy_country",
-    "king_titles"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "king_name": {
+        "type": "string",
+        "description": "The name of the king who was also a grand duke."
+      },
+      "secretary_name": {
+        "type": "string",
+        "description": "The name of the personal secretary to the king."
+      },
+      "grand_duchy_country": {
+        "type": "string",
+        "description": "The country where the king held the title of Grand Duke."
+      },
+      "king_titles": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of titles held by the king."
+      }
+    },
+    "required": [
+      "king_name",
+      "secretary_name",
+      "grand_duchy_country",
+      "king_titles"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

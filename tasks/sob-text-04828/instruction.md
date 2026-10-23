@@ -1,88 +1,65 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Jordan Peele: Jordan Haworth Peele (born February 21, 1979) is an American actor, comedian, writer, producer, and director.  He is best known for starring in the Comedy Central sketch series "Key & Peele" and for his five seasons as a cast member on "MADtv".  In 2014, he also had a recurring role in the first season of the FX anthology series "Fargo".  His directorial debut, the horror film "Get Out", was released in 2017 to critical acclaim and box-office success.
-
-Ryan Murphy (writer): Ryan Patrick Murphy (born November 30, 1965) is an American screenwriter, director and producer.  Murphy is best known for creating/co-creating/producing a number of successful television series, including the FX medical drama "Nip/Tuck" (2003–10), the Fox musical comedy-drama "Glee" (2009–15), and the FX anthology series "American Horror Story" (2011–present), "American Crime Story" (2016–present) and "Feud" (2017–present).  He is also known for directing the 2010 film adaptation of Elizabeth Gilbert's bestselling memoir "Eat, Pray, Love" and the 2014 HBO film adaptation of Larry Kramer's "The Normal Heart", which earned a Primetime Emmy Award for Outstanding Television Movie.
-
-Jesse Plemons: Jesse Lon Plemons (born April 2, 1988) is an American actor.  He is known for playing Landry Clarke in the NBC drama series "Friday Night Lights", Todd Alquist in the AMC crime drama series "Breaking Bad", and Ed Blumquist in the second season of the FX anthology series "Fargo".  He is also known for his film roles in such films as "Like Mike" (2002), "Observe and Report" (2009), "Battleship" (2012), "The Master" (2012), and as mobster Kevin Weeks in "Black Mass" (2015).
-
-Lily Rabe: Lily Rabe (born June 29, 1982) is an American actress.  She received a nomination for the Tony Award for Best Actress in a Play for her performance as Portia in "The Merchant of Venice".  Rabe is best known for her multiple roles on the FX anthology series "American Horror Story", and her lead role as Claire Bennigan on the ABC science fiction series "The Whispers".
-
-Cuba Gooding Jr.: Cuba M. Gooding Jr. (born January 2, 1968) is an American actor.  He gained his breakthrough role as Tre Styles in "Boyz n the Hood" (1991); he appeared in "A Few Good Men" (1992), "The Tuskegee Airmen" (1995), "Outbreak" (1995) and "Jerry Maguire" (1996), for which he won the Academy Award for Best Supporting Actor.  He gained later attention for his roles as Carl Brashear in "Men of Honor", and in Michael Bay's WWII epic "Pearl Harbor" (2001) as Doris Miller.  His other notable films include "As Good as It Gets" (1997), "American Gangster" (2007), "Lee Daniels' The Butler" (2013), and "Selma" (2014), playing civil rights attorney Fred Gray.  In 2016, he portrayed O.J. Simpson in the FX drama series "", and co-starred in the sixth season of the FX anthology series "American Horror Story", subtitled "".
-
-No Reservations (film): No Reservations is a 2007 American romantic comedy-drama film directed by Scott Hicks.  Starring Catherine Zeta-Jones, Aaron Eckhart and Abigail Breslin, the screenplay by Carol Fuchs is an adaptation of an original script by Sandra Nettelbeck, which served as the basis for the 2001 German film "Mostly Martha", and revolves around a hard-edged chef whose life is turned upside down when she decides to take in her young niece following a tragic accident that killed her sister.  Patricia Clarkson, Bob Balaban and Jenny Wade co-star, with Brían F. O'Byrne, Lily Rabe, and Zoe Kravitz—appearing in her first feature film—playing supporting roles.
-
-Carrie Coon: Carrie Alexandra Coon (born January 24, 1981) is an American actress.  On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of "Who's Afraid of Virginia Woolf? ".  In film, she starred as Margo Dunne in the 2014 thriller film "Gone Girl".  From 2014 to 2017, she starred as Nora Durst in the HBO drama series "The Leftovers", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series.  Coon also won for the TCA Award for Individual Achievement in Drama, for "The Leftovers" and for her lead role as Gloria Burgle in the third season of the FX anthology series "Fargo", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for "Fargo".
-
-Evan Peters: Evan Thomas Peters (born January 20, 1987) is an American actor, best known for his multiple roles on the FX anthology series "American Horror Story", of which he has been a main cast member since its debut in 2011, and his role as the mutant Quicksilver in the superhero films "" (2014) and "" (2016).
-
-Denis O'Hare: Denis Patrick Seamus O'Hare (born January 17, 1962) is an American actor noted for his award-winning performances in the plays "Take Me Out" and "Sweet Charity", as well as portraying the vampire Russell Edgington on HBO's fantasy series "True Blood".  He is also known for his supporting roles in such films as "Charlie Wilson's War", "Milk", "Changeling" and "Dallas Buyers Club".  In 2011, he starred as Larry Harvey in the of the FX anthology series "American Horror Story", for which he was nominated for a Primetime Emmy Award for Outstanding Supporting Actor in a Miniseries or a Movie in 2012.  He returned to the show in 2013, playing Spalding in "" and once more as Stanley in "", the latter for which he earned a second Primetime Emmy Award nomination.  For his performance in "" as Liz Taylor, O'Hare received universal critical acclaim.
-
-Rosa Salazar: Rosa Bianca Salazar (born July 16, 1985) is an American actress.  She was raised in Greenbelt, Maryland.  She began performing in New York City and moved to Los Angeles, California in 2009 to pursue acting.  She appeared in several CollegeHumor sketches.  She is best known for her roles as Zoe DeHaven on the NBC series "Parenthood", and Nurse Maria in the FX anthology series "".  She appeared in the 2015 films "", as Lynn, and "", as Brenda.
-
-Question: No Reservations is a 2007 American romantic comedy-drama film with an American actress best known for her multiple roles on what FX anthology series?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_release_year": {
-      "type": "integer",
-      "description": "The release year of the film."
-    },
-    "film_genre": {
-      "type": "string",
-      "description": "The genre of the film."
-    },
-    "actress_in_film": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the actress who appeared in the film."
-        },
-        "best_known_for_series": {
-          "type": "string",
-          "description": "The name of the FX anthology series the actress is best known for."
-        },
-        "series_network": {
-          "type": "string",
-          "description": "The network of the anthology series."
-        },
-        "series_type": {
-          "type": "string",
-          "description": "The type of the series (e.g., anthology series)."
-        }
-      },
-      "required": [
-        "name",
-        "best_known_for_series",
-        "series_network",
-        "series_type"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nJordan Peele: Jordan Haworth Peele (born February 21, 1979) is an American actor, comedian, writer, producer, and director.  He is best known for starring in the Comedy Central sketch series \"Key & Peele\" and for his five seasons as a cast member on \"MADtv\".  In 2014, he also had a recurring role in the first season of the FX anthology series \"Fargo\".  His directorial debut, the horror film \"Get Out\", was released in 2017 to critical acclaim and box-office success.\n\nRyan Murphy (writer): Ryan Patrick Murphy (born November 30, 1965) is an American screenwriter, director and producer.  Murphy is best known for creating/co-creating/producing a number of successful television series, including the FX medical drama \"Nip/Tuck\" (2003–10), the Fox musical comedy-drama \"Glee\" (2009–15), and the FX anthology series \"American Horror Story\" (2011–present), \"American Crime Story\" (2016–present) and \"Feud\" (2017–present).  He is also known for directing the 2010 film adaptation of Elizabeth Gilbert's bestselling memoir \"Eat, Pray, Love\" and the 2014 HBO film adaptation of Larry Kramer's \"The Normal Heart\", which earned a Primetime Emmy Award for Outstanding Television Movie.\n\nJesse Plemons: Jesse Lon Plemons (born April 2, 1988) is an American actor.  He is known for playing Landry Clarke in the NBC drama series \"Friday Night Lights\", Todd Alquist in the AMC crime drama series \"Breaking Bad\", and Ed Blumquist in the second season of the FX anthology series \"Fargo\".  He is also known for his film roles in such films as \"Like Mike\" (2002), \"Observe and Report\" (2009), \"Battleship\" (2012), \"The Master\" (2012), and as mobster Kevin Weeks in \"Black Mass\" (2015).\n\nLily Rabe: Lily Rabe (born June 29, 1982) is an American actress.  She received a nomination for the Tony Award for Best Actress in a Play for her performance as Portia in \"The Merchant of Venice\".  Rabe is best known for her multiple roles on the FX anthology series \"American Horror Story\", and her lead role as Claire Bennigan on the ABC science fiction series \"The Whispers\".\n\nCuba Gooding Jr.: Cuba M. Gooding Jr. (born January 2, 1968) is an American actor.  He gained his breakthrough role as Tre Styles in \"Boyz n the Hood\" (1991); he appeared in \"A Few Good Men\" (1992), \"The Tuskegee Airmen\" (1995), \"Outbreak\" (1995) and \"Jerry Maguire\" (1996), for which he won the Academy Award for Best Supporting Actor.  He gained later attention for his roles as Carl Brashear in \"Men of Honor\", and in Michael Bay's WWII epic \"Pearl Harbor\" (2001) as Doris Miller.  His other notable films include \"As Good as It Gets\" (1997), \"American Gangster\" (2007), \"Lee Daniels' The Butler\" (2013), and \"Selma\" (2014), playing civil rights attorney Fred Gray.  In 2016, he portrayed O.J. Simpson in the FX drama series \"\", and co-starred in the sixth season of the FX anthology series \"American Horror Story\", subtitled \"\".\n\nNo Reservations (film): No Reservations is a 2007 American romantic comedy-drama film directed by Scott Hicks.  Starring Catherine Zeta-Jones, Aaron Eckhart and Abigail Breslin, the screenplay by Carol Fuchs is an adaptation of an original script by Sandra Nettelbeck, which served as the basis for the 2001 German film \"Mostly Martha\", and revolves around a hard-edged chef whose life is turned upside down when she decides to take in her young niece following a tragic accident that killed her sister.  Patricia Clarkson, Bob Balaban and Jenny Wade co-star, with Brían F. O'Byrne, Lily Rabe, and Zoe Kravitz—appearing in her first feature film—playing supporting roles.\n\nCarrie Coon: Carrie Alexandra Coon (born January 24, 1981) is an American actress.  On stage, Coon was nominated for a Tony Award for her performance in the 2012 revival of \"Who's Afraid of Virginia Woolf? \".  In film, she starred as Margo Dunne in the 2014 thriller film \"Gone Girl\".  From 2014 to 2017, she starred as Nora Durst in the HBO drama series \"The Leftovers\", for which she received widespread critical acclaim, winning a Critics' Choice Television Award for Best Actress in a Drama Series.  Coon also won for the TCA Award for Individual Achievement in Drama, for \"The Leftovers\" and for her lead role as Gloria Burgle in the third season of the FX anthology series \"Fargo\", along with a nomination for the Primetime Emmy Award for Outstanding Lead Actress in a Limited Series or Movie for \"Fargo\".\n\nEvan Peters: Evan Thomas Peters (born January 20, 1987) is an American actor, best known for his multiple roles on the FX anthology series \"American Horror Story\", of which he has been a main cast member since its debut in 2011, and his role as the mutant Quicksilver in the superhero films \"\" (2014) and \"\" (2016).\n\nDenis O'Hare: Denis Patrick Seamus O'Hare (born January 17, 1962) is an American actor noted for his award-winning performances in the plays \"Take Me Out\" and \"Sweet Charity\", as well as portraying the vampire Russell Edgington on HBO's fantasy series \"True Blood\".  He is also known for his supporting roles in such films as \"Charlie Wilson's War\", \"Milk\", \"Changeling\" and \"Dallas Buyers Club\".  In 2011, he starred as Larry Harvey in the of the FX anthology series \"American Horror Story\", for which he was nominated for a Primetime Emmy Award for Outstanding Supporting Actor in a Miniseries or a Movie in 2012.  He returned to the show in 2013, playing Spalding in \"\" and once more as Stanley in \"\", the latter for which he earned a second Primetime Emmy Award nomination.  For his performance in \"\" as Liz Taylor, O'Hare received universal critical acclaim.\n\nRosa Salazar: Rosa Bianca Salazar (born July 16, 1985) is an American actress.  She was raised in Greenbelt, Maryland.  She began performing in New York City and moved to Los Angeles, California in 2009 to pursue acting.  She appeared in several CollegeHumor sketches.  She is best known for her roles as Zoe DeHaven on the NBC series \"Parenthood\", and Nurse Maria in the FX anthology series \"\".  She appeared in the 2015 films \"\", as Lynn, and \"\", as Brenda.\n\nQuestion: No Reservations is a 2007 American romantic comedy-drama film with an American actress best known for her multiple roles on what FX anthology series?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"film_release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film.\"\n    },\n    \"film_genre\": {\n      \"type\": \"string\",\n      \"description\": \"The genre of the film.\"\n    },\n    \"actress_in_film\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the actress who appeared in the film.\"\n        },\n        \"best_known_for_series\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the FX anthology series the actress is best known for.\"\n        },\n        \"series_network\": {\n          \"type\": \"string\",\n          \"description\": \"The network of the anthology series.\"\n        },\n        \"series_type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of the series (e.g., anthology series).\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"best_known_for_series\",\n        \"series_network\",\n        \"series_type\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"film_release_year\",\n    \"film_genre\",\n    \"actress_in_film\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "film_release_year",
-    "film_genre",
-    "actress_in_film"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "film_release_year": {
+        "type": "integer",
+        "description": "The release year of the film."
+      },
+      "film_genre": {
+        "type": "string",
+        "description": "The genre of the film."
+      },
+      "actress_in_film": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the actress who appeared in the film."
+          },
+          "best_known_for_series": {
+            "type": "string",
+            "description": "The name of the FX anthology series the actress is best known for."
+          },
+          "series_network": {
+            "type": "string",
+            "description": "The network of the anthology series."
+          },
+          "series_type": {
+            "type": "string",
+            "description": "The type of the series (e.g., anthology series)."
+          }
+        },
+        "required": [
+          "name",
+          "best_known_for_series",
+          "series_network",
+          "series_type"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "film_title",
+      "film_release_year",
+      "film_genre",
+      "actress_in_film"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

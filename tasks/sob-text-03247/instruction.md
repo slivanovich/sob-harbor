@@ -1,79 +1,56 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Drowning Pool (album): Drowning Pool is the eponymous fourth studio album by American rock band Drowning Pool.  It was released on April 27, 2010 and is the band's first album not to feature a different singer, as Ryan McCombs remained with Drowning Pool after their 2007 album "Full Circle", although he did, however, leave the band in 2011 to rejoin his previous band SOiL.
-
-Loudest Common Denominator: Loudest Common Denominator is a live album by American rock band Drowning Pool, and was recorded in San Diego.  It was released on March 3, 2009.  On February 4, 2009, Eleven Seven Music released a video on YouTube of the band revealing details of the album.  These details included the album having acoustic versions of both "37 Stitches" and "Shame".  On February 5, 2009, Drowning Pool announced on their official website the track listings of the album, and also revealed the cover of the album.
-
-Feel Like I Do: "Feel Like I Do" is the first single from American rock band Drowning Pool's self-titled album.  It was released to radio on February 9, 2010.  It was used during the broadcast of the Los Angeles Galaxy vs Chivas USA game on ESPN.  It was also used during the 2010 NFL Draft.  "Feel Like I Do" is the highest-charting single by Drowning Pool to date, reaching #4 on the Billboard Hot Mainstream Rock Tracks chart, and surpassing "37 Stitches", which peaked at #5.  It is the band's second top-5 hit on that chart.
-
-Sinner (Drowning Pool album): Sinner is the debut studio album by American rock band Drowning Pool.  The album is the band's most popular album, being certified platinum in the same year that it was released in.  This was due at least in part to "Bodies" which remains the band's most well-known song.  This is the only studio album by the band to feature original lead singer Dave Williams.  While touring in support of "Sinner", he died on August 14, 2002 from cardiomyopathy.  The album debuted at #14 on the "Billboard" 200 chart.  Drowning Pool released a reissue of the album called the "Unlucky 13th Anniversary Edition" in 2014.  The album was put at no. 25 on Metal Descent's list "The 25 Best Alternative Metal Albums".
-
-Drowning Pool: Drowning Pool is an American rock band formed in Dallas, Texas in 1996.  The band was named after the film "The Drowning Pool".  Since its formation, the band has consisted of guitarist C.J. Pierce, bassist Stevie Benton and drummer Mike Luce, as well as a revolving cast of vocalists.  The band's current vocalist is Jasen Moreno.
-
-Resilience (Drowning Pool album): Resilience is the fifth studio album by American rock band Drowning Pool.  The album was released on April 9, 2013.  It is the first Drowning Pool album recorded with vocalist Jasen Moreno.  The album was also made available for download from iTunes and in MP3 Format at Amazon.
-
-37 Stitches: "37 Stitches" is a song by American rock band Drowning Pool and the third single from their third studio album "Full Circle".  It is Drowning Pool's first-ever top 5 hit on the "Billboard" Hot Mainstream Rock Tracks chart and was available for free in the iPhone OS application "Tap Tap Revenge 2".  It was the first song to appear on the Rock Songs chart, peaking at #42.
-
-Bodies (Drowning Pool song): "Bodies" (often called "Let the Bodies Hit the Floor") is a song by the American rock band Drowning Pool and also is the lead single from their debut album "Sinner".  Released in May 2001, the song is Drowning Pool's signature song and has been featured in various films, TV programs, and advertisements since its release.  It was also the theme song for the 2001 WWF SummerSlam pay-per-view event, as well as that of the ECW brand in 2006 to early 2008.  During 2001, the song got popular, but the song was taken off radio stations after the September 11 attacks because the song would've been inappropriate for the terrorist attack.
-
-Step Up (Drowning Pool song): "Step Up" is a single by American rock band Drowning Pool.  It was originally released on "" in March 2004 and appeared in the film's end credits.  It was included on Drowning Pool's second studio album, "Desensitized", the following month.  This served as the band's first single with new frontman Jason "Gong" Jones and introduced him to many fans.
-
-The Punisher: The Album: The Punisher: The Album is the official soundtrack for the film "The Punisher" and was released in 2004 by Wind-up Records.  Its lead singles were "Broken" by Seether and Evanescence frontwoman Amy Lee, "Step Up" by Drowning Pool, and "Eyes Wired Shut" by Edgewater, all of which have accompanying music videos.
-
-Question: Where does the American rock band Drowning Pool, named after a movie, who feature on the official soundtrack for the film 'The Punisher', hail from?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "band_name": {
-      "type": "string",
-      "description": "The name of the rock band."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "band_origin_city": {
-      "type": "string",
-      "description": "The city where the band was formed."
-    },
-    "band_origin_state": {
-      "type": "string",
-      "description": "The state where the band was formed."
-    },
-    "formation_year": {
-      "type": "integer",
-      "description": "The year the band was formed."
-    },
-    "named_after_film": {
-      "type": "boolean",
-      "description": "Indicates if the band was named after a film."
-    },
-    "featured_on_soundtrack": {
-      "type": "boolean",
-      "description": "Indicates if the band featured on a specific film soundtrack."
-    },
-    "soundtrack_name": {
-      "type": "string",
-      "description": "The name of the soundtrack the band featured on."
+    {
+      "role": "user",
+      "content": "Context:\nDrowning Pool (album): Drowning Pool is the eponymous fourth studio album by American rock band Drowning Pool.  It was released on April 27, 2010 and is the band's first album not to feature a different singer, as Ryan McCombs remained with Drowning Pool after their 2007 album \"Full Circle\", although he did, however, leave the band in 2011 to rejoin his previous band SOiL.\n\nLoudest Common Denominator: Loudest Common Denominator is a live album by American rock band Drowning Pool, and was recorded in San Diego.  It was released on March 3, 2009.  On February 4, 2009, Eleven Seven Music released a video on YouTube of the band revealing details of the album.  These details included the album having acoustic versions of both \"37 Stitches\" and \"Shame\".  On February 5, 2009, Drowning Pool announced on their official website the track listings of the album, and also revealed the cover of the album.\n\nFeel Like I Do: \"Feel Like I Do\" is the first single from American rock band Drowning Pool's self-titled album.  It was released to radio on February 9, 2010.  It was used during the broadcast of the Los Angeles Galaxy vs Chivas USA game on ESPN.  It was also used during the 2010 NFL Draft.  \"Feel Like I Do\" is the highest-charting single by Drowning Pool to date, reaching #4 on the Billboard Hot Mainstream Rock Tracks chart, and surpassing \"37 Stitches\", which peaked at #5.  It is the band's second top-5 hit on that chart.\n\nSinner (Drowning Pool album): Sinner is the debut studio album by American rock band Drowning Pool.  The album is the band's most popular album, being certified platinum in the same year that it was released in.  This was due at least in part to \"Bodies\" which remains the band's most well-known song.  This is the only studio album by the band to feature original lead singer Dave Williams.  While touring in support of \"Sinner\", he died on August 14, 2002 from cardiomyopathy.  The album debuted at #14 on the \"Billboard\" 200 chart.  Drowning Pool released a reissue of the album called the \"Unlucky 13th Anniversary Edition\" in 2014.  The album was put at no. 25 on Metal Descent's list \"The 25 Best Alternative Metal Albums\".\n\nDrowning Pool: Drowning Pool is an American rock band formed in Dallas, Texas in 1996.  The band was named after the film \"The Drowning Pool\".  Since its formation, the band has consisted of guitarist C.J. Pierce, bassist Stevie Benton and drummer Mike Luce, as well as a revolving cast of vocalists.  The band's current vocalist is Jasen Moreno.\n\nResilience (Drowning Pool album): Resilience is the fifth studio album by American rock band Drowning Pool.  The album was released on April 9, 2013.  It is the first Drowning Pool album recorded with vocalist Jasen Moreno.  The album was also made available for download from iTunes and in MP3 Format at Amazon.\n\n37 Stitches: \"37 Stitches\" is a song by American rock band Drowning Pool and the third single from their third studio album \"Full Circle\".  It is Drowning Pool's first-ever top 5 hit on the \"Billboard\" Hot Mainstream Rock Tracks chart and was available for free in the iPhone OS application \"Tap Tap Revenge 2\".  It was the first song to appear on the Rock Songs chart, peaking at #42.\n\nBodies (Drowning Pool song): \"Bodies\" (often called \"Let the Bodies Hit the Floor\") is a song by the American rock band Drowning Pool and also is the lead single from their debut album \"Sinner\".  Released in May 2001, the song is Drowning Pool's signature song and has been featured in various films, TV programs, and advertisements since its release.  It was also the theme song for the 2001 WWF SummerSlam pay-per-view event, as well as that of the ECW brand in 2006 to early 2008.  During 2001, the song got popular, but the song was taken off radio stations after the September 11 attacks because the song would've been inappropriate for the terrorist attack.\n\nStep Up (Drowning Pool song): \"Step Up\" is a single by American rock band Drowning Pool.  It was originally released on \"\" in March 2004 and appeared in the film's end credits.  It was included on Drowning Pool's second studio album, \"Desensitized\", the following month.  This served as the band's first single with new frontman Jason \"Gong\" Jones and introduced him to many fans.\n\nThe Punisher: The Album: The Punisher: The Album is the official soundtrack for the film \"The Punisher\" and was released in 2004 by Wind-up Records.  Its lead singles were \"Broken\" by Seether and Evanescence frontwoman Amy Lee, \"Step Up\" by Drowning Pool, and \"Eyes Wired Shut\" by Edgewater, all of which have accompanying music videos.\n\nQuestion: Where does the American rock band Drowning Pool, named after a movie, who feature on the official soundtrack for the film 'The Punisher', hail from?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the rock band.\"\n    },\n    \"band_origin_city\": {\n      \"type\": \"string\",\n      \"description\": \"The city where the band was formed.\"\n    },\n    \"band_origin_state\": {\n      \"type\": \"string\",\n      \"description\": \"The state where the band was formed.\"\n    },\n    \"formation_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the band was formed.\"\n    },\n    \"named_after_film\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the band was named after a film.\"\n    },\n    \"featured_on_soundtrack\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the band featured on a specific film soundtrack.\"\n    },\n    \"soundtrack_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the soundtrack the band featured on.\"\n    }\n  },\n  \"required\": [\n    \"band_name\",\n    \"band_origin_city\",\n    \"band_origin_state\",\n    \"formation_year\",\n    \"named_after_film\",\n    \"featured_on_soundtrack\",\n    \"soundtrack_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "band_name",
-    "band_origin_city",
-    "band_origin_state",
-    "formation_year",
-    "named_after_film",
-    "featured_on_soundtrack",
-    "soundtrack_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "band_name": {
+        "type": "string",
+        "description": "The name of the rock band."
+      },
+      "band_origin_city": {
+        "type": "string",
+        "description": "The city where the band was formed."
+      },
+      "band_origin_state": {
+        "type": "string",
+        "description": "The state where the band was formed."
+      },
+      "formation_year": {
+        "type": "integer",
+        "description": "The year the band was formed."
+      },
+      "named_after_film": {
+        "type": "boolean",
+        "description": "Indicates if the band was named after a film."
+      },
+      "featured_on_soundtrack": {
+        "type": "boolean",
+        "description": "Indicates if the band featured on a specific film soundtrack."
+      },
+      "soundtrack_name": {
+        "type": "string",
+        "description": "The name of the soundtrack the band featured on."
+      }
+    },
+    "required": [
+      "band_name",
+      "band_origin_city",
+      "band_origin_state",
+      "formation_year",
+      "named_after_film",
+      "featured_on_soundtrack",
+      "soundtrack_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

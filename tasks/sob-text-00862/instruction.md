@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Restless (New Order song): "Restless" is a song by English rock band New Order, released on 28 July 2015 to promote their tenth album, "Music Complete".  This is the first single, as well as new material, New Order has released in a decade since 2005's single, "Waiting for the Sirens' Call", as well as the first single featuring Tom Chapman replacing former bassist and founding member Peter Hook.  The song's concept revolves around greed and consumption.
-
-It's a Beautiful Life (album): It's a Beautiful Life is the only studio album by English supergroup Freebass, featuring bassists Peter Hook (Joy Division, New Order), Gary Mounfield (The Stone Roses), Andy Rourke (The Smiths) and vocalist Gary Briggs (Haven).  It was released on 20 September 2010 through Hook's Haçienda Records label.  The band broke up before the album's release.
-
-Music for Pleasure (Monaco album): Music for Pleasure is the debut studio album by rock band Monaco, a side project of New Order bassist Peter Hook.  It was released in 1997 and reached No. 11 in the UK.  The album sold more than 500,000 copies worldwide, with its first single, "What Do You Want from Me? ", often mistaken for a New Order song.  The band recorded one more album before dissolving in 2000.
-
-Shut Up and Drive: "Shut Up and Drive" is a song recorded by Barbadian singer Rihanna for her third studio album, "Good Girl Gone Bad" (2007).  It was written by Bernard Sumner, Peter Hook, Stephen Morris, Gillian Gilbert, Carl Sturken and Evan Rogers while the production was done by the last two.  Released as the album's second single, the song was solicited to the US radios on June 12, 2007 and was physically released on August 27, 2007, in the UK.  "Shut Up and Drive" is a new wave song which heavily incorporates the 1970s and 1980s musical styles.  Lyrically, it contains multiple references to cars and car parts including the 57' Cadillac.
-
-New Dawn Fades: "New Dawn Fades" is a song from the 1979 album "Unknown Pleasures" by Joy Division.  It opens with a backwards and heavily modified sample from previous song "Insight", presumably added by Martin Hannett, post-production.  The song relies on an ascending guitar riff by Bernard Sumner played against a descending bass riff by Peter Hook.  The song uses the same progression throughout, but grows in intensity as the song progresses, reaching its peak with Ian Curtis singing "Me, seeing me this time, hoping for something else", and ending with a guitar solo.  The song closes side one of "Unknown Pleasures".  It's also one of few Joy Division songs with two distinct guitars playing, one distorted and one a clean electric guitar picking notes from the guitar chords.
-
-Caroline Aherne: Caroline Mary Aherne (24 December 1963 – 2 July 2016) was an English comedian and BAFTA-winning writer and actress, best known for performing as the acerbic chat show host "Mrs Merton", various roles in "The Fast Show", and as the lead role in "The Royle Family", which she co-wrote.  She narrated the Channel 4 reality television series "Gogglebox "from its inception in 2013 until April 2016.
-
-Monaco (band): Monaco was a side project of New Order bassist Peter Hook.  Together with David Potts, the only remaining member of Revenge, the band was formed in 1995.  The group is best known for the 1997 single "What Do You Want From Me? " and the album from which it was taken, "Music for Pleasure", which sold over half a million copies.  Hook and Potts currently perform together in Peter Hook and The Light.
-
-What Do You Want from Me? (Monaco song): "What Do You Want From Me?"  is the most popular single by New Order bassist Peter Hook's band Monaco.  Released in 1997 from the band's debut album "Music For Pleasure", it peaked at number 11 on the UK Singles Chart.  The band released two further singles from the album, but this remains the most successful.  The song appeared in season 2 of the MTV cartoon series "Daria" as well as in season 1 of the UK television show "Trigger Happy TV" and on the show's soundtrack album.  A music video was also shot for the song.  The song is about Hook's failed relationship with comedian Caroline Aherne.  The song was adopted by fans of Shelbourne F.C. in 2011.
-
-Peter Hook and The Light: Peter Hook and The Light are an English rock band, formed in May 2010 by the former Joy Division and New Order bassist, Peter Hook.  The band also features Hook's son Jack Bates (bass), as well as Andy Poole (keyboards) and Paul Kehoe (drums), who both played with Hook as part of Monaco, one of Hook's previous groups.  From the first gigs in May 2010, Nat Wason (formerly of Haven) was the group's guitarist, however in July 2013 it was announced that Wason would be moving on, to be replaced by David Potts, another former member of Monaco.
-
-The Laboratory Project: The Laboratory Project is an organisation founded by entrepreneur and former Ministry of Sound Operations Director, Tony Rigg.  Its aim is to provide a platform to expose brilliant music with their "Taste Masters" compilation series.  "Taste Masters" was officially launched on 30 October 2010 at Fac 251 (The Factory) in Manchester, a club owned in part, by ex-Joy Division/New Order bassist Peter Hook, with the objective of recognising real musicianship.  Rigg and Peter (Hooky) Hook also went on to develop the innovative Master of Arts programme in Music Industry Management & Promotion at the University of Central Lancashire which was launched in September 2012 in association with Factory.
-
-Question: What award did the subject of the song "What Do You Want from Me?" by Peter Hook win? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "artist_band": {
-      "type": "string",
-      "description": "The band or artist who performed the song."
-    },
-    "subject_of_song": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the person the song is about."
-        },
-        "profession": {
-          "type": "string",
-          "description": "The profession of the person."
-        },
-        "award_won": {
-          "type": "string",
-          "description": "The name of the award won by the subject."
-        }
-      },
-      "required": [
-        "name",
-        "profession",
-        "award_won"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nRestless (New Order song): \"Restless\" is a song by English rock band New Order, released on 28 July 2015 to promote their tenth album, \"Music Complete\".  This is the first single, as well as new material, New Order has released in a decade since 2005's single, \"Waiting for the Sirens' Call\", as well as the first single featuring Tom Chapman replacing former bassist and founding member Peter Hook.  The song's concept revolves around greed and consumption.\n\nIt's a Beautiful Life (album): It's a Beautiful Life is the only studio album by English supergroup Freebass, featuring bassists Peter Hook (Joy Division, New Order), Gary Mounfield (The Stone Roses), Andy Rourke (The Smiths) and vocalist Gary Briggs (Haven).  It was released on 20 September 2010 through Hook's Haçienda Records label.  The band broke up before the album's release.\n\nMusic for Pleasure (Monaco album): Music for Pleasure is the debut studio album by rock band Monaco, a side project of New Order bassist Peter Hook.  It was released in 1997 and reached No. 11 in the UK.  The album sold more than 500,000 copies worldwide, with its first single, \"What Do You Want from Me? \", often mistaken for a New Order song.  The band recorded one more album before dissolving in 2000.\n\nShut Up and Drive: \"Shut Up and Drive\" is a song recorded by Barbadian singer Rihanna for her third studio album, \"Good Girl Gone Bad\" (2007).  It was written by Bernard Sumner, Peter Hook, Stephen Morris, Gillian Gilbert, Carl Sturken and Evan Rogers while the production was done by the last two.  Released as the album's second single, the song was solicited to the US radios on June 12, 2007 and was physically released on August 27, 2007, in the UK.  \"Shut Up and Drive\" is a new wave song which heavily incorporates the 1970s and 1980s musical styles.  Lyrically, it contains multiple references to cars and car parts including the 57' Cadillac.\n\nNew Dawn Fades: \"New Dawn Fades\" is a song from the 1979 album \"Unknown Pleasures\" by Joy Division.  It opens with a backwards and heavily modified sample from previous song \"Insight\", presumably added by Martin Hannett, post-production.  The song relies on an ascending guitar riff by Bernard Sumner played against a descending bass riff by Peter Hook.  The song uses the same progression throughout, but grows in intensity as the song progresses, reaching its peak with Ian Curtis singing \"Me, seeing me this time, hoping for something else\", and ending with a guitar solo.  The song closes side one of \"Unknown Pleasures\".  It's also one of few Joy Division songs with two distinct guitars playing, one distorted and one a clean electric guitar picking notes from the guitar chords.\n\nCaroline Aherne: Caroline Mary Aherne (24 December 1963 – 2 July 2016) was an English comedian and BAFTA-winning writer and actress, best known for performing as the acerbic chat show host \"Mrs Merton\", various roles in \"The Fast Show\", and as the lead role in \"The Royle Family\", which she co-wrote.  She narrated the Channel 4 reality television series \"Gogglebox \"from its inception in 2013 until April 2016.\n\nMonaco (band): Monaco was a side project of New Order bassist Peter Hook.  Together with David Potts, the only remaining member of Revenge, the band was formed in 1995.  The group is best known for the 1997 single \"What Do You Want From Me? \" and the album from which it was taken, \"Music for Pleasure\", which sold over half a million copies.  Hook and Potts currently perform together in Peter Hook and The Light.\n\nWhat Do You Want from Me? (Monaco song): \"What Do You Want From Me?\"  is the most popular single by New Order bassist Peter Hook's band Monaco.  Released in 1997 from the band's debut album \"Music For Pleasure\", it peaked at number 11 on the UK Singles Chart.  The band released two further singles from the album, but this remains the most successful.  The song appeared in season 2 of the MTV cartoon series \"Daria\" as well as in season 1 of the UK television show \"Trigger Happy TV\" and on the show's soundtrack album.  A music video was also shot for the song.  The song is about Hook's failed relationship with comedian Caroline Aherne.  The song was adopted by fans of Shelbourne F.C. in 2011.\n\nPeter Hook and The Light: Peter Hook and The Light are an English rock band, formed in May 2010 by the former Joy Division and New Order bassist, Peter Hook.  The band also features Hook's son Jack Bates (bass), as well as Andy Poole (keyboards) and Paul Kehoe (drums), who both played with Hook as part of Monaco, one of Hook's previous groups.  From the first gigs in May 2010, Nat Wason (formerly of Haven) was the group's guitarist, however in July 2013 it was announced that Wason would be moving on, to be replaced by David Potts, another former member of Monaco.\n\nThe Laboratory Project: The Laboratory Project is an organisation founded by entrepreneur and former Ministry of Sound Operations Director, Tony Rigg.  Its aim is to provide a platform to expose brilliant music with their \"Taste Masters\" compilation series.  \"Taste Masters\" was officially launched on 30 October 2010 at Fac 251 (The Factory) in Manchester, a club owned in part, by ex-Joy Division/New Order bassist Peter Hook, with the objective of recognising real musicianship.  Rigg and Peter (Hooky) Hook also went on to develop the innovative Master of Arts programme in Music Industry Management & Promotion at the University of Central Lancashire which was launched in September 2012 in association with Factory.\n\nQuestion: What award did the subject of the song \"What Do You Want from Me?\" by Peter Hook win? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song.\"\n    },\n    \"artist_band\": {\n      \"type\": \"string\",\n      \"description\": \"The band or artist who performed the song.\"\n    },\n    \"subject_of_song\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the person the song is about.\"\n        },\n        \"profession\": {\n          \"type\": \"string\",\n          \"description\": \"The profession of the person.\"\n        },\n        \"award_won\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the award won by the subject.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"profession\",\n        \"award_won\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"song_title\",\n    \"artist_band\",\n    \"subject_of_song\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "song_title",
-    "artist_band",
-    "subject_of_song"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song."
+      },
+      "artist_band": {
+        "type": "string",
+        "description": "The band or artist who performed the song."
+      },
+      "subject_of_song": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the person the song is about."
+          },
+          "profession": {
+            "type": "string",
+            "description": "The profession of the person."
+          },
+          "award_won": {
+            "type": "string",
+            "description": "The name of the award won by the subject."
+          }
+        },
+        "required": [
+          "name",
+          "profession",
+          "award_won"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "song_title",
+      "artist_band",
+      "subject_of_song"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

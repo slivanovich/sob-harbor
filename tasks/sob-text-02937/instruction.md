@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Bad Livers: The Bad Livers were a band from Austin, Texas, whose inventive musical style defied attempts to categorize them according to existing genres.  The original lineup, formed in 1990, included Danny Barnes on banjo, guitar and resonator guitar, Mark Rubin on upright bass and tuba, and Ralph White III on fiddle and accordion.  Barnes composed the majority of the group's original songs.  When White left the group at the end of 1996, he was briefly replaced by Bob Grant on mandolin and guitar.  Barnes and Rubin then continued to perform and record as a duo until unofficially dissolving the band in 2000.  The band has neither toured nor recorded since then, but Barnes and Rubin have played a few live shows with Grant in 2008, 2009, and 2014.
-
-Soak It Up: Soak It Up is the third EP (though second canonically) released by comedy rock group Barnes & Barnes.  It was released in August 1983 by Boulevard Records, and re-released in 2005 on Oglio Records.  This EP was recorded as part of a project Haimer and Mumy called "Code of Honor", a collection of songs written and recorded between 1981 and 1983 with an overall theme of optimism.  Shortly after this EP was released, a full album was slated to also be released, entitled "Code of Honor".  However, due to the low sales of this EP, Barnes & Barnes were dropped from the Boulevard label.  The "Code of Honor" album as a whole remained unreleased until 2005, when it was issued on CD under the title "Kodovoner" with bonus tracks and the five "Soak It Up" tracks.
-
-Jimmy Barnes: James Dixon Swan {'1': ", '2': ", '3': ", '4': "} (born 28 April 1956), better known as Jimmy Barnes, is a Scottish-Australian rock singer-songwriter.  His career both as a solo performer and as the lead vocalist with the rock band Cold Chisel has made him one of the most popular and best-selling Australian music artists of all time.  The combination of 14 Australian Top 40 albums for Cold Chisel and 13 charting solo albums, including nine No. 1s, gives Barnes the highest number of hit albums of any Australian artist.
-
-Tin Lids: The Tin Lids were an Australian children's pop group formed in 1990 with Eliza-Jane Barnes, Elly-May Barnes, Jackie Barnes and Mahalia Barnes: all on vocals.  They are the four offspring of Jimmy Barnes and Jane Mahoney.  The group released three albums, "Hey Rudolph!"  (November 1991) – which peaked at No. 6 on the ARIA Albums Chart, "Snakes & Ladders" (July 1992) – which was nominated for the ARIA Award for Best Children's Album in 1993, and "Dinosaur Dreaming" (1993).
-
-Mahalia Barnes: Mahalia Violet Barnes (born 12 July 1982) is an Australian singer-songwriter and manager, the daughter of Australian rock singer Jimmy Barnes and Jane Mahoney.  She began performing as part of children's pop group The Tin Lids with siblings, Eliza-Jane, Elly-May and Jackie, but has since become a session and backup singer in her own right.  She most recently has sung backup for Joe Bonamassa in the studio, and live.
-
-Peter Badie: Peter "Chuck" Badie (born May 17, 1925) is a New Orleans jazz bass player.  Born in New Orleans, he grew up in Mahalia Jackson's Carrollton neighborhood.  His father was a prominent jazz saxophone player who played with the "Eureka" and the "Original Olympia" brass bands.  (His father played with Percy Humphrey's first band.)  In addition to the strong musical influence of his father, Badie would frequent places such as the Rhythm Club to listen to singer Billy Eckstine and piano player Earl Hines, as well as the Erskine Hawkins, Andy Kirk, and Lucky Millender bands.
-
-Milton Barnes (composer): Milton Barnes (16 December 1931 – 27 February 2001) was a Canadian composer, conductor, and jazz drummer.  An associate of the Canadian Music Centre, his music is noted for its frequent use of Jewish themes, its rejection of the avant garde in favor of tonality, and its blend of classical, jazz, and pop elements.  His music has been labeled by some critics as "eclectic fusion".  He was commissioned to write works by Robert Aitken, Liona Boyd, Paul Brodie, the Canadian Broadcasting Corporation, Erica Goodman, Joseph Macerollo, the Harbord Bakery, the New Chamber Orchestra of Canada, the Ontario Federation of Symphony Orchestras, John Perrone, and Trio Lyra among others.  He remained active as a composer up until his sudden death of a heart attack in 2001.  He is the father of singer/songwriter Micah Barnes, cellist Ariel Barnes, and drummer/producer Daniel Barnes.
-
-Deux fillettes, fond jaune et rouge: Deux fillettes, fond jaune et rouge (Two Girls in a Yellow and Red Interior) (1947), oil on canvas, 61 x 49.8 cm (24 x 19 5/8 inches) is a painting by Henri Matisse in the collection of the Barnes Foundation, Merion, Pennsylvania.  Albert Barnes became one of Matisse's most important patrons.  In addition to a commissioned mural in 1932 "Dance II, 1932" Barnes acquired many paintings and drawings by Matisse.  Pierre Matisse who was Matisse's son living in New York City was instrumental in facilitating Barnes in purchasing works from his father.  During the early-to-mid-1940s Matisse was in poor health.  Eventually by 1950 he stopped painting in favor of his paper cutouts.  This painting in the Barnes collection is an example of one of the final group of oil paintings in Matisse's career.
-
-Willard &quot;Digger&quot; Barnes: Willard "Digger" Barnes is a fictional character in the popular American television series, "Dallas", played by David Wayne (1978), Keenan Wynn (1979-1980), and David Marshall Grant in "".  As the patriarch of the Barnes family, Digger Barnes was the father of Cliff Barnes and Pamela Barnes Ewing.  Digger shocked Pamela on his deathbed by revealing that Hutch McKinney was her biological father but, that he had always loved her as though she were his own.
-
-Volume (film): Volume is a 2012 short film directed by Mahalia Belo and written by Anna Ingeborg Topsøe starring Joe Cole and Anna Brewster.  It won the Best British Short film at the 2012 Moët British Independent Film Awards and the Grand Jury Prize for Best Film at San Francisco Shorts 2013.  It was also part of the official selection at the 2013 Sundance Film Festival while also appearing at numerous other film festival.  "Volume" was director Mahalia Belo's graduation short at the National Film and Television School (NTFS).
-
-Question: What band is Mahalia Barnes's father a part of?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "father_name": {
-      "type": "string",
-      "description": "The name of Mahalia Barnes's father."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "band_name": {
-      "type": "string",
-      "description": "The name of the band her father is a part of."
-    },
-    "father_role_in_band": {
-      "type": "string",
-      "description": "The role of her father in the specified band."
+    {
+      "role": "user",
+      "content": "Context:\nBad Livers: The Bad Livers were a band from Austin, Texas, whose inventive musical style defied attempts to categorize them according to existing genres.  The original lineup, formed in 1990, included Danny Barnes on banjo, guitar and resonator guitar, Mark Rubin on upright bass and tuba, and Ralph White III on fiddle and accordion.  Barnes composed the majority of the group's original songs.  When White left the group at the end of 1996, he was briefly replaced by Bob Grant on mandolin and guitar.  Barnes and Rubin then continued to perform and record as a duo until unofficially dissolving the band in 2000.  The band has neither toured nor recorded since then, but Barnes and Rubin have played a few live shows with Grant in 2008, 2009, and 2014.\n\nSoak It Up: Soak It Up is the third EP (though second canonically) released by comedy rock group Barnes & Barnes.  It was released in August 1983 by Boulevard Records, and re-released in 2005 on Oglio Records.  This EP was recorded as part of a project Haimer and Mumy called \"Code of Honor\", a collection of songs written and recorded between 1981 and 1983 with an overall theme of optimism.  Shortly after this EP was released, a full album was slated to also be released, entitled \"Code of Honor\".  However, due to the low sales of this EP, Barnes & Barnes were dropped from the Boulevard label.  The \"Code of Honor\" album as a whole remained unreleased until 2005, when it was issued on CD under the title \"Kodovoner\" with bonus tracks and the five \"Soak It Up\" tracks.\n\nJimmy Barnes: James Dixon Swan {'1': \", '2': \", '3': \", '4': \"} (born 28 April 1956), better known as Jimmy Barnes, is a Scottish-Australian rock singer-songwriter.  His career both as a solo performer and as the lead vocalist with the rock band Cold Chisel has made him one of the most popular and best-selling Australian music artists of all time.  The combination of 14 Australian Top 40 albums for Cold Chisel and 13 charting solo albums, including nine No. 1s, gives Barnes the highest number of hit albums of any Australian artist.\n\nTin Lids: The Tin Lids were an Australian children's pop group formed in 1990 with Eliza-Jane Barnes, Elly-May Barnes, Jackie Barnes and Mahalia Barnes: all on vocals.  They are the four offspring of Jimmy Barnes and Jane Mahoney.  The group released three albums, \"Hey Rudolph!\"  (November 1991) – which peaked at No. 6 on the ARIA Albums Chart, \"Snakes & Ladders\" (July 1992) – which was nominated for the ARIA Award for Best Children's Album in 1993, and \"Dinosaur Dreaming\" (1993).\n\nMahalia Barnes: Mahalia Violet Barnes (born 12 July 1982) is an Australian singer-songwriter and manager, the daughter of Australian rock singer Jimmy Barnes and Jane Mahoney.  She began performing as part of children's pop group The Tin Lids with siblings, Eliza-Jane, Elly-May and Jackie, but has since become a session and backup singer in her own right.  She most recently has sung backup for Joe Bonamassa in the studio, and live.\n\nPeter Badie: Peter \"Chuck\" Badie (born May 17, 1925) is a New Orleans jazz bass player.  Born in New Orleans, he grew up in Mahalia Jackson's Carrollton neighborhood.  His father was a prominent jazz saxophone player who played with the \"Eureka\" and the \"Original Olympia\" brass bands.  (His father played with Percy Humphrey's first band.)  In addition to the strong musical influence of his father, Badie would frequent places such as the Rhythm Club to listen to singer Billy Eckstine and piano player Earl Hines, as well as the Erskine Hawkins, Andy Kirk, and Lucky Millender bands.\n\nMilton Barnes (composer): Milton Barnes (16 December 1931 – 27 February 2001) was a Canadian composer, conductor, and jazz drummer.  An associate of the Canadian Music Centre, his music is noted for its frequent use of Jewish themes, its rejection of the avant garde in favor of tonality, and its blend of classical, jazz, and pop elements.  His music has been labeled by some critics as \"eclectic fusion\".  He was commissioned to write works by Robert Aitken, Liona Boyd, Paul Brodie, the Canadian Broadcasting Corporation, Erica Goodman, Joseph Macerollo, the Harbord Bakery, the New Chamber Orchestra of Canada, the Ontario Federation of Symphony Orchestras, John Perrone, and Trio Lyra among others.  He remained active as a composer up until his sudden death of a heart attack in 2001.  He is the father of singer/songwriter Micah Barnes, cellist Ariel Barnes, and drummer/producer Daniel Barnes.\n\nDeux fillettes, fond jaune et rouge: Deux fillettes, fond jaune et rouge (Two Girls in a Yellow and Red Interior) (1947), oil on canvas, 61 x 49.8 cm (24 x 19 5/8 inches) is a painting by Henri Matisse in the collection of the Barnes Foundation, Merion, Pennsylvania.  Albert Barnes became one of Matisse's most important patrons.  In addition to a commissioned mural in 1932 \"Dance II, 1932\" Barnes acquired many paintings and drawings by Matisse.  Pierre Matisse who was Matisse's son living in New York City was instrumental in facilitating Barnes in purchasing works from his father.  During the early-to-mid-1940s Matisse was in poor health.  Eventually by 1950 he stopped painting in favor of his paper cutouts.  This painting in the Barnes collection is an example of one of the final group of oil paintings in Matisse's career.\n\nWillard &quot;Digger&quot; Barnes: Willard \"Digger\" Barnes is a fictional character in the popular American television series, \"Dallas\", played by David Wayne (1978), Keenan Wynn (1979-1980), and David Marshall Grant in \"\".  As the patriarch of the Barnes family, Digger Barnes was the father of Cliff Barnes and Pamela Barnes Ewing.  Digger shocked Pamela on his deathbed by revealing that Hutch McKinney was her biological father but, that he had always loved her as though she were his own.\n\nVolume (film): Volume is a 2012 short film directed by Mahalia Belo and written by Anna Ingeborg Topsøe starring Joe Cole and Anna Brewster.  It won the Best British Short film at the 2012 Moët British Independent Film Awards and the Grand Jury Prize for Best Film at San Francisco Shorts 2013.  It was also part of the official selection at the 2013 Sundance Film Festival while also appearing at numerous other film festival.  \"Volume\" was director Mahalia Belo's graduation short at the National Film and Television School (NTFS).\n\nQuestion: What band is Mahalia Barnes's father a part of?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"father_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of Mahalia Barnes's father.\"\n    },\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the band her father is a part of.\"\n    },\n    \"father_role_in_band\": {\n      \"type\": \"string\",\n      \"description\": \"The role of her father in the specified band.\"\n    }\n  },\n  \"required\": [\n    \"father_name\",\n    \"band_name\",\n    \"father_role_in_band\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "father_name",
-    "band_name",
-    "father_role_in_band"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "father_name": {
+        "type": "string",
+        "description": "The name of Mahalia Barnes's father."
+      },
+      "band_name": {
+        "type": "string",
+        "description": "The name of the band her father is a part of."
+      },
+      "father_role_in_band": {
+        "type": "string",
+        "description": "The role of her father in the specified band."
+      }
+    },
+    "required": [
+      "father_name",
+      "band_name",
+      "father_role_in_band"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

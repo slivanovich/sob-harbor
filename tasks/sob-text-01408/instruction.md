@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Pawnee Rangers: "Pawnee Rangers" is the fourth episode of the fourth season of the NBC sitcom "Parks and Recreation".  Unlike many episodes during the fourth season that focus on Leslie's campaign for city council, this episode hardly even mentions it.  "Pawnee Rangers" garnered 4 million viewers on the dot, a decrease in viewers from the previous episode.  The episode was written by Alan Yang and was directed by Charles McDougall.
-
-Will &amp; Grace (season 9): The ninth season of the American comedy series "Will & Grace" premiered on September 28, 2017.  It will consist of 16 episodes, and is the first of two planned reunion seasons following the series' initial final season in 2006.
-
-Steven DePaul: Steven DePaul is an American television director and producer.  He has directed multiple episodes of Shades of Blue, NCIS-LA, CSI-NY, GRIMM, The Unit, Bones, as well as many episodes of one-hour dramatic television (updated list IMDB).  He was a longstanding producer and director on "NYPD Blue".  In his capacity as producer of "NYPD Blue" he won the Emmy Award for Outstanding Drama Series in 1995 and the Golden Globe Award for Best Television Series – Drama in 1993.  He was also nominated for this award for his work on "NYPD Blue" on five other occasions (in 1994, 1996, 1997, 1998 and 1999).  He won a George F. Peabody for "Raging Bulls" (Season 6, episode 8), an episode he directed for NYPD Blue.
-
-List of Urusei Yatsura episodes: Urusei Yatsura is a manga series by Rumiko Takahashi that was later adapted into an anime series.  The series was adapted by Kitty Films into a 195 episode TV series that aired from October 14, 1981 to March 19, 1986 on Fuji Television.  With the exception of episodes 10 and 11, the first 21 episodes were composed of two stories.  The series aired on October 14, 1981 with the two part episode "I'm Lum-chan the Notorious!"  / "It's Raining Oil All Over Town".  The first 106 episodes were directed by Mamoru Oshii and the remainder by Kazuo Yamazaki.  "Urusei Yatsura" concluded about five years later on March 19, 1986 with the 195th episode "All-Star Banquet!  We Are Immortal!!" .  The 194th episode "Urusei Yatsura Immediate Farewell Special - Shine!!  Planet Uru Award" is a repeat of episode 44 "After You've Gone" with a special introduction and best episode countdown before the episode.
-
-11 Years Later: "11 Years Later" is the first episode of the ninth season of the American sitcom "Will & Grace".  The episode first aired on September 28, 2017, on NBC.
-
-List of Da Capo episodes: The following is an episode list for the anime adaptation of the "Da Capo" series of games, including "Da Capo: Second Season".  The "D.C." anime first season, produced by Zexcs, originally aired from 5 July to 27 December 2003 on the Japanese network TV Kanagawa.  Based on the original visual novel's scenario where the player chooses Nemu, it featured the central characters of the game, while omitting some of the details of the other scenarios.  As it was a general-audience anime, the explicit scenes of the original game were likewise omitted.  Many episodes were accompanied by bonus material, such as music videos or side stories.  The unique thirteen Side Episodes, although released concurrently with "D.C.", were produced by a different staff than the "D.C." anime.
-
-List of iCarly episodes: "iCarly" is an American sitcom that originally aired on Nickelodeon from September 8, 2007, to November 23, 2012.  The series stars Miranda Cosgrove as Carly Shay who becomes an Internet star.  Nickelodeon promoted many episodes such as "iDo", "iHire an Idiot", "iPity the Nevel", "iDate Sam & Freddie", etc. as specials, despite their being regular episodes.  The lower case "i" which begins the episode titles represents the internet, as in ""i"Carly".  The show was nominated for an Emmy award for Outstanding Children's Program in 2009.  The series ended on November 23, 2012, with the one-hour special episode "iGoodbye".  A total of 7 seasons and 109 episodes were broadcast.  The largest audience of the series was 11.2 million viewers, with the special episode "iSaved Your Life" premiered in January 2010.
-
-List of The Most Popular Girls in School episodes: "The Most Popular Girls in School" (abbreviated "MPGIS") is an American stop-motion animated comedy web series that debuted on YouTube on May 1, 2012.  Created by Mark Cope and Carlo Moss, the series animates Barbie, Ken and other fashion dolls, usually with customized costumes and hairstyles, as various characters.  "MPGIS" follows the exploits of the fictional Overland Park High School cheerleading squad and their friends, family and enemies. " Variety" described the series as ""Mean Girls" meets "South Park"".  To date, over 80 episodes have been released.  The first episode has been viewed over 8.5 million times, and many episodes have received views in the millions.  After a two year hiatus, the fifth season premiered June 13, 2017.
-
-Joel Wooldridge: Joel Powhatan Wooldridge (born July 19, 1979 in Buffalo, NY) is a multi national champion and world junior champion in contract bridge as well as an expert foosball player.  In 1990, Wooldridge broke Sam Hirschman's previous record for the youngest to achieve Life Master status with the American Contract Bridge League surpassing the mark of 11 years, 9 months and 5 days with a new record of 11 years, 4 months and 13 days.  Wooldridge, while best known for his bridge, is also an accomplished Jenga and Connect-four player winning the past three year running national championship. 'Sam's brother Dan broke Joel's record four years later.  Wooldridge lives in New York City.
-
-List of Peter Gunn episodes: Peter Gunn is an American private eye television series which aired on the NBC and later ABC television networks from 1958 to 1961.  The show's creator (and also writer and director on occasion) was Blake Edwards.  It was also directed by Boris Sagal, Robert Gist, Jack Arnold, Lamont Johnson, one episode by Robert Altman, and several others.  A total of 114 thirty-minute episodes were produced by Spartan Productions.  Season one was filmed at Universal Studios, seasons two and three were filmed at Metro-Goldwyn-Mayer.  Philip H. Lathrop and William W. Spencer were cinematographers on many episodes.  Craig Stevens' wardrobe was tailored by Don Richards and Lola Albright's fashions by Jax.
-
-Question: How many episodes will this season of Will & Grace that contains the episode "11 Years Later" have?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "series_name": {
-      "type": "string",
-      "description": "The name of the television series."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "season_number": {
-      "type": "integer",
-      "description": "The season number being referred to."
-    },
-    "episode_name_in_season": {
-      "type": "string",
-      "description": "The name of an episode that belongs to this season."
-    },
-    "episode_count": {
-      "type": "integer",
-      "description": "The total number of episodes in the specified season."
+    {
+      "role": "user",
+      "content": "Context:\nPawnee Rangers: \"Pawnee Rangers\" is the fourth episode of the fourth season of the NBC sitcom \"Parks and Recreation\".  Unlike many episodes during the fourth season that focus on Leslie's campaign for city council, this episode hardly even mentions it.  \"Pawnee Rangers\" garnered 4 million viewers on the dot, a decrease in viewers from the previous episode.  The episode was written by Alan Yang and was directed by Charles McDougall.\n\nWill &amp; Grace (season 9): The ninth season of the American comedy series \"Will & Grace\" premiered on September 28, 2017.  It will consist of 16 episodes, and is the first of two planned reunion seasons following the series' initial final season in 2006.\n\nSteven DePaul: Steven DePaul is an American television director and producer.  He has directed multiple episodes of Shades of Blue, NCIS-LA, CSI-NY, GRIMM, The Unit, Bones, as well as many episodes of one-hour dramatic television (updated list IMDB).  He was a longstanding producer and director on \"NYPD Blue\".  In his capacity as producer of \"NYPD Blue\" he won the Emmy Award for Outstanding Drama Series in 1995 and the Golden Globe Award for Best Television Series – Drama in 1993.  He was also nominated for this award for his work on \"NYPD Blue\" on five other occasions (in 1994, 1996, 1997, 1998 and 1999).  He won a George F. Peabody for \"Raging Bulls\" (Season 6, episode 8), an episode he directed for NYPD Blue.\n\nList of Urusei Yatsura episodes: Urusei Yatsura is a manga series by Rumiko Takahashi that was later adapted into an anime series.  The series was adapted by Kitty Films into a 195 episode TV series that aired from October 14, 1981 to March 19, 1986 on Fuji Television.  With the exception of episodes 10 and 11, the first 21 episodes were composed of two stories.  The series aired on October 14, 1981 with the two part episode \"I'm Lum-chan the Notorious!\"  / \"It's Raining Oil All Over Town\".  The first 106 episodes were directed by Mamoru Oshii and the remainder by Kazuo Yamazaki.  \"Urusei Yatsura\" concluded about five years later on March 19, 1986 with the 195th episode \"All-Star Banquet!  We Are Immortal!!\" .  The 194th episode \"Urusei Yatsura Immediate Farewell Special - Shine!!  Planet Uru Award\" is a repeat of episode 44 \"After You've Gone\" with a special introduction and best episode countdown before the episode.\n\n11 Years Later: \"11 Years Later\" is the first episode of the ninth season of the American sitcom \"Will & Grace\".  The episode first aired on September 28, 2017, on NBC.\n\nList of Da Capo episodes: The following is an episode list for the anime adaptation of the \"Da Capo\" series of games, including \"Da Capo: Second Season\".  The \"D.C.\" anime first season, produced by Zexcs, originally aired from 5 July to 27 December 2003 on the Japanese network TV Kanagawa.  Based on the original visual novel's scenario where the player chooses Nemu, it featured the central characters of the game, while omitting some of the details of the other scenarios.  As it was a general-audience anime, the explicit scenes of the original game were likewise omitted.  Many episodes were accompanied by bonus material, such as music videos or side stories.  The unique thirteen Side Episodes, although released concurrently with \"D.C.\", were produced by a different staff than the \"D.C.\" anime.\n\nList of iCarly episodes: \"iCarly\" is an American sitcom that originally aired on Nickelodeon from September 8, 2007, to November 23, 2012.  The series stars Miranda Cosgrove as Carly Shay who becomes an Internet star.  Nickelodeon promoted many episodes such as \"iDo\", \"iHire an Idiot\", \"iPity the Nevel\", \"iDate Sam & Freddie\", etc. as specials, despite their being regular episodes.  The lower case \"i\" which begins the episode titles represents the internet, as in \"\"i\"Carly\".  The show was nominated for an Emmy award for Outstanding Children's Program in 2009.  The series ended on November 23, 2012, with the one-hour special episode \"iGoodbye\".  A total of 7 seasons and 109 episodes were broadcast.  The largest audience of the series was 11.2 million viewers, with the special episode \"iSaved Your Life\" premiered in January 2010.\n\nList of The Most Popular Girls in School episodes: \"The Most Popular Girls in School\" (abbreviated \"MPGIS\") is an American stop-motion animated comedy web series that debuted on YouTube on May 1, 2012.  Created by Mark Cope and Carlo Moss, the series animates Barbie, Ken and other fashion dolls, usually with customized costumes and hairstyles, as various characters.  \"MPGIS\" follows the exploits of the fictional Overland Park High School cheerleading squad and their friends, family and enemies. \" Variety\" described the series as \"\"Mean Girls\" meets \"South Park\"\".  To date, over 80 episodes have been released.  The first episode has been viewed over 8.5 million times, and many episodes have received views in the millions.  After a two year hiatus, the fifth season premiered June 13, 2017.\n\nJoel Wooldridge: Joel Powhatan Wooldridge (born July 19, 1979 in Buffalo, NY) is a multi national champion and world junior champion in contract bridge as well as an expert foosball player.  In 1990, Wooldridge broke Sam Hirschman's previous record for the youngest to achieve Life Master status with the American Contract Bridge League surpassing the mark of 11 years, 9 months and 5 days with a new record of 11 years, 4 months and 13 days.  Wooldridge, while best known for his bridge, is also an accomplished Jenga and Connect-four player winning the past three year running national championship. 'Sam's brother Dan broke Joel's record four years later.  Wooldridge lives in New York City.\n\nList of Peter Gunn episodes: Peter Gunn is an American private eye television series which aired on the NBC and later ABC television networks from 1958 to 1961.  The show's creator (and also writer and director on occasion) was Blake Edwards.  It was also directed by Boris Sagal, Robert Gist, Jack Arnold, Lamont Johnson, one episode by Robert Altman, and several others.  A total of 114 thirty-minute episodes were produced by Spartan Productions.  Season one was filmed at Universal Studios, seasons two and three were filmed at Metro-Goldwyn-Mayer.  Philip H. Lathrop and William W. Spencer were cinematographers on many episodes.  Craig Stevens' wardrobe was tailored by Don Richards and Lola Albright's fashions by Jax.\n\nQuestion: How many episodes will this season of Will & Grace that contains the episode \"11 Years Later\" have?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the television series.\"\n    },\n    \"season_number\": {\n      \"type\": \"integer\",\n      \"description\": \"The season number being referred to.\"\n    },\n    \"episode_name_in_season\": {\n      \"type\": \"string\",\n      \"description\": \"The name of an episode that belongs to this season.\"\n    },\n    \"episode_count\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of episodes in the specified season.\"\n    }\n  },\n  \"required\": [\n    \"series_name\",\n    \"season_number\",\n    \"episode_name_in_season\",\n    \"episode_count\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "series_name",
-    "season_number",
-    "episode_name_in_season",
-    "episode_count"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "series_name": {
+        "type": "string",
+        "description": "The name of the television series."
+      },
+      "season_number": {
+        "type": "integer",
+        "description": "The season number being referred to."
+      },
+      "episode_name_in_season": {
+        "type": "string",
+        "description": "The name of an episode that belongs to this season."
+      },
+      "episode_count": {
+        "type": "integer",
+        "description": "The total number of episodes in the specified season."
+      }
+    },
+    "required": [
+      "series_name",
+      "season_number",
+      "episode_name_in_season",
+      "episode_count"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

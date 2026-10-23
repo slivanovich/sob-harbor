@@ -1,77 +1,54 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Thor: The Dark World: Thor: The Dark World is a 2013 American superhero film based on the Marvel Comics character Thor, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.  It is the sequel to 2011's "Thor" and the eighth film in the Marvel Cinematic Universe.  The film was directed by Alan Taylor, with a screenplay by Christopher Yost and Christopher Markus & Stephen McFeely.  It stars Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins, Stellan Skarsgård, Idris Elba, Christopher Eccleston, Adewale Akinnuoye-Agbaje, Kat Dennings, Ray Stevenson, Zachary Levi, Tadanobu Asano, Jaimie Alexander, and Rene Russo.  In "Thor: The Dark World", Thor teams up with Loki to save the Nine Realms from the Dark Elves led by the vengeful Malekith, who intends to plunge the universe into darkness.
-
-Thor: God of Thunder: Thor: God of Thunder is an action hack and slash video game based on the Marvel Studios film "Thor".  The game was developed by Liquid Entertainment and co-written by Matt Fraction.  "Thor: God of Thunder" marks Thor's first standalone appearance in a video game and features the voices of Chris Hemsworth, Tom Hiddleston and Jaimie Alexander, who reprise their roles from the film.  The game was released on May 3, 2011 in North America and is available on Nintendo DS, PlayStation 3, Wii, Xbox 360 and Nintendo 3DS.  The Xbox 360 and PlayStation 3 versions of the game can be played in 3D on 3DTVs and on 2DTVs via TriOviz Inificolor 3D glasses.  The Xbox 360 and PlayStation 3 versions were met with unfavorable reviews, while Wii version was met with mixed reviews and the DS version was met with favourable reviews.  Doctor Doom is mentioned in the game.
-
-Brite Futures: Brite Futures (formerly known as Natalie Portman's Shaved Head, often shortened to NPSH) was an American indie rock/electronica band from Seattle, Washington.  The group released its debut album in July 2008 and disbanded in 2012.  Their former name is a reference to actress Natalie Portman's physical appearance in the film "V for Vendetta".
-
-Natalie Portman filmography: Natalie Portman is an actress, producer, and director with dual American and Israeli citizenship.  Portman made her film debut in Luc Besson's "" where she starred as a vengeful child assassin.  She followed this by appearing in Michael Mann's crime thriller "Heat" (1995), Ted Demme's romantic comedy "Beautiful Girls" (1996), and Tim Burton's science fiction comedy "Mars Attacks! " (1996).  Three years later, her supporting role as the precocious, responsible daughter of a narcissistic mother played by Susan Sarandon in the drama "Anywhere but Here" earned Portman her first Golden Globe Award nomination.  In the same year, Portman played Padmé Amidala in the first of the "Star Wars" prequel trilogy "" which garnered her international recognition.  She reprised the role in its sequels "" (2002), and "" (2005).
-
-Yes! (k-os album): Yes!  is the fourth album of alternative hip hop artist k-os, released on April 14, 2009 in Canada by Universal Music Canada.  The first single, "4 3 2 1", was released to radio in December 2008 and peaked at #98 on the Canadian Hot 100, also the video premiered on February 17, 2009.  "Burning Bridges" and "I Wish I Knew Natalie Portman" are the second and third singles respectively.  The album also debuted at #9 on the Canadian Albums Chart.  On November 17, "Yes!"  was released on iTunes in the United States.  The video for "I Wish I Knew Natalie Portman" was released on November 23 as promo for the US physical release in February 2010.  The video for "Zambony" was released on July 14, 2010, as promo for the US and UK physical releases as well.
-
-Thor: Ragnarok: Thor: Ragnarok is an upcoming American superhero film based on the Marvel Comics character Thor, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.  It is intended to be the sequel to 2011's "Thor" and 2013's "" and the seventeenth film installment of the Marvel Cinematic Universe (MCU).  The film is directed by Taika Waititi with a screenplay by Eric Pearson and the writing team of Craig Kyle and Christopher Yost, and stars Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Idris Elba, Jeff Goldblum, Tessa Thompson, Karl Urban, Mark Ruffalo, and Anthony Hopkins.  In "Thor: Ragnarok", Thor must defeat the Hulk in a gladiatorial duel in time to save Asgard from Hela and the coming Ragnarök.
-
-Adewale Akinnuoye-Agbaje: Adewale Akinnuoye-Agbaje ( ; born 22 August 1967) is an English actor and former fashion model.  He is best known for his roles as Lock-Nah in "The Mummy Returns", Nykwana Wombosi in "The Bourne Identity", Mr. Eko on "Lost", and Simon Adebisi on "Oz".  His more recent roles include Malko in the fifth season of the HBO series "Game of Thrones", providing the voice to the title character on the animated series "Major Lazer", Dave Duerson in the NFL biopic drama "Concussion", and Killer Croc in "Suicide Squad".
-
-The Avengers (2012 film): Marvel's The Avengers (classified under the name Marvel Avengers Assemble in the United Kingdom and Ireland), or simply The Avengers, is a 2012 American superhero film based on the Marvel Comics superhero team of the same name, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.  It is the sixth film in the Marvel Cinematic Universe.  The film was written and directed by Joss Whedon and features an ensemble cast that includes Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Tom Hiddleston, Clark Gregg, Cobie Smulders, Stellan Skarsgård, and Samuel L. Jackson.  In the film, Nick Fury, director of the peacekeeping organization S.H.I.E.L.D., recruits Iron Man, Captain America, the Hulk, and Thor to form a team that must stop Thor's brother Loki from subjugating Earth.
-
-Chris Hemsworth: Chris Hemsworth (born 11 August 1983) is an Australian actor.  He is known for playing Kim Hyde in the Australian TV series "Home and Away" (2004-07) and Thor in the Marvel Cinematic Universe since 2011.  Hemsworth has also appeared in the science fiction action film "Star Trek" (2009), the thriller adventure "A Perfect Getaway" (2009), the horror comedy "The Cabin in the Woods" (2012), the dark-fantasy action film "Snow White and the Huntsman" (2012), the war film "Red Dawn" (2012), and the biographical sports drama film "Rush" (2013).
-
-Thor (film): Thor is a 2011 American superhero film based on the Marvel Comics character of the same name, produced by Marvel Studios and distributed by Paramount Pictures.  It is the fourth film in the Marvel Cinematic Universe.  The film was directed by Kenneth Branagh, written by Ashley Edward Miller & Zack Stentz and Don Payne, and stars Chris Hemsworth, Natalie Portman, Tom Hiddleston, Stellan Skarsgård, Colm Feore, Ray Stevenson, Idris Elba, Kat Dennings, Rene Russo and Anthony Hopkins.  The film sees Thor, the crown prince of Asgard, banished to Earth and stripped of his powers after he reignites a dormant war.  As his brother, Loki, plots to take the throne for himself, Thor must prove himself worthy and reclaim his hammer Mjolnir.
-
-Question: Which English actor starred along with Chris Hemsworth and Natalie Portman in Thor: The Dark World?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "requested_actors": {
-      "type": "array",
-      "description": "The list of actors specified in the question.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "co_star_details": {
-      "type": "object",
-      "description": "Details about the co-star who meets the criteria.",
-      "properties": {
-        "actor_name": {
-          "type": "string",
-          "description": "The name of the English actor who starred with the requested actors."
-        },
-        "nationality": {
-          "type": "string",
-          "description": "The nationality of the identified actor."
+    {
+      "role": "user",
+      "content": "Context:\nThor: The Dark World: Thor: The Dark World is a 2013 American superhero film based on the Marvel Comics character Thor, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.  It is the sequel to 2011's \"Thor\" and the eighth film in the Marvel Cinematic Universe.  The film was directed by Alan Taylor, with a screenplay by Christopher Yost and Christopher Markus & Stephen McFeely.  It stars Chris Hemsworth, Natalie Portman, Tom Hiddleston, Anthony Hopkins, Stellan Skarsgård, Idris Elba, Christopher Eccleston, Adewale Akinnuoye-Agbaje, Kat Dennings, Ray Stevenson, Zachary Levi, Tadanobu Asano, Jaimie Alexander, and Rene Russo.  In \"Thor: The Dark World\", Thor teams up with Loki to save the Nine Realms from the Dark Elves led by the vengeful Malekith, who intends to plunge the universe into darkness.\n\nThor: God of Thunder: Thor: God of Thunder is an action hack and slash video game based on the Marvel Studios film \"Thor\".  The game was developed by Liquid Entertainment and co-written by Matt Fraction.  \"Thor: God of Thunder\" marks Thor's first standalone appearance in a video game and features the voices of Chris Hemsworth, Tom Hiddleston and Jaimie Alexander, who reprise their roles from the film.  The game was released on May 3, 2011 in North America and is available on Nintendo DS, PlayStation 3, Wii, Xbox 360 and Nintendo 3DS.  The Xbox 360 and PlayStation 3 versions of the game can be played in 3D on 3DTVs and on 2DTVs via TriOviz Inificolor 3D glasses.  The Xbox 360 and PlayStation 3 versions were met with unfavorable reviews, while Wii version was met with mixed reviews and the DS version was met with favourable reviews.  Doctor Doom is mentioned in the game.\n\nBrite Futures: Brite Futures (formerly known as Natalie Portman's Shaved Head, often shortened to NPSH) was an American indie rock/electronica band from Seattle, Washington.  The group released its debut album in July 2008 and disbanded in 2012.  Their former name is a reference to actress Natalie Portman's physical appearance in the film \"V for Vendetta\".\n\nNatalie Portman filmography: Natalie Portman is an actress, producer, and director with dual American and Israeli citizenship.  Portman made her film debut in Luc Besson's \"\" where she starred as a vengeful child assassin.  She followed this by appearing in Michael Mann's crime thriller \"Heat\" (1995), Ted Demme's romantic comedy \"Beautiful Girls\" (1996), and Tim Burton's science fiction comedy \"Mars Attacks! \" (1996).  Three years later, her supporting role as the precocious, responsible daughter of a narcissistic mother played by Susan Sarandon in the drama \"Anywhere but Here\" earned Portman her first Golden Globe Award nomination.  In the same year, Portman played Padmé Amidala in the first of the \"Star Wars\" prequel trilogy \"\" which garnered her international recognition.  She reprised the role in its sequels \"\" (2002), and \"\" (2005).\n\nYes! (k-os album): Yes!  is the fourth album of alternative hip hop artist k-os, released on April 14, 2009 in Canada by Universal Music Canada.  The first single, \"4 3 2 1\", was released to radio in December 2008 and peaked at #98 on the Canadian Hot 100, also the video premiered on February 17, 2009.  \"Burning Bridges\" and \"I Wish I Knew Natalie Portman\" are the second and third singles respectively.  The album also debuted at #9 on the Canadian Albums Chart.  On November 17, \"Yes!\"  was released on iTunes in the United States.  The video for \"I Wish I Knew Natalie Portman\" was released on November 23 as promo for the US physical release in February 2010.  The video for \"Zambony\" was released on July 14, 2010, as promo for the US and UK physical releases as well.\n\nThor: Ragnarok: Thor: Ragnarok is an upcoming American superhero film based on the Marvel Comics character Thor, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.  It is intended to be the sequel to 2011's \"Thor\" and 2013's \"\" and the seventeenth film installment of the Marvel Cinematic Universe (MCU).  The film is directed by Taika Waititi with a screenplay by Eric Pearson and the writing team of Craig Kyle and Christopher Yost, and stars Chris Hemsworth, Tom Hiddleston, Cate Blanchett, Idris Elba, Jeff Goldblum, Tessa Thompson, Karl Urban, Mark Ruffalo, and Anthony Hopkins.  In \"Thor: Ragnarok\", Thor must defeat the Hulk in a gladiatorial duel in time to save Asgard from Hela and the coming Ragnarök.\n\nAdewale Akinnuoye-Agbaje: Adewale Akinnuoye-Agbaje ( ; born 22 August 1967) is an English actor and former fashion model.  He is best known for his roles as Lock-Nah in \"The Mummy Returns\", Nykwana Wombosi in \"The Bourne Identity\", Mr. Eko on \"Lost\", and Simon Adebisi on \"Oz\".  His more recent roles include Malko in the fifth season of the HBO series \"Game of Thrones\", providing the voice to the title character on the animated series \"Major Lazer\", Dave Duerson in the NFL biopic drama \"Concussion\", and Killer Croc in \"Suicide Squad\".\n\nThe Avengers (2012 film): Marvel's The Avengers (classified under the name Marvel Avengers Assemble in the United Kingdom and Ireland), or simply The Avengers, is a 2012 American superhero film based on the Marvel Comics superhero team of the same name, produced by Marvel Studios and distributed by Walt Disney Studios Motion Pictures.  It is the sixth film in the Marvel Cinematic Universe.  The film was written and directed by Joss Whedon and features an ensemble cast that includes Robert Downey Jr., Chris Evans, Mark Ruffalo, Chris Hemsworth, Scarlett Johansson, Jeremy Renner, Tom Hiddleston, Clark Gregg, Cobie Smulders, Stellan Skarsgård, and Samuel L. Jackson.  In the film, Nick Fury, director of the peacekeeping organization S.H.I.E.L.D., recruits Iron Man, Captain America, the Hulk, and Thor to form a team that must stop Thor's brother Loki from subjugating Earth.\n\nChris Hemsworth: Chris Hemsworth (born 11 August 1983) is an Australian actor.  He is known for playing Kim Hyde in the Australian TV series \"Home and Away\" (2004-07) and Thor in the Marvel Cinematic Universe since 2011.  Hemsworth has also appeared in the science fiction action film \"Star Trek\" (2009), the thriller adventure \"A Perfect Getaway\" (2009), the horror comedy \"The Cabin in the Woods\" (2012), the dark-fantasy action film \"Snow White and the Huntsman\" (2012), the war film \"Red Dawn\" (2012), and the biographical sports drama film \"Rush\" (2013).\n\nThor (film): Thor is a 2011 American superhero film based on the Marvel Comics character of the same name, produced by Marvel Studios and distributed by Paramount Pictures.  It is the fourth film in the Marvel Cinematic Universe.  The film was directed by Kenneth Branagh, written by Ashley Edward Miller & Zack Stentz and Don Payne, and stars Chris Hemsworth, Natalie Portman, Tom Hiddleston, Stellan Skarsgård, Colm Feore, Ray Stevenson, Idris Elba, Kat Dennings, Rene Russo and Anthony Hopkins.  The film sees Thor, the crown prince of Asgard, banished to Earth and stripped of his powers after he reignites a dormant war.  As his brother, Loki, plots to take the throne for himself, Thor must prove himself worthy and reclaim his hammer Mjolnir.\n\nQuestion: Which English actor starred along with Chris Hemsworth and Natalie Portman in Thor: The Dark World?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film in question.\"\n    },\n    \"requested_actors\": {\n      \"type\": \"array\",\n      \"description\": \"The list of actors specified in the question.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"co_star_details\": {\n      \"type\": \"object\",\n      \"description\": \"Details about the co-star who meets the criteria.\",\n      \"properties\": {\n        \"actor_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the English actor who starred with the requested actors.\"\n        },\n        \"nationality\": {\n          \"type\": \"string\",\n          \"description\": \"The nationality of the identified actor.\"\n        }\n      },\n      \"required\": [\n        \"actor_name\",\n        \"nationality\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"requested_actors\",\n    \"co_star_details\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film in question."
+      },
+      "requested_actors": {
+        "type": "array",
+        "description": "The list of actors specified in the question.",
+        "items": {
+          "type": "string"
         }
       },
-      "required": [
-        "actor_name",
-        "nationality"
-      ],
-      "additionalProperties": false
-    }
+      "co_star_details": {
+        "type": "object",
+        "description": "Details about the co-star who meets the criteria.",
+        "properties": {
+          "actor_name": {
+            "type": "string",
+            "description": "The name of the English actor who starred with the requested actors."
+          },
+          "nationality": {
+            "type": "string",
+            "description": "The nationality of the identified actor."
+          }
+        },
+        "required": [
+          "actor_name",
+          "nationality"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "film_title",
+      "requested_actors",
+      "co_star_details"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "film_title",
-    "requested_actors",
-    "co_star_details"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

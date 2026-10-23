@@ -1,77 +1,54 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Dietrich, Count of Plötzkau: Dietrich (11th century), Count of Plötzkau', son of Bernhard I von Kakelingen, Count of Harzgau and his wife Ida of Querfurt.  Little is known about Dietrich or his ancestors other than their familial relations.  Dietrich was the brother of Gebhard of Supplinburg, a Saxon count, who was the father of Lothair II, Holy Roman Emperor.  Ida, the mother of Dietrich, was niece of Saint Bruno of Querfurt.
-
-Erin McGraw: Erin McGraw (born 1957) is an American author, known primarily for works of fiction, both short stories and novels.  Her generous, genial works often depicts familial relations with cold-eyed optimism.
-
-James Brolin: James Brolin ( ; born Craig Kenneth Bruderlin, July 18, 1940) is an American actor, producer, and director, best known for his roles in film and television, including sitcoms and soap operas.  He is the father of actor Josh Brolin and husband of singer/actress Barbra Streisand.
-
-List of professional sports families: This is a list of all familial relations in professional sports.
-
-Ernie Grunwald: Ernie Grunwald (born in Thornhill, Ontario, Canada) is a Canadian-born actor who has had made guest appearances in a number of notable television series.  He has also had recurring roles on, "One on One", "The Suite Life of Zack & Cody" (as Mr. Forgess, Series 2 Episode 22), and "Two of a Kind" opposite Mary-Kate and Ashley Olsen.  He has also guest starred on, "Friends", "My Name Is Earl", "NYPD Blue", "Reno 911! ", "ANT Farm", "Walker, Texas Ranger", "Supernatural", "Grey's Anatomy", "Bones", "The Mentalist" and many other series.  He has also had roles in the feature films, "Cellular", "It Takes Two", "Men in Black II", and "Stealing Harvard".  He guest starred as a restaurant manager in "Monk" ("Mr. Monk's 100th Case") and as a bumbling government official in "Psych" ("Death is In the Air").  He also made a cameo appearance in the 1992 Disney film "The Mighty Ducks" as a fan.
-
-Cooperative Escapism in Familial Relations: "Cooperative Escapism in Familial Relations" is the fifth episode of the fourth season of the NBC sitcom "Community", which originally aired on March 7, 2013.  The episode was written by Steve Basilone and Annie Mebane, and directed by Tristram Shapeero.  The episode serves as a resolution to Jeff Winger's troubled history with his father.  James Brolin guest-stars as William Winger Sr., Jeff's father.  Adam DeVine also guest-stars as William Winger Jr., Jeff's half-brother.
-
-Magrib (film): Magrib (Malayalam: മഗ്‌രിബ് , English: Dusk "or" Reprieve ) is a 1993 Malayalam film by P. T. Kunju Muhammed.  The film is about the relative shift in the frame of references ruling the familial relations in a traditional community having specific cultural ethos, that of the Muslims in the South Malabar.  It stars Murali, Sreenivasan, V. K. Sreeraman and Saranya.
-
-List of Surakarta and Yogyakarta nobility titles: This is a list of noble titles commonly used at the Surakarta and Yogyakarta courts, including the Mangkunegaran and Pakualaman palaces.  As the symbols and centres of Javanese culture, the sovereigns of both these courts still hold high esteem in Javanese society and Indonesian society in general.  The Princely Families are still known by their noble titles.  Many people with distant familial relations to the Palaces also use noble titles, which sometimes are included in the official register of the names.  Abdi dalem with prominent stature are also granted titles.  The sovereigns also still grant titles to certain persons deemed helpful in maintaining Javanese traditions and the dignity of the royal courts, even to non-Javanese.
-
-Vergüenza: Vergüenza directly translates to w: shame in English, refers to the cultural and social phenomena that shapes, and often constricts, Latinos lives to a typically conservative, traditional mold.  The role of "vergüenza" not only helps mold lives to a traditional mold, but serves primarily to maintain traditional gender roles, and reinforcing familial relations and expectations.  Placed under unnatural boundaries we as a people—society, choose to place imaginary borders built through mind, mental constructions—that formulate, negative definitions of each other.  "Verguenza" acts as both an external and internal regulator, based on what people think, and living up to those expectations, as well as on an “internalized set of beliefs about what constitutes proper behavior and norms.”  A primary factor in vergüenza is the opinion and expectations of others, this comes from different communities one identifies themselves in, including family, friends, neighborhood, as well as their religious affiliations.
-
-Algerian Family Code: The Algerian Family Code (French: Code de Famille , Arabic: قانون الأسرة‎ ‎ ), enacted on June 9, 1984, specifies the laws relating to familial relations in Algeria.  It includes strong elements of Islamic law which have brought it praise from Islamists and condemnation from secularists and feminists.
-
-Question: Who guest starred in Cooperative Escapism in Familial Relations?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "episode_title": {
-      "type": "string",
-      "description": "The title of the episode."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "guest_stars": {
-      "type": "array",
-      "description": "A list of actors who guest-starred in the episode.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "actor_name": {
-            "type": "string",
-            "description": "The name of the guest actor."
+    {
+      "role": "user",
+      "content": "Context:\nDietrich, Count of Plötzkau: Dietrich (11th century), Count of Plötzkau', son of Bernhard I von Kakelingen, Count of Harzgau and his wife Ida of Querfurt.  Little is known about Dietrich or his ancestors other than their familial relations.  Dietrich was the brother of Gebhard of Supplinburg, a Saxon count, who was the father of Lothair II, Holy Roman Emperor.  Ida, the mother of Dietrich, was niece of Saint Bruno of Querfurt.\n\nErin McGraw: Erin McGraw (born 1957) is an American author, known primarily for works of fiction, both short stories and novels.  Her generous, genial works often depicts familial relations with cold-eyed optimism.\n\nJames Brolin: James Brolin ( ; born Craig Kenneth Bruderlin, July 18, 1940) is an American actor, producer, and director, best known for his roles in film and television, including sitcoms and soap operas.  He is the father of actor Josh Brolin and husband of singer/actress Barbra Streisand.\n\nList of professional sports families: This is a list of all familial relations in professional sports.\n\nErnie Grunwald: Ernie Grunwald (born in Thornhill, Ontario, Canada) is a Canadian-born actor who has had made guest appearances in a number of notable television series.  He has also had recurring roles on, \"One on One\", \"The Suite Life of Zack & Cody\" (as Mr. Forgess, Series 2 Episode 22), and \"Two of a Kind\" opposite Mary-Kate and Ashley Olsen.  He has also guest starred on, \"Friends\", \"My Name Is Earl\", \"NYPD Blue\", \"Reno 911! \", \"ANT Farm\", \"Walker, Texas Ranger\", \"Supernatural\", \"Grey's Anatomy\", \"Bones\", \"The Mentalist\" and many other series.  He has also had roles in the feature films, \"Cellular\", \"It Takes Two\", \"Men in Black II\", and \"Stealing Harvard\".  He guest starred as a restaurant manager in \"Monk\" (\"Mr. Monk's 100th Case\") and as a bumbling government official in \"Psych\" (\"Death is In the Air\").  He also made a cameo appearance in the 1992 Disney film \"The Mighty Ducks\" as a fan.\n\nCooperative Escapism in Familial Relations: \"Cooperative Escapism in Familial Relations\" is the fifth episode of the fourth season of the NBC sitcom \"Community\", which originally aired on March 7, 2013.  The episode was written by Steve Basilone and Annie Mebane, and directed by Tristram Shapeero.  The episode serves as a resolution to Jeff Winger's troubled history with his father.  James Brolin guest-stars as William Winger Sr., Jeff's father.  Adam DeVine also guest-stars as William Winger Jr., Jeff's half-brother.\n\nMagrib (film): Magrib (Malayalam: മഗ്‌രിബ് , English: Dusk \"or\" Reprieve ) is a 1993 Malayalam film by P. T. Kunju Muhammed.  The film is about the relative shift in the frame of references ruling the familial relations in a traditional community having specific cultural ethos, that of the Muslims in the South Malabar.  It stars Murali, Sreenivasan, V. K. Sreeraman and Saranya.\n\nList of Surakarta and Yogyakarta nobility titles: This is a list of noble titles commonly used at the Surakarta and Yogyakarta courts, including the Mangkunegaran and Pakualaman palaces.  As the symbols and centres of Javanese culture, the sovereigns of both these courts still hold high esteem in Javanese society and Indonesian society in general.  The Princely Families are still known by their noble titles.  Many people with distant familial relations to the Palaces also use noble titles, which sometimes are included in the official register of the names.  Abdi dalem with prominent stature are also granted titles.  The sovereigns also still grant titles to certain persons deemed helpful in maintaining Javanese traditions and the dignity of the royal courts, even to non-Javanese.\n\nVergüenza: Vergüenza directly translates to w: shame in English, refers to the cultural and social phenomena that shapes, and often constricts, Latinos lives to a typically conservative, traditional mold.  The role of \"vergüenza\" not only helps mold lives to a traditional mold, but serves primarily to maintain traditional gender roles, and reinforcing familial relations and expectations.  Placed under unnatural boundaries we as a people—society, choose to place imaginary borders built through mind, mental constructions—that formulate, negative definitions of each other.  \"Verguenza\" acts as both an external and internal regulator, based on what people think, and living up to those expectations, as well as on an “internalized set of beliefs about what constitutes proper behavior and norms.”  A primary factor in vergüenza is the opinion and expectations of others, this comes from different communities one identifies themselves in, including family, friends, neighborhood, as well as their religious affiliations.\n\nAlgerian Family Code: The Algerian Family Code (French: Code de Famille , Arabic: قانون الأسرة‎ ‎ ), enacted on June 9, 1984, specifies the laws relating to familial relations in Algeria.  It includes strong elements of Islamic law which have brought it praise from Islamists and condemnation from secularists and feminists.\n\nQuestion: Who guest starred in Cooperative Escapism in Familial Relations?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"episode_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the episode.\"\n    },\n    \"guest_stars\": {\n      \"type\": \"array\",\n      \"description\": \"A list of actors who guest-starred in the episode.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"actor_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the guest actor.\"\n          },\n          \"character_played\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the character played by the guest actor.\"\n          }\n        },\n        \"required\": [\n          \"actor_name\",\n          \"character_played\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"number_of_guest_stars\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of guest stars in the episode.\"\n    }\n  },\n  \"required\": [\n    \"episode_title\",\n    \"guest_stars\",\n    \"number_of_guest_stars\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "episode_title": {
+        "type": "string",
+        "description": "The title of the episode."
+      },
+      "guest_stars": {
+        "type": "array",
+        "description": "A list of actors who guest-starred in the episode.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "actor_name": {
+              "type": "string",
+              "description": "The name of the guest actor."
+            },
+            "character_played": {
+              "type": "string",
+              "description": "The name of the character played by the guest actor."
+            }
           },
-          "character_played": {
-            "type": "string",
-            "description": "The name of the character played by the guest actor."
-          }
-        },
-        "required": [
-          "actor_name",
-          "character_played"
-        ],
-        "additionalProperties": false
+          "required": [
+            "actor_name",
+            "character_played"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "number_of_guest_stars": {
+        "type": "integer",
+        "description": "The total number of guest stars in the episode."
       }
     },
-    "number_of_guest_stars": {
-      "type": "integer",
-      "description": "The total number of guest stars in the episode."
-    }
+    "required": [
+      "episode_title",
+      "guest_stars",
+      "number_of_guest_stars"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "episode_title",
-    "guest_stars",
-    "number_of_guest_stars"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

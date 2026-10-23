@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Cathy Inglese: Cathy Inglese (born December 16, 1958) is the former head coach of the University of Rhode Island women's basketball team.  She was previously the head women's basketball coach at Boston College until she abruptly resigned following a 21-win 2007-08 season featuring second round exits from the ACC Women's Basketball Tournament, losing to the University of Maryland, and from the Women's National Invitation Tournament, losing to St. Johns University.  She posted 20 win seasons in seven out of her last eight seasons, and guided her team to three consecutive Sweet Sixteen appearances, including defeating Number 1 seed Ohio State in the 2005 Women's NCAA Tournament.  Her teams also qualified for five consecutive NCAA Tournaments, and seven out of the last eight tournaments.
-
-Jeff Brown (tennis): Jeff Brown is the current head men’s tennis coach at Louisiana State University.  Brown succeeded Jerry Simmons in 1998 and has recorded an overall record of 159-74 in nine seasons as head coach of the Tigers.  His teams have played in 9 consecutive NCAA Tournaments, reaching the semifinals in 1998 and 1999.  His 1998 and 1999 teams were SEC Champions.
-
-Che' Jones: Che' Jones (born April 11, 1971, Columbus, Ohio) is a long time Las Vegas resident who played college basketball at the Ohio State University-Newark, where he ended his career as the second all-time leading scorer in Ohio State-Newark history scoring 1,693 points.  Jones finished his career at Ohio State-Newark second in assists and notched the highest free-throw percentage for a season in the 1999-2000 season with 91.9%.  He is also the all-time leader in three-point field goals made, as well as steals.  The University retired his jersey (#5) on February 26, 2001.  Jones also played professional basketball in Cyprus.  He is currently an assistant coach at Phoenix College in Phoenix, Arizona.  On March 22, 2014 the Phoenix College Bears defeated Essex College for the NJCAA DII National Championship.  Prior to coaching at Phoenix College he coached at Northern Arizona University, where he also earned his Master's degree in Higher Education.  He was also the associate head coach at Glen Oaks Community College in Centreville, Michigan.  Prior to Glen Oaks Community College he was the associate head coach at Albion College, a NCAA division III college in Albion, Michigan.  During the 2007-2008 season he was the head assistant coach at Casper College, a junior college in Casper, Wyoming.  He just recently was the head basketball coach of the Las Vegas Venom of the American Basketball Association (ABA) and an assistant coach to George Tarkanian son of famed coach Jerry Tarkanian, with the Las Vegas Stars of the IBL (International Basketball League).  Che' also coached at Urbana University in Urbana, Ohio and also at Columbus State University where his team was ranked number one in the country for the entire season and ended their season at 29-2 after losing to the eventual National Champion in the NJCAA Regional Championship game.
-
-Bob Whalen: Bob Whalen (October 15, 1957) is an American college baseball coach who has been the head coach of Dartmouth since the start of the 1990 season.  Under him, the Big Green have appeared in two NCAA Tournaments.  A Maine alumnus, Whalen worked as an assistant coach there from 1982 to 1989.
-
-Liz Galloway McQuitter: Liz Galloway McQuitter (born August 15, 1955) has held positions as head coach and assistant coach women's basketball at the collegiate level.  In April, 2015, she ended her career in athletics retiring as head coach of the Rockdale High School in Rockdale, Texas.  McQuitter served as head coach at Mundelein College (1984–1986), Lamar (1990–1994), and Northern Illinois (1994–1998).  McQuitter took over the head coaching position at Lamar after the resignation of Al Barbre following an NCAA investigation which ended with two years probation and other penalties for the team.  In spite of the cloudy start, McQuitter's team tied for first-place finish in the Sun Belt regular season.  The Lady Cardinals were not eligible for post-season play that year.  McQuitter left Lamar after four seasons to become head coach for the Northern Illinois Huskies women's basketball team.  Her first season at Northern Illinois was also successful as the team qualified for the 1995 NCAA Women's Division I Basketball Tournament.  Coach McQuitter served as assistant coach at Northwestern, Dartmouth, DePaul, and Texas A&M.
-
-Jerry Green (basketball coach): Jerry Green was a college basketball coach from the 1980s through 2001.  He coached at UNC Asheville, Oregon and Tennessee.  He also was an assistant at Kansas under Roy Williams.
-
-Frank Martin (basketball): Francisco Jose "Frank" Martin (born March 23, 1966) is an American basketball coach and the current head coach for the University of South Carolina men's basketball team.  Martin was previously head coach at Kansas State University for five seasons.  Prior to that, he was an assistant coach at the collegiate level and head basketball coach at three high schools in Miami.  Martin has led his teams to a total of five NCAA Tournaments as head coach and was named the Big 12 Conference Men's Basketball Coach of the Year in 2010.
-
-Roy Williams (coach): Roy Allen Williams (born August 1, 1950) is an American college basketball coach for the North Carolina Tar Heels.  He started his college coaching career at North Carolina as an assistant coach for Dean Smith in 1978.  In 1988, Williams became the head coach of the men's basketball team at Kansas, taking them to fourteen consecutive NCAA tournaments, collecting a .805 win percentage and winning nine conference titles over his fifteen-year span.
-
-John Trask (soccer): John Trask is the head men's soccer coach at the University of Wisconsin–Madison.  He was announced head soccer coach on January 20, 2010.  From 2005 to 2009, he served as the head men's soccer coach at UIC.  At UIC, his teams advanced to the NCAA Tournament in 2006, 2007, and 2008.  From 2000 to 2004, he was a top assistant coach in Major League Soccer (MLS).  In 2004, he was an assistant coach for Dallas Burn, and from 2002 to 2003, he was an assistant coach for D.C. United.  From 2000 to 2001, he was an assistant coach with the Miami Fusion.  From 1993 to 1999, he was an assistant coach at Indiana University.  Trask was tutored by USSF Hall of Fame Coach Jerry Yeagley and former NASL great Ray Hudson.
-
-Tracy Smith (baseball): Tracy Smith (born February 14, 1966 in Kentland, Indiana) is an American college baseball coach.  He was named the head coach of the Arizona State Sun Devils baseball program prior to the start of the 2015 season.  Smith was the head coach of Indiana from 2006–2014, during which time the Hoosiers appeared in three NCAA Tournaments, advancing to the College World Series once.  As the head coach of Miami (OH) from 1997–2005, Smith led the RedHawks to two NCAA Tournaments.
-
-Question: Jerry Green was an assistant coach at Kansas under a head coach that took the team to how many consecutive NCAA tournaments? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "assistant_coach_name": {
-      "type": "string",
-      "description": "The name of the assistant coach mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "head_coach_name": {
-      "type": "string",
-      "description": "The name of the head coach under whom the assistant coach served."
-    },
-    "university_name": {
-      "type": "string",
-      "description": "The university where the head coach achieved the specified NCAA tournament record."
-    },
-    "consecutive_ncaa_tournament_appearances": {
-      "type": "integer",
-      "description": "The number of consecutive NCAA tournament appearances the head coach led their team to."
+    {
+      "role": "user",
+      "content": "Context:\nCathy Inglese: Cathy Inglese (born December 16, 1958) is the former head coach of the University of Rhode Island women's basketball team.  She was previously the head women's basketball coach at Boston College until she abruptly resigned following a 21-win 2007-08 season featuring second round exits from the ACC Women's Basketball Tournament, losing to the University of Maryland, and from the Women's National Invitation Tournament, losing to St. Johns University.  She posted 20 win seasons in seven out of her last eight seasons, and guided her team to three consecutive Sweet Sixteen appearances, including defeating Number 1 seed Ohio State in the 2005 Women's NCAA Tournament.  Her teams also qualified for five consecutive NCAA Tournaments, and seven out of the last eight tournaments.\n\nJeff Brown (tennis): Jeff Brown is the current head men’s tennis coach at Louisiana State University.  Brown succeeded Jerry Simmons in 1998 and has recorded an overall record of 159-74 in nine seasons as head coach of the Tigers.  His teams have played in 9 consecutive NCAA Tournaments, reaching the semifinals in 1998 and 1999.  His 1998 and 1999 teams were SEC Champions.\n\nChe' Jones: Che' Jones (born April 11, 1971, Columbus, Ohio) is a long time Las Vegas resident who played college basketball at the Ohio State University-Newark, where he ended his career as the second all-time leading scorer in Ohio State-Newark history scoring 1,693 points.  Jones finished his career at Ohio State-Newark second in assists and notched the highest free-throw percentage for a season in the 1999-2000 season with 91.9%.  He is also the all-time leader in three-point field goals made, as well as steals.  The University retired his jersey (#5) on February 26, 2001.  Jones also played professional basketball in Cyprus.  He is currently an assistant coach at Phoenix College in Phoenix, Arizona.  On March 22, 2014 the Phoenix College Bears defeated Essex College for the NJCAA DII National Championship.  Prior to coaching at Phoenix College he coached at Northern Arizona University, where he also earned his Master's degree in Higher Education.  He was also the associate head coach at Glen Oaks Community College in Centreville, Michigan.  Prior to Glen Oaks Community College he was the associate head coach at Albion College, a NCAA division III college in Albion, Michigan.  During the 2007-2008 season he was the head assistant coach at Casper College, a junior college in Casper, Wyoming.  He just recently was the head basketball coach of the Las Vegas Venom of the American Basketball Association (ABA) and an assistant coach to George Tarkanian son of famed coach Jerry Tarkanian, with the Las Vegas Stars of the IBL (International Basketball League).  Che' also coached at Urbana University in Urbana, Ohio and also at Columbus State University where his team was ranked number one in the country for the entire season and ended their season at 29-2 after losing to the eventual National Champion in the NJCAA Regional Championship game.\n\nBob Whalen: Bob Whalen (October 15, 1957) is an American college baseball coach who has been the head coach of Dartmouth since the start of the 1990 season.  Under him, the Big Green have appeared in two NCAA Tournaments.  A Maine alumnus, Whalen worked as an assistant coach there from 1982 to 1989.\n\nLiz Galloway McQuitter: Liz Galloway McQuitter (born August 15, 1955) has held positions as head coach and assistant coach women's basketball at the collegiate level.  In April, 2015, she ended her career in athletics retiring as head coach of the Rockdale High School in Rockdale, Texas.  McQuitter served as head coach at Mundelein College (1984–1986), Lamar (1990–1994), and Northern Illinois (1994–1998).  McQuitter took over the head coaching position at Lamar after the resignation of Al Barbre following an NCAA investigation which ended with two years probation and other penalties for the team.  In spite of the cloudy start, McQuitter's team tied for first-place finish in the Sun Belt regular season.  The Lady Cardinals were not eligible for post-season play that year.  McQuitter left Lamar after four seasons to become head coach for the Northern Illinois Huskies women's basketball team.  Her first season at Northern Illinois was also successful as the team qualified for the 1995 NCAA Women's Division I Basketball Tournament.  Coach McQuitter served as assistant coach at Northwestern, Dartmouth, DePaul, and Texas A&M.\n\nJerry Green (basketball coach): Jerry Green was a college basketball coach from the 1980s through 2001.  He coached at UNC Asheville, Oregon and Tennessee.  He also was an assistant at Kansas under Roy Williams.\n\nFrank Martin (basketball): Francisco Jose \"Frank\" Martin (born March 23, 1966) is an American basketball coach and the current head coach for the University of South Carolina men's basketball team.  Martin was previously head coach at Kansas State University for five seasons.  Prior to that, he was an assistant coach at the collegiate level and head basketball coach at three high schools in Miami.  Martin has led his teams to a total of five NCAA Tournaments as head coach and was named the Big 12 Conference Men's Basketball Coach of the Year in 2010.\n\nRoy Williams (coach): Roy Allen Williams (born August 1, 1950) is an American college basketball coach for the North Carolina Tar Heels.  He started his college coaching career at North Carolina as an assistant coach for Dean Smith in 1978.  In 1988, Williams became the head coach of the men's basketball team at Kansas, taking them to fourteen consecutive NCAA tournaments, collecting a .805 win percentage and winning nine conference titles over his fifteen-year span.\n\nJohn Trask (soccer): John Trask is the head men's soccer coach at the University of Wisconsin–Madison.  He was announced head soccer coach on January 20, 2010.  From 2005 to 2009, he served as the head men's soccer coach at UIC.  At UIC, his teams advanced to the NCAA Tournament in 2006, 2007, and 2008.  From 2000 to 2004, he was a top assistant coach in Major League Soccer (MLS).  In 2004, he was an assistant coach for Dallas Burn, and from 2002 to 2003, he was an assistant coach for D.C. United.  From 2000 to 2001, he was an assistant coach with the Miami Fusion.  From 1993 to 1999, he was an assistant coach at Indiana University.  Trask was tutored by USSF Hall of Fame Coach Jerry Yeagley and former NASL great Ray Hudson.\n\nTracy Smith (baseball): Tracy Smith (born February 14, 1966 in Kentland, Indiana) is an American college baseball coach.  He was named the head coach of the Arizona State Sun Devils baseball program prior to the start of the 2015 season.  Smith was the head coach of Indiana from 2006–2014, during which time the Hoosiers appeared in three NCAA Tournaments, advancing to the College World Series once.  As the head coach of Miami (OH) from 1997–2005, Smith led the RedHawks to two NCAA Tournaments.\n\nQuestion: Jerry Green was an assistant coach at Kansas under a head coach that took the team to how many consecutive NCAA tournaments? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"assistant_coach_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the assistant coach mentioned in the question.\"\n    },\n    \"head_coach_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the head coach under whom the assistant coach served.\"\n    },\n    \"university_name\": {\n      \"type\": \"string\",\n      \"description\": \"The university where the head coach achieved the specified NCAA tournament record.\"\n    },\n    \"consecutive_ncaa_tournament_appearances\": {\n      \"type\": \"integer\",\n      \"description\": \"The number of consecutive NCAA tournament appearances the head coach led their team to.\"\n    }\n  },\n  \"required\": [\n    \"assistant_coach_name\",\n    \"head_coach_name\",\n    \"university_name\",\n    \"consecutive_ncaa_tournament_appearances\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "assistant_coach_name",
-    "head_coach_name",
-    "university_name",
-    "consecutive_ncaa_tournament_appearances"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "assistant_coach_name": {
+        "type": "string",
+        "description": "The name of the assistant coach mentioned in the question."
+      },
+      "head_coach_name": {
+        "type": "string",
+        "description": "The name of the head coach under whom the assistant coach served."
+      },
+      "university_name": {
+        "type": "string",
+        "description": "The university where the head coach achieved the specified NCAA tournament record."
+      },
+      "consecutive_ncaa_tournament_appearances": {
+        "type": "integer",
+        "description": "The number of consecutive NCAA tournament appearances the head coach led their team to."
+      }
+    },
+    "required": [
+      "assistant_coach_name",
+      "head_coach_name",
+      "university_name",
+      "consecutive_ncaa_tournament_appearances"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

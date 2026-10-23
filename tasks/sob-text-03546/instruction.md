@@ -1,83 +1,60 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Lady Gaga videography: American singer Lady Gaga has released three video albums and has been featured in twenty-eight music videos.  From her debut album "The Fame" (2008), she released music videos for the singles "Just Dance", "Poker Face", "LoveGame" and "Paparazzi".  In the latter, she portrays a doomed starlet taking revenge on her lover.  She reissued her first album as "The Fame Monster" (2009), preceded by a music video for the lead single "Bad Romance", which won a Grammy Award for Best Music Video and seven MTV Video Music Awards, including Video of the Year in 2010.  The following year, Jonas Åkerlund directed the music video for "Telephone"—a continuation of "Paparazzi"—which was shot as a short film.  The video received an MTV Video Music Award for Video of the Year nomination, and was named the Best Music Video of the Decade by "Billboard" in January 2015.  For her 2010 video "Alejandro", Gaga received positive review from critics, though she was criticized by the Catholic League that alleged blasphemy.
-
-MTV Video Music Brazil: The MTV Video Music Brazil awards (originally Video Music Awards Brazil), more commonly known as VMB, were MTV Brasil's annual award ceremony, established in 1995.  MTV viewers picked the winners for most categories since 2001.  Unlike in the MTV Video Music Awards, the most important category at the MTV Video Music Brazil was the Viewer's Choice, not the Video of the Year; both of these categories merged in 2005.  In 2007, the awards have faced a major rebranding, with several categories extinguished (most notably the specific genre divisions) and even the trophies' design changed; from this year on, the awards were no longer focused on music videos, but on the artists, and the most important category became the Artist of the Year.  However, the Video of the Year category existed to award the best music video.
-
-MTV Video Music Award: An MTV Video Music Award (commonly abbreviated as a VMAs) is an award presented by the cable channel MTV to honor the best in the music video medium.  Originally conceived as an alternative to the Grammy Awards (in the video category), the annual MTV Video Music Awards ceremony has often been called the "Super Bowl for youth", an acknowledgment of the VMA ceremony's ability to draw millions of youth from teens to 20-somethings each year.  By 2001, the VMA had become a coveted award.  The statue given to winners is an astronaut on the moon, one of the earliest representations of MTV, and was colloquially called a "moonman".  However, in 2017 Chris McCarthy, the President of MTV, stated that the statue would be called a "Moon
-
-List of Good Charlotte awards and nominations: Good Charlotte's songs and albums have received recognition at the MTV Australia Awards, the MTV Europe Music Awards, and the MTV Video Music Awards. " The Anthem" is the second single from the band's second album "The Young and the Hopeless".  The song was awarded the "Best Rock Video" award from the MTV Video Music Awards Japan and the "Peoples Choice: Favorite International Group" award from the MuchMusic Video Awards.  The band itself has received awards including "Fave International Band" at the Nickelodeon Australian Kids' Choice Awards, "Best International Group" at the NRJ Music Awards, and "Best International Rock Act" at the TMF Awards.  As of July 2008, Good Charlotte has received eight awards from twenty nominations.
-
-2010 MTV Video Music Awards: The 2010 MTV Video Music Awards took place on September 12, 2010 at Nokia Theatre in Los Angeles, honoring the best music videos from the previous year.  Chelsea Handler hosted the event, the first woman in sixteen years – since the 1994 MTV Video Music Awards – to do so.
-
-Taylor Swift videography: American singer-songwriter Taylor Swift has released four video albums and has appeared in thirty-eight music videos, five films and three television shows.  From her eponymous debut album (2006), she released music videos for the singles "Tim McGraw", "Teardrops on My Guitar", "Our Song", and "Picture to Burn", all directed by Trey Fanjoy and released from 2006–08.  For the second of these, she earned an MTV Video Music Award for Best New Artist nomination.  She followed with three other music videos in 2008—"Beautiful Eyes" from her extended play of the same name, "Change" from the "AT&T Team USA Soundtrack" and "Love Story" from her second album "Fearless" (2008).  The latter was nominated for two awards at the 2009 CMT Music Awards—Video of the Year and Female Video of the Year.  For the video of "You Belong with Me" she won Best Female Video at the 2009 MTV Video Music Awards.  During her acceptance speech, she was interrupted by rapper Kanye West, which sparked controversy and received much media attention.
-
-MTV Video Music Award for Best Dance Video: The MTV Video Music Award for Best Dance Video was first awarded in 1989, and it was one of the original four genre categories that were added to the MTV Video Music Awards that year.  With a revamp of the awards in 2007, the category was cut out along with several others, yet it returned for the 2008 awards, where it was given a new name: Best Dancing in a Video.  In 2009 the award for Best Dancing was again eliminated from the VMAs, but it was revived again in 2010 as Best Dance Music Video.  The following year, though, the award was once again absent from the category list.  Once again, the award was revived in 2012, this time under the name of Best Electronic Dance Music Video, celebrating the rise in popularity of EDM throughout the year.  It was again eliminated for the 2013 awards.  On July 17, 2014, MTV brought the category back, this time renaming it the MTV Clubland Award for the 2014 Awards.  The pattern of awarding the moonman every other year continued in 2016 where the award was renamed Best Electronic Video.
-
-David Jost: David Jost (born 12 August 1972) is an international music producer, singer-songwriter and DJ, born in Hamburg, Germany.  His career as an international songwriter, music producer and remixer has a track record of 74 platinum & 108 gold records and 14 No. 1 hits.  He has worked with platinum selling artist including Lady Gaga, Chris Brown, Tokio Hotel, Limp Bizkit, Selena Gomez, Nelly Furtado, Keri Hilson, Aura Dione, and Adam Lambert.  For Tokio Hotel, David Jost has composed, produced and mixed six platinum selling #1 Hit Singles and three platinum selling #1 albums, he also has developed the band and is managing them.  Tokio Hotel became the biggest international rock band to come out of Germany within two decades.  Jost's work with Tokio Hotel lead to 87 media-awards, including 4 MTV European Music Awards, the MTV Video Music award Japan, 4 MTV Latin Music Awards including song of the year for "Monsoon" and also the US MTV Video Music Award (Moonman).  Even though Jost managed several careers of big media artists, he only rarely answers interviews for the press and is known for principally never giving TV interviews.  For his work as a songwriter, Jost was named Germany's best songwriter (Rock & Pop) by the GEMA (the German equivalent to the ASCAP/BMI).  Jost is currently working in his Los Angeles studios.
-
-MTV Video Music Award for Best Alternative Video: The MTV Video Music Award for Best Alternative Video (also known as Best Alternative Music Video) was first given out at the 1991 MTV Video Music Awards.  Prior to the award being called Best Alternative Video, this award was known as MTV Video Music Award for Best Post-Modern Video in 1989 and 1990.  The last of this award was given out in 1998 to Green Day for their song "Good Riddance (Time of Your Life)".  After the award's discontinuation, artists and videos who would have normally been eligible for this award became eligible for other genre categories, including Best Rock Video.
-
-Chelsea Handler: Chelsea Joy Handler (born February 25, 1975) is an American comedian, actress, writer, television host, and producer.  She hosted the late-night talk show "Chelsea Lately" on the E! network from 2007 to 2014, and released a documentary series, "Chelsea Does", on Netflix in January 2016.  In 2012, "Time" named Handler one of the 100 most influential people in the world on their annual "Time" 100 list.
-
-Question: What talk show was the host of the 2010 MTV Video Music Awards famous for?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "award_show_year": {
-      "type": "integer",
-      "description": "The year the MTV Video Music Awards took place."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "host_name": {
-      "type": "string",
-      "description": "The name of the host of the award show."
-    },
-    "talk_show_details": {
-      "type": "object",
-      "properties": {
-        "show_name": {
-          "type": "string",
-          "description": "The name of the talk show the host was famous for."
-        },
-        "network": {
-          "type": "string",
-          "description": "The network the talk show aired on."
-        },
-        "start_year": {
-          "type": "integer",
-          "description": "The start year of the talk show."
-        },
-        "end_year": {
-          "type": "integer",
-          "description": "The end year of the talk show."
-        }
-      },
-      "required": [
-        "show_name",
-        "network",
-        "start_year",
-        "end_year"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nLady Gaga videography: American singer Lady Gaga has released three video albums and has been featured in twenty-eight music videos.  From her debut album \"The Fame\" (2008), she released music videos for the singles \"Just Dance\", \"Poker Face\", \"LoveGame\" and \"Paparazzi\".  In the latter, she portrays a doomed starlet taking revenge on her lover.  She reissued her first album as \"The Fame Monster\" (2009), preceded by a music video for the lead single \"Bad Romance\", which won a Grammy Award for Best Music Video and seven MTV Video Music Awards, including Video of the Year in 2010.  The following year, Jonas Åkerlund directed the music video for \"Telephone\"—a continuation of \"Paparazzi\"—which was shot as a short film.  The video received an MTV Video Music Award for Video of the Year nomination, and was named the Best Music Video of the Decade by \"Billboard\" in January 2015.  For her 2010 video \"Alejandro\", Gaga received positive review from critics, though she was criticized by the Catholic League that alleged blasphemy.\n\nMTV Video Music Brazil: The MTV Video Music Brazil awards (originally Video Music Awards Brazil), more commonly known as VMB, were MTV Brasil's annual award ceremony, established in 1995.  MTV viewers picked the winners for most categories since 2001.  Unlike in the MTV Video Music Awards, the most important category at the MTV Video Music Brazil was the Viewer's Choice, not the Video of the Year; both of these categories merged in 2005.  In 2007, the awards have faced a major rebranding, with several categories extinguished (most notably the specific genre divisions) and even the trophies' design changed; from this year on, the awards were no longer focused on music videos, but on the artists, and the most important category became the Artist of the Year.  However, the Video of the Year category existed to award the best music video.\n\nMTV Video Music Award: An MTV Video Music Award (commonly abbreviated as a VMAs) is an award presented by the cable channel MTV to honor the best in the music video medium.  Originally conceived as an alternative to the Grammy Awards (in the video category), the annual MTV Video Music Awards ceremony has often been called the \"Super Bowl for youth\", an acknowledgment of the VMA ceremony's ability to draw millions of youth from teens to 20-somethings each year.  By 2001, the VMA had become a coveted award.  The statue given to winners is an astronaut on the moon, one of the earliest representations of MTV, and was colloquially called a \"moonman\".  However, in 2017 Chris McCarthy, the President of MTV, stated that the statue would be called a \"Moon\n\nList of Good Charlotte awards and nominations: Good Charlotte's songs and albums have received recognition at the MTV Australia Awards, the MTV Europe Music Awards, and the MTV Video Music Awards. \" The Anthem\" is the second single from the band's second album \"The Young and the Hopeless\".  The song was awarded the \"Best Rock Video\" award from the MTV Video Music Awards Japan and the \"Peoples Choice: Favorite International Group\" award from the MuchMusic Video Awards.  The band itself has received awards including \"Fave International Band\" at the Nickelodeon Australian Kids' Choice Awards, \"Best International Group\" at the NRJ Music Awards, and \"Best International Rock Act\" at the TMF Awards.  As of July 2008, Good Charlotte has received eight awards from twenty nominations.\n\n2010 MTV Video Music Awards: The 2010 MTV Video Music Awards took place on September 12, 2010 at Nokia Theatre in Los Angeles, honoring the best music videos from the previous year.  Chelsea Handler hosted the event, the first woman in sixteen years – since the 1994 MTV Video Music Awards – to do so.\n\nTaylor Swift videography: American singer-songwriter Taylor Swift has released four video albums and has appeared in thirty-eight music videos, five films and three television shows.  From her eponymous debut album (2006), she released music videos for the singles \"Tim McGraw\", \"Teardrops on My Guitar\", \"Our Song\", and \"Picture to Burn\", all directed by Trey Fanjoy and released from 2006–08.  For the second of these, she earned an MTV Video Music Award for Best New Artist nomination.  She followed with three other music videos in 2008—\"Beautiful Eyes\" from her extended play of the same name, \"Change\" from the \"AT&T Team USA Soundtrack\" and \"Love Story\" from her second album \"Fearless\" (2008).  The latter was nominated for two awards at the 2009 CMT Music Awards—Video of the Year and Female Video of the Year.  For the video of \"You Belong with Me\" she won Best Female Video at the 2009 MTV Video Music Awards.  During her acceptance speech, she was interrupted by rapper Kanye West, which sparked controversy and received much media attention.\n\nMTV Video Music Award for Best Dance Video: The MTV Video Music Award for Best Dance Video was first awarded in 1989, and it was one of the original four genre categories that were added to the MTV Video Music Awards that year.  With a revamp of the awards in 2007, the category was cut out along with several others, yet it returned for the 2008 awards, where it was given a new name: Best Dancing in a Video.  In 2009 the award for Best Dancing was again eliminated from the VMAs, but it was revived again in 2010 as Best Dance Music Video.  The following year, though, the award was once again absent from the category list.  Once again, the award was revived in 2012, this time under the name of Best Electronic Dance Music Video, celebrating the rise in popularity of EDM throughout the year.  It was again eliminated for the 2013 awards.  On July 17, 2014, MTV brought the category back, this time renaming it the MTV Clubland Award for the 2014 Awards.  The pattern of awarding the moonman every other year continued in 2016 where the award was renamed Best Electronic Video.\n\nDavid Jost: David Jost (born 12 August 1972) is an international music producer, singer-songwriter and DJ, born in Hamburg, Germany.  His career as an international songwriter, music producer and remixer has a track record of 74 platinum & 108 gold records and 14 No. 1 hits.  He has worked with platinum selling artist including Lady Gaga, Chris Brown, Tokio Hotel, Limp Bizkit, Selena Gomez, Nelly Furtado, Keri Hilson, Aura Dione, and Adam Lambert.  For Tokio Hotel, David Jost has composed, produced and mixed six platinum selling #1 Hit Singles and three platinum selling #1 albums, he also has developed the band and is managing them.  Tokio Hotel became the biggest international rock band to come out of Germany within two decades.  Jost's work with Tokio Hotel lead to 87 media-awards, including 4 MTV European Music Awards, the MTV Video Music award Japan, 4 MTV Latin Music Awards including song of the year for \"Monsoon\" and also the US MTV Video Music Award (Moonman).  Even though Jost managed several careers of big media artists, he only rarely answers interviews for the press and is known for principally never giving TV interviews.  For his work as a songwriter, Jost was named Germany's best songwriter (Rock & Pop) by the GEMA (the German equivalent to the ASCAP/BMI).  Jost is currently working in his Los Angeles studios.\n\nMTV Video Music Award for Best Alternative Video: The MTV Video Music Award for Best Alternative Video (also known as Best Alternative Music Video) was first given out at the 1991 MTV Video Music Awards.  Prior to the award being called Best Alternative Video, this award was known as MTV Video Music Award for Best Post-Modern Video in 1989 and 1990.  The last of this award was given out in 1998 to Green Day for their song \"Good Riddance (Time of Your Life)\".  After the award's discontinuation, artists and videos who would have normally been eligible for this award became eligible for other genre categories, including Best Rock Video.\n\nChelsea Handler: Chelsea Joy Handler (born February 25, 1975) is an American comedian, actress, writer, television host, and producer.  She hosted the late-night talk show \"Chelsea Lately\" on the E! network from 2007 to 2014, and released a documentary series, \"Chelsea Does\", on Netflix in January 2016.  In 2012, \"Time\" named Handler one of the 100 most influential people in the world on their annual \"Time\" 100 list.\n\nQuestion: What talk show was the host of the 2010 MTV Video Music Awards famous for?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"award_show_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the MTV Video Music Awards took place.\"\n    },\n    \"host_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the host of the award show.\"\n    },\n    \"talk_show_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"show_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the talk show the host was famous for.\"\n        },\n        \"network\": {\n          \"type\": \"string\",\n          \"description\": \"The network the talk show aired on.\"\n        },\n        \"start_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The start year of the talk show.\"\n        },\n        \"end_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The end year of the talk show.\"\n        }\n      },\n      \"required\": [\n        \"show_name\",\n        \"network\",\n        \"start_year\",\n        \"end_year\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"award_show_year\",\n    \"host_name\",\n    \"talk_show_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "award_show_year",
-    "host_name",
-    "talk_show_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "award_show_year": {
+        "type": "integer",
+        "description": "The year the MTV Video Music Awards took place."
+      },
+      "host_name": {
+        "type": "string",
+        "description": "The name of the host of the award show."
+      },
+      "talk_show_details": {
+        "type": "object",
+        "properties": {
+          "show_name": {
+            "type": "string",
+            "description": "The name of the talk show the host was famous for."
+          },
+          "network": {
+            "type": "string",
+            "description": "The network the talk show aired on."
+          },
+          "start_year": {
+            "type": "integer",
+            "description": "The start year of the talk show."
+          },
+          "end_year": {
+            "type": "integer",
+            "description": "The end year of the talk show."
+          }
+        },
+        "required": [
+          "show_name",
+          "network",
+          "start_year",
+          "end_year"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "award_show_year",
+      "host_name",
+      "talk_show_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

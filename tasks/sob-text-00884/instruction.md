@@ -1,73 +1,50 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-List of Emmerdale characters (2015): "Emmerdale" is a British soap opera first broadcast on 16 October 1972.  The following is a list of characters that first appeared or will appear during 2015, by order of first appearance.  All characters are introduced by the series producer Kate Oates.  The first character to be introduced was Emma Barton in January.  Nurse Darren Thompson arrived in March and Lachlan White's father, Donny Cairn arrived in April.  The year's first birth, Moses Dingle, the son of Charity Tate and Ross Barton, occurred in June.  Jermaine Bailey was also introduced during the same month.  The second birth occurred in September as Vanessa Woodfield gave birth to her and Kirin Kotecha's child, Johnny Woodfield.  Tess Harris, the woman whom Paddy Kirk had an affair with, also began appearing in September.
-
-Midnight Son: Midnight Son is a 2011 vampire horror film written and directed by Scott Leberecht, produced by Matt Compton, and starring Zak Kilberg.  A trailer was released late October 2010.
-
-Abdur-Razzaq Nurul-Ain: Syed Abdur-Razzaq Nurul-Ain is the successor of the Sufi saint Syed Ashraf Jahangir Semnani.  From amongst the descendants of Syed Abdul Razzaq Jilani, the line of saints of Ashrafia Jilania is one of the most reputed households belonging to the Indo-Pak subcontinent.  Within this line, Syed Abdul Razzaq, popularly known as Nur-ul-Ain, was the heir, disciple and Khalifa of Syed Ashraf Jehangir Semani.  Syed Abdul Razzaq was the son of his maternal cousin.  Syed Abdul Razzaq is the 11th descendant of the greatest Sufi Syed Abdul Qadir Jilani of Jilan, Iraq.  Abdur-Razzaq Nurul-Ain first met Ashraf Jahangir Semnani at the age of twelve years in Baghdad when Ashraf Jahangir Semnani made a visit there and from there on never parted from his company.  He adopted Syed Abdul Razzaq as his son and made him the heir and caretaker.  Originated from the name of Syed Ashraf, this line of saints is still called as Ashrafia.  Syed Ashraf Jehangir Semani died in 808 AH and Syed Abdul Razzaq became the heir to his throne.  After strenuous spiritual training he was bestowed with Khilafat (Spiritual Successor) and from him the Ashrafi spiritual chain flourished.  According to the tradition of Mirat-ul-Asrar, at the time of his death, Syed Ashraf Jehangir Semani was either 106 or 110 years of age.  In Tohfta ul Abrar, his age is written as 120 and year of birth is 688 AH.  Even his adopted son, Syed Abdul Razzaq was 120 of age at the time of his death.  He spent 12 years before he took Bayat and 68 years in travel and in the service of Syed Ashraf Jehangir Semani and the remaining 40 years after the death of his Murshid at the throne of Khilafat.  In accordance to this, his birth year becomes 728, year of arrival in India 740 and year of death 848.  His grave is located next to that of Ashraf Jahangir Semnani in the same Shrine in Kichauccha Sharif, Dist.  Ambedkar Nagar, Uttar Pradesh, India.
-
-List of EastEnders characters (2015): The following is a list of characters that first appeared in the BBC soap opera "EastEnders" in 2015, by order of first appearance.  All characters were introduced by the show's executive producer Dominic Treadwell-Collins.  January saw the arrival of the year's first baby, Matthew Mitchell Cotton, son of Ronnie Mitchell and Charlie Cotton.  The following month saw the show celebrate its 30th anniversary with a live week, which oversaw the live arrivals of Vincent Hubbard, and the second baby born in 2015, Pearl Fox-Hubbard, Vincent's daughter with Kim Fox-Hubbard.  In March, Claudette Hubbard arrived as Donna Yates' foster mother and an acquaintance of Les Coker followed by Stan Carter's friend Cyril Bishop and Sharon Mitchell's aunt Margaret Midhurst, whilst Denise van Outen joined in April as Karin Smart.  May saw the arrivals of June Whitfield as Sister Ruth, Mick and Linda Carter's son Ollie Carter, the year's third baby, Mo Harris' business associate Fat Elvis and Kush Kazemi's mother, Carmel.  Paul Coker, the grandson of Les and Pam Coker, was introduced in June, as was Jade Green, the long-lost daughter of Shabnam Masood and Dean Wicks.  After Kathy Sullivan's surprise return during the 30th anniversary in February, her husband Gavin Sullivan made his debut in August.  September saw the arrivals of Max Branning's prosecution lawyer Hazel Warren and Louie Beale, the baby son of Lauren Branning and Peter Beale.  In October, Elaine Peacock's toyboy lover Jason Adams was introduced, as well as first transgender character to be played by a transgender actor, Kyle Slater.  December saw the birth of the year's fifth baby, Kush and Stacey Slater's son, Arthur Fowler.
-
-Midnight Son (album): Midnight Son is the second studio album released by Son Seals.  It was produced by Son Seals, Bruce Iglauer, and Richard McLeese and released by Alligator Records in 1976.
-
-Maria Korp: Maria Korp (born Maria Matilde; 14 January 1955 – 5 August 2005) was an Australian woman reported missing for four days and later found, barely alive, in the boot of her car on 13 February 2005.  She spent a short time in a coma before emerging into a state of post coma unresponsiveness.  She became the centre of a controversy in Australia during 2005.  Depending upon their viewpoint, persons characterised the controversy as being about euthanasia or about human rights and protecting people with disabilities.  On 26 July 2005 Victoria's Public Advocate, Julian Gardner, announced that the feeding tube to Maria Korp would cease to be used for providing artificial nutrition and hydration, that palliative care would be implemented and that she was expected to die within 7–14 days.  Korp died on 5 August 2005.
-
-Matthew Buchanan: Matthew Buchanan is a fictional character on the American soap opera "One Life to Live".  Born onscreen in 1999, the character was rapidly aged in 2001 with the casting of Eddie Alderson, re-establishing his birth year as 1994 (which is also Alderson's birth year).  Alderson stayed with the series until the ABC Daytime finale in 2012.  Upon resuming as a web series via The Online Network, Robert Gorrie was cast in the role and debuted April 29, 2013, ultimately revising his birth year to 1992.
-
-Bukowski (band): Bukowski is a French musical power rock band formed in Paris in 2007.  It worked as a trio, before expanding into a four-member band.  Bukowski has released four studio albums: "Amazing Grace" in 2009, "The Midnight Son's", the charting "Hazardous Creatures" in 2013 and "On The Rocks" in 2015.
-
-Midnight Son (opera): Midnight Son is an opera by composer Gordon Kerry and librettist Louis Nowra.  The contemporary opera is inspired by the true story of the murder of Melbourne woman Maria Korp.
-
-List of Home and Away characters (1988): "Home and Away" is an Australian television soap opera.  It was first broadcast on the Seven Network on 17 January 1988.  The following is a list of characters that first appeared in that year, by order of first appearance.  They were all introduced by the show's executive producer Alan Bateman who oversaw the serial before being succeeded by series producer Des Monaghan whose episodes first began airing in November.  Sixteen of the original eighteen regular characters debuted in the pilot episode.  The Fletcher family consisting of Frank Morgan, Tom and Pippa Fletcher, Carly Morris, Steven Matheson, Sally Keating and Lynn Davenport were introduced first.  Summer Bay residents Alf Stewart, Floss and Neville McPhee, Bobby Simpson, Donald Fisher, Ailsa Hogan, Martin Dibble, Lance Smart and Matt Wilson also made their debuts.  They were soon joined by Alf's daughter Roo and sister, Celia.  In March, Lyn Collingwood arrived as Lance's mother, Colleen.  The same month, Liddy Clark began playing Kerry Barlow and Amanda Newman-Phillips joined the cast as Narelle Smart.  In April, Gerry Sont began playing Brett Macklin, a love interest for Roo.  Barbara Stephens and Cornelia Frances arrived in June as Alf's other sisters Barbara Stewart and Morag Bellingham, respectively.  July saw Simon Kay enter as Donald and Barbara's son Alan Fisher.  Gavin Harrison began playing Revhead in August and was soon followed by John Morris as Philip Matheson.  That month saw the serial's first birth Christopher Fletcher, son of the established Tom and Pippa.  Another birth occurred in September, Martha Stewart, daughter of Roo and Brett.  Sandie Lillingston joined the cast in the same episode as Brett's sister, Stacey and in November, George Leppard guested as Al Simpson.
-
-Question: What is the year of birth of the woman who inspired the opera Midnight Son?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "opera_title": {
-      "type": "string",
-      "description": "The title of the opera."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "inspired_person": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the person who inspired the opera."
-        },
-        "birth_year": {
-          "type": "integer",
-          "description": "The year of birth of the inspired person."
-        }
-      },
-      "required": [
-        "name",
-        "birth_year"
-      ],
-      "additionalProperties": false
-    },
-    "art_form_type": {
-      "type": "string",
-      "description": "The type of art form (e.g., opera, film)."
+    {
+      "role": "user",
+      "content": "Context:\nList of Emmerdale characters (2015): \"Emmerdale\" is a British soap opera first broadcast on 16 October 1972.  The following is a list of characters that first appeared or will appear during 2015, by order of first appearance.  All characters are introduced by the series producer Kate Oates.  The first character to be introduced was Emma Barton in January.  Nurse Darren Thompson arrived in March and Lachlan White's father, Donny Cairn arrived in April.  The year's first birth, Moses Dingle, the son of Charity Tate and Ross Barton, occurred in June.  Jermaine Bailey was also introduced during the same month.  The second birth occurred in September as Vanessa Woodfield gave birth to her and Kirin Kotecha's child, Johnny Woodfield.  Tess Harris, the woman whom Paddy Kirk had an affair with, also began appearing in September.\n\nMidnight Son: Midnight Son is a 2011 vampire horror film written and directed by Scott Leberecht, produced by Matt Compton, and starring Zak Kilberg.  A trailer was released late October 2010.\n\nAbdur-Razzaq Nurul-Ain: Syed Abdur-Razzaq Nurul-Ain is the successor of the Sufi saint Syed Ashraf Jahangir Semnani.  From amongst the descendants of Syed Abdul Razzaq Jilani, the line of saints of Ashrafia Jilania is one of the most reputed households belonging to the Indo-Pak subcontinent.  Within this line, Syed Abdul Razzaq, popularly known as Nur-ul-Ain, was the heir, disciple and Khalifa of Syed Ashraf Jehangir Semani.  Syed Abdul Razzaq was the son of his maternal cousin.  Syed Abdul Razzaq is the 11th descendant of the greatest Sufi Syed Abdul Qadir Jilani of Jilan, Iraq.  Abdur-Razzaq Nurul-Ain first met Ashraf Jahangir Semnani at the age of twelve years in Baghdad when Ashraf Jahangir Semnani made a visit there and from there on never parted from his company.  He adopted Syed Abdul Razzaq as his son and made him the heir and caretaker.  Originated from the name of Syed Ashraf, this line of saints is still called as Ashrafia.  Syed Ashraf Jehangir Semani died in 808 AH and Syed Abdul Razzaq became the heir to his throne.  After strenuous spiritual training he was bestowed with Khilafat (Spiritual Successor) and from him the Ashrafi spiritual chain flourished.  According to the tradition of Mirat-ul-Asrar, at the time of his death, Syed Ashraf Jehangir Semani was either 106 or 110 years of age.  In Tohfta ul Abrar, his age is written as 120 and year of birth is 688 AH.  Even his adopted son, Syed Abdul Razzaq was 120 of age at the time of his death.  He spent 12 years before he took Bayat and 68 years in travel and in the service of Syed Ashraf Jehangir Semani and the remaining 40 years after the death of his Murshid at the throne of Khilafat.  In accordance to this, his birth year becomes 728, year of arrival in India 740 and year of death 848.  His grave is located next to that of Ashraf Jahangir Semnani in the same Shrine in Kichauccha Sharif, Dist.  Ambedkar Nagar, Uttar Pradesh, India.\n\nList of EastEnders characters (2015): The following is a list of characters that first appeared in the BBC soap opera \"EastEnders\" in 2015, by order of first appearance.  All characters were introduced by the show's executive producer Dominic Treadwell-Collins.  January saw the arrival of the year's first baby, Matthew Mitchell Cotton, son of Ronnie Mitchell and Charlie Cotton.  The following month saw the show celebrate its 30th anniversary with a live week, which oversaw the live arrivals of Vincent Hubbard, and the second baby born in 2015, Pearl Fox-Hubbard, Vincent's daughter with Kim Fox-Hubbard.  In March, Claudette Hubbard arrived as Donna Yates' foster mother and an acquaintance of Les Coker followed by Stan Carter's friend Cyril Bishop and Sharon Mitchell's aunt Margaret Midhurst, whilst Denise van Outen joined in April as Karin Smart.  May saw the arrivals of June Whitfield as Sister Ruth, Mick and Linda Carter's son Ollie Carter, the year's third baby, Mo Harris' business associate Fat Elvis and Kush Kazemi's mother, Carmel.  Paul Coker, the grandson of Les and Pam Coker, was introduced in June, as was Jade Green, the long-lost daughter of Shabnam Masood and Dean Wicks.  After Kathy Sullivan's surprise return during the 30th anniversary in February, her husband Gavin Sullivan made his debut in August.  September saw the arrivals of Max Branning's prosecution lawyer Hazel Warren and Louie Beale, the baby son of Lauren Branning and Peter Beale.  In October, Elaine Peacock's toyboy lover Jason Adams was introduced, as well as first transgender character to be played by a transgender actor, Kyle Slater.  December saw the birth of the year's fifth baby, Kush and Stacey Slater's son, Arthur Fowler.\n\nMidnight Son (album): Midnight Son is the second studio album released by Son Seals.  It was produced by Son Seals, Bruce Iglauer, and Richard McLeese and released by Alligator Records in 1976.\n\nMaria Korp: Maria Korp (born Maria Matilde; 14 January 1955 – 5 August 2005) was an Australian woman reported missing for four days and later found, barely alive, in the boot of her car on 13 February 2005.  She spent a short time in a coma before emerging into a state of post coma unresponsiveness.  She became the centre of a controversy in Australia during 2005.  Depending upon their viewpoint, persons characterised the controversy as being about euthanasia or about human rights and protecting people with disabilities.  On 26 July 2005 Victoria's Public Advocate, Julian Gardner, announced that the feeding tube to Maria Korp would cease to be used for providing artificial nutrition and hydration, that palliative care would be implemented and that she was expected to die within 7–14 days.  Korp died on 5 August 2005.\n\nMatthew Buchanan: Matthew Buchanan is a fictional character on the American soap opera \"One Life to Live\".  Born onscreen in 1999, the character was rapidly aged in 2001 with the casting of Eddie Alderson, re-establishing his birth year as 1994 (which is also Alderson's birth year).  Alderson stayed with the series until the ABC Daytime finale in 2012.  Upon resuming as a web series via The Online Network, Robert Gorrie was cast in the role and debuted April 29, 2013, ultimately revising his birth year to 1992.\n\nBukowski (band): Bukowski is a French musical power rock band formed in Paris in 2007.  It worked as a trio, before expanding into a four-member band.  Bukowski has released four studio albums: \"Amazing Grace\" in 2009, \"The Midnight Son's\", the charting \"Hazardous Creatures\" in 2013 and \"On The Rocks\" in 2015.\n\nMidnight Son (opera): Midnight Son is an opera by composer Gordon Kerry and librettist Louis Nowra.  The contemporary opera is inspired by the true story of the murder of Melbourne woman Maria Korp.\n\nList of Home and Away characters (1988): \"Home and Away\" is an Australian television soap opera.  It was first broadcast on the Seven Network on 17 January 1988.  The following is a list of characters that first appeared in that year, by order of first appearance.  They were all introduced by the show's executive producer Alan Bateman who oversaw the serial before being succeeded by series producer Des Monaghan whose episodes first began airing in November.  Sixteen of the original eighteen regular characters debuted in the pilot episode.  The Fletcher family consisting of Frank Morgan, Tom and Pippa Fletcher, Carly Morris, Steven Matheson, Sally Keating and Lynn Davenport were introduced first.  Summer Bay residents Alf Stewart, Floss and Neville McPhee, Bobby Simpson, Donald Fisher, Ailsa Hogan, Martin Dibble, Lance Smart and Matt Wilson also made their debuts.  They were soon joined by Alf's daughter Roo and sister, Celia.  In March, Lyn Collingwood arrived as Lance's mother, Colleen.  The same month, Liddy Clark began playing Kerry Barlow and Amanda Newman-Phillips joined the cast as Narelle Smart.  In April, Gerry Sont began playing Brett Macklin, a love interest for Roo.  Barbara Stephens and Cornelia Frances arrived in June as Alf's other sisters Barbara Stewart and Morag Bellingham, respectively.  July saw Simon Kay enter as Donald and Barbara's son Alan Fisher.  Gavin Harrison began playing Revhead in August and was soon followed by John Morris as Philip Matheson.  That month saw the serial's first birth Christopher Fletcher, son of the established Tom and Pippa.  Another birth occurred in September, Martha Stewart, daughter of Roo and Brett.  Sandie Lillingston joined the cast in the same episode as Brett's sister, Stacey and in November, George Leppard guested as Al Simpson.\n\nQuestion: What is the year of birth of the woman who inspired the opera Midnight Son?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"opera_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the opera.\"\n    },\n    \"inspired_person\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the person who inspired the opera.\"\n        },\n        \"birth_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year of birth of the inspired person.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"birth_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"art_form_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of art form (e.g., opera, film).\"\n    }\n  },\n  \"required\": [\n    \"opera_title\",\n    \"inspired_person\",\n    \"art_form_type\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "opera_title",
-    "inspired_person",
-    "art_form_type"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "opera_title": {
+        "type": "string",
+        "description": "The title of the opera."
+      },
+      "inspired_person": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the person who inspired the opera."
+          },
+          "birth_year": {
+            "type": "integer",
+            "description": "The year of birth of the inspired person."
+          }
+        },
+        "required": [
+          "name",
+          "birth_year"
+        ],
+        "additionalProperties": false
+      },
+      "art_form_type": {
+        "type": "string",
+        "description": "The type of art form (e.g., opera, film)."
+      }
+    },
+    "required": [
+      "opera_title",
+      "inspired_person",
+      "art_form_type"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

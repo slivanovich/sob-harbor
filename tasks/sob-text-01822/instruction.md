@@ -1,102 +1,79 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Fred Sheldon (Welsh footballer): Fredrick Sheldon (born in Barry, Vale of Glamorgan, Wales) was a footballer who played in The Football League for Aberdare Athletic.  He initially played for Barry Town and was transferred to Swansea Town in 1919.  In the South Wales derby between Swansea Town and Cardiff City in 1919, Sheldon famously scored both goals as Swansea recovered from a 1-0 deficit to win 2-1.
-
-Angharad Mair: Angharad Mair (born 31 March 1960) is a Welsh television presenter, previously the lead presenter on the nightly S4C Welsh language news programme, "Heno" and the BBC Wales news programme, "Wales Today".
-
-Barry Cowan (broadcaster): Barry Cowan (1 February 1948 – 16 June 2004) was a high-profile journalist and broadcaster with BBC Northern Ireland.  In 1974, he became the anchor of BBC Northern Ireland's flagship evening television news programme "Scene Around Six", which established him as a household name in Northern Ireland.  This involved bringing the news into people's homes during some of the worst years of the Northern Irish Troubles.
-
-Marion Barry: Marion Shepilov Barry (born Marion Barry Jr.; March 6, 1936 – November 23, 2014) was an American politician who served as the second Mayor of the District of Columbia from 1979 to 1991, and again as the fourth mayor from 1995 to 1999.  A Democrat, Barry had served three tenures on the Council of the District of Columbia, representing as an at-large member from 1975 to 1979 and in Ward 8 from 1993 to 1995, and again from 2005 to 2014.  In the 1960s he was involved in the Civil Rights Movement, first as a member of the Nashville Student Movement and then serving as the first chairman of the Student Nonviolent Coordinating Committee (SNCC).
-
-Richard Johnson (rugby): Richard Johnston, born (26-02-1980) in Neath, Wales, first started his career at Neath RFC in 1998 where he gained representative honours for Wales under 18/19's.  In 2000 Richard signed for Pontypridd RFC where he spent three years.  In his time at Ponty, Richard was selected for Wales U21's and Wales 7's and was involved in the squad that won the Welsh Cup in 2002 and narrowly lost to Sale in the Parker Pen European Shield Final.  After regional rugby was formed he returned to Neath RFC winning the league twice and Welsh Cup in a three-year stint.  Richard then changed codes, signing for Crusader RL and won 4 caps for Wales.  He also played on the 7's circuit playing for Samurai 7's, White Hart Marauders, Crusaders and Scorpions.  In 2007 Richard left rugby to pursue a career outside sport but continues to play on the 7's circuit and now vets competitions.
-
-Damian Green: Damian Howard Green (born 17 January 1956) is a British politician who has been the Conservative Member of Parliament for Ashford since 1997 and the First Secretary of State and Minister for the Cabinet Office since 11 June 2017.  Green was born in Barry, Wales, and studied PPE at Balliol College, Oxford.  Before entering politics, Green worked as a journalist for the BBC, Channel 4 and "The Times".
-
-Barry Welsh is Coming: Barry Welsh is Coming was a sketch show produced by Absolutely Productions for HTV Wales.  The programme was first broadcast at 10:40pm on Friday 6 September 1996 and originally ran for 6 series with some episodes later broadcast on the Paramount Comedy Channel.  The main star was John Sparkes, who played the geekish presenter Barry Welsh, along with other roles.  For the final series, the show was renamed "Barry Welsh is Going" and consisted of three compilation specials.  The series was replaced by "Jeff Global's Global Probe", which ended after six episodes.
-
-May Howlett: May Howlett (born 1931) is an Australian composer and actress.  She earned a bachelor's degree in music in 1954, from Melbourne University.  In 1955 she earned a Diploma of Education.  In 1971 she was given her first commission, which was a commission for a cantata for the first concert of the Canberra New Music Society.  She was then offered the first composition scholarship at the Canberra School of Music.  In 1973 she toured with Young Opera for the Arts Council of New South Wales.  Subsequently she appeared in an ABC TV opera production of Malcolm Williamson's "Violins of St. Jacques", and became involved in acting.  For approximately the next twenty years she acted, appearing in six films, various television shows and series, and on the stage.  She also took her original one-woman show to Carnegie Hall.  In 1981 she toured with Barry Humphries as his associate pianist.  In 1987 she began composing again, and also became a production coordinator and assistant director with the New South Wales Department of Education.  In 1989, she created the State Drama Camp and the State Drama Festival.  In 1996 she and Audley Green received an artist-in-residency to complete a work-in-progress for harpsichord, viola and cello.  In 2006, she earned a master's degree in music from Macquarie University; her thesis was titled "The Production of a Contemporary Chamber Opera", and was accompanied by a revised score, with piano reduction and workshop recording, of her chamber opera, "The Boy Who Wasn't There."
-
-E-Borders: e-Borders was an advanced passenger information programme which aimed to collect and store information on passengers and crew entering and leaving the United Kingdom.  Passengers details were to be checked against terror and criminal watch lists before being stored on the e-borders database.  Due to European law on free movement EU carriers and ports supply information to the UK Border Agency on a voluntary basis, however in March 2012 Damian Green said that by April e-Borders would be collecting information an all passengers on 100% of non-EEA flights to the UK.  The information of the passengers and crew was to be collected by the airline, train operating company, ferry and other carriers and ports and is then passed on to the e-Borders programme via the Carrier Gateway provided by Serco.  In 2014 it was announced that the system would be scrapped.
-
-John Vincent Barry: Sir John Vincent William Barry KC (13 June 1903 – 8 November 1969) was an Australian justice of the Supreme Court of Victoria, and an expert in criminology.  Born the eldest child of William Edward Barry and Sarah Lena Jeanette, née Keene in Albury, New South Wales, Barry was educated in St Patrick's College, a small convent school in Goulburn.  In 1921, he finished his tertiary education in the University of Melbourne.  After being articled to the legal firm, Luke Murphy and Company, in 1921, Barry qualified as a lawyer in 1923, as a result of graduation from the articled clerks' course.
-
-Question: Who was born in Barry, Wales and was involved in the E-borders programme?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The full name of the person."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "birth_location": {
-      "type": "object",
-      "properties": {
-        "city": {
-          "type": "string",
-          "description": "The city where the person was born."
-        },
-        "country": {
-          "type": "string",
-          "description": "The country or region where the person was born."
-        }
-      },
-      "required": [
-        "city",
-        "country"
-      ],
-      "additionalProperties": false
-    },
-    "e_borders_involvement": {
-      "type": "object",
-      "properties": {
-        "program_name": {
-          "type": "string",
-          "description": "The name of the program the person was involved with."
-        },
-        "action_taken": {
-          "type": "string",
-          "description": "A description of the person's involvement or action related to the program."
-        },
-        "action_date": {
-          "type": "string",
-          "description": "The date of the action or involvement."
-        },
-        "action_detail": {
-          "type": "string",
-          "description": "Specific details of the action taken."
-        }
-      },
-      "required": [
-        "program_name",
-        "action_taken",
-        "action_date",
-        "action_detail"
-      ],
-      "additionalProperties": false
-    },
-    "political_affiliation": {
-      "type": "string",
-      "description": "The political party the person is affiliated with."
+    {
+      "role": "user",
+      "content": "Context:\nFred Sheldon (Welsh footballer): Fredrick Sheldon (born in Barry, Vale of Glamorgan, Wales) was a footballer who played in The Football League for Aberdare Athletic.  He initially played for Barry Town and was transferred to Swansea Town in 1919.  In the South Wales derby between Swansea Town and Cardiff City in 1919, Sheldon famously scored both goals as Swansea recovered from a 1-0 deficit to win 2-1.\n\nAngharad Mair: Angharad Mair (born 31 March 1960) is a Welsh television presenter, previously the lead presenter on the nightly S4C Welsh language news programme, \"Heno\" and the BBC Wales news programme, \"Wales Today\".\n\nBarry Cowan (broadcaster): Barry Cowan (1 February 1948 – 16 June 2004) was a high-profile journalist and broadcaster with BBC Northern Ireland.  In 1974, he became the anchor of BBC Northern Ireland's flagship evening television news programme \"Scene Around Six\", which established him as a household name in Northern Ireland.  This involved bringing the news into people's homes during some of the worst years of the Northern Irish Troubles.\n\nMarion Barry: Marion Shepilov Barry (born Marion Barry Jr.; March 6, 1936 – November 23, 2014) was an American politician who served as the second Mayor of the District of Columbia from 1979 to 1991, and again as the fourth mayor from 1995 to 1999.  A Democrat, Barry had served three tenures on the Council of the District of Columbia, representing as an at-large member from 1975 to 1979 and in Ward 8 from 1993 to 1995, and again from 2005 to 2014.  In the 1960s he was involved in the Civil Rights Movement, first as a member of the Nashville Student Movement and then serving as the first chairman of the Student Nonviolent Coordinating Committee (SNCC).\n\nRichard Johnson (rugby): Richard Johnston, born (26-02-1980) in Neath, Wales, first started his career at Neath RFC in 1998 where he gained representative honours for Wales under 18/19's.  In 2000 Richard signed for Pontypridd RFC where he spent three years.  In his time at Ponty, Richard was selected for Wales U21's and Wales 7's and was involved in the squad that won the Welsh Cup in 2002 and narrowly lost to Sale in the Parker Pen European Shield Final.  After regional rugby was formed he returned to Neath RFC winning the league twice and Welsh Cup in a three-year stint.  Richard then changed codes, signing for Crusader RL and won 4 caps for Wales.  He also played on the 7's circuit playing for Samurai 7's, White Hart Marauders, Crusaders and Scorpions.  In 2007 Richard left rugby to pursue a career outside sport but continues to play on the 7's circuit and now vets competitions.\n\nDamian Green: Damian Howard Green (born 17 January 1956) is a British politician who has been the Conservative Member of Parliament for Ashford since 1997 and the First Secretary of State and Minister for the Cabinet Office since 11 June 2017.  Green was born in Barry, Wales, and studied PPE at Balliol College, Oxford.  Before entering politics, Green worked as a journalist for the BBC, Channel 4 and \"The Times\".\n\nBarry Welsh is Coming: Barry Welsh is Coming was a sketch show produced by Absolutely Productions for HTV Wales.  The programme was first broadcast at 10:40pm on Friday 6 September 1996 and originally ran for 6 series with some episodes later broadcast on the Paramount Comedy Channel.  The main star was John Sparkes, who played the geekish presenter Barry Welsh, along with other roles.  For the final series, the show was renamed \"Barry Welsh is Going\" and consisted of three compilation specials.  The series was replaced by \"Jeff Global's Global Probe\", which ended after six episodes.\n\nMay Howlett: May Howlett (born 1931) is an Australian composer and actress.  She earned a bachelor's degree in music in 1954, from Melbourne University.  In 1955 she earned a Diploma of Education.  In 1971 she was given her first commission, which was a commission for a cantata for the first concert of the Canberra New Music Society.  She was then offered the first composition scholarship at the Canberra School of Music.  In 1973 she toured with Young Opera for the Arts Council of New South Wales.  Subsequently she appeared in an ABC TV opera production of Malcolm Williamson's \"Violins of St. Jacques\", and became involved in acting.  For approximately the next twenty years she acted, appearing in six films, various television shows and series, and on the stage.  She also took her original one-woman show to Carnegie Hall.  In 1981 she toured with Barry Humphries as his associate pianist.  In 1987 she began composing again, and also became a production coordinator and assistant director with the New South Wales Department of Education.  In 1989, she created the State Drama Camp and the State Drama Festival.  In 1996 she and Audley Green received an artist-in-residency to complete a work-in-progress for harpsichord, viola and cello.  In 2006, she earned a master's degree in music from Macquarie University; her thesis was titled \"The Production of a Contemporary Chamber Opera\", and was accompanied by a revised score, with piano reduction and workshop recording, of her chamber opera, \"The Boy Who Wasn't There.\"\n\nE-Borders: e-Borders was an advanced passenger information programme which aimed to collect and store information on passengers and crew entering and leaving the United Kingdom.  Passengers details were to be checked against terror and criminal watch lists before being stored on the e-borders database.  Due to European law on free movement EU carriers and ports supply information to the UK Border Agency on a voluntary basis, however in March 2012 Damian Green said that by April e-Borders would be collecting information an all passengers on 100% of non-EEA flights to the UK.  The information of the passengers and crew was to be collected by the airline, train operating company, ferry and other carriers and ports and is then passed on to the e-Borders programme via the Carrier Gateway provided by Serco.  In 2014 it was announced that the system would be scrapped.\n\nJohn Vincent Barry: Sir John Vincent William Barry KC (13 June 1903 – 8 November 1969) was an Australian justice of the Supreme Court of Victoria, and an expert in criminology.  Born the eldest child of William Edward Barry and Sarah Lena Jeanette, née Keene in Albury, New South Wales, Barry was educated in St Patrick's College, a small convent school in Goulburn.  In 1921, he finished his tertiary education in the University of Melbourne.  After being articled to the legal firm, Luke Murphy and Company, in 1921, Barry qualified as a lawyer in 1923, as a result of graduation from the articled clerks' course.\n\nQuestion: Who was born in Barry, Wales and was involved in the E-borders programme?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the person.\"\n    },\n    \"birth_location\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"city\": {\n          \"type\": \"string\",\n          \"description\": \"The city where the person was born.\"\n        },\n        \"country\": {\n          \"type\": \"string\",\n          \"description\": \"The country or region where the person was born.\"\n        }\n      },\n      \"required\": [\n        \"city\",\n        \"country\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"e_borders_involvement\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"program_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the program the person was involved with.\"\n        },\n        \"action_taken\": {\n          \"type\": \"string\",\n          \"description\": \"A description of the person's involvement or action related to the program.\"\n        },\n        \"action_date\": {\n          \"type\": \"string\",\n          \"description\": \"The date of the action or involvement.\"\n        },\n        \"action_detail\": {\n          \"type\": \"string\",\n          \"description\": \"Specific details of the action taken.\"\n        }\n      },\n      \"required\": [\n        \"program_name\",\n        \"action_taken\",\n        \"action_date\",\n        \"action_detail\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"political_affiliation\": {\n      \"type\": \"string\",\n      \"description\": \"The political party the person is affiliated with.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"birth_location\",\n    \"e_borders_involvement\",\n    \"political_affiliation\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "birth_location",
-    "e_borders_involvement",
-    "political_affiliation"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The full name of the person."
+      },
+      "birth_location": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "The city where the person was born."
+          },
+          "country": {
+            "type": "string",
+            "description": "The country or region where the person was born."
+          }
+        },
+        "required": [
+          "city",
+          "country"
+        ],
+        "additionalProperties": false
+      },
+      "e_borders_involvement": {
+        "type": "object",
+        "properties": {
+          "program_name": {
+            "type": "string",
+            "description": "The name of the program the person was involved with."
+          },
+          "action_taken": {
+            "type": "string",
+            "description": "A description of the person's involvement or action related to the program."
+          },
+          "action_date": {
+            "type": "string",
+            "description": "The date of the action or involvement."
+          },
+          "action_detail": {
+            "type": "string",
+            "description": "Specific details of the action taken."
+          }
+        },
+        "required": [
+          "program_name",
+          "action_taken",
+          "action_date",
+          "action_detail"
+        ],
+        "additionalProperties": false
+      },
+      "political_affiliation": {
+        "type": "string",
+        "description": "The political party the person is affiliated with."
+      }
+    },
+    "required": [
+      "person_name",
+      "birth_location",
+      "e_borders_involvement",
+      "political_affiliation"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

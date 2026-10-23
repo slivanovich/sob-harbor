@@ -1,82 +1,59 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Valley International Airport: Valley International Airport (VIA) (IATA: HRL, ICAO: KHRL, FAA LID: HRL) is owned by the City of Harlingen, in Cameron County, Texas.  Valley International Airport is operated by a nine member airport board appointed by the Mayor.  HRL is centrally located in the Rio Grande Valley (RGV) making it a logical choice for travel to the area.  Valley International is often referred to as the “Gateway to South Padre Island” with travel amenities that provide door to door transportation to South Padre Island.  With over 2,400 acres HRL is the largest airport in the RGV with room and resources to meet future airline expansion needs.  HRL also provides the longest runways in the area with modern aircraft approach systems that minimize chances of travel delays during inclement weather.
-
-Chiang Rai International Airport: Mae Fah Luang - Chiang Rai International Airport (Thai: ท่าอากาศยานแม่ฟ้าหลวง เชียงราย ) (old name: Chiang Rai International Airport (Thai: ท่าอากาศยานเชียงราย)) (IATA: CEI, ICAO: VTCT) is located in the city of Chiang Rai in northern Thailand.  The airport is about 8 km from the city center.  Since 1998 it has been managed by the Airports of Thailand Public Company Limited (AOT).  In 2013 the airport handled over 1,000,000 passengers and 7,000 passenger flights.  The airport has international flight facilities and serves 3 international routes to Hong Kong International Airport , Kunming Changshui International Airport and Haikou Meilan International airport.  In 2014, Airports of Thailand said that they would expand Chiang Rai airport.The plans include to build an additional taxiway, more shops and maybe extend the runaway.This should be completed in 2030.
-
-Líder Aviação: Líder Aviação (Líder Aviation) is a Brazilian airline specialising in air charter, aircraft sales and aircraft maintenance.  Its main base is in Belo Horizonte, Minas Gerais, where it has a presence at both airports.  It has other bases throughout Brazil; at Congonhas Airport and Guarulhos International Airport in São Paulo, Santos Dumont Airport, Jacarepaguá Airport and Galeão International Airport in Rio de Janeiro, Brasília International Airport, Recife's Guararapes International Airport, Macaé Airport, Val de Cães International Airport in Belém, Vitória Airport, Salvador International Airport, Porto Alegre's Salgado Filho International Airport, and Eduardo Gomes International Airport in Manaus.  Bristow Group, a large U.S. based helicopter operator with worldwide operations supporting the offshore oil and gas industry, has a financial stake in Lider.
-
-Pennsylvania Route 987: Pennsylvania Route 987 (PA 987) is a state highway in the U.S. state of Pennsylvania, running 10.3 mi from U.S. Route 22 (US 22) near the Lehigh Valley International Airport north of Allentown north to PA 946 in Klecknersville.  The route begins at a cloverleaf interchange with the US 22 freeway north of Allentown in Lehigh County and heads to the east of the airport as a four-lane divided highway called Airport Road as it crosses into Northampton County.  PA 987 narrows to a two-lane undivided road and continues north, becoming concurrent with PA 329 as it heads into Bath.  Here, PA 329 ends and PA 987 briefly runs concurrent with PA 248 before leaving the borough.  PA 987 continues northwest and serves Chapman before ending at PA 946.  PA 987 was first designated in the 1930s between US 22 (Union Boulevard) in Allentown and PA 946 in Klecknersville.  After US 22 was relocated to its present freeway alignment in 1955, the southern terminus of PA 987 was cut back to its interchange with US 22, which used to carry Interstate 78 (I-78) as well.  In the early 2000s, PA 987 was widened into a divided highway and shifted to a new alignment near the Lehigh Valley International Airport.
-
-Vancouver International Airport: Vancouver International Airport (IATA: YVR, ICAO: CYVR) is located on Sea Island in Richmond, British Columbia, Canada, about 12 km from Downtown Vancouver.  It is the second busiest airport in Canada by aircraft movements (306,799) and passengers (22.3 million), behind Toronto Pearson International Airport.  It has non-stop flights daily to Asia, Europe, Oceania, the United States, Mexico and other airports within Canada.  The airport has won several notable international best airport awards; it won the Skytrax Best North American Airport award in 2007 and 2010 through 2017.  The airport also made the list of top 10 airports in the world for the first time in 2012, rated at 9th (2012), 8th (2013), and 9th (2014) overall.  It is the only North American airport included in the top 10 for 2013 and 2014.  YVR also retains the distinction of Best Canadian Airport in the regional results.  It is a hub for Air Canada and WestJet.  It is also an operating base for Air Transat.  Vancouver International Airport is one of eight Canadian airports that have US Border Preclearance facilities.  It is also one of the few major international airports to have a terminal for scheduled floatplanes.
-
-Northern California TRACON: Northern California TRACON (NCT) (Terminal Radar Approach Control), or NorCal TRACON for short, is an air traffic control facility that provides safety alerts, separation, and sequencing of air traffic arriving, departing, and transiting the airspace and airports in Northern California.  Located in Rancho Cordova near Sacramento, NCT controls airspace over 19000 square miles, and serves Reno International Airport, Sacramento International Airport, San Jose International Airport, Oakland International Airport, and San Francisco International Airport, plus 19 other smaller airports with air traffic control towers.  NCT is the 3rd busiest TRACON in America.  NorCal TRACON is the step between local control (in an airport's control tower) and Air Route Traffic Control Center (ARTCC), in this case, Oakland Center (ICAO code: ZOA).  San Francisco International Airport is the 2nd largest airport in California and the largest airport serving Northern California.
-
-List of airports in the Greater Toronto Area: There are eight airports in the Greater Toronto Area (GTA); two of which provide scheduled passenger service.  The two airports, Toronto Pearson International Airport and Billy Bishop Toronto City Airport, are located within the GTA.  Two other airports, namely the Region of Waterloo International Airport and John C. Munro Hamilton International Airport, are passenger airports located in the outskirts of the metropolitan area.  The four airports are included in the airport metrocode YTO, designated by the International Air Transport Association (IATA).
-
-New England Airlines: New England Airlines is a regional airline based in Westerly, Rhode Island, USA.  With a main base at Westerly State Airport, it provides scheduled service to Block Island and operates charters to other destinations.
-
-Westerly State Airport: Westerly State Airport (IATA: KWST, ICAO: WST) is a public use airport in Washington County, Rhode Island, United States.  It serves the town of Westerly and is located two nautical miles (4 km) southeast of its central business district.  It is primarily a general aviation airport, but there is also scheduled airline service to Block Island provided by New England Airlines.
-
-Block Island State Airport: Block Island State Airport (IATA: KBID, ICAO: BID) is a public use airport located on Block Island, in Washington County, Rhode Island, United States.  The airport is owned by the State of Rhode Island.  It is primarily a general aviation airport, but there is also scheduled airline service to Westerly State Airport.  The airport opened in 1950.
-
-Question: Are both Valley International Airport and Westerly State Airport airports?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "is_both_airports": {
-      "type": "boolean",
-      "description": "Indicates whether both entities mentioned are identified as airports in the context."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "airports_checked": {
-      "type": "array",
-      "description": "Details for each airport mentioned in the question.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "airport_name": {
-            "type": "string",
-            "description": "The name of the airport."
+    {
+      "role": "user",
+      "content": "Context:\nValley International Airport: Valley International Airport (VIA) (IATA: HRL, ICAO: KHRL, FAA LID: HRL) is owned by the City of Harlingen, in Cameron County, Texas.  Valley International Airport is operated by a nine member airport board appointed by the Mayor.  HRL is centrally located in the Rio Grande Valley (RGV) making it a logical choice for travel to the area.  Valley International is often referred to as the “Gateway to South Padre Island” with travel amenities that provide door to door transportation to South Padre Island.  With over 2,400 acres HRL is the largest airport in the RGV with room and resources to meet future airline expansion needs.  HRL also provides the longest runways in the area with modern aircraft approach systems that minimize chances of travel delays during inclement weather.\n\nChiang Rai International Airport: Mae Fah Luang - Chiang Rai International Airport (Thai: ท่าอากาศยานแม่ฟ้าหลวง เชียงราย ) (old name: Chiang Rai International Airport (Thai: ท่าอากาศยานเชียงราย)) (IATA: CEI, ICAO: VTCT) is located in the city of Chiang Rai in northern Thailand.  The airport is about 8 km from the city center.  Since 1998 it has been managed by the Airports of Thailand Public Company Limited (AOT).  In 2013 the airport handled over 1,000,000 passengers and 7,000 passenger flights.  The airport has international flight facilities and serves 3 international routes to Hong Kong International Airport , Kunming Changshui International Airport and Haikou Meilan International airport.  In 2014, Airports of Thailand said that they would expand Chiang Rai airport.The plans include to build an additional taxiway, more shops and maybe extend the runaway.This should be completed in 2030.\n\nLíder Aviação: Líder Aviação (Líder Aviation) is a Brazilian airline specialising in air charter, aircraft sales and aircraft maintenance.  Its main base is in Belo Horizonte, Minas Gerais, where it has a presence at both airports.  It has other bases throughout Brazil; at Congonhas Airport and Guarulhos International Airport in São Paulo, Santos Dumont Airport, Jacarepaguá Airport and Galeão International Airport in Rio de Janeiro, Brasília International Airport, Recife's Guararapes International Airport, Macaé Airport, Val de Cães International Airport in Belém, Vitória Airport, Salvador International Airport, Porto Alegre's Salgado Filho International Airport, and Eduardo Gomes International Airport in Manaus.  Bristow Group, a large U.S. based helicopter operator with worldwide operations supporting the offshore oil and gas industry, has a financial stake in Lider.\n\nPennsylvania Route 987: Pennsylvania Route 987 (PA 987) is a state highway in the U.S. state of Pennsylvania, running 10.3 mi from U.S. Route 22 (US 22) near the Lehigh Valley International Airport north of Allentown north to PA 946 in Klecknersville.  The route begins at a cloverleaf interchange with the US 22 freeway north of Allentown in Lehigh County and heads to the east of the airport as a four-lane divided highway called Airport Road as it crosses into Northampton County.  PA 987 narrows to a two-lane undivided road and continues north, becoming concurrent with PA 329 as it heads into Bath.  Here, PA 329 ends and PA 987 briefly runs concurrent with PA 248 before leaving the borough.  PA 987 continues northwest and serves Chapman before ending at PA 946.  PA 987 was first designated in the 1930s between US 22 (Union Boulevard) in Allentown and PA 946 in Klecknersville.  After US 22 was relocated to its present freeway alignment in 1955, the southern terminus of PA 987 was cut back to its interchange with US 22, which used to carry Interstate 78 (I-78) as well.  In the early 2000s, PA 987 was widened into a divided highway and shifted to a new alignment near the Lehigh Valley International Airport.\n\nVancouver International Airport: Vancouver International Airport (IATA: YVR, ICAO: CYVR) is located on Sea Island in Richmond, British Columbia, Canada, about 12 km from Downtown Vancouver.  It is the second busiest airport in Canada by aircraft movements (306,799) and passengers (22.3 million), behind Toronto Pearson International Airport.  It has non-stop flights daily to Asia, Europe, Oceania, the United States, Mexico and other airports within Canada.  The airport has won several notable international best airport awards; it won the Skytrax Best North American Airport award in 2007 and 2010 through 2017.  The airport also made the list of top 10 airports in the world for the first time in 2012, rated at 9th (2012), 8th (2013), and 9th (2014) overall.  It is the only North American airport included in the top 10 for 2013 and 2014.  YVR also retains the distinction of Best Canadian Airport in the regional results.  It is a hub for Air Canada and WestJet.  It is also an operating base for Air Transat.  Vancouver International Airport is one of eight Canadian airports that have US Border Preclearance facilities.  It is also one of the few major international airports to have a terminal for scheduled floatplanes.\n\nNorthern California TRACON: Northern California TRACON (NCT) (Terminal Radar Approach Control), or NorCal TRACON for short, is an air traffic control facility that provides safety alerts, separation, and sequencing of air traffic arriving, departing, and transiting the airspace and airports in Northern California.  Located in Rancho Cordova near Sacramento, NCT controls airspace over 19000 square miles, and serves Reno International Airport, Sacramento International Airport, San Jose International Airport, Oakland International Airport, and San Francisco International Airport, plus 19 other smaller airports with air traffic control towers.  NCT is the 3rd busiest TRACON in America.  NorCal TRACON is the step between local control (in an airport's control tower) and Air Route Traffic Control Center (ARTCC), in this case, Oakland Center (ICAO code: ZOA).  San Francisco International Airport is the 2nd largest airport in California and the largest airport serving Northern California.\n\nList of airports in the Greater Toronto Area: There are eight airports in the Greater Toronto Area (GTA); two of which provide scheduled passenger service.  The two airports, Toronto Pearson International Airport and Billy Bishop Toronto City Airport, are located within the GTA.  Two other airports, namely the Region of Waterloo International Airport and John C. Munro Hamilton International Airport, are passenger airports located in the outskirts of the metropolitan area.  The four airports are included in the airport metrocode YTO, designated by the International Air Transport Association (IATA).\n\nNew England Airlines: New England Airlines is a regional airline based in Westerly, Rhode Island, USA.  With a main base at Westerly State Airport, it provides scheduled service to Block Island and operates charters to other destinations.\n\nWesterly State Airport: Westerly State Airport (IATA: KWST, ICAO: WST) is a public use airport in Washington County, Rhode Island, United States.  It serves the town of Westerly and is located two nautical miles (4 km) southeast of its central business district.  It is primarily a general aviation airport, but there is also scheduled airline service to Block Island provided by New England Airlines.\n\nBlock Island State Airport: Block Island State Airport (IATA: KBID, ICAO: BID) is a public use airport located on Block Island, in Washington County, Rhode Island, United States.  The airport is owned by the State of Rhode Island.  It is primarily a general aviation airport, but there is also scheduled airline service to Westerly State Airport.  The airport opened in 1950.\n\nQuestion: Are both Valley International Airport and Westerly State Airport airports?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"is_both_airports\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates whether both entities mentioned are identified as airports in the context.\"\n    },\n    \"airports_checked\": {\n      \"type\": \"array\",\n      \"description\": \"Details for each airport mentioned in the question.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"airport_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the airport.\"\n          },\n          \"is_identified_as_airport\": {\n            \"type\": \"boolean\",\n            \"description\": \"True if the entity is explicitly identified as an airport in the context.\"\n          },\n          \"location_description\": {\n            \"type\": \"string\",\n            \"description\": \"A brief description of the airport's location from the context.\"\n          }\n        },\n        \"required\": [\n          \"airport_name\",\n          \"is_identified_as_airport\",\n          \"location_description\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"conclusion_reason\": {\n      \"type\": \"string\",\n      \"description\": \"Explanation for the conclusion based on the context.\"\n    }\n  },\n  \"required\": [\n    \"is_both_airports\",\n    \"airports_checked\",\n    \"conclusion_reason\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "is_both_airports": {
+        "type": "boolean",
+        "description": "Indicates whether both entities mentioned are identified as airports in the context."
+      },
+      "airports_checked": {
+        "type": "array",
+        "description": "Details for each airport mentioned in the question.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "airport_name": {
+              "type": "string",
+              "description": "The name of the airport."
+            },
+            "is_identified_as_airport": {
+              "type": "boolean",
+              "description": "True if the entity is explicitly identified as an airport in the context."
+            },
+            "location_description": {
+              "type": "string",
+              "description": "A brief description of the airport's location from the context."
+            }
           },
-          "is_identified_as_airport": {
-            "type": "boolean",
-            "description": "True if the entity is explicitly identified as an airport in the context."
-          },
-          "location_description": {
-            "type": "string",
-            "description": "A brief description of the airport's location from the context."
-          }
-        },
-        "required": [
-          "airport_name",
-          "is_identified_as_airport",
-          "location_description"
-        ],
-        "additionalProperties": false
+          "required": [
+            "airport_name",
+            "is_identified_as_airport",
+            "location_description"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "conclusion_reason": {
+        "type": "string",
+        "description": "Explanation for the conclusion based on the context."
       }
     },
-    "conclusion_reason": {
-      "type": "string",
-      "description": "Explanation for the conclusion based on the context."
-    }
+    "required": [
+      "is_both_airports",
+      "airports_checked",
+      "conclusion_reason"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "is_both_airports",
-    "airports_checked",
-    "conclusion_reason"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,79 +1,56 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Hampar Kelikian: Hampar Kelikian (January 17, 1899 – July 24, 1983) was a maverick orthopedic surgeon, who significantly extended the surgical field.
-
-Karen Darabedyan: Karen Darabedyan (born December 18, 1986) is an Armenian professional mixed martial artist.  He is best known for fighting in WEC's lightweight division.  He is a training partner of Karo Parisyan and Manvel Gamburyan.  He had a 12-0 amateur boxing record before he began MMA.
-
-Spirit Bay: Spirit Bay was an aboriginal family television show of 13 half-hour episodes that aired on CBC Television and TVOntario from 1982 to 1987.  The show focuses on the lives of townsfolk on an Ojibwe reservation town near MacDiarmid, Ontario.  Here, the residents have adapted to white society while retaining traditional links to the land through fishing, trapping and hunting.  The show details the spiritual kinship between Spirit Bay families, nature, and modern life on the reserve from a young person's viewpoint.  Being the first true aboriginal television series, it set the stage for all other native Canadian programming thereafter (such as "The Rez", "North of 60" and "Moccasin Flats"), and paved the way for many famous First Nations, Canadian actors.  Episodes were rebroadcast in the United States on the Disney Channel.
-
-Gil Grand: Gil Grand (born Gilles Lagrandeur on January 8, 1968 in Sudbury, Ontario, Canada) is a country music singer, best known for his hit "Famous First Words."  Active since 1998, he has released three studio albums to date: 1998's "Famous First Words", 2002's "Burnin′" and 2006's "Somebody's Someone".  He has charted several singles on the Canadian country singles charts as well, including the top ten hit "Famous First Words".
-
-The First Game: The First Game is a painting by Arnold Friberg, and was commissioned in 1968 by Chevrolet Motor Division as one of four paintings to commemorate the then-upcoming centennial celebration of college football in the United States.  It depicts the famous first game of American intercollegiate football, played by Rutgers College (now Rutgers University) and the visiting College of New Jersey (now Princeton University) on November 6, 1869, at College Field in New Brunswick, New Jersey.
-
-Famous First Words (Gil Grand album): Famous First Words is the debut studio album by Canadian country music artist Gil Grand.  It was released in June 1998 in Canada by Monument Records.  The lead-off single "Famous First Words" was a #6 hit for Grand on the Canadian country singles charts.  Two of this album's tracks were also recorded by American country artist John Michael Montgomery: "Cloud 8" on his 1996 album "What I Do the Best", and "Thanks for the G Chord" on 2000's "Brand New Me".
-
-Tootsie's Orchid Lounge: Tootsie's Orchid Lounge (also known as Tootsie's World Famous Orchid Lounge) is a honky-tonk bar located in Nashville, Tennessee behind the Ryman Auditorium.  Tootsie's has three stages that host live local talent each night; covering modern day country music artist such as Jason Aldean, Taylor Swift, and other popular country music artists as well as original work.  Some of its early famous first customers were Willie Nelson, Patsy Cline, Mel Tillis, Kris Kristofferson, Waylon Jennings, Roger Miller and numerous others country musicians.  According to www.tootsies.net, Willie Nelson received his first songwriting gig after singing at Tootsie's.  Terri Clark a Canadian-born country artist started singing at Tootsie's in 1987.  and has since become an internationally known country superstar with hits such as Better Things to Do, and the Warren Zevon cover, Poor Poor Pitiful Me.
-
-Famous First Facts: Famous First Facts is a book listing "First Happenings, Discoveries and Inventions in the United States".  The current version of the book — the seventh edition (ISBN  ), published in March 2015 — includes more than 8,000 entries on 1,400 pages.
-
-Livingstone–Stanley Monument: The Livingstone–Stanley Monument at Mugere in Burundi is 12 km south of the capital Bujumbura, overlooking Lake Tanganyika, and marks a location where explorer and missionary Dr David Livingstone and journalist and explorer Henry Morton Stanley visited and spent two nights on 25–27 November 1871.  In French it is referred to as "La Pierre de Livingstone et Stanley".  Some Burundians claim the location is where the famous first meeting of Livingstone and Stanley took place, at which the latter uttered the famous words "Dr Livingstone, I presume?" .
-
-Manvel Gamburyan: Manvel "Manny" Gamburyan (Armenian: Մանվել Գամբուրյան ; born May 8, 1981) is a retired Armenian-American fighter who competed in the UFC's Bantamweight and Featherweight divisions.  A professional competitor since 1999, he was a cast member of Spike TV's The Ultimate Fighter 5, and also competed in the WEC and for King of the Cage.
-
-Question: How was famous first Hampar Kelikian or Manvel Gamburyan?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "famous_first_person_name": {
-      "type": "string",
-      "description": "The name of the person identified as being famous first."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "famous_first_person_birth_year": {
-      "type": "integer",
-      "description": "The birth year of the person identified as being famous first."
-    },
-    "famous_first_person_profession": {
-      "type": "string",
-      "description": "The profession of the person identified as being famous first."
-    },
-    "comparison_basis": {
-      "type": "string",
-      "description": "The reason or criteria used to determine who was famous first, based on the context."
-    },
-    "other_person_name": {
-      "type": "string",
-      "description": "The name of the other person in the comparison."
-    },
-    "other_person_birth_year": {
-      "type": "integer",
-      "description": "The birth year of the other person in the comparison."
-    },
-    "other_person_profession": {
-      "type": "string",
-      "description": "The profession of the other person in the comparison."
+    {
+      "role": "user",
+      "content": "Context:\nHampar Kelikian: Hampar Kelikian (January 17, 1899 – July 24, 1983) was a maverick orthopedic surgeon, who significantly extended the surgical field.\n\nKaren Darabedyan: Karen Darabedyan (born December 18, 1986) is an Armenian professional mixed martial artist.  He is best known for fighting in WEC's lightweight division.  He is a training partner of Karo Parisyan and Manvel Gamburyan.  He had a 12-0 amateur boxing record before he began MMA.\n\nSpirit Bay: Spirit Bay was an aboriginal family television show of 13 half-hour episodes that aired on CBC Television and TVOntario from 1982 to 1987.  The show focuses on the lives of townsfolk on an Ojibwe reservation town near MacDiarmid, Ontario.  Here, the residents have adapted to white society while retaining traditional links to the land through fishing, trapping and hunting.  The show details the spiritual kinship between Spirit Bay families, nature, and modern life on the reserve from a young person's viewpoint.  Being the first true aboriginal television series, it set the stage for all other native Canadian programming thereafter (such as \"The Rez\", \"North of 60\" and \"Moccasin Flats\"), and paved the way for many famous First Nations, Canadian actors.  Episodes were rebroadcast in the United States on the Disney Channel.\n\nGil Grand: Gil Grand (born Gilles Lagrandeur on January 8, 1968 in Sudbury, Ontario, Canada) is a country music singer, best known for his hit \"Famous First Words.\"  Active since 1998, he has released three studio albums to date: 1998's \"Famous First Words\", 2002's \"Burnin′\" and 2006's \"Somebody's Someone\".  He has charted several singles on the Canadian country singles charts as well, including the top ten hit \"Famous First Words\".\n\nThe First Game: The First Game is a painting by Arnold Friberg, and was commissioned in 1968 by Chevrolet Motor Division as one of four paintings to commemorate the then-upcoming centennial celebration of college football in the United States.  It depicts the famous first game of American intercollegiate football, played by Rutgers College (now Rutgers University) and the visiting College of New Jersey (now Princeton University) on November 6, 1869, at College Field in New Brunswick, New Jersey.\n\nFamous First Words (Gil Grand album): Famous First Words is the debut studio album by Canadian country music artist Gil Grand.  It was released in June 1998 in Canada by Monument Records.  The lead-off single \"Famous First Words\" was a #6 hit for Grand on the Canadian country singles charts.  Two of this album's tracks were also recorded by American country artist John Michael Montgomery: \"Cloud 8\" on his 1996 album \"What I Do the Best\", and \"Thanks for the G Chord\" on 2000's \"Brand New Me\".\n\nTootsie's Orchid Lounge: Tootsie's Orchid Lounge (also known as Tootsie's World Famous Orchid Lounge) is a honky-tonk bar located in Nashville, Tennessee behind the Ryman Auditorium.  Tootsie's has three stages that host live local talent each night; covering modern day country music artist such as Jason Aldean, Taylor Swift, and other popular country music artists as well as original work.  Some of its early famous first customers were Willie Nelson, Patsy Cline, Mel Tillis, Kris Kristofferson, Waylon Jennings, Roger Miller and numerous others country musicians.  According to www.tootsies.net, Willie Nelson received his first songwriting gig after singing at Tootsie's.  Terri Clark a Canadian-born country artist started singing at Tootsie's in 1987.  and has since become an internationally known country superstar with hits such as Better Things to Do, and the Warren Zevon cover, Poor Poor Pitiful Me.\n\nFamous First Facts: Famous First Facts is a book listing \"First Happenings, Discoveries and Inventions in the United States\".  The current version of the book — the seventh edition (ISBN  ), published in March 2015 — includes more than 8,000 entries on 1,400 pages.\n\nLivingstone–Stanley Monument: The Livingstone–Stanley Monument at Mugere in Burundi is 12 km south of the capital Bujumbura, overlooking Lake Tanganyika, and marks a location where explorer and missionary Dr David Livingstone and journalist and explorer Henry Morton Stanley visited and spent two nights on 25–27 November 1871.  In French it is referred to as \"La Pierre de Livingstone et Stanley\".  Some Burundians claim the location is where the famous first meeting of Livingstone and Stanley took place, at which the latter uttered the famous words \"Dr Livingstone, I presume?\" .\n\nManvel Gamburyan: Manvel \"Manny\" Gamburyan (Armenian: Մանվել Գամբուրյան ; born May 8, 1981) is a retired Armenian-American fighter who competed in the UFC's Bantamweight and Featherweight divisions.  A professional competitor since 1999, he was a cast member of Spike TV's The Ultimate Fighter 5, and also competed in the WEC and for King of the Cage.\n\nQuestion: How was famous first Hampar Kelikian or Manvel Gamburyan?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"famous_first_person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person identified as being famous first.\"\n    },\n    \"famous_first_person_birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the person identified as being famous first.\"\n    },\n    \"famous_first_person_profession\": {\n      \"type\": \"string\",\n      \"description\": \"The profession of the person identified as being famous first.\"\n    },\n    \"comparison_basis\": {\n      \"type\": \"string\",\n      \"description\": \"The reason or criteria used to determine who was famous first, based on the context.\"\n    },\n    \"other_person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the other person in the comparison.\"\n    },\n    \"other_person_birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the other person in the comparison.\"\n    },\n    \"other_person_profession\": {\n      \"type\": \"string\",\n      \"description\": \"The profession of the other person in the comparison.\"\n    }\n  },\n  \"required\": [\n    \"famous_first_person_name\",\n    \"famous_first_person_birth_year\",\n    \"famous_first_person_profession\",\n    \"comparison_basis\",\n    \"other_person_name\",\n    \"other_person_birth_year\",\n    \"other_person_profession\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "famous_first_person_name",
-    "famous_first_person_birth_year",
-    "famous_first_person_profession",
-    "comparison_basis",
-    "other_person_name",
-    "other_person_birth_year",
-    "other_person_profession"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "famous_first_person_name": {
+        "type": "string",
+        "description": "The name of the person identified as being famous first."
+      },
+      "famous_first_person_birth_year": {
+        "type": "integer",
+        "description": "The birth year of the person identified as being famous first."
+      },
+      "famous_first_person_profession": {
+        "type": "string",
+        "description": "The profession of the person identified as being famous first."
+      },
+      "comparison_basis": {
+        "type": "string",
+        "description": "The reason or criteria used to determine who was famous first, based on the context."
+      },
+      "other_person_name": {
+        "type": "string",
+        "description": "The name of the other person in the comparison."
+      },
+      "other_person_birth_year": {
+        "type": "integer",
+        "description": "The birth year of the other person in the comparison."
+      },
+      "other_person_profession": {
+        "type": "string",
+        "description": "The profession of the other person in the comparison."
+      }
+    },
+    "required": [
+      "famous_first_person_name",
+      "famous_first_person_birth_year",
+      "famous_first_person_profession",
+      "comparison_basis",
+      "other_person_name",
+      "other_person_birth_year",
+      "other_person_profession"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

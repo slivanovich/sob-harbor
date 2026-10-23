@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Battle of Bosworth Field: The Battle of Bosworth Field (or Battle of Bosworth) was the last significant battle of the Wars of the Roses, the civil war between the Houses of Lancaster and York that raged across England in the latter half of the 15th century.  Fought on 22 August 1485, the battle was won by the Lancastrians.  Their leader Henry Tudor, Earl of Richmond, by his victory became the first English monarch of the Tudor dynasty.  His opponent, Richard III, the last king of the House of York, was killed in the battle.  Historians consider Bosworth Field to mark the end of the Plantagenet dynasty, making it a defining moment of English and Welsh history.
-
-Richard III of England: Richard III (2 October 1452 – 22 August 1485) was King of England from 1483 until his death in 1485, at the age of 32, in the Battle of Bosworth Field.  He was the last king of the House of York and the last of the Plantagenet dynasty.  His defeat at Bosworth Field, the last decisive battle of the Wars of the Roses, marked the end of the Middle Ages in England.  He is the subject of the historical play "Richard III" by William Shakespeare.
-
-Edmund of Langley, 1st Duke of York: Edmund of Langley, 1st Duke of York, KG (5 June 1341 – 1 August 1402) was the fourth surviving son of King Edward III of England and Philippa of Hainault.  Like many medieval English princes, Edmund gained his nickname from his birthplace: Kings Langley Palace in Hertfordshire.  He was the founder of the House of York, but it was through the marriage of his younger son, Richard of Conisburgh, 3rd Earl of Cambridge, to Anne de Mortimer, great-granddaughter of Edmund's elder brother Lionel of Antwerp, 1st Duke of Clarence, that the House of York made its claim to the English throne in the Wars of the Roses.  The other party in the Wars of the Roses, the incumbent House of Lancaster, was formed from descendants of Edmund's elder brother John of Gaunt, 1st Duke of Lancaster, Edward III's third son.
-
-When Christ and His Saints Slept: When Christ and His Saints Slept is a historical novel written by Sharon Kay Penman, published in 1995.  It is the first of Penman's Plantagenet trilogy, (ultimately five books) followed by "Time and Chance", "Devil's Brood", "Lionheart" and "A King's Ransom".  In the book Penman introduces the genesis of the Plantagenet dynasty as Empress Maude battles to secure her claim to the English throne, ultimately more for her young son Henry Plantagenet, than for herself.  Penman chronicles the story of cousins Maude and Stephen as they fight for England’s throne.
-
-Anne de Mortimer: Anne de Mortimer, Countess of Cambridge (27 December 1390 – c. 22 September 1411), was the mother of Richard Plantagenet, 3rd Duke of York, and the grandmother of King Edward IV and King Richard III.
-
-Edmund Mortimer, 5th Earl of March: Edmund de Mortimer, 5th Earl of March and 7th Earl of Ulster (6 November 1391 – 18 January 1425) was an English nobleman.  A great-great-grandson of King Edward III of England, he was heir presumptive to King Richard II of England, his first cousin twice removed, when Richard II was deposed in favour of Henry IV.  Edmund Mortimer's claim to the throne was the basis of rebellions and plots against Henry IV and his son Henry V, and was later taken up by the House of York in the Wars of the Roses, though Mortimer himself was an important and loyal vassal of Henry V and Henry VI.  Edmund Mortimer was the last Earl of March of the Mortimer family.
-
-Roger Mortimer de Chirk: Roger was the third son of Roger Mortimer, a powerful Marcher lord in the Welsh border territories, and Maud de Braose, Baroness Mortimer who was also an important Marcher landowner in her own right.  The family were from the second rank of "parvenu" nobility elevated by the king as a reward for fierce loyalty to the Plantagenet dynasty.  But he was said to be a lecherous and violent man.
-
-Ralph de Mortimer: Ranulph or Ralph de Mortimer (before 1198 to before 6 August 1246) was the second son of Roger de Mortimer and Isabel de Ferrers of Wigmore Castle in Herefordshire.  He succeeded his elder brother before 23 November 1227 and built Cefnllys and Knucklas castles in 1240.
-
-Geoffrey Plantagenet, Count of Anjou: Geoffrey V (24 August 1113 – 7 September 1151) — called the Handsome or the Fair (French: "le Bel" ) and Plantagenet — was the Count of Anjou, Touraine, and Maine by inheritance from 1129 and then Duke of Normandy by conquest from 1144.  By his marriage to the Empress Matilda, daughter and heiress of Henry I of England, Geoffrey had a son, Henry Curtmantle, who succeeded to the English throne as King Henry II (1154-1189) and was the first of the Plantagenet dynasty to rule England; the name "Plantagenet" was taken from Geoffrey's epithet.  His ancestral domain of Anjou gave rise to the name Angevin for three kings of England (Henry II his son and heir, and Henry's sons Richard and John), and what became known as the Angevin Empire in the 12th century.
-
-Ballad of Bosworth Field: The Ballad of Bosworth Field is a poem in the English language, believed to have been written before 1495; the earliest extant copy dates from the mid-17th century.  The poem is thought to have been written by someone closely connected with the Stanley family, because of the way it praises the Stanley brothers for their role in the Battle of Bosworth Field in 1485.
-
-Question: Anne de Mortimer, Countess of Cambridge was the grandmother of the last of the Plantagenet dynasty whose defeat at Bosworth Field marked the end of what in England?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the person whose defeat is being discussed."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "person_title": {
-      "type": "string",
-      "description": "The title of the person."
-    },
-    "dynasty": {
-      "type": "string",
-      "description": "The dynasty the person belonged to."
-    },
-    "battle_name": {
-      "type": "string",
-      "description": "The name of the battle where the person was defeated."
-    },
-    "historical_period_ended": {
-      "type": "string",
-      "description": "The historical period that ended in England due to this defeat."
-    },
-    "relationship_to_anne_de_mortimer": {
-      "type": "string",
-      "description": "The relationship of Anne de Mortimer to the person."
+    {
+      "role": "user",
+      "content": "Context:\nBattle of Bosworth Field: The Battle of Bosworth Field (or Battle of Bosworth) was the last significant battle of the Wars of the Roses, the civil war between the Houses of Lancaster and York that raged across England in the latter half of the 15th century.  Fought on 22 August 1485, the battle was won by the Lancastrians.  Their leader Henry Tudor, Earl of Richmond, by his victory became the first English monarch of the Tudor dynasty.  His opponent, Richard III, the last king of the House of York, was killed in the battle.  Historians consider Bosworth Field to mark the end of the Plantagenet dynasty, making it a defining moment of English and Welsh history.\n\nRichard III of England: Richard III (2 October 1452 – 22 August 1485) was King of England from 1483 until his death in 1485, at the age of 32, in the Battle of Bosworth Field.  He was the last king of the House of York and the last of the Plantagenet dynasty.  His defeat at Bosworth Field, the last decisive battle of the Wars of the Roses, marked the end of the Middle Ages in England.  He is the subject of the historical play \"Richard III\" by William Shakespeare.\n\nEdmund of Langley, 1st Duke of York: Edmund of Langley, 1st Duke of York, KG (5 June 1341 – 1 August 1402) was the fourth surviving son of King Edward III of England and Philippa of Hainault.  Like many medieval English princes, Edmund gained his nickname from his birthplace: Kings Langley Palace in Hertfordshire.  He was the founder of the House of York, but it was through the marriage of his younger son, Richard of Conisburgh, 3rd Earl of Cambridge, to Anne de Mortimer, great-granddaughter of Edmund's elder brother Lionel of Antwerp, 1st Duke of Clarence, that the House of York made its claim to the English throne in the Wars of the Roses.  The other party in the Wars of the Roses, the incumbent House of Lancaster, was formed from descendants of Edmund's elder brother John of Gaunt, 1st Duke of Lancaster, Edward III's third son.\n\nWhen Christ and His Saints Slept: When Christ and His Saints Slept is a historical novel written by Sharon Kay Penman, published in 1995.  It is the first of Penman's Plantagenet trilogy, (ultimately five books) followed by \"Time and Chance\", \"Devil's Brood\", \"Lionheart\" and \"A King's Ransom\".  In the book Penman introduces the genesis of the Plantagenet dynasty as Empress Maude battles to secure her claim to the English throne, ultimately more for her young son Henry Plantagenet, than for herself.  Penman chronicles the story of cousins Maude and Stephen as they fight for England’s throne.\n\nAnne de Mortimer: Anne de Mortimer, Countess of Cambridge (27 December 1390 – c. 22 September 1411), was the mother of Richard Plantagenet, 3rd Duke of York, and the grandmother of King Edward IV and King Richard III.\n\nEdmund Mortimer, 5th Earl of March: Edmund de Mortimer, 5th Earl of March and 7th Earl of Ulster (6 November 1391 – 18 January 1425) was an English nobleman.  A great-great-grandson of King Edward III of England, he was heir presumptive to King Richard II of England, his first cousin twice removed, when Richard II was deposed in favour of Henry IV.  Edmund Mortimer's claim to the throne was the basis of rebellions and plots against Henry IV and his son Henry V, and was later taken up by the House of York in the Wars of the Roses, though Mortimer himself was an important and loyal vassal of Henry V and Henry VI.  Edmund Mortimer was the last Earl of March of the Mortimer family.\n\nRoger Mortimer de Chirk: Roger was the third son of Roger Mortimer, a powerful Marcher lord in the Welsh border territories, and Maud de Braose, Baroness Mortimer who was also an important Marcher landowner in her own right.  The family were from the second rank of \"parvenu\" nobility elevated by the king as a reward for fierce loyalty to the Plantagenet dynasty.  But he was said to be a lecherous and violent man.\n\nRalph de Mortimer: Ranulph or Ralph de Mortimer (before 1198 to before 6 August 1246) was the second son of Roger de Mortimer and Isabel de Ferrers of Wigmore Castle in Herefordshire.  He succeeded his elder brother before 23 November 1227 and built Cefnllys and Knucklas castles in 1240.\n\nGeoffrey Plantagenet, Count of Anjou: Geoffrey V (24 August 1113 – 7 September 1151) — called the Handsome or the Fair (French: \"le Bel\" ) and Plantagenet — was the Count of Anjou, Touraine, and Maine by inheritance from 1129 and then Duke of Normandy by conquest from 1144.  By his marriage to the Empress Matilda, daughter and heiress of Henry I of England, Geoffrey had a son, Henry Curtmantle, who succeeded to the English throne as King Henry II (1154-1189) and was the first of the Plantagenet dynasty to rule England; the name \"Plantagenet\" was taken from Geoffrey's epithet.  His ancestral domain of Anjou gave rise to the name Angevin for three kings of England (Henry II his son and heir, and Henry's sons Richard and John), and what became known as the Angevin Empire in the 12th century.\n\nBallad of Bosworth Field: The Ballad of Bosworth Field is a poem in the English language, believed to have been written before 1495; the earliest extant copy dates from the mid-17th century.  The poem is thought to have been written by someone closely connected with the Stanley family, because of the way it praises the Stanley brothers for their role in the Battle of Bosworth Field in 1485.\n\nQuestion: Anne de Mortimer, Countess of Cambridge was the grandmother of the last of the Plantagenet dynasty whose defeat at Bosworth Field marked the end of what in England?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person whose defeat is being discussed.\"\n    },\n    \"person_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the person.\"\n    },\n    \"dynasty\": {\n      \"type\": \"string\",\n      \"description\": \"The dynasty the person belonged to.\"\n    },\n    \"battle_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the battle where the person was defeated.\"\n    },\n    \"historical_period_ended\": {\n      \"type\": \"string\",\n      \"description\": \"The historical period that ended in England due to this defeat.\"\n    },\n    \"relationship_to_anne_de_mortimer\": {\n      \"type\": \"string\",\n      \"description\": \"The relationship of Anne de Mortimer to the person.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"person_title\",\n    \"dynasty\",\n    \"battle_name\",\n    \"historical_period_ended\",\n    \"relationship_to_anne_de_mortimer\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "person_title",
-    "dynasty",
-    "battle_name",
-    "historical_period_ended",
-    "relationship_to_anne_de_mortimer"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the person whose defeat is being discussed."
+      },
+      "person_title": {
+        "type": "string",
+        "description": "The title of the person."
+      },
+      "dynasty": {
+        "type": "string",
+        "description": "The dynasty the person belonged to."
+      },
+      "battle_name": {
+        "type": "string",
+        "description": "The name of the battle where the person was defeated."
+      },
+      "historical_period_ended": {
+        "type": "string",
+        "description": "The historical period that ended in England due to this defeat."
+      },
+      "relationship_to_anne_de_mortimer": {
+        "type": "string",
+        "description": "The relationship of Anne de Mortimer to the person."
+      }
+    },
+    "required": [
+      "person_name",
+      "person_title",
+      "dynasty",
+      "battle_name",
+      "historical_period_ended",
+      "relationship_to_anne_de_mortimer"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

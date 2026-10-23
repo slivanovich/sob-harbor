@@ -1,6 +1,6 @@
 name = "sob-text"
-version = "1.0.0"
-description = "SOB text test split with agent-produced JSON and upstream metrics."
+version = "2.0.0"
+description = "SOB text test split for single-response JSON Schema constrained generation."
 task_directory = "sob-text"
 primary_metric = "reward"
 

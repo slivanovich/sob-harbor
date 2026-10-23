@@ -1,104 +1,81 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Bogdanov affair: The Bogdanov affair is an academic dispute regarding the legitimacy of a series of theoretical physics papers written by French twins Igor and Grichka Bogdanov (alternately spelt Bogdanoff).  These papers were published in reputable scientific journals, and were alleged by their authors to culminate in a proposed theory for describing what occurred at the Big Bang.
-
-Fayyazuddin: Fayyazuddin or Fayyaz Uddin, HI (Urdu: فيا ض ا لدين) (born 10 November 1930), is a Pakistani theoretical physicist and an Emeritus Professor of Theoretical and Mathematical Physics at National Centre for Physics and Quaid-e-Azam University, Islamabad.  He is a senior scientist at the National Center for Physics where his research is engaged to the fields of quantum mechanics, particle physics, and meson physics.  He is a brother of physicist Riazuddin and the student of Abdus Salam.  Along with Riazuddin, he has published numerous physics papers and has co-authored the "Quantum Mechanics by Fayyazuddin and Riazuddin" which was published in 2000.
-
-Helen Quinn: Helen Rhoda Arnold Quinn (born 19 May 1943 in Melbourne) is an Australian-born particle physicist and educator who has made major contributions to both fields.  Her contributions to theoretical physics include the Peccei-Quinn theory which implies a corresponding symmetry of nature (related to matter-antimatter symmetry and the possible source of the dark matter that pervades the universe) and contributions to the search for a unified theory for the three types of particle interactions (strong, electromagnetic, and weak).  As Chair of the Board on Science Education of the National Academy of Sciences, Quinn led the effort that produced "A Framework for K-12 Science Education: Practices, Crosscutting Concepts, and Core Ideas" —the basis for the Next Generation Science Standards adopted by many states.  Her honours include the Dirac Medal of the International Center for Theoretical Physics, the Oskar Klein Medal from the Royal Swedish Academy of Sciences, appointment as an Honorary Officer of the Order of Australia, the J. J. Sakurai Prize for Theoretical Particle Physics from the American Physical Society, and the Karl Taylor Compton Medal for Leadership in Physics from the American Institute of Physics.
-
-Lattice model (physics): In physics, a lattice model is a physical model that is defined on a lattice, as opposed to the continuum of space or spacetime.  Lattice models originally occurred in the context of condensed matter physics, where the atoms of a crystal automatically form a lattice.  Currently, lattice models are quite popular in theoretical physics, for many reasons.  Some models are exactly solvable, and thus offer insight into physics beyond what can be learned from perturbation theory.  Lattice models are also ideal for study by the methods of computational physics, as the discretization of any continuum model automatically turns it into a lattice model.  Examples of lattice models in condensed matter physics include the Ising model, the Potts model, the XY model, the Toda lattice.  The exact solution to many of these models (when they are solvable) includes the presence of solitons. Techniques for solving these include the inverse scattering transform and the method of Lax pairs, the Yang-Baxter equation and quantum groups.  The solution of these models has given insights into the nature of phase transitions, magnetization and scaling behaviour, as well as insights into the nature of quantum field theory.  Physical lattice models frequently occur as an approximation to a continuum theory, either to give an ultraviolet cutoff to the theory to prevent divergences or to perform numerical computations.  An example of a continuum theory that is widely studied by lattice models is the QCD lattice model, a discretization of quantum chromodynamics.  However, digital physics considers nature fundamentally discrete at the Planck scale, which imposes , aka Holographic principle.  More generally, lattice gauge theory and lattice field theory are areas of study.  Lattice models are also used to simulate the structure and dynamics of polymers.  Examples include the bond fluctuation model and the 2nd model.
-
-Igor and Grichka Bogdanoff: Igor Yourievitch Osten-Sacken-Bogdanoff and Grichka Yourievitch Osten-Sacken-Bogdanoff, (or Bogdanov; born 29 August 1949) are French television producers and scientific essayists who since the 1970s have presented various subjects in science fiction, popular science and cosmology.  They were involved in a number of controversies, most notably the Bogdanov affair, in which it was alleged the brothers wrote nonsensical advanced physics papers that were nonetheless published in reputable scientific journals.
-
-Ukrainian Journal of Physics: The Ukrainian Journal of Physics (Ukrainian: Український фізичний журнал), is a peer-reviewed scientific journal covering the field of experimental and theoretical physics, including field theory and the theory of elementary particles, nuclear physics, plasma physics, atomic physics, molecular physics, condensed matter physics, optics, radiophysics, and electronics.  The journal was established in 1956 and until 1994 was published by "Naukova Dumka".  Beginning from 1994, the journal has been published by the Bogolyubov Institute for Theoretical Physics, National Academy of Sciences of Ukraine.  It is recognized by the Higher Attestation Commission of Ukraine.  The editor-in-chief is A. G. Zagorodny (Bogolyubov Institute for Theoretical Physics, National Academy of Sciences of Ukraine).
-
-Sergei Kruchinin: Sergei Kruchinin (1957) - is leading scientist of the Bogolyubov Institute for Theoretical Physics, NASU (Kiev, Ukraine).  Professor of NAU .  Honorary Member of the Russian Academy of Creative Endeavors, Member of New York Academy of Sciences, Member of the International Association of Mathematical Physics.  He has written numerous papers on theoretical physics on many body problem, superconductivityy, nonleniar phenomena, nanosystems.  He is authors of book " Modern aspect of superconductivity : theory of superconductivity: theory of superconductivity" Total papers is about 100.
-
-Electronic Journal of Theoretical Physics: The Electronic Journal of Theoretical Physics is a quarterly peer-reviewed open access scientific journal that was established in 2003.  It covers all aspects of theoretical physics.  The editors-in-chief are Ammar Sakaji (International Institute for Theoretical Physics and Mathematics, Prato, Italy) and Ignazio Licata (Institute for Scientific Methodology, Palermo, Italy) and the printed version is published by Aracne Editrice.  The journal is abstracted and indexed in Scopus.
-
-Feynman diagram: In theoretical physics, Feynman diagrams are pictorial representations of the mathematical expressions describing the behavior of subatomic particles.  The scheme is named after its inventor, American physicist Richard Feynman, and was first introduced in 1948.  The interaction of sub-atomic particles can be complex and difficult to understand intuitively.  Feynman diagrams give a simple visualization of what would otherwise be a rather arcane and abstract formula.  As David Kaiser writes, "since the middle of the 20th century, theoretical physicists have increasingly turned to this tool to help them undertake critical calculations", and so "Feynman diagrams have revolutionized nearly every aspect of theoretical physics".  While the diagrams are applied primarily to quantum field theory, they can also be used in other fields, such as solid-state theory.
-
-Leonard Susskind: Leonard Susskind (born 1940) is an American physicist, who is professor of theoretical physics at Stanford University, and director of the Stanford Institute for Theoretical Physics.  His research interests include string theory, quantum field theory, quantum statistical mechanics and quantum cosmology.  He is a member of the National Academy of Sciences of the US, and the American Academy of Arts and Sciences, an associate member of the faculty of Canada's Perimeter Institute for Theoretical Physics, and a distinguished professor of the Korea Institute for Advanced Study.
-
-Question: Igor Yourievitch Osten-Sacken-Bogdanoff and Grichka Yourievitch Osten-Sacken-Bogdanoff, are French television producers and scientific essayists who since the 1970s, and were involved in a number of controversies, most notably the Bogdanov affair, an academic dispute regarding the legitimacy of a series of theoretical physics papers, and were alleged by their authors to culminate in a proposed theory for describing what occurred at which historic event?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "controversy_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the academic dispute."
-        },
-        "type": {
-          "type": "string",
-          "description": "The nature or type of the dispute."
-        }
-      },
-      "required": [
-        "name",
-        "type"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "authors": {
-      "type": "array",
-      "description": "Details about the authors involved in the controversy.",
-      "items": {
+    {
+      "role": "user",
+      "content": "Context:\nBogdanov affair: The Bogdanov affair is an academic dispute regarding the legitimacy of a series of theoretical physics papers written by French twins Igor and Grichka Bogdanov (alternately spelt Bogdanoff).  These papers were published in reputable scientific journals, and were alleged by their authors to culminate in a proposed theory for describing what occurred at the Big Bang.\n\nFayyazuddin: Fayyazuddin or Fayyaz Uddin, HI (Urdu: فيا ض ا لدين) (born 10 November 1930), is a Pakistani theoretical physicist and an Emeritus Professor of Theoretical and Mathematical Physics at National Centre for Physics and Quaid-e-Azam University, Islamabad.  He is a senior scientist at the National Center for Physics where his research is engaged to the fields of quantum mechanics, particle physics, and meson physics.  He is a brother of physicist Riazuddin and the student of Abdus Salam.  Along with Riazuddin, he has published numerous physics papers and has co-authored the \"Quantum Mechanics by Fayyazuddin and Riazuddin\" which was published in 2000.\n\nHelen Quinn: Helen Rhoda Arnold Quinn (born 19 May 1943 in Melbourne) is an Australian-born particle physicist and educator who has made major contributions to both fields.  Her contributions to theoretical physics include the Peccei-Quinn theory which implies a corresponding symmetry of nature (related to matter-antimatter symmetry and the possible source of the dark matter that pervades the universe) and contributions to the search for a unified theory for the three types of particle interactions (strong, electromagnetic, and weak).  As Chair of the Board on Science Education of the National Academy of Sciences, Quinn led the effort that produced \"A Framework for K-12 Science Education: Practices, Crosscutting Concepts, and Core Ideas\" —the basis for the Next Generation Science Standards adopted by many states.  Her honours include the Dirac Medal of the International Center for Theoretical Physics, the Oskar Klein Medal from the Royal Swedish Academy of Sciences, appointment as an Honorary Officer of the Order of Australia, the J. J. Sakurai Prize for Theoretical Particle Physics from the American Physical Society, and the Karl Taylor Compton Medal for Leadership in Physics from the American Institute of Physics.\n\nLattice model (physics): In physics, a lattice model is a physical model that is defined on a lattice, as opposed to the continuum of space or spacetime.  Lattice models originally occurred in the context of condensed matter physics, where the atoms of a crystal automatically form a lattice.  Currently, lattice models are quite popular in theoretical physics, for many reasons.  Some models are exactly solvable, and thus offer insight into physics beyond what can be learned from perturbation theory.  Lattice models are also ideal for study by the methods of computational physics, as the discretization of any continuum model automatically turns it into a lattice model.  Examples of lattice models in condensed matter physics include the Ising model, the Potts model, the XY model, the Toda lattice.  The exact solution to many of these models (when they are solvable) includes the presence of solitons. Techniques for solving these include the inverse scattering transform and the method of Lax pairs, the Yang-Baxter equation and quantum groups.  The solution of these models has given insights into the nature of phase transitions, magnetization and scaling behaviour, as well as insights into the nature of quantum field theory.  Physical lattice models frequently occur as an approximation to a continuum theory, either to give an ultraviolet cutoff to the theory to prevent divergences or to perform numerical computations.  An example of a continuum theory that is widely studied by lattice models is the QCD lattice model, a discretization of quantum chromodynamics.  However, digital physics considers nature fundamentally discrete at the Planck scale, which imposes , aka Holographic principle.  More generally, lattice gauge theory and lattice field theory are areas of study.  Lattice models are also used to simulate the structure and dynamics of polymers.  Examples include the bond fluctuation model and the 2nd model.\n\nIgor and Grichka Bogdanoff: Igor Yourievitch Osten-Sacken-Bogdanoff and Grichka Yourievitch Osten-Sacken-Bogdanoff, (or Bogdanov; born 29 August 1949) are French television producers and scientific essayists who since the 1970s have presented various subjects in science fiction, popular science and cosmology.  They were involved in a number of controversies, most notably the Bogdanov affair, in which it was alleged the brothers wrote nonsensical advanced physics papers that were nonetheless published in reputable scientific journals.\n\nUkrainian Journal of Physics: The Ukrainian Journal of Physics (Ukrainian: Український фізичний журнал), is a peer-reviewed scientific journal covering the field of experimental and theoretical physics, including field theory and the theory of elementary particles, nuclear physics, plasma physics, atomic physics, molecular physics, condensed matter physics, optics, radiophysics, and electronics.  The journal was established in 1956 and until 1994 was published by \"Naukova Dumka\".  Beginning from 1994, the journal has been published by the Bogolyubov Institute for Theoretical Physics, National Academy of Sciences of Ukraine.  It is recognized by the Higher Attestation Commission of Ukraine.  The editor-in-chief is A. G. Zagorodny (Bogolyubov Institute for Theoretical Physics, National Academy of Sciences of Ukraine).\n\nSergei Kruchinin: Sergei Kruchinin (1957) - is leading scientist of the Bogolyubov Institute for Theoretical Physics, NASU (Kiev, Ukraine).  Professor of NAU .  Honorary Member of the Russian Academy of Creative Endeavors, Member of New York Academy of Sciences, Member of the International Association of Mathematical Physics.  He has written numerous papers on theoretical physics on many body problem, superconductivityy, nonleniar phenomena, nanosystems.  He is authors of book \" Modern aspect of superconductivity : theory of superconductivity: theory of superconductivity\" Total papers is about 100.\n\nElectronic Journal of Theoretical Physics: The Electronic Journal of Theoretical Physics is a quarterly peer-reviewed open access scientific journal that was established in 2003.  It covers all aspects of theoretical physics.  The editors-in-chief are Ammar Sakaji (International Institute for Theoretical Physics and Mathematics, Prato, Italy) and Ignazio Licata (Institute for Scientific Methodology, Palermo, Italy) and the printed version is published by Aracne Editrice.  The journal is abstracted and indexed in Scopus.\n\nFeynman diagram: In theoretical physics, Feynman diagrams are pictorial representations of the mathematical expressions describing the behavior of subatomic particles.  The scheme is named after its inventor, American physicist Richard Feynman, and was first introduced in 1948.  The interaction of sub-atomic particles can be complex and difficult to understand intuitively.  Feynman diagrams give a simple visualization of what would otherwise be a rather arcane and abstract formula.  As David Kaiser writes, \"since the middle of the 20th century, theoretical physicists have increasingly turned to this tool to help them undertake critical calculations\", and so \"Feynman diagrams have revolutionized nearly every aspect of theoretical physics\".  While the diagrams are applied primarily to quantum field theory, they can also be used in other fields, such as solid-state theory.\n\nLeonard Susskind: Leonard Susskind (born 1940) is an American physicist, who is professor of theoretical physics at Stanford University, and director of the Stanford Institute for Theoretical Physics.  His research interests include string theory, quantum field theory, quantum statistical mechanics and quantum cosmology.  He is a member of the National Academy of Sciences of the US, and the American Academy of Arts and Sciences, an associate member of the faculty of Canada's Perimeter Institute for Theoretical Physics, and a distinguished professor of the Korea Institute for Advanced Study.\n\nQuestion: Igor Yourievitch Osten-Sacken-Bogdanoff and Grichka Yourievitch Osten-Sacken-Bogdanoff, are French television producers and scientific essayists who since the 1970s, and were involved in a number of controversies, most notably the Bogdanov affair, an academic dispute regarding the legitimacy of a series of theoretical physics papers, and were alleged by their authors to culminate in a proposed theory for describing what occurred at which historic event?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"controversy_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the academic dispute.\"\n        },\n        \"type\": {\n          \"type\": \"string\",\n          \"description\": \"The nature or type of the dispute.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"type\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"authors\": {\n      \"type\": \"array\",\n      \"description\": \"Details about the authors involved in the controversy.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"full_name\": {\n            \"type\": \"string\",\n            \"description\": \"The full name of the author.\"\n          },\n          \"nationality\": {\n            \"type\": \"string\",\n            \"description\": \"The nationality of the author.\"\n          },\n          \"primary_occupations\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"type\": \"string\"\n            },\n            \"description\": \"A list of primary occupations of the author.\"\n          }\n        },\n        \"required\": [\n          \"full_name\",\n          \"nationality\",\n          \"primary_occupations\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"papers_culmination_goal\": {\n      \"type\": \"string\",\n      \"description\": \"The ultimate goal or culmination of the proposed theory in the papers.\"\n    },\n    \"historic_event_described\": {\n      \"type\": \"string\",\n      \"description\": \"The specific historic event that the theory aimed to describe.\"\n    }\n  },\n  \"required\": [\n    \"controversy_details\",\n    \"authors\",\n    \"papers_culmination_goal\",\n    \"historic_event_described\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "controversy_details": {
         "type": "object",
         "properties": {
-          "full_name": {
+          "name": {
             "type": "string",
-            "description": "The full name of the author."
+            "description": "The name of the academic dispute."
           },
-          "nationality": {
+          "type": {
             "type": "string",
-            "description": "The nationality of the author."
-          },
-          "primary_occupations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "A list of primary occupations of the author."
+            "description": "The nature or type of the dispute."
           }
         },
         "required": [
-          "full_name",
-          "nationality",
-          "primary_occupations"
+          "name",
+          "type"
         ],
         "additionalProperties": false
+      },
+      "authors": {
+        "type": "array",
+        "description": "Details about the authors involved in the controversy.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "full_name": {
+              "type": "string",
+              "description": "The full name of the author."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The nationality of the author."
+            },
+            "primary_occupations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "A list of primary occupations of the author."
+            }
+          },
+          "required": [
+            "full_name",
+            "nationality",
+            "primary_occupations"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "papers_culmination_goal": {
+        "type": "string",
+        "description": "The ultimate goal or culmination of the proposed theory in the papers."
+      },
+      "historic_event_described": {
+        "type": "string",
+        "description": "The specific historic event that the theory aimed to describe."
       }
     },
-    "papers_culmination_goal": {
-      "type": "string",
-      "description": "The ultimate goal or culmination of the proposed theory in the papers."
-    },
-    "historic_event_described": {
-      "type": "string",
-      "description": "The specific historic event that the theory aimed to describe."
-    }
+    "required": [
+      "controversy_details",
+      "authors",
+      "papers_culmination_goal",
+      "historic_event_described"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "controversy_details",
-    "authors",
-    "papers_culmination_goal",
-    "historic_event_described"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

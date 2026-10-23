@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2014 Purdue Boilermakers football team: The 2014 Purdue Boilermakers football team was an American football team that represented Purdue University during the 2014 NCAA Division I FBS football season.  The Boilermakers played in the new West Division of the Big Ten Conference and played their home games at Ross–Ade Stadium in West Lafayette, Indiana.  The team was led by head coach Darrell Hazell, who was in his second season at Purdue.  Purdue finished the season with a record of 3–9, 1–7 in Big Ten play to finish in last place in the West Division.  This marked the first time since 1993 that Purdue finished with the worst record in the Big Ten in back-to-back seasons.
-
-List of Purdue Boilermakers head football coaches: The Purdue Boilermakers football program is a college football team that represents Purdue University in the Big Ten Conference in the National Collegiate Athletic Association.  The team has had 34 head coaches since it started playing organized football in 1887 and has been known by the nickname "Boilermakers" since 1891.  Purdue is an original member of the Big Ten, joining in 1896 after spending six years in the Indiana Intercollegiate Athletic Association.  The Boilermakers have played in 1,117 games during their 122 seasons.  Four coaches have led the Boilermakers to postseason bowl games: Jack Mollenkopf, Jim Young, Leon Burtnett, and Joe Tiller.  Nine coaches have won conference championships with the Boilermakers: Snake Ames and D. M. Balliet in the Indiana Intercollegiate Athletic Association, and A. G. Scanlon, James Phelan, Noble Kizer, Elmer Burnham, Stu Holcomb, Mollenkopf and Tiller in the Big Ten.  No Purdue coach has led the Boilermakers to a national championship.  As of the end of the 2009 season, Tiller is the all-time leader in games coached (149) and wins (87), while Mollenkopf is the all-time leader years coached (14).  Ames leads the Boilermakers in winning percentage with a perfect 1.000 in his two seasons at Purdue.  Among coaches with more than two seasons of tenure, Kizer has the highest winning percentage, .750, and Fred Akers has the lowest winning percentage, with a record of 12-31-1 (.284) in four seasons.
-
-1903 Purdue Boilermakers football team: The 1903 Purdue Boilermakers football team was an American football team that represented Purdue University during the 1903 college football season.  In their first season under head coach Oliver Cutts, the Boilermakers compiled a 4–2 record before 14 players were killed in a train accident on the way to a game in Indianapolis.  Purdue officials cancelled the game and the remainder of Purdue's schedule, leading the Boilermakers to finish in last place in the Western Conference with an 0–2 record against conference opponents, outscoring their opponents by a combined total of 87 to 48.  I. S. Osborn was the team captain.
-
-Purdue Boilermakers football statistical leaders: The Purdue Boilermakers football statistical leaders are individual statistical leaders of the Purdue Boilermakers football program in various categories, including passing, rushing, receiving, total offense, defensive stats, and kicking.  Within those areas, the lists identify single-game, single-season, and career leaders.  The Boilermakers represent Purdue University in the NCAA's Big 10 Conference.
-
-1996 Purdue Boilermakers football team: The 1996 Purdue Boilermakers football team represented Purdue University in the 1996 NCAA Division I-A football season.  They played their home games at Ross–Ade Stadium in West Lafayette, Indiana and competed in the Big Ten Conference.  The team attempted to build from its second best season (win wise) in its 5-year football history under head coach Jim Colletto, and they failed starting the season 0-3 and averaging under 7 points per game.  Over the final eight games the Boilermakers went 3-5 however, ending the season with a 3-8 record and failing to qualify for a bowl game for the twelfth straight year.  The Boilermakers also failed to win a road game.
-
-1922 Purdue Boilermakers football team: The 1922 Purdue Boilermakers football team was an American football team that represented Purdue University during the 1922 Big Ten Conference football season.  In their first season under head coach James Phelan, the Boilermakers compiled a 1–5–1 record, finished in last place in the Big Ten Conference with a 0–3–1 record against conference opponents, and were outscored by their opponents by a combined total of 126 to 36.
-
-Jeff Brohm: Jeffrey Scott Brohm (born April 24, 1971) is an American football coach and former quarterback.  He is the head football coach at Purdue University.  Brohm played college football at University of Louisville for coach Howard Schnellenberger from 1989 to 1993 and played in the National Football League (NFL) for seven seasons from 1994 to 2000 and the XFL in 2001.  He served as the head coach at Western Kentucky University from 2014–2016.
-
-Purdue Boilermakers football: The Purdue Boilermakers football team represents Purdue University (also referred to as simply "Purdue") in the NCAA Football Bowl Subdivision (FBS) of college football.  Purdue plays its home games at Ross–Ade Stadium on the campus of Purdue University in West Lafayette, Indiana.  The head coach of Purdue is Jeff Brohm, the 36th head coach in program history.  The Boilermakers compete in the Big Ten Conference as a member of the West Division.  Purdue had most recently been a part of the Leaders Division of the Big Ten, but moved to the West Division in 2014 due to conference expansion.
-
-1920 Purdue Boilermakers football team: The 1920 Purdue Boilermakers football team was an American football team that represented Purdue University during the 1920 college football season.  In their third season under head coach A. G. Scanlon, the Boilermakers compiled a 2–5 record, finished in ninth place in the Big Ten Conference with an 0–4 record against conference opponents, and were outscored by their opponents by a combined total of 103 to 36.
-
-2007 Purdue Boilermakers football team: The 2007 Purdue Boilermakers football represented Purdue University in the Big Ten Conference during the 2007 NCAA Division I FBS football season.  Joe Tiller, in his 11th season at Purdue, was the team's head coach.  The Boilermakers' home games were played at Ross–Ade Stadium in West Lafayette, Indiana.  Purdue began the 2007 season unranked in preseason polls.  Purdue played twelve regular season games during the 2007 season, including seven in West Lafayette.  They played in the Motor City Bowl where they defeated Central Michigan.
-
-Question: When was the 36th head coach of Purdue Boilermakers football born? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "coach_name": {
-      "type": "string",
-      "description": "The name of the head coach."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "coach_number": {
-      "type": "integer",
-      "description": "The ordinal number of the coach in the program's history."
-    },
-    "birth_date": {
-      "type": "string",
-      "description": "The full birth date of the coach."
-    },
-    "birth_year": {
-      "type": "integer",
-      "description": "The birth year of the coach."
+    {
+      "role": "user",
+      "content": "Context:\n2014 Purdue Boilermakers football team: The 2014 Purdue Boilermakers football team was an American football team that represented Purdue University during the 2014 NCAA Division I FBS football season.  The Boilermakers played in the new West Division of the Big Ten Conference and played their home games at Ross–Ade Stadium in West Lafayette, Indiana.  The team was led by head coach Darrell Hazell, who was in his second season at Purdue.  Purdue finished the season with a record of 3–9, 1–7 in Big Ten play to finish in last place in the West Division.  This marked the first time since 1993 that Purdue finished with the worst record in the Big Ten in back-to-back seasons.\n\nList of Purdue Boilermakers head football coaches: The Purdue Boilermakers football program is a college football team that represents Purdue University in the Big Ten Conference in the National Collegiate Athletic Association.  The team has had 34 head coaches since it started playing organized football in 1887 and has been known by the nickname \"Boilermakers\" since 1891.  Purdue is an original member of the Big Ten, joining in 1896 after spending six years in the Indiana Intercollegiate Athletic Association.  The Boilermakers have played in 1,117 games during their 122 seasons.  Four coaches have led the Boilermakers to postseason bowl games: Jack Mollenkopf, Jim Young, Leon Burtnett, and Joe Tiller.  Nine coaches have won conference championships with the Boilermakers: Snake Ames and D. M. Balliet in the Indiana Intercollegiate Athletic Association, and A. G. Scanlon, James Phelan, Noble Kizer, Elmer Burnham, Stu Holcomb, Mollenkopf and Tiller in the Big Ten.  No Purdue coach has led the Boilermakers to a national championship.  As of the end of the 2009 season, Tiller is the all-time leader in games coached (149) and wins (87), while Mollenkopf is the all-time leader years coached (14).  Ames leads the Boilermakers in winning percentage with a perfect 1.000 in his two seasons at Purdue.  Among coaches with more than two seasons of tenure, Kizer has the highest winning percentage, .750, and Fred Akers has the lowest winning percentage, with a record of 12-31-1 (.284) in four seasons.\n\n1903 Purdue Boilermakers football team: The 1903 Purdue Boilermakers football team was an American football team that represented Purdue University during the 1903 college football season.  In their first season under head coach Oliver Cutts, the Boilermakers compiled a 4–2 record before 14 players were killed in a train accident on the way to a game in Indianapolis.  Purdue officials cancelled the game and the remainder of Purdue's schedule, leading the Boilermakers to finish in last place in the Western Conference with an 0–2 record against conference opponents, outscoring their opponents by a combined total of 87 to 48.  I. S. Osborn was the team captain.\n\nPurdue Boilermakers football statistical leaders: The Purdue Boilermakers football statistical leaders are individual statistical leaders of the Purdue Boilermakers football program in various categories, including passing, rushing, receiving, total offense, defensive stats, and kicking.  Within those areas, the lists identify single-game, single-season, and career leaders.  The Boilermakers represent Purdue University in the NCAA's Big 10 Conference.\n\n1996 Purdue Boilermakers football team: The 1996 Purdue Boilermakers football team represented Purdue University in the 1996 NCAA Division I-A football season.  They played their home games at Ross–Ade Stadium in West Lafayette, Indiana and competed in the Big Ten Conference.  The team attempted to build from its second best season (win wise) in its 5-year football history under head coach Jim Colletto, and they failed starting the season 0-3 and averaging under 7 points per game.  Over the final eight games the Boilermakers went 3-5 however, ending the season with a 3-8 record and failing to qualify for a bowl game for the twelfth straight year.  The Boilermakers also failed to win a road game.\n\n1922 Purdue Boilermakers football team: The 1922 Purdue Boilermakers football team was an American football team that represented Purdue University during the 1922 Big Ten Conference football season.  In their first season under head coach James Phelan, the Boilermakers compiled a 1–5–1 record, finished in last place in the Big Ten Conference with a 0–3–1 record against conference opponents, and were outscored by their opponents by a combined total of 126 to 36.\n\nJeff Brohm: Jeffrey Scott Brohm (born April 24, 1971) is an American football coach and former quarterback.  He is the head football coach at Purdue University.  Brohm played college football at University of Louisville for coach Howard Schnellenberger from 1989 to 1993 and played in the National Football League (NFL) for seven seasons from 1994 to 2000 and the XFL in 2001.  He served as the head coach at Western Kentucky University from 2014–2016.\n\nPurdue Boilermakers football: The Purdue Boilermakers football team represents Purdue University (also referred to as simply \"Purdue\") in the NCAA Football Bowl Subdivision (FBS) of college football.  Purdue plays its home games at Ross–Ade Stadium on the campus of Purdue University in West Lafayette, Indiana.  The head coach of Purdue is Jeff Brohm, the 36th head coach in program history.  The Boilermakers compete in the Big Ten Conference as a member of the West Division.  Purdue had most recently been a part of the Leaders Division of the Big Ten, but moved to the West Division in 2014 due to conference expansion.\n\n1920 Purdue Boilermakers football team: The 1920 Purdue Boilermakers football team was an American football team that represented Purdue University during the 1920 college football season.  In their third season under head coach A. G. Scanlon, the Boilermakers compiled a 2–5 record, finished in ninth place in the Big Ten Conference with an 0–4 record against conference opponents, and were outscored by their opponents by a combined total of 103 to 36.\n\n2007 Purdue Boilermakers football team: The 2007 Purdue Boilermakers football represented Purdue University in the Big Ten Conference during the 2007 NCAA Division I FBS football season.  Joe Tiller, in his 11th season at Purdue, was the team's head coach.  The Boilermakers' home games were played at Ross–Ade Stadium in West Lafayette, Indiana.  Purdue began the 2007 season unranked in preseason polls.  Purdue played twelve regular season games during the 2007 season, including seven in West Lafayette.  They played in the Motor City Bowl where they defeated Central Michigan.\n\nQuestion: When was the 36th head coach of Purdue Boilermakers football born? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"coach_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the head coach.\"\n    },\n    \"coach_number\": {\n      \"type\": \"integer\",\n      \"description\": \"The ordinal number of the coach in the program's history.\"\n    },\n    \"birth_date\": {\n      \"type\": \"string\",\n      \"description\": \"The full birth date of the coach.\"\n    },\n    \"birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the coach.\"\n    }\n  },\n  \"required\": [\n    \"coach_name\",\n    \"coach_number\",\n    \"birth_date\",\n    \"birth_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "coach_name",
-    "coach_number",
-    "birth_date",
-    "birth_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "coach_name": {
+        "type": "string",
+        "description": "The name of the head coach."
+      },
+      "coach_number": {
+        "type": "integer",
+        "description": "The ordinal number of the coach in the program's history."
+      },
+      "birth_date": {
+        "type": "string",
+        "description": "The full birth date of the coach."
+      },
+      "birth_year": {
+        "type": "integer",
+        "description": "The birth year of the coach."
+      }
+    },
+    "required": [
+      "coach_name",
+      "coach_number",
+      "birth_date",
+      "birth_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

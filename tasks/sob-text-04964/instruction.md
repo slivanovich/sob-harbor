@@ -1,94 +1,71 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Li Yixiang: Li Yixiang (), also known as Li Qiang (李强), is a Chinese actor.  He appeared in movies such as "Ji Quan Bu Ning", "Crazy Lottery".  In 2002, he starred as one of the two murderous con men in director Li Yang's "Blind Shaft", opposite Wang Baoqiang as his naive would-be victim.  Li shared the Golden Kinnaree for Best Actor at the 2004 Bangkok International Film Festival along with Wang, and fellow "Blind Shaft" co-star, Wang Shuangbao.
-
-Li Mi (Sui dynasty): Li Mi (李密) (582–619), courtesy name Xuansui (玄邃), pseudonym Liu Zhiyuan (劉智遠), was the leader of a rebel movement against the rule of the Chinese Sui dynasty.  He initially was the strategist of the Sui general Yang Xuangan, who rebelled against Emperor Yang of Sui in 613 but failed, and Li subsequently led a rebellion against Emperor Yang in his own right in 617.  He gained so much following that there was widespread expectation that he soon would be able to prevail over Sui forces and establish a new dynasty—so much so that even other key rebel leaders, including Dou Jiande, Meng Haigong (孟海公), Xu Yuanlang, and Zhu Can, were urging him to take imperial title.  Even Li Yuan (soon to become the founder of the Tang dynasty as Emperor Gaozu was writing him in supplicating terms that implicitly supported his imperial claim.  Li Mi tried to gain control of the Sui eastern capital Luoyang, but his forced became stalemated by the Sui forces there, and he never came around to claiming the imperial title, instead accepting the title of Duke of Wei.  In October 618, the Sui general Wang Shichong crushed his forces at Yanshi.  Li Mi fled to Tang territory and submitted to Emperor Gaozu, but subsequently rebelled against Tang and tried to revive his own army.  The Tang general Sheng Yanshi (盛彥師) captured and executed him.
-
-Emperor Gong of Sui: Emperor Gong of Sui (隋恭帝) (605 – 14 September 619), personal name Yang You (楊侑), was an emperor of the Chinese Sui Dynasty.  Traditionally, he was considered the last emperor of the dynasty because he was the one who formally yielded the throne to the founding emperor to the succeeding Tang Dynasty, Emperor Gaozu of Tang (Li Yuan), although after him, his brother Yang Tong claimed the throne and continued to do so until 619.  Li had rebelled against the rule of Yang You's grandfather Emperor Yang of Sui in 617 and captured the capital Chang'an later that year, seizing Yang You and declaring him emperor, although only the commanderies under Li's control recognized him as emperor; the rest of the commanderies continued to recognize Emperor Yang as emperor.  In 618, after news arrived that Emperor Yang had been killed by the general Yuwen Huaji, Li had the young emperor yield the throne to him.  The former emperor died the following year, probably on the new emperor's orders.
-
-Nomad (2005 film): Nomad: The Warrior () is a 2005 Kazakh historical epic film written and co-produced by Rustam Ibragimbekov, executive-produced by Miloš Forman and directed by Sergei Bodrov, Ivan Passer and Talgat Temenov.  It was released on March 16, 2007 in North America, distributed by The Weinstein Company.  The film has been shot in two versions: in Kazakh by Temenov for distribution in Kazakhstan and in English by Passer and Bodrov for distribution worldwide.  The government of Kazakhstan invested $40 million in the movie production, making it the most expensive Kazakh film ever made.  "Nomad" was Kazakhstan's official entry for Best Foreign Language Film for the 79th Academy Awards.
-
-Ivan Passer: Ivan Passer (born 10 July 1933) is a Czech-born film director and screenwriter.
-
-Teeny Ted from Turnip Town: Teeny Ted from Turnip Town (2007), published by Robert Chaplin, is certified by "Guinness World Records" as the world's smallest reproduction of a printed book.  The book was produced in the Nano Imaging Laboratory at Simon Fraser University in Vancouver, British Columbia, Canada, with the assistance of SFU scientists Li Yang and Karen Kavanagh.
-
-Li Yang (ski jumper): Li Yang (; born 31 March 1980 in Tonghua, Jilin) is a Chinese ski jumper who has been competing since 2004.  At the 2006 Winter Olympics, he finished 16th in the team large hill and 44th in the individual normal hill events.
-
-Li Yang (director): Li Yang (; born 1959) is a Chinese writer-director.  Though often grouped with the so-called Sixth Generation of Chinese filmmakers, he is in fact closer in age to the Fifth Generation and in interviews has denied membership with either group, claiming that such labels are only artificial differentiations.
-
-Blind Mountain: Blind Mountain () is a 2007 Chinese film directed by Li Yang and is Li's first feature film since his 2003 debut "Blind Shaft".  It is also known as "Road Home".
-
-Yuwen Shu: Yuwen Shu (宇文述) (died 616), courtesy name Botong (伯通), formally Duke Gong of Xu (許恭公), was an official and general of the Chinese dynasty Sui Dynasty.  He was a confidant of Emperor Yang (Yang Guang) and was instrumental in Yang Guang's displacement of his brother Yang Yong as crown prince; therefore, after Yang Guang became emperor, Yuwen Shu became exceedingly powerful and was one of two generals who spearheaded Yangdi's efforts in the Goguryeo-Sui Wars.  His son Yuwen Huaji later led a coup against Emperor Yang in 618 and, after killing Emperor Yang, briefly claimed imperial title in 619, but was soon captured and killed.  Another son of Yuwen Shu, Yuwen Shiji, however, was a friend of Tang Dynasty's founder Li Yuan (Emperor Gaozu), and after Li Yuan established Tang remained an influential official.
-
-Question: Who is older, Li Yang or Ivan Passer?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person1": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "profession": {
-          "type": "string"
-        },
-        "birth_year": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "name",
-        "profession",
-        "birth_year"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "person2": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "profession": {
-          "type": "string"
-        },
-        "birth_year": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "name",
-        "profession",
-        "birth_year"
-      ],
-      "additionalProperties": false
-    },
-    "older_person_name": {
-      "type": "string"
-    },
-    "age_difference_years": {
-      "type": "integer"
+    {
+      "role": "user",
+      "content": "Context:\nLi Yixiang: Li Yixiang (), also known as Li Qiang (李强), is a Chinese actor.  He appeared in movies such as \"Ji Quan Bu Ning\", \"Crazy Lottery\".  In 2002, he starred as one of the two murderous con men in director Li Yang's \"Blind Shaft\", opposite Wang Baoqiang as his naive would-be victim.  Li shared the Golden Kinnaree for Best Actor at the 2004 Bangkok International Film Festival along with Wang, and fellow \"Blind Shaft\" co-star, Wang Shuangbao.\n\nLi Mi (Sui dynasty): Li Mi (李密) (582–619), courtesy name Xuansui (玄邃), pseudonym Liu Zhiyuan (劉智遠), was the leader of a rebel movement against the rule of the Chinese Sui dynasty.  He initially was the strategist of the Sui general Yang Xuangan, who rebelled against Emperor Yang of Sui in 613 but failed, and Li subsequently led a rebellion against Emperor Yang in his own right in 617.  He gained so much following that there was widespread expectation that he soon would be able to prevail over Sui forces and establish a new dynasty—so much so that even other key rebel leaders, including Dou Jiande, Meng Haigong (孟海公), Xu Yuanlang, and Zhu Can, were urging him to take imperial title.  Even Li Yuan (soon to become the founder of the Tang dynasty as Emperor Gaozu was writing him in supplicating terms that implicitly supported his imperial claim.  Li Mi tried to gain control of the Sui eastern capital Luoyang, but his forced became stalemated by the Sui forces there, and he never came around to claiming the imperial title, instead accepting the title of Duke of Wei.  In October 618, the Sui general Wang Shichong crushed his forces at Yanshi.  Li Mi fled to Tang territory and submitted to Emperor Gaozu, but subsequently rebelled against Tang and tried to revive his own army.  The Tang general Sheng Yanshi (盛彥師) captured and executed him.\n\nEmperor Gong of Sui: Emperor Gong of Sui (隋恭帝) (605 – 14 September 619), personal name Yang You (楊侑), was an emperor of the Chinese Sui Dynasty.  Traditionally, he was considered the last emperor of the dynasty because he was the one who formally yielded the throne to the founding emperor to the succeeding Tang Dynasty, Emperor Gaozu of Tang (Li Yuan), although after him, his brother Yang Tong claimed the throne and continued to do so until 619.  Li had rebelled against the rule of Yang You's grandfather Emperor Yang of Sui in 617 and captured the capital Chang'an later that year, seizing Yang You and declaring him emperor, although only the commanderies under Li's control recognized him as emperor; the rest of the commanderies continued to recognize Emperor Yang as emperor.  In 618, after news arrived that Emperor Yang had been killed by the general Yuwen Huaji, Li had the young emperor yield the throne to him.  The former emperor died the following year, probably on the new emperor's orders.\n\nNomad (2005 film): Nomad: The Warrior () is a 2005 Kazakh historical epic film written and co-produced by Rustam Ibragimbekov, executive-produced by Miloš Forman and directed by Sergei Bodrov, Ivan Passer and Talgat Temenov.  It was released on March 16, 2007 in North America, distributed by The Weinstein Company.  The film has been shot in two versions: in Kazakh by Temenov for distribution in Kazakhstan and in English by Passer and Bodrov for distribution worldwide.  The government of Kazakhstan invested $40 million in the movie production, making it the most expensive Kazakh film ever made.  \"Nomad\" was Kazakhstan's official entry for Best Foreign Language Film for the 79th Academy Awards.\n\nIvan Passer: Ivan Passer (born 10 July 1933) is a Czech-born film director and screenwriter.\n\nTeeny Ted from Turnip Town: Teeny Ted from Turnip Town (2007), published by Robert Chaplin, is certified by \"Guinness World Records\" as the world's smallest reproduction of a printed book.  The book was produced in the Nano Imaging Laboratory at Simon Fraser University in Vancouver, British Columbia, Canada, with the assistance of SFU scientists Li Yang and Karen Kavanagh.\n\nLi Yang (ski jumper): Li Yang (; born 31 March 1980 in Tonghua, Jilin) is a Chinese ski jumper who has been competing since 2004.  At the 2006 Winter Olympics, he finished 16th in the team large hill and 44th in the individual normal hill events.\n\nLi Yang (director): Li Yang (; born 1959) is a Chinese writer-director.  Though often grouped with the so-called Sixth Generation of Chinese filmmakers, he is in fact closer in age to the Fifth Generation and in interviews has denied membership with either group, claiming that such labels are only artificial differentiations.\n\nBlind Mountain: Blind Mountain () is a 2007 Chinese film directed by Li Yang and is Li's first feature film since his 2003 debut \"Blind Shaft\".  It is also known as \"Road Home\".\n\nYuwen Shu: Yuwen Shu (宇文述) (died 616), courtesy name Botong (伯通), formally Duke Gong of Xu (許恭公), was an official and general of the Chinese dynasty Sui Dynasty.  He was a confidant of Emperor Yang (Yang Guang) and was instrumental in Yang Guang's displacement of his brother Yang Yong as crown prince; therefore, after Yang Guang became emperor, Yuwen Shu became exceedingly powerful and was one of two generals who spearheaded Yangdi's efforts in the Goguryeo-Sui Wars.  His son Yuwen Huaji later led a coup against Emperor Yang in 618 and, after killing Emperor Yang, briefly claimed imperial title in 619, but was soon captured and killed.  Another son of Yuwen Shu, Yuwen Shiji, however, was a friend of Tang Dynasty's founder Li Yuan (Emperor Gaozu), and after Li Yuan established Tang remained an influential official.\n\nQuestion: Who is older, Li Yang or Ivan Passer?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person1\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\"\n        },\n        \"profession\": {\n          \"type\": \"string\"\n        },\n        \"birth_year\": {\n          \"type\": \"integer\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"profession\",\n        \"birth_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"person2\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\"\n        },\n        \"profession\": {\n          \"type\": \"string\"\n        },\n        \"birth_year\": {\n          \"type\": \"integer\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"profession\",\n        \"birth_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"older_person_name\": {\n      \"type\": \"string\"\n    },\n    \"age_difference_years\": {\n      \"type\": \"integer\"\n    }\n  },\n  \"required\": [\n    \"person1\",\n    \"person2\",\n    \"older_person_name\",\n    \"age_difference_years\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person1",
-    "person2",
-    "older_person_name",
-    "age_difference_years"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person1": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "profession": {
+            "type": "string"
+          },
+          "birth_year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "name",
+          "profession",
+          "birth_year"
+        ],
+        "additionalProperties": false
+      },
+      "person2": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "profession": {
+            "type": "string"
+          },
+          "birth_year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "name",
+          "profession",
+          "birth_year"
+        ],
+        "additionalProperties": false
+      },
+      "older_person_name": {
+        "type": "string"
+      },
+      "age_difference_years": {
+        "type": "integer"
+      }
+    },
+    "required": [
+      "person1",
+      "person2",
+      "older_person_name",
+      "age_difference_years"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

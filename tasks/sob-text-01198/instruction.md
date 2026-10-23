@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Stephen Tobolowsky: Stephen Harold Tobolowsky (born May 30, 1951) is an American character actor, author, and musician.  He is known for film roles such as annoying insurance agent Ned Ryerson in "Groundhog Day" and amnesiac Sammy Jankis in Christopher Nolan's "Memento", as well as such television characters as Commissioner Hugo Jarry ("Deadwood"), Bob Bishop ("Heroes"), Sandy Ryerson ("Glee"), Stu Beggs ("Californication"), and Action Jack Barker ("Silicon Valley").
-
-The Operator: The Operator is a 2000 American film, starring Michael Laurence, Stephen Tobolowsky, Brion James, Brad Leland and Jacqueline Kim.  It was written and directed by Jon Dichter.
-
-The Miss Firecracker Contest: The Miss Firecracker Contest is a Southern literature play written by Beth Henley.  It was originally produced in Los Angeles in 1980 at the Victory Theater directed by Maria Gobetti.  It got a production at the Manhattan Theatre Club off-Broadway in 1984 directed by Stephen Tobolowsky, who was Henley's romantic partner at the time.  It moved to a larger off-Broadway house, the Westbank Theater, where it ran for a year.  Although not as popular as Henley's "Crimes of the Heart," "The Miss Firecracker Contest" has been generally well received among critics.  Set in Brookhaven, Mississippi, the play explores the themes of femininity, beauty, and the need to be accepted.
-
-The Country Bears: The Country Bears is a 2002 American family musical comedy film, directed by Peter Hastings, produced by Walt Disney Pictures, and based on the Disney theme park attraction "Country Bear Jamboree".  The film stars Haley Joel Osment as the voice of Beary Barrington with supporting roles done by Christopher Walken, Stephen Tobolowsky, Daryl Mitchell, M.C. Gainey, Diedrich Bader, Alex Rocco, Meagen Fay, Eli Marienthal, and the voice talents of Diedrich Bader, Candy Ford, James Gammon, Brad Garrett, Toby Huss, Kevin Michael Richardson, and Stephen Root.
-
-Preggers: "Preggers" is the fourth episode of the American television series "Glee".  The episode premiered on the Fox network on September 23, 2009, and was written and directed by executive producer Brad Falchuk.  "Preggers" sees glee club member Kurt (Chris Colfer) join the football team and admit his homosexuality to his father, Burt (Mike O'Malley).  Cheerleader Quinn (Dianna Agron) discovers she is pregnant and tells her boyfriend Finn (Cory Monteith) the baby is his, when in fact the father is his best friend Puck (Mark Salling).  Faculty members Sue Sylvester (Jane Lynch) and Sandy Ryerson (Stephen Tobolowsky) team up in an effort to bring down the glee club, luring away a disillusioned Rachel (Lea Michele), who quits when club director Will (Matthew Morrison) refuses to award her a solo song.  This episode features the first appearance of O'Malley as Burt Hummel.
-
-Californication (TV series): Californication is an American comedy-drama television series created by Tom Kapinos, which aired for seven seasons on Showtime from August 13, 2007, to June 29, 2014.  The show follows New Yorker Hank Moody (David Duchovny), a troubled novelist who moves to California and suffers from writer's block.  His drinking, womanizing, and drug abuse complicate his relationships with his longtime lover Karen (Natascha McElhone) and their daughter Becca (Madeleine Martin).  Hank struggles to find purpose in his life as he passes up multiple opportunities, but eventually makes the right decision for happiness.
-
-Love Liza: Love Liza is a 2002 American comedy-drama film directed by Todd Louiso and starring Philip Seymour Hoffman, Kathy Bates, Jack Kehler, Wayne Duvall, Sarah Koskoff and Stephen Tobolowsky.
-
-Stephen Tobolowsky's Birthday Party: Stephen Tobolowsky's Birthday Party is a 2005 documentary film about character actor Stephen Tobolowsky in which he tells stories from his life.  The actor, who is usually in a supporting role, takes center stage in the 87-minute birthday party.
-
-One Day at a Time (2017 TV series): One Day at a Time is a Netflix original sitcom loosely based on the 1975–84 series of the same name.  The series is written by Gloria Calderon Kellett and Mike Royce and consists of thirteen episodes.  Justina Machado, Todd Grinnell, Isabella Gómez, Marcel Ruiz, Stephen Tobolowsky, and Rita Moreno star in the series, with Pam Fryman directing the pilot episode.  It was released on January 6, 2017.  On March 4, 2017, the series was renewed by Netflix for a second season.
-
-Mr. Magoo (film): Mr. Magoo is a 1997 American comedy film directed by Stanley Tong (his sole English language film) and written by Pat Proft and Tom Sherohman.  A live-action film adaptation of UPA's cartoon of the same name, it was produced by Walt Disney Pictures, and starred Leslie Nielsen as the title character, alongside Kelly Lynch, Matt Keeslar, Nick Chinlund, Stephen Tobolowsky, Ernie Hudson, Jennifer Garner and Malcolm McDowell.
-
-Question: Who plays the main character of the show in which Stephen Tobolowsky plays the role of Stu Beggs?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "tv_series_name": {
-      "type": "string",
-      "description": "The name of the television series."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "tobolowsky_character_name": {
-      "type": "string",
-      "description": "The name of the character played by Stephen Tobolowsky in the series."
-    },
-    "main_character_name": {
-      "type": "string",
-      "description": "The name of the main character in the series."
-    },
-    "main_character_actor": {
-      "type": "string",
-      "description": "The actor who plays the main character in the series."
+    {
+      "role": "user",
+      "content": "Context:\nStephen Tobolowsky: Stephen Harold Tobolowsky (born May 30, 1951) is an American character actor, author, and musician.  He is known for film roles such as annoying insurance agent Ned Ryerson in \"Groundhog Day\" and amnesiac Sammy Jankis in Christopher Nolan's \"Memento\", as well as such television characters as Commissioner Hugo Jarry (\"Deadwood\"), Bob Bishop (\"Heroes\"), Sandy Ryerson (\"Glee\"), Stu Beggs (\"Californication\"), and Action Jack Barker (\"Silicon Valley\").\n\nThe Operator: The Operator is a 2000 American film, starring Michael Laurence, Stephen Tobolowsky, Brion James, Brad Leland and Jacqueline Kim.  It was written and directed by Jon Dichter.\n\nThe Miss Firecracker Contest: The Miss Firecracker Contest is a Southern literature play written by Beth Henley.  It was originally produced in Los Angeles in 1980 at the Victory Theater directed by Maria Gobetti.  It got a production at the Manhattan Theatre Club off-Broadway in 1984 directed by Stephen Tobolowsky, who was Henley's romantic partner at the time.  It moved to a larger off-Broadway house, the Westbank Theater, where it ran for a year.  Although not as popular as Henley's \"Crimes of the Heart,\" \"The Miss Firecracker Contest\" has been generally well received among critics.  Set in Brookhaven, Mississippi, the play explores the themes of femininity, beauty, and the need to be accepted.\n\nThe Country Bears: The Country Bears is a 2002 American family musical comedy film, directed by Peter Hastings, produced by Walt Disney Pictures, and based on the Disney theme park attraction \"Country Bear Jamboree\".  The film stars Haley Joel Osment as the voice of Beary Barrington with supporting roles done by Christopher Walken, Stephen Tobolowsky, Daryl Mitchell, M.C. Gainey, Diedrich Bader, Alex Rocco, Meagen Fay, Eli Marienthal, and the voice talents of Diedrich Bader, Candy Ford, James Gammon, Brad Garrett, Toby Huss, Kevin Michael Richardson, and Stephen Root.\n\nPreggers: \"Preggers\" is the fourth episode of the American television series \"Glee\".  The episode premiered on the Fox network on September 23, 2009, and was written and directed by executive producer Brad Falchuk.  \"Preggers\" sees glee club member Kurt (Chris Colfer) join the football team and admit his homosexuality to his father, Burt (Mike O'Malley).  Cheerleader Quinn (Dianna Agron) discovers she is pregnant and tells her boyfriend Finn (Cory Monteith) the baby is his, when in fact the father is his best friend Puck (Mark Salling).  Faculty members Sue Sylvester (Jane Lynch) and Sandy Ryerson (Stephen Tobolowsky) team up in an effort to bring down the glee club, luring away a disillusioned Rachel (Lea Michele), who quits when club director Will (Matthew Morrison) refuses to award her a solo song.  This episode features the first appearance of O'Malley as Burt Hummel.\n\nCalifornication (TV series): Californication is an American comedy-drama television series created by Tom Kapinos, which aired for seven seasons on Showtime from August 13, 2007, to June 29, 2014.  The show follows New Yorker Hank Moody (David Duchovny), a troubled novelist who moves to California and suffers from writer's block.  His drinking, womanizing, and drug abuse complicate his relationships with his longtime lover Karen (Natascha McElhone) and their daughter Becca (Madeleine Martin).  Hank struggles to find purpose in his life as he passes up multiple opportunities, but eventually makes the right decision for happiness.\n\nLove Liza: Love Liza is a 2002 American comedy-drama film directed by Todd Louiso and starring Philip Seymour Hoffman, Kathy Bates, Jack Kehler, Wayne Duvall, Sarah Koskoff and Stephen Tobolowsky.\n\nStephen Tobolowsky's Birthday Party: Stephen Tobolowsky's Birthday Party is a 2005 documentary film about character actor Stephen Tobolowsky in which he tells stories from his life.  The actor, who is usually in a supporting role, takes center stage in the 87-minute birthday party.\n\nOne Day at a Time (2017 TV series): One Day at a Time is a Netflix original sitcom loosely based on the 1975–84 series of the same name.  The series is written by Gloria Calderon Kellett and Mike Royce and consists of thirteen episodes.  Justina Machado, Todd Grinnell, Isabella Gómez, Marcel Ruiz, Stephen Tobolowsky, and Rita Moreno star in the series, with Pam Fryman directing the pilot episode.  It was released on January 6, 2017.  On March 4, 2017, the series was renewed by Netflix for a second season.\n\nMr. Magoo (film): Mr. Magoo is a 1997 American comedy film directed by Stanley Tong (his sole English language film) and written by Pat Proft and Tom Sherohman.  A live-action film adaptation of UPA's cartoon of the same name, it was produced by Walt Disney Pictures, and starred Leslie Nielsen as the title character, alongside Kelly Lynch, Matt Keeslar, Nick Chinlund, Stephen Tobolowsky, Ernie Hudson, Jennifer Garner and Malcolm McDowell.\n\nQuestion: Who plays the main character of the show in which Stephen Tobolowsky plays the role of Stu Beggs?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"tv_series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the television series.\"\n    },\n    \"tobolowsky_character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character played by Stephen Tobolowsky in the series.\"\n    },\n    \"main_character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the main character in the series.\"\n    },\n    \"main_character_actor\": {\n      \"type\": \"string\",\n      \"description\": \"The actor who plays the main character in the series.\"\n    }\n  },\n  \"required\": [\n    \"tv_series_name\",\n    \"tobolowsky_character_name\",\n    \"main_character_name\",\n    \"main_character_actor\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "tv_series_name",
-    "tobolowsky_character_name",
-    "main_character_name",
-    "main_character_actor"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "tv_series_name": {
+        "type": "string",
+        "description": "The name of the television series."
+      },
+      "tobolowsky_character_name": {
+        "type": "string",
+        "description": "The name of the character played by Stephen Tobolowsky in the series."
+      },
+      "main_character_name": {
+        "type": "string",
+        "description": "The name of the main character in the series."
+      },
+      "main_character_actor": {
+        "type": "string",
+        "description": "The actor who plays the main character in the series."
+      }
+    },
+    "required": [
+      "tv_series_name",
+      "tobolowsky_character_name",
+      "main_character_name",
+      "main_character_actor"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Half Light (film): Half Light is a 2006 mystery-horror drama film starring Demi Moore and Hans Matheson.  It was directed by Craig Rosenberg, who also penned the screenplay.
-
-Last Nights Vice: Last Night's Vice is a five-piece pop rock band from St. Louis, Missouri.  After forming in 2006, the group self-released their debut EP called The Power Cosmic EP.  Locally, some of their milestones would include playing at both Pointfest 27 and Pointfest 28 as well as the 2011 Fair Saint Louis.  Nationally, Last Night's Vice has played at a number of iconic venues from The Cubby Bear in Chicago, IL and The Viper Room in Los Angeles, CA.
-
-The Nutty Professor (soundtrack): The Nutty Professor soundtrack is the soundtrack to the 1996 Universal Pictures comedy film, "The Nutty Professor".  It was released the same year through Def Jam Recordings, which was distributed by PolyGram Records and contained hip hop and R&B music.  The album fared well on the Billboard charts, peaking at #8 on the "Billboard" 200 and #1 on the Top R&B/Hip-Hop Albums and featured several charting singles: "Ain't Nobody" by Monica featuring Treach of Naughty By Nature, "I Like" by Montell Jordan featuring Slick Rick, "Ain't No Nigga" by Jay-Z featuring Foxy Brown "Touch Me, Tease Me" by Case featuring Mary J. Blige and Foxy Brown and "Last Night" by Az Yet all made it to the charts with "Last Night" making it to #9 on the "Billboard" Hot 100.  The two tracks "Come Around" by Dos of Soul and "My Crew Can't Go For That" by Trigger tha Gambler featuring D.V. Alias Khrist and Smoothe da Hustler.
-
-Last Night a DJ Saved My Life (book): Last Night a DJ Saved My Life is a book written by Bill Brewster and Frank Broughton about the history of DJing published in 1999.  A compilation album of the same name was released with the book.  The album contains various clips ranging from 1970s reggae to Handel's "Largo", the first song to reach radio airwaves, in 1906.  The book takes its name from the Indeep single "Last Night a DJ Saved My Life."  In 2006, The Observer named "Last Night..." #45 on their list of the greatest music books.
-
-The Last Night of the Barbary Coast: The Last Night of the Barbary Coast (1913) was an early example of the exploitation film, showing what was purported to be the last night of the Barbary Coast red-light section of San Francisco.  In reality, the Barbary Coast wasn't shut down until 1917.
-
-Prelude 12/21: "Prelude 12/21" is the first song on AFI's seventh album "Decemberunderground", written by Hunter Burgan, Adam Carson, David Paden Marchand, Jade Puget, released in 2006.  The song has a secret beginning if the CD is rewound twenty seconds before it starts.  An altered version of the song was mixed with "Miss Murder" for inclusion in the director's cut of its music video.  The number in the song title, '12/21', could be a reference to December 21, the winter solstice, which has the longest night of the year.  In addition to being the first track on "Decemberunderground" and the fact that the title contains the word "prelude", it is often used as an opener at AFI shows.  The song was also featured in the season 4 episode "Where Did You Sleep Last Night? " of "One Tree Hill" when Peyton Sawyer receives a boxing lesson from her half-brother Derek Sommers.  It was also featured at the end of an episode of "Smallville" (specifically in the ninth episode of the sixth season, "Subterranean").
-
-About Last Night (1986 film): About Last Night (styled as About Last Night...) is a 1986 American romantic comedy-drama film directed by Edward Zwick, and starring Rob Lowe and Demi Moore as Chicago yuppies who enter a committed relationship for the first time.  The screenplay by Tim Kazurinsky and Denise DeClue is based on the 1974 David Mamet play "Sexual Perversity in Chicago".  The film was remade as the 2014 "About Last Night" (without the ellipsis).
-
-Remember Last Night?: Remember Last Night?  is a 1935 American mystery comedy film directed by James Whale.  The film, based on the novel "The Hangover Murders", is about the investigation of the murder of one of a group of friends.  The survivors are unable to recall the events of the night of the murder because they were all too drunk.  "Remember Last Night?"  features an ensemble cast headed by Edward Arnold, Constance Cummings, and Robert Young.
-
-Moros Eros: Moros Eros was an American alternative rock band from Marietta, Georgia.  The band formed under the name "In Vitro" and released their debut EP "I'm Dying But I Still Don't See Anything" under that name, only to discover the name was already trademarked by a French band.  The band renamed themselves Moros Eros (Moros is Greek for "impending doom" and Eros is the Greek god of love).  The band signed to Victory Records.  The band's debut album "I Saw The Devil Last Night And Now The Sun Shines Bright" was released on October 31, 2006, with the single ""Today Is The Day"" soon following.  The band played at the 2007 South by Southwest.  The group's most recent album, "Jealous Me Was Killed By Curiosity", arrived in October 2006.
-
-Demi Moore: Demi Gene Guynes ( ; born November 11, 1962), professionally known as Demi Moore, is an American actress, former songwriter, and model.  Moore dropped out of high school at age 16 to pursue an acting career and appeared in the men's magazine "Oui" in 1981.  After making her film debut later that year, she appeared on the soap opera "General Hospital" and subsequently gained recognition for her work in "Blame It on Rio" (1984) and "St. Elmo's Fire" (1985).  Her first film to become both a critical and commercial hit was "About Last Night..." (1986), which established her as a Hollywood star.
-
-Question: What is the name of the film made in 2006 by the actress who starred in "About last Night..."
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film that meets the criteria."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "release_year": {
-      "type": "integer",
-      "description": "The release year of the identified film."
-    },
-    "starring_actress": {
-      "type": "string",
-      "description": "The name of the actress who starred in the film."
-    },
-    "actress_other_film_reference": {
-      "type": "string",
-      "description": "The title of the other film mentioned in the question that the actress starred in."
+    {
+      "role": "user",
+      "content": "Context:\nHalf Light (film): Half Light is a 2006 mystery-horror drama film starring Demi Moore and Hans Matheson.  It was directed by Craig Rosenberg, who also penned the screenplay.\n\nLast Nights Vice: Last Night's Vice is a five-piece pop rock band from St. Louis, Missouri.  After forming in 2006, the group self-released their debut EP called The Power Cosmic EP.  Locally, some of their milestones would include playing at both Pointfest 27 and Pointfest 28 as well as the 2011 Fair Saint Louis.  Nationally, Last Night's Vice has played at a number of iconic venues from The Cubby Bear in Chicago, IL and The Viper Room in Los Angeles, CA.\n\nThe Nutty Professor (soundtrack): The Nutty Professor soundtrack is the soundtrack to the 1996 Universal Pictures comedy film, \"The Nutty Professor\".  It was released the same year through Def Jam Recordings, which was distributed by PolyGram Records and contained hip hop and R&B music.  The album fared well on the Billboard charts, peaking at #8 on the \"Billboard\" 200 and #1 on the Top R&B/Hip-Hop Albums and featured several charting singles: \"Ain't Nobody\" by Monica featuring Treach of Naughty By Nature, \"I Like\" by Montell Jordan featuring Slick Rick, \"Ain't No Nigga\" by Jay-Z featuring Foxy Brown \"Touch Me, Tease Me\" by Case featuring Mary J. Blige and Foxy Brown and \"Last Night\" by Az Yet all made it to the charts with \"Last Night\" making it to #9 on the \"Billboard\" Hot 100.  The two tracks \"Come Around\" by Dos of Soul and \"My Crew Can't Go For That\" by Trigger tha Gambler featuring D.V. Alias Khrist and Smoothe da Hustler.\n\nLast Night a DJ Saved My Life (book): Last Night a DJ Saved My Life is a book written by Bill Brewster and Frank Broughton about the history of DJing published in 1999.  A compilation album of the same name was released with the book.  The album contains various clips ranging from 1970s reggae to Handel's \"Largo\", the first song to reach radio airwaves, in 1906.  The book takes its name from the Indeep single \"Last Night a DJ Saved My Life.\"  In 2006, The Observer named \"Last Night...\" #45 on their list of the greatest music books.\n\nThe Last Night of the Barbary Coast: The Last Night of the Barbary Coast (1913) was an early example of the exploitation film, showing what was purported to be the last night of the Barbary Coast red-light section of San Francisco.  In reality, the Barbary Coast wasn't shut down until 1917.\n\nPrelude 12/21: \"Prelude 12/21\" is the first song on AFI's seventh album \"Decemberunderground\", written by Hunter Burgan, Adam Carson, David Paden Marchand, Jade Puget, released in 2006.  The song has a secret beginning if the CD is rewound twenty seconds before it starts.  An altered version of the song was mixed with \"Miss Murder\" for inclusion in the director's cut of its music video.  The number in the song title, '12/21', could be a reference to December 21, the winter solstice, which has the longest night of the year.  In addition to being the first track on \"Decemberunderground\" and the fact that the title contains the word \"prelude\", it is often used as an opener at AFI shows.  The song was also featured in the season 4 episode \"Where Did You Sleep Last Night? \" of \"One Tree Hill\" when Peyton Sawyer receives a boxing lesson from her half-brother Derek Sommers.  It was also featured at the end of an episode of \"Smallville\" (specifically in the ninth episode of the sixth season, \"Subterranean\").\n\nAbout Last Night (1986 film): About Last Night (styled as About Last Night...) is a 1986 American romantic comedy-drama film directed by Edward Zwick, and starring Rob Lowe and Demi Moore as Chicago yuppies who enter a committed relationship for the first time.  The screenplay by Tim Kazurinsky and Denise DeClue is based on the 1974 David Mamet play \"Sexual Perversity in Chicago\".  The film was remade as the 2014 \"About Last Night\" (without the ellipsis).\n\nRemember Last Night?: Remember Last Night?  is a 1935 American mystery comedy film directed by James Whale.  The film, based on the novel \"The Hangover Murders\", is about the investigation of the murder of one of a group of friends.  The survivors are unable to recall the events of the night of the murder because they were all too drunk.  \"Remember Last Night?\"  features an ensemble cast headed by Edward Arnold, Constance Cummings, and Robert Young.\n\nMoros Eros: Moros Eros was an American alternative rock band from Marietta, Georgia.  The band formed under the name \"In Vitro\" and released their debut EP \"I'm Dying But I Still Don't See Anything\" under that name, only to discover the name was already trademarked by a French band.  The band renamed themselves Moros Eros (Moros is Greek for \"impending doom\" and Eros is the Greek god of love).  The band signed to Victory Records.  The band's debut album \"I Saw The Devil Last Night And Now The Sun Shines Bright\" was released on October 31, 2006, with the single \"\"Today Is The Day\"\" soon following.  The band played at the 2007 South by Southwest.  The group's most recent album, \"Jealous Me Was Killed By Curiosity\", arrived in October 2006.\n\nDemi Moore: Demi Gene Guynes ( ; born November 11, 1962), professionally known as Demi Moore, is an American actress, former songwriter, and model.  Moore dropped out of high school at age 16 to pursue an acting career and appeared in the men's magazine \"Oui\" in 1981.  After making her film debut later that year, she appeared on the soap opera \"General Hospital\" and subsequently gained recognition for her work in \"Blame It on Rio\" (1984) and \"St. Elmo's Fire\" (1985).  Her first film to become both a critical and commercial hit was \"About Last Night...\" (1986), which established her as a Hollywood star.\n\nQuestion: What is the name of the film made in 2006 by the actress who starred in \"About last Night...\"\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film that meets the criteria.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the identified film.\"\n    },\n    \"starring_actress\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actress who starred in the film.\"\n    },\n    \"actress_other_film_reference\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the other film mentioned in the question that the actress starred in.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"release_year\",\n    \"starring_actress\",\n    \"actress_other_film_reference\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "release_year",
-    "starring_actress",
-    "actress_other_film_reference"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film that meets the criteria."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The release year of the identified film."
+      },
+      "starring_actress": {
+        "type": "string",
+        "description": "The name of the actress who starred in the film."
+      },
+      "actress_other_film_reference": {
+        "type": "string",
+        "description": "The title of the other film mentioned in the question that the actress starred in."
+      }
+    },
+    "required": [
+      "film_title",
+      "release_year",
+      "starring_actress",
+      "actress_other_film_reference"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

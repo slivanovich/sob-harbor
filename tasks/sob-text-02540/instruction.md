@@ -1,68 +1,45 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2002 Auburn Tigers football team: The 2002 Auburn Tigers football team represented Auburn University in the 2002 NCAA Division I-A football season.  Auburn, led by head coach Tommy Tuberville, finished with record of 9–4, including a 5–3 record in the Southeastern Conference.  Following a disappointing 7–5 finish the previous season, the coaching staff of the 2002 Tigers featured two prominent new members.  Bobby Petrino was hired as the new offensive coordinator, and Gene Chizik joined the staff as the Tigers' new defensive coordinator.  Petrino left following the season to assume the head coaching job at Louisville, while Chizik remained at Auburn through the 2004 season before leaving for the defensive coordinator position at Texas.  The Tigers finished the season ranked #14 in the AP Poll and #16 in the Coaches Poll.
-
-2014 Auburn Tigers softball season: The 2014 Auburn Tigers softball team is an American softball team, representing the Auburn University for the 2014 NCAA softball season.  This is Clint Myers first season as the Auburn Tigers softball head coach.  The Auburn Tigers play their home games at Jane B. Moore Field.
-
-2016–17 Auburn Tigers women's basketball team: The 2016–17 Auburn Tigers women's basketball team will represent Auburn University during the 2016–17 NCAA Division I women's basketball season.  The Tigers, led by fifth year head coach Terri Williams-Flournoy, play their home games at Auburn Arena and were members of the Southeastern Conference.  They finished the season 17–15, 7–9 in SEC play to finish in a tied for eighth place.  They lost in the second round of the SEC Women's Tournament to Georgia.  They received an at-large to the NCAA Women's Tournament where lost to NC State in the first round.
-
-2016 Oklahoma Sooners football team: The 2016 Oklahoma Sooners football team represented the University of Oklahoma in the 2016 NCAA Division I FBS football season, the 122nd season of Sooner football.  The team was led by two-time Walter Camp Coach of the Year Award winner, Bob Stoops, in his 18th season as head coach.  They played their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma.  They are a charter member of the Big 12 Conference.
-
-2005 Auburn Tigers football team: The 2005 Auburn Tigers football team represented Auburn University in the 2005 NCAA Division I-A football season.  Despite having four starters from the 2004 team selected in the first round of 2005 NFL Draft, Auburn finished the season with a 9–3 record, including a 7–1 record in the Southeastern Conference.  The Tigers shared the SEC Western Division championship with LSU, but because the Bayou Bengals defeated Auburn 20–17 in overtime on October 22, the Tigers did not advance to the SEC Championship Game.  Head coach Tommy Tuberville became only the third Tigers coach to lead Auburn to a fourth consecutive win over arch rival Alabama when the Tigers defeated the Crimson Tide 28–18 at Jordan–Hare Stadium on November 19.  Auburn finished the season ranked #14 in both the Coaches Poll and AP Poll, with a #13 consensus ranking.
-
-1993 Auburn Tigers football team: The 1993 Auburn Tigers football team represented Auburn University in the 1993 NCAA Division I-A football season.  Under first-year head coach Terry Bowden, the team went undefeated with a record of 11–0 and finished #4 in the AP Poll.  Due to NCAA probation, Auburn was banned from TV and post-season play, and suffered reduced scholarships.  The post-season ban prevented Auburn from playing the SEC Championship and a bowl game.  Nonetheless, Auburn was the only major college football team to finish the season undefeated.  The National Champions Foundation recognized Auburn as one of its 1993 national champions, however Auburn University only formally recognizes championships for the 1957 Auburn Tigers football team and 2010 Auburn Tigers football team seasons, although the official website for Auburn athletics does highlight the 1993 team.
-
-1976 Auburn Tigers football team: The 1976 Auburn Tigers football team represented Auburn University in the 1976 NCAA Division I football season.  At the end of the 1975 season, Ralph "Shug" Jordan retired after 25 years as head coach of the Auburn Tigers.  Doug Barfield, Jordan’s offensive coordinator, took over as head coach starting in 1976.  He coached the Tigers to a 3–8 record his first season, winning just 2 of 6 conference games.  However, Mississippi State was forced to forfeit their game that year, so Auburn's record officially improved to 4–7 (3–3)."'
-
-2015 Auburn Tigers softball team: The 2015 Auburn Tigers softball team is an American softball team, representing the Auburn University for the 2015 NCAA softball season.  In 2014, the Auburn Tigers softball team went 42-19-1 during Clint Myers first season.  The Auburn Tigers play their home games at Jane B. Moore Field.
-
-2016 Auburn Tigers softball team: The 2016 Auburn Tigers softball team is an American softball team, representing Auburn University for the 2016 NCAA softball season.  The Auburn Tigers play their home games at Jane B. Moore Field.
-
-2016 Auburn Tigers football team: The 2016 Auburn Tigers football team represented Auburn University in the 2016 NCAA Division I FBS football season.  The Tigers played their home games at Jordan–Hare Stadium in Auburn, Alabama and competed in the Western Division of the Southeastern Conference (SEC).  They were led by fourth-year head coach Gus Malzahn.  They finished the season 8–5, 5–3 in SEC play to finish in a tie for second place in the Western Division.  They were invited to the Sugar Bowl where they lost to Oklahoma.
-
-Question: In 2016 the Auburn Tigers lost to a team led by who?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "losing_team_year": {
-      "type": "integer",
-      "description": "The year of the Auburn Tigers team that lost."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "losing_team_sport": {
-      "type": "string",
-      "description": "The sport of the Auburn Tigers team that lost."
-    },
-    "opponent_team_name": {
-      "type": "string",
-      "description": "The name of the team Auburn lost to."
-    },
-    "opponent_coach_name": {
-      "type": "string",
-      "description": "The name of the head coach of the opponent team."
-    },
-    "opponent_coach_award": {
-      "type": "string",
-      "description": "An award won by the opponent's coach, if mentioned."
+    {
+      "role": "user",
+      "content": "Context:\n2002 Auburn Tigers football team: The 2002 Auburn Tigers football team represented Auburn University in the 2002 NCAA Division I-A football season.  Auburn, led by head coach Tommy Tuberville, finished with record of 9–4, including a 5–3 record in the Southeastern Conference.  Following a disappointing 7–5 finish the previous season, the coaching staff of the 2002 Tigers featured two prominent new members.  Bobby Petrino was hired as the new offensive coordinator, and Gene Chizik joined the staff as the Tigers' new defensive coordinator.  Petrino left following the season to assume the head coaching job at Louisville, while Chizik remained at Auburn through the 2004 season before leaving for the defensive coordinator position at Texas.  The Tigers finished the season ranked #14 in the AP Poll and #16 in the Coaches Poll.\n\n2014 Auburn Tigers softball season: The 2014 Auburn Tigers softball team is an American softball team, representing the Auburn University for the 2014 NCAA softball season.  This is Clint Myers first season as the Auburn Tigers softball head coach.  The Auburn Tigers play their home games at Jane B. Moore Field.\n\n2016–17 Auburn Tigers women's basketball team: The 2016–17 Auburn Tigers women's basketball team will represent Auburn University during the 2016–17 NCAA Division I women's basketball season.  The Tigers, led by fifth year head coach Terri Williams-Flournoy, play their home games at Auburn Arena and were members of the Southeastern Conference.  They finished the season 17–15, 7–9 in SEC play to finish in a tied for eighth place.  They lost in the second round of the SEC Women's Tournament to Georgia.  They received an at-large to the NCAA Women's Tournament where lost to NC State in the first round.\n\n2016 Oklahoma Sooners football team: The 2016 Oklahoma Sooners football team represented the University of Oklahoma in the 2016 NCAA Division I FBS football season, the 122nd season of Sooner football.  The team was led by two-time Walter Camp Coach of the Year Award winner, Bob Stoops, in his 18th season as head coach.  They played their home games at Gaylord Family Oklahoma Memorial Stadium in Norman, Oklahoma.  They are a charter member of the Big 12 Conference.\n\n2005 Auburn Tigers football team: The 2005 Auburn Tigers football team represented Auburn University in the 2005 NCAA Division I-A football season.  Despite having four starters from the 2004 team selected in the first round of 2005 NFL Draft, Auburn finished the season with a 9–3 record, including a 7–1 record in the Southeastern Conference.  The Tigers shared the SEC Western Division championship with LSU, but because the Bayou Bengals defeated Auburn 20–17 in overtime on October 22, the Tigers did not advance to the SEC Championship Game.  Head coach Tommy Tuberville became only the third Tigers coach to lead Auburn to a fourth consecutive win over arch rival Alabama when the Tigers defeated the Crimson Tide 28–18 at Jordan–Hare Stadium on November 19.  Auburn finished the season ranked #14 in both the Coaches Poll and AP Poll, with a #13 consensus ranking.\n\n1993 Auburn Tigers football team: The 1993 Auburn Tigers football team represented Auburn University in the 1993 NCAA Division I-A football season.  Under first-year head coach Terry Bowden, the team went undefeated with a record of 11–0 and finished #4 in the AP Poll.  Due to NCAA probation, Auburn was banned from TV and post-season play, and suffered reduced scholarships.  The post-season ban prevented Auburn from playing the SEC Championship and a bowl game.  Nonetheless, Auburn was the only major college football team to finish the season undefeated.  The National Champions Foundation recognized Auburn as one of its 1993 national champions, however Auburn University only formally recognizes championships for the 1957 Auburn Tigers football team and 2010 Auburn Tigers football team seasons, although the official website for Auburn athletics does highlight the 1993 team.\n\n1976 Auburn Tigers football team: The 1976 Auburn Tigers football team represented Auburn University in the 1976 NCAA Division I football season.  At the end of the 1975 season, Ralph \"Shug\" Jordan retired after 25 years as head coach of the Auburn Tigers.  Doug Barfield, Jordan’s offensive coordinator, took over as head coach starting in 1976.  He coached the Tigers to a 3–8 record his first season, winning just 2 of 6 conference games.  However, Mississippi State was forced to forfeit their game that year, so Auburn's record officially improved to 4–7 (3–3).\"'\n\n2015 Auburn Tigers softball team: The 2015 Auburn Tigers softball team is an American softball team, representing the Auburn University for the 2015 NCAA softball season.  In 2014, the Auburn Tigers softball team went 42-19-1 during Clint Myers first season.  The Auburn Tigers play their home games at Jane B. Moore Field.\n\n2016 Auburn Tigers softball team: The 2016 Auburn Tigers softball team is an American softball team, representing Auburn University for the 2016 NCAA softball season.  The Auburn Tigers play their home games at Jane B. Moore Field.\n\n2016 Auburn Tigers football team: The 2016 Auburn Tigers football team represented Auburn University in the 2016 NCAA Division I FBS football season.  The Tigers played their home games at Jordan–Hare Stadium in Auburn, Alabama and competed in the Western Division of the Southeastern Conference (SEC).  They were led by fourth-year head coach Gus Malzahn.  They finished the season 8–5, 5–3 in SEC play to finish in a tie for second place in the Western Division.  They were invited to the Sugar Bowl where they lost to Oklahoma.\n\nQuestion: In 2016 the Auburn Tigers lost to a team led by who?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"losing_team_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year of the Auburn Tigers team that lost.\"\n    },\n    \"losing_team_sport\": {\n      \"type\": \"string\",\n      \"description\": \"The sport of the Auburn Tigers team that lost.\"\n    },\n    \"opponent_team_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the team Auburn lost to.\"\n    },\n    \"opponent_coach_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the head coach of the opponent team.\"\n    },\n    \"opponent_coach_award\": {\n      \"type\": \"string\",\n      \"description\": \"An award won by the opponent's coach, if mentioned.\"\n    }\n  },\n  \"required\": [\n    \"losing_team_year\",\n    \"losing_team_sport\",\n    \"opponent_team_name\",\n    \"opponent_coach_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "losing_team_year",
-    "losing_team_sport",
-    "opponent_team_name",
-    "opponent_coach_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "losing_team_year": {
+        "type": "integer",
+        "description": "The year of the Auburn Tigers team that lost."
+      },
+      "losing_team_sport": {
+        "type": "string",
+        "description": "The sport of the Auburn Tigers team that lost."
+      },
+      "opponent_team_name": {
+        "type": "string",
+        "description": "The name of the team Auburn lost to."
+      },
+      "opponent_coach_name": {
+        "type": "string",
+        "description": "The name of the head coach of the opponent team."
+      },
+      "opponent_coach_award": {
+        "type": "string",
+        "description": "An award won by the opponent's coach, if mentioned."
+      }
+    },
+    "required": [
+      "losing_team_year",
+      "losing_team_sport",
+      "opponent_team_name",
+      "opponent_coach_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

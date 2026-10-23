@@ -1,92 +1,69 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Pasupathy: Pasupathy (born 18 May 1969) is an Indian film actor.  He appeared in critically acclaimed roles in many noted films in Tamil cinema, playing supporting, antagonistic, comedic as well as protagonistic roles.  His performance in "E" (2006) earned him a Filmfare Award for Best Supporting Actor and a Tamil Nadu State Film Award for Best Supporting Actor.  He also won an ITFA Best Supporting Actor Award for his role in "Kuselan" (2008).  He has also appeared in Malayalam, Telugu, and Kannada films.
-
-Eddie Marsan: Edward Maurice Charles Marsan (born 9 June 1968) is an English actor.  He won the London Film Critics Circle Award and National Society of Film Critics Award for Best Supporting Actor for the film "Happy-Go-Lucky" in 2008.
-
-Paul Thomas Anderson filmography: American director, screenwriter, and producer Paul Thomas Anderson has directed seven feature-length films, five short films, twelve music videos, one documentary, one television episode as a guest segment director, and one theatrical play.  He made his directorial debut with the mockumentary short film "The Dirk Diggler Story" (1988), at the age of 18, about a pornographic actor in the 1970s.  Anderson followed it five years later with another short film, "Cigarettes & Coffee" in 1993.  In 1996, Anderson wrote and directed the neo-noir crime thriller "Hard Eight", starring Philip Baker Hall, John C. Reilly, Gwyneth Paltrow, and Samuel L. Jackson.  The film was well received, with film critic Roger Ebert saying of it in his review, "Movies like "Hard Eight" remind me of what original, compelling characters the movies can sometimes give us."  Using the basis of "The Dirk Diggler Story", Anderson wrote and directed an expansion of the film entitled "Boogie Nights" in 1997.  The film starred Mark Wahlberg as Eddie Adams/"Dirk Diggler" during the Golden Age of Porn in the 1970s and his eventual downfall in the 1980s.  "Boogie Nights" received acclaim from critics and was a commercial success; at the 70th Academy Awards ceremony, the film was nominated for three Academy Awards, including for Best Supporting Actor (Burt Reynolds), Best Supporting Actress (Julianne Moore) and Best Original Screenplay.
-
-Arisan!: Arisan!  is a 2003 Indonesian film that has drawn more than 100,000 viewers.  It is the first Indonesian film with a gay theme, and the first Indonesian film to use high-definition color enhancement.  It uses a mixture of English, standard Indonesian and Jakartan slang.  "Arisan!"  became the second film in Indonesian film history to win all six major awards in Festival Film Indonesia (FFI), including Best Picture, Best Director, Best Actor, Best Actress, Best Supporting Actor, and Best Supporting Actress, after "Ibunda" in 1986.  "Arisan!"  was also the first film in Indonesian film history to include two men kissing, by the characters Sakti and Nino (Tora Sudiro and Surya Saputra).  Because of this, the two won Best Actor and Best Supporting Actor at the Festival Film Indonesia (FFI).
-
-BIFA Award for Best Supporting Actor: The British Independent Film Award for Best Supporting Actor is an annual award given to the Best Supporting Actor in a British film.  The award was introduced at the 2008 ceremony.  Previously, there had been a single award given for Best Supporting Actor/Actress starting in 2003.
-
-Masato Sakai: Masato Sakai (堺 雅人 ) is a Japanese actor.  He won the award for best actor at the 31st Yokohama Film Festival for "Kuhio taisa" and "Nankyoku ryourinin" and the award for best supporting actor at the 2008 Nikkan Sports Film Award, at the 33rd Hochi Film Award and at the 51st Blue Ribbon Awards.  He also received a nomination for best supporting actor at the 32nd Japan Academy Prize.  He is married to Japanese actress and J-Pop singer Miho Kanno.
-
-Happy-Go-Lucky: Happy-Go-Lucky is a 2008 British comedy-drama film written and directed by Mike Leigh.  The screenplay focuses on a cheerful and optimistic primary-school teacher and her relationships with those around her.  The film was well received by critics and resulted in a number of awards for Leigh, lead actress Sally Hawkins and supporting actor Eddie Marsan.
-
-Aaron Paul: Aaron Paul Sturtevant (born August 27, 1979), known as Aaron Paul, is an American actor.  He is best known for portraying Jesse Pinkman in the AMC series "Breaking Bad", for which he won several awards, including the Critics' Choice Television Award for Best Supporting Actor in a Drama Series (2014), the Satellite Award for Best Supporting Actor – Series, Miniseries, or Television Film (2013), and the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series.  This made him the only actor to win the latter category three times (2010, 2012, 2014), since its separation into drama and comedy.  He has also won the Saturn Award for Best Supporting Actor on Television three times (2009, 2011, 2013), more than any other actor in that category.
-
-Patrick Hivon: Patrick Hivon (born July 5, 1975) is a Canadian actor from Quebec.  He was a Jutra Award nominee for Best Supporting Actor at the 17th Jutra Awards in 2015 for "L'Ange gardien", a Gémeaux Award nominatee as Best Supporting Actor in a Drama Series in 2015 for "Nouvelle adresse", and a Canadian Screen Award nominee for Best Supporting Actor at the 4th Canadian Screen Awards in 2016 for "Ville-Marie".
-
-Empire Award for Best Supporting Actor: The Empire Award for Best Supporting Actor is an Empire Award presented annually by the British film magazine "Empire" to honor an actor who has delivered an outstanding performance in a supporting role while working within the film industry.  The Empire Award for Best Supporting Actor is one of two ongoing awards which were first introduced at the 19th Empire Awards ceremony in 2014 (along with Best Supporting Actress) with Michael Fassbender receiving the award for his role in "12 Years a Slave".  Winners are voted by the readers of "Empire" magazine.
-
-Question: Who directed the 2008 film for which Eddie Marson won Best Supporting Actor?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "director_name": {
-      "type": "string",
-      "description": "The name of the film's director."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_details": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "The title of the film."
-        },
-        "release_year": {
-          "type": "integer",
-          "description": "The release year of the film."
-        }
-      },
-      "required": [
-        "title",
-        "release_year"
-      ],
-      "additionalProperties": false
-    },
-    "award_details": {
-      "type": "object",
-      "properties": {
-        "actor_name": {
-          "type": "string",
-          "description": "The name of the actor who won the award."
-        },
-        "award_category": {
-          "type": "string",
-          "description": "The category of the award won."
-        },
-        "award_year": {
-          "type": "integer",
-          "description": "The year the award was won."
-        }
-      },
-      "required": [
-        "actor_name",
-        "award_category",
-        "award_year"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nPasupathy: Pasupathy (born 18 May 1969) is an Indian film actor.  He appeared in critically acclaimed roles in many noted films in Tamil cinema, playing supporting, antagonistic, comedic as well as protagonistic roles.  His performance in \"E\" (2006) earned him a Filmfare Award for Best Supporting Actor and a Tamil Nadu State Film Award for Best Supporting Actor.  He also won an ITFA Best Supporting Actor Award for his role in \"Kuselan\" (2008).  He has also appeared in Malayalam, Telugu, and Kannada films.\n\nEddie Marsan: Edward Maurice Charles Marsan (born 9 June 1968) is an English actor.  He won the London Film Critics Circle Award and National Society of Film Critics Award for Best Supporting Actor for the film \"Happy-Go-Lucky\" in 2008.\n\nPaul Thomas Anderson filmography: American director, screenwriter, and producer Paul Thomas Anderson has directed seven feature-length films, five short films, twelve music videos, one documentary, one television episode as a guest segment director, and one theatrical play.  He made his directorial debut with the mockumentary short film \"The Dirk Diggler Story\" (1988), at the age of 18, about a pornographic actor in the 1970s.  Anderson followed it five years later with another short film, \"Cigarettes & Coffee\" in 1993.  In 1996, Anderson wrote and directed the neo-noir crime thriller \"Hard Eight\", starring Philip Baker Hall, John C. Reilly, Gwyneth Paltrow, and Samuel L. Jackson.  The film was well received, with film critic Roger Ebert saying of it in his review, \"Movies like \"Hard Eight\" remind me of what original, compelling characters the movies can sometimes give us.\"  Using the basis of \"The Dirk Diggler Story\", Anderson wrote and directed an expansion of the film entitled \"Boogie Nights\" in 1997.  The film starred Mark Wahlberg as Eddie Adams/\"Dirk Diggler\" during the Golden Age of Porn in the 1970s and his eventual downfall in the 1980s.  \"Boogie Nights\" received acclaim from critics and was a commercial success; at the 70th Academy Awards ceremony, the film was nominated for three Academy Awards, including for Best Supporting Actor (Burt Reynolds), Best Supporting Actress (Julianne Moore) and Best Original Screenplay.\n\nArisan!: Arisan!  is a 2003 Indonesian film that has drawn more than 100,000 viewers.  It is the first Indonesian film with a gay theme, and the first Indonesian film to use high-definition color enhancement.  It uses a mixture of English, standard Indonesian and Jakartan slang.  \"Arisan!\"  became the second film in Indonesian film history to win all six major awards in Festival Film Indonesia (FFI), including Best Picture, Best Director, Best Actor, Best Actress, Best Supporting Actor, and Best Supporting Actress, after \"Ibunda\" in 1986.  \"Arisan!\"  was also the first film in Indonesian film history to include two men kissing, by the characters Sakti and Nino (Tora Sudiro and Surya Saputra).  Because of this, the two won Best Actor and Best Supporting Actor at the Festival Film Indonesia (FFI).\n\nBIFA Award for Best Supporting Actor: The British Independent Film Award for Best Supporting Actor is an annual award given to the Best Supporting Actor in a British film.  The award was introduced at the 2008 ceremony.  Previously, there had been a single award given for Best Supporting Actor/Actress starting in 2003.\n\nMasato Sakai: Masato Sakai (堺 雅人 ) is a Japanese actor.  He won the award for best actor at the 31st Yokohama Film Festival for \"Kuhio taisa\" and \"Nankyoku ryourinin\" and the award for best supporting actor at the 2008 Nikkan Sports Film Award, at the 33rd Hochi Film Award and at the 51st Blue Ribbon Awards.  He also received a nomination for best supporting actor at the 32nd Japan Academy Prize.  He is married to Japanese actress and J-Pop singer Miho Kanno.\n\nHappy-Go-Lucky: Happy-Go-Lucky is a 2008 British comedy-drama film written and directed by Mike Leigh.  The screenplay focuses on a cheerful and optimistic primary-school teacher and her relationships with those around her.  The film was well received by critics and resulted in a number of awards for Leigh, lead actress Sally Hawkins and supporting actor Eddie Marsan.\n\nAaron Paul: Aaron Paul Sturtevant (born August 27, 1979), known as Aaron Paul, is an American actor.  He is best known for portraying Jesse Pinkman in the AMC series \"Breaking Bad\", for which he won several awards, including the Critics' Choice Television Award for Best Supporting Actor in a Drama Series (2014), the Satellite Award for Best Supporting Actor – Series, Miniseries, or Television Film (2013), and the Primetime Emmy Award for Outstanding Supporting Actor in a Drama Series.  This made him the only actor to win the latter category three times (2010, 2012, 2014), since its separation into drama and comedy.  He has also won the Saturn Award for Best Supporting Actor on Television three times (2009, 2011, 2013), more than any other actor in that category.\n\nPatrick Hivon: Patrick Hivon (born July 5, 1975) is a Canadian actor from Quebec.  He was a Jutra Award nominee for Best Supporting Actor at the 17th Jutra Awards in 2015 for \"L'Ange gardien\", a Gémeaux Award nominatee as Best Supporting Actor in a Drama Series in 2015 for \"Nouvelle adresse\", and a Canadian Screen Award nominee for Best Supporting Actor at the 4th Canadian Screen Awards in 2016 for \"Ville-Marie\".\n\nEmpire Award for Best Supporting Actor: The Empire Award for Best Supporting Actor is an Empire Award presented annually by the British film magazine \"Empire\" to honor an actor who has delivered an outstanding performance in a supporting role while working within the film industry.  The Empire Award for Best Supporting Actor is one of two ongoing awards which were first introduced at the 19th Empire Awards ceremony in 2014 (along with Best Supporting Actress) with Michael Fassbender receiving the award for his role in \"12 Years a Slave\".  Winners are voted by the readers of \"Empire\" magazine.\n\nQuestion: Who directed the 2008 film for which Eddie Marson won Best Supporting Actor?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"director_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the film's director.\"\n    },\n    \"film_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the film.\"\n        },\n        \"release_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The release year of the film.\"\n        }\n      },\n      \"required\": [\n        \"title\",\n        \"release_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"award_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"actor_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the actor who won the award.\"\n        },\n        \"award_category\": {\n          \"type\": \"string\",\n          \"description\": \"The category of the award won.\"\n        },\n        \"award_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the award was won.\"\n        }\n      },\n      \"required\": [\n        \"actor_name\",\n        \"award_category\",\n        \"award_year\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"director_name\",\n    \"film_details\",\n    \"award_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "director_name",
-    "film_details",
-    "award_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "director_name": {
+        "type": "string",
+        "description": "The name of the film's director."
+      },
+      "film_details": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the film."
+          },
+          "release_year": {
+            "type": "integer",
+            "description": "The release year of the film."
+          }
+        },
+        "required": [
+          "title",
+          "release_year"
+        ],
+        "additionalProperties": false
+      },
+      "award_details": {
+        "type": "object",
+        "properties": {
+          "actor_name": {
+            "type": "string",
+            "description": "The name of the actor who won the award."
+          },
+          "award_category": {
+            "type": "string",
+            "description": "The category of the award won."
+          },
+          "award_year": {
+            "type": "integer",
+            "description": "The year the award was won."
+          }
+        },
+        "required": [
+          "actor_name",
+          "award_category",
+          "award_year"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "director_name",
+      "film_details",
+      "award_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

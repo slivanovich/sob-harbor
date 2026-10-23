@@ -1,62 +1,39 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Roger Staubach: Roger Thomas Staubach (born February 5, 1942), nicknamed "Roger the Dodger", "Captain America" and "Captain Comeback", is a former American football quarterback in the National Football League (NFL).
-
-Heisman curse: The Heisman curse is a term coined to reference a two-part assertion of a negative future for the winning player of the Heisman Trophy.  The "curse" supposes that any college football player who wins the Heisman plays on a team that will likely lose its subsequent bowl game.  The trend of post-award failure has garnered the attention of the mainstream media.  Talk of a curse in relation to bowl results was particularly prevalent from 2003 to 2008, when six Heisman Trophy winners compiled a cumulative 1–5 bowl game record, and five of those six led number one ranked teams into the Bowl Championship Series (BCS) National Championship Game as favorites (Heisman Trophy winners, including Reggie Bush, who gave back his Heisman Trophy, are 4–8 overall in the BCS National Championship Game and College Football Playoff National Championship, although prior to 2009 they were 1–6).  Additionally, the Heisman curse asserts that in most cases a Heisman winner will have either a poor career in the National Football League (NFL), or in fact not even see such a football career at all.  Although many Heisman winners have not enjoyed success at the professional level, including players like Matt Leinart, Andre Ware, Jason White, Rashaan Salaam, Eric Crouch, Ty Detmer, Troy Smith and Gino Torretta, proponents of the "curse" rarely cite highly successful players such as Barry Sanders, Charles Woodson, Eddie George, Tim Brown, Bo Jackson, Marcus Allen, Earl Campbell, and Tony Dorsett among the notables.
-
-Wayne Hardin: Irving Wayne Hardin (March 23, 1926 – April 12, 2017) was an American football player and coach.  He served as the head football coach at the United States Naval Academy from 1959 to 1964 and at Temple University from 1970 to 1982, compiling a career college football record 118–74–5.  Hardin led Navy to appearances in the 1961 Orange Bowl and the 1964 Cotton Bowl Classic, and coached two Midshipmen to the Heisman Trophy, Joe Bellino in 1960 and Roger Staubach in 1963.
-
-Charlie Ward: Charlie Ward Jr. (born October 12, 1970) is a retired American professional NBA basketball player, college football Heisman Trophy winner, Davey O'Brien Award winner and a Major League Baseball draftee.  Despite his NCAA football success, Ward was one of the very few players who won a Heisman trophy but was not drafted in the NFL draft.  He won the College Football National Championship with the Florida State University Seminoles.  Ward played several years with the New York Knicks and started in the NBA Finals.  He was inducted in the College Football Hall of Fame in 2006.  An avid tennis player, Ward also displayed his skills at the Arthur Ashe Tennis Tournament in 1994.
-
-Navy–Notre Dame football rivalry: The Navy–Notre Dame football rivalry is an American college football rivalry between the Navy Midshipmen football team of the United States Naval Academy and Notre Dame Fighting Irish football team of the University of Notre Dame.  It has been played annually since 1927, making it the longest uninterrupted intersectional rivalry in college football, and the second-longest never-interrupted college football rivalry overall, after only Kansas St. vs. Iowa St. (uninterrupted since 1917).  Notre Dame leads the series 76–13–1.  Before Navy won a 46–44 triple-overtime contest in 2007, Notre Dame had a 43-game winning streak that was the longest series win streak between two annual opponents in the history of Division I FBS football.  Navy's previous win came in 1963, 35–14 with future Heisman Trophy winner and NFL QB Roger Staubach at the helm.  Navy had come close to winning on numerous occasions before 2007.  The Midshipmen subsequently won again in 2009, 2010 and 2016.
-
-Kinnick Stadium: Kinnick Stadium, formerly known as Iowa Stadium, is a stadium located in Iowa City, Iowa, United States.  It is the home stadium of the University of Iowa Hawkeyes, in the sport of college football.  First opened in 1929, it currently holds up to 70,585 people, making it the 7th largest stadium in the Big Ten, and one of the 20 largest university owned stadiums in the nation.  It is named for Nile Kinnick, the 1939 Heisman Trophy winner and the only Heisman winner in university history, who died in service during World War II.  It was named Iowa Stadium until 1972, when longtime lobbying by "Cedar Rapids Gazette" sportswriter Gus Schrader successfully convinced the UI athletic board to change the name.  It is currently the only college football stadium named after a Heisman Trophy winner.
-
-1963 Texas Longhorns football team: The 1963 Texas Longhorns football team represented the University of Texas at Austin in the 1963 college football season.  The Longhorns won their first national championship.  Tommy Nobis was the only sophomore starter, and was an important participant on the Longhorns' 1963 team, which defeated #2 Navy led by Heisman Trophy winner Roger Staubach in the 1964 Cotton Bowl Classic, 28–6.
-
-2007 Navy vs. Notre Dame football game: The 2007 Navy vs. Notre Dame football game ended the longest all-time college football consecutive wins streak by one team over another.  On November 3, 2007, the Navy Midshipmen defeated the Notre Dame Fighting Irish 46–44 in triple-overtime at Notre Dame's home field, Notre Dame Stadium in South Bend, Indiana.  Notre Dame came into this annual game with 43 straight wins against Navy since the last loss against Heisman Trophy winner Roger Staubach in 1963.  With the win, Navy improved to 5–4 and Notre Dame fell to 1–8 on the season.
-
-2012 Texas A&amp;M vs. Alabama football game: The 2012 Texas A&M vs. Alabama football game was a college football game between the Texas A&M Aggies and Alabama Crimson Tide at Bryant–Denny Stadium in Tuscaloosa, Alabama.  This was the game where Texas A&M freshman quarterback and eventual Heisman Trophy winner Johnny Manziel completed 24 of 31 passes, had 253 passing yards, and two passing touchdowns with 92 rushing yards to help No. 15 Texas A&M upset No. 1 Alabama 29–24, which led him to being the first freshman to win the Heisman Trophy.
-
-1988 Los Angeles Raiders season: The 1988 Los Angeles Raiders season was the club's 29th season in the NFL.  Mike Shanahan was hired as head coach, and the club finished with a 7–9 record.  The Raiders drafted Heisman Trophy winner Tim Brown, making Brown the third person on the Raiders roster to have won the Heisman Trophy, the others being Marcus Allen and Bo Jackson.  Most of the team's success throughout the season came through their division, as the Raiders finished 6-2 against the weak AFC West division, with their only 2 losses against the champions of the division, the Seattle Seahawks.  However, the Raiders were only 1-7 against the rest of the NFL, with their only other win coming against the eventual champions, the 49ers in San Francisco in a game in which only field goals were kicked.
-
-Question: What are the three nicknames for Heisman Trophy winner and NFL QB, Roger Staubach?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "player_name": {
-      "type": "string",
-      "description": "The full name of the football player."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "player_role": {
-      "type": "string",
-      "description": "The primary role of the player mentioned in the context."
-    },
-    "nicknames": {
-      "type": "array",
-      "description": "A list of nicknames associated with the player.",
-      "items": {
-        "type": "string"
-      }
+    {
+      "role": "user",
+      "content": "Context:\nRoger Staubach: Roger Thomas Staubach (born February 5, 1942), nicknamed \"Roger the Dodger\", \"Captain America\" and \"Captain Comeback\", is a former American football quarterback in the National Football League (NFL).\n\nHeisman curse: The Heisman curse is a term coined to reference a two-part assertion of a negative future for the winning player of the Heisman Trophy.  The \"curse\" supposes that any college football player who wins the Heisman plays on a team that will likely lose its subsequent bowl game.  The trend of post-award failure has garnered the attention of the mainstream media.  Talk of a curse in relation to bowl results was particularly prevalent from 2003 to 2008, when six Heisman Trophy winners compiled a cumulative 1–5 bowl game record, and five of those six led number one ranked teams into the Bowl Championship Series (BCS) National Championship Game as favorites (Heisman Trophy winners, including Reggie Bush, who gave back his Heisman Trophy, are 4–8 overall in the BCS National Championship Game and College Football Playoff National Championship, although prior to 2009 they were 1–6).  Additionally, the Heisman curse asserts that in most cases a Heisman winner will have either a poor career in the National Football League (NFL), or in fact not even see such a football career at all.  Although many Heisman winners have not enjoyed success at the professional level, including players like Matt Leinart, Andre Ware, Jason White, Rashaan Salaam, Eric Crouch, Ty Detmer, Troy Smith and Gino Torretta, proponents of the \"curse\" rarely cite highly successful players such as Barry Sanders, Charles Woodson, Eddie George, Tim Brown, Bo Jackson, Marcus Allen, Earl Campbell, and Tony Dorsett among the notables.\n\nWayne Hardin: Irving Wayne Hardin (March 23, 1926 – April 12, 2017) was an American football player and coach.  He served as the head football coach at the United States Naval Academy from 1959 to 1964 and at Temple University from 1970 to 1982, compiling a career college football record 118–74–5.  Hardin led Navy to appearances in the 1961 Orange Bowl and the 1964 Cotton Bowl Classic, and coached two Midshipmen to the Heisman Trophy, Joe Bellino in 1960 and Roger Staubach in 1963.\n\nCharlie Ward: Charlie Ward Jr. (born October 12, 1970) is a retired American professional NBA basketball player, college football Heisman Trophy winner, Davey O'Brien Award winner and a Major League Baseball draftee.  Despite his NCAA football success, Ward was one of the very few players who won a Heisman trophy but was not drafted in the NFL draft.  He won the College Football National Championship with the Florida State University Seminoles.  Ward played several years with the New York Knicks and started in the NBA Finals.  He was inducted in the College Football Hall of Fame in 2006.  An avid tennis player, Ward also displayed his skills at the Arthur Ashe Tennis Tournament in 1994.\n\nNavy–Notre Dame football rivalry: The Navy–Notre Dame football rivalry is an American college football rivalry between the Navy Midshipmen football team of the United States Naval Academy and Notre Dame Fighting Irish football team of the University of Notre Dame.  It has been played annually since 1927, making it the longest uninterrupted intersectional rivalry in college football, and the second-longest never-interrupted college football rivalry overall, after only Kansas St. vs. Iowa St. (uninterrupted since 1917).  Notre Dame leads the series 76–13–1.  Before Navy won a 46–44 triple-overtime contest in 2007, Notre Dame had a 43-game winning streak that was the longest series win streak between two annual opponents in the history of Division I FBS football.  Navy's previous win came in 1963, 35–14 with future Heisman Trophy winner and NFL QB Roger Staubach at the helm.  Navy had come close to winning on numerous occasions before 2007.  The Midshipmen subsequently won again in 2009, 2010 and 2016.\n\nKinnick Stadium: Kinnick Stadium, formerly known as Iowa Stadium, is a stadium located in Iowa City, Iowa, United States.  It is the home stadium of the University of Iowa Hawkeyes, in the sport of college football.  First opened in 1929, it currently holds up to 70,585 people, making it the 7th largest stadium in the Big Ten, and one of the 20 largest university owned stadiums in the nation.  It is named for Nile Kinnick, the 1939 Heisman Trophy winner and the only Heisman winner in university history, who died in service during World War II.  It was named Iowa Stadium until 1972, when longtime lobbying by \"Cedar Rapids Gazette\" sportswriter Gus Schrader successfully convinced the UI athletic board to change the name.  It is currently the only college football stadium named after a Heisman Trophy winner.\n\n1963 Texas Longhorns football team: The 1963 Texas Longhorns football team represented the University of Texas at Austin in the 1963 college football season.  The Longhorns won their first national championship.  Tommy Nobis was the only sophomore starter, and was an important participant on the Longhorns' 1963 team, which defeated #2 Navy led by Heisman Trophy winner Roger Staubach in the 1964 Cotton Bowl Classic, 28–6.\n\n2007 Navy vs. Notre Dame football game: The 2007 Navy vs. Notre Dame football game ended the longest all-time college football consecutive wins streak by one team over another.  On November 3, 2007, the Navy Midshipmen defeated the Notre Dame Fighting Irish 46–44 in triple-overtime at Notre Dame's home field, Notre Dame Stadium in South Bend, Indiana.  Notre Dame came into this annual game with 43 straight wins against Navy since the last loss against Heisman Trophy winner Roger Staubach in 1963.  With the win, Navy improved to 5–4 and Notre Dame fell to 1–8 on the season.\n\n2012 Texas A&amp;M vs. Alabama football game: The 2012 Texas A&M vs. Alabama football game was a college football game between the Texas A&M Aggies and Alabama Crimson Tide at Bryant–Denny Stadium in Tuscaloosa, Alabama.  This was the game where Texas A&M freshman quarterback and eventual Heisman Trophy winner Johnny Manziel completed 24 of 31 passes, had 253 passing yards, and two passing touchdowns with 92 rushing yards to help No. 15 Texas A&M upset No. 1 Alabama 29–24, which led him to being the first freshman to win the Heisman Trophy.\n\n1988 Los Angeles Raiders season: The 1988 Los Angeles Raiders season was the club's 29th season in the NFL.  Mike Shanahan was hired as head coach, and the club finished with a 7–9 record.  The Raiders drafted Heisman Trophy winner Tim Brown, making Brown the third person on the Raiders roster to have won the Heisman Trophy, the others being Marcus Allen and Bo Jackson.  Most of the team's success throughout the season came through their division, as the Raiders finished 6-2 against the weak AFC West division, with their only 2 losses against the champions of the division, the Seattle Seahawks.  However, the Raiders were only 1-7 against the rest of the NFL, with their only other win coming against the eventual champions, the 49ers in San Francisco in a game in which only field goals were kicked.\n\nQuestion: What are the three nicknames for Heisman Trophy winner and NFL QB, Roger Staubach?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"player_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the football player.\"\n    },\n    \"player_role\": {\n      \"type\": \"string\",\n      \"description\": \"The primary role of the player mentioned in the context.\"\n    },\n    \"nicknames\": {\n      \"type\": \"array\",\n      \"description\": \"A list of nicknames associated with the player.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    }\n  },\n  \"required\": [\n    \"player_name\",\n    \"player_role\",\n    \"nicknames\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "player_name",
-    "player_role",
-    "nicknames"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "player_name": {
+        "type": "string",
+        "description": "The full name of the football player."
+      },
+      "player_role": {
+        "type": "string",
+        "description": "The primary role of the player mentioned in the context."
+      },
+      "nicknames": {
+        "type": "array",
+        "description": "A list of nicknames associated with the player.",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "player_name",
+      "player_role",
+      "nicknames"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

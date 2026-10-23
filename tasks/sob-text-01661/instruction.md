@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Don Newkirk: Donald Newkirk is a musician and record producer known for his voice-overs on hip hop albums such as De La Soul's "Three Feet High and Rising" and 3rd Bass' song "The Gas Face".  Newkirk is also a member of the underground hip hop group The Dix, produced by Prince Paul.  Donald Newkirk is also the writer, producer, and singer for songs on his 'Funk City' album put together by Russell Simmons DefJam label.  He's also produced the title song 'Small Thing' which was used as one of the soundtracks to the movie 'Livin Large'.
-
-The Cactus Revisited: The Cactus Revisited is a remix album from East Coast hip hop group 3rd Bass.  It was released on September 7, 1990, by Def Jam Recordings; one year after 3rd Bass' debut album and one year before its second album.  Out of a total seven tracks, it consists of six remixed songs and one unreleased song.  Its remixes are by Prince Paul, Dave Dorrell, Marley Marl, and 3rd Bass itself, among others.  It received both lackluster commercial and critical reception and is considered to be a patchy diversion, according to Dean Carlson of Allmusic [].
-
-3rd Bass: 3rd Bass was an American hip-hop group that rose to fame in the late 1980s and early 1990s, and was notable for being one of the first successful interracial hip-hop groups.  They split up in 1992 and again in 2000 after a failed reunion.  The group released two studio albums in their initial career and both of them were certified gold by the RIAA.
-
-Heath McNease: Heath Daniel McNease is an American Christian hip hop and folk rock musician who is primarily a worship musician in the Christian music movement.  He released four albums with 7Spin Music, two of those hip hop releases, "The Heath McNease Fanclub Meets" in 2007 and "The Gun Show" in 2010, while he released two folk rock roots releases, "The House Always Wins" in 2010 and "Shine On" in 2010.  The remainder of his albums have been released independently.  He released four hip hop albums, "Straight Outta Console: The Nintendo Thumb Mixtape" in 2011, "Thrift Store Jesus" in 2012, "Jesus Shuttlesworth: The Mixtape" and "The Weight of Glory: Second Edition (A Hip Hop Remix Inspired by the Works of C.S. Lewis)" in 2013, and "Among Thieves" in 2014, while two were folk rock roots releases, "The Weight of Glory - Songs Inspired by the Works of C.S. Lewis" in 2012, and "Fort Wayne" in 2014.
-
-The Source Presents: Hip Hop Hits, Vol. 9: The Source Presents: Hip Hop Hits, Volume 9 is the ninth annual music compilation album to be contributed by "The Source" magazine.  Released December 7, 2004, and distributed by Image Entertainment, "Hip Hop Hits Volume 9" features sixteen hip hop and rap hits (one of them being the bonus track).  It went to number 36 on the Top R&B/Hip Hop Albums chart and number 75 on the "Billboard" 200 album chart.  It is also one of only two "Hip Hop Hits" albums to released in the same year; was released six months earlier.
-
-The Source Presents: Hip Hop Hits, Vol. 8: The Source Presents: Hip Hop Hits, Volume 8 is the eighth annual music compilation album to be contributed by "The Source" magazine.  Released June 29, 2004, and distributed by Image Entertainment, "Hip Hop Hits Volume 8" features sixteen hip hop and rap hits (one of them being the bonus track).  It went to number 43 on the Top R&B/Hip Hop Albums chart and number 45 on the "Billboard" 200 album chart.  It is also one of only two "Hip Hop Hits" albums to released in the same year; was released six months later.
-
-Return of the Product: Return of the Product is the only solo album from American hip hop recording artist MC Serch, released August 25, 1992 on Def Jam Recordings, after Serch had made two full-length albums with the group 3rd Bass.  It was for the most part commercially ignored and only reached number 103 on the "Billboard" 200, however it was a critical success.  It featured one popular single, "Here It Comes/Back To The Grill" which reached number 1 on the Hot Rap Singles chart as well as becoming a "Billboard" Hot 100 and Rhythmic Top 40 hit.  The song "Back To The Grill" is notable for featuring a young Nas in one of his first appearances on record.  The title of "Back To The Grill" is a reference to the 3rd Bass track "Kick 'em In The Grill".
-
-The Cactus Album: The Cactus Al/Bum (also known as The Cactus Cee/D and The Cactus Cas/Ette depending on release format) is the debut album by hip hop trio 3rd Bass, released on Def Jam Recordings on November 14, 1989.  The album received positive reviews from the hip hop press, and the group gained some publicity by being arguably the second white group to achieve hip hop credibility, after the Beastie Boys.  It was certified gold by the RIAA on April 24, 1990, the same day as Biz Markie's "The Biz Never Sleeps", which was released two weeks prior to "The Cactus Album".
-
-Prince Paul (producer): Paul Edward Huston, (born April 2, 1967) better known by his stage name Prince Paul, is an American disc jockey, record producer and recording artist from Amityville, New York.  Paul began his career as a DJ for Stetsasonic.  Since then he has worked on albums by Boogie Down Productions, MC Lyte, Big Daddy Kane and 3rd Bass, among others.  Major recognition for Prince Paul came when he produced De La Soul's debut album "3 Feet High and Rising" (1989), in which he pioneered new approaches to hip hop production, mixing and sampling, as well as by adding comedy sketches.
-
-Icelandic hip hop: Icelandic hip hop is hip hop culture from Iceland, which includes hip hop music and rapping, breakdancing by b-girls and b-boys, and graffiti artists and graffiti writers.  Early hip hop groups included Quarashi, Subterranean, Team 13 (which later became Twisted Minds), Multifunctionals, Oblivion, Bounce Brothers and Hip Hop Elements (later named Kritikal Mazz).  The next generation of hip hop performers, notably BlazRoca and Sesar A rapped in Icelandic.  XXX Rottweiler and Sesar A published the first all Icelandic hip hop albums in 2001.  Subsequent artists included Bæjarins bestu, Móri, Afkvæmi Guðanna (The Offspring of the Gods), Bent og 7Berg (Bent and 7Berg), Skytturnar (The Marksmen), Hæsta Hendin (The Highest Hand) and Forgotten Lores.  MGísli Palmi, Þriðja Hæðin (The Third Floor), Cell 7, Kilo, Shadez of Reykjavík, Úlfur Úlfur, and Emmsjé Gauti.  Icelandic lyrics are usually very direct and aggressive, with battle raps.  An important hip hop events is Rímnaflæði in Miðberg, a freestyle competition.  Element Crew has been the leading B-boy crew since 1998.  The graffiti scene started 1991 with graffiti writers such as ONE, Pharokees, Atom, Sharq, Kez and Youze.
-
-Question: Donald Newkirk is a musician and record producer known for his voice-overs on hip hop albums such as 3rd Bass' song was what?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "musician_name": {
-      "type": "string",
-      "description": "The name of the musician/producer."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "role": {
-      "type": "string",
-      "description": "The role of the musician/producer on the album/song."
-    },
-    "group_name": {
-      "type": "string",
-      "description": "The name of the hip hop group associated with the song."
-    },
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song."
+    {
+      "role": "user",
+      "content": "Context:\nDon Newkirk: Donald Newkirk is a musician and record producer known for his voice-overs on hip hop albums such as De La Soul's \"Three Feet High and Rising\" and 3rd Bass' song \"The Gas Face\".  Newkirk is also a member of the underground hip hop group The Dix, produced by Prince Paul.  Donald Newkirk is also the writer, producer, and singer for songs on his 'Funk City' album put together by Russell Simmons DefJam label.  He's also produced the title song 'Small Thing' which was used as one of the soundtracks to the movie 'Livin Large'.\n\nThe Cactus Revisited: The Cactus Revisited is a remix album from East Coast hip hop group 3rd Bass.  It was released on September 7, 1990, by Def Jam Recordings; one year after 3rd Bass' debut album and one year before its second album.  Out of a total seven tracks, it consists of six remixed songs and one unreleased song.  Its remixes are by Prince Paul, Dave Dorrell, Marley Marl, and 3rd Bass itself, among others.  It received both lackluster commercial and critical reception and is considered to be a patchy diversion, according to Dean Carlson of Allmusic [].\n\n3rd Bass: 3rd Bass was an American hip-hop group that rose to fame in the late 1980s and early 1990s, and was notable for being one of the first successful interracial hip-hop groups.  They split up in 1992 and again in 2000 after a failed reunion.  The group released two studio albums in their initial career and both of them were certified gold by the RIAA.\n\nHeath McNease: Heath Daniel McNease is an American Christian hip hop and folk rock musician who is primarily a worship musician in the Christian music movement.  He released four albums with 7Spin Music, two of those hip hop releases, \"The Heath McNease Fanclub Meets\" in 2007 and \"The Gun Show\" in 2010, while he released two folk rock roots releases, \"The House Always Wins\" in 2010 and \"Shine On\" in 2010.  The remainder of his albums have been released independently.  He released four hip hop albums, \"Straight Outta Console: The Nintendo Thumb Mixtape\" in 2011, \"Thrift Store Jesus\" in 2012, \"Jesus Shuttlesworth: The Mixtape\" and \"The Weight of Glory: Second Edition (A Hip Hop Remix Inspired by the Works of C.S. Lewis)\" in 2013, and \"Among Thieves\" in 2014, while two were folk rock roots releases, \"The Weight of Glory - Songs Inspired by the Works of C.S. Lewis\" in 2012, and \"Fort Wayne\" in 2014.\n\nThe Source Presents: Hip Hop Hits, Vol. 9: The Source Presents: Hip Hop Hits, Volume 9 is the ninth annual music compilation album to be contributed by \"The Source\" magazine.  Released December 7, 2004, and distributed by Image Entertainment, \"Hip Hop Hits Volume 9\" features sixteen hip hop and rap hits (one of them being the bonus track).  It went to number 36 on the Top R&B/Hip Hop Albums chart and number 75 on the \"Billboard\" 200 album chart.  It is also one of only two \"Hip Hop Hits\" albums to released in the same year; was released six months earlier.\n\nThe Source Presents: Hip Hop Hits, Vol. 8: The Source Presents: Hip Hop Hits, Volume 8 is the eighth annual music compilation album to be contributed by \"The Source\" magazine.  Released June 29, 2004, and distributed by Image Entertainment, \"Hip Hop Hits Volume 8\" features sixteen hip hop and rap hits (one of them being the bonus track).  It went to number 43 on the Top R&B/Hip Hop Albums chart and number 45 on the \"Billboard\" 200 album chart.  It is also one of only two \"Hip Hop Hits\" albums to released in the same year; was released six months later.\n\nReturn of the Product: Return of the Product is the only solo album from American hip hop recording artist MC Serch, released August 25, 1992 on Def Jam Recordings, after Serch had made two full-length albums with the group 3rd Bass.  It was for the most part commercially ignored and only reached number 103 on the \"Billboard\" 200, however it was a critical success.  It featured one popular single, \"Here It Comes/Back To The Grill\" which reached number 1 on the Hot Rap Singles chart as well as becoming a \"Billboard\" Hot 100 and Rhythmic Top 40 hit.  The song \"Back To The Grill\" is notable for featuring a young Nas in one of his first appearances on record.  The title of \"Back To The Grill\" is a reference to the 3rd Bass track \"Kick 'em In The Grill\".\n\nThe Cactus Album: The Cactus Al/Bum (also known as The Cactus Cee/D and The Cactus Cas/Ette depending on release format) is the debut album by hip hop trio 3rd Bass, released on Def Jam Recordings on November 14, 1989.  The album received positive reviews from the hip hop press, and the group gained some publicity by being arguably the second white group to achieve hip hop credibility, after the Beastie Boys.  It was certified gold by the RIAA on April 24, 1990, the same day as Biz Markie's \"The Biz Never Sleeps\", which was released two weeks prior to \"The Cactus Album\".\n\nPrince Paul (producer): Paul Edward Huston, (born April 2, 1967) better known by his stage name Prince Paul, is an American disc jockey, record producer and recording artist from Amityville, New York.  Paul began his career as a DJ for Stetsasonic.  Since then he has worked on albums by Boogie Down Productions, MC Lyte, Big Daddy Kane and 3rd Bass, among others.  Major recognition for Prince Paul came when he produced De La Soul's debut album \"3 Feet High and Rising\" (1989), in which he pioneered new approaches to hip hop production, mixing and sampling, as well as by adding comedy sketches.\n\nIcelandic hip hop: Icelandic hip hop is hip hop culture from Iceland, which includes hip hop music and rapping, breakdancing by b-girls and b-boys, and graffiti artists and graffiti writers.  Early hip hop groups included Quarashi, Subterranean, Team 13 (which later became Twisted Minds), Multifunctionals, Oblivion, Bounce Brothers and Hip Hop Elements (later named Kritikal Mazz).  The next generation of hip hop performers, notably BlazRoca and Sesar A rapped in Icelandic.  XXX Rottweiler and Sesar A published the first all Icelandic hip hop albums in 2001.  Subsequent artists included Bæjarins bestu, Móri, Afkvæmi Guðanna (The Offspring of the Gods), Bent og 7Berg (Bent and 7Berg), Skytturnar (The Marksmen), Hæsta Hendin (The Highest Hand) and Forgotten Lores.  MGísli Palmi, Þriðja Hæðin (The Third Floor), Cell 7, Kilo, Shadez of Reykjavík, Úlfur Úlfur, and Emmsjé Gauti.  Icelandic lyrics are usually very direct and aggressive, with battle raps.  An important hip hop events is Rímnaflæði in Miðberg, a freestyle competition.  Element Crew has been the leading B-boy crew since 1998.  The graffiti scene started 1991 with graffiti writers such as ONE, Pharokees, Atom, Sharq, Kez and Youze.\n\nQuestion: Donald Newkirk is a musician and record producer known for his voice-overs on hip hop albums such as 3rd Bass' song was what?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"musician_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the musician/producer.\"\n    },\n    \"role\": {\n      \"type\": \"string\",\n      \"description\": \"The role of the musician/producer on the album/song.\"\n    },\n    \"group_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the hip hop group associated with the song.\"\n    },\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song.\"\n    }\n  },\n  \"required\": [\n    \"musician_name\",\n    \"role\",\n    \"group_name\",\n    \"song_title\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "musician_name",
-    "role",
-    "group_name",
-    "song_title"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "musician_name": {
+        "type": "string",
+        "description": "The name of the musician/producer."
+      },
+      "role": {
+        "type": "string",
+        "description": "The role of the musician/producer on the album/song."
+      },
+      "group_name": {
+        "type": "string",
+        "description": "The name of the hip hop group associated with the song."
+      },
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song."
+      }
+    },
+    "required": [
+      "musician_name",
+      "role",
+      "group_name",
+      "song_title"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

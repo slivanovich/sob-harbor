@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Max Rockatansky: Max Rockatansky is the title character and protagonist of the post-apocalyptic action films from the "Mad Max" franchise, which spans 1979 to 2015.  He appears in the films "Mad Max", "Mad Max: The Road Warrior", "Mad Max Beyond Thunderdome", and "".  Created by director George Miller and producer Byron Kennedy, the character was played by actor Mel Gibson in the first three films, and by Tom Hardy in the fourth.
-
-George Miller (director): George Miller AO (born 3 March 1945) is an Australian film director, screenwriter, producer, and former medical doctor.  He is best known for his "Mad Max" franchise, with "The Road Warrior" and being hailed as amongst the greatest action films of all time.  Aside from the "Mad Max" films, Miller has been involved in a wide range of projects.  These include the Academy Award-winning "Babe" and "Happy Feet" film series.
-
-Mad Max Beyond Thunderdome: Mad Max Beyond Thunderdome (also known as Mad Max 3) is a 1985 Australian post-apocalyptic action adventure film directed by George Miller and George Ogilvie, distributed by Warner Bros., and written by Miller and Terry Hayes.  In this sequel to "Mad Max 2: The Road Warrior", Max (Mel Gibson) is exiled into the desert by the corrupt ruler of Bartertown, Aunty Entity (Tina Turner), and there encounters an isolated cargo cult centered on a crashed Boeing 747 and its deceased captain.  The film is the third installment in the "Mad Max" film series and the last to feature Gibson as Max.  The series was revived in 2015 with the release of a reboot, "", starring Tom Hardy in the titular role.
-
-Norma Moriceau: Norma Moriceau (15 April 1944 – 21 August 2016) was an Australian costume designer and production designer.  She was best known for the post-apocalyptic leather-fetish biker warrior costumes she designed for "Mad Max 2" (1981) and "Mad Max Beyond Thunderdome" (1985).
-
-Mel Gibson filmography: Mel Gibson, AO, is an American actor, director, producer and screenwriter who made his acting debut on the Australian television drama series "The Sullivans" (1976– 1983).  While a student at the National Institute of Dramatic Art in Sydney, he was given an uncredited role in "I Never Promised You a Rose Garden" and subsequently appeared as a leading actor in the micro budget surf drama "Summer City" (both in 1977).  Gibson rose to prominence during the Australian New Wave cinema movement in the early 1980s, having appeared in his breakthrough role in George Miller's dystopian action film "Mad Max" (1979), portraying the eponymous hero.  He reprised the role in its sequels, "Mad Max 2" (1981) and "Mad Max Beyond Thunderdome" (1985).  He appeared in Peter Weir's war drama "Gallipoli" (1981) and the romantic drama "The Year of Living Dangerously" (1982).  Five years later he played Martin Riggs in the buddy cop action comedy "Lethal Weapon" alongside Danny Glovera role he later reprised in its sequels "Lethal Weapon 2" (1989), "Lethal Weapon 3" (1992), and "Lethal Weapon 4" (1998).
-
-Pursuit Special: The Pursuit Special, also referred to as the Last of the V8 Interceptors, is the iconic black muscle car featuring a distinctive supercharger driven by the title character Mad Max during much of the "Mad Max" franchise, where it appears in "Mad Max", "Mad Max 2: The Road Warrior" and in "Mad Max: Fury Road", as well as both video games.
-
-Mad Max 2 (soundtrack): Mad Max 2 (Original Motion Picture Soundtrack) is a soundtrack album for the 1981 film, "Mad Max 2" (also known as "The Road Warrior"), composed by Brian May.  It was released on vinyl in the United States in 1982 by Varèse Sarabande, followed by a CD release on 25 October 1990.
-
-Mad Max 2: Mad Max 2 (originally released in the United States as The Road Warrior and sometimes known as Mad Max 2: The Road Warrior) is a 1981 Australian post-apocalyptic action film directed by George Miller.  The film is the second installment in the "Mad Max" film series, with Mel Gibson reprising his role as "Mad" Max Rockatansky.  The film's tale of a community of settlers who moved to defend themselves against a roving band of marauders follows an archetypical "Western" frontier movie motif, as does Max's role as a hardened man who rediscovers his humanity when he decides to help the settlers.  Filming took place in locations around Broken Hill, in the outback of New South Wales.
-
-Mad Max: Fury Road: Mad Max: Fury Road is a 2015 action film co-written, co-produced and directed by George Miller.  Miller collaborated with Brendan McCarthy and Nico Lathouris on the screenplay.  The fourth installment and a reboot of the "Mad Max" franchise, it is an Australian and American venture produced by Kennedy Miller Mitchell, RatPac-Dune Entertainment and Village Roadshow Pictures.  The film is set in a future desert wasteland where gasoline and water are scarce commodities.  It follows Max Rockatansky (Tom Hardy), who joins forces with Imperator Furiosa (Charlize Theron) to flee from cult leader Immortan Joe (Hugh Keays-Byrne) and his army in an armoured tanker truck, which leads to a lengthy road battle.  The film also features Nicholas Hoult, Rosie Huntington-Whiteley, Riley Keough, Zoë Kravitz, Abbey Lee, and Courtney Eaton.
-
-Mad Max (franchise): Mad Max is an Australian dystopian action multi-media franchise created by George Miller and Byron Kennedy.  It began in 1979 with "Mad Max", and was followed by three films: "Mad Max 2" (1981), "Mad Max Beyond Thunderdome" (1985) and "" (2015).  Mel Gibson starred in the first three films and Tom Hardy took over the titular role in the fourth film.
-
-Question: What is George Miller connection to Mad Max 2
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the person in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
-    },
-    "film_year": {
-      "type": "integer",
-      "description": "The release year of the film."
-    },
-    "role_in_film": {
-      "type": "string",
-      "description": "George Miller's specific role in the production of Mad Max 2."
-    },
-    "is_franchise_creator": {
-      "type": "boolean",
-      "description": "Indicates if George Miller is a creator of the Mad Max franchise."
+    {
+      "role": "user",
+      "content": "Context:\nMax Rockatansky: Max Rockatansky is the title character and protagonist of the post-apocalyptic action films from the \"Mad Max\" franchise, which spans 1979 to 2015.  He appears in the films \"Mad Max\", \"Mad Max: The Road Warrior\", \"Mad Max Beyond Thunderdome\", and \"\".  Created by director George Miller and producer Byron Kennedy, the character was played by actor Mel Gibson in the first three films, and by Tom Hardy in the fourth.\n\nGeorge Miller (director): George Miller AO (born 3 March 1945) is an Australian film director, screenwriter, producer, and former medical doctor.  He is best known for his \"Mad Max\" franchise, with \"The Road Warrior\" and being hailed as amongst the greatest action films of all time.  Aside from the \"Mad Max\" films, Miller has been involved in a wide range of projects.  These include the Academy Award-winning \"Babe\" and \"Happy Feet\" film series.\n\nMad Max Beyond Thunderdome: Mad Max Beyond Thunderdome (also known as Mad Max 3) is a 1985 Australian post-apocalyptic action adventure film directed by George Miller and George Ogilvie, distributed by Warner Bros., and written by Miller and Terry Hayes.  In this sequel to \"Mad Max 2: The Road Warrior\", Max (Mel Gibson) is exiled into the desert by the corrupt ruler of Bartertown, Aunty Entity (Tina Turner), and there encounters an isolated cargo cult centered on a crashed Boeing 747 and its deceased captain.  The film is the third installment in the \"Mad Max\" film series and the last to feature Gibson as Max.  The series was revived in 2015 with the release of a reboot, \"\", starring Tom Hardy in the titular role.\n\nNorma Moriceau: Norma Moriceau (15 April 1944 – 21 August 2016) was an Australian costume designer and production designer.  She was best known for the post-apocalyptic leather-fetish biker warrior costumes she designed for \"Mad Max 2\" (1981) and \"Mad Max Beyond Thunderdome\" (1985).\n\nMel Gibson filmography: Mel Gibson, AO, is an American actor, director, producer and screenwriter who made his acting debut on the Australian television drama series \"The Sullivans\" (1976– 1983).  While a student at the National Institute of Dramatic Art in Sydney, he was given an uncredited role in \"I Never Promised You a Rose Garden\" and subsequently appeared as a leading actor in the micro budget surf drama \"Summer City\" (both in 1977).  Gibson rose to prominence during the Australian New Wave cinema movement in the early 1980s, having appeared in his breakthrough role in George Miller's dystopian action film \"Mad Max\" (1979), portraying the eponymous hero.  He reprised the role in its sequels, \"Mad Max 2\" (1981) and \"Mad Max Beyond Thunderdome\" (1985).  He appeared in Peter Weir's war drama \"Gallipoli\" (1981) and the romantic drama \"The Year of Living Dangerously\" (1982).  Five years later he played Martin Riggs in the buddy cop action comedy \"Lethal Weapon\" alongside Danny Glovera role he later reprised in its sequels \"Lethal Weapon 2\" (1989), \"Lethal Weapon 3\" (1992), and \"Lethal Weapon 4\" (1998).\n\nPursuit Special: The Pursuit Special, also referred to as the Last of the V8 Interceptors, is the iconic black muscle car featuring a distinctive supercharger driven by the title character Mad Max during much of the \"Mad Max\" franchise, where it appears in \"Mad Max\", \"Mad Max 2: The Road Warrior\" and in \"Mad Max: Fury Road\", as well as both video games.\n\nMad Max 2 (soundtrack): Mad Max 2 (Original Motion Picture Soundtrack) is a soundtrack album for the 1981 film, \"Mad Max 2\" (also known as \"The Road Warrior\"), composed by Brian May.  It was released on vinyl in the United States in 1982 by Varèse Sarabande, followed by a CD release on 25 October 1990.\n\nMad Max 2: Mad Max 2 (originally released in the United States as The Road Warrior and sometimes known as Mad Max 2: The Road Warrior) is a 1981 Australian post-apocalyptic action film directed by George Miller.  The film is the second installment in the \"Mad Max\" film series, with Mel Gibson reprising his role as \"Mad\" Max Rockatansky.  The film's tale of a community of settlers who moved to defend themselves against a roving band of marauders follows an archetypical \"Western\" frontier movie motif, as does Max's role as a hardened man who rediscovers his humanity when he decides to help the settlers.  Filming took place in locations around Broken Hill, in the outback of New South Wales.\n\nMad Max: Fury Road: Mad Max: Fury Road is a 2015 action film co-written, co-produced and directed by George Miller.  Miller collaborated with Brendan McCarthy and Nico Lathouris on the screenplay.  The fourth installment and a reboot of the \"Mad Max\" franchise, it is an Australian and American venture produced by Kennedy Miller Mitchell, RatPac-Dune Entertainment and Village Roadshow Pictures.  The film is set in a future desert wasteland where gasoline and water are scarce commodities.  It follows Max Rockatansky (Tom Hardy), who joins forces with Imperator Furiosa (Charlize Theron) to flee from cult leader Immortan Joe (Hugh Keays-Byrne) and his army in an armoured tanker truck, which leads to a lengthy road battle.  The film also features Nicholas Hoult, Rosie Huntington-Whiteley, Riley Keough, Zoë Kravitz, Abbey Lee, and Courtney Eaton.\n\nMad Max (franchise): Mad Max is an Australian dystopian action multi-media franchise created by George Miller and Byron Kennedy.  It began in 1979 with \"Mad Max\", and was followed by three films: \"Mad Max 2\" (1981), \"Mad Max Beyond Thunderdome\" (1985) and \"\" (2015).  Mel Gibson starred in the first three films and Tom Hardy took over the titular role in the fourth film.\n\nQuestion: What is George Miller connection to Mad Max 2\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person in question.\"\n    },\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"film_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film.\"\n    },\n    \"role_in_film\": {\n      \"type\": \"string\",\n      \"description\": \"George Miller's specific role in the production of Mad Max 2.\"\n    },\n    \"is_franchise_creator\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if George Miller is a creator of the Mad Max franchise.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"film_title\",\n    \"film_year\",\n    \"role_in_film\",\n    \"is_franchise_creator\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "film_title",
-    "film_year",
-    "role_in_film",
-    "is_franchise_creator"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the person in question."
+      },
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "film_year": {
+        "type": "integer",
+        "description": "The release year of the film."
+      },
+      "role_in_film": {
+        "type": "string",
+        "description": "George Miller's specific role in the production of Mad Max 2."
+      },
+      "is_franchise_creator": {
+        "type": "boolean",
+        "description": "Indicates if George Miller is a creator of the Mad Max franchise."
+      }
+    },
+    "required": [
+      "person_name",
+      "film_title",
+      "film_year",
+      "role_in_film",
+      "is_franchise_creator"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

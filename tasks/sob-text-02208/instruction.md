@@ -1,65 +1,42 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Go90: go90 is an American video streaming service, launched in October 2015 by Verizon, that offers a selection of TV shows, movies, clips, and other streaming media.  go90 is free, ad-supported, and does not require a subscription.  From the beginning of 2016 Verizon's advertising campaign for go90 targets Millennials, Generation Z, and gamers.  A reviewer for Boy Genius Report said that the development of go90 was a continuation of Verizon's opposition to net neutrality.  Verizon planned to offer its subscribers go90 content without that content counting toward their bandwidth cap.  The service has been characterized as a case study in what can go wrong launching an internet startup within a larger company.
-
-IPray TV: iPray TV is a Christian church ministry and video streaming service founded by Michael Peros which streams live video from the holy sites in Jerusalem.  It is the first live video streaming service to accomplish this.  They first became notable by doing the first live streaming of the Christmas celebration at the Church of the Nativity in Bethlehem in 2008, as well as the Easter and Pentecost celebrations of 2009.  They also streamed the first broadcast live from inside the Church of the Holy Sepulcher in Jerusalem.  Because of their use of Unicast technology, millions of people were able to view the broadcast at once, which had not been done before.
-
-List of Hemlock Grove episodes: "Hemlock Grove" is an American supernatural drama series developed by Brian McGreevy and Lee Shipman, based on McGreevy's novel of the same name.  The first season premiered exclusively via Netflix's web streaming service on April 19, 2013.  The second season premiered on July 11, 2014.  The third and final 10-episode season premiered on October 23, 2015.
-
-No Limit (Usher song): "No Limit" is a song by American singer Usher, featuring American rapper Young Thug.  It was released by RCA on June 9, 2016, for online streaming through the streaming service Tidal, which Usher co-owns.  The following day it was released for paid purchase on other digital download and online streaming services. "No Limit" serves as the lead single off his eighth studio album, "Hard II Love".  The song was written by Usher, Rock City, Young Thug, Brandon "B.A.M." Hodge, Christopher"Talent" Perry, while production was handled by the latter three.  The track gives reference to Master P's song, "Make 'Em Say Uhh", from his 1997 No Limit Records release "Ghetto D" singing, "Make you say uh, no limit / Got that Master P, no limit baby" In North America, the song reached number 32 on the US "Billboard" Hot 100 chart, number nine on the  Hot R&B/Hip-Hop Songs chart.
-
-Leave It Alone (Broken Bells song): "Leave It Alone" is a song written by James Mercer and Brian Burton of the American alternative rock band Broken Bells.  It was originally recorded by the band for their second studio album, "After the Disco", where it appears as the fourth track on the album.  A "Leave It Alone" promotional single was released for streaming on the Australian branch of commercial music streaming service Spotify on February 4, 2014, becoming the fourth release by the band in promotion of "After the Disco", after singles "Holding On for Life", "After the Disco" and promotional single "Perfect World".  This Song can be Found in The soundtrack of the Movie Miss You Already starring Toni Collettte and Drew Berrymore.  This song is now available in the gameplay Guitar Hero Live.
-
-American Oxygen: "American Oxygen" is a song recorded by Barbadian singer Rihanna.  It was written by Alex da Kid, Candice Pillay, Sam Harris and Rihanna; Alex da Kid and Kanye West produced it.  Written over the course of a year, "American Oxygen" was inspired by the 1984 single "Born in the U.S.A." performed by Bruce Springsteen.  It was made available for streaming on Tidal on April 5, 2015, and released for digital download on April 14 via the iTunes Store.  The song has patriotic lyrical content about a new America and the chasing of the American dream.
-
-International expansion of Netflix: The company first began offering streaming service to the international market on September 22, 2010 to Canada.  At the time, Canadians could subscribe to Netflix for $7.99 a month, a rate that CEO Hastings called, "the lowest, most aggressive price we've ever had anywhere in the world."  However, despite the proclaimed low price, content selection in Canada was extremely limited.  In 2012, data conducted by Josh Loewen for Canadian Business Online found that in the United States there were 10,625 unique titles in Netflix's library, whereas in Canada there were only 2,647.  This could be blamed on differences in distribution deals in the United States and Canada.  It is important to point out that from its beginning, Canadian Netflix has offered content not available in the United States.  For example, a short-lived Fox sitcom, "Running Wilde" starring Keri Russell and Will Arnett, began streaming on Canadian Netflix the same day it began airing in the United States on network television.  The show streamed on Canadian Netflix because there was no Canadian broadcast partner, but was not available on US Netflix – becoming deemed a "Canada-only exclusive".  Still, regardless of a limited streaming selection, it took the company less than a year to reach one million subscribers, approximately three percent of Canada's population.  Further, as of February 2014, there were approximately 5.8 million Canadians using Netflix, or 29% of Canada's English speaking population.  This number represents an increase in Canadian users by approximately 40% since 2012.
-
-Rivals (song): "Rivals" is a song by American singer Usher, released as the fourth single for his eighth studio album, "Hard II Love".  The song features the vocal collaboration of American rapper Future.  Usher co-wrote the song with Future, Kendricke Brown, Cameron Murphy, Paris Jones, and Carlos St. John, while K-Major and Murphy Kid handled the song's production.  It was released by RCA on August 30, 2016 for online streaming through the streaming service Tidal.  It impacted US urban contemporary radio on September 13, 2016.
-
-Tidal (service): Tidal (stylized as TIDAL) is a subscription-based music streaming service that combines lossless audio and high-definition music videos with exclusive content and special features on music.  The service is maintained by the Norwegian company Aspiro AB.  Included in Tidal's offerings are concert livestreams, ticket giveaways and other experiential events like listening parties and meet-and-greets with artists.
-
-New Japan Pro Wrestling World: New Japan Pro Wrestling World (NJPW World) is a subscription-based video streaming service owned by New Japan Pro-Wrestling.  On December 1, 2014, NJPW and TV Asahi announced "New Japan Pro Wrestling World", a new worldwide streaming site for the promotion's events.  All major NJPW events air live on the service, which also features matches from the promotion's archives, dating back to 1972.  In 2015, King of Pro-Wrestling marked the first ever event on NJPW World to feature English commentary, provided by Kevin Kelly and Matt Striker.  Currently, English commentary is provided by Kelly and Don Callis.  As part of a working relationship between NJPW and the Mexican Consejo Mundial de Lucha Libre (CMLL) promotion, NJPW began airing CMLL's "Viernes Espectaculares" show on NJPW World, starting July 9, 2016.
-
-Question: The Rihanna song "American Oxygen" first premiered on what streaming service?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "artist": {
-      "type": "string",
-      "description": "The artist who recorded the song."
-    },
-    "streaming_service_name": {
-      "type": "string",
-      "description": "The name of the streaming service where the song first premiered."
-    },
-    "premiere_date": {
-      "type": "string",
-      "format": "date",
-      "description": "The date the song was made available for streaming on the service."
+    {
+      "role": "user",
+      "content": "Context:\nGo90: go90 is an American video streaming service, launched in October 2015 by Verizon, that offers a selection of TV shows, movies, clips, and other streaming media.  go90 is free, ad-supported, and does not require a subscription.  From the beginning of 2016 Verizon's advertising campaign for go90 targets Millennials, Generation Z, and gamers.  A reviewer for Boy Genius Report said that the development of go90 was a continuation of Verizon's opposition to net neutrality.  Verizon planned to offer its subscribers go90 content without that content counting toward their bandwidth cap.  The service has been characterized as a case study in what can go wrong launching an internet startup within a larger company.\n\nIPray TV: iPray TV is a Christian church ministry and video streaming service founded by Michael Peros which streams live video from the holy sites in Jerusalem.  It is the first live video streaming service to accomplish this.  They first became notable by doing the first live streaming of the Christmas celebration at the Church of the Nativity in Bethlehem in 2008, as well as the Easter and Pentecost celebrations of 2009.  They also streamed the first broadcast live from inside the Church of the Holy Sepulcher in Jerusalem.  Because of their use of Unicast technology, millions of people were able to view the broadcast at once, which had not been done before.\n\nList of Hemlock Grove episodes: \"Hemlock Grove\" is an American supernatural drama series developed by Brian McGreevy and Lee Shipman, based on McGreevy's novel of the same name.  The first season premiered exclusively via Netflix's web streaming service on April 19, 2013.  The second season premiered on July 11, 2014.  The third and final 10-episode season premiered on October 23, 2015.\n\nNo Limit (Usher song): \"No Limit\" is a song by American singer Usher, featuring American rapper Young Thug.  It was released by RCA on June 9, 2016, for online streaming through the streaming service Tidal, which Usher co-owns.  The following day it was released for paid purchase on other digital download and online streaming services. \"No Limit\" serves as the lead single off his eighth studio album, \"Hard II Love\".  The song was written by Usher, Rock City, Young Thug, Brandon \"B.A.M.\" Hodge, Christopher\"Talent\" Perry, while production was handled by the latter three.  The track gives reference to Master P's song, \"Make 'Em Say Uhh\", from his 1997 No Limit Records release \"Ghetto D\" singing, \"Make you say uh, no limit / Got that Master P, no limit baby\" In North America, the song reached number 32 on the US \"Billboard\" Hot 100 chart, number nine on the  Hot R&B/Hip-Hop Songs chart.\n\nLeave It Alone (Broken Bells song): \"Leave It Alone\" is a song written by James Mercer and Brian Burton of the American alternative rock band Broken Bells.  It was originally recorded by the band for their second studio album, \"After the Disco\", where it appears as the fourth track on the album.  A \"Leave It Alone\" promotional single was released for streaming on the Australian branch of commercial music streaming service Spotify on February 4, 2014, becoming the fourth release by the band in promotion of \"After the Disco\", after singles \"Holding On for Life\", \"After the Disco\" and promotional single \"Perfect World\".  This Song can be Found in The soundtrack of the Movie Miss You Already starring Toni Collettte and Drew Berrymore.  This song is now available in the gameplay Guitar Hero Live.\n\nAmerican Oxygen: \"American Oxygen\" is a song recorded by Barbadian singer Rihanna.  It was written by Alex da Kid, Candice Pillay, Sam Harris and Rihanna; Alex da Kid and Kanye West produced it.  Written over the course of a year, \"American Oxygen\" was inspired by the 1984 single \"Born in the U.S.A.\" performed by Bruce Springsteen.  It was made available for streaming on Tidal on April 5, 2015, and released for digital download on April 14 via the iTunes Store.  The song has patriotic lyrical content about a new America and the chasing of the American dream.\n\nInternational expansion of Netflix: The company first began offering streaming service to the international market on September 22, 2010 to Canada.  At the time, Canadians could subscribe to Netflix for $7.99 a month, a rate that CEO Hastings called, \"the lowest, most aggressive price we've ever had anywhere in the world.\"  However, despite the proclaimed low price, content selection in Canada was extremely limited.  In 2012, data conducted by Josh Loewen for Canadian Business Online found that in the United States there were 10,625 unique titles in Netflix's library, whereas in Canada there were only 2,647.  This could be blamed on differences in distribution deals in the United States and Canada.  It is important to point out that from its beginning, Canadian Netflix has offered content not available in the United States.  For example, a short-lived Fox sitcom, \"Running Wilde\" starring Keri Russell and Will Arnett, began streaming on Canadian Netflix the same day it began airing in the United States on network television.  The show streamed on Canadian Netflix because there was no Canadian broadcast partner, but was not available on US Netflix – becoming deemed a \"Canada-only exclusive\".  Still, regardless of a limited streaming selection, it took the company less than a year to reach one million subscribers, approximately three percent of Canada's population.  Further, as of February 2014, there were approximately 5.8 million Canadians using Netflix, or 29% of Canada's English speaking population.  This number represents an increase in Canadian users by approximately 40% since 2012.\n\nRivals (song): \"Rivals\" is a song by American singer Usher, released as the fourth single for his eighth studio album, \"Hard II Love\".  The song features the vocal collaboration of American rapper Future.  Usher co-wrote the song with Future, Kendricke Brown, Cameron Murphy, Paris Jones, and Carlos St. John, while K-Major and Murphy Kid handled the song's production.  It was released by RCA on August 30, 2016 for online streaming through the streaming service Tidal.  It impacted US urban contemporary radio on September 13, 2016.\n\nTidal (service): Tidal (stylized as TIDAL) is a subscription-based music streaming service that combines lossless audio and high-definition music videos with exclusive content and special features on music.  The service is maintained by the Norwegian company Aspiro AB.  Included in Tidal's offerings are concert livestreams, ticket giveaways and other experiential events like listening parties and meet-and-greets with artists.\n\nNew Japan Pro Wrestling World: New Japan Pro Wrestling World (NJPW World) is a subscription-based video streaming service owned by New Japan Pro-Wrestling.  On December 1, 2014, NJPW and TV Asahi announced \"New Japan Pro Wrestling World\", a new worldwide streaming site for the promotion's events.  All major NJPW events air live on the service, which also features matches from the promotion's archives, dating back to 1972.  In 2015, King of Pro-Wrestling marked the first ever event on NJPW World to feature English commentary, provided by Kevin Kelly and Matt Striker.  Currently, English commentary is provided by Kelly and Don Callis.  As part of a working relationship between NJPW and the Mexican Consejo Mundial de Lucha Libre (CMLL) promotion, NJPW began airing CMLL's \"Viernes Espectaculares\" show on NJPW World, starting July 9, 2016.\n\nQuestion: The Rihanna song \"American Oxygen\" first premiered on what streaming service?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song.\"\n    },\n    \"artist\": {\n      \"type\": \"string\",\n      \"description\": \"The artist who recorded the song.\"\n    },\n    \"streaming_service_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the streaming service where the song first premiered.\"\n    },\n    \"premiere_date\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"The date the song was made available for streaming on the service.\"\n    }\n  },\n  \"required\": [\n    \"song_title\",\n    \"artist\",\n    \"streaming_service_name\",\n    \"premiere_date\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "song_title",
-    "artist",
-    "streaming_service_name",
-    "premiere_date"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song."
+      },
+      "artist": {
+        "type": "string",
+        "description": "The artist who recorded the song."
+      },
+      "streaming_service_name": {
+        "type": "string",
+        "description": "The name of the streaming service where the song first premiered."
+      },
+      "premiere_date": {
+        "type": "string",
+        "format": "date",
+        "description": "The date the song was made available for streaming on the service."
+      }
+    },
+    "required": [
+      "song_title",
+      "artist",
+      "streaming_service_name",
+      "premiere_date"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

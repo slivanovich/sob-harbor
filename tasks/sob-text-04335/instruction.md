@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-James DeGale: James Frederick DeGale, {'1': ", '2': ", '3': ", '4': "} (born 3 February 1986) is a British professional boxer.  He has held the IBF super-middleweight title since 2015, having previously held the British super-middleweight title from 2010 to 2011, and the European super-middleweight title from 2011 to 2012.  As of May 2017, he is ranked as the world's best super-middleweight by "The Ring" magazine and the Transnational Boxing Rankings Board, and third by BoxRec.  As an amateur, DeGale represented Great Britain at the 2008 Olympics, winning a gold medal in the middleweight division.  By later becoming IBF champion, he became the first British boxer ever to have won both an Olympic gold medal and a professional world title.
-
-Shinsuke Yamanaka: Shinsuke Yamanaka (山中 慎介 , Yamanaka Shinsuke , born October 11, 1982) is a Japanese professional boxer, and former WBC and "The Ring" bantamweight world champion, having held the WBC title between 2011 and 2017.  He made twelve successful defences of the WBC title and his reign is the fourth longest in boxing's bantamweight division.  As of May 2017, he is ranked as the world's best bantamweight by "The Ring" magazine, BoxRec and the Transnational Boxing Rankings Board.  He is also ranked as the world's seventh best boxer, pound for pound, by BoxRec, ninth by "The Ring" magazine, and ninth by the Transnational Boxing Rankings Board.
-
-Scott Quigg: Scott Quigg (born 9 October 1988) is a British professional boxer.  He held the WBA (Regular) super-bantamweight title from 2013 to 2016, and the British super-bantamweight title from 2011 to 2012.  As of May 2017, he is ranked as the world's fourth best featherweight by BoxRec, and eighth by the Transnational Boxing Rankings Board.
-
-Chris Eubank Jr.: Christopher Livingstone "Chris" Eubank Jr. (born 18 September 1989) is a British professional boxer.  He has held the IBO super-middleweight title since February 2017, having previously held the WBA interim and British middleweight titles between 2015 and 2016.  As of July 2017, Eubank Jr. is ranked as the world's second best super middleweight by BoxRec, sixth by the Transnational Boxing Rankings Board, and seventh by "The Ring" magazine.  He is the son of former two-weight world boxing champion Chris Eubank.
-
-Terry Flanagan (boxer): Terry Flanagan (born 11 June 1989) is a British professional boxer.  He has held the WBO lightweight title since 2015, becoming the first Englishman to win a world title at lightweight.  He also held the British lightweight title in 2014, and won the Prizefighter tournament in 2012.  As of May 2017, he is ranked as the world's third best lightweight by the Transnational Boxing Rankings Board and "The Ring" magazine, and fourth by BoxRec.
-
-Khalid Yafai: Khalid "Kal" Yafai (Arabic: خالد يافعي‎ ‎ ; born 11 June 1989) is a British professional boxer who has held the WBA super-flyweight title since December 2016.  As an amateur, he represented Great Britain at the 2008 Summer Olympics and won a silver medal at the 2010 European Amateur Boxing Championships as a flyweight.  As of May 2017, he is ranked as the world's fifth best super-flyweight by BoxRec and the Transnational Boxing Rankings Board, and sixth by "The Ring" magazine.
-
-Gilberto Ramírez: Gilberto Ramírez Sánchez (born June 19, 1991) is a Mexican professional boxer.  He has held the WBO super middleweight title since 2016, and is the first boxer from Mexico to win a major world title in that weight class.  As of September 2017, Ramírez is ranked as the world's best active super middleweight by BoxRec, and second by "The Ring" magazine and the Transnational Boxing Rankings Board.
-
-Anthony Joshua: As of May 2017, Joshua is ranked as the world's best heavyweight by the Transnational Boxing Rankings Board and BoxRec, and second best by "The Ring".  His knockout-to-win ratio stands at 100%.  Joshua is the second British boxer, after James DeGale, to win both a gold medal at the Olympics and a world title by a major professional sanctioning body, as well as being the first British heavyweight to do so.  He is also the second boxer, after Joe Frazier, to win a world heavyweight title whilst still reigning as Olympic champion at the top weight.
-
-Andre Ward: Andre Michael Ward (born February 23, 1984) is an American former professional boxer who competed from 2004 to 2017.  He retired with an undefeated record and held eight world titles in two weight classes, including the unified WBA (Super), WBC, "Ring" magazine, and lineal super middleweight titles between 2009 and 2015; and the unified WBA (Undisputed), IBF, WBO, and "Ring" light heavyweight titles between 2016 and 2017.  During his reign as light heavyweight champion, Ward was ranked as the world's best active boxer, pound for pound, by "The Ring" magazine and the Transnational Boxing Rankings Board (TBRB), as well as the world's best active boxer in the division by "The Ring", the TBRB, and BoxRec.
-
-Oleksandr Usyk: Oleksandr Oleksandrovych Usyk (Ukrainian: Олекса́ндр Олекса́ндрович У́сик ) is a Ukrainian professional boxer who has held the WBO junior heavyweight title since 2016.  As of May 2017 he is ranked as the world's best in the division by "The Ring" magazine, the Transnational Boxing Rankings Board, and BoxRec.  As an amateur, Usyk won gold medals at the 2011 World Championships and 2012 Olympics, both in the heavyweight division.
-
-Question: As of May 2017, Anthony Joshua is ranked as the world's best heavyweight by the Transnational Boxing Rankings Board and BoxRec, the second British boxer, after which British professional boxer, to win both a gold medal at the Olympics and a world title by a major professional sanctioning body, as well as being the first British heavyweight to do so?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "boxer_name": {
-      "type": "string",
-      "description": "The name of the British professional boxer who first achieved the specified feat."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "nationality": {
-      "type": "string",
-      "description": "The nationality of the boxer."
-    },
-    "achievement_details": {
-      "type": "object",
-      "properties": {
-        "olympic_medal": {
-          "type": "string",
-          "description": "The type of Olympic medal won."
-        },
-        "professional_title_type": {
-          "type": "string",
-          "description": "The type of professional title won."
-        },
-        "order_of_achievement": {
-          "type": "string",
-          "description": "Indicates if the boxer was the first or second to achieve this feat among British boxers."
-        }
-      },
-      "required": [
-        "olympic_medal",
-        "professional_title_type",
-        "order_of_achievement"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nJames DeGale: James Frederick DeGale, {'1': \", '2': \", '3': \", '4': \"} (born 3 February 1986) is a British professional boxer.  He has held the IBF super-middleweight title since 2015, having previously held the British super-middleweight title from 2010 to 2011, and the European super-middleweight title from 2011 to 2012.  As of May 2017, he is ranked as the world's best super-middleweight by \"The Ring\" magazine and the Transnational Boxing Rankings Board, and third by BoxRec.  As an amateur, DeGale represented Great Britain at the 2008 Olympics, winning a gold medal in the middleweight division.  By later becoming IBF champion, he became the first British boxer ever to have won both an Olympic gold medal and a professional world title.\n\nShinsuke Yamanaka: Shinsuke Yamanaka (山中 慎介 , Yamanaka Shinsuke , born October 11, 1982) is a Japanese professional boxer, and former WBC and \"The Ring\" bantamweight world champion, having held the WBC title between 2011 and 2017.  He made twelve successful defences of the WBC title and his reign is the fourth longest in boxing's bantamweight division.  As of May 2017, he is ranked as the world's best bantamweight by \"The Ring\" magazine, BoxRec and the Transnational Boxing Rankings Board.  He is also ranked as the world's seventh best boxer, pound for pound, by BoxRec, ninth by \"The Ring\" magazine, and ninth by the Transnational Boxing Rankings Board.\n\nScott Quigg: Scott Quigg (born 9 October 1988) is a British professional boxer.  He held the WBA (Regular) super-bantamweight title from 2013 to 2016, and the British super-bantamweight title from 2011 to 2012.  As of May 2017, he is ranked as the world's fourth best featherweight by BoxRec, and eighth by the Transnational Boxing Rankings Board.\n\nChris Eubank Jr.: Christopher Livingstone \"Chris\" Eubank Jr. (born 18 September 1989) is a British professional boxer.  He has held the IBO super-middleweight title since February 2017, having previously held the WBA interim and British middleweight titles between 2015 and 2016.  As of July 2017, Eubank Jr. is ranked as the world's second best super middleweight by BoxRec, sixth by the Transnational Boxing Rankings Board, and seventh by \"The Ring\" magazine.  He is the son of former two-weight world boxing champion Chris Eubank.\n\nTerry Flanagan (boxer): Terry Flanagan (born 11 June 1989) is a British professional boxer.  He has held the WBO lightweight title since 2015, becoming the first Englishman to win a world title at lightweight.  He also held the British lightweight title in 2014, and won the Prizefighter tournament in 2012.  As of May 2017, he is ranked as the world's third best lightweight by the Transnational Boxing Rankings Board and \"The Ring\" magazine, and fourth by BoxRec.\n\nKhalid Yafai: Khalid \"Kal\" Yafai (Arabic: خالد يافعي‎ ‎ ; born 11 June 1989) is a British professional boxer who has held the WBA super-flyweight title since December 2016.  As an amateur, he represented Great Britain at the 2008 Summer Olympics and won a silver medal at the 2010 European Amateur Boxing Championships as a flyweight.  As of May 2017, he is ranked as the world's fifth best super-flyweight by BoxRec and the Transnational Boxing Rankings Board, and sixth by \"The Ring\" magazine.\n\nGilberto Ramírez: Gilberto Ramírez Sánchez (born June 19, 1991) is a Mexican professional boxer.  He has held the WBO super middleweight title since 2016, and is the first boxer from Mexico to win a major world title in that weight class.  As of September 2017, Ramírez is ranked as the world's best active super middleweight by BoxRec, and second by \"The Ring\" magazine and the Transnational Boxing Rankings Board.\n\nAnthony Joshua: As of May 2017, Joshua is ranked as the world's best heavyweight by the Transnational Boxing Rankings Board and BoxRec, and second best by \"The Ring\".  His knockout-to-win ratio stands at 100%.  Joshua is the second British boxer, after James DeGale, to win both a gold medal at the Olympics and a world title by a major professional sanctioning body, as well as being the first British heavyweight to do so.  He is also the second boxer, after Joe Frazier, to win a world heavyweight title whilst still reigning as Olympic champion at the top weight.\n\nAndre Ward: Andre Michael Ward (born February 23, 1984) is an American former professional boxer who competed from 2004 to 2017.  He retired with an undefeated record and held eight world titles in two weight classes, including the unified WBA (Super), WBC, \"Ring\" magazine, and lineal super middleweight titles between 2009 and 2015; and the unified WBA (Undisputed), IBF, WBO, and \"Ring\" light heavyweight titles between 2016 and 2017.  During his reign as light heavyweight champion, Ward was ranked as the world's best active boxer, pound for pound, by \"The Ring\" magazine and the Transnational Boxing Rankings Board (TBRB), as well as the world's best active boxer in the division by \"The Ring\", the TBRB, and BoxRec.\n\nOleksandr Usyk: Oleksandr Oleksandrovych Usyk (Ukrainian: Олекса́ндр Олекса́ндрович У́сик ) is a Ukrainian professional boxer who has held the WBO junior heavyweight title since 2016.  As of May 2017 he is ranked as the world's best in the division by \"The Ring\" magazine, the Transnational Boxing Rankings Board, and BoxRec.  As an amateur, Usyk won gold medals at the 2011 World Championships and 2012 Olympics, both in the heavyweight division.\n\nQuestion: As of May 2017, Anthony Joshua is ranked as the world's best heavyweight by the Transnational Boxing Rankings Board and BoxRec, the second British boxer, after which British professional boxer, to win both a gold medal at the Olympics and a world title by a major professional sanctioning body, as well as being the first British heavyweight to do so?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"boxer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the British professional boxer who first achieved the specified feat.\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the boxer.\"\n    },\n    \"achievement_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"olympic_medal\": {\n          \"type\": \"string\",\n          \"description\": \"The type of Olympic medal won.\"\n        },\n        \"professional_title_type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of professional title won.\"\n        },\n        \"order_of_achievement\": {\n          \"type\": \"string\",\n          \"description\": \"Indicates if the boxer was the first or second to achieve this feat among British boxers.\"\n        }\n      },\n      \"required\": [\n        \"olympic_medal\",\n        \"professional_title_type\",\n        \"order_of_achievement\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"boxer_name\",\n    \"nationality\",\n    \"achievement_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "boxer_name",
-    "nationality",
-    "achievement_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "boxer_name": {
+        "type": "string",
+        "description": "The name of the British professional boxer who first achieved the specified feat."
+      },
+      "nationality": {
+        "type": "string",
+        "description": "The nationality of the boxer."
+      },
+      "achievement_details": {
+        "type": "object",
+        "properties": {
+          "olympic_medal": {
+            "type": "string",
+            "description": "The type of Olympic medal won."
+          },
+          "professional_title_type": {
+            "type": "string",
+            "description": "The type of professional title won."
+          },
+          "order_of_achievement": {
+            "type": "string",
+            "description": "Indicates if the boxer was the first or second to achieve this feat among British boxers."
+          }
+        },
+        "required": [
+          "olympic_medal",
+          "professional_title_type",
+          "order_of_achievement"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "boxer_name",
+      "nationality",
+      "achievement_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

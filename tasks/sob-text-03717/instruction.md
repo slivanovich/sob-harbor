@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-The Final Countdown (song): "The Final Countdown" is a song by Swedish rock band Europe, released in 1986.  Written by Joey Tempest, it was the first single from the band's third studio album, also named "The Final Countdown".  The song reached No. 1 in 25 countries, including the United Kingdom, and was certified gold in the United Kingdom in 1986.  In the United States the song peaked at No. 8 on the "Billboard" Hot 100 and at No. 18 on the "Billboard" Album Rock Tracks chart.
-
-The Speaks: The Speaks is a popular five-member band composed of Filipinos and Filipino-Americans.  The band members include guitarist Cal Stamp, bassist Jerry Delino, drummer Johnny Abelende, vocalist Rafael Toledo, and guitarist Archie dela Cruz.  Original members included percussionist Johnny Abelende and guitarist Seigfred Fuster.  The band was established in Washington, D.C. during the late 1990s in the United States.  The band is notably remembered for their hit songs "High" and "Life's A Joke".  The song "High" was ranked in the Top 40 in the Philippines (it was the no. 1 single for seven weeks), while "Life's A Joke" stayed on the Top 30 for almost 6 months in the Philippines in 2005.  Their album, according to the "Manila Bulletin", debuted and remained as number one on the Filetopia online radio station in the United Kingdom.  The album, entitled "This is the Time" was a hit in Asia radio charts (including Magic 89.9's Final Countdown, and in the Top 20 of 97.1 WLS-FM), and the album's title track reached the Top 15 in the United States.  Their music videos have been featured on MTV Asia and MYX.  The "Washington Post" declared the band as one of the Top 5 bands in 2009.
-
-Carrie (Europe song): "Carrie" is a power ballad by the Swedish hard rock band Europe released in 1987.  It was the third single released internationally from the album "The Final Countdown", and it is their highest charting song on the "Billboard" Hot 100 chart—peaking at #3 (#1 on the Radio and Records chart) during the fall of 1987.  The track on the B-side of the 7" single was "Love Chaser".
-
-Saraba Kamen Rider Den-O: Final Countdown: Saraba Kamen Rider Den-O the Movie: Final Countdown (劇場版 さらば仮面ライダー電王 ファイナル・カウントダウン , Gekijōban Saraba Kamen Raidā Den'ō Fainaru Kauntodaun , "Farewell, Masked Rider Den-O The Movie: Final Countdown") is the third tokusatsu superhero film adaptation of the popular Kamen Rider Series "Kamen Rider Den-O", and the last of the Den-O films, following "" and "".  The script was written by Yasuko Kobayashi and directed by Osamu Kaneda, both of which have worked on the previous "Den-O" films.  "Final Countdown" was released on October 4, 2008.  As of September 26, the film has sold 66,000 pre-sale tickets.  It opened at #2 in Japanese theaters on its opening weekend only behind "The Devotion of Suspect X".  The film was originally intended to be the end of "Den-O", until the development of the Cho-Den-O Series.
-
-Joey Tempest: Rolf Magnus Joakim Larsson (born 19 August 1963), better known as Joey Tempest, is a Swedish singer, lead singer, and main songwriter of the rock band Europe.  He has written hits which include "The Final Countdown", "Rock the Night", "Cherokee" and "Superstitious".
-
-Love Chaser: "Love Chaser" is the 1986 single released by the Swedish hard rock band Europe.  It was taken from the album "The Final Countdown", and was released only in Japan in the soundtrack album of the Japanese movie Pride One.  The track on the B-side of the single was "Carrie".  Next year the single was reissued in Japan and was entitled "Carrie" with "Carrie" on the A-side.  The reissue had the same catalogue number (VIPX-1849) as the first release.
-
-The Final Countdown Tour 1986: The Final Countdown Tour 1986 is a concert video released by the Swedish hard rock band Europe.  It features footage from a concert filmed at Solnahallen in Solna, Sweden on May 26, 1986.  It was first released on VHS in Japan in 1986, and was released on DVD and CD in 2004.
-
-Richard L. Albert: Richard Albert was president of the award-winning motion picture advertising agency Design Projects, Inc. from 1978 to 1992.  Clients included major studios such as Universal Pictures, MGM, 20th Century Fox, Warner Bros., and Columbia Pictures, as well as major independent and international distributors such as Cannon Films, Trimark Pictures, CBS Theatrical Films, Goldcrest, and Lorimar.  Albert's firm was responsible for the movie poster designs for many films, including MacArthur, Sorcerer, Hard to Hold, The Final Countdown, Mutant, and Nightmares.  Albert consulted regularly with Menahem Golan at Cannon Films on how to market and pre-sell Cannon's films, and successfully launched the foreign campaigns for Death Wish 2, New Year's Evil, Lady Chatterly's Lover, Enter the Ninja, and many others.  Later, when Golan started 21st Century Films, he collaborated with Albert, who produced though his Sawmill Entertainment Corp. the Lambada dance movie The Forbidden Dance for Golan's foreign distribution, and Columbia Pictures' U.S. theatrical release.  Albert hunt ed down the management for the band Kaoma when they were touring in the United States, and licensed their hit song "Lambada" for the film.  He also tried to book the band to appear in the movie, however the band's schedule did not fit with the fast production schedule, so he hired Kid Creole and the Coconuts to perform in the final scenes.
-
-Cherokee (Europe song): "Cherokee" is a 1987 single released by the Swedish band Europe.  It was the fourth single released internationally from the album "The Final Countdown", and was number 72 on the Billboard Hot 100 chart in the United States.
-
-Dreamer (Europe song): "Dreamer" is a 1984 power ballad by the Swedish heavy metal band Europe.  It was the second single from the "Wings of Tomorrow" album.  The single was only released in Japan.  It bears a strong resemblance to the hit single "Carrie" that was released two years later.  This song is referenced in the song "Time Has Come" off the band's next album "The Final Countdown" in the lyric, "Pray for the dreamer/He's still so sad."  In 1993 the song was included on their greatest hits compilation "1982–1992".
-
-Question: The singer who was the leader of the band that released "The Final Countdown" released the song in what year?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "band_name": {
-      "type": "string",
-      "description": "The name of the band that released the song."
-    },
-    "lead_singer_name": {
-      "type": "string",
-      "description": "The name of the lead singer of the band."
-    },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the song was released."
+    {
+      "role": "user",
+      "content": "Context:\nThe Final Countdown (song): \"The Final Countdown\" is a song by Swedish rock band Europe, released in 1986.  Written by Joey Tempest, it was the first single from the band's third studio album, also named \"The Final Countdown\".  The song reached No. 1 in 25 countries, including the United Kingdom, and was certified gold in the United Kingdom in 1986.  In the United States the song peaked at No. 8 on the \"Billboard\" Hot 100 and at No. 18 on the \"Billboard\" Album Rock Tracks chart.\n\nThe Speaks: The Speaks is a popular five-member band composed of Filipinos and Filipino-Americans.  The band members include guitarist Cal Stamp, bassist Jerry Delino, drummer Johnny Abelende, vocalist Rafael Toledo, and guitarist Archie dela Cruz.  Original members included percussionist Johnny Abelende and guitarist Seigfred Fuster.  The band was established in Washington, D.C. during the late 1990s in the United States.  The band is notably remembered for their hit songs \"High\" and \"Life's A Joke\".  The song \"High\" was ranked in the Top 40 in the Philippines (it was the no. 1 single for seven weeks), while \"Life's A Joke\" stayed on the Top 30 for almost 6 months in the Philippines in 2005.  Their album, according to the \"Manila Bulletin\", debuted and remained as number one on the Filetopia online radio station in the United Kingdom.  The album, entitled \"This is the Time\" was a hit in Asia radio charts (including Magic 89.9's Final Countdown, and in the Top 20 of 97.1 WLS-FM), and the album's title track reached the Top 15 in the United States.  Their music videos have been featured on MTV Asia and MYX.  The \"Washington Post\" declared the band as one of the Top 5 bands in 2009.\n\nCarrie (Europe song): \"Carrie\" is a power ballad by the Swedish hard rock band Europe released in 1987.  It was the third single released internationally from the album \"The Final Countdown\", and it is their highest charting song on the \"Billboard\" Hot 100 chart—peaking at #3 (#1 on the Radio and Records chart) during the fall of 1987.  The track on the B-side of the 7\" single was \"Love Chaser\".\n\nSaraba Kamen Rider Den-O: Final Countdown: Saraba Kamen Rider Den-O the Movie: Final Countdown (劇場版 さらば仮面ライダー電王 ファイナル・カウントダウン , Gekijōban Saraba Kamen Raidā Den'ō Fainaru Kauntodaun , \"Farewell, Masked Rider Den-O The Movie: Final Countdown\") is the third tokusatsu superhero film adaptation of the popular Kamen Rider Series \"Kamen Rider Den-O\", and the last of the Den-O films, following \"\" and \"\".  The script was written by Yasuko Kobayashi and directed by Osamu Kaneda, both of which have worked on the previous \"Den-O\" films.  \"Final Countdown\" was released on October 4, 2008.  As of September 26, the film has sold 66,000 pre-sale tickets.  It opened at #2 in Japanese theaters on its opening weekend only behind \"The Devotion of Suspect X\".  The film was originally intended to be the end of \"Den-O\", until the development of the Cho-Den-O Series.\n\nJoey Tempest: Rolf Magnus Joakim Larsson (born 19 August 1963), better known as Joey Tempest, is a Swedish singer, lead singer, and main songwriter of the rock band Europe.  He has written hits which include \"The Final Countdown\", \"Rock the Night\", \"Cherokee\" and \"Superstitious\".\n\nLove Chaser: \"Love Chaser\" is the 1986 single released by the Swedish hard rock band Europe.  It was taken from the album \"The Final Countdown\", and was released only in Japan in the soundtrack album of the Japanese movie Pride One.  The track on the B-side of the single was \"Carrie\".  Next year the single was reissued in Japan and was entitled \"Carrie\" with \"Carrie\" on the A-side.  The reissue had the same catalogue number (VIPX-1849) as the first release.\n\nThe Final Countdown Tour 1986: The Final Countdown Tour 1986 is a concert video released by the Swedish hard rock band Europe.  It features footage from a concert filmed at Solnahallen in Solna, Sweden on May 26, 1986.  It was first released on VHS in Japan in 1986, and was released on DVD and CD in 2004.\n\nRichard L. Albert: Richard Albert was president of the award-winning motion picture advertising agency Design Projects, Inc. from 1978 to 1992.  Clients included major studios such as Universal Pictures, MGM, 20th Century Fox, Warner Bros., and Columbia Pictures, as well as major independent and international distributors such as Cannon Films, Trimark Pictures, CBS Theatrical Films, Goldcrest, and Lorimar.  Albert's firm was responsible for the movie poster designs for many films, including MacArthur, Sorcerer, Hard to Hold, The Final Countdown, Mutant, and Nightmares.  Albert consulted regularly with Menahem Golan at Cannon Films on how to market and pre-sell Cannon's films, and successfully launched the foreign campaigns for Death Wish 2, New Year's Evil, Lady Chatterly's Lover, Enter the Ninja, and many others.  Later, when Golan started 21st Century Films, he collaborated with Albert, who produced though his Sawmill Entertainment Corp. the Lambada dance movie The Forbidden Dance for Golan's foreign distribution, and Columbia Pictures' U.S. theatrical release.  Albert hunt ed down the management for the band Kaoma when they were touring in the United States, and licensed their hit song \"Lambada\" for the film.  He also tried to book the band to appear in the movie, however the band's schedule did not fit with the fast production schedule, so he hired Kid Creole and the Coconuts to perform in the final scenes.\n\nCherokee (Europe song): \"Cherokee\" is a 1987 single released by the Swedish band Europe.  It was the fourth single released internationally from the album \"The Final Countdown\", and was number 72 on the Billboard Hot 100 chart in the United States.\n\nDreamer (Europe song): \"Dreamer\" is a 1984 power ballad by the Swedish heavy metal band Europe.  It was the second single from the \"Wings of Tomorrow\" album.  The single was only released in Japan.  It bears a strong resemblance to the hit single \"Carrie\" that was released two years later.  This song is referenced in the song \"Time Has Come\" off the band's next album \"The Final Countdown\" in the lyric, \"Pray for the dreamer/He's still so sad.\"  In 1993 the song was included on their greatest hits compilation \"1982–1992\".\n\nQuestion: The singer who was the leader of the band that released \"The Final Countdown\" released the song in what year?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song in question.\"\n    },\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the band that released the song.\"\n    },\n    \"lead_singer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the lead singer of the band.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the song was released.\"\n    }\n  },\n  \"required\": [\n    \"song_title\",\n    \"band_name\",\n    \"lead_singer_name\",\n    \"release_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "song_title",
-    "band_name",
-    "lead_singer_name",
-    "release_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song in question."
+      },
+      "band_name": {
+        "type": "string",
+        "description": "The name of the band that released the song."
+      },
+      "lead_singer_name": {
+        "type": "string",
+        "description": "The name of the lead singer of the band."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the song was released."
+      }
+    },
+    "required": [
+      "song_title",
+      "band_name",
+      "lead_singer_name",
+      "release_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

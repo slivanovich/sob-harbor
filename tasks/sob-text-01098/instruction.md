@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Charles Salvador: Charles Arthur "Charlie" Salvador (born Michael Gordon Peterson also known as Charles Bronson; 6 December 1952) is an English criminal who is often referred to in the British press as the "most violent prisoner in Britain" and "Britain's most notorious prisoner".  He has spent periods detained in the Rampton, Broadmoor and Ashworth high-security psychiatric hospitals.
-
-Julia Blake: Julia Blake (born 13 May 1937) is an English-born Australian actress of theatre, television and film.  She is known for her role as Nancy McCormack on the Australian drama series "Prisoner" ("Prisoner: Cell Block H"), for which she appeared during the final season in 1986.  She appeared in two earlier roles in "Prisoner", as Evelyn Randall (1981) and Alice Dodds (1983).  She won the 1989 AFI (AACTA) Award for Best Actress in a Miniseries for "Eden's Lost", and the 1990 AFI {AACTA) Award for Best Supporting Actress for her role opposite Max von Sydow in the film "Father".  She also received AFI nominations for "Travelling North" (1987), "Innocence" (2000) and "The Boys are Back" (2009).
-
-Bronson (film): Bronson is a 2008 British fictionalized biographical crime film co-written and directed by Nicolas Winding Refn and starring Tom Hardy.  The film follows the life of notorious prisoner Michael Gordon Peterson, who was renamed Charles Bronson by his fight promoter.  Born into a respectable middle-class family, Peterson would nevertheless become one of the United Kingdom's most dangerous criminals, and is known for having spent almost his entire adult life in solitary confinement.  "Bronson" is narrated with humour, blurring the line between comedy and horror.
-
-The Mechanic (1972 film): The Mechanic is a 1972 American action thriller film directed by Michael Winner, produced by Irwin Winkler and Robert Chartoff, and written by Lewis John Carlino.  The film follows Arthur Bishop (Charles Bronson), a top assassin who works for a secret organisation and takes under him Steve McKenna, the ruthless and ambitious son of the organisation's head Harry McKenna, also known as "The Big" that Bishop killed.  Bishop then reveals that although that he is his protégé, he must face against McKenna who seeks revenge on his father's death.
-
-Harry Potter and the Prisoner of Azkaban (film): Harry Potter and the Prisoner of Azkaban is a 2004 British-American fantasy film directed by Alfonso Cuarón and distributed by Warner Bros.  Pictures.  It is based on the novel of the same name by J. K. Rowling.  The film, which is the third instalment in the "Harry Potter" film series, was written by Steve Kloves and produced by Chris Columbus (director of the first two instalments), David Heyman, and Mark Radcliffe.  The story follows Harry Potter's third year at Hogwarts as he is informed that a prisoner named Sirius Black has escaped from Azkaban intending to kill him.
-
-Paradise for Two (1927 film): Paradise for Two is a lost 1927 silent film produced by Famous Players-Lasky and distributed by Paramount Pictures.  It was directed by Gregory La Cava and starred Richard Dix and Betty Bronson.  Bronson had starred in a similar film over at First National the previous year called Paradise".
-
-Harry Potter and the Prisoner of Azkaban: Harry Potter and the Prisoner of Azkaban is the third novel in the "Harry Potter" series, written by J. K. Rowling.  The book follows Harry Potter, a young wizard, in his third year at Hogwarts School of Witchcraft and Wizardry.  Along with friends Ronald Weasley and Hermione Granger, Harry investigates Sirius Black, an escaped prisoner from Azkaban who they believe is one of Lord Voldemort's old allies.
-
-Breakout (1975 film): Breakout is a 1975 action film from Columbia Pictures starring Charles Bronson, Jill Ireland, Robert Duvall, John Huston, Sheree North and Randy Quaid.  Bronson and Ireland, the lead actor and actress, were married in real life.  The film is notable for giving the usually serious Bronson a more comedic, lighthearted role.
-
-Hannibal Brooks: Hannibal Brooks is a 1969 British war comedy film directed by Michael Winner and written by Ian La Frenais and Dick Clement based on a story by Winner and Tom Wright.  The film follows a prisoner of war attempt's to escape from Nazi Germany to Switzerland during World War II, accompanied by an Asian elephant.  It stars Oliver Reed, Michael J. Pollard and Wolfgang Preiss.  The beginning is based on the experiences of the writer Tom Wright who, while a prisoner of war, worked at Munich Zoo to care for their elephant "Lucy".  It has also been attributed to the true story of Olga the elephant rescued from Vienna Zoo in 1944.  The title is a reference to the Carthaginian military commander Hannibal who led an army of war elephants over the Alps.
-
-Life imprisonment in Sweden: Life imprisonment in Sweden ("livstids fängelse" in Swedish) is a sentence of indeterminate length.  Swedish law states that the most severe punishment is "prison for 10 (18 in case of murder) years or life", and so life imprisonment is, in practice, never shorter than ten years.  However, a prisoner may apply to the government for clemency, in practice having their life sentence commuted to a set number of years, which then follows standard Swedish parole regulations.  Clemency can also be granted on humanitarian grounds; however, the number of granted clemencies per year has been low since 1991, usually no more than one or two.  Until 1991 few served more than 15 years, but since then the time spent in prison has increased and in 2007 the usual time was at least 21 years.  Offenders under the age of 21 when the crime was committed can not be sentenced to life imprisonment.
-
-Question: Bronson is a film that follows the life of this prisoner born in what year?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "prisoner_original_name": {
-      "type": "string",
-      "description": "The original name of the prisoner whose life is depicted in the film."
-    },
-    "prisoner_birth_year": {
-      "type": "integer",
-      "description": "The birth year of the prisoner."
-    },
-    "film_release_year": {
-      "type": "integer",
-      "description": "The release year of the film."
+    {
+      "role": "user",
+      "content": "Context:\nCharles Salvador: Charles Arthur \"Charlie\" Salvador (born Michael Gordon Peterson also known as Charles Bronson; 6 December 1952) is an English criminal who is often referred to in the British press as the \"most violent prisoner in Britain\" and \"Britain's most notorious prisoner\".  He has spent periods detained in the Rampton, Broadmoor and Ashworth high-security psychiatric hospitals.\n\nJulia Blake: Julia Blake (born 13 May 1937) is an English-born Australian actress of theatre, television and film.  She is known for her role as Nancy McCormack on the Australian drama series \"Prisoner\" (\"Prisoner: Cell Block H\"), for which she appeared during the final season in 1986.  She appeared in two earlier roles in \"Prisoner\", as Evelyn Randall (1981) and Alice Dodds (1983).  She won the 1989 AFI (AACTA) Award for Best Actress in a Miniseries for \"Eden's Lost\", and the 1990 AFI {AACTA) Award for Best Supporting Actress for her role opposite Max von Sydow in the film \"Father\".  She also received AFI nominations for \"Travelling North\" (1987), \"Innocence\" (2000) and \"The Boys are Back\" (2009).\n\nBronson (film): Bronson is a 2008 British fictionalized biographical crime film co-written and directed by Nicolas Winding Refn and starring Tom Hardy.  The film follows the life of notorious prisoner Michael Gordon Peterson, who was renamed Charles Bronson by his fight promoter.  Born into a respectable middle-class family, Peterson would nevertheless become one of the United Kingdom's most dangerous criminals, and is known for having spent almost his entire adult life in solitary confinement.  \"Bronson\" is narrated with humour, blurring the line between comedy and horror.\n\nThe Mechanic (1972 film): The Mechanic is a 1972 American action thriller film directed by Michael Winner, produced by Irwin Winkler and Robert Chartoff, and written by Lewis John Carlino.  The film follows Arthur Bishop (Charles Bronson), a top assassin who works for a secret organisation and takes under him Steve McKenna, the ruthless and ambitious son of the organisation's head Harry McKenna, also known as \"The Big\" that Bishop killed.  Bishop then reveals that although that he is his protégé, he must face against McKenna who seeks revenge on his father's death.\n\nHarry Potter and the Prisoner of Azkaban (film): Harry Potter and the Prisoner of Azkaban is a 2004 British-American fantasy film directed by Alfonso Cuarón and distributed by Warner Bros.  Pictures.  It is based on the novel of the same name by J. K. Rowling.  The film, which is the third instalment in the \"Harry Potter\" film series, was written by Steve Kloves and produced by Chris Columbus (director of the first two instalments), David Heyman, and Mark Radcliffe.  The story follows Harry Potter's third year at Hogwarts as he is informed that a prisoner named Sirius Black has escaped from Azkaban intending to kill him.\n\nParadise for Two (1927 film): Paradise for Two is a lost 1927 silent film produced by Famous Players-Lasky and distributed by Paramount Pictures.  It was directed by Gregory La Cava and starred Richard Dix and Betty Bronson.  Bronson had starred in a similar film over at First National the previous year called Paradise\".\n\nHarry Potter and the Prisoner of Azkaban: Harry Potter and the Prisoner of Azkaban is the third novel in the \"Harry Potter\" series, written by J. K. Rowling.  The book follows Harry Potter, a young wizard, in his third year at Hogwarts School of Witchcraft and Wizardry.  Along with friends Ronald Weasley and Hermione Granger, Harry investigates Sirius Black, an escaped prisoner from Azkaban who they believe is one of Lord Voldemort's old allies.\n\nBreakout (1975 film): Breakout is a 1975 action film from Columbia Pictures starring Charles Bronson, Jill Ireland, Robert Duvall, John Huston, Sheree North and Randy Quaid.  Bronson and Ireland, the lead actor and actress, were married in real life.  The film is notable for giving the usually serious Bronson a more comedic, lighthearted role.\n\nHannibal Brooks: Hannibal Brooks is a 1969 British war comedy film directed by Michael Winner and written by Ian La Frenais and Dick Clement based on a story by Winner and Tom Wright.  The film follows a prisoner of war attempt's to escape from Nazi Germany to Switzerland during World War II, accompanied by an Asian elephant.  It stars Oliver Reed, Michael J. Pollard and Wolfgang Preiss.  The beginning is based on the experiences of the writer Tom Wright who, while a prisoner of war, worked at Munich Zoo to care for their elephant \"Lucy\".  It has also been attributed to the true story of Olga the elephant rescued from Vienna Zoo in 1944.  The title is a reference to the Carthaginian military commander Hannibal who led an army of war elephants over the Alps.\n\nLife imprisonment in Sweden: Life imprisonment in Sweden (\"livstids fängelse\" in Swedish) is a sentence of indeterminate length.  Swedish law states that the most severe punishment is \"prison for 10 (18 in case of murder) years or life\", and so life imprisonment is, in practice, never shorter than ten years.  However, a prisoner may apply to the government for clemency, in practice having their life sentence commuted to a set number of years, which then follows standard Swedish parole regulations.  Clemency can also be granted on humanitarian grounds; however, the number of granted clemencies per year has been low since 1991, usually no more than one or two.  Until 1991 few served more than 15 years, but since then the time spent in prison has increased and in 2007 the usual time was at least 21 years.  Offenders under the age of 21 when the crime was committed can not be sentenced to life imprisonment.\n\nQuestion: Bronson is a film that follows the life of this prisoner born in what year?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"prisoner_original_name\": {\n      \"type\": \"string\",\n      \"description\": \"The original name of the prisoner whose life is depicted in the film.\"\n    },\n    \"prisoner_birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the prisoner.\"\n    },\n    \"film_release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the film.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"prisoner_original_name\",\n    \"prisoner_birth_year\",\n    \"film_release_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "prisoner_original_name",
-    "prisoner_birth_year",
-    "film_release_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "prisoner_original_name": {
+        "type": "string",
+        "description": "The original name of the prisoner whose life is depicted in the film."
+      },
+      "prisoner_birth_year": {
+        "type": "integer",
+        "description": "The birth year of the prisoner."
+      },
+      "film_release_year": {
+        "type": "integer",
+        "description": "The release year of the film."
+      }
+    },
+    "required": [
+      "film_title",
+      "prisoner_original_name",
+      "prisoner_birth_year",
+      "film_release_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

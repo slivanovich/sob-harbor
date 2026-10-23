@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-John Nettleton (actor): John Nettleton (born 5 February 1929) is an English actor best known for playing Sir Arnold Robinson, Cabinet Secretary in "Yes Minister" (1980–84) and President of the Campaign for Freedom of Information in the follow-up "Yes, Prime Minister" (1985–88).  Another political role for Nettleton was a Conservative Party Member of Parliament (Sir Stephen Baxter) in the sitcom "The New Statesman".  A veteran actor with a career spanning many decades, Nettleton is easily at home playing troubled or flawed aristocratic gentlemen or can be seen amongst a comic ensemble.
-
-Isabel Pantoja: María Isabel Pantoja Martín (] ; born August 2, 1956) is a Spanish singer.  She was born in the Triana district of Seville, Spain.  She has released more than a dozen albums throughout a career spanning many decades, mostly of "copla" genre, and is known for her distinctive Andalusian style.
-
-In Good Company (Ted Brown album): In Good Company is an album by saxophonist Ted Brown with guitarist Jimmy Raney recorded in 1985 and released on the Dutch label, Criss Cross Jazz.  The CD rerelease added five alternate takes in 1990 renamimg the album "Good Company" and displaying Jimmy Raney's name more promenantly.
-
-The Statesmen Quartet: The Statesmen Quartet (also known as Hovie Lister and The Statesmen Quartet) were an American southern gospel music group founded in 1948 by Baptist Minister Hovie Lister.  Along with the Blackwood Brothers, the Statesmen Quartet were considered the most successful and influential gospel quartet of the 1950s and 1960s and had a wide influence on artists during that time from the gospel, country, pop, and rock and roll genre.  Along with hits spanning many decades, The Statesmen Quartet had many notable successes including being the first Gospel group to receive endorsement deals.  Additionally, they made television commercials, appeared on numerous radio and TV shows, and were signed to RCA Victor before launching their own record label, Skylite Records, with The Blackwood Brothers.
-
-Horace Batten: Horace Lampard Batten (17 June 1912 – 7 December 2014) was an English shoemaker and bootmaker, who supplied a wide variety of celebrities, royalty, service personnel and others over a career spanning many decades.
-
-Hudson's Bay tokens: The Hudson's Bay Company tokens represented the unit of currency used in the fur trade for many decades.  The largest—one "Made Beaver"—was equal in value to the skin on an adult male beaver in good condition.  Smaller sizes represented one-half, one-quarter, and one-eighth of a Made-Beaver.  One side of the brass token bears the Hudson's Bay Company's coat of arms and the other its value.
-
-In Such Good Company: In Such Good Company: Eleven Years of Laughter, Mayhem, and Fun in the Sandbox is a 2016 memoir by Carol Burnett, which, in its audio form, earned Burnett a Grammy Award for Best Spoken Word Album.  The memoir tells the behind-the-scenes story of "The Carol Burnett Show".
-
-Rubin Schron: Rubin Schron, who goes by Ruby, is a New York City real estate investor, landlord and the founder of Cammeby's International Group.  He has a personal net worth of well over $10 billion, according to data company Real Capital Analytics.  The portfolio of Cammeby's, which Schron founded in 1967, includes office buildings, market-rate and government-subsidized apartment complexes, nursing homes, the 16-building complex in Sunset Park now known as Industry City, a stake in the bottom half of Woolworth Building and industrial properties scattered across Long Island.  In 2013, Schron made an unsolicited and unsuccessful offer to buy the Empire State Building for $2 billion, but he has not had problems closing many other deals throughout his long career.  In 2003, an investment group led by Schron paid $600 million for a portfolio of about 6,000 outer-borough apartments from Donald Trump.  Other buildings he owns include the Monterey, a 521-unit rental multifamily building on Manhattan's Upper East Side; over the decades, Schron has also amassed a portfolio of Mitchell-Lama apartment buildings whose values have been skyrocketing to record values, after reverting to market rates when government subsidies expired.  In 2007, he sold nearly 4,000 units of former Mitchell-Lama properties in five complexes in Harlem and on Roosevelt Island for $940 million.  Schron, who practices Orthodox Judaism, has eight children and 50 grandchildren.  He and his family have lived in the same single-family home in Brooklyn for many decades.
-
-Carol Burnett: Carol Creighton Burnett (born April 26, 1933) is an American actress, comedienne, singer and writer, whose career spans six decades of television.  She is best known for her long-running TV variety show, "The Carol Burnett Show", originally aired on CBS.  She has achieved success on stage, television and film in varying genres including dramatic and comedy roles.  She also has appeared on various talk shows and as a panelist on game shows.
-
-Nereo López: Nereo López Meza (born Cartagena, 1 September 1920 - died New York City, 25 August 2015) was a Colombian documentary photographer.  He is regarded as a pioneer of the genre in his native Colombia.  He was a member of the "grupo de Barranquilla", a loose association of writers, artists and intellectuals that included Álvaro Cepeda Zamudio, Gabriel García Márquez, Alejandro Obregón, Rafael Escalona and Julio Mario Santo Domingo among others.  He took more than 100,000 photos in a career spanning many decades His work brought attention to the communities living in the valley and mountainous ranges of Colombia.
-
-Question: In Such Good Company is a memoir by the comedienne who has had a career spanning how many decades?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "memoir_title": {
-      "type": "string",
-      "description": "The title of the memoir."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "author_name": {
-      "type": "string",
-      "description": "The name of the author of the memoir."
-    },
-    "author_profession": {
-      "type": "string",
-      "description": "The primary profession of the author."
-    },
-    "author_career_span_decades": {
-      "type": "integer",
-      "description": "The number of decades the author's career spans."
+    {
+      "role": "user",
+      "content": "Context:\nJohn Nettleton (actor): John Nettleton (born 5 February 1929) is an English actor best known for playing Sir Arnold Robinson, Cabinet Secretary in \"Yes Minister\" (1980–84) and President of the Campaign for Freedom of Information in the follow-up \"Yes, Prime Minister\" (1985–88).  Another political role for Nettleton was a Conservative Party Member of Parliament (Sir Stephen Baxter) in the sitcom \"The New Statesman\".  A veteran actor with a career spanning many decades, Nettleton is easily at home playing troubled or flawed aristocratic gentlemen or can be seen amongst a comic ensemble.\n\nIsabel Pantoja: María Isabel Pantoja Martín (] ; born August 2, 1956) is a Spanish singer.  She was born in the Triana district of Seville, Spain.  She has released more than a dozen albums throughout a career spanning many decades, mostly of \"copla\" genre, and is known for her distinctive Andalusian style.\n\nIn Good Company (Ted Brown album): In Good Company is an album by saxophonist Ted Brown with guitarist Jimmy Raney recorded in 1985 and released on the Dutch label, Criss Cross Jazz.  The CD rerelease added five alternate takes in 1990 renamimg the album \"Good Company\" and displaying Jimmy Raney's name more promenantly.\n\nThe Statesmen Quartet: The Statesmen Quartet (also known as Hovie Lister and The Statesmen Quartet) were an American southern gospel music group founded in 1948 by Baptist Minister Hovie Lister.  Along with the Blackwood Brothers, the Statesmen Quartet were considered the most successful and influential gospel quartet of the 1950s and 1960s and had a wide influence on artists during that time from the gospel, country, pop, and rock and roll genre.  Along with hits spanning many decades, The Statesmen Quartet had many notable successes including being the first Gospel group to receive endorsement deals.  Additionally, they made television commercials, appeared on numerous radio and TV shows, and were signed to RCA Victor before launching their own record label, Skylite Records, with The Blackwood Brothers.\n\nHorace Batten: Horace Lampard Batten (17 June 1912 – 7 December 2014) was an English shoemaker and bootmaker, who supplied a wide variety of celebrities, royalty, service personnel and others over a career spanning many decades.\n\nHudson's Bay tokens: The Hudson's Bay Company tokens represented the unit of currency used in the fur trade for many decades.  The largest—one \"Made Beaver\"—was equal in value to the skin on an adult male beaver in good condition.  Smaller sizes represented one-half, one-quarter, and one-eighth of a Made-Beaver.  One side of the brass token bears the Hudson's Bay Company's coat of arms and the other its value.\n\nIn Such Good Company: In Such Good Company: Eleven Years of Laughter, Mayhem, and Fun in the Sandbox is a 2016 memoir by Carol Burnett, which, in its audio form, earned Burnett a Grammy Award for Best Spoken Word Album.  The memoir tells the behind-the-scenes story of \"The Carol Burnett Show\".\n\nRubin Schron: Rubin Schron, who goes by Ruby, is a New York City real estate investor, landlord and the founder of Cammeby's International Group.  He has a personal net worth of well over $10 billion, according to data company Real Capital Analytics.  The portfolio of Cammeby's, which Schron founded in 1967, includes office buildings, market-rate and government-subsidized apartment complexes, nursing homes, the 16-building complex in Sunset Park now known as Industry City, a stake in the bottom half of Woolworth Building and industrial properties scattered across Long Island.  In 2013, Schron made an unsolicited and unsuccessful offer to buy the Empire State Building for $2 billion, but he has not had problems closing many other deals throughout his long career.  In 2003, an investment group led by Schron paid $600 million for a portfolio of about 6,000 outer-borough apartments from Donald Trump.  Other buildings he owns include the Monterey, a 521-unit rental multifamily building on Manhattan's Upper East Side; over the decades, Schron has also amassed a portfolio of Mitchell-Lama apartment buildings whose values have been skyrocketing to record values, after reverting to market rates when government subsidies expired.  In 2007, he sold nearly 4,000 units of former Mitchell-Lama properties in five complexes in Harlem and on Roosevelt Island for $940 million.  Schron, who practices Orthodox Judaism, has eight children and 50 grandchildren.  He and his family have lived in the same single-family home in Brooklyn for many decades.\n\nCarol Burnett: Carol Creighton Burnett (born April 26, 1933) is an American actress, comedienne, singer and writer, whose career spans six decades of television.  She is best known for her long-running TV variety show, \"The Carol Burnett Show\", originally aired on CBS.  She has achieved success on stage, television and film in varying genres including dramatic and comedy roles.  She also has appeared on various talk shows and as a panelist on game shows.\n\nNereo López: Nereo López Meza (born Cartagena, 1 September 1920 - died New York City, 25 August 2015) was a Colombian documentary photographer.  He is regarded as a pioneer of the genre in his native Colombia.  He was a member of the \"grupo de Barranquilla\", a loose association of writers, artists and intellectuals that included Álvaro Cepeda Zamudio, Gabriel García Márquez, Alejandro Obregón, Rafael Escalona and Julio Mario Santo Domingo among others.  He took more than 100,000 photos in a career spanning many decades His work brought attention to the communities living in the valley and mountainous ranges of Colombia.\n\nQuestion: In Such Good Company is a memoir by the comedienne who has had a career spanning how many decades?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"memoir_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the memoir.\"\n    },\n    \"author_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the author of the memoir.\"\n    },\n    \"author_profession\": {\n      \"type\": \"string\",\n      \"description\": \"The primary profession of the author.\"\n    },\n    \"author_career_span_decades\": {\n      \"type\": \"integer\",\n      \"description\": \"The number of decades the author's career spans.\"\n    }\n  },\n  \"required\": [\n    \"memoir_title\",\n    \"author_name\",\n    \"author_profession\",\n    \"author_career_span_decades\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "memoir_title",
-    "author_name",
-    "author_profession",
-    "author_career_span_decades"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "memoir_title": {
+        "type": "string",
+        "description": "The title of the memoir."
+      },
+      "author_name": {
+        "type": "string",
+        "description": "The name of the author of the memoir."
+      },
+      "author_profession": {
+        "type": "string",
+        "description": "The primary profession of the author."
+      },
+      "author_career_span_decades": {
+        "type": "integer",
+        "description": "The number of decades the author's career spans."
+      }
+    },
+    "required": [
+      "memoir_title",
+      "author_name",
+      "author_profession",
+      "author_career_span_decades"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

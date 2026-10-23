@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-United Nations Security Council Resolution 302: United Nations Security Council Resolution 302, adopted on November 24, 1971, after reaffirming previous resolutions on the topic, the Council expressed its appreciation for the work accomplished by the Special Mission established in resolution 294.  The Council deplored the lack of co-operation with the Special Mission by the Portuguese and called upon its government to take effective measures so that the territorial integrity of Senegal would be respected and to prevent acts of violence and destruction against the territory and its people.
-
-Special Mission Unit: The term Special Mission Unit or Special Missions Unit (SMU) is used to describe some elite special operations forces around the world.  The term has been applied to the Australian Defence Force's Special Air Service Regiment and five United States special operations forces units.  Special mission units have been involved in high profile military operations such as the death of Osama Bin Laden and capture of Saddam Hussein.
-
-SEAL Team Six: The United States Naval Special Warfare Development Group (NSWDG), commonly known as DEVGRU or SEAL Team Six is the U.S. Navy component of Joint Special Operations Command.  It is often referred to within JSOC as "Task Force Blue".  DEVGRU is administratively supported by Naval Special Warfare Command and operationally commanded by the Joint Special Operations Command.  Most information concerning DEVGRU is classified, and details of its activities are not usually commented on by either the White House or the Department of Defense.  Despite the official name changes, "SEAL Team Six" remains the unit's widely recognized moniker.  It is sometimes referred to in the U.S. media as a Special Mission Unit.
-
-George &amp; A.J.: George & A.J. is a short film created by Pixar which uses characters from the film "Up" to tell what Nurses George and A.J. did after Carl Fredricksen left with his house tied to balloons in the feature film.  Instead of being released on DVD like "Partly Cloudy", "Dug's Special Mission", or any other Pixar short film, "George & A.J." was initially released on iTunes as an extra feature that came with a purchase of the film.  It was later released to fans of Disney/Pixar on their Facebook page and later to the official Disney/Pixar YouTube page.  It was later released on "Pixar Short Films Collection Volume 2".  All of the animation is done in a limited "storyboard" style, with some objects moving by keyframes, while other things like characters and their mouths barely move at all; however, the characters' expressions and the story are still conveyed.
-
-Ronnie del Carmen: Ronnie del Carmen (born December 31, 1959) is a Filipino animation writer, story artist, story supervisor and production designer.  He co-directed the 2015 Pixar film "Inside Out", for which he was nominated for an Academy Award for Best Original Screenplay.  He was the story supervisor on Pixar's tenth full-length computer-animated film, "Up", and directed its accompanying short film, "Dug's Special Mission".
-
-Dug's Special Mission: Dug's Special Mission (2009) is a Pixar short CGI film, directed by Ronnie del Carmen.  It is tied into and included on the DVD and Blu-ray Disc release of "Up", and Pixar Short Films Collection: Volume 2.
-
-Up (2009 film): Up is a 2009 American 3D computer-animated comedy-adventure film produced by Pixar Animation Studios and released by Walt Disney Pictures.  Directed by Pete Docter, the film centers on an elderly widower named Carl Fredricksen (Ed Asner) and an earnest young "Wilderness Explorer" (a fictional youth group similar to the Boy Scouts) named Russell (Jordan Nagai).  By tying thousands of balloons to his home, Carl sets out to fulfill his dream to see the wilds of South America and complete a promise made to his late wife, Ellie.  The film was co-directed by Bob Peterson, with music composed by Michael Giacchino.
-
-Fuerzas Especiales del Alto Mando: The Fuerzas Especiales del Alto Mando ("Special Forces High Command") is the principal Mexican Army Tier 1 Special Mission Unit for counter-terrorist operations .  It's a group with no more than 150 operators, most of their operators come from the Mexican Army Special Forces Corps.  After the selection process are specially trained in counter-terrorist tactics, advance force operations and personal security detail operations.  The unit's principal mission is carry out the most delicate national security operations ordered directly by the President and the Secretary of National Defense.
-
-United Nations Security Council Resolution 404: United Nations Security Council Resolution 404, adopted on February 8, 1977, after hearing from a representative of Benin, the Council reaffirmed that States must refrain from threats and use of force in their international relations and decided to establish a Special Mission composed of three members of the Council to investigate the events of January 16, 1977 against the country.  The findings of the report by the Special Mission were examined in Resolution 405.
-
-Death of Osama bin Laden: Osama bin Laden, the founder and head of the Islamist group Al-Qaeda, was killed in Pakistan on May 2, 2011, shortly after 1:00 am PKT (20:00 UTC, May 1) by United States Navy SEALs of the U.S. Naval Special Warfare Development Group (also known as DEVGRU or SEAL Team Six).  The operation, code-named Operation Neptune Spear, was carried out in a CIA-led operation, with Joint Special Operations Command, commonly known as JSOC, coordinating the Special Mission Units involved in the raid.  In addition to SEAL Team Six, participating units under JSOC included the 160th Special Operations Aviation Regiment (Airborne), aka "Night Stalkers," and operators from the CIA's Special Activities Division, which recruits heavily from former JSOC Special Mission Units.  The operation ended a nearly 10-year search for bin Laden, following his role in the September 11, 2001 attacks on the US.
-
-Question: Who was the director of the movie that Dug's Special Mission is included with on DVD?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "short_film_title": {
-      "type": "string",
-      "description": "The title of the short film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "main_movie_title": {
-      "type": "string",
-      "description": "The title of the main feature film the short is included with."
-    },
-    "main_movie_director": {
-      "type": "string",
-      "description": "The director of the main feature film."
-    },
-    "inclusion_format": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "The formats on which the short film is included with the main movie."
+    {
+      "role": "user",
+      "content": "Context:\nUnited Nations Security Council Resolution 302: United Nations Security Council Resolution 302, adopted on November 24, 1971, after reaffirming previous resolutions on the topic, the Council expressed its appreciation for the work accomplished by the Special Mission established in resolution 294.  The Council deplored the lack of co-operation with the Special Mission by the Portuguese and called upon its government to take effective measures so that the territorial integrity of Senegal would be respected and to prevent acts of violence and destruction against the territory and its people.\n\nSpecial Mission Unit: The term Special Mission Unit or Special Missions Unit (SMU) is used to describe some elite special operations forces around the world.  The term has been applied to the Australian Defence Force's Special Air Service Regiment and five United States special operations forces units.  Special mission units have been involved in high profile military operations such as the death of Osama Bin Laden and capture of Saddam Hussein.\n\nSEAL Team Six: The United States Naval Special Warfare Development Group (NSWDG), commonly known as DEVGRU or SEAL Team Six is the U.S. Navy component of Joint Special Operations Command.  It is often referred to within JSOC as \"Task Force Blue\".  DEVGRU is administratively supported by Naval Special Warfare Command and operationally commanded by the Joint Special Operations Command.  Most information concerning DEVGRU is classified, and details of its activities are not usually commented on by either the White House or the Department of Defense.  Despite the official name changes, \"SEAL Team Six\" remains the unit's widely recognized moniker.  It is sometimes referred to in the U.S. media as a Special Mission Unit.\n\nGeorge &amp; A.J.: George & A.J. is a short film created by Pixar which uses characters from the film \"Up\" to tell what Nurses George and A.J. did after Carl Fredricksen left with his house tied to balloons in the feature film.  Instead of being released on DVD like \"Partly Cloudy\", \"Dug's Special Mission\", or any other Pixar short film, \"George & A.J.\" was initially released on iTunes as an extra feature that came with a purchase of the film.  It was later released to fans of Disney/Pixar on their Facebook page and later to the official Disney/Pixar YouTube page.  It was later released on \"Pixar Short Films Collection Volume 2\".  All of the animation is done in a limited \"storyboard\" style, with some objects moving by keyframes, while other things like characters and their mouths barely move at all; however, the characters' expressions and the story are still conveyed.\n\nRonnie del Carmen: Ronnie del Carmen (born December 31, 1959) is a Filipino animation writer, story artist, story supervisor and production designer.  He co-directed the 2015 Pixar film \"Inside Out\", for which he was nominated for an Academy Award for Best Original Screenplay.  He was the story supervisor on Pixar's tenth full-length computer-animated film, \"Up\", and directed its accompanying short film, \"Dug's Special Mission\".\n\nDug's Special Mission: Dug's Special Mission (2009) is a Pixar short CGI film, directed by Ronnie del Carmen.  It is tied into and included on the DVD and Blu-ray Disc release of \"Up\", and Pixar Short Films Collection: Volume 2.\n\nUp (2009 film): Up is a 2009 American 3D computer-animated comedy-adventure film produced by Pixar Animation Studios and released by Walt Disney Pictures.  Directed by Pete Docter, the film centers on an elderly widower named Carl Fredricksen (Ed Asner) and an earnest young \"Wilderness Explorer\" (a fictional youth group similar to the Boy Scouts) named Russell (Jordan Nagai).  By tying thousands of balloons to his home, Carl sets out to fulfill his dream to see the wilds of South America and complete a promise made to his late wife, Ellie.  The film was co-directed by Bob Peterson, with music composed by Michael Giacchino.\n\nFuerzas Especiales del Alto Mando: The Fuerzas Especiales del Alto Mando (\"Special Forces High Command\") is the principal Mexican Army Tier 1 Special Mission Unit for counter-terrorist operations .  It's a group with no more than 150 operators, most of their operators come from the Mexican Army Special Forces Corps.  After the selection process are specially trained in counter-terrorist tactics, advance force operations and personal security detail operations.  The unit's principal mission is carry out the most delicate national security operations ordered directly by the President and the Secretary of National Defense.\n\nUnited Nations Security Council Resolution 404: United Nations Security Council Resolution 404, adopted on February 8, 1977, after hearing from a representative of Benin, the Council reaffirmed that States must refrain from threats and use of force in their international relations and decided to establish a Special Mission composed of three members of the Council to investigate the events of January 16, 1977 against the country.  The findings of the report by the Special Mission were examined in Resolution 405.\n\nDeath of Osama bin Laden: Osama bin Laden, the founder and head of the Islamist group Al-Qaeda, was killed in Pakistan on May 2, 2011, shortly after 1:00 am PKT (20:00 UTC, May 1) by United States Navy SEALs of the U.S. Naval Special Warfare Development Group (also known as DEVGRU or SEAL Team Six).  The operation, code-named Operation Neptune Spear, was carried out in a CIA-led operation, with Joint Special Operations Command, commonly known as JSOC, coordinating the Special Mission Units involved in the raid.  In addition to SEAL Team Six, participating units under JSOC included the 160th Special Operations Aviation Regiment (Airborne), aka \"Night Stalkers,\" and operators from the CIA's Special Activities Division, which recruits heavily from former JSOC Special Mission Units.  The operation ended a nearly 10-year search for bin Laden, following his role in the September 11, 2001 attacks on the US.\n\nQuestion: Who was the director of the movie that Dug's Special Mission is included with on DVD?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"short_film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the short film.\"\n    },\n    \"main_movie_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the main feature film the short is included with.\"\n    },\n    \"main_movie_director\": {\n      \"type\": \"string\",\n      \"description\": \"The director of the main feature film.\"\n    },\n    \"inclusion_format\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"The formats on which the short film is included with the main movie.\"\n    }\n  },\n  \"required\": [\n    \"short_film_title\",\n    \"main_movie_title\",\n    \"main_movie_director\",\n    \"inclusion_format\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "short_film_title",
-    "main_movie_title",
-    "main_movie_director",
-    "inclusion_format"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "short_film_title": {
+        "type": "string",
+        "description": "The title of the short film."
+      },
+      "main_movie_title": {
+        "type": "string",
+        "description": "The title of the main feature film the short is included with."
+      },
+      "main_movie_director": {
+        "type": "string",
+        "description": "The director of the main feature film."
+      },
+      "inclusion_format": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The formats on which the short film is included with the main movie."
+      }
+    },
+    "required": [
+      "short_film_title",
+      "main_movie_title",
+      "main_movie_director",
+      "inclusion_format"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

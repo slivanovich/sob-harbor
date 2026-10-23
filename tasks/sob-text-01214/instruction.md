@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Jake the Dog: Jake the Dog is a fictional character and one of the main cast in the American animated television series "Adventure Time" created by Pendleton Ward.  He is voiced by John DiMaggio.  The character made his debut in the original pilot.  Jake is Finn's best friend and adoptive brother.  He is a shape-shifting dog who is in his 30s in "magical dog years".  He was conceived by Joshua and an extra-dimensional creature and as a result, Jake can stretch, shrink, or mold any part of his body to any shape and almost any size, ranging from becoming gigantic to becoming incredibly small.  He acts as a confidant and mentor to his energetic brother, though has a tendency to give somewhat questionable advice.  Jake has a laid-back attitude in most situations, but loves adventure and will eagerly fight when he needs to.  His powers help Finn considerably in combat and transportation, but are also sometimes used as nothing more than jovial forms of expression.  Jake is in a relationship with Lady Rainicorn voiced by Niki Yang; they have five children together as seen in "Jake the Dad".  He met Lady in the pilot episode and is quite skilled at playing the viola, which houses a worm called Shelby.
-
-Adventure Time (season 6): The sixth season of "Adventure Time", an American animated television series created by Pendleton Ward, premiered on Cartoon Network on April 21, 2014 and concluded on June 5, 2015.  The season was produced by Cartoon Network Studios and Frederator Studios.  The season follows the adventures of Finn, a human boy, and his best friend and adoptive brother Jake, a dog with magical powers to change shape and size at will.  Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with the other main characters of the show: Princess Bubblegum, The Ice King, Marceline the Vampire Queen, Lumpy Space Princess, BMO, and Flame Princess.
-
-Sextus Aelius Catus: Sextius Aelius Catus was a Roman senator (consul of 4 AD) and the father of Aelia Paetina, the second wife of the emperor Claudius from 28 AD to about 31 AD (when Aelia's adoptive brother Sejanus fell from power).  His only known grandchild was Aelia and Claudius's daughter Claudia Antonia, born in 30.
-
-Li Cunshen: Li Cunshen (李存審) (862-June 16, 924), né Fu Cun (符存), often referred to in historical sources as Fu Cunshen (符存審), courtesy name Dexiang (德詳), was a major general of the Chinese Five Dynasties and Ten Kingdoms period dynasty Later Tang and Later Tang's predecessor state Jin.  He was an adoptive son of Jin's first prince Li Keyong and later served in a number of major campaigns under the reign of Li Keyong's son (Li Cunshen's adoptive brother) Li Cunxu, helping Li Cunxu to establish Later Tang as its Emperor Zhuangzong.
-
-Thor (Marvel Comics): Thor (Thor Odinson) is a fictional superhero appearing in American comic books published by Marvel Comics.  The character, based on the Norse mythological deity of the same name, is the Asgardian god of thunder and possesses the enchanted hammer Mjolnir, which grants him the ability of flight and weather manipulation amongst his other superhuman attributes.
-
-Dong Zhang: Dong Zhang (董璋) (d. June 10, 932) was a general of the Chinese Five Dynasties and Ten Kingdoms period states Later Liang and Later Tang.  After submitting to Later Tang after Later Liang's destruction, he became a general favored by both Later Tang's founding emperor Li Cunxu and Li Cunxu's chief of staff Guo Chongtao, causing Guo to commission Dong as the military governor ("Jiedushi") of Dongchuan Circuit (東川, headquartered in modern Mianyang, Sichuan) after Guo's conquest of Former Shu.  Because of this, after Li Cunxu's downfall and succession by his adoptive brother Li Siyuan, Li Siyuan's chief of staff An Chonghui came to suspect both Dong and Meng Zhixiang, the military governor of neighboring Xichuan Circuit (西川, headquartered in modern Chengdu, Sichuan).  Dong and Meng jointly rebelled against Li Siyuan and were successful military, forcing the imperial government to eventually move into a reconciliatory posture.  Dong, however, as his son Dong Guangye (董光業) and Dong Guangye's family were slaughtered, refused the imperial overture, and later launched an attack on Meng, as Meng was moving to reconciliation with the imperial government.  Meng defeated him, and he was later killed by his own subordinates.
-
-Loki (comics): Loki is a fictional character appearing in American comic books published by Marvel Comics.  He is the adoptive brother and often the enemy of Thor.  He is based on the being of the same name from Norse mythology.  The character first appeared historically in "Venus" No. 6 (August 1949) and in modern-day in "Journey into Mystery" No. 85 (October 1962).  The character was created by writer Stan Lee, scripter Larry Lieber, and penciller Jack Kirby.  Though normally portrayed as a supervillain, he is sometimes depicted as an antihero.
-
-James Gordon Jr.: James Worthington "J.J." Gordon Jr. is a fictional character, a supervillain in DC Comics and an enemy of Batman.  He is the son of James Gordon and Barbara Eileen Gordon, and the adoptive brother (or biological brother, depending on the continuity) of Barbara Gordon, who later tries to bring him to justice as Batgirl.
-
-Wang Yanhan: Wang Yanhan (王延翰) (died January 14, 927), courtesy name Ziyi (子逸), was a ruler of the Chinese Five Dynasties and Ten Kingdoms period state Min.  He ruled briefly after the death of his father Wang Shenzhi (Prince Zhongyi) without a regal title, but later declared himself king.  Just two months after declaring himself king, he was overthrown and killed in a revolt by his adoptive brother Wang Yanbing and younger biological brother Wang Yanjun.  Wang Yanjun took over the state thereafter.
-
-J. J. Larrabee: J.J. Snyder is the biological child of Les Sweeney and Julia Morrissey Larrabee, who are both now deceased.  He has been adopted by Jack Snyder and Carly Tenney.  He was also in the care of his maternal biological uncle Keith Morrissey.  He is the adoptive brother of Parker Snyder and Sage Snyder.
-
-Question: Lokis Adoptive brother is god of what?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "character_name": {
-      "type": "string",
-      "description": "The name of Loki's adoptive brother."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "relationship_to_loki": {
-      "type": "string",
-      "description": "The nature of the relationship between the character and Loki."
-    },
-    "deity_domain": {
-      "type": "string",
-      "description": "The domain or power the character is a god of."
-    },
-    "comic_publisher": {
-      "type": "string",
-      "description": "The publisher of the comic books featuring the character."
+    {
+      "role": "user",
+      "content": "Context:\nJake the Dog: Jake the Dog is a fictional character and one of the main cast in the American animated television series \"Adventure Time\" created by Pendleton Ward.  He is voiced by John DiMaggio.  The character made his debut in the original pilot.  Jake is Finn's best friend and adoptive brother.  He is a shape-shifting dog who is in his 30s in \"magical dog years\".  He was conceived by Joshua and an extra-dimensional creature and as a result, Jake can stretch, shrink, or mold any part of his body to any shape and almost any size, ranging from becoming gigantic to becoming incredibly small.  He acts as a confidant and mentor to his energetic brother, though has a tendency to give somewhat questionable advice.  Jake has a laid-back attitude in most situations, but loves adventure and will eagerly fight when he needs to.  His powers help Finn considerably in combat and transportation, but are also sometimes used as nothing more than jovial forms of expression.  Jake is in a relationship with Lady Rainicorn voiced by Niki Yang; they have five children together as seen in \"Jake the Dad\".  He met Lady in the pilot episode and is quite skilled at playing the viola, which houses a worm called Shelby.\n\nAdventure Time (season 6): The sixth season of \"Adventure Time\", an American animated television series created by Pendleton Ward, premiered on Cartoon Network on April 21, 2014 and concluded on June 5, 2015.  The season was produced by Cartoon Network Studios and Frederator Studios.  The season follows the adventures of Finn, a human boy, and his best friend and adoptive brother Jake, a dog with magical powers to change shape and size at will.  Finn and Jake live in the post-apocalyptic Land of Ooo, where they interact with the other main characters of the show: Princess Bubblegum, The Ice King, Marceline the Vampire Queen, Lumpy Space Princess, BMO, and Flame Princess.\n\nSextus Aelius Catus: Sextius Aelius Catus was a Roman senator (consul of 4 AD) and the father of Aelia Paetina, the second wife of the emperor Claudius from 28 AD to about 31 AD (when Aelia's adoptive brother Sejanus fell from power).  His only known grandchild was Aelia and Claudius's daughter Claudia Antonia, born in 30.\n\nLi Cunshen: Li Cunshen (李存審) (862-June 16, 924), né Fu Cun (符存), often referred to in historical sources as Fu Cunshen (符存審), courtesy name Dexiang (德詳), was a major general of the Chinese Five Dynasties and Ten Kingdoms period dynasty Later Tang and Later Tang's predecessor state Jin.  He was an adoptive son of Jin's first prince Li Keyong and later served in a number of major campaigns under the reign of Li Keyong's son (Li Cunshen's adoptive brother) Li Cunxu, helping Li Cunxu to establish Later Tang as its Emperor Zhuangzong.\n\nThor (Marvel Comics): Thor (Thor Odinson) is a fictional superhero appearing in American comic books published by Marvel Comics.  The character, based on the Norse mythological deity of the same name, is the Asgardian god of thunder and possesses the enchanted hammer Mjolnir, which grants him the ability of flight and weather manipulation amongst his other superhuman attributes.\n\nDong Zhang: Dong Zhang (董璋) (d. June 10, 932) was a general of the Chinese Five Dynasties and Ten Kingdoms period states Later Liang and Later Tang.  After submitting to Later Tang after Later Liang's destruction, he became a general favored by both Later Tang's founding emperor Li Cunxu and Li Cunxu's chief of staff Guo Chongtao, causing Guo to commission Dong as the military governor (\"Jiedushi\") of Dongchuan Circuit (東川, headquartered in modern Mianyang, Sichuan) after Guo's conquest of Former Shu.  Because of this, after Li Cunxu's downfall and succession by his adoptive brother Li Siyuan, Li Siyuan's chief of staff An Chonghui came to suspect both Dong and Meng Zhixiang, the military governor of neighboring Xichuan Circuit (西川, headquartered in modern Chengdu, Sichuan).  Dong and Meng jointly rebelled against Li Siyuan and were successful military, forcing the imperial government to eventually move into a reconciliatory posture.  Dong, however, as his son Dong Guangye (董光業) and Dong Guangye's family were slaughtered, refused the imperial overture, and later launched an attack on Meng, as Meng was moving to reconciliation with the imperial government.  Meng defeated him, and he was later killed by his own subordinates.\n\nLoki (comics): Loki is a fictional character appearing in American comic books published by Marvel Comics.  He is the adoptive brother and often the enemy of Thor.  He is based on the being of the same name from Norse mythology.  The character first appeared historically in \"Venus\" No. 6 (August 1949) and in modern-day in \"Journey into Mystery\" No. 85 (October 1962).  The character was created by writer Stan Lee, scripter Larry Lieber, and penciller Jack Kirby.  Though normally portrayed as a supervillain, he is sometimes depicted as an antihero.\n\nJames Gordon Jr.: James Worthington \"J.J.\" Gordon Jr. is a fictional character, a supervillain in DC Comics and an enemy of Batman.  He is the son of James Gordon and Barbara Eileen Gordon, and the adoptive brother (or biological brother, depending on the continuity) of Barbara Gordon, who later tries to bring him to justice as Batgirl.\n\nWang Yanhan: Wang Yanhan (王延翰) (died January 14, 927), courtesy name Ziyi (子逸), was a ruler of the Chinese Five Dynasties and Ten Kingdoms period state Min.  He ruled briefly after the death of his father Wang Shenzhi (Prince Zhongyi) without a regal title, but later declared himself king.  Just two months after declaring himself king, he was overthrown and killed in a revolt by his adoptive brother Wang Yanbing and younger biological brother Wang Yanjun.  Wang Yanjun took over the state thereafter.\n\nJ. J. Larrabee: J.J. Snyder is the biological child of Les Sweeney and Julia Morrissey Larrabee, who are both now deceased.  He has been adopted by Jack Snyder and Carly Tenney.  He was also in the care of his maternal biological uncle Keith Morrissey.  He is the adoptive brother of Parker Snyder and Sage Snyder.\n\nQuestion: Lokis Adoptive brother is god of what?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of Loki's adoptive brother.\"\n    },\n    \"relationship_to_loki\": {\n      \"type\": \"string\",\n      \"description\": \"The nature of the relationship between the character and Loki.\"\n    },\n    \"deity_domain\": {\n      \"type\": \"string\",\n      \"description\": \"The domain or power the character is a god of.\"\n    },\n    \"comic_publisher\": {\n      \"type\": \"string\",\n      \"description\": \"The publisher of the comic books featuring the character.\"\n    }\n  },\n  \"required\": [\n    \"character_name\",\n    \"relationship_to_loki\",\n    \"deity_domain\",\n    \"comic_publisher\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "character_name",
-    "relationship_to_loki",
-    "deity_domain",
-    "comic_publisher"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "character_name": {
+        "type": "string",
+        "description": "The name of Loki's adoptive brother."
+      },
+      "relationship_to_loki": {
+        "type": "string",
+        "description": "The nature of the relationship between the character and Loki."
+      },
+      "deity_domain": {
+        "type": "string",
+        "description": "The domain or power the character is a god of."
+      },
+      "comic_publisher": {
+        "type": "string",
+        "description": "The publisher of the comic books featuring the character."
+      }
+    },
+    "required": [
+      "character_name",
+      "relationship_to_loki",
+      "deity_domain",
+      "comic_publisher"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

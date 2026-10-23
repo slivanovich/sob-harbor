@@ -1,86 +1,63 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-GP Basic: GP Basic (Korean: 지피 베이직 ) was a South Korean girl group who debuted on August 15, 2010.  At the time of their debut, they were considered to be the "youngest" South Korean girl group with an average age of below 13.5.  The age of their youngest member, Janey, caused controversy followed by the debut of a much younger girl group, G-story, who were all below 10 years old.  This led to new broadcasting regulations in South Korea.
-
-Can We Love?: Can We Love?  () is a 2014 South Korean television drama starring Eugene, Uhm Tae-woong, Kim Yoo-mi, Choi Jung-yoon and Kim Sung-soo.  It aired on jTBC from January 6 to March 11, 2014 for 20 episodes.
-
-Lina (South Korean singer): Lee Ji-yeon (born February 18, 1984), better known by her stage name Lina is a South Korean singer and musical actress.  She debuted in 2002 as a member of South Korean R&B duo Isak N Jiyeon and disbanded in 2004.  She later re-debut as a member of South Korean girl group The Grace in 2005 and the group currently being inactive.  She currently active as a musical actress.
-
-Kim Tae-yeon discography: Kim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer.  Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles.  She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs "If" for "Hong Gil Dong" and "Can You Hear Me" for "Beethoven Virus" (2008).  She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably "I Love You" for "" (2010), "Missing You like Crazy" for "The King 2 Hearts", "Closer" for "To the Beautiful You" (2012), and "And One" for "That Winter, the Wind Blows" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart.  Apart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably "Like a Star" with The One and "Different" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.
-
-Eugene (actress): Kim Yoo-jin (born March 3, 1981), professionally known as Eugene, is a South Korean singer, actress and presenter.  She is best known as a member of South Korean girl group S.E.S..
-
-Lee Hyori: Lee Hyo-ri (born May 10, 1979), is a South Korean singer, record producer, activist, actress and television presenter.  Dubbed as the "Nation's Fairy" during her "Family Outing" days, she debuted as a member of South Korean girl group Fin.K.L, but has since become a solo artist.  In 2003, she released her debut solo album "Stylish" which won several "Artist of the Year" awards.  In 2006, Lee was the highest-paid female singer in South Korea when she signed a contract with Mnet Media.
-
-Kwon So-hyun: Kwon So-hyun (born August 30, 1994), is a South Korean singer and actress.  She was known as a member of the South Korean girl group 4Minute, under Cube Entertainment.  She is also a former member of the South Korean girl group, Orange.  Before June 15, 2016 (end of her contract with Cube), Sohyun left 4Minute and the record label along with members Nam Ji-hyun, Heo Ga-yoon, and Jeon Ji-yoon.
-
-Han Sun-hwa: Han Sun-hwa (born October 6, 1990), is a South Korean singer and actress.  She is a former member of the South Korean girl group Secret.  She made her television debut in 2004 while participating in SBS's "Superstar Survival" as a finalist, and in 2009, she was a regular cast on a variety show called "Invincible Youth".  Aside from music, she also ventured into acting and made her debut in the 2010 drama, "More Charming By The Day".  She also acted in several dramas with supporting roles in "Ad Genius Lee Tae-baek", "God's Gift - 14 Days", and "Marriage, Not Dating".  In 2014 she finally starred as a lead actress on MBC's weekend drama "Rosy Lovers" as Baek Jang Mi co-starring with actor Lee Jang Woo.  CNN International Seoul listed Sunhwa as one of the nine rising "It" stars in Korean entertainment citing her as a "multi-tasking" artist.  Her portrayal of Kang Se-Ah in the 2014 TVN drama, "Marriage, Not Dating" earned her a nomination for "Best Youth Actress" at the 16th Seoul International Youth Film Festival.  In 2014, her portrayal of Jang-Mi from "Rosy Lovers" and Jenny from "God's Gift 14 Day"s won her two best new actress awards from MBC and SBS Drama Awards.  It was confirmed on September 26, 2016 that Sunhwa had not renewed her contract with TS Entertainment and will officially part ways in October.  On October 14, 2016 Sunhwa joined Huayi Brothers as an actress.
-
-Luna (singer): Park Sun-young (born August 12, 1993), better known by her stage name Luna, is a South Korean singer, actress and presenter.  She is best known as the main vocalist and lead dancer of South Korean girl group f(x).  Luna made her solo debut with the extended play "Free Somebody" on May 31, 2016.
-
-Kim Chung-ha: Kim Chung-ha (born Kim Chan-mi on February 9, 1996), better known by the mononym Chungha, is a South Korean singer.  She is best known for finishing fourth in Mnet's girl group survival show "Produce 101" and as a former member of the now disbanded South Korean girl group I.O.I.
-
-Question: Can We Love? starred this south Korean singer, actress and presenter who is best known as a member of what South Korean girl group
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "drama_title": {
-      "type": "string",
-      "description": "The title of the South Korean television drama."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "starring_actor": {
-      "type": "string",
-      "description": "The stage name of the actor who starred in the drama and is also a singer, actress, and presenter."
-    },
-    "actor_details": {
-      "type": "object",
-      "properties": {
-        "full_name": {
-          "type": "string",
-          "description": "The full birth name of the actor."
-        },
-        "stage_name": {
-          "type": "string",
-          "description": "The professional stage name of the actor."
-        },
-        "occupations": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A list of occupations held by the actor."
-        }
-      },
-      "required": [
-        "full_name",
-        "stage_name",
-        "occupations"
-      ],
-      "additionalProperties": false
-    },
-    "girl_group_name": {
-      "type": "string",
-      "description": "The name of the South Korean girl group the actor is best known as a member of."
+    {
+      "role": "user",
+      "content": "Context:\nGP Basic: GP Basic (Korean: 지피 베이직 ) was a South Korean girl group who debuted on August 15, 2010.  At the time of their debut, they were considered to be the \"youngest\" South Korean girl group with an average age of below 13.5.  The age of their youngest member, Janey, caused controversy followed by the debut of a much younger girl group, G-story, who were all below 10 years old.  This led to new broadcasting regulations in South Korea.\n\nCan We Love?: Can We Love?  () is a 2014 South Korean television drama starring Eugene, Uhm Tae-woong, Kim Yoo-mi, Choi Jung-yoon and Kim Sung-soo.  It aired on jTBC from January 6 to March 11, 2014 for 20 episodes.\n\nLina (South Korean singer): Lee Ji-yeon (born February 18, 1984), better known by her stage name Lina is a South Korean singer and musical actress.  She debuted in 2002 as a member of South Korean R&B duo Isak N Jiyeon and disbanded in 2004.  She later re-debut as a member of South Korean girl group The Grace in 2005 and the group currently being inactive.  She currently active as a musical actress.\n\nKim Tae-yeon discography: Kim Tae-yeon, better known by the mononym Taeyeon, is a South Korean singer.  Her discography consists of one studio album, two extended plays (EPs), twenty singles (including four as featured artist), and three promotional singles.  She debuted as a member of South Korean girl group Girls' Generation in August 2007 and initially gained some popularity as a singer upon recording soundtrack songs \"If\" for \"Hong Gil Dong\" and \"Can You Hear Me\" for \"Beethoven Virus\" (2008).  She subsequently established herself as one of the most renowned vocalist on the South Korean music scene with further soundtrack recordings, notably \"I Love You\" for \"\" (2010), \"Missing You like Crazy\" for \"The King 2 Hearts\", \"Closer\" for \"To the Beautiful You\" (2012), and \"And One\" for \"That Winter, the Wind Blows\" (2013), all of which managed to enter the top ten of South Korea's Gaon Digital Chart.  Apart from soundtrack recordings, Taeyeon has also recorded duets with other artists, most notably \"Like a Star\" with The One and \"Different\" with Kim Bum-soo, which peaked at numbers one and two on the Gaon Digital Chart, respectively.\n\nEugene (actress): Kim Yoo-jin (born March 3, 1981), professionally known as Eugene, is a South Korean singer, actress and presenter.  She is best known as a member of South Korean girl group S.E.S..\n\nLee Hyori: Lee Hyo-ri (born May 10, 1979), is a South Korean singer, record producer, activist, actress and television presenter.  Dubbed as the \"Nation's Fairy\" during her \"Family Outing\" days, she debuted as a member of South Korean girl group Fin.K.L, but has since become a solo artist.  In 2003, she released her debut solo album \"Stylish\" which won several \"Artist of the Year\" awards.  In 2006, Lee was the highest-paid female singer in South Korea when she signed a contract with Mnet Media.\n\nKwon So-hyun: Kwon So-hyun (born August 30, 1994), is a South Korean singer and actress.  She was known as a member of the South Korean girl group 4Minute, under Cube Entertainment.  She is also a former member of the South Korean girl group, Orange.  Before June 15, 2016 (end of her contract with Cube), Sohyun left 4Minute and the record label along with members Nam Ji-hyun, Heo Ga-yoon, and Jeon Ji-yoon.\n\nHan Sun-hwa: Han Sun-hwa (born October 6, 1990), is a South Korean singer and actress.  She is a former member of the South Korean girl group Secret.  She made her television debut in 2004 while participating in SBS's \"Superstar Survival\" as a finalist, and in 2009, she was a regular cast on a variety show called \"Invincible Youth\".  Aside from music, she also ventured into acting and made her debut in the 2010 drama, \"More Charming By The Day\".  She also acted in several dramas with supporting roles in \"Ad Genius Lee Tae-baek\", \"God's Gift - 14 Days\", and \"Marriage, Not Dating\".  In 2014 she finally starred as a lead actress on MBC's weekend drama \"Rosy Lovers\" as Baek Jang Mi co-starring with actor Lee Jang Woo.  CNN International Seoul listed Sunhwa as one of the nine rising \"It\" stars in Korean entertainment citing her as a \"multi-tasking\" artist.  Her portrayal of Kang Se-Ah in the 2014 TVN drama, \"Marriage, Not Dating\" earned her a nomination for \"Best Youth Actress\" at the 16th Seoul International Youth Film Festival.  In 2014, her portrayal of Jang-Mi from \"Rosy Lovers\" and Jenny from \"God's Gift 14 Day\"s won her two best new actress awards from MBC and SBS Drama Awards.  It was confirmed on September 26, 2016 that Sunhwa had not renewed her contract with TS Entertainment and will officially part ways in October.  On October 14, 2016 Sunhwa joined Huayi Brothers as an actress.\n\nLuna (singer): Park Sun-young (born August 12, 1993), better known by her stage name Luna, is a South Korean singer, actress and presenter.  She is best known as the main vocalist and lead dancer of South Korean girl group f(x).  Luna made her solo debut with the extended play \"Free Somebody\" on May 31, 2016.\n\nKim Chung-ha: Kim Chung-ha (born Kim Chan-mi on February 9, 1996), better known by the mononym Chungha, is a South Korean singer.  She is best known for finishing fourth in Mnet's girl group survival show \"Produce 101\" and as a former member of the now disbanded South Korean girl group I.O.I.\n\nQuestion: Can We Love? starred this south Korean singer, actress and presenter who is best known as a member of what South Korean girl group\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"drama_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the South Korean television drama.\"\n    },\n    \"starring_actor\": {\n      \"type\": \"string\",\n      \"description\": \"The stage name of the actor who starred in the drama and is also a singer, actress, and presenter.\"\n    },\n    \"actor_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"full_name\": {\n          \"type\": \"string\",\n          \"description\": \"The full birth name of the actor.\"\n        },\n        \"stage_name\": {\n          \"type\": \"string\",\n          \"description\": \"The professional stage name of the actor.\"\n        },\n        \"occupations\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"A list of occupations held by the actor.\"\n        }\n      },\n      \"required\": [\n        \"full_name\",\n        \"stage_name\",\n        \"occupations\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"girl_group_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the South Korean girl group the actor is best known as a member of.\"\n    }\n  },\n  \"required\": [\n    \"drama_title\",\n    \"starring_actor\",\n    \"actor_details\",\n    \"girl_group_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "drama_title",
-    "starring_actor",
-    "actor_details",
-    "girl_group_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "drama_title": {
+        "type": "string",
+        "description": "The title of the South Korean television drama."
+      },
+      "starring_actor": {
+        "type": "string",
+        "description": "The stage name of the actor who starred in the drama and is also a singer, actress, and presenter."
+      },
+      "actor_details": {
+        "type": "object",
+        "properties": {
+          "full_name": {
+            "type": "string",
+            "description": "The full birth name of the actor."
+          },
+          "stage_name": {
+            "type": "string",
+            "description": "The professional stage name of the actor."
+          },
+          "occupations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of occupations held by the actor."
+          }
+        },
+        "required": [
+          "full_name",
+          "stage_name",
+          "occupations"
+        ],
+        "additionalProperties": false
+      },
+      "girl_group_name": {
+        "type": "string",
+        "description": "The name of the South Korean girl group the actor is best known as a member of."
+      }
+    },
+    "required": [
+      "drama_title",
+      "starring_actor",
+      "actor_details",
+      "girl_group_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

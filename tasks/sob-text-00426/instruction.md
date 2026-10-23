@@ -1,77 +1,54 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Hershey Community Center Building: Hershey Community Center Building is a historic building located at Hershey, Dauphin County, Pennsylvania.  It was designed by noted architect Paul Philippe Cret (1876-1945), under a general plan by Milton S. Hershey (1857-1945), and built in 1932-1933.  Plans for a community theater and center were originally drawn-up by C. Emlen Urban in 1915.  It is a five story building, encompassing 190,699 square feet.  It is shaped like a distended "E," with an open court in the front center and sun porches on three sides.  The building is faced in Indiana limestone.  The building houses a large theater, the Hershey Theatre (51,525 square feet) and small theater (5,535 square feet), along with a variety of recreational facilities including a gymnasium, swimming pool, game rooms, locker rooms, and showers.  The building also houses a library (6,640 square feet) and dormitories (15,970 square feet).
-
-Parkwood, Philadelphia: Parkwood is a neighborhood located in the Far Northeast section of Philadelphia, Pennsylvania, United States.  The neighborhood's boundaries include the Byberry East Industrial Park to the north and northwest, Poquessing Creek to the east, Knights Road to the southeast and Woodhaven Road to the southwest.  The neighborhood was developed by in the late 1950s as a planned residential community.  The predominant housing type is the brick row house.  The Parkwood Shopping Center is a local shopping destination, while the Philadelphia Mills mall is a regional shopping destination on Knights Road to the east of Parkwood's residential area.
-
-Forum (Kolkata): Forum Mall also known as Forum Courtyard is a shopping mall in the Bhowanipore area of Kolkata, India.  It was initially conceived as an office tower; 80% of the foundation was complete before it was converted into a mall.  Currently it covers 200,000 square feet of area and has 125,000 square feet of retail area, and was opened to the public with the launch of Shoppers' Stop.  Its opening was credited with turning its neighbourhood from a quiet residential area into an upmarket shopping destination.  It has been noted for its excellent layout and signage.  The mall is constructed and owned by Rahul Saraf, Chairman of SAPL.  The Mall also has a branch in Bhubaneswar named Forum Mart, and has a new addition in Howrah, Belur as Forum Rangoli Mall.
-
-Northpark Mall (Missouri): Northpark Mall is a super regional mall located in Joplin, Missouri.  The mall opened in 1972 with 600,000 square feet, and featured 60 stores, restaurants, and other services.  Today Northpark mall is 1,080,000 square feet, and features more than 100 inline tenants, including a food court and eight anchor stores JCPenney, Sears, two Macy's locations, Dunham's Sports, TJ Maxx, Vintage Stock, and Jo-Ann Fabrics and Crafts.  Northpark Mall is the largest mall in the Joplin region and serves a trade area of nearly 500,000 people.  Freeman hospital added a soft play area in the Macy's women's court in the summer of 2014.  The mall was also the temporary home of the 11th and 12th grades of Joplin High School until August 2014, when the new high school was completed.  Northpark Mall is managed by CBL & Associates Properties.
-
-Crossgates Mall: Crossgates Mall is a shopping mall located in the Albany suburb of Guilderland, New York.  The center opened on March 4, 1984, and in October 1994 underwent a large expansion that nearly doubled its size.  Crossgates has a gross leasable area of 1700000 sqft and features over 250 stores and restaurants as well as an 18-screen IMAX Regal Cinema theater.  The mall is anchored by Lord & Taylor, Macy's, JCPenney, Best Buy, Pottery Barn, Dick's Sporting Goods, Forever 21, and the Apple Store.
-
-LuLu International Shopping Mall: LuLu Mall, in the city of Kochi, Kerala, is the largest shopping mall in India.  It is one of the most visited places in Kerala.  Spanning 17 acre with a total built up area of 2.5 million square feet, the mall has a total retal space of 1.7 million square feet.  The mall was opened on March 2013.  It contains more than 215 outlets, including food courts, restaurants, family entertainment zones, a multiplex, ice skating rink and bowling alley.  The estimated cost for this project is more than 16 billion or US$250 million.  The property is owned and managed by Lulu Group, which has extensive business in retail, hospitality, real estate etc.  Lulu Mall in Kochi was their maiden retail venture in India.  The group has planned to construct malls in Thiruvananthapuram,Lucknow, Chennai, Bengaluru and Hyderabad.  The group's second and third giant malls are under construction in Thiruvananthapuram, Kerala and Lucknow, Uttar Pradesh.
-
-Westmere, New York: Westmere is a hamlet in the town of Guilderland, Albany County, New York.  Since the 1970 Census a census-designated place (CDP) has been established with the name of Westmere for tabulating the population of what the census has defined as the boundaries for Westmere.  The population was 7,284 at the 2010 census.  It is a suburb of the neighboring city of Albany.  U.S. Route 20 (Western Avenue) bisects the community and is the major thoroughfare and main street.  Along Western Avenue are numerous strip malls, shopping plazas, and commercial buildings, with residential use on the side streets to the north and south.  Crossgates Mall, the Capital District's largest shopping mall, is in Westmere's northeastern corner.
-
-Deptford Mall: The Deptford Mall is a major shopping destination in Deptford Township, Gloucester County, New Jersey, United States.  It is the seventh largest mall in the state of New Jersey.  Owned and managed by Macerich, it is the county's only indoor regional shopping center.  The mall is anchored by Boscov's, JCPenney, Macy's and Sears and has over 160 stores.  The mall is located off of Route 42 and Route 55 at County Route 544.  The mall has a gross leasable area of 1040000 sqft , making it the largest mall in the Gloucester County region, and placing it in the top eleven among the largest shopping malls in New Jersey.
-
-Al Aali Shopping Complex: Al Aali Shopping Complex is a shopping mall situated in Manama, Bahrain.  It is one of the largest malls in the country, covering a space 52,000 square meters.  Al Aali Shopping Complex is established as a high-end shopping destination with plush environs, a sophisticated atmosphere and an abundance of premium labels.  The 52,000 square meter complex lives up to its commitment to tradition, fine dining, and timeless luxury.  The mall hosts an annual art festival named "Al Aali Art Festival", which aims to celebrate various forms of art by both established and upcoming artists.
-
-Crossgates Commons: Crossgates Commons is a large shopping plaza in Albany, New York.  It is owned by The Pyramid Company.  Crossgates Commons is located on Washington Avenue Extension and is roughly across the street from Crossgates Mall, which is also managed by Pyramid.  The shopping center has a split-level design with stores on the upper level accessible from the front and stores on the lower level accessible from the rear.  It opened in 1994 and has 1300000 sqft of retail space.  Although Crossgates Commons is relatively young, it has already undergone an expansion, and some locations have had high turnover rates.
-
-Question: Which shopping destination, managed by The Pyramid Company, has more square feet, Crossgates Commons, or Crossgates Mall?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "manager": {
-      "type": "string",
-      "description": "The company that manages both shopping destinations."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "shopping_destinations": {
-      "type": "array",
-      "description": "Details of the shopping destinations being compared.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the shopping destination."
+    {
+      "role": "user",
+      "content": "Context:\nHershey Community Center Building: Hershey Community Center Building is a historic building located at Hershey, Dauphin County, Pennsylvania.  It was designed by noted architect Paul Philippe Cret (1876-1945), under a general plan by Milton S. Hershey (1857-1945), and built in 1932-1933.  Plans for a community theater and center were originally drawn-up by C. Emlen Urban in 1915.  It is a five story building, encompassing 190,699 square feet.  It is shaped like a distended \"E,\" with an open court in the front center and sun porches on three sides.  The building is faced in Indiana limestone.  The building houses a large theater, the Hershey Theatre (51,525 square feet) and small theater (5,535 square feet), along with a variety of recreational facilities including a gymnasium, swimming pool, game rooms, locker rooms, and showers.  The building also houses a library (6,640 square feet) and dormitories (15,970 square feet).\n\nParkwood, Philadelphia: Parkwood is a neighborhood located in the Far Northeast section of Philadelphia, Pennsylvania, United States.  The neighborhood's boundaries include the Byberry East Industrial Park to the north and northwest, Poquessing Creek to the east, Knights Road to the southeast and Woodhaven Road to the southwest.  The neighborhood was developed by in the late 1950s as a planned residential community.  The predominant housing type is the brick row house.  The Parkwood Shopping Center is a local shopping destination, while the Philadelphia Mills mall is a regional shopping destination on Knights Road to the east of Parkwood's residential area.\n\nForum (Kolkata): Forum Mall also known as Forum Courtyard is a shopping mall in the Bhowanipore area of Kolkata, India.  It was initially conceived as an office tower; 80% of the foundation was complete before it was converted into a mall.  Currently it covers 200,000 square feet of area and has 125,000 square feet of retail area, and was opened to the public with the launch of Shoppers' Stop.  Its opening was credited with turning its neighbourhood from a quiet residential area into an upmarket shopping destination.  It has been noted for its excellent layout and signage.  The mall is constructed and owned by Rahul Saraf, Chairman of SAPL.  The Mall also has a branch in Bhubaneswar named Forum Mart, and has a new addition in Howrah, Belur as Forum Rangoli Mall.\n\nNorthpark Mall (Missouri): Northpark Mall is a super regional mall located in Joplin, Missouri.  The mall opened in 1972 with 600,000 square feet, and featured 60 stores, restaurants, and other services.  Today Northpark mall is 1,080,000 square feet, and features more than 100 inline tenants, including a food court and eight anchor stores JCPenney, Sears, two Macy's locations, Dunham's Sports, TJ Maxx, Vintage Stock, and Jo-Ann Fabrics and Crafts.  Northpark Mall is the largest mall in the Joplin region and serves a trade area of nearly 500,000 people.  Freeman hospital added a soft play area in the Macy's women's court in the summer of 2014.  The mall was also the temporary home of the 11th and 12th grades of Joplin High School until August 2014, when the new high school was completed.  Northpark Mall is managed by CBL & Associates Properties.\n\nCrossgates Mall: Crossgates Mall is a shopping mall located in the Albany suburb of Guilderland, New York.  The center opened on March 4, 1984, and in October 1994 underwent a large expansion that nearly doubled its size.  Crossgates has a gross leasable area of 1700000 sqft and features over 250 stores and restaurants as well as an 18-screen IMAX Regal Cinema theater.  The mall is anchored by Lord & Taylor, Macy's, JCPenney, Best Buy, Pottery Barn, Dick's Sporting Goods, Forever 21, and the Apple Store.\n\nLuLu International Shopping Mall: LuLu Mall, in the city of Kochi, Kerala, is the largest shopping mall in India.  It is one of the most visited places in Kerala.  Spanning 17 acre with a total built up area of 2.5 million square feet, the mall has a total retal space of 1.7 million square feet.  The mall was opened on March 2013.  It contains more than 215 outlets, including food courts, restaurants, family entertainment zones, a multiplex, ice skating rink and bowling alley.  The estimated cost for this project is more than 16 billion or US$250 million.  The property is owned and managed by Lulu Group, which has extensive business in retail, hospitality, real estate etc.  Lulu Mall in Kochi was their maiden retail venture in India.  The group has planned to construct malls in Thiruvananthapuram,Lucknow, Chennai, Bengaluru and Hyderabad.  The group's second and third giant malls are under construction in Thiruvananthapuram, Kerala and Lucknow, Uttar Pradesh.\n\nWestmere, New York: Westmere is a hamlet in the town of Guilderland, Albany County, New York.  Since the 1970 Census a census-designated place (CDP) has been established with the name of Westmere for tabulating the population of what the census has defined as the boundaries for Westmere.  The population was 7,284 at the 2010 census.  It is a suburb of the neighboring city of Albany.  U.S. Route 20 (Western Avenue) bisects the community and is the major thoroughfare and main street.  Along Western Avenue are numerous strip malls, shopping plazas, and commercial buildings, with residential use on the side streets to the north and south.  Crossgates Mall, the Capital District's largest shopping mall, is in Westmere's northeastern corner.\n\nDeptford Mall: The Deptford Mall is a major shopping destination in Deptford Township, Gloucester County, New Jersey, United States.  It is the seventh largest mall in the state of New Jersey.  Owned and managed by Macerich, it is the county's only indoor regional shopping center.  The mall is anchored by Boscov's, JCPenney, Macy's and Sears and has over 160 stores.  The mall is located off of Route 42 and Route 55 at County Route 544.  The mall has a gross leasable area of 1040000 sqft , making it the largest mall in the Gloucester County region, and placing it in the top eleven among the largest shopping malls in New Jersey.\n\nAl Aali Shopping Complex: Al Aali Shopping Complex is a shopping mall situated in Manama, Bahrain.  It is one of the largest malls in the country, covering a space 52,000 square meters.  Al Aali Shopping Complex is established as a high-end shopping destination with plush environs, a sophisticated atmosphere and an abundance of premium labels.  The 52,000 square meter complex lives up to its commitment to tradition, fine dining, and timeless luxury.  The mall hosts an annual art festival named \"Al Aali Art Festival\", which aims to celebrate various forms of art by both established and upcoming artists.\n\nCrossgates Commons: Crossgates Commons is a large shopping plaza in Albany, New York.  It is owned by The Pyramid Company.  Crossgates Commons is located on Washington Avenue Extension and is roughly across the street from Crossgates Mall, which is also managed by Pyramid.  The shopping center has a split-level design with stores on the upper level accessible from the front and stores on the lower level accessible from the rear.  It opened in 1994 and has 1300000 sqft of retail space.  Although Crossgates Commons is relatively young, it has already undergone an expansion, and some locations have had high turnover rates.\n\nQuestion: Which shopping destination, managed by The Pyramid Company, has more square feet, Crossgates Commons, or Crossgates Mall?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"manager\": {\n      \"type\": \"string\",\n      \"description\": \"The company that manages both shopping destinations.\"\n    },\n    \"shopping_destinations\": {\n      \"type\": \"array\",\n      \"description\": \"Details of the shopping destinations being compared.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the shopping destination.\"\n          },\n          \"total_square_feet\": {\n            \"type\": \"integer\",\n            \"description\": \"The total square footage of the shopping destination.\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"total_square_feet\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"comparison_result\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the shopping destination with more square feet.\"\n    }\n  },\n  \"required\": [\n    \"manager\",\n    \"shopping_destinations\",\n    \"comparison_result\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "manager": {
+        "type": "string",
+        "description": "The company that manages both shopping destinations."
+      },
+      "shopping_destinations": {
+        "type": "array",
+        "description": "Details of the shopping destinations being compared.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the shopping destination."
+            },
+            "total_square_feet": {
+              "type": "integer",
+              "description": "The total square footage of the shopping destination."
+            }
           },
-          "total_square_feet": {
-            "type": "integer",
-            "description": "The total square footage of the shopping destination."
-          }
-        },
-        "required": [
-          "name",
-          "total_square_feet"
-        ],
-        "additionalProperties": false
+          "required": [
+            "name",
+            "total_square_feet"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "comparison_result": {
+        "type": "string",
+        "description": "The name of the shopping destination with more square feet."
       }
     },
-    "comparison_result": {
-      "type": "string",
-      "description": "The name of the shopping destination with more square feet."
-    }
+    "required": [
+      "manager",
+      "shopping_destinations",
+      "comparison_result"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "manager",
-    "shopping_destinations",
-    "comparison_result"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Seyi Shay: Deborah Oluwaseyi Joshua (born Oluwaseyi Odedere; 21 December 1985), professionally known by her stage name Seyi Shay (pronounced Shay-yee Shay), is a Nigerian-based singer and songwriter.  She wrote and produced three songs for the soundtrack to Konami's video game, "" (2005).  She also wrote "You Will See", a song that was included on Melanie C's third studio album, "Beautiful Intentions" (2005).  Shay wrote "White Lies", a song from Chip's "Transition" album.  In 2008, she became the lead singer for the now defunct pop girl group From Above.  The group signed a recording deal with Sony's Columbia Records and was managed by Mathew Knowles' Music World Entertainment company.  In November 2013, she signed an endorsement deal with telecommunications service provider Etisalat.  In July 2015, Shay signed a record deal with Island Records.  She released her debut studio album, "Seyi or Shay", in November 2015.  It was supported by the promotional singles "Irawo", "Ragga Ragga", and "Chairman".
-
-Julia Benjamin: Julia Benjamin (born February 21, 1957) is a retired American film and television actress of the 1960s, 1970s and 1980s.  She is best remembered for her character role as Susie Baxter, the daughter of Steve and Barbara Baxter and the first cousin of Harold "Sport" Baxter on the 1960s sitcom "Hazel."  Benjamin was also well known for her roles in the movies "Mr. and Mrs. Bo Jo Jones" and "The Jordan Chance."  Benjamin's career began at the age of eight on "Hazel" in 1965.  "Hazel" was a sitcom that first aired in 1961 on NBC.  The series centered on the Baxter family.  The family included husband George Baxter, (Don DeFore), his wife Dorothy Baxter, (Whitney Blake) and their only child, son Harold "Sport" Baxter, (Bobby Buntrock).  At the end of the 1964-65 television season, NBC canceled the series.  CBS decided to pick it up for a fifth season.  CBS cast Ray Fulmer, Lynn Borden, and Benjamin as George Baxter's brother Steve, his wife Barbara and their daughter Susie.  The premise of the fifth season was that George and Dorothy had to move to the Middle East as part of a job promotion.  So, Hazel and Harold moved in with Steve, Barbara, and Susie.  The series was cancelled by CBS airing its last episode on April 11, 1966.  It was never picked up again.  After Hazel, Benjamin would only get roles in a limited few number of movies and guest starring roles on television.  After Hazel went off the air, Benjamin would have only five roles in movies and television.  Her television credits include three guest starring roles on the television shows "My Three Sons," "The Rockford Files" and "Riptide."  Her movie credits include two TV movies; "Mr. and Mrs. Bo Jo Jones" (1971), and "The Jordan Chance" (1978).  "Riptide" was Benjamin's last acting appearance.  She has not acted in anything since.
-
-The Frighteners (The Avengers): The Frighteners is the fifteenth episode of the first series of the 1960s cult British spy-fi television series "The Avengers", starring Ian Hendry, Patrick Macnee and Ingrid Hafner, and guest starring Willoughby Goddard, Philip Gilbert, Stratford Johns, Doris Hare, Neil Wilson and Philip Locke.  It originally aired on ABC on 27 May 1961.  For many years it was the only full episode which remained from the first series until the earlier episode "Girl on the Trapeze" was discovered in 2001 and the later episode "Tunnel of Fear" in 2016.  "The Frightners" was directed by Robert Fuest, designed by James Goddard, and written by Berkely Mather.
-
-Charles Esten: Charles Esten Puskar III (born September 9, 1965), known professionally as Chip Esten and Charles Esten, is an American actor, singer and comedian.
-
-Dot da Genius: Oladipo Omishore (born 17 July 1986), professionally known as Dot da Genius, is an American record producer and mixing engineer from Brooklyn, New York City.  He is perhaps best known for producing "Day 'n' Nite", the debut single of longtime friend and collaborator, American recording artist Kid Cudi, with whom he later formed a rock band with known as WZRD.  Engaged in various music production ventures, Dot da Genius has also signed a publishing deal with Universal Music Group, launched his own label HeadBanga Muzik Group and has since employed a mix engineer (Jay Powell).  He has also collaborated with several prominent artists in the music industry, such as King Chip and Jhené Aiko, among others.
-
-Pervis Atkins: Pervis R. Atkins, Jr. (born November 24, 1935 in Ruston, Louisiana) is a former American football player.  He graduated from Oakland Technical High School in 1953, and played college football at New Mexico State University, where he was a halfback, flanker, and placekicker.  In 1959, he became the first of four straight New Mexico State University players to lead the nation in rushing yardage with 130 carries for 971 yards.  He played professionally in the American Football League for the Oakland Raiders in 1965 and 1966.  He had previously played for the Los Angeles Rams and Washington Redskins.  On April 30, 2009, Atkins was elected to the College Football Hall of Fame.  He is also an actor and producer, known for the films The Longest Yard (1974), Delvecchio (1976) and The Desperate Miles (1975), and a guest starring role in an episode of The Six Million Dollar Man.  He currently resides in Los Angeles.
-
-Ellery Queen: Daniel Nathan, professionally known as Frederic Dannay (October 20, 1905 – September 3, 1982), and Emanuel Benjamin Lepofsky, professionally known as Manfred Bennington Lee (January 11, 1905 – April 3, 1971), were American cousins from Brooklyn, New York, who wrote, edited, and anthologized detective fiction under the pseudonym of Ellery Queen.  The writers' main fictional character, whom they also named Ellery Queen, is a mystery writer and amateur detective who helps his father, Richard Queen, a New York City police inspector, solve baffling murders.
-
-St. Valentine's Day (30 Rock): "St. Valentine's Day" is the eleventh episode of the third season, and forty-seventh episode overall, of the American television comedy series "30 Rock".  It was written by co-executive producer Jack Burditt and series' creator, executive producer and lead actress Tina Fey.  The director of this episode was series producer Don Scardino.  The episode originally aired on the National Broadcasting Company (NBC) in the United States on February 12, 2009.  Guest stars in "St. Valentine's Day" include Marylouise Burke, Jon Hamm, Salma Hayek, Zak Orth, Laila Robins, Maria Thayer, and Allie Trimm.
-
-John Abbott (actor): John Albert Chamberlain Kefford (5 June 1905 – 24 May 1996) was an English character actor professionally known as John Abbott.  His memorable roles include the invalid Frederick Fairlie in the 1948 film "The Woman in White" and the pacifist Ayelborne in the "" episode "Errand of Mercy".  He also played Sesmar on an episode of "Lost in Space", "The Dream Monster", in 1966.  Abbott was known as a Shakespearean actor.
-
-Valentine's Day (The Office): "Valentine's Day" is the sixteenth episode of the second season of the American comedy television series "The Office", and the show's twenty-second episode overall.  Written by Michael Schur and directed by Greg Daniels, the episode first aired in the United States on February 9, 2006 on NBC.  The episode guest stars Craig Anton, Andy Buckley, Charles Esten, and Conan O'Brien as himself.
-
-Question: Who wrote "The Office" episode, "The Valentine", guest starring the actor professionally known as Chip Esten?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "episode_title": {
-      "type": "string",
-      "description": "The title of the episode."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "series_name": {
-      "type": "string",
-      "description": "The name of the television series."
-    },
-    "writer": {
-      "type": "string",
-      "description": "The writer of the episode."
-    },
-    "guest_star_name": {
-      "type": "string",
-      "description": "The name of the guest star mentioned in the question."
+    {
+      "role": "user",
+      "content": "Context:\nSeyi Shay: Deborah Oluwaseyi Joshua (born Oluwaseyi Odedere; 21 December 1985), professionally known by her stage name Seyi Shay (pronounced Shay-yee Shay), is a Nigerian-based singer and songwriter.  She wrote and produced three songs for the soundtrack to Konami's video game, \"\" (2005).  She also wrote \"You Will See\", a song that was included on Melanie C's third studio album, \"Beautiful Intentions\" (2005).  Shay wrote \"White Lies\", a song from Chip's \"Transition\" album.  In 2008, she became the lead singer for the now defunct pop girl group From Above.  The group signed a recording deal with Sony's Columbia Records and was managed by Mathew Knowles' Music World Entertainment company.  In November 2013, she signed an endorsement deal with telecommunications service provider Etisalat.  In July 2015, Shay signed a record deal with Island Records.  She released her debut studio album, \"Seyi or Shay\", in November 2015.  It was supported by the promotional singles \"Irawo\", \"Ragga Ragga\", and \"Chairman\".\n\nJulia Benjamin: Julia Benjamin (born February 21, 1957) is a retired American film and television actress of the 1960s, 1970s and 1980s.  She is best remembered for her character role as Susie Baxter, the daughter of Steve and Barbara Baxter and the first cousin of Harold \"Sport\" Baxter on the 1960s sitcom \"Hazel.\"  Benjamin was also well known for her roles in the movies \"Mr. and Mrs. Bo Jo Jones\" and \"The Jordan Chance.\"  Benjamin's career began at the age of eight on \"Hazel\" in 1965.  \"Hazel\" was a sitcom that first aired in 1961 on NBC.  The series centered on the Baxter family.  The family included husband George Baxter, (Don DeFore), his wife Dorothy Baxter, (Whitney Blake) and their only child, son Harold \"Sport\" Baxter, (Bobby Buntrock).  At the end of the 1964-65 television season, NBC canceled the series.  CBS decided to pick it up for a fifth season.  CBS cast Ray Fulmer, Lynn Borden, and Benjamin as George Baxter's brother Steve, his wife Barbara and their daughter Susie.  The premise of the fifth season was that George and Dorothy had to move to the Middle East as part of a job promotion.  So, Hazel and Harold moved in with Steve, Barbara, and Susie.  The series was cancelled by CBS airing its last episode on April 11, 1966.  It was never picked up again.  After Hazel, Benjamin would only get roles in a limited few number of movies and guest starring roles on television.  After Hazel went off the air, Benjamin would have only five roles in movies and television.  Her television credits include three guest starring roles on the television shows \"My Three Sons,\" \"The Rockford Files\" and \"Riptide.\"  Her movie credits include two TV movies; \"Mr. and Mrs. Bo Jo Jones\" (1971), and \"The Jordan Chance\" (1978).  \"Riptide\" was Benjamin's last acting appearance.  She has not acted in anything since.\n\nThe Frighteners (The Avengers): The Frighteners is the fifteenth episode of the first series of the 1960s cult British spy-fi television series \"The Avengers\", starring Ian Hendry, Patrick Macnee and Ingrid Hafner, and guest starring Willoughby Goddard, Philip Gilbert, Stratford Johns, Doris Hare, Neil Wilson and Philip Locke.  It originally aired on ABC on 27 May 1961.  For many years it was the only full episode which remained from the first series until the earlier episode \"Girl on the Trapeze\" was discovered in 2001 and the later episode \"Tunnel of Fear\" in 2016.  \"The Frightners\" was directed by Robert Fuest, designed by James Goddard, and written by Berkely Mather.\n\nCharles Esten: Charles Esten Puskar III (born September 9, 1965), known professionally as Chip Esten and Charles Esten, is an American actor, singer and comedian.\n\nDot da Genius: Oladipo Omishore (born 17 July 1986), professionally known as Dot da Genius, is an American record producer and mixing engineer from Brooklyn, New York City.  He is perhaps best known for producing \"Day 'n' Nite\", the debut single of longtime friend and collaborator, American recording artist Kid Cudi, with whom he later formed a rock band with known as WZRD.  Engaged in various music production ventures, Dot da Genius has also signed a publishing deal with Universal Music Group, launched his own label HeadBanga Muzik Group and has since employed a mix engineer (Jay Powell).  He has also collaborated with several prominent artists in the music industry, such as King Chip and Jhené Aiko, among others.\n\nPervis Atkins: Pervis R. Atkins, Jr. (born November 24, 1935 in Ruston, Louisiana) is a former American football player.  He graduated from Oakland Technical High School in 1953, and played college football at New Mexico State University, where he was a halfback, flanker, and placekicker.  In 1959, he became the first of four straight New Mexico State University players to lead the nation in rushing yardage with 130 carries for 971 yards.  He played professionally in the American Football League for the Oakland Raiders in 1965 and 1966.  He had previously played for the Los Angeles Rams and Washington Redskins.  On April 30, 2009, Atkins was elected to the College Football Hall of Fame.  He is also an actor and producer, known for the films The Longest Yard (1974), Delvecchio (1976) and The Desperate Miles (1975), and a guest starring role in an episode of The Six Million Dollar Man.  He currently resides in Los Angeles.\n\nEllery Queen: Daniel Nathan, professionally known as Frederic Dannay (October 20, 1905 – September 3, 1982), and Emanuel Benjamin Lepofsky, professionally known as Manfred Bennington Lee (January 11, 1905 – April 3, 1971), were American cousins from Brooklyn, New York, who wrote, edited, and anthologized detective fiction under the pseudonym of Ellery Queen.  The writers' main fictional character, whom they also named Ellery Queen, is a mystery writer and amateur detective who helps his father, Richard Queen, a New York City police inspector, solve baffling murders.\n\nSt. Valentine's Day (30 Rock): \"St. Valentine's Day\" is the eleventh episode of the third season, and forty-seventh episode overall, of the American television comedy series \"30 Rock\".  It was written by co-executive producer Jack Burditt and series' creator, executive producer and lead actress Tina Fey.  The director of this episode was series producer Don Scardino.  The episode originally aired on the National Broadcasting Company (NBC) in the United States on February 12, 2009.  Guest stars in \"St. Valentine's Day\" include Marylouise Burke, Jon Hamm, Salma Hayek, Zak Orth, Laila Robins, Maria Thayer, and Allie Trimm.\n\nJohn Abbott (actor): John Albert Chamberlain Kefford (5 June 1905 – 24 May 1996) was an English character actor professionally known as John Abbott.  His memorable roles include the invalid Frederick Fairlie in the 1948 film \"The Woman in White\" and the pacifist Ayelborne in the \"\" episode \"Errand of Mercy\".  He also played Sesmar on an episode of \"Lost in Space\", \"The Dream Monster\", in 1966.  Abbott was known as a Shakespearean actor.\n\nValentine's Day (The Office): \"Valentine's Day\" is the sixteenth episode of the second season of the American comedy television series \"The Office\", and the show's twenty-second episode overall.  Written by Michael Schur and directed by Greg Daniels, the episode first aired in the United States on February 9, 2006 on NBC.  The episode guest stars Craig Anton, Andy Buckley, Charles Esten, and Conan O'Brien as himself.\n\nQuestion: Who wrote \"The Office\" episode, \"The Valentine\", guest starring the actor professionally known as Chip Esten?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"episode_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the episode.\"\n    },\n    \"series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the television series.\"\n    },\n    \"writer\": {\n      \"type\": \"string\",\n      \"description\": \"The writer of the episode.\"\n    },\n    \"guest_star_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the guest star mentioned in the question.\"\n    }\n  },\n  \"required\": [\n    \"episode_title\",\n    \"series_name\",\n    \"writer\",\n    \"guest_star_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "episode_title",
-    "series_name",
-    "writer",
-    "guest_star_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "episode_title": {
+        "type": "string",
+        "description": "The title of the episode."
+      },
+      "series_name": {
+        "type": "string",
+        "description": "The name of the television series."
+      },
+      "writer": {
+        "type": "string",
+        "description": "The writer of the episode."
+      },
+      "guest_star_name": {
+        "type": "string",
+        "description": "The name of the guest star mentioned in the question."
+      }
+    },
+    "required": [
+      "episode_title",
+      "series_name",
+      "writer",
+      "guest_star_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

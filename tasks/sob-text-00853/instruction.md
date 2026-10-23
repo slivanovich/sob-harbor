@@ -1,62 +1,39 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-B. Vittalacharya: B. Vithalacharya or B. Vittalacharya (18 January 1920 – 28 May 1999) was an Indian film director and producer known for his works in Telugu cinema, and Kannada cinema.  He was known as Jaanapada Brahma in the Telugu film arena.  Vittalacharya formed his film production company "Vittal Productions," which produced and the first film directed by him, "Rajya Lakshmi".  In 1954, he produced and directed "Kanyadhanam," a revolutionary film for that time.  Wishing to remake the same in Telugu, he moved to Madras and settled there till his death.  After making two more Kannada movies, he concentrated on producing and directing only Telugu and Tamil movies.  He also directed movies for other producers.  He directed a total of 19 movies of Sri.  N. T. Rama Rao, the leading hero of Andhra Pradesh at that time.  Though he did not get any awards, most of his films were box office successes and he was fondly called "Jaanapada Brahma" and "Maayaajala Mannan" by his fans.  He was well known for the visual effects shown in most of his movies.
-
-Vani Viswanath: Vani Viswanath (born 13 May 1971) is an Indian film actress.  She has acted in Malayalam, Tamil, Hindi, Telugu and few Kannada movies she is planning to join in telugu desam party in andhrapradesh .  Vani won the Kerala State Film Award for Second Best Actress for her performance in "Susanna" directed by T. V. Chandran.  She was termed as Mollywood's "Action Queen".
-
-Brinda Parekh: Brinda Parekh is an Indian film actress and model.  She has acted in South Indian films and has also done item numbers in Tamil, Telugu, Kannada and Hindi films.  She has acted in 4 movies in Tamil, several other movies in Telugu and Kannada and 3 Hindi movies.
-
-Sharath Lohitashwa: Sharath Lohithaswa Born (April 14 , 1983) (Kannada: ಶರತ್ ಲೋಹಿತಾಶ್ವ ) is an Indian film and stage actor and the son of Kannada artist Lohithaswa.  Educated in Bangalore and originally rooted as a theatre artist, he has performed in television series including Chidambara Rahasya (scripted by Late Poornachandra Tejaswi directed by Girish Karnad) broadcast in DD Chandana and Kichchu (directed by K.M. Chaitanya) in ETV Kannada.  He has several Kannada films to his credit and has earned a good name as one of the fine actors in Kannada cinema.  His roles in "Aa Dinagalu" (2007), "Sanju Weds Geetha" (2011) and "Bheema Theeradalli" (2012) are well known across Karnataka.  He played several kinds of roles in Kannada movies.  He is noticed in the South Indian film industry, mainly for his villainous roles.
-
-Keerthi Reddy: Keerthi Reddy is a former Indian film actress.  She has acted in Hindi, Tamil, Telugu and Kannada movies.
-
-Brahma (2014 film): Brahma (Kannada: ಬ್ರಹ್ಮ ) is a 2014 Indian historical drama action film directed by R. Chandru and produced by Manjunath Babu.  The film was simultaneously made in Kannada and Telugu and subsequently dubbed into Tamil.  The film stars Upendra, playing dual roles, and Pranitha Subhash in the lead roles, while actors Nassar, Rahul Dev and Shayaji Shinde play other prominent roles.  The film spanning four generations, from the 16th to the 21st century, features an original soundtrack by Gurukiran.  It's Karnataka Distribution rights have been sold out for a record price of 150 million.  Brahma is one of the most expensive Kannada movies of all time.  The film opened to an overwhelming response from the audience as well as the critics and got a grand opening at the Box Office by collecting a Record-Breaking 97.5 million in its first weekend by releasing in a record 276 screens and 1076 shows all over Karnataka.  It was labeled as an out an out commercial action entertainer with all the elements of keeping the audience entertained, particularly in the second half.  The bilingual movie is now all set to release in Telugu language in March.  Brahma completed 50 days in a Grand fashion in 35 theatres making 2 Million even on the 50th day.  The film was declared a blockbuster at the box office.  It completed 75 Days.  The film was dubbed in Hindi as "The Real Leader- Brahma".
-
-Rakul Preet Singh: Rakul Preet Singh (born 10 October 1990) is an Indian film actress and model who predominantly works in the Telugu film industry.  She has also appeared in a few Tamil, Hindi, and Kannada movies.
-
-Spyder (film): Spyder is a 2017 Indian bilingual spy thriller film written and directed by AR Murugadoss simultaneously shot in Telugu and Tamil languages.  Produced by N. V. Prasad, and Tagore Madhu, the film features Mahesh Babu and Rakul Preet Singh in the lead roles.  Harris Jayaraj is the music director and Santosh Sivan is the cinematographer for the film.
-
-Anant Nag: Anant Nagarkatte (born 4 September 1948), popularly known as Anant Nag, is an actor from Karnataka, India.  Reputed for his natural, under-playing style of acting, Ananth has carved a niche in Kannada filmdom. Kannada cinema .  In addition to Kannada movies, he has acted in Marathi, Tamil, Malayalam, Telugu and Hindi movies. <br> He has also acted in Malgudi Days, directed by his younger brother Shankar Nag based on the stories by R. K. Narayan.  He is fluent in Kannada, Konkani, Marathi, Hindi.  He is a recipient of six Filmfare Awards South and five Karnataka State Film Awards for Best Actor.
-
-Advani Lakshmi Devi: Advani Lakshmi Devi(Not to be confused with M.N Lakshmi Devi - They are two different artistes), is a veteran Kannada film actress.  She has played a variety of roles such as heroine, vamp, mother, grandmother in hundreds of Kannada movies over the last 50 years.  Her role in Kannada Movies Gandhada Gudi and Srinivasa Kalyana as mother (male role played by Dr. Rajkumar) is much remembered.  She is the mother of veteran actress Roopadevi who acted in many Kannada movies with Dr. Raj Kumar such as Haalu Jenu, Samayada Gombe and Yarivanu.  Dr.Rajkumar holds the distinction of having played hero and son's role with her.  Dr.Rajkumar holds the distinction of having played the hero to both Roopadevi(in 3 movies) and her mother Advani Lakshmi Devi(in "Sri Ramanjaneya Yuddha").  Lakshmi Devi recently honoured with Dr. Rajkumar lifetime achievement award 2016 by the state government of Karnataka.
-
-Question: Which Indian film actress has appeared in the movie Spyder as well as a few Tamil, Hindi, and Kannada movies?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actress_name": {
-      "type": "string",
-      "description": "The name of the Indian film actress."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "featured_movie": {
-      "type": "string",
-      "description": "The title of the movie she appeared in, as specified in the question."
-    },
-    "other_language_films": {
-      "type": "array",
-      "description": "A list of other film languages/industries the actress has worked in, as mentioned in the context.",
-      "items": {
-        "type": "string"
-      }
+    {
+      "role": "user",
+      "content": "Context:\nB. Vittalacharya: B. Vithalacharya or B. Vittalacharya (18 January 1920 – 28 May 1999) was an Indian film director and producer known for his works in Telugu cinema, and Kannada cinema.  He was known as Jaanapada Brahma in the Telugu film arena.  Vittalacharya formed his film production company \"Vittal Productions,\" which produced and the first film directed by him, \"Rajya Lakshmi\".  In 1954, he produced and directed \"Kanyadhanam,\" a revolutionary film for that time.  Wishing to remake the same in Telugu, he moved to Madras and settled there till his death.  After making two more Kannada movies, he concentrated on producing and directing only Telugu and Tamil movies.  He also directed movies for other producers.  He directed a total of 19 movies of Sri.  N. T. Rama Rao, the leading hero of Andhra Pradesh at that time.  Though he did not get any awards, most of his films were box office successes and he was fondly called \"Jaanapada Brahma\" and \"Maayaajala Mannan\" by his fans.  He was well known for the visual effects shown in most of his movies.\n\nVani Viswanath: Vani Viswanath (born 13 May 1971) is an Indian film actress.  She has acted in Malayalam, Tamil, Hindi, Telugu and few Kannada movies she is planning to join in telugu desam party in andhrapradesh .  Vani won the Kerala State Film Award for Second Best Actress for her performance in \"Susanna\" directed by T. V. Chandran.  She was termed as Mollywood's \"Action Queen\".\n\nBrinda Parekh: Brinda Parekh is an Indian film actress and model.  She has acted in South Indian films and has also done item numbers in Tamil, Telugu, Kannada and Hindi films.  She has acted in 4 movies in Tamil, several other movies in Telugu and Kannada and 3 Hindi movies.\n\nSharath Lohitashwa: Sharath Lohithaswa Born (April 14 , 1983) (Kannada: ಶರತ್ ಲೋಹಿತಾಶ್ವ ) is an Indian film and stage actor and the son of Kannada artist Lohithaswa.  Educated in Bangalore and originally rooted as a theatre artist, he has performed in television series including Chidambara Rahasya (scripted by Late Poornachandra Tejaswi directed by Girish Karnad) broadcast in DD Chandana and Kichchu (directed by K.M. Chaitanya) in ETV Kannada.  He has several Kannada films to his credit and has earned a good name as one of the fine actors in Kannada cinema.  His roles in \"Aa Dinagalu\" (2007), \"Sanju Weds Geetha\" (2011) and \"Bheema Theeradalli\" (2012) are well known across Karnataka.  He played several kinds of roles in Kannada movies.  He is noticed in the South Indian film industry, mainly for his villainous roles.\n\nKeerthi Reddy: Keerthi Reddy is a former Indian film actress.  She has acted in Hindi, Tamil, Telugu and Kannada movies.\n\nBrahma (2014 film): Brahma (Kannada: ಬ್ರಹ್ಮ ) is a 2014 Indian historical drama action film directed by R. Chandru and produced by Manjunath Babu.  The film was simultaneously made in Kannada and Telugu and subsequently dubbed into Tamil.  The film stars Upendra, playing dual roles, and Pranitha Subhash in the lead roles, while actors Nassar, Rahul Dev and Shayaji Shinde play other prominent roles.  The film spanning four generations, from the 16th to the 21st century, features an original soundtrack by Gurukiran.  It's Karnataka Distribution rights have been sold out for a record price of 150 million.  Brahma is one of the most expensive Kannada movies of all time.  The film opened to an overwhelming response from the audience as well as the critics and got a grand opening at the Box Office by collecting a Record-Breaking 97.5 million in its first weekend by releasing in a record 276 screens and 1076 shows all over Karnataka.  It was labeled as an out an out commercial action entertainer with all the elements of keeping the audience entertained, particularly in the second half.  The bilingual movie is now all set to release in Telugu language in March.  Brahma completed 50 days in a Grand fashion in 35 theatres making 2 Million even on the 50th day.  The film was declared a blockbuster at the box office.  It completed 75 Days.  The film was dubbed in Hindi as \"The Real Leader- Brahma\".\n\nRakul Preet Singh: Rakul Preet Singh (born 10 October 1990) is an Indian film actress and model who predominantly works in the Telugu film industry.  She has also appeared in a few Tamil, Hindi, and Kannada movies.\n\nSpyder (film): Spyder is a 2017 Indian bilingual spy thriller film written and directed by AR Murugadoss simultaneously shot in Telugu and Tamil languages.  Produced by N. V. Prasad, and Tagore Madhu, the film features Mahesh Babu and Rakul Preet Singh in the lead roles.  Harris Jayaraj is the music director and Santosh Sivan is the cinematographer for the film.\n\nAnant Nag: Anant Nagarkatte (born 4 September 1948), popularly known as Anant Nag, is an actor from Karnataka, India.  Reputed for his natural, under-playing style of acting, Ananth has carved a niche in Kannada filmdom. Kannada cinema .  In addition to Kannada movies, he has acted in Marathi, Tamil, Malayalam, Telugu and Hindi movies. <br> He has also acted in Malgudi Days, directed by his younger brother Shankar Nag based on the stories by R. K. Narayan.  He is fluent in Kannada, Konkani, Marathi, Hindi.  He is a recipient of six Filmfare Awards South and five Karnataka State Film Awards for Best Actor.\n\nAdvani Lakshmi Devi: Advani Lakshmi Devi(Not to be confused with M.N Lakshmi Devi - They are two different artistes), is a veteran Kannada film actress.  She has played a variety of roles such as heroine, vamp, mother, grandmother in hundreds of Kannada movies over the last 50 years.  Her role in Kannada Movies Gandhada Gudi and Srinivasa Kalyana as mother (male role played by Dr. Rajkumar) is much remembered.  She is the mother of veteran actress Roopadevi who acted in many Kannada movies with Dr. Raj Kumar such as Haalu Jenu, Samayada Gombe and Yarivanu.  Dr.Rajkumar holds the distinction of having played hero and son's role with her.  Dr.Rajkumar holds the distinction of having played the hero to both Roopadevi(in 3 movies) and her mother Advani Lakshmi Devi(in \"Sri Ramanjaneya Yuddha\").  Lakshmi Devi recently honoured with Dr. Rajkumar lifetime achievement award 2016 by the state government of Karnataka.\n\nQuestion: Which Indian film actress has appeared in the movie Spyder as well as a few Tamil, Hindi, and Kannada movies?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actress_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Indian film actress.\"\n    },\n    \"featured_movie\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the movie she appeared in, as specified in the question.\"\n    },\n    \"other_language_films\": {\n      \"type\": \"array\",\n      \"description\": \"A list of other film languages/industries the actress has worked in, as mentioned in the context.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    }\n  },\n  \"required\": [\n    \"actress_name\",\n    \"featured_movie\",\n    \"other_language_films\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actress_name",
-    "featured_movie",
-    "other_language_films"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actress_name": {
+        "type": "string",
+        "description": "The name of the Indian film actress."
+      },
+      "featured_movie": {
+        "type": "string",
+        "description": "The title of the movie she appeared in, as specified in the question."
+      },
+      "other_language_films": {
+        "type": "array",
+        "description": "A list of other film languages/industries the actress has worked in, as mentioned in the context.",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "actress_name",
+      "featured_movie",
+      "other_language_films"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

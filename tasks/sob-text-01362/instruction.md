@@ -1,87 +1,64 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Carrier Air Wing Six: Carrier Air Wing Six (CVW-6) was a United States Navy aircraft carrier air wing whose operational history spans from the middle of World War II to the end of the Cold War.  Established in 1943 as Carrier Air Group Seventeen (CVG-17), it would be re-designated several times during its establishment, including Carrier Air Group Six (CVG-6) as the second unit to be so designated.  The first Carrier Air Group Six served for just over two years during World War II, but drew on the history of the "Enterprise" Air Group established in 1938 and active in the early battles of the Pacific War, being disestablished after the first year of the conflict.  During its time in  , it was the Navy’s only carrier-based air group to carry out three complete tours of duty during World War II.
-
-106th Cavalry Regiment: The 106th Cavalry Regiment (formerly organized as a group) was a mechanized cavalry unit of the United States Army in World War II recognized for its outstanding action.  The group was organized in 1921 as part of the Illinois National Guard and during the Spanish–American War and World War I was known as the 1st Regiment Illinois Volunteer Cavalry.  It underwent a number of reorganizations before World War II.  Like other Guard units during the inter-war years, the 106th held monthly drills and yearly training.  Readiness for war in 1940 led to the mechanization of the unit and induction into Federal Service at Camp Livingston, Louisiana on 25 November 1940.
-
-Dutch Beauty Homer: The Dutch Beauty Homer is a breed of fancy pigeon.  Dutch Beauty Homers, along with other varieties of domesticated pigeons, are all descendants from the rock pigeon ("Columba livia").  This breed of pigeon is known for their characteristic grey feathers and red eyes.  They emit a cooing noise typical of most pigeon species.  The Dutch Beauty Homer is most famous for its use as mail carriers during World War II.  In the modern era, Dutch Beauty Homer pigeons are collected and most notably seen in bird beauty pageant shows, where they are judged on plumage, shape, and general health.
-
-Austen Lake: Austen Lake (May 23, 1895 – June 9, 1964) was an American author, war correspondent during World War II, and a sports and general columnist for the "Boston Evening Transcript" and the "Boston Record-American-Sunday Advertiser", in a career spanning more than 40 years until his death in 1964.  "Galley Slave" (1965) is an anthology of his columns including writings on his many visits to Ireland.  He played professional football for Buffalo and Philadelphia and had a tryout to play catcher for the New York Yankees before going to Europe during World War I where he served with the French Ambulance Corps before the United States entered the war.  When the United States entered the war, he became a member of the newly formed United States Tank Corps, earning five battle stars and becoming a life member of the "The Little Red Tank Society", a group formed by America's first tankers.  During the years of World War II, he was a war correspondent, covering the London Blitz, the Normandy invasion, and the liberation of Paris.  After D-Day, he went on to cover the exploits of the 4th Armored Division.  After the war, he covered the 1958 Lebanon crisis and wrote a popular series on Ireland.  During his college years, he was a football star at Lafayette College, afterwards studying portraiture at the École des Beaux-Arts in Paris.  Known throughout his life as "Duke", he died at the age of 69.
-
-Pip Torrens: Philip Dean "Pip" Torrens (born 2 June 1960) is an English actor.  He is known for his role as Tommy Lascelles in the Netflix drama "The Crown".  His film appearances include "Valiant", "The Iron Lady", "War Horse" and "".  In 2017, he joined the main cast of AMC's "Preacher".
-
-War pigeon: Homing pigeons have long played an important role in war.  Due to their homing ability, speed, and altitude, they were often used as military messengers.  Carrier pigeons of the Racing Homer breed were used to carry messages in World War I and World War II, and 32 such pigeons were presented with the Dickin Medal.  They ceased being used as of 1957.
-
-United States Army Pigeon Service: The United States Army Pigeon Service ( Signal Pigeon Corps) was a unit of the United States Army during World War I and World War II.  Their assignment was the training and usage of homing pigeons for communication and reconnaissance purposes.
-
-Sedan Cambrai Football Club: Sedan Cambrai Football Club are an Australian rules football club based in the Murraylands region of South Australia that were initially formed in 1922 as Cambrai Sedan, a merger between the Sedan Football Club and the Cambrai Football Club.  The club initially participated in the Murray Ranges Football Association, temporarily shifting for one season (1925) to the Murray River Football Association before returning and in 1930 were renamed to Sedan Cambrai.  In 1936 the club went into recess until after World War II, when in 1947 it reformed and joined the Barossa & Murray Valley Football Association, lasting for four seasons before going into recess again in 1951.  In 1955 the club reformed again and returned to the Barossa & Murray Valley Association.  Sedan Cambrai had a short affiliation with the Gawler and District Football Association's AII competition from 1957-1958 before shifting to the Torrens Valley Football Association AII competition in 1959.  When the TVFA merged into the new Hills Football League in 1967, Sedan Cambrai joined the Northern Division and then were placed in the Division 2 competition when the Hills League was restructured in 1972.  In 1975, Sedan Cambrai merged with the Mount Torrens Football Club to form the Mount Torrens Cambrai Football Club.  This merger would only last for ten years before the club split back into Sedan Cambrai and Mount Torrens in 1986.  The reformed Sedan Cambrai entered the Mid Murray Football Association and played in that competition until it disbanded at the end of the 2009 season when they returned to the Hills Football League Country Division (Division 2).  In 2015, Sedan Cambrai was voted out of the Hills Football League Division 2 competition by member clubs and were initially pushed into the C-Grade competition.  They were reinstated for the 2015 season before shifting to the Riverland Independent Football League in 2016.
-
-Valiant (film): Valiant is a 2005 British computer-animated film produced by Vanguard Animation and Odyssey Entertainment, and released by Entertainment Film Distributors in the United Kingdom on March 25, 2005 and by Walt Disney Pictures in the United States on August 19, 2005.  Set in May of the year 1944, it tells the story of a group of war pigeons during World War II.  Reviews of "Valiant" were mixed but largely negative.  The film is based on a story by Jordan Katz, George Webster and George Melrod, and inspired by true stories of hundreds of pigeons that helped the soldiers in the war.
-
-Richard Topus: Richard Topus (1924–2008) was an American pigeon enthusiast and business executive.  During World War II he trained war pigeons for the United States Army.
-
-Question: Which movie about a group of war pigeons in World War II was Pip Torrens in?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "movie_title": {
-      "type": "string",
-      "description": "The title of the movie."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "actor_involved": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the actor."
-        }
-      },
-      "required": [
-        "name"
-      ],
-      "additionalProperties": false
-    },
-    "movie_details": {
-      "type": "object",
-      "properties": {
-        "release_year": {
-          "type": "integer",
-          "description": "The year the movie was released."
-        },
-        "primary_subject": {
-          "type": "string",
-          "description": "The main subject or theme of the movie."
-        },
-        "historical_setting": {
-          "type": "string",
-          "description": "The historical period or war the movie is set in."
-        }
-      },
-      "required": [
-        "release_year",
-        "primary_subject",
-        "historical_setting"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nCarrier Air Wing Six: Carrier Air Wing Six (CVW-6) was a United States Navy aircraft carrier air wing whose operational history spans from the middle of World War II to the end of the Cold War.  Established in 1943 as Carrier Air Group Seventeen (CVG-17), it would be re-designated several times during its establishment, including Carrier Air Group Six (CVG-6) as the second unit to be so designated.  The first Carrier Air Group Six served for just over two years during World War II, but drew on the history of the \"Enterprise\" Air Group established in 1938 and active in the early battles of the Pacific War, being disestablished after the first year of the conflict.  During its time in  , it was the Navy’s only carrier-based air group to carry out three complete tours of duty during World War II.\n\n106th Cavalry Regiment: The 106th Cavalry Regiment (formerly organized as a group) was a mechanized cavalry unit of the United States Army in World War II recognized for its outstanding action.  The group was organized in 1921 as part of the Illinois National Guard and during the Spanish–American War and World War I was known as the 1st Regiment Illinois Volunteer Cavalry.  It underwent a number of reorganizations before World War II.  Like other Guard units during the inter-war years, the 106th held monthly drills and yearly training.  Readiness for war in 1940 led to the mechanization of the unit and induction into Federal Service at Camp Livingston, Louisiana on 25 November 1940.\n\nDutch Beauty Homer: The Dutch Beauty Homer is a breed of fancy pigeon.  Dutch Beauty Homers, along with other varieties of domesticated pigeons, are all descendants from the rock pigeon (\"Columba livia\").  This breed of pigeon is known for their characteristic grey feathers and red eyes.  They emit a cooing noise typical of most pigeon species.  The Dutch Beauty Homer is most famous for its use as mail carriers during World War II.  In the modern era, Dutch Beauty Homer pigeons are collected and most notably seen in bird beauty pageant shows, where they are judged on plumage, shape, and general health.\n\nAusten Lake: Austen Lake (May 23, 1895 – June 9, 1964) was an American author, war correspondent during World War II, and a sports and general columnist for the \"Boston Evening Transcript\" and the \"Boston Record-American-Sunday Advertiser\", in a career spanning more than 40 years until his death in 1964.  \"Galley Slave\" (1965) is an anthology of his columns including writings on his many visits to Ireland.  He played professional football for Buffalo and Philadelphia and had a tryout to play catcher for the New York Yankees before going to Europe during World War I where he served with the French Ambulance Corps before the United States entered the war.  When the United States entered the war, he became a member of the newly formed United States Tank Corps, earning five battle stars and becoming a life member of the \"The Little Red Tank Society\", a group formed by America's first tankers.  During the years of World War II, he was a war correspondent, covering the London Blitz, the Normandy invasion, and the liberation of Paris.  After D-Day, he went on to cover the exploits of the 4th Armored Division.  After the war, he covered the 1958 Lebanon crisis and wrote a popular series on Ireland.  During his college years, he was a football star at Lafayette College, afterwards studying portraiture at the École des Beaux-Arts in Paris.  Known throughout his life as \"Duke\", he died at the age of 69.\n\nPip Torrens: Philip Dean \"Pip\" Torrens (born 2 June 1960) is an English actor.  He is known for his role as Tommy Lascelles in the Netflix drama \"The Crown\".  His film appearances include \"Valiant\", \"The Iron Lady\", \"War Horse\" and \"\".  In 2017, he joined the main cast of AMC's \"Preacher\".\n\nWar pigeon: Homing pigeons have long played an important role in war.  Due to their homing ability, speed, and altitude, they were often used as military messengers.  Carrier pigeons of the Racing Homer breed were used to carry messages in World War I and World War II, and 32 such pigeons were presented with the Dickin Medal.  They ceased being used as of 1957.\n\nUnited States Army Pigeon Service: The United States Army Pigeon Service ( Signal Pigeon Corps) was a unit of the United States Army during World War I and World War II.  Their assignment was the training and usage of homing pigeons for communication and reconnaissance purposes.\n\nSedan Cambrai Football Club: Sedan Cambrai Football Club are an Australian rules football club based in the Murraylands region of South Australia that were initially formed in 1922 as Cambrai Sedan, a merger between the Sedan Football Club and the Cambrai Football Club.  The club initially participated in the Murray Ranges Football Association, temporarily shifting for one season (1925) to the Murray River Football Association before returning and in 1930 were renamed to Sedan Cambrai.  In 1936 the club went into recess until after World War II, when in 1947 it reformed and joined the Barossa & Murray Valley Football Association, lasting for four seasons before going into recess again in 1951.  In 1955 the club reformed again and returned to the Barossa & Murray Valley Association.  Sedan Cambrai had a short affiliation with the Gawler and District Football Association's AII competition from 1957-1958 before shifting to the Torrens Valley Football Association AII competition in 1959.  When the TVFA merged into the new Hills Football League in 1967, Sedan Cambrai joined the Northern Division and then were placed in the Division 2 competition when the Hills League was restructured in 1972.  In 1975, Sedan Cambrai merged with the Mount Torrens Football Club to form the Mount Torrens Cambrai Football Club.  This merger would only last for ten years before the club split back into Sedan Cambrai and Mount Torrens in 1986.  The reformed Sedan Cambrai entered the Mid Murray Football Association and played in that competition until it disbanded at the end of the 2009 season when they returned to the Hills Football League Country Division (Division 2).  In 2015, Sedan Cambrai was voted out of the Hills Football League Division 2 competition by member clubs and were initially pushed into the C-Grade competition.  They were reinstated for the 2015 season before shifting to the Riverland Independent Football League in 2016.\n\nValiant (film): Valiant is a 2005 British computer-animated film produced by Vanguard Animation and Odyssey Entertainment, and released by Entertainment Film Distributors in the United Kingdom on March 25, 2005 and by Walt Disney Pictures in the United States on August 19, 2005.  Set in May of the year 1944, it tells the story of a group of war pigeons during World War II.  Reviews of \"Valiant\" were mixed but largely negative.  The film is based on a story by Jordan Katz, George Webster and George Melrod, and inspired by true stories of hundreds of pigeons that helped the soldiers in the war.\n\nRichard Topus: Richard Topus (1924–2008) was an American pigeon enthusiast and business executive.  During World War II he trained war pigeons for the United States Army.\n\nQuestion: Which movie about a group of war pigeons in World War II was Pip Torrens in?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"movie_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the movie.\"\n    },\n    \"actor_involved\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the actor.\"\n        }\n      },\n      \"required\": [\n        \"name\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"movie_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"release_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the movie was released.\"\n        },\n        \"primary_subject\": {\n          \"type\": \"string\",\n          \"description\": \"The main subject or theme of the movie.\"\n        },\n        \"historical_setting\": {\n          \"type\": \"string\",\n          \"description\": \"The historical period or war the movie is set in.\"\n        }\n      },\n      \"required\": [\n        \"release_year\",\n        \"primary_subject\",\n        \"historical_setting\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"movie_title\",\n    \"actor_involved\",\n    \"movie_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "movie_title",
-    "actor_involved",
-    "movie_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "movie_title": {
+        "type": "string",
+        "description": "The title of the movie."
+      },
+      "actor_involved": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the actor."
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "movie_details": {
+        "type": "object",
+        "properties": {
+          "release_year": {
+            "type": "integer",
+            "description": "The year the movie was released."
+          },
+          "primary_subject": {
+            "type": "string",
+            "description": "The main subject or theme of the movie."
+          },
+          "historical_setting": {
+            "type": "string",
+            "description": "The historical period or war the movie is set in."
+          }
+        },
+        "required": [
+          "release_year",
+          "primary_subject",
+          "historical_setting"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "movie_title",
+      "actor_involved",
+      "movie_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

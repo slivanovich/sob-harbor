@@ -1,97 +1,74 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-David Schmoeller: David Schmoeller (born December 8, 1947) is an American film director, producer and screenwriter.  He is notable for directing several full-length theatrical horror films including "Tourist Trap" (1979), "The Seduction" (1982), "Puppet Master" (1989), "Catacombs" (1988), "Netherworld" (1992) and "Crawlspace" (1986) starring Klaus Kinski.  In May, 2012, Schmoeller was awarded a Lifetime Achievement Award by the Fantaspoa Film Festival in Porto Alegre, Brazil where his new feature film, "2 Little Monsters" (2012) was screened along with his other notable films.
-
-Drop Dead Fred: Drop Dead Fred is a 1991 British-American black comedy fantasy film directed by Ate de Jong, produced by PolyGram Filmed Entertainment and Working Title Films and released and distributed by New Line Cinema.  The film was promoted as a lighthearted children's film, but there are notable adult themes and gags, and some elements of black comedy, emotional abuse, mental illness, bizarre visual and make-up effects, and profanity.
-
-Richard III (1912 film): Richard III is a 55-minute film adaptation of Shakespeare's play, starring Frederick Warde as the title character.  The 1912 film, a French/U. S. international co-production, was produced by Film d'Art and released through the independent states rights film distribution system.  The film was co-directed by French film director André Calmettes, who had previously directed the films "The Assassination of the Duke of Guise" (1908), "La Tosca" (1909 – based on the play by Victorien Sardou), and "La Dame aux Camélias" (1910) with Sarah Bernhardt.  "Richard III" was adapted from Shakespeare's original and Colley Cibber's 1699 adaptation by playwright James Keane, who also served as co-director and actor (playing Richmond).  The film was shot around Westchester, New York and City Island Long Island Sound.
-
-Supernatural (U.S. TV series): Supernatural is an American fantasy horror television series created by Eric Kripke.  It was first broadcast on September 13, 2005, on The WB, and subsequently became part of successor The CW's lineup.  Starring Jared Padalecki as Sam Winchester and Jensen Ackles as Dean Winchester, the series follows the two brothers as they hunt demons, ghosts, monsters, and other supernatural beings.  The series is produced by Warner Bros.  Television, in association with Wonderland Sound and Vision.  Along with Kripke, executive producers have been McG, Robert Singer, Phil Sgriccia, Sera Gamble, Jeremy Carver, John Shiban, Ben Edlund and Adam Glass.  Former executive producer and director Kim Manners died of lung cancer during production of the fourth season.
-
-Fred Claus: Fred Claus is a 2007 American fantasy comedy family film directed by David Dobkin, written by Dan Fogelman and Jessie Nelson, and starring Vince Vaughn and Paul Giamatti.  The film was released on November 9, 2007 in the US and later released in the UK on November 30, 2007 by Warner Bros.  Pictures.  It is loosely based on the poem "A legend of Santa and his brother Fred" written by Donald Henkel.
-
-Matt Malloy: Matt Malloy (born January 12, 1963) is an American actor and producer who has appeared extensively on television, film, and radio.  Malloy's break-out performance was his co-starring role alongside Aaron Eckhart and Stacy Edwards in the 1997 black comedy movie, "In the Company of Men", which he co-executive produced.  He also co-starred in the Amazon comedy series "Alpha House" as Mormon GOP Senator Louis Laffer from Nevada.
-
-Freaked: Freaked is a 1993 American science fantasy black comedy film directed by Tom Stern and Alex Winter, and written by Stern, Winter and Tim Burns.  All three were involved in the short-lived MTV sketch comedy show "The Idiot Box", and "Freaked" retains the same brand of surrealistic and absurdist humor as seen in the show.
-
-Little Monsters: Little Monsters is a 1989 American fantasy black comedy film starring Fred Savage as Brian Stevenson, a sixth-grader who has recently moved to a new town, and Howie Mandel as Maurice, the monster under the bed.
-
-Fred Savage: Frederick Aaron "Fred" Savage (born July 9, 1976) is an American actor, television director, and producer.  He is best known for his role as Kevin Arnold in the American television series "The Wonder Years", which ran from 1988 to 1993.  He has earned several awards and nominations, such as People's Choice Awards and Young Artist Awards.
-
-Little Monsters (disambiguation): Little Monsters is a 1989 comedy-drama film starring Fred Savage and Howie Mandel.
-
-Question: Little Monsters, is released in which year, American fantasy black comedy film, starring Frederick Aaron "Fred" Savage, an American actor, television director, and producer?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the film was released."
-    },
-    "genres": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of genres the film belongs to."
-    },
-    "country_of_origin": {
-      "type": "string",
-      "description": "The country where the film was produced."
-    },
-    "main_actors": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "actor_name": {
-            "type": "string",
-            "description": "The name of the actor."
-          },
-          "role_in_film": {
-            "type": "string",
-            "description": "The character played by the actor in the film."
-          },
-          "professions": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "description": "A list of professions associated with the actor."
-          }
-        },
-        "required": [
-          "actor_name",
-          "role_in_film"
-        ],
-        "additionalProperties": false
-      },
-      "description": "A list of the main actors in the film and their roles."
+    {
+      "role": "user",
+      "content": "Context:\nDavid Schmoeller: David Schmoeller (born December 8, 1947) is an American film director, producer and screenwriter.  He is notable for directing several full-length theatrical horror films including \"Tourist Trap\" (1979), \"The Seduction\" (1982), \"Puppet Master\" (1989), \"Catacombs\" (1988), \"Netherworld\" (1992) and \"Crawlspace\" (1986) starring Klaus Kinski.  In May, 2012, Schmoeller was awarded a Lifetime Achievement Award by the Fantaspoa Film Festival in Porto Alegre, Brazil where his new feature film, \"2 Little Monsters\" (2012) was screened along with his other notable films.\n\nDrop Dead Fred: Drop Dead Fred is a 1991 British-American black comedy fantasy film directed by Ate de Jong, produced by PolyGram Filmed Entertainment and Working Title Films and released and distributed by New Line Cinema.  The film was promoted as a lighthearted children's film, but there are notable adult themes and gags, and some elements of black comedy, emotional abuse, mental illness, bizarre visual and make-up effects, and profanity.\n\nRichard III (1912 film): Richard III is a 55-minute film adaptation of Shakespeare's play, starring Frederick Warde as the title character.  The 1912 film, a French/U. S. international co-production, was produced by Film d'Art and released through the independent states rights film distribution system.  The film was co-directed by French film director André Calmettes, who had previously directed the films \"The Assassination of the Duke of Guise\" (1908), \"La Tosca\" (1909 – based on the play by Victorien Sardou), and \"La Dame aux Camélias\" (1910) with Sarah Bernhardt.  \"Richard III\" was adapted from Shakespeare's original and Colley Cibber's 1699 adaptation by playwright James Keane, who also served as co-director and actor (playing Richmond).  The film was shot around Westchester, New York and City Island Long Island Sound.\n\nSupernatural (U.S. TV series): Supernatural is an American fantasy horror television series created by Eric Kripke.  It was first broadcast on September 13, 2005, on The WB, and subsequently became part of successor The CW's lineup.  Starring Jared Padalecki as Sam Winchester and Jensen Ackles as Dean Winchester, the series follows the two brothers as they hunt demons, ghosts, monsters, and other supernatural beings.  The series is produced by Warner Bros.  Television, in association with Wonderland Sound and Vision.  Along with Kripke, executive producers have been McG, Robert Singer, Phil Sgriccia, Sera Gamble, Jeremy Carver, John Shiban, Ben Edlund and Adam Glass.  Former executive producer and director Kim Manners died of lung cancer during production of the fourth season.\n\nFred Claus: Fred Claus is a 2007 American fantasy comedy family film directed by David Dobkin, written by Dan Fogelman and Jessie Nelson, and starring Vince Vaughn and Paul Giamatti.  The film was released on November 9, 2007 in the US and later released in the UK on November 30, 2007 by Warner Bros.  Pictures.  It is loosely based on the poem \"A legend of Santa and his brother Fred\" written by Donald Henkel.\n\nMatt Malloy: Matt Malloy (born January 12, 1963) is an American actor and producer who has appeared extensively on television, film, and radio.  Malloy's break-out performance was his co-starring role alongside Aaron Eckhart and Stacy Edwards in the 1997 black comedy movie, \"In the Company of Men\", which he co-executive produced.  He also co-starred in the Amazon comedy series \"Alpha House\" as Mormon GOP Senator Louis Laffer from Nevada.\n\nFreaked: Freaked is a 1993 American science fantasy black comedy film directed by Tom Stern and Alex Winter, and written by Stern, Winter and Tim Burns.  All three were involved in the short-lived MTV sketch comedy show \"The Idiot Box\", and \"Freaked\" retains the same brand of surrealistic and absurdist humor as seen in the show.\n\nLittle Monsters: Little Monsters is a 1989 American fantasy black comedy film starring Fred Savage as Brian Stevenson, a sixth-grader who has recently moved to a new town, and Howie Mandel as Maurice, the monster under the bed.\n\nFred Savage: Frederick Aaron \"Fred\" Savage (born July 9, 1976) is an American actor, television director, and producer.  He is best known for his role as Kevin Arnold in the American television series \"The Wonder Years\", which ran from 1988 to 1993.  He has earned several awards and nominations, such as People's Choice Awards and Young Artist Awards.\n\nLittle Monsters (disambiguation): Little Monsters is a 1989 comedy-drama film starring Fred Savage and Howie Mandel.\n\nQuestion: Little Monsters, is released in which year, American fantasy black comedy film, starring Frederick Aaron \"Fred\" Savage, an American actor, television director, and producer?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the film was released.\"\n    },\n    \"genres\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of genres the film belongs to.\"\n    },\n    \"country_of_origin\": {\n      \"type\": \"string\",\n      \"description\": \"The country where the film was produced.\"\n    },\n    \"main_actors\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"actor_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the actor.\"\n          },\n          \"role_in_film\": {\n            \"type\": \"string\",\n            \"description\": \"The character played by the actor in the film.\"\n          },\n          \"professions\": {\n            \"type\": \"array\",\n            \"items\": {\n              \"type\": \"string\"\n            },\n            \"description\": \"A list of professions associated with the actor.\"\n          }\n        },\n        \"required\": [\n          \"actor_name\",\n          \"role_in_film\"\n        ],\n        \"additionalProperties\": false\n      },\n      \"description\": \"A list of the main actors in the film and their roles.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"release_year\",\n    \"genres\",\n    \"country_of_origin\",\n    \"main_actors\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "release_year",
-    "genres",
-    "country_of_origin",
-    "main_actors"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the film was released."
+      },
+      "genres": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of genres the film belongs to."
+      },
+      "country_of_origin": {
+        "type": "string",
+        "description": "The country where the film was produced."
+      },
+      "main_actors": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "actor_name": {
+              "type": "string",
+              "description": "The name of the actor."
+            },
+            "role_in_film": {
+              "type": "string",
+              "description": "The character played by the actor in the film."
+            },
+            "professions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "A list of professions associated with the actor."
+            }
+          },
+          "required": [
+            "actor_name",
+            "role_in_film"
+          ],
+          "additionalProperties": false
+        },
+        "description": "A list of the main actors in the film and their roles."
+      }
+    },
+    "required": [
+      "film_title",
+      "release_year",
+      "genres",
+      "country_of_origin",
+      "main_actors"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

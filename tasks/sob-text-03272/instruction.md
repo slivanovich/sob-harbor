@@ -1,72 +1,49 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Scan Command: Jurassic Park: Scan Command: Jurassic Park (also known as Jurassic Park: Scan Command) is a 2001 fighting strategy video game developed and published by Knowledge Adventure for Microsoft Windows.  The game is based on the 2001 film, "Jurassic Park III", and was considered unique for its use of a barcode scanner accessory known as the Scan Command.
-
-Barcode reader: A barcode reader (or barcode scanner) is an electronic device that can read and output printed barcodes to a computer.  Like a flatbed scanner, it consists of a light source, a lens and a light sensor translating optical impulses into electrical ones.  Additionally, nearly all barcode readers contain "decoder" circuitry analyzing the barcode's image data provided by the sensor and sending the barcode's content to the scanner's output port.
-
-Digital single-lens reflex camera: A digital single-lens reflex camera (also called a digital SLR or DSLR) is a digital camera that combines the optics and the mechanisms of a single-lens reflex camera with a digital imaging sensor, as opposed to photographic film.  The reflex design scheme is the primary difference between a DSLR and other digital cameras.  In the reflex design, light travels through the lens, then to a mirror that alternates to send the image to either the viewfinder or the image sensor.  The traditional alternative would be to have a viewfinder with its own lens, hence the term "single lens" for this design.  By using only one lens, the viewfinder of a DSLR presents an image that will not differ substantially from what is captured by the camera's sensor.  A DSLR differs from non-reflex single-lens digital cameras in that the viewfinder presents a direct optical view through the lens, rather than being captured by the camera's image sensor and displayed by a digital screen.
-
-Fiber optic sensor: A fiber optic sensor is a sensor that uses optical fiber either as the sensing element ("intrinsic sensors"), or as a means of relaying signals from a remote sensor to the electronics that process the signals ("extrinsic sensors").  Fibers have many uses in remote sensing.  Depending on the application, fiber may be used because of its small size, or because no electrical power is needed at the remote location, or because many sensors can be multiplexed along the length of a fiber by using light wavelength shift for each sensor, or by sensing the time delay as light passes along the fiber through each sensor.  Time delay can be determined using a device such as an optical time-domain reflectometer and wavelength shift can be calculated using an instrument implementing optical frequency domain reflectometry.
-
-Lens hood: In photography, a lens hood or lens shade is a device used on the front end of a lens to block the Sun or other light source(s) to prevent glare and lens flare.  Lens hoods may also be used to protect the lens from scratches and the elements without having to put on a lens cover.
-
-Whisk broom scanner: A whisk broom or spotlight sensor (also known as an across track scanner) is a technology for obtaining satellite images with optical cameras.  It is used for passive remote sensing from space.  In a whisk broom sensor, a mirror scans across the satellite’s path (ground track), reflecting light into a single detector which collects data one pixel at a time.  The moving parts make this type of sensor expensive and more prone to wearing out.  Whisk broom scanners have the effect of stopping the scan, and focusing the detector on one part of the swath width.  Because the detector is only focused on a subsection of the full swath at any time, it typically has a higher resolution than a push broom design for the same size of scan swath.
-
-Nano-FTIR: Nano-FTIR (nanoscale Fourier transform infrared spectroscopy) is a scanning probe technique that can be considered as a combination of two techniques: Fourier transform infrared spectroscopy (FTIR) and scattering-type Scanning Near-field Optical Microscopy (s-SNOM).  As s-SNOM, nano-FTIR is based on atomic force microscopy (AFM), where a sharp tip is illuminated by an external light source and the tip-scattered light (typically back-scattered) is detected as a function of tip position.  A typical nano-FTIR setup thus consists of an Atomic Force Microscope, a broadband infrared light source used for tip illumination, and a Michelson interferometer acting as Fourier transform spectrometer.  In nano-FTIR, the sample stage is placed in one of the interferometer arms, which allows for recording both amplitude and phase of the detected light (unlike conventional FTIR that normally does not yield phase information).  Scanning the tip allows for performing hyperspectral imaging (i.e. complete spectrum at every pixel of the scanned area) with nanoscale spatial resolution determined by the tip apex size.  The use of broadband infrared sources enables the acquisition of continuous spectra, which is a distinctive feature of nano-FTIR compared to s-SNOM.
-
-Relay lens: In optics, a relay lens is a lens or lens group that inverts an image and extends the optical tube.  Relay lenses are found in endoscopes and periscopes for the purpose of extending the system, and before eyepieces for the purpose of inverting an image.  They may be made of one or more conventional lenses or achromatic doublets, or a long cylindrical gradient-index of refraction lens (a GRIN lens).  Relay lenses operate by producing intermediate planes of focus.  For example, an objective lens such as an SLR lens produces an image plane where the image sensor would usually go.  If you place a lens with focal length "f" a distance 2"f" from that image plane and then put an image sensor 2"f" beyond the lens, that lens will relay the first image to the second with 1:1 magnification (see thin lens formula with object distance formula_1, the image distance is calculated to formula_2).  Ideally, this second image plane will be identical to the first, so you could put a sensor there and record exactly the same image.  If a longer distance is needed, this can be repeated.
-
-Ricoh GXR: The Ricoh GXR is a compact digital camera first announced by Ricoh Company, Ltd, Tokyo on November 10, 2009.  Unlike conventional cameras which either have a fixed lens and sensor or interchangeable lens and a fixed sensor, the GXR takes interchangeable units, each housing a lens, sensor and image processing engine.  This allows each unit to have these features optimised to one another and a specific task, whereas with conventional interchangeable lens cameras, each different lens must use the same sensor and engine.  The sealed units also prevent dust from reaching the sensor, which can be a problem with other cameras where the sensor is exposed whilst a lens is being changed.  A significant disadvantage of this system is the extra cost involved in having to buy a whole new sensor with every new lens.
-
-Optical dilatometer: An optical dilatometer is a non-contact device able to measure thermal expansions or sintering kinetics of any kind of materials, unlike traditional push rod dilatometer, it can push up to the dilatometric softening of the specimen.  It is a device for measuring changes in the dimensions of a specimen, optically, the achieved resolution can result in greater values than those of a conventional pushrod dilatometer.  A monochromatic light source, such as a laser, illuminates the specimen.  Some of the light is reflected by the specimen and interferes with the incoming light, creating optical interference fringes.  As the specimen contracts or expands, there is a proportional movement of the interference fringes, which can be measured using a camera system.  The measurement resolution is determined by the wavelength of the light, and is typically 0.5 μm for blue light.  Optical dilatometers are used to measure thermal expansion.
-
-Question: The game Scan Command: Jurassic Park was considered unique for its use of which device that consists of a light source, a lens and a light sensor translating optical impulses into electrical ones?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "game_name": {
-      "type": "string",
-      "description": "The name of the video game."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "unique_device_name": {
-      "type": "string",
-      "description": "The name of the device that made the game unique."
-    },
-    "device_category": {
-      "type": "string",
-      "description": "The general category of the unique device."
-    },
-    "device_components": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of the main components of the device."
-    },
-    "device_primary_function": {
-      "type": "string",
-      "description": "The primary function of the device related to optical impulses."
+    {
+      "role": "user",
+      "content": "Context:\nScan Command: Jurassic Park: Scan Command: Jurassic Park (also known as Jurassic Park: Scan Command) is a 2001 fighting strategy video game developed and published by Knowledge Adventure for Microsoft Windows.  The game is based on the 2001 film, \"Jurassic Park III\", and was considered unique for its use of a barcode scanner accessory known as the Scan Command.\n\nBarcode reader: A barcode reader (or barcode scanner) is an electronic device that can read and output printed barcodes to a computer.  Like a flatbed scanner, it consists of a light source, a lens and a light sensor translating optical impulses into electrical ones.  Additionally, nearly all barcode readers contain \"decoder\" circuitry analyzing the barcode's image data provided by the sensor and sending the barcode's content to the scanner's output port.\n\nDigital single-lens reflex camera: A digital single-lens reflex camera (also called a digital SLR or DSLR) is a digital camera that combines the optics and the mechanisms of a single-lens reflex camera with a digital imaging sensor, as opposed to photographic film.  The reflex design scheme is the primary difference between a DSLR and other digital cameras.  In the reflex design, light travels through the lens, then to a mirror that alternates to send the image to either the viewfinder or the image sensor.  The traditional alternative would be to have a viewfinder with its own lens, hence the term \"single lens\" for this design.  By using only one lens, the viewfinder of a DSLR presents an image that will not differ substantially from what is captured by the camera's sensor.  A DSLR differs from non-reflex single-lens digital cameras in that the viewfinder presents a direct optical view through the lens, rather than being captured by the camera's image sensor and displayed by a digital screen.\n\nFiber optic sensor: A fiber optic sensor is a sensor that uses optical fiber either as the sensing element (\"intrinsic sensors\"), or as a means of relaying signals from a remote sensor to the electronics that process the signals (\"extrinsic sensors\").  Fibers have many uses in remote sensing.  Depending on the application, fiber may be used because of its small size, or because no electrical power is needed at the remote location, or because many sensors can be multiplexed along the length of a fiber by using light wavelength shift for each sensor, or by sensing the time delay as light passes along the fiber through each sensor.  Time delay can be determined using a device such as an optical time-domain reflectometer and wavelength shift can be calculated using an instrument implementing optical frequency domain reflectometry.\n\nLens hood: In photography, a lens hood or lens shade is a device used on the front end of a lens to block the Sun or other light source(s) to prevent glare and lens flare.  Lens hoods may also be used to protect the lens from scratches and the elements without having to put on a lens cover.\n\nWhisk broom scanner: A whisk broom or spotlight sensor (also known as an across track scanner) is a technology for obtaining satellite images with optical cameras.  It is used for passive remote sensing from space.  In a whisk broom sensor, a mirror scans across the satellite’s path (ground track), reflecting light into a single detector which collects data one pixel at a time.  The moving parts make this type of sensor expensive and more prone to wearing out.  Whisk broom scanners have the effect of stopping the scan, and focusing the detector on one part of the swath width.  Because the detector is only focused on a subsection of the full swath at any time, it typically has a higher resolution than a push broom design for the same size of scan swath.\n\nNano-FTIR: Nano-FTIR (nanoscale Fourier transform infrared spectroscopy) is a scanning probe technique that can be considered as a combination of two techniques: Fourier transform infrared spectroscopy (FTIR) and scattering-type Scanning Near-field Optical Microscopy (s-SNOM).  As s-SNOM, nano-FTIR is based on atomic force microscopy (AFM), where a sharp tip is illuminated by an external light source and the tip-scattered light (typically back-scattered) is detected as a function of tip position.  A typical nano-FTIR setup thus consists of an Atomic Force Microscope, a broadband infrared light source used for tip illumination, and a Michelson interferometer acting as Fourier transform spectrometer.  In nano-FTIR, the sample stage is placed in one of the interferometer arms, which allows for recording both amplitude and phase of the detected light (unlike conventional FTIR that normally does not yield phase information).  Scanning the tip allows for performing hyperspectral imaging (i.e. complete spectrum at every pixel of the scanned area) with nanoscale spatial resolution determined by the tip apex size.  The use of broadband infrared sources enables the acquisition of continuous spectra, which is a distinctive feature of nano-FTIR compared to s-SNOM.\n\nRelay lens: In optics, a relay lens is a lens or lens group that inverts an image and extends the optical tube.  Relay lenses are found in endoscopes and periscopes for the purpose of extending the system, and before eyepieces for the purpose of inverting an image.  They may be made of one or more conventional lenses or achromatic doublets, or a long cylindrical gradient-index of refraction lens (a GRIN lens).  Relay lenses operate by producing intermediate planes of focus.  For example, an objective lens such as an SLR lens produces an image plane where the image sensor would usually go.  If you place a lens with focal length \"f\" a distance 2\"f\" from that image plane and then put an image sensor 2\"f\" beyond the lens, that lens will relay the first image to the second with 1:1 magnification (see thin lens formula with object distance formula_1, the image distance is calculated to formula_2).  Ideally, this second image plane will be identical to the first, so you could put a sensor there and record exactly the same image.  If a longer distance is needed, this can be repeated.\n\nRicoh GXR: The Ricoh GXR is a compact digital camera first announced by Ricoh Company, Ltd, Tokyo on November 10, 2009.  Unlike conventional cameras which either have a fixed lens and sensor or interchangeable lens and a fixed sensor, the GXR takes interchangeable units, each housing a lens, sensor and image processing engine.  This allows each unit to have these features optimised to one another and a specific task, whereas with conventional interchangeable lens cameras, each different lens must use the same sensor and engine.  The sealed units also prevent dust from reaching the sensor, which can be a problem with other cameras where the sensor is exposed whilst a lens is being changed.  A significant disadvantage of this system is the extra cost involved in having to buy a whole new sensor with every new lens.\n\nOptical dilatometer: An optical dilatometer is a non-contact device able to measure thermal expansions or sintering kinetics of any kind of materials, unlike traditional push rod dilatometer, it can push up to the dilatometric softening of the specimen.  It is a device for measuring changes in the dimensions of a specimen, optically, the achieved resolution can result in greater values than those of a conventional pushrod dilatometer.  A monochromatic light source, such as a laser, illuminates the specimen.  Some of the light is reflected by the specimen and interferes with the incoming light, creating optical interference fringes.  As the specimen contracts or expands, there is a proportional movement of the interference fringes, which can be measured using a camera system.  The measurement resolution is determined by the wavelength of the light, and is typically 0.5 μm for blue light.  Optical dilatometers are used to measure thermal expansion.\n\nQuestion: The game Scan Command: Jurassic Park was considered unique for its use of which device that consists of a light source, a lens and a light sensor translating optical impulses into electrical ones?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"game_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the video game.\"\n    },\n    \"unique_device_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the device that made the game unique.\"\n    },\n    \"device_category\": {\n      \"type\": \"string\",\n      \"description\": \"The general category of the unique device.\"\n    },\n    \"device_components\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of the main components of the device.\"\n    },\n    \"device_primary_function\": {\n      \"type\": \"string\",\n      \"description\": \"The primary function of the device related to optical impulses.\"\n    }\n  },\n  \"required\": [\n    \"game_name\",\n    \"unique_device_name\",\n    \"device_category\",\n    \"device_components\",\n    \"device_primary_function\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "game_name",
-    "unique_device_name",
-    "device_category",
-    "device_components",
-    "device_primary_function"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "game_name": {
+        "type": "string",
+        "description": "The name of the video game."
+      },
+      "unique_device_name": {
+        "type": "string",
+        "description": "The name of the device that made the game unique."
+      },
+      "device_category": {
+        "type": "string",
+        "description": "The general category of the unique device."
+      },
+      "device_components": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of the main components of the device."
+      },
+      "device_primary_function": {
+        "type": "string",
+        "description": "The primary function of the device related to optical impulses."
+      }
+    },
+    "required": [
+      "game_name",
+      "unique_device_name",
+      "device_category",
+      "device_components",
+      "device_primary_function"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

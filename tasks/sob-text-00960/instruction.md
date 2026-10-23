@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Jimmy King: Jimmy Hal King (born August 9, 1973) is an American retired professional basketball player who played in the NBA and other leagues.  He is most famous for his time spent on the famed University of Michigan Wolverines Fab Five along with Ray Jackson, Juwan Howard, Chris Webber, and Jalen Rose, who reached the 1992 and 1993 NCAA Men's Division I Basketball Championship games as freshmen and sophomores.  He played all four years at Michigan and averaged 15 points per game as a senior in 1995.
-
-Juwan Howard: Juwan Antonio Howard (born February 7, 1973) is an American retired professional basketball player who currently serves as an assistant coach for the Miami Heat of the National Basketball Association (NBA).  Howard formerly played for the Heat from 2010 until 2013.  A one-time All-Star and one-time All-NBA power forward, he began his NBA career as the fifth overall pick in the 1994 NBA draft, selected by the Washington Bullets.  Before he was drafted, he starred as an All-American on the Michigan Wolverines men's basketball team.  At Michigan he was part of the Fab Five recruiting class of 1991 that reached the finals of the National Collegiate Athletic Association (NCAA) Men's Division I Basketball Championship in 1992 and 1993.  Howard won his first NBA championship with Miami in the 2012 NBA Finals and his second NBA championship in the 2013 NBA Finals.
-
-2003–04 Orlando Magic season: The 2003–04 NBA season was the 15th season for the Orlando Magic in the National Basketball Association.  During the offseason, the Magic signed free agent Juwan Howard.  Injuries hamstrung the Magic from the start of the season as Grant Hill missed the entire season recovering from ankle surgery, while Pat Garrity was lost after just two games with a knee injury.  The Magic started the season with an 85–83 win on the road against the New York Knicks.  However, their season would go straight down right after as they lost their next 19 games costing head coach Doc Rivers his job.  With replacement Johnny Davis taking over, the Magic never recovered from their losing streak as they lost thirteen straight near the end of the season, finishing last place in the Atlantic Division with a league-worst 21–61 record, the franchise's worst record since 1991–92.
-
-Jalen Rose: Jalen Anthony Rose (born January 30, 1973) is a former American professional basketball player, current sports analyst for ESPN, and cofounder of the Jalen Rose Leadership Academy.  In college, he was a member of the University of Michigan Wolverines' "Fab Five" (along with Chris Webber, Juwan Howard, Jimmy King, and Ray Jackson) that reached the 1992 and 1993 NCAA Men's Division I Basketball Championship games as both freshmen and sophomores.  Rose played in the NBA for six teams, most notably alongside Reggie Miller on the Indiana Pacers teams that made three consecutive Eastern Conference finals, including the 2000 NBA Finals.  Rose was primarily a small forward; however, he sometimes played the role of a shooting guard.
-
-2000–01 Dallas Mavericks season: The 2000–01 NBA season was the Mavericks' 21st season in the National Basketball Association.  During the offseason, the Mavericks acquired Christian Laettner from the Detroit Pistons, and Howard Eisley from the Utah Jazz.  In their final season at the Reunion Arena, the Mavericks played their best basketball in a long time, playing above .500 for the entire season.  At midseason, they traded Laettner along with Hubert Davis to the Washington Wizards for Juwan Howard while signing free agent Vernon Maxwell, who was released by the Philadelphia 76ers.  Michael Finley was selected for the 2001 NBA All-Star Game, which was his second and final All-Star selection.  The Mavericks finished third in the Midwest Division with a 53–29 record, and made their first playoff appearance since the 1989–90 season, ending a ten-year playoff drought.
-
-1996–97 Miami Heat season: The 1996–97 NBA season was the ninth season for the Miami Heat in the National Basketball Association.  During the offseason, the Heat signed free agents Dan Majerle and P.J. Brown.  The team also signed All-Star forward Juwan Howard to a 7-year $100 million contract, but was voided by the league claiming that Miami exceeded their salary cap.  Howard then quickly re-signed with the Washington Bullets.
-
-The Fab Five (film): The Fab Five is a 2011 ESPN Films documentary about the 1990s Michigan Wolverines men's basketball players known collectively as the Fab Five: Chris Webber, Jalen Rose, Juwan Howard, Jimmy King, and Ray Jackson.  It chronicles the recruitment, glory years, notorious time-out fiasco, cultural impact and the scandal that followed these players who are described as iconic figures in the media.  The film originally aired on March 13, 2011 on a national broadcast on ESPN.  On its original airing, the film drew 2.7 million viewers, setting a record as the highest-rated ESPN documentary ever.
-
-1994–95 Washington Bullets season: The 1994–95 NBA season was the Bullets' 34th season in the National Basketball Association.  During the offseason, the Bullets acquired Scott Skiles from the Orlando Magic and hired Jim Lynam as head coach.  After drafting Juwan Howard with the fifth pick in the 1994 NBA draft, the Bullets traded Tom Gugliotta to the Golden State Warriors for Howard's former "Fab Five" teammate at Michigan Chris Webber.  However, after a 4–1 start to the season, the Bullets struggled as they lost 25 of their next 28 games.  At midseason, things got worse as Kevin Duckworth was suspended indefinitely after 40 games for not staying in physical condition, where he weighed over 310lbs.  The Bullets posted a 13-game losing streak near the end of the season, and finished last place in the Atlantic Division with a 21–61 record.  Webber averaged 20.1 points, 9.6 rebounds and 1.6 blocks per game.
-
-Fab Five (University of Michigan): The Fab Five were the 1991 University of Michigan men's basketball team recruiting class that is considered by many to be "the greatest class ever recruited."  The class consisted of Detroit natives Chris Webber (#1) and Jalen Rose (#5), Chicago native Juwan Howard (#3), and two recruits from Texas: Plano's Jimmy King (#9) and Austin's Ray Jackson (#84).  Four of the five were participants in the 1991 McDonald's All-American Game.  At first, only three of the freshmen started for the 1991–92 Michigan Wolverines men's basketball team.  Although they all played when the season opened on December 2, 1991 against the University of Detroit
-
-Cecil Gooding: Cecil Gooding (May 1883 – January 5, 1904) was an American football player.  Gooding attended Ann Arbor High School where he played football.  He enrolled as an engineering student at the University of Michigan in the fall of 1901.  He played on Michigan's All-Freshman football team in 1901 and became a backup at the guard position for the 1902 Michigan Wolverines football team.  As a junior, he was the starting right guard in all 12 games for the 1903 Michigan Wolverines football team that compiled a record of 11-0-1 and outscored its opponents 565-6.  The 1903 Michigan team has been recognized as national champions by the National Championship Foundation.  He contracted typhoid fever following a Thanksgiving Day game against the University of Minnesota in late November 1903.  It was believed that he contracted the illness from drinking the water while in Chicago for the game.  He died five weeks later.  He was the first Michigan Wolverines football player to die while attending the school.  Following his death, "The Michigan Alumnus" wrote: "He had striven conscientiously to perfect himself in the game and earned the respect of coaches, players and spectators.  He was a reliable, hard-working guard who never under any circumstances played anything but a sportsmanlike game.  He was a "man" off the field and on."  He was buried at York Charter Township, Washtenaw County, Michigan.
-
-Question: Juwan Howard was part of the Michigan team that had four participants in what 1991 exhibition?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "player_name": {
-      "type": "string",
-      "description": "The name of the player in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "team_name": {
-      "type": "string",
-      "description": "The name of the team the player was part of."
-    },
-    "exhibition_game": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the exhibition game."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year the exhibition game took place."
-        }
-      },
-      "required": [
-        "name",
-        "year"
-      ],
-      "additionalProperties": false
-    },
-    "number_of_team_participants": {
-      "type": "integer",
-      "description": "The number of participants from the specified team in the exhibition game."
+    {
+      "role": "user",
+      "content": "Context:\nJimmy King: Jimmy Hal King (born August 9, 1973) is an American retired professional basketball player who played in the NBA and other leagues.  He is most famous for his time spent on the famed University of Michigan Wolverines Fab Five along with Ray Jackson, Juwan Howard, Chris Webber, and Jalen Rose, who reached the 1992 and 1993 NCAA Men's Division I Basketball Championship games as freshmen and sophomores.  He played all four years at Michigan and averaged 15 points per game as a senior in 1995.\n\nJuwan Howard: Juwan Antonio Howard (born February 7, 1973) is an American retired professional basketball player who currently serves as an assistant coach for the Miami Heat of the National Basketball Association (NBA).  Howard formerly played for the Heat from 2010 until 2013.  A one-time All-Star and one-time All-NBA power forward, he began his NBA career as the fifth overall pick in the 1994 NBA draft, selected by the Washington Bullets.  Before he was drafted, he starred as an All-American on the Michigan Wolverines men's basketball team.  At Michigan he was part of the Fab Five recruiting class of 1991 that reached the finals of the National Collegiate Athletic Association (NCAA) Men's Division I Basketball Championship in 1992 and 1993.  Howard won his first NBA championship with Miami in the 2012 NBA Finals and his second NBA championship in the 2013 NBA Finals.\n\n2003–04 Orlando Magic season: The 2003–04 NBA season was the 15th season for the Orlando Magic in the National Basketball Association.  During the offseason, the Magic signed free agent Juwan Howard.  Injuries hamstrung the Magic from the start of the season as Grant Hill missed the entire season recovering from ankle surgery, while Pat Garrity was lost after just two games with a knee injury.  The Magic started the season with an 85–83 win on the road against the New York Knicks.  However, their season would go straight down right after as they lost their next 19 games costing head coach Doc Rivers his job.  With replacement Johnny Davis taking over, the Magic never recovered from their losing streak as they lost thirteen straight near the end of the season, finishing last place in the Atlantic Division with a league-worst 21–61 record, the franchise's worst record since 1991–92.\n\nJalen Rose: Jalen Anthony Rose (born January 30, 1973) is a former American professional basketball player, current sports analyst for ESPN, and cofounder of the Jalen Rose Leadership Academy.  In college, he was a member of the University of Michigan Wolverines' \"Fab Five\" (along with Chris Webber, Juwan Howard, Jimmy King, and Ray Jackson) that reached the 1992 and 1993 NCAA Men's Division I Basketball Championship games as both freshmen and sophomores.  Rose played in the NBA for six teams, most notably alongside Reggie Miller on the Indiana Pacers teams that made three consecutive Eastern Conference finals, including the 2000 NBA Finals.  Rose was primarily a small forward; however, he sometimes played the role of a shooting guard.\n\n2000–01 Dallas Mavericks season: The 2000–01 NBA season was the Mavericks' 21st season in the National Basketball Association.  During the offseason, the Mavericks acquired Christian Laettner from the Detroit Pistons, and Howard Eisley from the Utah Jazz.  In their final season at the Reunion Arena, the Mavericks played their best basketball in a long time, playing above .500 for the entire season.  At midseason, they traded Laettner along with Hubert Davis to the Washington Wizards for Juwan Howard while signing free agent Vernon Maxwell, who was released by the Philadelphia 76ers.  Michael Finley was selected for the 2001 NBA All-Star Game, which was his second and final All-Star selection.  The Mavericks finished third in the Midwest Division with a 53–29 record, and made their first playoff appearance since the 1989–90 season, ending a ten-year playoff drought.\n\n1996–97 Miami Heat season: The 1996–97 NBA season was the ninth season for the Miami Heat in the National Basketball Association.  During the offseason, the Heat signed free agents Dan Majerle and P.J. Brown.  The team also signed All-Star forward Juwan Howard to a 7-year $100 million contract, but was voided by the league claiming that Miami exceeded their salary cap.  Howard then quickly re-signed with the Washington Bullets.\n\nThe Fab Five (film): The Fab Five is a 2011 ESPN Films documentary about the 1990s Michigan Wolverines men's basketball players known collectively as the Fab Five: Chris Webber, Jalen Rose, Juwan Howard, Jimmy King, and Ray Jackson.  It chronicles the recruitment, glory years, notorious time-out fiasco, cultural impact and the scandal that followed these players who are described as iconic figures in the media.  The film originally aired on March 13, 2011 on a national broadcast on ESPN.  On its original airing, the film drew 2.7 million viewers, setting a record as the highest-rated ESPN documentary ever.\n\n1994–95 Washington Bullets season: The 1994–95 NBA season was the Bullets' 34th season in the National Basketball Association.  During the offseason, the Bullets acquired Scott Skiles from the Orlando Magic and hired Jim Lynam as head coach.  After drafting Juwan Howard with the fifth pick in the 1994 NBA draft, the Bullets traded Tom Gugliotta to the Golden State Warriors for Howard's former \"Fab Five\" teammate at Michigan Chris Webber.  However, after a 4–1 start to the season, the Bullets struggled as they lost 25 of their next 28 games.  At midseason, things got worse as Kevin Duckworth was suspended indefinitely after 40 games for not staying in physical condition, where he weighed over 310lbs.  The Bullets posted a 13-game losing streak near the end of the season, and finished last place in the Atlantic Division with a 21–61 record.  Webber averaged 20.1 points, 9.6 rebounds and 1.6 blocks per game.\n\nFab Five (University of Michigan): The Fab Five were the 1991 University of Michigan men's basketball team recruiting class that is considered by many to be \"the greatest class ever recruited.\"  The class consisted of Detroit natives Chris Webber (#1) and Jalen Rose (#5), Chicago native Juwan Howard (#3), and two recruits from Texas: Plano's Jimmy King (#9) and Austin's Ray Jackson (#84).  Four of the five were participants in the 1991 McDonald's All-American Game.  At first, only three of the freshmen started for the 1991–92 Michigan Wolverines men's basketball team.  Although they all played when the season opened on December 2, 1991 against the University of Detroit\n\nCecil Gooding: Cecil Gooding (May 1883 – January 5, 1904) was an American football player.  Gooding attended Ann Arbor High School where he played football.  He enrolled as an engineering student at the University of Michigan in the fall of 1901.  He played on Michigan's All-Freshman football team in 1901 and became a backup at the guard position for the 1902 Michigan Wolverines football team.  As a junior, he was the starting right guard in all 12 games for the 1903 Michigan Wolverines football team that compiled a record of 11-0-1 and outscored its opponents 565-6.  The 1903 Michigan team has been recognized as national champions by the National Championship Foundation.  He contracted typhoid fever following a Thanksgiving Day game against the University of Minnesota in late November 1903.  It was believed that he contracted the illness from drinking the water while in Chicago for the game.  He died five weeks later.  He was the first Michigan Wolverines football player to die while attending the school.  Following his death, \"The Michigan Alumnus\" wrote: \"He had striven conscientiously to perfect himself in the game and earned the respect of coaches, players and spectators.  He was a reliable, hard-working guard who never under any circumstances played anything but a sportsmanlike game.  He was a \"man\" off the field and on.\"  He was buried at York Charter Township, Washtenaw County, Michigan.\n\nQuestion: Juwan Howard was part of the Michigan team that had four participants in what 1991 exhibition?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"player_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the player in question.\"\n    },\n    \"team_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the team the player was part of.\"\n    },\n    \"exhibition_game\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the exhibition game.\"\n        },\n        \"year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the exhibition game took place.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"number_of_team_participants\": {\n      \"type\": \"integer\",\n      \"description\": \"The number of participants from the specified team in the exhibition game.\"\n    }\n  },\n  \"required\": [\n    \"player_name\",\n    \"team_name\",\n    \"exhibition_game\",\n    \"number_of_team_participants\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "player_name",
-    "team_name",
-    "exhibition_game",
-    "number_of_team_participants"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "player_name": {
+        "type": "string",
+        "description": "The name of the player in question."
+      },
+      "team_name": {
+        "type": "string",
+        "description": "The name of the team the player was part of."
+      },
+      "exhibition_game": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the exhibition game."
+          },
+          "year": {
+            "type": "integer",
+            "description": "The year the exhibition game took place."
+          }
+        },
+        "required": [
+          "name",
+          "year"
+        ],
+        "additionalProperties": false
+      },
+      "number_of_team_participants": {
+        "type": "integer",
+        "description": "The number of participants from the specified team in the exhibition game."
+      }
+    },
+    "required": [
+      "player_name",
+      "team_name",
+      "exhibition_game",
+      "number_of_team_participants"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

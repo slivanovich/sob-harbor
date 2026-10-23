@@ -1,96 +1,73 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Metcalf South Shopping Center: Metcalf South Shopping Center was a shopping mall in Overland Park, Kansas.  It opened in 1967, near a large, unique department store called the French Market, which later became a strip mall anchored by Kmart and Hancock Fabrics (the Kmart closed in late 2013 and Hancock announced a move in early 2014).  The Metcalf South mall itself originally featured two main floors of retail space, although later a third floor of retail space was added, which in recent years became home to office space.  It featured two anchor stores (Sears and the Jones Store Company), later taken over by Macy's.  Sears and the Glenwood Arts movie theater remained open in later years, while Macy's announced the closure of its Metcalf South store in January 2014.
-
-Fat Brain Toys: Fat Brain Toys is a United States manufacturer and retailer of educational toys and games.  The company was founded by husband and wife, Mark and Karen Carson, from the basement of their home in 2002.  It is headquartered in Elkhorn, Nebraska with a distribution center located in nearby Omaha, Nebraska.  The company operates two retail storefronts, one in Omaha, Nebraska and another in Overland Park, Kansas.  The company specializes in building toys, brainteasers, and multi-player games.
-
-William B. Strang Jr.: William B. Strang Jr. (1857–1921) was an American railroad magnate who platted Overland Park, Kansas and is considered the founder of the community.  In 1905, Strang purchased 600 acres south of Kansas City and adjacent to present day Metcalf Avenue and 80th Street.  "Strang envisioned a "park-like" community that was self-sustaining and well planned.  He also sought strong commerce, quality education, vibrant neighborhoods, convenient transportation and accommodating recreational facilities."
-
-Hancock Fabrics: Hancock Fabrics was a specialty retailer of crafts and fabrics based in Baldwyn, Mississippi, United States.  Hancock Fabrics operated as many as 266 stores in 37 states under the Hancock Fabrics name.  Hancock Fabrics was established by the late Lawrence D. Hancock.  All stores are in bankruptcy liquidation.
-
-Jo-Ann Stores: Jo-Ann Stores, Inc. is an American specialty retailer of crafts and fabrics based in Hudson, Ohio.  It operates the retail chains "Jo-Ann Fabrics" and "Jo-Ann Etc".  The headquarters of the company is located in the former General Motors Terex plant.
-
-National Board for Respiratory Care: The National Board for Respiratory Care (NBRC) Inc. is a non-profit organization formed in 1960 with the purpose of awarding and maintaining credentialing for Respiratory Therapists in the United States.  The NBRC is the only organization in the United States which develops certification examinations for Registered Respiratory Therapists (RRTs) and Certified Respiratory Therapists (CRTs).  The NBRC also offers additional specialization credentialing for respiratory practitioners that hold its certifications.  The CRT and RRT designations are the standard credential in respiratory care for licensure requirements in the portions of the United States that have enacted a Respiratory Care Act.  States that license respiratory therapists sometimes require the practitioner to maintain their NBRC credentialing to maintain their license to practice.  The NBRC is headquartered in Overland Park, Kansas.  It has been in the Kansas City metropolitan area since 1974.  The NBRC is located at 10801 Mastin St, Suite 300, Overland Park, KS 66210.
-
-Golf Mill Shopping Center: Golf Mill Shopping Center is a shopping mall located on 239 Golf Mill Center in Niles, IL, United States.  The shopping center has a gross leasable area of 1.1 million square feet.  It is managed by Sterling Retail Services.  It borders the intersections of Golf Road (Illinois Route 58), Milwaukee Avenue (Illinois Route 21) and Greenwood Avenue.  The shopping center has over 100 specialty shops, five department stores (JCPenney, Sears, Target, Kohl’s and Ross Dress for Less), an AMC Theatres, two grocery stores (Shop & Save Market, Gordon Food Service Store), an XSport Fitness gym, a 9-story office tower and other outparcels.
-
-Blue Valley Northwest High School: Blue Valley Northwest High School (BVNW) is a high school in Overland Park, Kansas, United States.  It is part of the Blue Valley Unified School District.  Blue Valley Northwest is one of several schools located within the city limits of Overland Park.  In the 2009 Newsweek ranking of the top 1,500 high schools in the United States, Blue Valley Northwest was ranked #364, the highest in the district and the state.  The school has been ranked in the top 700 since 2005.  In 2014, Blue Valley Northwest was selected as one of the six finalists for the first annual Race to the Top High School Commencement Challenge, sponsored by the Department of Education under the Obama administration.
-
-Cleveland University-Kansas City: Cleveland University-Kansas City is located at 10850 Lowell Ave, Overland Park, Kansas, United States.  Cleveland University-Kansas City is known primarily for its Doctor of Chiropractic degree program, but offers other educational options in the health sciences.  The university was started by one of the first families of chiropractic and is located in the Kansas City suburb of Overland Park, Kan.  It is the only chiropractic institution in the nation still under the leadership of a founding family member.  The university has been in operation in Kansas City area since 1922 and has been at its current location since 2008.
-
-Forever 21: Forever 21 is an American fast fashion retailer with its headquarters in Los Angeles, California.  Forever 21 began as a 900 square foot store in Highland Park, California in 1984, and has grown into clothing lines Forever 21, XXI Forever, Love 21, and Heritage throughout over 600 stores in the Americas, Asia, the Middle East, and the UK.  More than 60% of its apparel is made in China and the average store size is 38,000 square feet.  Forever 21 is known for its trendy offerings and its low pricing.  The company sells accessories, beauty products, home, and clothing for women, men, and girls.  The company has been involved in various controversies, ranging from labor practice issues to copyright infringement accusations to religion.  The clothing age ranges from toddler to grownup, for kids and adults.  Forever 21 is the 5th largest specialty retailer in the United States.
-
-Question: What specialty retailer of crafts and fabrics based in Baldwyn, Mississippi, United States was located in the Metcalf South Shopping Center in Overland Park, Kansas?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "retailer_name": {
-      "type": "string",
-      "description": "The name of the specialty retailer."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "business_type": {
-      "type": "string",
-      "description": "The type of business the retailer operates."
-    },
-    "headquarters_location": {
-      "type": "object",
-      "properties": {
-        "city": {
-          "type": "string"
-        },
-        "state": {
-          "type": "string"
-        },
-        "country": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "city",
-        "state",
-        "country"
-      ],
-      "additionalProperties": false
-    },
-    "former_store_location": {
-      "type": "object",
-      "properties": {
-        "shopping_center_name": {
-          "type": "string"
-        },
-        "city": {
-          "type": "string"
-        },
-        "state": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "shopping_center_name",
-        "city",
-        "state"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nMetcalf South Shopping Center: Metcalf South Shopping Center was a shopping mall in Overland Park, Kansas.  It opened in 1967, near a large, unique department store called the French Market, which later became a strip mall anchored by Kmart and Hancock Fabrics (the Kmart closed in late 2013 and Hancock announced a move in early 2014).  The Metcalf South mall itself originally featured two main floors of retail space, although later a third floor of retail space was added, which in recent years became home to office space.  It featured two anchor stores (Sears and the Jones Store Company), later taken over by Macy's.  Sears and the Glenwood Arts movie theater remained open in later years, while Macy's announced the closure of its Metcalf South store in January 2014.\n\nFat Brain Toys: Fat Brain Toys is a United States manufacturer and retailer of educational toys and games.  The company was founded by husband and wife, Mark and Karen Carson, from the basement of their home in 2002.  It is headquartered in Elkhorn, Nebraska with a distribution center located in nearby Omaha, Nebraska.  The company operates two retail storefronts, one in Omaha, Nebraska and another in Overland Park, Kansas.  The company specializes in building toys, brainteasers, and multi-player games.\n\nWilliam B. Strang Jr.: William B. Strang Jr. (1857–1921) was an American railroad magnate who platted Overland Park, Kansas and is considered the founder of the community.  In 1905, Strang purchased 600 acres south of Kansas City and adjacent to present day Metcalf Avenue and 80th Street.  \"Strang envisioned a \"park-like\" community that was self-sustaining and well planned.  He also sought strong commerce, quality education, vibrant neighborhoods, convenient transportation and accommodating recreational facilities.\"\n\nHancock Fabrics: Hancock Fabrics was a specialty retailer of crafts and fabrics based in Baldwyn, Mississippi, United States.  Hancock Fabrics operated as many as 266 stores in 37 states under the Hancock Fabrics name.  Hancock Fabrics was established by the late Lawrence D. Hancock.  All stores are in bankruptcy liquidation.\n\nJo-Ann Stores: Jo-Ann Stores, Inc. is an American specialty retailer of crafts and fabrics based in Hudson, Ohio.  It operates the retail chains \"Jo-Ann Fabrics\" and \"Jo-Ann Etc\".  The headquarters of the company is located in the former General Motors Terex plant.\n\nNational Board for Respiratory Care: The National Board for Respiratory Care (NBRC) Inc. is a non-profit organization formed in 1960 with the purpose of awarding and maintaining credentialing for Respiratory Therapists in the United States.  The NBRC is the only organization in the United States which develops certification examinations for Registered Respiratory Therapists (RRTs) and Certified Respiratory Therapists (CRTs).  The NBRC also offers additional specialization credentialing for respiratory practitioners that hold its certifications.  The CRT and RRT designations are the standard credential in respiratory care for licensure requirements in the portions of the United States that have enacted a Respiratory Care Act.  States that license respiratory therapists sometimes require the practitioner to maintain their NBRC credentialing to maintain their license to practice.  The NBRC is headquartered in Overland Park, Kansas.  It has been in the Kansas City metropolitan area since 1974.  The NBRC is located at 10801 Mastin St, Suite 300, Overland Park, KS 66210.\n\nGolf Mill Shopping Center: Golf Mill Shopping Center is a shopping mall located on 239 Golf Mill Center in Niles, IL, United States.  The shopping center has a gross leasable area of 1.1 million square feet.  It is managed by Sterling Retail Services.  It borders the intersections of Golf Road (Illinois Route 58), Milwaukee Avenue (Illinois Route 21) and Greenwood Avenue.  The shopping center has over 100 specialty shops, five department stores (JCPenney, Sears, Target, Kohl’s and Ross Dress for Less), an AMC Theatres, two grocery stores (Shop & Save Market, Gordon Food Service Store), an XSport Fitness gym, a 9-story office tower and other outparcels.\n\nBlue Valley Northwest High School: Blue Valley Northwest High School (BVNW) is a high school in Overland Park, Kansas, United States.  It is part of the Blue Valley Unified School District.  Blue Valley Northwest is one of several schools located within the city limits of Overland Park.  In the 2009 Newsweek ranking of the top 1,500 high schools in the United States, Blue Valley Northwest was ranked #364, the highest in the district and the state.  The school has been ranked in the top 700 since 2005.  In 2014, Blue Valley Northwest was selected as one of the six finalists for the first annual Race to the Top High School Commencement Challenge, sponsored by the Department of Education under the Obama administration.\n\nCleveland University-Kansas City: Cleveland University-Kansas City is located at 10850 Lowell Ave, Overland Park, Kansas, United States.  Cleveland University-Kansas City is known primarily for its Doctor of Chiropractic degree program, but offers other educational options in the health sciences.  The university was started by one of the first families of chiropractic and is located in the Kansas City suburb of Overland Park, Kan.  It is the only chiropractic institution in the nation still under the leadership of a founding family member.  The university has been in operation in Kansas City area since 1922 and has been at its current location since 2008.\n\nForever 21: Forever 21 is an American fast fashion retailer with its headquarters in Los Angeles, California.  Forever 21 began as a 900 square foot store in Highland Park, California in 1984, and has grown into clothing lines Forever 21, XXI Forever, Love 21, and Heritage throughout over 600 stores in the Americas, Asia, the Middle East, and the UK.  More than 60% of its apparel is made in China and the average store size is 38,000 square feet.  Forever 21 is known for its trendy offerings and its low pricing.  The company sells accessories, beauty products, home, and clothing for women, men, and girls.  The company has been involved in various controversies, ranging from labor practice issues to copyright infringement accusations to religion.  The clothing age ranges from toddler to grownup, for kids and adults.  Forever 21 is the 5th largest specialty retailer in the United States.\n\nQuestion: What specialty retailer of crafts and fabrics based in Baldwyn, Mississippi, United States was located in the Metcalf South Shopping Center in Overland Park, Kansas?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"retailer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the specialty retailer.\"\n    },\n    \"business_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of business the retailer operates.\"\n    },\n    \"headquarters_location\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"city\": {\n          \"type\": \"string\"\n        },\n        \"state\": {\n          \"type\": \"string\"\n        },\n        \"country\": {\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"city\",\n        \"state\",\n        \"country\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"former_store_location\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"shopping_center_name\": {\n          \"type\": \"string\"\n        },\n        \"city\": {\n          \"type\": \"string\"\n        },\n        \"state\": {\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"shopping_center_name\",\n        \"city\",\n        \"state\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"retailer_name\",\n    \"business_type\",\n    \"headquarters_location\",\n    \"former_store_location\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "retailer_name",
-    "business_type",
-    "headquarters_location",
-    "former_store_location"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "retailer_name": {
+        "type": "string",
+        "description": "The name of the specialty retailer."
+      },
+      "business_type": {
+        "type": "string",
+        "description": "The type of business the retailer operates."
+      },
+      "headquarters_location": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "city",
+          "state",
+          "country"
+        ],
+        "additionalProperties": false
+      },
+      "former_store_location": {
+        "type": "object",
+        "properties": {
+          "shopping_center_name": {
+            "type": "string"
+          },
+          "city": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "shopping_center_name",
+          "city",
+          "state"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "retailer_name",
+      "business_type",
+      "headquarters_location",
+      "former_store_location"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

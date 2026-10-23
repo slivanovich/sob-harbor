@@ -1,55 +1,50 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-London (Jesus Jones album): London is the fifth album by the British rock band Jesus Jones in 2001 through Koch Records.  Following the commercial failure of 1997's "Already" which led to the band and EMI parting ways, the band took a hiatus before regathering for the recording of "London" for Koch/Mi5 Recordings, with a more alternative rock approach as opposed to the techno sounds on their previous albums.  The album had low-key promotion, initially only being released in the United States.  Two EP's were released from the album, "Nowhere Slow" and "In the Face Of All This".
-
-Culture Vulture (EP): Culture Vulture !  is an EP by the British rock band Jesus Jones.  Though considered by some to be an album due only to its length, it is an EP, since only the first four tracks are meant to be heard as fully produced songs.  The remaining seven tracks are the "stems" of the title track, meaning that each one is the composite of all the singular recordings that are combined to make up every individual instrumental or vocal performance used in the song; these were added in order to give listeners the opportunity to remix the song themselves, and were not intended for casual listening.  Fans were also encouraged to submit their remixes to the band, who then selected 24 of them which were hosted on the official Jesus Jones site for a period of time.
-
-Already: Already is the fourth album by the British rock band Jesus Jones in 1997.  The album followed a working hiatus by the band following the relative failure of 1993's "Perverse" compared to their international breakthrough album "Doubt" (1991).  Although the band had come up with ideas that they requested to Food Records, the label rejected them before finally accepting the released "Already".  It was their last album for EMI, and two singles were released from the album, "The Next Big Thing" and "Chemical #1".  "Already" only reached No. 161 in the UK Albums Chart, although lead single "The Next Big Thing" had some radio play reaching No. 49 in the UK Singles Chart.  EMI re-issued on the album on 1 March 2003.
-
-Liquidizer (album): Liquidizer is the debut album by British rock band Jesus Jones, released in 1989 on SBK Records.  "Info Freako", "Never Enough" and "Bring It on Down" were released as singles to promote this album.  Although "Move Mountains" was never released as a single, it received regular airplay on the Los Angeles radio station KROQ.
-
-Never Enough: The Best of Jesus Jones: Never Enough: The Best of Jesus Jones is a compilation album/greatest hits album by British alternative rock/dance band Jesus Jones, released by the band's former record label EMI on 27 May 2002.
-
-International Bright Young Thing: "International Bright Young Thing" is a song by the British alternative dance band Jesus Jones.  It was released as the third single from their second album "Doubt", and was a top-ten hit in Britain.  It followed "Real Real Real" and "Right Here, Right Now".  All three singles were included on a Jesus Jones compilation album "" released in 2002.
-
-Perverse (album): Perverse is the third studio album by British rock band Jesus Jones, released in 1993 on Food Records.  After their international success following the release of "Doubt" (1991), Jesus Jones, especially band leader Mike Edwards, conceived "Perverse" as a darker, more contemporary album.  Fusing rave and techno music into more traditional rock and pop song structures, the album is heavier than its predecessors and features lyrics that concern the future.  Edwards wrote the lyrics of the album during the band's 1991 tour, using a Roland W-30 sampler to conceive songs in their earliest stages.
-
-TV on the Radio: TV on the Radio is an American indie rock band from Brooklyn, New York, formed in 2001.  For most of the band's existence, the core band lineup has been Tunde Adebimpe (vocals, loops), David Andrew Sitek (guitars, keyboards, loops), Kyp Malone (vocals, guitars, bass, loops) and Jaleel Bunton (drums, vocals, loops, guitars) as official members.  Gerard Smith (bass, keyboards) was with the band from 2005 until his death in 2011.  Other contributors have included David Bowie, Nick Zinner of Yeah Yeah Yeahs, Trent Reznor of Nine Inch Nails, Kazu Makino of Blonde Redhead, Martin Perna of Antibalas, Colin Stetson, and Katrina Ford of Celebration.  The group has released several EPs including their debut "Young Liars" (2003), and five studio albums: "Desperate Youth, Blood Thirsty Babes" (2004), "Return to Cookie Mountain" (2006), "Dear Science" (2008), "Nine Types of Light" (2011), and "Seeds" (2014).
-
-Jesus Jones: Jesus Jones are a British alternative rock band from Bradford-on-Avon in Wiltshire, formed in late 1988, recorded and performed in the late 1980s into the 2000s.  Their track "Right Here, Right Now" was an international hit which was subsequently globally licensed for promotional and advertising campaigns.  They also achieved chart success with the songs "Real Real Real", "International Bright Young Thing" and "Info Freako".
-
-How's This Even Going Down?: How's This Even Going Down?  is an EP single released by Jesus Jones in June, 2016.  The single was released in electronic format as well as two different versions of a limited-edition 2-disc vinyl record.  One version, available from the Jesus Jones website, came in neon yellow and solid purple colors (150 copies), whereas the other was available at the Speedowax website and came in blue and clear discs (350 copies).
-
-Question: Which band was formed first, Jesus Jones of TV on the Radio?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "bands_compared": {
-      "type": "array",
-      "description": "Details of the bands being compared for their formation dates.",
-      "items": {
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
+    },
+    {
+      "role": "user",
+      "content": "Context:\nLondon (Jesus Jones album): London is the fifth album by the British rock band Jesus Jones in 2001 through Koch Records.  Following the commercial failure of 1997's \"Already\" which led to the band and EMI parting ways, the band took a hiatus before regathering for the recording of \"London\" for Koch/Mi5 Recordings, with a more alternative rock approach as opposed to the techno sounds on their previous albums.  The album had low-key promotion, initially only being released in the United States.  Two EP's were released from the album, \"Nowhere Slow\" and \"In the Face Of All This\".\n\nCulture Vulture (EP): Culture Vulture !  is an EP by the British rock band Jesus Jones.  Though considered by some to be an album due only to its length, it is an EP, since only the first four tracks are meant to be heard as fully produced songs.  The remaining seven tracks are the \"stems\" of the title track, meaning that each one is the composite of all the singular recordings that are combined to make up every individual instrumental or vocal performance used in the song; these were added in order to give listeners the opportunity to remix the song themselves, and were not intended for casual listening.  Fans were also encouraged to submit their remixes to the band, who then selected 24 of them which were hosted on the official Jesus Jones site for a period of time.\n\nAlready: Already is the fourth album by the British rock band Jesus Jones in 1997.  The album followed a working hiatus by the band following the relative failure of 1993's \"Perverse\" compared to their international breakthrough album \"Doubt\" (1991).  Although the band had come up with ideas that they requested to Food Records, the label rejected them before finally accepting the released \"Already\".  It was their last album for EMI, and two singles were released from the album, \"The Next Big Thing\" and \"Chemical #1\".  \"Already\" only reached No. 161 in the UK Albums Chart, although lead single \"The Next Big Thing\" had some radio play reaching No. 49 in the UK Singles Chart.  EMI re-issued on the album on 1 March 2003.\n\nLiquidizer (album): Liquidizer is the debut album by British rock band Jesus Jones, released in 1989 on SBK Records.  \"Info Freako\", \"Never Enough\" and \"Bring It on Down\" were released as singles to promote this album.  Although \"Move Mountains\" was never released as a single, it received regular airplay on the Los Angeles radio station KROQ.\n\nNever Enough: The Best of Jesus Jones: Never Enough: The Best of Jesus Jones is a compilation album/greatest hits album by British alternative rock/dance band Jesus Jones, released by the band's former record label EMI on 27 May 2002.\n\nInternational Bright Young Thing: \"International Bright Young Thing\" is a song by the British alternative dance band Jesus Jones.  It was released as the third single from their second album \"Doubt\", and was a top-ten hit in Britain.  It followed \"Real Real Real\" and \"Right Here, Right Now\".  All three singles were included on a Jesus Jones compilation album \"\" released in 2002.\n\nPerverse (album): Perverse is the third studio album by British rock band Jesus Jones, released in 1993 on Food Records.  After their international success following the release of \"Doubt\" (1991), Jesus Jones, especially band leader Mike Edwards, conceived \"Perverse\" as a darker, more contemporary album.  Fusing rave and techno music into more traditional rock and pop song structures, the album is heavier than its predecessors and features lyrics that concern the future.  Edwards wrote the lyrics of the album during the band's 1991 tour, using a Roland W-30 sampler to conceive songs in their earliest stages.\n\nTV on the Radio: TV on the Radio is an American indie rock band from Brooklyn, New York, formed in 2001.  For most of the band's existence, the core band lineup has been Tunde Adebimpe (vocals, loops), David Andrew Sitek (guitars, keyboards, loops), Kyp Malone (vocals, guitars, bass, loops) and Jaleel Bunton (drums, vocals, loops, guitars) as official members.  Gerard Smith (bass, keyboards) was with the band from 2005 until his death in 2011.  Other contributors have included David Bowie, Nick Zinner of Yeah Yeah Yeahs, Trent Reznor of Nine Inch Nails, Kazu Makino of Blonde Redhead, Martin Perna of Antibalas, Colin Stetson, and Katrina Ford of Celebration.  The group has released several EPs including their debut \"Young Liars\" (2003), and five studio albums: \"Desperate Youth, Blood Thirsty Babes\" (2004), \"Return to Cookie Mountain\" (2006), \"Dear Science\" (2008), \"Nine Types of Light\" (2011), and \"Seeds\" (2014).\n\nJesus Jones: Jesus Jones are a British alternative rock band from Bradford-on-Avon in Wiltshire, formed in late 1988, recorded and performed in the late 1980s into the 2000s.  Their track \"Right Here, Right Now\" was an international hit which was subsequently globally licensed for promotional and advertising campaigns.  They also achieved chart success with the songs \"Real Real Real\", \"International Bright Young Thing\" and \"Info Freako\".\n\nHow's This Even Going Down?: How's This Even Going Down?  is an EP single released by Jesus Jones in June, 2016.  The single was released in electronic format as well as two different versions of a limited-edition 2-disc vinyl record.  One version, available from the Jesus Jones website, came in neon yellow and solid purple colors (150 copies), whereas the other was available at the Speedowax website and came in blue and clear discs (350 copies).\n\nQuestion: Which band was formed first, Jesus Jones of TV on the Radio?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"bands_compared\": {\n      \"type\": \"array\",\n      \"description\": \"Details of the bands being compared for their formation dates.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the band.\"\n          },\n          \"formation_year\": {\n            \"type\": \"integer\",\n            \"description\": \"The year the band was formed.\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"formation_year\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"band_formed_first\": {\n      \"type\": \"object\",\n      \"description\": \"The band that was formed earliest.\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the band formed first.\"\n        },\n        \"formation_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The formation year of the band formed first.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"formation_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"comparison_statement\": {\n      \"type\": \"string\",\n      \"description\": \"A statement summarizing which band was formed first.\"\n    }\n  },\n  \"required\": [\n    \"bands_compared\",\n    \"band_formed_first\",\n    \"comparison_statement\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "bands_compared": {
+        "type": "array",
+        "description": "Details of the bands being compared for their formation dates.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the band."
+            },
+            "formation_year": {
+              "type": "integer",
+              "description": "The year the band was formed."
+            }
+          },
+          "required": [
+            "name",
+            "formation_year"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "band_formed_first": {
         "type": "object",
+        "description": "The band that was formed earliest.",
         "properties": {
           "name": {
             "type": "string",
-            "description": "The name of the band."
+            "description": "The name of the band formed first."
           },
           "formation_year": {
             "type": "integer",
-            "description": "The year the band was formed."
+            "description": "The formation year of the band formed first."
           }
         },
         "required": [
@@ -57,36 +52,18 @@ Respond with JSON matching this schema:
           "formation_year"
         ],
         "additionalProperties": false
+      },
+      "comparison_statement": {
+        "type": "string",
+        "description": "A statement summarizing which band was formed first."
       }
     },
-    "band_formed_first": {
-      "type": "object",
-      "description": "The band that was formed earliest.",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the band formed first."
-        },
-        "formation_year": {
-          "type": "integer",
-          "description": "The formation year of the band formed first."
-        }
-      },
-      "required": [
-        "name",
-        "formation_year"
-      ],
-      "additionalProperties": false
-    },
-    "comparison_statement": {
-      "type": "string",
-      "description": "A statement summarizing which band was formed first."
-    }
+    "required": [
+      "bands_compared",
+      "band_formed_first",
+      "comparison_statement"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "bands_compared",
-    "band_formed_first",
-    "comparison_statement"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

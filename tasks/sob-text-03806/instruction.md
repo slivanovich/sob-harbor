@@ -1,62 +1,39 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Ricky Johnson: Rick Johnson (born July 6, 1964) is an American former professional motorcycle, off-road truck and stock car racer.  He competed in AMA motocross and Supercross during the 1980s and, won seven AMA national championships.  He later switched to off-road racing.  In 2010, he won the Pro 2WD Trophy Truck championship in the Traxxas TORC Series.  In September 2012, he won the 4x4 world championship race at Crandon International Off-Road Raceway and later that day won the AMSOIL Cup pitting the two and four wheel drive trucks.  Johnson won the 2014 Frozen Rush, the first short-course off-road race on snow.
-
-Carey Hart: Carey Jason Phillip Hart (born July 17, 1975) is an American former professional freestyle motocross competitor, motorcycle racer and current off-road truck racer.  He is known for being the first motorcyclist to perform a back flip on a 250cc motorcycle during a competition, and for his company "Hart & Huntington Tattoo & Clothing Company".  He and singer Pink have been married since 2006.
-
-Jeff Ward (motorsports): Jeff Ward (born 22 June 1961) is a British-American former professional motocross racer, auto racing driver and off-road racer.  He won the AMA Motocross Championship five times and the AMA Supercross Championship twice and the Motocross des Nations seven times.  After retiring from motorcycle competition, Ward turned to auto racing, finishing in second place at the Indianapolis 500 and winning a race at the Texas Motor Speedway.  He then competed in off-road truck racing and is currently competing in rallycross racing.  Ward was inducted into the Motorcycle Hall of Fame in 1999 and, was inducted into the Motorsports Hall of Fame of America on August 12, 2006.
-
-Funhouse Tour: The Funhouse Tour was the fourth concert tour by American singer-songwriter Pink.  The tour supported her fifth studio album, "Funhouse".  The tour visited Europe, Australia and North America.  According to Pollstar, the Funhouse Tour (2009) earned around $150 million with more than 1.5 million in attendance.  The Australian leg of the tour broke the record for the biggest tour in the history of the country.  Over 660,000 people attended the Australian shows and grossed over $80 million.
-
-So What (Pink song): "So What" is a song recorded by American singer Pink for her fifth studio album, "Funhouse" (2008).  The song was written by Pink, Max Martin, and Shellback, and produced by Martin.  Selected as the album's debut single, "So What" was first released to mainstream radios on August 25, 2008, through LaFace and Zomba Label Group.  The song consists of a martial beat and synth backing.  The lyrics are based on her separation from motocross racer Carey Hart, which occurred six months prior to the release.
-
-Sober (Pink song): "Sober" is a song by the American singer-songwriter Pink, taken from her fifth studio album, "Funhouse" (2008).  It was written by Pink and Kara DioGuardi, with additional writing by Nate "Danja" Hills and Marcella Araica, while production was done by Danja, Tony Kanal and Jimmy Harry.  The song was released as the album's second single on October 31, 2008, firstly through digital download and later was added to U.S. radio stations on December 1, 2008.  The power pop song talks about the quiet sense of comfort in being sober, with the singer claiming it was about the vices that we choose.
-
-J.N. Roberts: James Nelson "J. N." Roberts is an American former professional off-road and enduro motorcycle racer and a film industry stuntman.  In the 1960s and early 1970s, he was a dominant motorcycle competitor in American desert racing centered in the Mojave Desert of Southern California.  At one point in his desert racing career, Roberts won 27 consecutive desert races, earning him the unofficial nickname of King of the Desert.  Roberts was inducted into the AMA Motorcycle Hall of Fame in 1999 and, into the Off-road Motorsports Hall of Fame in 2009.
-
-Mike Jones (motocross rider): Michael Jones, (born February 28, 1966 in Export, Pennsylvania) is an American freestyle motocross competitor, with over 35 years of professional rider experience.  He started his motorcycle racing career in 1972 aged 6, and became the 1989 world champion of Supercross.  Continuing to race up until his last Fastcross in Italy 2000, he became increasingly involved in the emerging sport of Freestyle Motocross, performing half-time jump shows at football games as early as 1987.  He is attributed as being "one of the founding fathers of the sport of freestyle motocross", and became known as "Mad" Mike Jones after an Italian promoter described his stunts as "Mad" and "the name stuck".  He has appeared in numerous movies including Crusty Demons, and also goes around North American schools to share about his experience.
-
-Jeremy Stenberg: Jeremy "Twitch" Stenberg (born September 27, 1981 in San Diego, California) is a professional freestyle motocross rider and professional off-road truck racer.  Stenberg received his nickname 'Twitch' from his Tourette's syndrome, which he was diagnosed with at the age of eight.  He started riding dirtbikes at the age of two so his father could spend more time with him and keep him out of their dangerous neighbourhood.  He is a born again Christian.
-
-Funhouse (song): "Funhouse" is the fifth single from American singer-songwriter Pink's fifth studio album of the same name.  The track was written by P!nk, Jimmy Harry and Tony Kanal who also produced the song.  It holds the title of the album and, just like most of the album's tracks, the song speaks about P!nk's split with motocrossrider Carey Hart.  Pink performed the song on September 16, 2009 on the Jimmy Kimmel Live!  concert stage.
-
-Question: "Funhouse" is the fifth single from American singer-songwriter Pink's fifth studio album of the same name, the song speaks about P!nk's split with which American former professional freestyle motocross competitor, motorcycle racer and current off-road truck racer?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the person."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "professions": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of professions held by the person."
-    },
-    "relationship_to_pink": {
-      "type": "string",
-      "description": "The nature of the person's relationship with Pink, as described in the context."
+    {
+      "role": "user",
+      "content": "Context:\nRicky Johnson: Rick Johnson (born July 6, 1964) is an American former professional motorcycle, off-road truck and stock car racer.  He competed in AMA motocross and Supercross during the 1980s and, won seven AMA national championships.  He later switched to off-road racing.  In 2010, he won the Pro 2WD Trophy Truck championship in the Traxxas TORC Series.  In September 2012, he won the 4x4 world championship race at Crandon International Off-Road Raceway and later that day won the AMSOIL Cup pitting the two and four wheel drive trucks.  Johnson won the 2014 Frozen Rush, the first short-course off-road race on snow.\n\nCarey Hart: Carey Jason Phillip Hart (born July 17, 1975) is an American former professional freestyle motocross competitor, motorcycle racer and current off-road truck racer.  He is known for being the first motorcyclist to perform a back flip on a 250cc motorcycle during a competition, and for his company \"Hart & Huntington Tattoo & Clothing Company\".  He and singer Pink have been married since 2006.\n\nJeff Ward (motorsports): Jeff Ward (born 22 June 1961) is a British-American former professional motocross racer, auto racing driver and off-road racer.  He won the AMA Motocross Championship five times and the AMA Supercross Championship twice and the Motocross des Nations seven times.  After retiring from motorcycle competition, Ward turned to auto racing, finishing in second place at the Indianapolis 500 and winning a race at the Texas Motor Speedway.  He then competed in off-road truck racing and is currently competing in rallycross racing.  Ward was inducted into the Motorcycle Hall of Fame in 1999 and, was inducted into the Motorsports Hall of Fame of America on August 12, 2006.\n\nFunhouse Tour: The Funhouse Tour was the fourth concert tour by American singer-songwriter Pink.  The tour supported her fifth studio album, \"Funhouse\".  The tour visited Europe, Australia and North America.  According to Pollstar, the Funhouse Tour (2009) earned around $150 million with more than 1.5 million in attendance.  The Australian leg of the tour broke the record for the biggest tour in the history of the country.  Over 660,000 people attended the Australian shows and grossed over $80 million.\n\nSo What (Pink song): \"So What\" is a song recorded by American singer Pink for her fifth studio album, \"Funhouse\" (2008).  The song was written by Pink, Max Martin, and Shellback, and produced by Martin.  Selected as the album's debut single, \"So What\" was first released to mainstream radios on August 25, 2008, through LaFace and Zomba Label Group.  The song consists of a martial beat and synth backing.  The lyrics are based on her separation from motocross racer Carey Hart, which occurred six months prior to the release.\n\nSober (Pink song): \"Sober\" is a song by the American singer-songwriter Pink, taken from her fifth studio album, \"Funhouse\" (2008).  It was written by Pink and Kara DioGuardi, with additional writing by Nate \"Danja\" Hills and Marcella Araica, while production was done by Danja, Tony Kanal and Jimmy Harry.  The song was released as the album's second single on October 31, 2008, firstly through digital download and later was added to U.S. radio stations on December 1, 2008.  The power pop song talks about the quiet sense of comfort in being sober, with the singer claiming it was about the vices that we choose.\n\nJ.N. Roberts: James Nelson \"J. N.\" Roberts is an American former professional off-road and enduro motorcycle racer and a film industry stuntman.  In the 1960s and early 1970s, he was a dominant motorcycle competitor in American desert racing centered in the Mojave Desert of Southern California.  At one point in his desert racing career, Roberts won 27 consecutive desert races, earning him the unofficial nickname of King of the Desert.  Roberts was inducted into the AMA Motorcycle Hall of Fame in 1999 and, into the Off-road Motorsports Hall of Fame in 2009.\n\nMike Jones (motocross rider): Michael Jones, (born February 28, 1966 in Export, Pennsylvania) is an American freestyle motocross competitor, with over 35 years of professional rider experience.  He started his motorcycle racing career in 1972 aged 6, and became the 1989 world champion of Supercross.  Continuing to race up until his last Fastcross in Italy 2000, he became increasingly involved in the emerging sport of Freestyle Motocross, performing half-time jump shows at football games as early as 1987.  He is attributed as being \"one of the founding fathers of the sport of freestyle motocross\", and became known as \"Mad\" Mike Jones after an Italian promoter described his stunts as \"Mad\" and \"the name stuck\".  He has appeared in numerous movies including Crusty Demons, and also goes around North American schools to share about his experience.\n\nJeremy Stenberg: Jeremy \"Twitch\" Stenberg (born September 27, 1981 in San Diego, California) is a professional freestyle motocross rider and professional off-road truck racer.  Stenberg received his nickname 'Twitch' from his Tourette's syndrome, which he was diagnosed with at the age of eight.  He started riding dirtbikes at the age of two so his father could spend more time with him and keep him out of their dangerous neighbourhood.  He is a born again Christian.\n\nFunhouse (song): \"Funhouse\" is the fifth single from American singer-songwriter Pink's fifth studio album of the same name.  The track was written by P!nk, Jimmy Harry and Tony Kanal who also produced the song.  It holds the title of the album and, just like most of the album's tracks, the song speaks about P!nk's split with motocrossrider Carey Hart.  Pink performed the song on September 16, 2009 on the Jimmy Kimmel Live!  concert stage.\n\nQuestion: \"Funhouse\" is the fifth single from American singer-songwriter Pink's fifth studio album of the same name, the song speaks about P!nk's split with which American former professional freestyle motocross competitor, motorcycle racer and current off-road truck racer?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person.\"\n    },\n    \"professions\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of professions held by the person.\"\n    },\n    \"relationship_to_pink\": {\n      \"type\": \"string\",\n      \"description\": \"The nature of the person's relationship with Pink, as described in the context.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"professions\",\n    \"relationship_to_pink\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "professions",
-    "relationship_to_pink"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the person."
+      },
+      "professions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of professions held by the person."
+      },
+      "relationship_to_pink": {
+        "type": "string",
+        "description": "The nature of the person's relationship with Pink, as described in the context."
+      }
+    },
+    "required": [
+      "person_name",
+      "professions",
+      "relationship_to_pink"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

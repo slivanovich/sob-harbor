@@ -1,62 +1,39 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Vilhelm Buhl: Vilhelm Buhl (16 October 1881 – 18 December 1954) was Prime Minister of Denmark from 4 May 1942 to 9 November 1942 as head of the "Unity Government" (the Cabinet of Vilhelm Buhl I) during the German occupation of Denmark of World War II, until the Nazis ordered him removed.  He was Prime Minister again from 5 May 1945 to 7 November 1945 as head of a unity government (the "Cabinet of Vilhelm Buhl II") after the liberation of Denmark by the British Field Marshal Montgomery.
-
-John Layfield: John Charles Layfield (born November 29, 1966), better known by the ring name John "Bradshaw" Layfield (abbreviated JBL), is an American color commentator and retired professional wrestler and formerly part of the broadcast team on "SmackDown" and pay-per-view events.
-
-People's Government of Lithuania: The People's Government of Lithuania (Lithuanian: "Liaudies vyriausybė" ) was a puppet cabinet installed by the Soviet Union in Lithuania immediately after Lithuania's acceptance of the Soviet ultimatum of June 14, 1940.  The formation of the cabinet was supervised by Vladimir Dekanozov, deputy of Vyacheslav Molotov and a close associate of Lavrentiy Beria, who selected Justas Paleckis as the Prime Minister and acting President.  The government was formed on June 17 and, together with the People's Seimas (parliament), transitioned independent Lithuania to a socialist republic and the 14th republic of the Soviet Union thus legitimizing the Soviet occupation of Lithuania.  The People's Government was replaced by the Council of People's Commissars of the Lithuanian SSR on August 25.  Similar transitional People's Governments were formed in Latvia (Prime Minister Augusts Kirhenšteins supervised by Andrey Vyshinsky) and Estonia (Prime Minister Johannes Vares supervised by Andrei Zhdanov).
-
-The Cabinet (WWE): The Cabinet was a professional wrestling stable that was part of World Wrestling Entertainment's (WWE) SmackDown brand.  It was created by John "Bradshaw" Layfield (JBL) shortly after he won the WWE Championship at The Great American Bash in 2004.
-
-Cabinet of Blagoje Nešković: Cabinet of Blagoje Nešković (also known as the People's Government of Serbia) was the first Government of the Federal State of Serbia, and the first Serbian Government after the liberation of this country from the Nazi occupation.  It was formed on April 9, 1945 on a session of the People's Assembly.  It was dissolved on November 22, 1946, after the Federative People's Republic of Yugoslavia was declared, and after a new Constitution was adopted.  After its dissolvement, a new cabinet was formed, headed by the same Prime Minister.
-
-Third Gerbrandy cabinet: The third cabinet of Gerbrandy (February - June 1945) was the last of four cabinets of the Dutch government in exile during the second world war and was seated in London.  The cabinet was formed after the resignation of the SDAP ministers from the second Gerbrandy cabinet in January 1945.  The third Gerbrandy cabinet resigned on May 5, 1945 - the day that the whole continental Netherlands was liberated from German occupation.
-
-Kirsten Hansteen: Kirsten Hansteen (5 January 1903 – 17 November 1974) was the Norwegian appointed Minister of Social Affairs in 1945, and the first ever female member of cabinet in Norway.  She represented the Communist Party of Norway.  Her husband Viggo Hansteen was executed by the German occupation forces in 1941.  She edited the underground resistance paper "Kvinnefronten" (The Women's front) during the German occupation.  After the war she founded the journal "Kvinnen og Tiden" together with Henriette Bie Lorentzen.
-
-Kārlis Reinholds Zariņš: Kārlis Reinholds Zariņš (born 4 December 1879, Ipiķi parish – 29 April 1963, London) (international: Charles Zarine) was Envoy and Consul General of Latvia in the United Kingdom.  Shortly before the Soviet occupation of Latvia, on 17 May 1940 the Latvian Cabinet of Ministers granted Envoy Zariņš extraordinary powers.  He was delegated to supervise the work of Latvia's representations abroad in time of war or other extraordinary circumstance.  He served this role starting from the Soviet occupation in 1940 until his death in 1963.  Since then, Arnolds Spekke and later Anatols Dinbergs represented Latvia as chargé d'affaires until restoration of independence in 1991.
-
-Buhl II Cabinet: The Cabinet of Vilhelm Buhl II was the government of Denmark from May 5, 1945 until November 7 same year.  The cabinet was popularly called "the Liberation Cabinet" since it was the first government after the liberation from the German occupation during World War II.
-
-Armadio della vergogna: The armoire of shame (Italian: armadio della vergogna ) is a wooden cabinet discovered in 1994 inside a large storage room in Palazzo Cesi-Gaddi, Rome which, at the time, housed the chancellery of the military attorney's office.  The cabinet contained an archive of 695 files documenting war crimes perpetrated on Italian soil under fascist rule and during Nazi occupation after the September 8, 1943 armistice between Italy and Allied armed forces.  The actions described in the records spanned several years and took place in various areas of the country, from the southern city of Acerra to the northern province of Trieste and as far east as the Balkans; it remains unclear, to this day, how the archive remained concealed for so long, and who gave the order to hide the files in the immediate post-war period.
-
-Question: What was the occupation of the creator of The Cabinet?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "entity_name": {
-      "type": "string",
-      "description": "The name of the entity whose creator's occupation is being sought."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "creator_name": {
-      "type": "string",
-      "description": "The name of the creator of the entity."
-    },
-    "creator_occupations": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of occupations held by the creator."
+    {
+      "role": "user",
+      "content": "Context:\nVilhelm Buhl: Vilhelm Buhl (16 October 1881 – 18 December 1954) was Prime Minister of Denmark from 4 May 1942 to 9 November 1942 as head of the \"Unity Government\" (the Cabinet of Vilhelm Buhl I) during the German occupation of Denmark of World War II, until the Nazis ordered him removed.  He was Prime Minister again from 5 May 1945 to 7 November 1945 as head of a unity government (the \"Cabinet of Vilhelm Buhl II\") after the liberation of Denmark by the British Field Marshal Montgomery.\n\nJohn Layfield: John Charles Layfield (born November 29, 1966), better known by the ring name John \"Bradshaw\" Layfield (abbreviated JBL), is an American color commentator and retired professional wrestler and formerly part of the broadcast team on \"SmackDown\" and pay-per-view events.\n\nPeople's Government of Lithuania: The People's Government of Lithuania (Lithuanian: \"Liaudies vyriausybė\" ) was a puppet cabinet installed by the Soviet Union in Lithuania immediately after Lithuania's acceptance of the Soviet ultimatum of June 14, 1940.  The formation of the cabinet was supervised by Vladimir Dekanozov, deputy of Vyacheslav Molotov and a close associate of Lavrentiy Beria, who selected Justas Paleckis as the Prime Minister and acting President.  The government was formed on June 17 and, together with the People's Seimas (parliament), transitioned independent Lithuania to a socialist republic and the 14th republic of the Soviet Union thus legitimizing the Soviet occupation of Lithuania.  The People's Government was replaced by the Council of People's Commissars of the Lithuanian SSR on August 25.  Similar transitional People's Governments were formed in Latvia (Prime Minister Augusts Kirhenšteins supervised by Andrey Vyshinsky) and Estonia (Prime Minister Johannes Vares supervised by Andrei Zhdanov).\n\nThe Cabinet (WWE): The Cabinet was a professional wrestling stable that was part of World Wrestling Entertainment's (WWE) SmackDown brand.  It was created by John \"Bradshaw\" Layfield (JBL) shortly after he won the WWE Championship at The Great American Bash in 2004.\n\nCabinet of Blagoje Nešković: Cabinet of Blagoje Nešković (also known as the People's Government of Serbia) was the first Government of the Federal State of Serbia, and the first Serbian Government after the liberation of this country from the Nazi occupation.  It was formed on April 9, 1945 on a session of the People's Assembly.  It was dissolved on November 22, 1946, after the Federative People's Republic of Yugoslavia was declared, and after a new Constitution was adopted.  After its dissolvement, a new cabinet was formed, headed by the same Prime Minister.\n\nThird Gerbrandy cabinet: The third cabinet of Gerbrandy (February - June 1945) was the last of four cabinets of the Dutch government in exile during the second world war and was seated in London.  The cabinet was formed after the resignation of the SDAP ministers from the second Gerbrandy cabinet in January 1945.  The third Gerbrandy cabinet resigned on May 5, 1945 - the day that the whole continental Netherlands was liberated from German occupation.\n\nKirsten Hansteen: Kirsten Hansteen (5 January 1903 – 17 November 1974) was the Norwegian appointed Minister of Social Affairs in 1945, and the first ever female member of cabinet in Norway.  She represented the Communist Party of Norway.  Her husband Viggo Hansteen was executed by the German occupation forces in 1941.  She edited the underground resistance paper \"Kvinnefronten\" (The Women's front) during the German occupation.  After the war she founded the journal \"Kvinnen og Tiden\" together with Henriette Bie Lorentzen.\n\nKārlis Reinholds Zariņš: Kārlis Reinholds Zariņš (born 4 December 1879, Ipiķi parish – 29 April 1963, London) (international: Charles Zarine) was Envoy and Consul General of Latvia in the United Kingdom.  Shortly before the Soviet occupation of Latvia, on 17 May 1940 the Latvian Cabinet of Ministers granted Envoy Zariņš extraordinary powers.  He was delegated to supervise the work of Latvia's representations abroad in time of war or other extraordinary circumstance.  He served this role starting from the Soviet occupation in 1940 until his death in 1963.  Since then, Arnolds Spekke and later Anatols Dinbergs represented Latvia as chargé d'affaires until restoration of independence in 1991.\n\nBuhl II Cabinet: The Cabinet of Vilhelm Buhl II was the government of Denmark from May 5, 1945 until November 7 same year.  The cabinet was popularly called \"the Liberation Cabinet\" since it was the first government after the liberation from the German occupation during World War II.\n\nArmadio della vergogna: The armoire of shame (Italian: armadio della vergogna ) is a wooden cabinet discovered in 1994 inside a large storage room in Palazzo Cesi-Gaddi, Rome which, at the time, housed the chancellery of the military attorney's office.  The cabinet contained an archive of 695 files documenting war crimes perpetrated on Italian soil under fascist rule and during Nazi occupation after the September 8, 1943 armistice between Italy and Allied armed forces.  The actions described in the records spanned several years and took place in various areas of the country, from the southern city of Acerra to the northern province of Trieste and as far east as the Balkans; it remains unclear, to this day, how the archive remained concealed for so long, and who gave the order to hide the files in the immediate post-war period.\n\nQuestion: What was the occupation of the creator of The Cabinet?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"entity_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the entity whose creator's occupation is being sought.\"\n    },\n    \"creator_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the creator of the entity.\"\n    },\n    \"creator_occupations\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of occupations held by the creator.\"\n    }\n  },\n  \"required\": [\n    \"entity_name\",\n    \"creator_name\",\n    \"creator_occupations\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "entity_name",
-    "creator_name",
-    "creator_occupations"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "entity_name": {
+        "type": "string",
+        "description": "The name of the entity whose creator's occupation is being sought."
+      },
+      "creator_name": {
+        "type": "string",
+        "description": "The name of the creator of the entity."
+      },
+      "creator_occupations": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of occupations held by the creator."
+      }
+    },
+    "required": [
+      "entity_name",
+      "creator_name",
+      "creator_occupations"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

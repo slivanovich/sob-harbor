@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-No. 82 Wing RAAF: No. 82 Wing is the strike and reconnaissance wing of the Royal Australian Air Force (RAAF).  It is headquartered at RAAF Base Amberley, Queensland.  Coming under the control of Air Combat Group, the wing operates F/A-18F Super Hornet multirole fighters and Pilatus PC-9 forward air control aircraft.  Its units include Nos. 1 and 6 Squadrons, operating the Super Hornet, and No. 4 Squadron, operating the PC-9.
-
-RAAF Base Williamtown: RAAF Base Williamtown (IATA: NTL, ICAO: YWLM) is a Royal Australian Air Force (RAAF) military air base located 8 NM north of the coastal city of Newcastle (27 km by road) in the local government area of Port Stephens, in New South Wales, Australia.  The base serves as the headquarters to both the Air Combat Group and the Surveillance and Response Group of the RAAF.  The military base shares its runway facilities with Newcastle Airport.  The nearest towns are Raymond Terrace, located 8 km west of the base and Medowie, 6.8 km , north of the base, which is home to many of the base's staff.
-
-RAAF Base Darwin: RAAF Base Darwin (IATA: DRW, ICAO: YPDN) is a Royal Australian Air Force (RAAF) military air base located in the city of Darwin, in the Northern Territory, Australia.  The base shares its runway with Darwin International Airport, for civil aviation purposes.  The heritage-listed RAAF Base Darwin is a forward operating base with year round activity with approximately 400 personnel.
-
-RAAF Base East Sale: RAAF Base East Sale (ICAO: YMES) is a Royal Australian Air Force (RAAF) military air base and training school, located in Sale , Victoria, Australia.  The base is one of the main training establishments of the RAAF, including where Australian Air Force Cadets have their annual General Service Training.  It is home to "The Roulettes" aerobatic team.  It is also now the home of the RAAF's Officers' Training School (OTS) following its relocation from Point Cook Base.  East Sale was upgraded to house the new OTS, which had its first intake of students in January 2008.  The base houses approximately 700 air force personnel.
-
-List of Royal Australian Air Force air marshals: The following is a list of Australians who have attained air marshal rank within the Royal Australian Air Force (RAAF); that is, service personnel who have held the rank of air chief marshal (four-star rank), air marshal (three-star rank) or air vice marshal (two-star rank).  The Royal Australian Air Force was established in 1921 as a separate branch of the Australian military forces.  The service was modelled after the Royal Air Force—formed three years earlier—and adopted the same ranking system.  Richard Williams, regarded as the "father" of the Royal Australian Air Force, was the service's first member to obtain air-officer rank on being promoted to air commodore (one-star rank) in 1927; he went on to become the first air vice marshal (1935) and air marshal (1940).  In 1965, Sir Frederick Scherger became the first officer to be advanced to air chief marshal, one of only four members of the Royal Australian Air Force to obtain this rank as of June 2014.  A further nineteen individuals have reached air marshal in the RAAF and 126 air vice marshal; seven officers have retired with the honorary rank of air vice marshal.
-
-RAAF Base Townsville: RAAF Base Townsville (IATA: TSV, ICAO: YBTL) (formerly RAAF Base Garbutt) is a Royal Australian Air Force (RAAF) air base located in Garbutt , 2 NM west of Townsville in Queensland, Australia.  The base houses a squadron of light transport aircraft, and is used for training purposes by combat aircraft.  It is also headquarters for No. 1 Wing Australian Air Force Cadets and, along with Lavarack Barracks, establishes Townsville as a key military centre.  The base's airfield is shared with the Townsville Airport.
-
-Forward Air Control Development Unit RAAF: The Forward Air Control Development Unit (FACDU) was a Royal Australian Air Force unit tasked with providing training in forward air control to RAAF pilots.  It was formed in 2002 from No. 76 Squadron's C Flight and was merged with the RAAF Special Tactics Project on 3 July 2009 to form No. 4 Squadron.
-
-No. 4 Forward Air Control Flight RAAF: No. 4 Forward Air Control Flight was a Royal Australian Air Force forward air control training unit.  The Flight was formed on 1 April 1970 at RAAF Base Williamtown and was equipped with four CAC Winjeel aircraft.  The Flight was responsible for training RAAF, Royal Australian Navy and Australian Army pilots and participated in most Australian military exercises.  No. 4 Forward Air Control Flight was disbanded on 1 January 1989 and became 'C' Flight of the newly reformed No. 76 Squadron.  No. 4 Squadron is the RAAF's current forward air control unit.
-
-RAAF Williams: RAAF Williams (ICAO: YMPC) is a Royal Australian Air Force (RAAF) military air base set across two locations, at Point Cook and Laverton, located approximately 20 km south-west of the Melbourne central business district in Victoria, Australia.  Both establishments previously existed as separate RAAF Bases (RAAF Base Point Cook and RAAF Base Laverton) until 1989 when they were amalgamated to form RAAF Williams.  The name was chosen in honour of Air Marshal Sir Richard Williams, the 'father' of the RAAF.
-
-Naming of military air bases: Most countries with military aviation forces have a system for naming of military airbases.  "Air Force Base" ("AFB") is part of the name of military airbases of the United States Air Force (USAF) and the South African Air Force (SAAF), with the USAF using it at the end of the name of the base (e.g. "Dover AFB"), and the SAAF using it at the start (e.g. "AFB Hoedspruit").  The Royal Australian Air Force uses a slightly different format referring to bases as "RAAF Base" (Royal Australian Air Force Base).  The Canadian Forces also uses a different format referring to any base as "CFB" (Canadian Forces Base) or "BFC" in French ("Base des Forces Canadiennes").
-
-Question: With which airport does this Royal Australian Air Force (RAAF) military air base, which had No. 4 Forward Air Control Flight Royal Australian Air Force unit, share the runway facilities with?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "raaf_base_name": {
-      "type": "string",
-      "description": "The name of the Royal Australian Air Force (RAAF) military air base."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "associated_unit": {
-      "type": "string",
-      "description": "The name of the unit that was formerly located at the RAAF base."
-    },
-    "shares_runway": {
-      "type": "boolean",
-      "description": "Indicates whether the RAAF base shares its runway facilities with another airport."
-    },
-    "shared_airport_name": {
-      "type": "string",
-      "description": "The name of the airport with which the RAAF base shares runway facilities."
+    {
+      "role": "user",
+      "content": "Context:\nNo. 82 Wing RAAF: No. 82 Wing is the strike and reconnaissance wing of the Royal Australian Air Force (RAAF).  It is headquartered at RAAF Base Amberley, Queensland.  Coming under the control of Air Combat Group, the wing operates F/A-18F Super Hornet multirole fighters and Pilatus PC-9 forward air control aircraft.  Its units include Nos. 1 and 6 Squadrons, operating the Super Hornet, and No. 4 Squadron, operating the PC-9.\n\nRAAF Base Williamtown: RAAF Base Williamtown (IATA: NTL, ICAO: YWLM) is a Royal Australian Air Force (RAAF) military air base located 8 NM north of the coastal city of Newcastle (27 km by road) in the local government area of Port Stephens, in New South Wales, Australia.  The base serves as the headquarters to both the Air Combat Group and the Surveillance and Response Group of the RAAF.  The military base shares its runway facilities with Newcastle Airport.  The nearest towns are Raymond Terrace, located 8 km west of the base and Medowie, 6.8 km , north of the base, which is home to many of the base's staff.\n\nRAAF Base Darwin: RAAF Base Darwin (IATA: DRW, ICAO: YPDN) is a Royal Australian Air Force (RAAF) military air base located in the city of Darwin, in the Northern Territory, Australia.  The base shares its runway with Darwin International Airport, for civil aviation purposes.  The heritage-listed RAAF Base Darwin is a forward operating base with year round activity with approximately 400 personnel.\n\nRAAF Base East Sale: RAAF Base East Sale (ICAO: YMES) is a Royal Australian Air Force (RAAF) military air base and training school, located in Sale , Victoria, Australia.  The base is one of the main training establishments of the RAAF, including where Australian Air Force Cadets have their annual General Service Training.  It is home to \"The Roulettes\" aerobatic team.  It is also now the home of the RAAF's Officers' Training School (OTS) following its relocation from Point Cook Base.  East Sale was upgraded to house the new OTS, which had its first intake of students in January 2008.  The base houses approximately 700 air force personnel.\n\nList of Royal Australian Air Force air marshals: The following is a list of Australians who have attained air marshal rank within the Royal Australian Air Force (RAAF); that is, service personnel who have held the rank of air chief marshal (four-star rank), air marshal (three-star rank) or air vice marshal (two-star rank).  The Royal Australian Air Force was established in 1921 as a separate branch of the Australian military forces.  The service was modelled after the Royal Air Force—formed three years earlier—and adopted the same ranking system.  Richard Williams, regarded as the \"father\" of the Royal Australian Air Force, was the service's first member to obtain air-officer rank on being promoted to air commodore (one-star rank) in 1927; he went on to become the first air vice marshal (1935) and air marshal (1940).  In 1965, Sir Frederick Scherger became the first officer to be advanced to air chief marshal, one of only four members of the Royal Australian Air Force to obtain this rank as of June 2014.  A further nineteen individuals have reached air marshal in the RAAF and 126 air vice marshal; seven officers have retired with the honorary rank of air vice marshal.\n\nRAAF Base Townsville: RAAF Base Townsville (IATA: TSV, ICAO: YBTL) (formerly RAAF Base Garbutt) is a Royal Australian Air Force (RAAF) air base located in Garbutt , 2 NM west of Townsville in Queensland, Australia.  The base houses a squadron of light transport aircraft, and is used for training purposes by combat aircraft.  It is also headquarters for No. 1 Wing Australian Air Force Cadets and, along with Lavarack Barracks, establishes Townsville as a key military centre.  The base's airfield is shared with the Townsville Airport.\n\nForward Air Control Development Unit RAAF: The Forward Air Control Development Unit (FACDU) was a Royal Australian Air Force unit tasked with providing training in forward air control to RAAF pilots.  It was formed in 2002 from No. 76 Squadron's C Flight and was merged with the RAAF Special Tactics Project on 3 July 2009 to form No. 4 Squadron.\n\nNo. 4 Forward Air Control Flight RAAF: No. 4 Forward Air Control Flight was a Royal Australian Air Force forward air control training unit.  The Flight was formed on 1 April 1970 at RAAF Base Williamtown and was equipped with four CAC Winjeel aircraft.  The Flight was responsible for training RAAF, Royal Australian Navy and Australian Army pilots and participated in most Australian military exercises.  No. 4 Forward Air Control Flight was disbanded on 1 January 1989 and became 'C' Flight of the newly reformed No. 76 Squadron.  No. 4 Squadron is the RAAF's current forward air control unit.\n\nRAAF Williams: RAAF Williams (ICAO: YMPC) is a Royal Australian Air Force (RAAF) military air base set across two locations, at Point Cook and Laverton, located approximately 20 km south-west of the Melbourne central business district in Victoria, Australia.  Both establishments previously existed as separate RAAF Bases (RAAF Base Point Cook and RAAF Base Laverton) until 1989 when they were amalgamated to form RAAF Williams.  The name was chosen in honour of Air Marshal Sir Richard Williams, the 'father' of the RAAF.\n\nNaming of military air bases: Most countries with military aviation forces have a system for naming of military airbases.  \"Air Force Base\" (\"AFB\") is part of the name of military airbases of the United States Air Force (USAF) and the South African Air Force (SAAF), with the USAF using it at the end of the name of the base (e.g. \"Dover AFB\"), and the SAAF using it at the start (e.g. \"AFB Hoedspruit\").  The Royal Australian Air Force uses a slightly different format referring to bases as \"RAAF Base\" (Royal Australian Air Force Base).  The Canadian Forces also uses a different format referring to any base as \"CFB\" (Canadian Forces Base) or \"BFC\" in French (\"Base des Forces Canadiennes\").\n\nQuestion: With which airport does this Royal Australian Air Force (RAAF) military air base, which had No. 4 Forward Air Control Flight Royal Australian Air Force unit, share the runway facilities with?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"raaf_base_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Royal Australian Air Force (RAAF) military air base.\"\n    },\n    \"associated_unit\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the unit that was formerly located at the RAAF base.\"\n    },\n    \"shares_runway\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates whether the RAAF base shares its runway facilities with another airport.\"\n    },\n    \"shared_airport_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the airport with which the RAAF base shares runway facilities.\"\n    }\n  },\n  \"required\": [\n    \"raaf_base_name\",\n    \"associated_unit\",\n    \"shares_runway\",\n    \"shared_airport_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "raaf_base_name",
-    "associated_unit",
-    "shares_runway",
-    "shared_airport_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "raaf_base_name": {
+        "type": "string",
+        "description": "The name of the Royal Australian Air Force (RAAF) military air base."
+      },
+      "associated_unit": {
+        "type": "string",
+        "description": "The name of the unit that was formerly located at the RAAF base."
+      },
+      "shares_runway": {
+        "type": "boolean",
+        "description": "Indicates whether the RAAF base shares its runway facilities with another airport."
+      },
+      "shared_airport_name": {
+        "type": "string",
+        "description": "The name of the airport with which the RAAF base shares runway facilities."
+      }
+    },
+    "required": [
+      "raaf_base_name",
+      "associated_unit",
+      "shares_runway",
+      "shared_airport_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

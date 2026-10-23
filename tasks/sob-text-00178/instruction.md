@@ -1,83 +1,60 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Pou Sheng International: Pou Sheng International (Holdings) Limited () (), or Pou Sheng International, is a sportswear retailer in Mainland China under the brand of YY Sports.  In 2008, Pou Sheng International was spun off from its parent company, Yue Yuen Industrial Holdings (), and listed on the Hong Kong Stock Exchange with its IPO price of HK$2.93 per share.  Its brand portfolio of footwear as Nike, Adidas, Li Ning, Kappa, Reebok, PUMA, Converse, Hush Puppies, Nautica, Wolverine and Umbro.
-
-Sportswear (fashion): Sportswear is an American fashion term originally used to describe separates, but which, since the 1930s, has come to be applied to day and evening fashions of varying degrees of formality that demonstrate a specific relaxed approach to their design, while remaining appropriate for a wide range of social occasions.  The term is not necessarily synonymous with activewear, clothing designed specifically for participants in sporting pursuits.  Although sports clothing was available from European haute couture houses and "sporty" garments were increasingly worn as everyday or informal wear, the early American sportswear designers were associated with ready-to-wear manufacturers.  While most fashions in America in the early 20th century were directly copied from, or influenced heavily by Paris, American sportswear became a home-grown exception to this rule.  Sportswear was designed to be easy to look after, with accessible fastenings that enabled a modern emancipated woman to dress herself without a maid's assistance.
-
-SummerSlam (2002): SummerSlam (2002) was the fifteenth annual SummerSlam professional wrestling pay-per-view (PPV) event produced by World Wrestling Entertainment (WWE).  It was presented by Foot Locker.  It took place on August 25, 2002, at the Nassau Veterans Memorial Coliseum in Uniondale, New York.  With this event, SummerSlam became the first pay-per-view to have events in the three major indoor venues in the New York metropolitan area.  Madison Square Garden hosted the event in 1988, 1991, and 1998.  The Izod Center in East Rutherford, New Jersey hosted the event in 1989, 1997, and later in 2007.
-
-Tom Brigance: Thomas Franklin Brigance (February 4, 1913 – October 14, 1990), professionally known as Tom Brigance, was a Texan-born New York-based fashion designer noted for his work in sportswear in the 1930s, 1940s and 1950s.  As a house designer for Lord & Taylor, Brigance was best known for bathing costumes and play clothes, and for his clever use of flattering details such as pleats and darts.  During the 1930s Brigance was a rare example of a male working in the female-dominated world of American sportswear design.  In the late 1930s, he was regularly mentioned alongside Clare Potter as a leading name in mid-range priced sportswear.  Like Potter, Brigance was skilled at to designing smart, fashionable clothing which could easily be mass-produced, making his work attractive to manufacturers as well as to customers.
-
-Mary Ann DeWeese: Mary Ann DeWeese (1913–1993) was an American sportswear designer.  Appliquéd swimsuits and matching his-and-hers swimwear and sportswear are among the fashion firsts credited to DeWeese.
-
-Sydney Wragge: Sydney Wragge (1908-1978) was an American fashion designer active during the 1940s, 1950s and 1960s.  Working as B.H. Wragge, he was particularly renowned for his American sportswear, with the historian Caroline Rennolds Milbank declaring him the leader in mix-and-match separates and interchangeable wardrobe design.  In the 1930s and 1940s, Wragge, along with John Weitz, was one of the few male "pioneers" in the female-dominated world of early American sportswear design.  The fashion journalist Sally Kirkland, looking over the development of American sportswear, compared Wragge's design ethos to that of a later designer, Ralph Lauren, declaring that they shared impeccable taste and an eye for the best possible fabrics and prints.  He was known for his versatile work, offering jackets that worked with both full and narrow skirts, and two-piece dresses that worked equally well as interchangeable blouses and skirts.  In the 1960s, he updated his work to successfully meet the demands of the next generation for even more practical, pared-down clothing.  When curating his major exhibition of American sportswear for the Metropolitan Museum of Art in 1998, Richard Martin noted that many of Wragge's former customers still retained the capsule wardrobes they had originally bought in the 1940s and 1950s.
-
-Clare Potter: Clare Potter was a fashion designer who was born in Jersey City, New Jersey in 1903.  In the 1930s she was one of the first American fashion designers to be promoted as an individual design talent.  Working under her elided name Clarepotter, she has been credited as one of the inventors of American sportswear.  Based in Manhattan, she continued designing through the 1940s and 1950s.  Her clothes were renowned for being elegant, but easy-to-wear and relaxed, and for their distinctive use of colour.  She founded a ready-to-wear fashion company in Manhattan named "Timbertop" in 1948, and in the 1960s she also established a wholesale company to manufacture fashions.  Potter was one of the 17 women gathered together by Edna Woolman Chase, editor-in-chief of "Vogue" to form the "Fashion Group International, Inc.", in 1928.
-
-Carolyn Schnurer: Carolyn Schnurer (born in New York City as Carolyn Goldsand on January 5, 1908 and died on March 15, 1998 in Palm Beach, Florida) was a fashion designer and a pioneer in American sportswear.  Schnurer's designs have been featured in the magazines "Vogue", "Harper's Bazaar", and "Life" as well as in the Metropolitan Museum of Art.  She has also received awards for her designs from Coty, The Cotton Council, International Sportswear, Miami Sportswear, and Boston Sportswear.
-
-Foot Locker: Foot Locker Retail, Inc. is an American sportswear and footwear retailer, with its headquarters in Midtown Manhattan, New York City, and operating in 28 countries worldwide.
-
-The Iconic: THE ICONIC is a Sydney-based, Australian online fashion and sportswear retailer.  The company was launched in 2011 under e-commerce incubator Rocket Internet, and is one of Australia’s largest online fashion retailers, creating a growing home-based fashion community.
-
-Question: What event in 2002 was presented by an American sportswear retailer headquartered in Manhattan?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "event_name": {
-      "type": "string",
-      "description": "The name of the event."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "event_year": {
-      "type": "integer",
-      "description": "The year the event took place."
-    },
-    "presenter_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the company that presented the event."
-        },
-        "type": {
-          "type": "string",
-          "description": "The type of business the presenter is (e.g., sportswear retailer)."
-        },
-        "headquarters_city": {
-          "type": "string",
-          "description": "The city where the presenter's headquarters are located."
-        },
-        "headquarters_country": {
-          "type": "string",
-          "description": "The country where the presenter's headquarters are located."
-        }
-      },
-      "required": [
-        "name",
-        "type",
-        "headquarters_city",
-        "headquarters_country"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nPou Sheng International: Pou Sheng International (Holdings) Limited () (), or Pou Sheng International, is a sportswear retailer in Mainland China under the brand of YY Sports.  In 2008, Pou Sheng International was spun off from its parent company, Yue Yuen Industrial Holdings (), and listed on the Hong Kong Stock Exchange with its IPO price of HK$2.93 per share.  Its brand portfolio of footwear as Nike, Adidas, Li Ning, Kappa, Reebok, PUMA, Converse, Hush Puppies, Nautica, Wolverine and Umbro.\n\nSportswear (fashion): Sportswear is an American fashion term originally used to describe separates, but which, since the 1930s, has come to be applied to day and evening fashions of varying degrees of formality that demonstrate a specific relaxed approach to their design, while remaining appropriate for a wide range of social occasions.  The term is not necessarily synonymous with activewear, clothing designed specifically for participants in sporting pursuits.  Although sports clothing was available from European haute couture houses and \"sporty\" garments were increasingly worn as everyday or informal wear, the early American sportswear designers were associated with ready-to-wear manufacturers.  While most fashions in America in the early 20th century were directly copied from, or influenced heavily by Paris, American sportswear became a home-grown exception to this rule.  Sportswear was designed to be easy to look after, with accessible fastenings that enabled a modern emancipated woman to dress herself without a maid's assistance.\n\nSummerSlam (2002): SummerSlam (2002) was the fifteenth annual SummerSlam professional wrestling pay-per-view (PPV) event produced by World Wrestling Entertainment (WWE).  It was presented by Foot Locker.  It took place on August 25, 2002, at the Nassau Veterans Memorial Coliseum in Uniondale, New York.  With this event, SummerSlam became the first pay-per-view to have events in the three major indoor venues in the New York metropolitan area.  Madison Square Garden hosted the event in 1988, 1991, and 1998.  The Izod Center in East Rutherford, New Jersey hosted the event in 1989, 1997, and later in 2007.\n\nTom Brigance: Thomas Franklin Brigance (February 4, 1913 – October 14, 1990), professionally known as Tom Brigance, was a Texan-born New York-based fashion designer noted for his work in sportswear in the 1930s, 1940s and 1950s.  As a house designer for Lord & Taylor, Brigance was best known for bathing costumes and play clothes, and for his clever use of flattering details such as pleats and darts.  During the 1930s Brigance was a rare example of a male working in the female-dominated world of American sportswear design.  In the late 1930s, he was regularly mentioned alongside Clare Potter as a leading name in mid-range priced sportswear.  Like Potter, Brigance was skilled at to designing smart, fashionable clothing which could easily be mass-produced, making his work attractive to manufacturers as well as to customers.\n\nMary Ann DeWeese: Mary Ann DeWeese (1913–1993) was an American sportswear designer.  Appliquéd swimsuits and matching his-and-hers swimwear and sportswear are among the fashion firsts credited to DeWeese.\n\nSydney Wragge: Sydney Wragge (1908-1978) was an American fashion designer active during the 1940s, 1950s and 1960s.  Working as B.H. Wragge, he was particularly renowned for his American sportswear, with the historian Caroline Rennolds Milbank declaring him the leader in mix-and-match separates and interchangeable wardrobe design.  In the 1930s and 1940s, Wragge, along with John Weitz, was one of the few male \"pioneers\" in the female-dominated world of early American sportswear design.  The fashion journalist Sally Kirkland, looking over the development of American sportswear, compared Wragge's design ethos to that of a later designer, Ralph Lauren, declaring that they shared impeccable taste and an eye for the best possible fabrics and prints.  He was known for his versatile work, offering jackets that worked with both full and narrow skirts, and two-piece dresses that worked equally well as interchangeable blouses and skirts.  In the 1960s, he updated his work to successfully meet the demands of the next generation for even more practical, pared-down clothing.  When curating his major exhibition of American sportswear for the Metropolitan Museum of Art in 1998, Richard Martin noted that many of Wragge's former customers still retained the capsule wardrobes they had originally bought in the 1940s and 1950s.\n\nClare Potter: Clare Potter was a fashion designer who was born in Jersey City, New Jersey in 1903.  In the 1930s she was one of the first American fashion designers to be promoted as an individual design talent.  Working under her elided name Clarepotter, she has been credited as one of the inventors of American sportswear.  Based in Manhattan, she continued designing through the 1940s and 1950s.  Her clothes were renowned for being elegant, but easy-to-wear and relaxed, and for their distinctive use of colour.  She founded a ready-to-wear fashion company in Manhattan named \"Timbertop\" in 1948, and in the 1960s she also established a wholesale company to manufacture fashions.  Potter was one of the 17 women gathered together by Edna Woolman Chase, editor-in-chief of \"Vogue\" to form the \"Fashion Group International, Inc.\", in 1928.\n\nCarolyn Schnurer: Carolyn Schnurer (born in New York City as Carolyn Goldsand on January 5, 1908 and died on March 15, 1998 in Palm Beach, Florida) was a fashion designer and a pioneer in American sportswear.  Schnurer's designs have been featured in the magazines \"Vogue\", \"Harper's Bazaar\", and \"Life\" as well as in the Metropolitan Museum of Art.  She has also received awards for her designs from Coty, The Cotton Council, International Sportswear, Miami Sportswear, and Boston Sportswear.\n\nFoot Locker: Foot Locker Retail, Inc. is an American sportswear and footwear retailer, with its headquarters in Midtown Manhattan, New York City, and operating in 28 countries worldwide.\n\nThe Iconic: THE ICONIC is a Sydney-based, Australian online fashion and sportswear retailer.  The company was launched in 2011 under e-commerce incubator Rocket Internet, and is one of Australia’s largest online fashion retailers, creating a growing home-based fashion community.\n\nQuestion: What event in 2002 was presented by an American sportswear retailer headquartered in Manhattan?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"event_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the event.\"\n    },\n    \"event_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the event took place.\"\n    },\n    \"presenter_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the company that presented the event.\"\n        },\n        \"type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of business the presenter is (e.g., sportswear retailer).\"\n        },\n        \"headquarters_city\": {\n          \"type\": \"string\",\n          \"description\": \"The city where the presenter's headquarters are located.\"\n        },\n        \"headquarters_country\": {\n          \"type\": \"string\",\n          \"description\": \"The country where the presenter's headquarters are located.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"type\",\n        \"headquarters_city\",\n        \"headquarters_country\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"event_name\",\n    \"event_year\",\n    \"presenter_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "event_name",
-    "event_year",
-    "presenter_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "event_name": {
+        "type": "string",
+        "description": "The name of the event."
+      },
+      "event_year": {
+        "type": "integer",
+        "description": "The year the event took place."
+      },
+      "presenter_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the company that presented the event."
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of business the presenter is (e.g., sportswear retailer)."
+          },
+          "headquarters_city": {
+            "type": "string",
+            "description": "The city where the presenter's headquarters are located."
+          },
+          "headquarters_country": {
+            "type": "string",
+            "description": "The country where the presenter's headquarters are located."
+          }
+        },
+        "required": [
+          "name",
+          "type",
+          "headquarters_city",
+          "headquarters_country"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "event_name",
+      "event_year",
+      "presenter_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

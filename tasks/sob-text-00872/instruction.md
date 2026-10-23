@@ -1,88 +1,65 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-The Australian Bar and Restaurant: The Australian Bar and Restaurant is an Australian pub and restaurant in New York City that hosts live performances regularly and has Australian sports shown regularly like Australian Football League, National Rugby League, Super Rugby and Cricket World Cup.  The food menu offers also Australian cuisine themed food such as kangaroo burgers, steaks and homemade Meat pies and beer like Coopers.
-
-Shipyard Brewing Company: Shipyard Brewing Company is a brewery and soft drink manufacturer in Portland, Maine, USA, and founded in 1994.  Shipyard is the largest brewer in Maine (owning the Shipyard, Sea Dog Brewing Company, and Casco Bay Brewing Company banners, and bottling under contract with Gritty McDuff's Brewing Company).  Shipyard is the fourth largest microbrewery in New England after Boston Beer Company, Harpoon Brewery, and Magic Hat Brewing Company.
-
-Gage Roads Brewing Company: The Gage Roads Brewing Company (Gage Roads Brewing Co. Ltd) is an Australian craft brewery located just outside the city of Fremantle in Palmyra, Western Australia.  It is one of Australia's largest independent breweries.  In 2016, it's New World Pale Ale - "Little Dove" - was awarded the Trophy for Champion Australian Beer at the 2016 Australian International Beer Awards.  In 2015, it was runner-up Champion Large Brewery at the Australian International Beer Awards.
-
-Beer in San Diego County, California: San Diego County, California has been called "the Craft Beer Capital of America."  As of 2016 the county was home to 125 licensed craft breweries - the most of any region in the United States.  Based on 2016 sales volume, three San Diego County breweries - Stone, Green Flash, and Karl Strauss - rank among the 50 largest craft brewers in the United States.  San Diego County brewers pioneered the specialty beer style known as Double India Pale Ale (Double IPA), sometimes called San Diego Pale Ale.  Its beer culture is a draw for tourism, particularly during major festivals such as San Diego Beer Week and the San Diego International Beer Competition.  San Diego County breweries like Stone Brewing Co., AleSmith Brewing Company and Ballast Point Brewing Company are consistently rated among the top breweries in the world.
-
-Little Creatures Brewery: Little Creatures is an Australian brewing company based in Fremantle, Western Australia, originally established in 2000 by the original brewers of the Matilda Bay Brewing Company.  The name "Little Creatures" is inspired by a song lyric from the Talking Heads "Little Creatures" album and refers to the live yeast cells that turn the sugars in malt wort into ethanol.
-
-Big Sky Brewing Company: Big Sky Brewing Company is a brewery located in Missoula, Montana, USA.  It brews six different styles of beer: Moose Drool (a brown ale), Scape Goat (Pale Ale), Big Sky (India Pale ale), Powder Hound (Winter Ale), Summer Honey (Seasonal Ale), and Trout Slayer Ale.
-
-Marshall Brewing Company: Marshall Brewing Company is a brewery in Tulsa, Oklahoma, USA.  It opened in 2008 in a 7300 sqft facility outside downtown Tulsa, Oklahoma.  It is the first commercial brewing facility in Tulsa since World War II.  The brewery produced about 1200 USbeerbbl in 2009 and 2000 USbeerbbl in 2010.  Currently, Marshall Brewing offers four year-round core beers: a North German-style pilsner, an English bitter, an India Pale Ale, and an American-style wheat ale.  Outside of their core brands, Marshall Brewing offers over 20 different beers throughout the year, styles including an India-style Black Ale (El Cucuy), a German Hefeweizen (Klaus), and a Munich Dunkel, among others.
-
-Café Oz Australian Bar: Café Oz Australian Bar is an Australian themed pub and restaurant in France.  Café Oz Australian Bar hosts live performances regularly and has Australian sports shown regularly like Australian Football League, National Rugby League, Super Rugby and Cricket World Cup.  The food menu offers also Australian cuisine themed food such as kangaroo burgers, steaks Australian Wild Boar Burgers, Barramundi Fish and Chips and homemade Meat pies and beer like Coopers, Victoria Bitter, Little Creatures Pale Ale and Bundaberg Rum, Bundaberg Ginger Beer.
-
-Tired Hands Brewing Company: Tired Hands Brewing Company is a brew-cafe founded in 2011 in Ardmore, Pennsylvania, United States by Jean Broillet IV.  The current location at 16 Ardmore Ave has a 1,000 barrel per year and 150 chair capacity.  Tired Hands produces their beer in small batches and specializes in Belgian and French farmhouse ales as well as American hop-forward ales.  The food menu includes on site baked bread, with locally-produced cheeses, meats, pickled items, and seasonal produce.  In response to ridiculous demand, a second brewpub called the "Fermentaria" was opened in April 2015, at 35 Cricket Terrace.  It has brewing capacity for up to 10,000 barrels per year, and features a different taplist and food menu than the brew-cafe.
-
-Heavy Seas Beer: Heavy Seas Beer is brewed by Clipper City Brewing Company, in Baltimore, Maryland.  The brewery was established by Hugh Sisson in 1995.  Previously, Sisson operated Maryland's first brewpub, Sisson's.  In 2010, the brewery rebranded.  While the name of the company remains Clipper City Brewing Company, all of its beer falls under the Heavy Seas brand.  Heavy Seas hosts tours on most weekends.  It is located at 4615 Hollins Ferry Road, Suite B, in the Halethorpe section of Baltimore.  Heavy Seas currently offers a variety of beer styles in approx. 18 states within the United States.  Several Heavy Seas beers have been awarded and include the following: Cutlass Amber Lager (a repeat medal winner at the Great American Beer Festival from 2006-2010, bronze medal winner at the 2010 World Beer Cup and silver medal winner at the 2012 World Beer Cup as Heavy Seas Märzen), Powder Monkey Pale Ale (silver medal winner at the 2008 Great American Beer Festival and bronze medal winner at the 2010 World Beer Cup as Heavy Seas Pale Ale), Small Craft Warning Uber Pils (bronze medal winner at the 2004 Great American Beer Festival), Gold Ale (gold medal winner at the 2010 World Beer Cup, bronze medal winner at the 2010 Great American Beer Festival and bronze medal winner at the 2014 Great American Beer Festival as Heavy Seas Gold Ale) and Winter Storm Imperial ESB (gold medal winner at the 2008 World Beer Cup).
-
-Question: Café Oz Australian Bar is an Australian themed pub and restaurant in France, the food menu offers also Australian cuisine themed food such as Little Creatures Pale Ale, from which Australian brewing company based in Fremantle, Western Australia, originally established in 2000, by the original brewers of the Matilda Bay Brewing Company?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "brewery_name": {
-      "type": "string",
-      "description": "The name of the Australian brewing company."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "location": {
-      "type": "object",
-      "properties": {
-        "city": {
-          "type": "string",
-          "description": "The city where the brewery is based."
-        },
-        "state_region": {
-          "type": "string",
-          "description": "The state or region where the brewery is based."
-        },
-        "country": {
-          "type": "string",
-          "description": "The country where the brewery is based."
-        }
-      },
-      "required": [
-        "city",
-        "state_region",
-        "country"
-      ],
-      "additionalProperties": false
-    },
-    "founding_year": {
-      "type": "integer",
-      "description": "The year the brewery was originally established."
-    },
-    "original_brewers_origin": {
-      "type": "string",
-      "description": "The previous company the original brewers were associated with."
-    },
-    "product_mentioned": {
-      "type": "string",
-      "description": "The specific beer product from this brewery mentioned in the context."
+    {
+      "role": "user",
+      "content": "Context:\nThe Australian Bar and Restaurant: The Australian Bar and Restaurant is an Australian pub and restaurant in New York City that hosts live performances regularly and has Australian sports shown regularly like Australian Football League, National Rugby League, Super Rugby and Cricket World Cup.  The food menu offers also Australian cuisine themed food such as kangaroo burgers, steaks and homemade Meat pies and beer like Coopers.\n\nShipyard Brewing Company: Shipyard Brewing Company is a brewery and soft drink manufacturer in Portland, Maine, USA, and founded in 1994.  Shipyard is the largest brewer in Maine (owning the Shipyard, Sea Dog Brewing Company, and Casco Bay Brewing Company banners, and bottling under contract with Gritty McDuff's Brewing Company).  Shipyard is the fourth largest microbrewery in New England after Boston Beer Company, Harpoon Brewery, and Magic Hat Brewing Company.\n\nGage Roads Brewing Company: The Gage Roads Brewing Company (Gage Roads Brewing Co. Ltd) is an Australian craft brewery located just outside the city of Fremantle in Palmyra, Western Australia.  It is one of Australia's largest independent breweries.  In 2016, it's New World Pale Ale - \"Little Dove\" - was awarded the Trophy for Champion Australian Beer at the 2016 Australian International Beer Awards.  In 2015, it was runner-up Champion Large Brewery at the Australian International Beer Awards.\n\nBeer in San Diego County, California: San Diego County, California has been called \"the Craft Beer Capital of America.\"  As of 2016 the county was home to 125 licensed craft breweries - the most of any region in the United States.  Based on 2016 sales volume, three San Diego County breweries - Stone, Green Flash, and Karl Strauss - rank among the 50 largest craft brewers in the United States.  San Diego County brewers pioneered the specialty beer style known as Double India Pale Ale (Double IPA), sometimes called San Diego Pale Ale.  Its beer culture is a draw for tourism, particularly during major festivals such as San Diego Beer Week and the San Diego International Beer Competition.  San Diego County breweries like Stone Brewing Co., AleSmith Brewing Company and Ballast Point Brewing Company are consistently rated among the top breweries in the world.\n\nLittle Creatures Brewery: Little Creatures is an Australian brewing company based in Fremantle, Western Australia, originally established in 2000 by the original brewers of the Matilda Bay Brewing Company.  The name \"Little Creatures\" is inspired by a song lyric from the Talking Heads \"Little Creatures\" album and refers to the live yeast cells that turn the sugars in malt wort into ethanol.\n\nBig Sky Brewing Company: Big Sky Brewing Company is a brewery located in Missoula, Montana, USA.  It brews six different styles of beer: Moose Drool (a brown ale), Scape Goat (Pale Ale), Big Sky (India Pale ale), Powder Hound (Winter Ale), Summer Honey (Seasonal Ale), and Trout Slayer Ale.\n\nMarshall Brewing Company: Marshall Brewing Company is a brewery in Tulsa, Oklahoma, USA.  It opened in 2008 in a 7300 sqft facility outside downtown Tulsa, Oklahoma.  It is the first commercial brewing facility in Tulsa since World War II.  The brewery produced about 1200 USbeerbbl in 2009 and 2000 USbeerbbl in 2010.  Currently, Marshall Brewing offers four year-round core beers: a North German-style pilsner, an English bitter, an India Pale Ale, and an American-style wheat ale.  Outside of their core brands, Marshall Brewing offers over 20 different beers throughout the year, styles including an India-style Black Ale (El Cucuy), a German Hefeweizen (Klaus), and a Munich Dunkel, among others.\n\nCafé Oz Australian Bar: Café Oz Australian Bar is an Australian themed pub and restaurant in France.  Café Oz Australian Bar hosts live performances regularly and has Australian sports shown regularly like Australian Football League, National Rugby League, Super Rugby and Cricket World Cup.  The food menu offers also Australian cuisine themed food such as kangaroo burgers, steaks Australian Wild Boar Burgers, Barramundi Fish and Chips and homemade Meat pies and beer like Coopers, Victoria Bitter, Little Creatures Pale Ale and Bundaberg Rum, Bundaberg Ginger Beer.\n\nTired Hands Brewing Company: Tired Hands Brewing Company is a brew-cafe founded in 2011 in Ardmore, Pennsylvania, United States by Jean Broillet IV.  The current location at 16 Ardmore Ave has a 1,000 barrel per year and 150 chair capacity.  Tired Hands produces their beer in small batches and specializes in Belgian and French farmhouse ales as well as American hop-forward ales.  The food menu includes on site baked bread, with locally-produced cheeses, meats, pickled items, and seasonal produce.  In response to ridiculous demand, a second brewpub called the \"Fermentaria\" was opened in April 2015, at 35 Cricket Terrace.  It has brewing capacity for up to 10,000 barrels per year, and features a different taplist and food menu than the brew-cafe.\n\nHeavy Seas Beer: Heavy Seas Beer is brewed by Clipper City Brewing Company, in Baltimore, Maryland.  The brewery was established by Hugh Sisson in 1995.  Previously, Sisson operated Maryland's first brewpub, Sisson's.  In 2010, the brewery rebranded.  While the name of the company remains Clipper City Brewing Company, all of its beer falls under the Heavy Seas brand.  Heavy Seas hosts tours on most weekends.  It is located at 4615 Hollins Ferry Road, Suite B, in the Halethorpe section of Baltimore.  Heavy Seas currently offers a variety of beer styles in approx. 18 states within the United States.  Several Heavy Seas beers have been awarded and include the following: Cutlass Amber Lager (a repeat medal winner at the Great American Beer Festival from 2006-2010, bronze medal winner at the 2010 World Beer Cup and silver medal winner at the 2012 World Beer Cup as Heavy Seas Märzen), Powder Monkey Pale Ale (silver medal winner at the 2008 Great American Beer Festival and bronze medal winner at the 2010 World Beer Cup as Heavy Seas Pale Ale), Small Craft Warning Uber Pils (bronze medal winner at the 2004 Great American Beer Festival), Gold Ale (gold medal winner at the 2010 World Beer Cup, bronze medal winner at the 2010 Great American Beer Festival and bronze medal winner at the 2014 Great American Beer Festival as Heavy Seas Gold Ale) and Winter Storm Imperial ESB (gold medal winner at the 2008 World Beer Cup).\n\nQuestion: Café Oz Australian Bar is an Australian themed pub and restaurant in France, the food menu offers also Australian cuisine themed food such as Little Creatures Pale Ale, from which Australian brewing company based in Fremantle, Western Australia, originally established in 2000, by the original brewers of the Matilda Bay Brewing Company?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"brewery_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Australian brewing company.\"\n    },\n    \"location\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"city\": {\n          \"type\": \"string\",\n          \"description\": \"The city where the brewery is based.\"\n        },\n        \"state_region\": {\n          \"type\": \"string\",\n          \"description\": \"The state or region where the brewery is based.\"\n        },\n        \"country\": {\n          \"type\": \"string\",\n          \"description\": \"The country where the brewery is based.\"\n        }\n      },\n      \"required\": [\n        \"city\",\n        \"state_region\",\n        \"country\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"founding_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the brewery was originally established.\"\n    },\n    \"original_brewers_origin\": {\n      \"type\": \"string\",\n      \"description\": \"The previous company the original brewers were associated with.\"\n    },\n    \"product_mentioned\": {\n      \"type\": \"string\",\n      \"description\": \"The specific beer product from this brewery mentioned in the context.\"\n    }\n  },\n  \"required\": [\n    \"brewery_name\",\n    \"location\",\n    \"founding_year\",\n    \"original_brewers_origin\",\n    \"product_mentioned\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "brewery_name",
-    "location",
-    "founding_year",
-    "original_brewers_origin",
-    "product_mentioned"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "brewery_name": {
+        "type": "string",
+        "description": "The name of the Australian brewing company."
+      },
+      "location": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "The city where the brewery is based."
+          },
+          "state_region": {
+            "type": "string",
+            "description": "The state or region where the brewery is based."
+          },
+          "country": {
+            "type": "string",
+            "description": "The country where the brewery is based."
+          }
+        },
+        "required": [
+          "city",
+          "state_region",
+          "country"
+        ],
+        "additionalProperties": false
+      },
+      "founding_year": {
+        "type": "integer",
+        "description": "The year the brewery was originally established."
+      },
+      "original_brewers_origin": {
+        "type": "string",
+        "description": "The previous company the original brewers were associated with."
+      },
+      "product_mentioned": {
+        "type": "string",
+        "description": "The specific beer product from this brewery mentioned in the context."
+      }
+    },
+    "required": [
+      "brewery_name",
+      "location",
+      "founding_year",
+      "original_brewers_origin",
+      "product_mentioned"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

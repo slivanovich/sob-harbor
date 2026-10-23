@@ -1,116 +1,93 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Ammi visnaga: Ammi visnaga is a species of flowering plant in the carrot family known by many common names, including toothpick-plant, toothpickweed, bisnaga, and khella.  Also known as Bishop's weed.  It is native to Europe, Asia, and North Africa, but it can be found throughout the world as an introduced species.  This is an annual or biennial herb growing from a taproot erect to a maximum height near 80 centimeters.  Leaves are up to 20 centimeters long and generally oval to triangular in shape but dissected into many small linear to lance-shaped segments.  The inflorescence is a compound umbel of white flowers similar to those of other Apiaceae species.  The fruit is a compressed oval-shaped body less than 3 millimeters long.  This and other "Ammi" species are sources of khellin, a diuretic extract.
-
-Geranium potentilloides: Geranium potentilloides is a species of geranium known by the common name cinquefoil geranium.  It is native to the eastern half of Australia, where it is widespread, as well as New Zealand, and Indonesia.  It is also present in the San Francisco Bay Area in the United States, where it is an introduced species.  It is a plant of several woodland, grassland, and forest habitat types.  This is a perennial herb growing decumbent to prostrate along the ground, with roughly hairy stems up to half a meter long, sometimes rooting at nodes that come in contact with moist soil.  The leaves are borne on petioles and have rounded blades divided into several lobed segments.  The inflorescence bears one or less often two flowers, each with notched petals 6 to 8 millimeters long, usually pink in color.
-
-Geranium: Geranium is a genus of 422 species of flowering annual, biennial, and perennial plants that are commonly known as the cranesbills.  They are found throughout the temperate regions of the world and the mountains of the tropics, but mostly in the eastern part of the Mediterranean region.  The long, palmately cleft leaves are broadly circular in form.  The flowers have five petals and are coloured white, pink, purple or blue, often with distinctive veining.  Geraniums will grow in any soil as long as it is not waterlogged.  Propagation is by semiripe cuttings in summer, by seed, or by division in autumn or spring.
-
-Geranium erianthum: Geranium erianthum (woolly geranium) is a flowering plant found in China, Japan, Russia, and North America.  Within its range, it is often known as "wild geranium" or "cranesbill", but note that these common names are also used for several other species within the "Geranium" genus.
-
-Geranium × magnificum: Geranium" × "magnificum (purple cranesbill) is a species of hardy flowering herbaceous perennial plant in the genus "Geranium", Geraniaceae family.  It is the result of hybridisation between "Geranium platypetalum" and "Geranium ibericum".  It has lobed leaves with violet-blue flowers in summer.  It is suitable for cultivation in temperate regions.  This plant has gained the Royal Horticultural Society's Award of Garden Merit.
-
-Geranium lucidum: Geranium lucidum, commonly known as shining cranesbill or (in North America) shining geranium or shiny geranium, is a herbaceous annual plant of the genus "Geranium".  It is native to Europe, western Asia and North Africa.  It has been introduced to North America as a garden plant and in places, particularly the Pacific Northwest, has become naturalised and is viewed as an invasive species and noxious weed.
-
-Pelargonium grossularioides: Pelargonium grossularioides is a species of geranium known by the common names gooseberry geranium and coconut geranium.  It is native to southern Africa and it is known in coastal California and parts of India as an introduced species.  It is sometimes grown as a garden geranium.  This is a glandular, aromatic perennial herb with an erect, angular, reddish stem 20 to 50 centimeters tall.  The green to reddish leaves are a few centimeters long and slightly lobed with toothed edges.  The inflorescence is an umbel of 3 to 50 flowers in shades of light pink to dark reddish purple.  There are five narrow petals no more than 6 millimeters long.
-
-Geranium macrorrhizum: Geranium macrorrhizum is a species of hardy flowering herbaceous perennial plant in the genus "Geranium", Geraniaceae family.  It is native to the South east Alps and the Balkans.  Its common names include bigroot geranium, Bulgarian geranium, and rock crane's-bill.
-
-Ammi (plant): Ammi is a genus of 3 to 6 species of plants in the Apiaceae family.  They are native to southern Europe, northern Africa and Southwest Asia.  "Ammi spp."  (Bishops weed) is prohibited by the Australian New Zealand Food Standards code under standard 1.4.4 due to active constituents:
-
-Geranium retrorsum: Geranium retrorsum is a species of "Geranium" known by the common name New Zealand geranium in the United States and common cranesbill in Australia.  It is native to Australia but can be found on other continents as an introduced species which is often a noxious weed as well.  This is a perennial herb growing generally erect to a maximum height approaching half a meter.  The stems are green to reddish and have stiff hairs.  The leaves are a few centimeters wide and divided into several segments which are further divided into small lobes.  The small flowers are fuchsia to purple in color.  The fruit has a straight style about a centimeter in length.
-
-Question: Does Ammi or Geranium have more species?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "genus_comparison": {
-      "type": "object",
-      "properties": {
-        "genus_a": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "species_count": {
-              "type": "integer"
-            }
-          },
-          "required": [
-            "name",
-            "species_count"
-          ],
-          "additionalProperties": false
-        },
-        "genus_b": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "species_count": {
-              "type": "integer"
-            }
-          },
-          "required": [
-            "name",
-            "species_count"
-          ],
-          "additionalProperties": false
-        }
-      },
-      "required": [
-        "genus_a",
-        "genus_b"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "comparison_result": {
-      "type": "object",
-      "properties": {
-        "genus_with_more_species": {
-          "type": "string"
-        },
-        "more_species_count": {
-          "type": "integer"
-        },
-        "genus_with_fewer_species": {
-          "type": "string"
-        },
-        "fewer_species_count": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "genus_with_more_species",
-        "more_species_count",
-        "genus_with_fewer_species",
-        "fewer_species_count"
-      ],
-      "additionalProperties": false
-    },
-    "answer": {
-      "type": "string"
+    {
+      "role": "user",
+      "content": "Context:\nAmmi visnaga: Ammi visnaga is a species of flowering plant in the carrot family known by many common names, including toothpick-plant, toothpickweed, bisnaga, and khella.  Also known as Bishop's weed.  It is native to Europe, Asia, and North Africa, but it can be found throughout the world as an introduced species.  This is an annual or biennial herb growing from a taproot erect to a maximum height near 80 centimeters.  Leaves are up to 20 centimeters long and generally oval to triangular in shape but dissected into many small linear to lance-shaped segments.  The inflorescence is a compound umbel of white flowers similar to those of other Apiaceae species.  The fruit is a compressed oval-shaped body less than 3 millimeters long.  This and other \"Ammi\" species are sources of khellin, a diuretic extract.\n\nGeranium potentilloides: Geranium potentilloides is a species of geranium known by the common name cinquefoil geranium.  It is native to the eastern half of Australia, where it is widespread, as well as New Zealand, and Indonesia.  It is also present in the San Francisco Bay Area in the United States, where it is an introduced species.  It is a plant of several woodland, grassland, and forest habitat types.  This is a perennial herb growing decumbent to prostrate along the ground, with roughly hairy stems up to half a meter long, sometimes rooting at nodes that come in contact with moist soil.  The leaves are borne on petioles and have rounded blades divided into several lobed segments.  The inflorescence bears one or less often two flowers, each with notched petals 6 to 8 millimeters long, usually pink in color.\n\nGeranium: Geranium is a genus of 422 species of flowering annual, biennial, and perennial plants that are commonly known as the cranesbills.  They are found throughout the temperate regions of the world and the mountains of the tropics, but mostly in the eastern part of the Mediterranean region.  The long, palmately cleft leaves are broadly circular in form.  The flowers have five petals and are coloured white, pink, purple or blue, often with distinctive veining.  Geraniums will grow in any soil as long as it is not waterlogged.  Propagation is by semiripe cuttings in summer, by seed, or by division in autumn or spring.\n\nGeranium erianthum: Geranium erianthum (woolly geranium) is a flowering plant found in China, Japan, Russia, and North America.  Within its range, it is often known as \"wild geranium\" or \"cranesbill\", but note that these common names are also used for several other species within the \"Geranium\" genus.\n\nGeranium × magnificum: Geranium\" × \"magnificum (purple cranesbill) is a species of hardy flowering herbaceous perennial plant in the genus \"Geranium\", Geraniaceae family.  It is the result of hybridisation between \"Geranium platypetalum\" and \"Geranium ibericum\".  It has lobed leaves with violet-blue flowers in summer.  It is suitable for cultivation in temperate regions.  This plant has gained the Royal Horticultural Society's Award of Garden Merit.\n\nGeranium lucidum: Geranium lucidum, commonly known as shining cranesbill or (in North America) shining geranium or shiny geranium, is a herbaceous annual plant of the genus \"Geranium\".  It is native to Europe, western Asia and North Africa.  It has been introduced to North America as a garden plant and in places, particularly the Pacific Northwest, has become naturalised and is viewed as an invasive species and noxious weed.\n\nPelargonium grossularioides: Pelargonium grossularioides is a species of geranium known by the common names gooseberry geranium and coconut geranium.  It is native to southern Africa and it is known in coastal California and parts of India as an introduced species.  It is sometimes grown as a garden geranium.  This is a glandular, aromatic perennial herb with an erect, angular, reddish stem 20 to 50 centimeters tall.  The green to reddish leaves are a few centimeters long and slightly lobed with toothed edges.  The inflorescence is an umbel of 3 to 50 flowers in shades of light pink to dark reddish purple.  There are five narrow petals no more than 6 millimeters long.\n\nGeranium macrorrhizum: Geranium macrorrhizum is a species of hardy flowering herbaceous perennial plant in the genus \"Geranium\", Geraniaceae family.  It is native to the South east Alps and the Balkans.  Its common names include bigroot geranium, Bulgarian geranium, and rock crane's-bill.\n\nAmmi (plant): Ammi is a genus of 3 to 6 species of plants in the Apiaceae family.  They are native to southern Europe, northern Africa and Southwest Asia.  \"Ammi spp.\"  (Bishops weed) is prohibited by the Australian New Zealand Food Standards code under standard 1.4.4 due to active constituents:\n\nGeranium retrorsum: Geranium retrorsum is a species of \"Geranium\" known by the common name New Zealand geranium in the United States and common cranesbill in Australia.  It is native to Australia but can be found on other continents as an introduced species which is often a noxious weed as well.  This is a perennial herb growing generally erect to a maximum height approaching half a meter.  The stems are green to reddish and have stiff hairs.  The leaves are a few centimeters wide and divided into several segments which are further divided into small lobes.  The small flowers are fuchsia to purple in color.  The fruit has a straight style about a centimeter in length.\n\nQuestion: Does Ammi or Geranium have more species?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"genus_comparison\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"genus_a\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"name\": {\n              \"type\": \"string\"\n            },\n            \"species_count\": {\n              \"type\": \"integer\"\n            }\n          },\n          \"required\": [\n            \"name\",\n            \"species_count\"\n          ],\n          \"additionalProperties\": false\n        },\n        \"genus_b\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"name\": {\n              \"type\": \"string\"\n            },\n            \"species_count\": {\n              \"type\": \"integer\"\n            }\n          },\n          \"required\": [\n            \"name\",\n            \"species_count\"\n          ],\n          \"additionalProperties\": false\n        }\n      },\n      \"required\": [\n        \"genus_a\",\n        \"genus_b\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"comparison_result\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"genus_with_more_species\": {\n          \"type\": \"string\"\n        },\n        \"more_species_count\": {\n          \"type\": \"integer\"\n        },\n        \"genus_with_fewer_species\": {\n          \"type\": \"string\"\n        },\n        \"fewer_species_count\": {\n          \"type\": \"integer\"\n        }\n      },\n      \"required\": [\n        \"genus_with_more_species\",\n        \"more_species_count\",\n        \"genus_with_fewer_species\",\n        \"fewer_species_count\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"answer\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"genus_comparison\",\n    \"comparison_result\",\n    \"answer\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "genus_comparison",
-    "comparison_result",
-    "answer"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "genus_comparison": {
+        "type": "object",
+        "properties": {
+          "genus_a": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "species_count": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "name",
+              "species_count"
+            ],
+            "additionalProperties": false
+          },
+          "genus_b": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "species_count": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "name",
+              "species_count"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "genus_a",
+          "genus_b"
+        ],
+        "additionalProperties": false
+      },
+      "comparison_result": {
+        "type": "object",
+        "properties": {
+          "genus_with_more_species": {
+            "type": "string"
+          },
+          "more_species_count": {
+            "type": "integer"
+          },
+          "genus_with_fewer_species": {
+            "type": "string"
+          },
+          "fewer_species_count": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "genus_with_more_species",
+          "more_species_count",
+          "genus_with_fewer_species",
+          "fewer_species_count"
+        ],
+        "additionalProperties": false
+      },
+      "answer": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "genus_comparison",
+      "comparison_result",
+      "answer"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

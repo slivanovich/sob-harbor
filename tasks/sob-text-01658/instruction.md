@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Coalition (Netherlands): The Coalition is a historic coalition between three confessional parties of Netherlands - the Christian Historical Union, Anti-Revolutionary Party and Roman Catholic State Party.  They were united in their common plight for equal financing for religious schools.  They were opposed to the Concentration.  The Coalition governed between 1888 and 1891, led by Æneas Mackay, 1901 and 1905 led by Abraham Kuyper, 1908 and 1913 led by Theo Heemskerk and between 1918 and 1940 led by several politicians, Hendrikus Colijn, Dirk Jan de Geer and Charles Ruijs de Beerenbrouck.
-
-Maintenance of Religious Harmony Act: The Maintenance of Religious Harmony Act ("MRHA") is a Singapore statute which, according to its long title, provides for the maintenance of religious harmony, for the establishment of a Presidential Council for Religious Harmony ("PCRH"), and for matters connected therewith.  The Act, which was passed on 9 November 1990 and came into force on 31 March 1992, empowers the Minister for Home Affairs to make a restraining order against a person who is in a position of authority in any religious group or institution if the Minister is satisfied that the person has committed or is attempting to commit any of the following acts: causing feelings of enmity, hatred, ill-will or hostility between different religious groups; or promoting a political cause, carrying out subversive activities, or exciting disaffection against the President or the Government under the guise of propagating or practising a religious belief.  A restraining order may also be made against a person who incites, instigates or encourages any religious leader or any religious group or institution to commit the above acts; or a person who is not a religious leader who causes or attempts to cause feelings of enmity, hatred, ill-will or hostility between different religious groups.  A restraining order made against a religious leader may direct that he or she must obtain the permission of the Minister before addressing members of any religious group or institution, assisting or contributing to religious publications, or holding office in the editorial board or committee of such publications.  Breaching a restraining order is a criminal offence.
-
-Abraham Kuyper: Abraham Kuijper ( ; ] ; 29 October 1837 – 8 November 1920), generally known as Abraham Kuyper, was a Dutch journalist, statesman and neo-Calvinist theologian.  He founded the Reformed Churches in the Netherlands (the second largest Reformed denomination in the country behind the Dutch Reformed Church), a newspaper, the Free University of Amsterdam, and the Anti-Revolutionary Party.  He served as Prime Minister of the Netherlands between 1901 and 1905.  In religious affairs, he sought to adapt the Dutch Reformed Church to the challenges posed by the loss of state financial aid and by religious pluralism, rising nationalism, and the Arminian religious revivals of his day which denied predestination.  He vigorously denounced modernism in theology as a fad that would pass away.  In politics, he dominated the Anti-Revolutionary Party (ARP) from its founding in 1879 to his death in 1920.  He promoted pillarisation, the social expression of the anti-thesis in public life, whereby Protestant, Catholic and secular elements each had their own independent schools, universities and social organisations.
-
-Roel van den Broek: Roelof "Roel" van den Broek (born 20 December 1931) is a Dutch religious scholar.  He was a professor of Religious History of the Hellenistic period at Utrecht University between 1979 and 1991.  He subsequently was a professor of history of Christianity until his retirement in 1997.
-
-Religious violence in India: Communal violence in India includes acts of violence by followers of one religious group against followers and institutions of another religious group, often in the form of rioting.  Religious violence in India, especially in recent times, has generally involved Hindus and Muslims, although incidents of violence have also involved atheists, Christians and Sikhs.  There is also history of Muslim – Parsee riots (List of riots in Mumbai).
-
-Gathering of Justice and Unity: The Gathering of Justice and Unity (list 269/710) (also known as Amir al-Fayiz) is a political coalition that contested the Basra governorate election, 2009 and is registered for the Iraqi legislative election, 2014.  The list is led by Al-Faiz, the head of the Awlad Amir sub-tribe which is predominantly from the Shaykhiyya religious group.
-
-Religious identity: Religious Identity is a specific type of identity formation.  Particularly, it is the sense of group membership to a religion and the importance of this group membership as it pertains to one's self-concept.  Religious identity is not necessarily the same as religiousness or religiosity.  Although these three terms share a commonality, religiousness and religiosity refer to both the value of religious group membership as well as participation in religious events (e.g. going to church).  Religious identity, on the other hand, refers specifically to religious group membership regardless of religious activity or participation.
-
-Genocide: Genocide is intentional action to destroy a people (usually defined as an ethnic, national, racial, or religious group) in whole or in part.  The hybrid word "genocide" is a combination of the Greek word "génos" ("race, people") and the Latin suffix "-cide" ("act of killing").  The United Nations Genocide Convention, which was established in 1948, defines genocide as "acts committed with intent to destroy, in whole or in part, a national, ethnic, racial or religious group".
-
-Maria Leer: Maria Leer (June 20, 1788 – July 3, 1866) was a prophetess and Dutch religious figure, one of the leaders of the "Zwijndrechtse nieuwlichters" (Zwijndrecht New Lighters), a religious community with communist features which opposed social conventions.
-
-Henri W.PH.E. van den Bergh van Eysinga: Henri W.PH.E.  van den Bergh van Eysinga (born "Henri Wilhelm Philippus Elize van den Bergh van Eysinga" on 9 August 1868 – 15 April 1920) was Dutch religious socialist.  He was born in The Hague and he died in Zutphen.  He was revolutionary and a philosophical writer.  In his book "The soul of mankind" (Dutch: "De ziel der mensheid" ) he describes how children should be raised not to harm anyone and respect life.
-
-Question: Coalition in the Netherlands was led in 1901 and 1905 by a founder of what Dutch religious group?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "leader_name": {
-      "type": "string",
-      "description": "The name of the political leader."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "governing_period": {
-      "type": "string",
-      "description": "The period during which the leader governed the coalition."
-    },
-    "founded_religious_group": {
-      "type": "string",
-      "description": "The name of the religious group founded by the leader."
-    },
-    "country": {
-      "type": "string",
-      "description": "The country associated with the coalition and religious group."
+    {
+      "role": "user",
+      "content": "Context:\nCoalition (Netherlands): The Coalition is a historic coalition between three confessional parties of Netherlands - the Christian Historical Union, Anti-Revolutionary Party and Roman Catholic State Party.  They were united in their common plight for equal financing for religious schools.  They were opposed to the Concentration.  The Coalition governed between 1888 and 1891, led by Æneas Mackay, 1901 and 1905 led by Abraham Kuyper, 1908 and 1913 led by Theo Heemskerk and between 1918 and 1940 led by several politicians, Hendrikus Colijn, Dirk Jan de Geer and Charles Ruijs de Beerenbrouck.\n\nMaintenance of Religious Harmony Act: The Maintenance of Religious Harmony Act (\"MRHA\") is a Singapore statute which, according to its long title, provides for the maintenance of religious harmony, for the establishment of a Presidential Council for Religious Harmony (\"PCRH\"), and for matters connected therewith.  The Act, which was passed on 9 November 1990 and came into force on 31 March 1992, empowers the Minister for Home Affairs to make a restraining order against a person who is in a position of authority in any religious group or institution if the Minister is satisfied that the person has committed or is attempting to commit any of the following acts: causing feelings of enmity, hatred, ill-will or hostility between different religious groups; or promoting a political cause, carrying out subversive activities, or exciting disaffection against the President or the Government under the guise of propagating or practising a religious belief.  A restraining order may also be made against a person who incites, instigates or encourages any religious leader or any religious group or institution to commit the above acts; or a person who is not a religious leader who causes or attempts to cause feelings of enmity, hatred, ill-will or hostility between different religious groups.  A restraining order made against a religious leader may direct that he or she must obtain the permission of the Minister before addressing members of any religious group or institution, assisting or contributing to religious publications, or holding office in the editorial board or committee of such publications.  Breaching a restraining order is a criminal offence.\n\nAbraham Kuyper: Abraham Kuijper ( ; ] ; 29 October 1837 – 8 November 1920), generally known as Abraham Kuyper, was a Dutch journalist, statesman and neo-Calvinist theologian.  He founded the Reformed Churches in the Netherlands (the second largest Reformed denomination in the country behind the Dutch Reformed Church), a newspaper, the Free University of Amsterdam, and the Anti-Revolutionary Party.  He served as Prime Minister of the Netherlands between 1901 and 1905.  In religious affairs, he sought to adapt the Dutch Reformed Church to the challenges posed by the loss of state financial aid and by religious pluralism, rising nationalism, and the Arminian religious revivals of his day which denied predestination.  He vigorously denounced modernism in theology as a fad that would pass away.  In politics, he dominated the Anti-Revolutionary Party (ARP) from its founding in 1879 to his death in 1920.  He promoted pillarisation, the social expression of the anti-thesis in public life, whereby Protestant, Catholic and secular elements each had their own independent schools, universities and social organisations.\n\nRoel van den Broek: Roelof \"Roel\" van den Broek (born 20 December 1931) is a Dutch religious scholar.  He was a professor of Religious History of the Hellenistic period at Utrecht University between 1979 and 1991.  He subsequently was a professor of history of Christianity until his retirement in 1997.\n\nReligious violence in India: Communal violence in India includes acts of violence by followers of one religious group against followers and institutions of another religious group, often in the form of rioting.  Religious violence in India, especially in recent times, has generally involved Hindus and Muslims, although incidents of violence have also involved atheists, Christians and Sikhs.  There is also history of Muslim – Parsee riots (List of riots in Mumbai).\n\nGathering of Justice and Unity: The Gathering of Justice and Unity (list 269/710) (also known as Amir al-Fayiz) is a political coalition that contested the Basra governorate election, 2009 and is registered for the Iraqi legislative election, 2014.  The list is led by Al-Faiz, the head of the Awlad Amir sub-tribe which is predominantly from the Shaykhiyya religious group.\n\nReligious identity: Religious Identity is a specific type of identity formation.  Particularly, it is the sense of group membership to a religion and the importance of this group membership as it pertains to one's self-concept.  Religious identity is not necessarily the same as religiousness or religiosity.  Although these three terms share a commonality, religiousness and religiosity refer to both the value of religious group membership as well as participation in religious events (e.g. going to church).  Religious identity, on the other hand, refers specifically to religious group membership regardless of religious activity or participation.\n\nGenocide: Genocide is intentional action to destroy a people (usually defined as an ethnic, national, racial, or religious group) in whole or in part.  The hybrid word \"genocide\" is a combination of the Greek word \"génos\" (\"race, people\") and the Latin suffix \"-cide\" (\"act of killing\").  The United Nations Genocide Convention, which was established in 1948, defines genocide as \"acts committed with intent to destroy, in whole or in part, a national, ethnic, racial or religious group\".\n\nMaria Leer: Maria Leer (June 20, 1788 – July 3, 1866) was a prophetess and Dutch religious figure, one of the leaders of the \"Zwijndrechtse nieuwlichters\" (Zwijndrecht New Lighters), a religious community with communist features which opposed social conventions.\n\nHenri W.PH.E. van den Bergh van Eysinga: Henri W.PH.E.  van den Bergh van Eysinga (born \"Henri Wilhelm Philippus Elize van den Bergh van Eysinga\" on 9 August 1868 – 15 April 1920) was Dutch religious socialist.  He was born in The Hague and he died in Zutphen.  He was revolutionary and a philosophical writer.  In his book \"The soul of mankind\" (Dutch: \"De ziel der mensheid\" ) he describes how children should be raised not to harm anyone and respect life.\n\nQuestion: Coalition in the Netherlands was led in 1901 and 1905 by a founder of what Dutch religious group?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"leader_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the political leader.\"\n    },\n    \"governing_period\": {\n      \"type\": \"string\",\n      \"description\": \"The period during which the leader governed the coalition.\"\n    },\n    \"founded_religious_group\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the religious group founded by the leader.\"\n    },\n    \"country\": {\n      \"type\": \"string\",\n      \"description\": \"The country associated with the coalition and religious group.\"\n    }\n  },\n  \"required\": [\n    \"leader_name\",\n    \"governing_period\",\n    \"founded_religious_group\",\n    \"country\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "leader_name",
-    "governing_period",
-    "founded_religious_group",
-    "country"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "leader_name": {
+        "type": "string",
+        "description": "The name of the political leader."
+      },
+      "governing_period": {
+        "type": "string",
+        "description": "The period during which the leader governed the coalition."
+      },
+      "founded_religious_group": {
+        "type": "string",
+        "description": "The name of the religious group founded by the leader."
+      },
+      "country": {
+        "type": "string",
+        "description": "The country associated with the coalition and religious group."
+      }
+    },
+    "required": [
+      "leader_name",
+      "governing_period",
+      "founded_religious_group",
+      "country"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

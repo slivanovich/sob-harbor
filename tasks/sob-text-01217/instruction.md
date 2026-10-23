@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Playhouse Disney Hong Kong: Playhouse Disney Hong Kong is a Playhouse Disney-branded pay cable television channel for viewers in Hong Kong based in Kowloon Peninsula and is available in 3-national languages: English, Cantonese and Chinese.  This channel is only available on Cable TV Hong Kong in Hong Kong on Channel 136, Now TV in Hong Kong on Channel 442 and HKBN bbTV in Hong Kong on Channel 312.  The old name for Playhouse Disney Hong Kong was Disney Channel Asia.  English, Cantonese and Chinese are available 24-hours in daily.  Playhouse Disney Hong Kong's main competitors are Hong Kong Disneyland.  Lindsay Lohan was the ambassador for Playhouse Disney Hong Kong.
-
-Hong Kong Royal Instructions: The expression <nowiki>'</nowiki>Hong Kong Royal Instructions<nowiki>'</nowiki> is most commonly used to refer to the Hong Kong Royal Instructions 1917, one of the principal constitutional documents of British Hong Kong (others being the Hong Kong Letters Patent 1917, the Hong Kong Letters Patent 1960, the Hong Kong Letters Patent 1982, and the Hong Kong Letters Patent 1991 (No. 1)); however, it may also refer to any other Hong Kong Royal Instructions or any Hong Kong Additional Instructions ('Hong Kong Royal Instructions' amending the pre-existing Hong Kong Royal Instructions), or be used as a generic term covering all Hong Kong Royal Instructions and all Hong Kong Additional Instructions.
-
-Architecture of Hong Kong: The architecture of Hong Kong features great emphasis on Contemporary architecture, especially Modernism, Postmodernism, Functionalism, etc.  Due to the lack of available land, few historical buildings remain in the urban areas of Hong Kong.  However, Hong Kong has become a centre for modern architecture as older buildings are cleared away to make space for newer, larger buildings.  It has more buildings above 35m (or 100m) and more skyscrapers above 150m than any other city.  Hong Kong's skyline is often considered to be the best in the world, with the mountains and Victoria Harbour complementing the skyscrapers.
-
-Wan Chai: Wan Chai ( ) is a metropolitan area situated at the western part of the Wan Chai District on the northern shore of Hong Kong Island, in Hong Kong.  Its other boundaries are Canal Road to the east, Arsenal Street to the west and Bowen Road to the south.  The area north of Gloucester Road is often referred to as Wan Chai North.  Wan Chai is one of the busiest commercial areas in Hong Kong with offices of many small and medium-sized companies.  Wan Chai North features office towers, parks, hotels and an international conference and exhibition centre.  As one of the first areas developed in Hong Kong, the locale is densely populated yet with noticeable residential zones facing urban decay.  Arousing considerable public concern, the government has undertaken several urban renewal projects in recent years.  There are many unique landmarks and skyscrapers within the area, most notably the Hong Kong Convention and Exhibition Centre (HKCEC), Central Plaza and Hopewell Centre.
-
-Jaros, Baum &amp; Bolles: Jaros, Baum & Bolles (JB&B) is an American MEP (Mechanical, electrical, and plumbing) and building systems engineering firm founded in 1915 by Alfred L. Jaros, Jr. and Albert L. Baum.  The firm is best known for high-rise projects, including One World Trade Center and Hudson Yards in New York City, the Sears Tower in Chicago and the Bank of China Tower in Hong Kong.
-
-List of tallest buildings in Hong Kong: The Hong Kong Special Administrative Region has over 7,840 high-rise buildings, 1,303 of which are skyscrapers standing taller than 100 m with 316 buildings over 150 m .  The tallest building in Hong Kong is the 108-story International Commerce Centre, which stands 484 m and is the ninth tallest building in the world.  The total built-up height (combined heights) of these skyscrapers is approximately 333.8 km , making Hong Kong the world's tallest urban agglomeration.  Furthermore, reflective of the city's high population densities, Hong Kong has more inhabitants living at the 15th floor or higher, and more buildings of at least 100 m and 150 m height than any other cities in the world.
-
-Hong Kong Army Cadets Association Limited: The Hong Kong Army Cadets Association Limited (), established on January 18, 2015, is a Hong Kong Uniformed Youth Group (), it is supported by the People's Liberation Army Hong Kong Garrison and the Liaison Office of the Central People's Government in the Hong Kong.  Established with the ethos "To Serve the Fatherland", it has been criticised by some of suspected brainwashing.  Its stated future aims include the opening of one or more non profit making schools in order to promote their ideals.  The "Hong Kong Army Cadets Association" is a development of the "Military Summer Camp For Hong Kong Youth" () scheme organised by Betty Tung Chiu Hung-ping, the wife of former Chief Executive of Hong Kong Tung Chee-hwa, and the core of the estimated 2000 strong membership is made up of attendees of the summer camps; the target membership of the Association are children and youths from the age of six upwards.  Of the Hong Kong Uniformed Youth Groups, the Association is the only one to use People's Liberation Army military drill, and its uniforms, emblems and structure is based on that of the PLA.
-
-List of tallest buildings in São Paulo: The city of São Paulo, Brazil's largest city, has an impressive skyline.  With 6,467 buildings, it is considered to have the 3rd-greatest concentration of buildings in the world, behind only New York City and Hong Kong; Within the city and its metropolitan area, there are 193 buildings taller than 100 meters, mostly concentrated in the downtown along the Paulista Avenue and in the neighborhood of Brooklin.  At one time, the city was home to the tallest building in Latin America, the Martinelli Building, which opened in 1929 at a height of 130 meters.  The Mirante do Vale, the largest building in the city, is 170 meters in height and was opened in 1960.  Today, São Paulo is a city of low buildings, which rarely reach more than 80 meters and are mostly residential in nature.  Municipal laws limit the construction of large skyscrapers and the tallest skyscrapers are located in three different regions.  The city's financial center, fully occupied by skyscrapers, has moved.  The city of São Paulo has the 10th highest number of buildings in the world taller than 90 meters, behind Hong Kong, New York City, Tokyo, Shanghai, Bangkok, Guangzhou, Chicago, and Singapore, respectively.
-
-Bank of China Tower (Hong Kong): The Bank of China Tower (abbreviated BOC Tower) is one of the most recognisable skyscrapers in Central, Hong Kong.  It houses the headquarters for the Bank of China (Hong Kong) Limited.  The building is located at 1 Garden Road, in Central and Western District on Hong Kong Island.
-
-Hong Kong–Mainland China conflict: Tensions between people from Hong Kong and mainland China have developed since the handover of Hong Kong's sovereignty to China in 1997, and in particular since the late 2000s and early 2010s.  Various factors have contributed to the development of such tensions: these include a difference between the popular interpretation in Hong Kong of the "One country, two systems" constitutional principle as against the Chinese government's official interpretation; policies of the Hong Kong and central governments to encourage mainland visitors to Hong Kong; and changing economic environments in Hong Kong and mainland China.  Increasingly, these tensions have resulted in a rising sentiment in Hong Kong of hostility to "mainlanders" and resentment at a perceived trend towards assimilation and interference from the mainland and the central government, and at the same time a rising sentiment in mainland China of bewilderment and resentment at assertions that Hong Kong is, and should remain, different from the mainland in terms of political system, culture and language.
-
-Question: What is the name of one of the most recognisable skyscrapers in Central, Hong Kong that was built by Jaros, Baum & Bolles?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "skyscraper_name": {
-      "type": "string",
-      "description": "The name of the skyscraper."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "location_district": {
-      "type": "string",
-      "description": "The district where the skyscraper is located."
-    },
-    "is_recognizable": {
-      "type": "boolean",
-      "description": "Indicates if the skyscraper is described as one of the most recognisable."
-    },
-    "built_by_firm": {
-      "type": "string",
-      "description": "The name of the engineering firm that worked on the skyscraper."
-    },
-    "firm_specialty": {
-      "type": "string",
-      "description": "The specialty of the engineering firm."
+    {
+      "role": "user",
+      "content": "Context:\nPlayhouse Disney Hong Kong: Playhouse Disney Hong Kong is a Playhouse Disney-branded pay cable television channel for viewers in Hong Kong based in Kowloon Peninsula and is available in 3-national languages: English, Cantonese and Chinese.  This channel is only available on Cable TV Hong Kong in Hong Kong on Channel 136, Now TV in Hong Kong on Channel 442 and HKBN bbTV in Hong Kong on Channel 312.  The old name for Playhouse Disney Hong Kong was Disney Channel Asia.  English, Cantonese and Chinese are available 24-hours in daily.  Playhouse Disney Hong Kong's main competitors are Hong Kong Disneyland.  Lindsay Lohan was the ambassador for Playhouse Disney Hong Kong.\n\nHong Kong Royal Instructions: The expression <nowiki>'</nowiki>Hong Kong Royal Instructions<nowiki>'</nowiki> is most commonly used to refer to the Hong Kong Royal Instructions 1917, one of the principal constitutional documents of British Hong Kong (others being the Hong Kong Letters Patent 1917, the Hong Kong Letters Patent 1960, the Hong Kong Letters Patent 1982, and the Hong Kong Letters Patent 1991 (No. 1)); however, it may also refer to any other Hong Kong Royal Instructions or any Hong Kong Additional Instructions ('Hong Kong Royal Instructions' amending the pre-existing Hong Kong Royal Instructions), or be used as a generic term covering all Hong Kong Royal Instructions and all Hong Kong Additional Instructions.\n\nArchitecture of Hong Kong: The architecture of Hong Kong features great emphasis on Contemporary architecture, especially Modernism, Postmodernism, Functionalism, etc.  Due to the lack of available land, few historical buildings remain in the urban areas of Hong Kong.  However, Hong Kong has become a centre for modern architecture as older buildings are cleared away to make space for newer, larger buildings.  It has more buildings above 35m (or 100m) and more skyscrapers above 150m than any other city.  Hong Kong's skyline is often considered to be the best in the world, with the mountains and Victoria Harbour complementing the skyscrapers.\n\nWan Chai: Wan Chai ( ) is a metropolitan area situated at the western part of the Wan Chai District on the northern shore of Hong Kong Island, in Hong Kong.  Its other boundaries are Canal Road to the east, Arsenal Street to the west and Bowen Road to the south.  The area north of Gloucester Road is often referred to as Wan Chai North.  Wan Chai is one of the busiest commercial areas in Hong Kong with offices of many small and medium-sized companies.  Wan Chai North features office towers, parks, hotels and an international conference and exhibition centre.  As one of the first areas developed in Hong Kong, the locale is densely populated yet with noticeable residential zones facing urban decay.  Arousing considerable public concern, the government has undertaken several urban renewal projects in recent years.  There are many unique landmarks and skyscrapers within the area, most notably the Hong Kong Convention and Exhibition Centre (HKCEC), Central Plaza and Hopewell Centre.\n\nJaros, Baum &amp; Bolles: Jaros, Baum & Bolles (JB&B) is an American MEP (Mechanical, electrical, and plumbing) and building systems engineering firm founded in 1915 by Alfred L. Jaros, Jr. and Albert L. Baum.  The firm is best known for high-rise projects, including One World Trade Center and Hudson Yards in New York City, the Sears Tower in Chicago and the Bank of China Tower in Hong Kong.\n\nList of tallest buildings in Hong Kong: The Hong Kong Special Administrative Region has over 7,840 high-rise buildings, 1,303 of which are skyscrapers standing taller than 100 m with 316 buildings over 150 m .  The tallest building in Hong Kong is the 108-story International Commerce Centre, which stands 484 m and is the ninth tallest building in the world.  The total built-up height (combined heights) of these skyscrapers is approximately 333.8 km , making Hong Kong the world's tallest urban agglomeration.  Furthermore, reflective of the city's high population densities, Hong Kong has more inhabitants living at the 15th floor or higher, and more buildings of at least 100 m and 150 m height than any other cities in the world.\n\nHong Kong Army Cadets Association Limited: The Hong Kong Army Cadets Association Limited (), established on January 18, 2015, is a Hong Kong Uniformed Youth Group (), it is supported by the People's Liberation Army Hong Kong Garrison and the Liaison Office of the Central People's Government in the Hong Kong.  Established with the ethos \"To Serve the Fatherland\", it has been criticised by some of suspected brainwashing.  Its stated future aims include the opening of one or more non profit making schools in order to promote their ideals.  The \"Hong Kong Army Cadets Association\" is a development of the \"Military Summer Camp For Hong Kong Youth\" () scheme organised by Betty Tung Chiu Hung-ping, the wife of former Chief Executive of Hong Kong Tung Chee-hwa, and the core of the estimated 2000 strong membership is made up of attendees of the summer camps; the target membership of the Association are children and youths from the age of six upwards.  Of the Hong Kong Uniformed Youth Groups, the Association is the only one to use People's Liberation Army military drill, and its uniforms, emblems and structure is based on that of the PLA.\n\nList of tallest buildings in São Paulo: The city of São Paulo, Brazil's largest city, has an impressive skyline.  With 6,467 buildings, it is considered to have the 3rd-greatest concentration of buildings in the world, behind only New York City and Hong Kong; Within the city and its metropolitan area, there are 193 buildings taller than 100 meters, mostly concentrated in the downtown along the Paulista Avenue and in the neighborhood of Brooklin.  At one time, the city was home to the tallest building in Latin America, the Martinelli Building, which opened in 1929 at a height of 130 meters.  The Mirante do Vale, the largest building in the city, is 170 meters in height and was opened in 1960.  Today, São Paulo is a city of low buildings, which rarely reach more than 80 meters and are mostly residential in nature.  Municipal laws limit the construction of large skyscrapers and the tallest skyscrapers are located in three different regions.  The city's financial center, fully occupied by skyscrapers, has moved.  The city of São Paulo has the 10th highest number of buildings in the world taller than 90 meters, behind Hong Kong, New York City, Tokyo, Shanghai, Bangkok, Guangzhou, Chicago, and Singapore, respectively.\n\nBank of China Tower (Hong Kong): The Bank of China Tower (abbreviated BOC Tower) is one of the most recognisable skyscrapers in Central, Hong Kong.  It houses the headquarters for the Bank of China (Hong Kong) Limited.  The building is located at 1 Garden Road, in Central and Western District on Hong Kong Island.\n\nHong Kong–Mainland China conflict: Tensions between people from Hong Kong and mainland China have developed since the handover of Hong Kong's sovereignty to China in 1997, and in particular since the late 2000s and early 2010s.  Various factors have contributed to the development of such tensions: these include a difference between the popular interpretation in Hong Kong of the \"One country, two systems\" constitutional principle as against the Chinese government's official interpretation; policies of the Hong Kong and central governments to encourage mainland visitors to Hong Kong; and changing economic environments in Hong Kong and mainland China.  Increasingly, these tensions have resulted in a rising sentiment in Hong Kong of hostility to \"mainlanders\" and resentment at a perceived trend towards assimilation and interference from the mainland and the central government, and at the same time a rising sentiment in mainland China of bewilderment and resentment at assertions that Hong Kong is, and should remain, different from the mainland in terms of political system, culture and language.\n\nQuestion: What is the name of one of the most recognisable skyscrapers in Central, Hong Kong that was built by Jaros, Baum & Bolles?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"skyscraper_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the skyscraper.\"\n    },\n    \"location_district\": {\n      \"type\": \"string\",\n      \"description\": \"The district where the skyscraper is located.\"\n    },\n    \"is_recognizable\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the skyscraper is described as one of the most recognisable.\"\n    },\n    \"built_by_firm\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the engineering firm that worked on the skyscraper.\"\n    },\n    \"firm_specialty\": {\n      \"type\": \"string\",\n      \"description\": \"The specialty of the engineering firm.\"\n    }\n  },\n  \"required\": [\n    \"skyscraper_name\",\n    \"location_district\",\n    \"is_recognizable\",\n    \"built_by_firm\",\n    \"firm_specialty\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "skyscraper_name",
-    "location_district",
-    "is_recognizable",
-    "built_by_firm",
-    "firm_specialty"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "skyscraper_name": {
+        "type": "string",
+        "description": "The name of the skyscraper."
+      },
+      "location_district": {
+        "type": "string",
+        "description": "The district where the skyscraper is located."
+      },
+      "is_recognizable": {
+        "type": "boolean",
+        "description": "Indicates if the skyscraper is described as one of the most recognisable."
+      },
+      "built_by_firm": {
+        "type": "string",
+        "description": "The name of the engineering firm that worked on the skyscraper."
+      },
+      "firm_specialty": {
+        "type": "string",
+        "description": "The specialty of the engineering firm."
+      }
+    },
+    "required": [
+      "skyscraper_name",
+      "location_district",
+      "is_recognizable",
+      "built_by_firm",
+      "firm_specialty"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

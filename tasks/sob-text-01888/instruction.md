@@ -1,102 +1,79 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Chicago (band): Chicago is an American rock band formed in 1967 in Chicago, Illinois.  The self-described "rock and roll band with horns" began as a politically charged, sometimes experimental, rock band and later moved to a predominantly softer sound, generating several hit ballads.  The group had a steady stream of hits throughout the 1970s and 1980s.  Since at least 2008, "Billboard" has shown Chicago to be the "greatest of all time" American band in singles chart success, and since 2015, the "greatest of all time" American band in album chart success as well.  Chicago is one of the longest-running and most successful rock groups, and one of the world's best-selling groups of all time, having sold more than 100 million records.
-
-List of songs recorded by Ivy: American band Ivy has recorded material for six studio albums, one extended play (EP), and for various compilation albums and soundtracks. Formed in 1994, the musical trio consists of Dominique Durand, Andy Chase, and Adam Schlesinger.  After releasing the EP "Lately" with Seed Records in 1994, the band recorded their debut album, "Realistic", which was released in 1995.  A pop album, lead single "Get Enough" was named a "Single of the Week" by British newspaper "Melody Maker".  After a brief hiatus, the band released their second album, "Apartment Life", in 1997 after signing with Atlantic Records.  In order to make the pop-influenced album, the group collaborated with a number of high-profile musicians, including Chris Botti, Lloyd Cole, James Iha, and Dean Wareham.  The album was, however, a commercial disappointment for their record label, who dropped Ivy while they were touring.  Two songs from "Apartment Life" ("I Get the Message" and "This Is the Day") received further attention after being included on the official soundtrack to the 1998 film, "There's Something About Mary".  Ivy signed to Nettwerk to release "Long Distance" in 2000; the album incorporated music from multiple genres, such as guitar pop, trip hop, and new wave.  The third single released, "Edge of the Ocean", became Ivy's first song to enter a musical record chart, peaking at number 160 in the United Kingdom.  Due to its popularity, Ivy considers it to be their signature song.
-
-Must Get Out: "Must Get Out" is a song by American band Maroon 5, taken from their debut album, "Songs About Jane" (2002).  Written by the band members Adam Levine and Jesse Carmichael, and produced by Matt Wallace, the song was released as the fifth and final single from the album on April 5, 2005.  A downtempo song, "Must Get Out" has a "dreamy" lyrical story about a tough period of a relationship.  The song received mostly positive reviews from music critics, who praised Levine's vocals and the song's hook, considering it a highlight on the album.  "Must Get Out" charted inside the top-ten in Netherlands, while reaching the top-forty in other three territories, including the United Kingdom – where it became the band's fifth top-forty hit.
-
-Fight with Tools: Fight with Tools is the debut album by Flobots originally released in October 2007 and re-released on May 20, 2008.  The album was recorded in 2007 around the band's home state of Colorado.  "Fight with Tools" received a mildly positive reception from critics who praised the production and serious subject matter.  The album features the single "Handlebars" which became a popular hit on Modern Rock radio the following April, also becoming a popular hit in the UK (#14), New Zealand (#26) and Canada (#63).  The album also features the single "Rise" which also became a popular hit on Modern Rock radio after its release.  In the week of June 7, 2008, the album jumped on the "Billboard" 200 chart 168 places and peaked at number 15, selling over 265,000 copies.  The album also peaked at number 52 on the UK Albums Chart.
-
-Upset (band): Upset are an American band formed in 2013.  The band originally consisted of Ali Koehler on guitar and lead vocals, Jenn Prince on lead guitar and vocals, and Patty Schemel on drums.  After the recording and release of their debut album She's Gone, Prince departed the band to work on other projects, with Lauren Freeman joining the band on lead guitar and Rachel Gagliardi on bass and vocals.  Koehler is the former drummer of the bands Best Coast and Vivian Girls.  Schemel rose to prominence as the drummer of Hole and currently also drums for the band Death Valley Girls.  The band released their debut album on Don Giovanni Records on October 29, 2013.
-
-The Red Chord: The Red Chord is an American band from Revere, Massachusetts, formed in 1999.  The group comprises vocalist Guy Kozowyk, guitarist/vocalist Mike "Gunface" McKenzie, bassist Greg Weeks and drummer Michael Justian.  The band gained a fanbase with its 2002 debut album "Fused Together in Revolving Doors".  The second album, "Clients", was released in 2005 and sold over 50,000 copies in the U.S.  They released their third album, "Prey for Eyes" in 2007, which sold in between 4,000 and 5,000 copies and debuted at No. 198 on the "Billboard" 200 chart.  Their latest album, 2009's "Fed Through the Teeth Machine", debuted at No. 180 on the "Billboard" 200 chart.
-
-Hoppípolla: "Hoppípolla" (] , "Hopp í polla" is Icelandic for "Hopping into puddles") is a song by Icelandic band Sigur Rós from their 2005 album "Takk...".  It was released as the album's second single on 28 November 2005.  The lyrics are mainly in Icelandic, with some nonsensical phrases, a "language" the band calls Vonlenska ("Hopelandic").  Written with spaces, the song's title would be "Hoppa í polla" (the "—a" in "hoppa" is not pronounced).  As with many of the band's songs, it was given a nickname in the early stages of writing.  "Hoppípolla" was "The Money Song", as the band was certain they had written a song which would have commercial success.  It is the band's most successful single, charting at #24 on the UK Singles Chart in May 2006.  It is considered the most well known song within its genre.  The single also features "Með blóðnasir", an instrumental coda to "Hoppípolla", which is also featured on "Takk..."; and a studio remake of "Hafssól", a song previously released on the band's 1997 debut album, "Von".  The title appears as "Hafsól" on the single.
-
-Sugababes: The Sugababes are an English girl group formed in 1998 by Siobhán Donaghy, Mutya Buena and Keisha Buchanan.  Their debut album, "One Touch", was released in the UK through London Records on 27 November 2000.  The album achieved moderate success, peaking at number 26 in April 2001 and eventually being certified Gold.  In 2001, Donaghy departed the group amid rumours of a rift with Buchanan and the group were dropped by their record label.  With the introduction of Heidi Range, former member of fellow English girl group Atomic Kitten, the group began to experience a higher level of commercial success whilst keeping the critical acclaim they had achieved with their debut album.  They released three studio albums before Buena announced her departure in December 2005, leading to Amelle Berrabah being brought in to replace her.  Following the release of their first greatest hits album, the new line-up released two studio albums.  In September 2009, after 11 years in the Sugababes, Buchanan, the final original member, was replaced by former UK Eurovision entry Jade Ewen.  Range, Berrabah and Ewen released the group's seventh studio album, "Sweet 7", in 2010, after which they signed to RCA Records, before announcing an indefinite hiatus in 2011.  In 2013, Ewen confessed that the Sugababes had split two years earlier.  The original line-up of the band reformed in 2011, under the new name Mutya Keisha Siobhan.
-
-Handlebars (song): "Handlebars" is a song by Flobots.  It was released as the first single from their debut album, "Fight with Tools", and is the group's largest success, peaking at #3 on the Billboard Modern Rock Tracks.
-
-Flobots: The Flobots are an American band, formed in 2005 by Jamie Laurie.  The band's origins date back 5 years earlier to a similar project by Laurie.  Flobots found mainstream success with their major label debut "Fight with Tools" (2007), featuring the single "Handlebars", which became a popular hit on Modern Rock radio in April 2008.  The band has released 4 studio albums and 1 EP, with their latest "Noenemies" being released in May 2017.
-
-Question: What song, by American band Flobots, formed in 2005 by Jamie Laurie appears on their debut album, "Fight with Tools", and is the group's largest success?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "band_details": {
-      "type": "object",
-      "properties": {
-        "band_name": {
-          "type": "string",
-          "description": "The name of the band."
-        },
-        "nationality": {
-          "type": "string",
-          "description": "The nationality of the band."
-        },
-        "formation_year": {
-          "type": "integer",
-          "description": "The year the band was formed."
-        },
-        "founder": {
-          "type": "string",
-          "description": "The founder of the band."
-        }
-      },
-      "required": [
-        "band_name",
-        "nationality",
-        "formation_year",
-        "founder"
-      ],
-      "additionalProperties": false
-    },
-    "album_details": {
-      "type": "object",
-      "properties": {
-        "album_title": {
-          "type": "string",
-          "description": "The title of the album the song appears on."
-        },
-        "album_type": {
-          "type": "string",
-          "description": "The type of album (e.g., debut album)."
-        }
-      },
-      "required": [
-        "album_title",
-        "album_type"
-      ],
-      "additionalProperties": false
-    },
-    "success_description": {
-      "type": "string",
-      "description": "A description of why the song is considered the group's largest success."
+    {
+      "role": "user",
+      "content": "Context:\nChicago (band): Chicago is an American rock band formed in 1967 in Chicago, Illinois.  The self-described \"rock and roll band with horns\" began as a politically charged, sometimes experimental, rock band and later moved to a predominantly softer sound, generating several hit ballads.  The group had a steady stream of hits throughout the 1970s and 1980s.  Since at least 2008, \"Billboard\" has shown Chicago to be the \"greatest of all time\" American band in singles chart success, and since 2015, the \"greatest of all time\" American band in album chart success as well.  Chicago is one of the longest-running and most successful rock groups, and one of the world's best-selling groups of all time, having sold more than 100 million records.\n\nList of songs recorded by Ivy: American band Ivy has recorded material for six studio albums, one extended play (EP), and for various compilation albums and soundtracks. Formed in 1994, the musical trio consists of Dominique Durand, Andy Chase, and Adam Schlesinger.  After releasing the EP \"Lately\" with Seed Records in 1994, the band recorded their debut album, \"Realistic\", which was released in 1995.  A pop album, lead single \"Get Enough\" was named a \"Single of the Week\" by British newspaper \"Melody Maker\".  After a brief hiatus, the band released their second album, \"Apartment Life\", in 1997 after signing with Atlantic Records.  In order to make the pop-influenced album, the group collaborated with a number of high-profile musicians, including Chris Botti, Lloyd Cole, James Iha, and Dean Wareham.  The album was, however, a commercial disappointment for their record label, who dropped Ivy while they were touring.  Two songs from \"Apartment Life\" (\"I Get the Message\" and \"This Is the Day\") received further attention after being included on the official soundtrack to the 1998 film, \"There's Something About Mary\".  Ivy signed to Nettwerk to release \"Long Distance\" in 2000; the album incorporated music from multiple genres, such as guitar pop, trip hop, and new wave.  The third single released, \"Edge of the Ocean\", became Ivy's first song to enter a musical record chart, peaking at number 160 in the United Kingdom.  Due to its popularity, Ivy considers it to be their signature song.\n\nMust Get Out: \"Must Get Out\" is a song by American band Maroon 5, taken from their debut album, \"Songs About Jane\" (2002).  Written by the band members Adam Levine and Jesse Carmichael, and produced by Matt Wallace, the song was released as the fifth and final single from the album on April 5, 2005.  A downtempo song, \"Must Get Out\" has a \"dreamy\" lyrical story about a tough period of a relationship.  The song received mostly positive reviews from music critics, who praised Levine's vocals and the song's hook, considering it a highlight on the album.  \"Must Get Out\" charted inside the top-ten in Netherlands, while reaching the top-forty in other three territories, including the United Kingdom – where it became the band's fifth top-forty hit.\n\nFight with Tools: Fight with Tools is the debut album by Flobots originally released in October 2007 and re-released on May 20, 2008.  The album was recorded in 2007 around the band's home state of Colorado.  \"Fight with Tools\" received a mildly positive reception from critics who praised the production and serious subject matter.  The album features the single \"Handlebars\" which became a popular hit on Modern Rock radio the following April, also becoming a popular hit in the UK (#14), New Zealand (#26) and Canada (#63).  The album also features the single \"Rise\" which also became a popular hit on Modern Rock radio after its release.  In the week of June 7, 2008, the album jumped on the \"Billboard\" 200 chart 168 places and peaked at number 15, selling over 265,000 copies.  The album also peaked at number 52 on the UK Albums Chart.\n\nUpset (band): Upset are an American band formed in 2013.  The band originally consisted of Ali Koehler on guitar and lead vocals, Jenn Prince on lead guitar and vocals, and Patty Schemel on drums.  After the recording and release of their debut album She's Gone, Prince departed the band to work on other projects, with Lauren Freeman joining the band on lead guitar and Rachel Gagliardi on bass and vocals.  Koehler is the former drummer of the bands Best Coast and Vivian Girls.  Schemel rose to prominence as the drummer of Hole and currently also drums for the band Death Valley Girls.  The band released their debut album on Don Giovanni Records on October 29, 2013.\n\nThe Red Chord: The Red Chord is an American band from Revere, Massachusetts, formed in 1999.  The group comprises vocalist Guy Kozowyk, guitarist/vocalist Mike \"Gunface\" McKenzie, bassist Greg Weeks and drummer Michael Justian.  The band gained a fanbase with its 2002 debut album \"Fused Together in Revolving Doors\".  The second album, \"Clients\", was released in 2005 and sold over 50,000 copies in the U.S.  They released their third album, \"Prey for Eyes\" in 2007, which sold in between 4,000 and 5,000 copies and debuted at No. 198 on the \"Billboard\" 200 chart.  Their latest album, 2009's \"Fed Through the Teeth Machine\", debuted at No. 180 on the \"Billboard\" 200 chart.\n\nHoppípolla: \"Hoppípolla\" (] , \"Hopp í polla\" is Icelandic for \"Hopping into puddles\") is a song by Icelandic band Sigur Rós from their 2005 album \"Takk...\".  It was released as the album's second single on 28 November 2005.  The lyrics are mainly in Icelandic, with some nonsensical phrases, a \"language\" the band calls Vonlenska (\"Hopelandic\").  Written with spaces, the song's title would be \"Hoppa í polla\" (the \"—a\" in \"hoppa\" is not pronounced).  As with many of the band's songs, it was given a nickname in the early stages of writing.  \"Hoppípolla\" was \"The Money Song\", as the band was certain they had written a song which would have commercial success.  It is the band's most successful single, charting at #24 on the UK Singles Chart in May 2006.  It is considered the most well known song within its genre.  The single also features \"Með blóðnasir\", an instrumental coda to \"Hoppípolla\", which is also featured on \"Takk...\"; and a studio remake of \"Hafssól\", a song previously released on the band's 1997 debut album, \"Von\".  The title appears as \"Hafsól\" on the single.\n\nSugababes: The Sugababes are an English girl group formed in 1998 by Siobhán Donaghy, Mutya Buena and Keisha Buchanan.  Their debut album, \"One Touch\", was released in the UK through London Records on 27 November 2000.  The album achieved moderate success, peaking at number 26 in April 2001 and eventually being certified Gold.  In 2001, Donaghy departed the group amid rumours of a rift with Buchanan and the group were dropped by their record label.  With the introduction of Heidi Range, former member of fellow English girl group Atomic Kitten, the group began to experience a higher level of commercial success whilst keeping the critical acclaim they had achieved with their debut album.  They released three studio albums before Buena announced her departure in December 2005, leading to Amelle Berrabah being brought in to replace her.  Following the release of their first greatest hits album, the new line-up released two studio albums.  In September 2009, after 11 years in the Sugababes, Buchanan, the final original member, was replaced by former UK Eurovision entry Jade Ewen.  Range, Berrabah and Ewen released the group's seventh studio album, \"Sweet 7\", in 2010, after which they signed to RCA Records, before announcing an indefinite hiatus in 2011.  In 2013, Ewen confessed that the Sugababes had split two years earlier.  The original line-up of the band reformed in 2011, under the new name Mutya Keisha Siobhan.\n\nHandlebars (song): \"Handlebars\" is a song by Flobots.  It was released as the first single from their debut album, \"Fight with Tools\", and is the group's largest success, peaking at #3 on the Billboard Modern Rock Tracks.\n\nFlobots: The Flobots are an American band, formed in 2005 by Jamie Laurie.  The band's origins date back 5 years earlier to a similar project by Laurie.  Flobots found mainstream success with their major label debut \"Fight with Tools\" (2007), featuring the single \"Handlebars\", which became a popular hit on Modern Rock radio in April 2008.  The band has released 4 studio albums and 1 EP, with their latest \"Noenemies\" being released in May 2017.\n\nQuestion: What song, by American band Flobots, formed in 2005 by Jamie Laurie appears on their debut album, \"Fight with Tools\", and is the group's largest success?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song.\"\n    },\n    \"band_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"band_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the band.\"\n        },\n        \"nationality\": {\n          \"type\": \"string\",\n          \"description\": \"The nationality of the band.\"\n        },\n        \"formation_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the band was formed.\"\n        },\n        \"founder\": {\n          \"type\": \"string\",\n          \"description\": \"The founder of the band.\"\n        }\n      },\n      \"required\": [\n        \"band_name\",\n        \"nationality\",\n        \"formation_year\",\n        \"founder\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"album_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"album_title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the album the song appears on.\"\n        },\n        \"album_type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of album (e.g., debut album).\"\n        }\n      },\n      \"required\": [\n        \"album_title\",\n        \"album_type\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"success_description\": {\n      \"type\": \"string\",\n      \"description\": \"A description of why the song is considered the group's largest success.\"\n    }\n  },\n  \"required\": [\n    \"song_title\",\n    \"band_details\",\n    \"album_details\",\n    \"success_description\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "song_title",
-    "band_details",
-    "album_details",
-    "success_description"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song."
+      },
+      "band_details": {
+        "type": "object",
+        "properties": {
+          "band_name": {
+            "type": "string",
+            "description": "The name of the band."
+          },
+          "nationality": {
+            "type": "string",
+            "description": "The nationality of the band."
+          },
+          "formation_year": {
+            "type": "integer",
+            "description": "The year the band was formed."
+          },
+          "founder": {
+            "type": "string",
+            "description": "The founder of the band."
+          }
+        },
+        "required": [
+          "band_name",
+          "nationality",
+          "formation_year",
+          "founder"
+        ],
+        "additionalProperties": false
+      },
+      "album_details": {
+        "type": "object",
+        "properties": {
+          "album_title": {
+            "type": "string",
+            "description": "The title of the album the song appears on."
+          },
+          "album_type": {
+            "type": "string",
+            "description": "The type of album (e.g., debut album)."
+          }
+        },
+        "required": [
+          "album_title",
+          "album_type"
+        ],
+        "additionalProperties": false
+      },
+      "success_description": {
+        "type": "string",
+        "description": "A description of why the song is considered the group's largest success."
+      }
+    },
+    "required": [
+      "song_title",
+      "band_details",
+      "album_details",
+      "success_description"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

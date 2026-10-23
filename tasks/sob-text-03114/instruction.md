@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Montana gubernatorial election, 1988: The 1988 Montana gubernatorial election took place on November 8, 1988.  Incumbent Governor of Montana Ted Schwinden, who was first elected in 1980 and was re-elected in 1984, declined to seek re-election to a third term, creating an open seat.  Stan Stephens, the former President of the Montana Senate, won a close Republican primary, and advanced to the general election, where he was opposed by Thomas Lee Judge, Schwinden's predecessor as governor and the Democratic nominee.  Though the general election was hotly contested, Stephens ultimately defeated Judge, becoming the first Republican to win a gubernatorial election in Montana since 1964.
-
-Paul Sarbanes: Paul Spyros Sarbanes (born February 3, 1933) is an American politician and attorney.  A member of the Democratic Party from Maryland he served as a member of the United States House of Representatives from 1971 to 1977 and as a United States Senator from 1977 to 2007.  Sarbanes was the longest-serving senator in Maryland history until it was surpassed by Barbara Mikulski by a single day when her term ended on January 3, 2017.
-
-Members of the Australian Senate, 1923–1926: This period was marked by the number of casual vacancies and the filling of these vacancies was complex.  While senators were elected for a six year term, people appointed to a casual vacancy only held office until the earlier of the next election for the House of Representatives or the Senate.  Because the 1925 election was a half senate election, each state would ordinarily elect 3 senators.  NSW however had 2 additional vacancies as a result of the death of 2 senators with terms ending in 1929.  The first three elected, Cox, Duncan and Massy-Greene won the full term from 1 July 1926 to 30 June 1932, while the next two elected Abbott and Thomas won the long vacancies finishing on 30 June 1929.  Massy-Greene who had been appointed to fill one of the vacancies in 1923 ceased to be a senator between 14 November 1925 and the start of his new term on 1 July 1926.  Victoria had 1 additional vacancy, a short vacancy with the term ending in 1926.  Plain was the third senator elected and thus won both the short vacancy ending on 30 June 1926 and the full term from 1 July 1926 to 30 June 1932.
-
-New York gubernatorial election, 2002: The New York gubernatorial election of 2002 was an election for the state governorship held on November 5, 2002.  Governor George Pataki, the two-term Republican incumbent, ran for a third term.  Governor Pataki was re-elected to a third term.  His leadership and actions as governor during the September 11th Attacks put him over the top.  He went on to defeat Carl McCall and Rochester billionaire Tom Golisano.  As of 2017, this is the most recent election in which a Republican was elected Governor of New York.
-
-United States Senate election in Maryland, 1988: The 1988 United States Senate Election in Maryland was held on November 8, 1988.  Incumbent Democratic Senator Paul Sarbanes was reelected to a third term.
-
-United States Senate election in Delaware, 1972: The United States Senate election in Delaware, 1972 was held November 7, 1972.  Incumbent Republican United States Senator J. Caleb Boggs ran for a third term in the United States Senate.  Boggs faced off against Joe Biden, a New Castle County Councilman.  Though Senator Boggs was expected to easily win a third term over the then-unknown Biden, it ended up being the closest Senate election in 1972, and Biden narrowly beat out Boggs by a little over three thousand votes, winning what would be his first of seven terms.
-
-United States Senate election in Montana, 1972: The 1972 United States Senate election in Montana took place on November 7, 1972.  Incumbent United States Senator Lee Metcalf, who was first elected to the Senate in 1960 and was re-elected in 1966, ran for re-election.  After winning the Democratic primary, he moved on to the general election, where he faced Hank Hibbard, a State Senator and the Republican nominee.  Following a close campaign, Metcalf managed to narrowly win re-election to his third term in the Senate over Hibbard.
-
-United States Senate election in Montana, 1942: The 1942 United States Senate election in Montana took place on November 3, 1942.  Incumbent United States Senator James E. Murray, who was first elected to the Senate in a special election in 1934 and was re-elected in 1936, ran for re-election.  Following his victory in a competitive Democratic primary, Murray advanced to the general election, where he was opposed by former United States Attorney for the District of Montana Wellington D. Rankin, the Republican nominee and brother of representative Jeannette Rankin.  In a closely fought election, Murray narrowly defeated Rankin to win re-election to his third term and his second full term in the Senate.
-
-Jorge Olavarría: Jorge Olavarría (12 December 1933 – 18 April 2005) was a Venezuelan journalist, politician, historian, and writer.  He was editor of the magazine "Resumen" from 1973 to 1984.  Collections of his writings for "El Nacional" and "El Universal" were published in 1999 and 1994, respectively.  He was elected to the Venezuelan Chamber of Deputies in the 1963 elections, and re-elected in the 1968 elections.  He was a presidential candidate in the 1983 election and the 1988 election, for the party "OPINA" (Opinion), and was a member of the 1999 Constituent Assembly of Venezuela.  He also served as Venezuela's ambassador to Britain (1969–70).  As a historian and writer, his books covered subjects such as the 1945 Venezuelan coup d'état and the dictator Juan Vicente Gómez.
-
-Joseph W. Cowgill: Joseph William Cowgill (April 24, 1908 – November 19, 1986) was an American Democratic Party politician who served as the Minority Leader of the New Jersey State Senate.  He is a 1929 graduate of the University of Pennsylvania and a 1933 graduate of the University of Pennsylvania Law School.  He was elected to the New Jersey General Assembly representing Camden County in 1940.  He did not seek re-election to a second term in 1941, but instead ran for Camden County Surrogate (Probate Court Judge).  He resigned as Surrogate in 1943 to join the U.S. Navy during World War II.  Cowgill was an Assistant Camden County Prosecutor in 1945, and served as the Camden County Counsel from 1947 to 1953, and again from 1957 to 1960.  He was a Delegate to the 1947 New Jersey Constitutional Convention, and an Alternate Delegate to the 1956 Democratic National Convention.  He was elected to the Camden County Board of Chosen Freeholders in 1952; he did not seek re-election in 1955, but instead ran for an open State Senate seat when Bruce A. Wallace retired.  In a close race, Cowgill defeated Republican Haddon Township Mayor William G. Rohrer by 290 votes, 54,683 (50.02%) to 54,393 (49.76%).  Cowgill again faced Rohrer when he sought re-election in 1959; this time, Cowgill won by 4,092 votes, 61,656 (51.72%) to 57,564 (48.28%).  He served as the Senate Minority Leader from 1959 to 1964.  In 1963, Cowgill was defeated for re-election to a third term as State Senator, losing to Republican Frederick Scholz by 13,627 votes, 72,873 (54.94%) to 59,246 (44.66%).
-
-Question: What senator, born in 1933, was elected for a third term in the 1988 election? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "senator_name": {
-      "type": "string",
-      "description": "The full name of the senator."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "birth_year": {
-      "type": "integer",
-      "description": "The year the senator was born."
-    },
-    "election_year": {
-      "type": "integer",
-      "description": "The year of the election in which the senator won their third term."
-    },
-    "term_number": {
-      "type": "integer",
-      "description": "The number of the term won in the specified election year."
-    },
-    "state_represented": {
-      "type": "string",
-      "description": "The state the senator represented."
-    },
-    "political_party": {
-      "type": "string",
-      "description": "The political party of the senator."
+    {
+      "role": "user",
+      "content": "Context:\nMontana gubernatorial election, 1988: The 1988 Montana gubernatorial election took place on November 8, 1988.  Incumbent Governor of Montana Ted Schwinden, who was first elected in 1980 and was re-elected in 1984, declined to seek re-election to a third term, creating an open seat.  Stan Stephens, the former President of the Montana Senate, won a close Republican primary, and advanced to the general election, where he was opposed by Thomas Lee Judge, Schwinden's predecessor as governor and the Democratic nominee.  Though the general election was hotly contested, Stephens ultimately defeated Judge, becoming the first Republican to win a gubernatorial election in Montana since 1964.\n\nPaul Sarbanes: Paul Spyros Sarbanes (born February 3, 1933) is an American politician and attorney.  A member of the Democratic Party from Maryland he served as a member of the United States House of Representatives from 1971 to 1977 and as a United States Senator from 1977 to 2007.  Sarbanes was the longest-serving senator in Maryland history until it was surpassed by Barbara Mikulski by a single day when her term ended on January 3, 2017.\n\nMembers of the Australian Senate, 1923–1926: This period was marked by the number of casual vacancies and the filling of these vacancies was complex.  While senators were elected for a six year term, people appointed to a casual vacancy only held office until the earlier of the next election for the House of Representatives or the Senate.  Because the 1925 election was a half senate election, each state would ordinarily elect 3 senators.  NSW however had 2 additional vacancies as a result of the death of 2 senators with terms ending in 1929.  The first three elected, Cox, Duncan and Massy-Greene won the full term from 1 July 1926 to 30 June 1932, while the next two elected Abbott and Thomas won the long vacancies finishing on 30 June 1929.  Massy-Greene who had been appointed to fill one of the vacancies in 1923 ceased to be a senator between 14 November 1925 and the start of his new term on 1 July 1926.  Victoria had 1 additional vacancy, a short vacancy with the term ending in 1926.  Plain was the third senator elected and thus won both the short vacancy ending on 30 June 1926 and the full term from 1 July 1926 to 30 June 1932.\n\nNew York gubernatorial election, 2002: The New York gubernatorial election of 2002 was an election for the state governorship held on November 5, 2002.  Governor George Pataki, the two-term Republican incumbent, ran for a third term.  Governor Pataki was re-elected to a third term.  His leadership and actions as governor during the September 11th Attacks put him over the top.  He went on to defeat Carl McCall and Rochester billionaire Tom Golisano.  As of 2017, this is the most recent election in which a Republican was elected Governor of New York.\n\nUnited States Senate election in Maryland, 1988: The 1988 United States Senate Election in Maryland was held on November 8, 1988.  Incumbent Democratic Senator Paul Sarbanes was reelected to a third term.\n\nUnited States Senate election in Delaware, 1972: The United States Senate election in Delaware, 1972 was held November 7, 1972.  Incumbent Republican United States Senator J. Caleb Boggs ran for a third term in the United States Senate.  Boggs faced off against Joe Biden, a New Castle County Councilman.  Though Senator Boggs was expected to easily win a third term over the then-unknown Biden, it ended up being the closest Senate election in 1972, and Biden narrowly beat out Boggs by a little over three thousand votes, winning what would be his first of seven terms.\n\nUnited States Senate election in Montana, 1972: The 1972 United States Senate election in Montana took place on November 7, 1972.  Incumbent United States Senator Lee Metcalf, who was first elected to the Senate in 1960 and was re-elected in 1966, ran for re-election.  After winning the Democratic primary, he moved on to the general election, where he faced Hank Hibbard, a State Senator and the Republican nominee.  Following a close campaign, Metcalf managed to narrowly win re-election to his third term in the Senate over Hibbard.\n\nUnited States Senate election in Montana, 1942: The 1942 United States Senate election in Montana took place on November 3, 1942.  Incumbent United States Senator James E. Murray, who was first elected to the Senate in a special election in 1934 and was re-elected in 1936, ran for re-election.  Following his victory in a competitive Democratic primary, Murray advanced to the general election, where he was opposed by former United States Attorney for the District of Montana Wellington D. Rankin, the Republican nominee and brother of representative Jeannette Rankin.  In a closely fought election, Murray narrowly defeated Rankin to win re-election to his third term and his second full term in the Senate.\n\nJorge Olavarría: Jorge Olavarría (12 December 1933 – 18 April 2005) was a Venezuelan journalist, politician, historian, and writer.  He was editor of the magazine \"Resumen\" from 1973 to 1984.  Collections of his writings for \"El Nacional\" and \"El Universal\" were published in 1999 and 1994, respectively.  He was elected to the Venezuelan Chamber of Deputies in the 1963 elections, and re-elected in the 1968 elections.  He was a presidential candidate in the 1983 election and the 1988 election, for the party \"OPINA\" (Opinion), and was a member of the 1999 Constituent Assembly of Venezuela.  He also served as Venezuela's ambassador to Britain (1969–70).  As a historian and writer, his books covered subjects such as the 1945 Venezuelan coup d'état and the dictator Juan Vicente Gómez.\n\nJoseph W. Cowgill: Joseph William Cowgill (April 24, 1908 – November 19, 1986) was an American Democratic Party politician who served as the Minority Leader of the New Jersey State Senate.  He is a 1929 graduate of the University of Pennsylvania and a 1933 graduate of the University of Pennsylvania Law School.  He was elected to the New Jersey General Assembly representing Camden County in 1940.  He did not seek re-election to a second term in 1941, but instead ran for Camden County Surrogate (Probate Court Judge).  He resigned as Surrogate in 1943 to join the U.S. Navy during World War II.  Cowgill was an Assistant Camden County Prosecutor in 1945, and served as the Camden County Counsel from 1947 to 1953, and again from 1957 to 1960.  He was a Delegate to the 1947 New Jersey Constitutional Convention, and an Alternate Delegate to the 1956 Democratic National Convention.  He was elected to the Camden County Board of Chosen Freeholders in 1952; he did not seek re-election in 1955, but instead ran for an open State Senate seat when Bruce A. Wallace retired.  In a close race, Cowgill defeated Republican Haddon Township Mayor William G. Rohrer by 290 votes, 54,683 (50.02%) to 54,393 (49.76%).  Cowgill again faced Rohrer when he sought re-election in 1959; this time, Cowgill won by 4,092 votes, 61,656 (51.72%) to 57,564 (48.28%).  He served as the Senate Minority Leader from 1959 to 1964.  In 1963, Cowgill was defeated for re-election to a third term as State Senator, losing to Republican Frederick Scholz by 13,627 votes, 72,873 (54.94%) to 59,246 (44.66%).\n\nQuestion: What senator, born in 1933, was elected for a third term in the 1988 election? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"senator_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the senator.\"\n    },\n    \"birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the senator was born.\"\n    },\n    \"election_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year of the election in which the senator won their third term.\"\n    },\n    \"term_number\": {\n      \"type\": \"integer\",\n      \"description\": \"The number of the term won in the specified election year.\"\n    },\n    \"state_represented\": {\n      \"type\": \"string\",\n      \"description\": \"The state the senator represented.\"\n    },\n    \"political_party\": {\n      \"type\": \"string\",\n      \"description\": \"The political party of the senator.\"\n    }\n  },\n  \"required\": [\n    \"senator_name\",\n    \"birth_year\",\n    \"election_year\",\n    \"term_number\",\n    \"state_represented\",\n    \"political_party\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "senator_name",
-    "birth_year",
-    "election_year",
-    "term_number",
-    "state_represented",
-    "political_party"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "senator_name": {
+        "type": "string",
+        "description": "The full name of the senator."
+      },
+      "birth_year": {
+        "type": "integer",
+        "description": "The year the senator was born."
+      },
+      "election_year": {
+        "type": "integer",
+        "description": "The year of the election in which the senator won their third term."
+      },
+      "term_number": {
+        "type": "integer",
+        "description": "The number of the term won in the specified election year."
+      },
+      "state_represented": {
+        "type": "string",
+        "description": "The state the senator represented."
+      },
+      "political_party": {
+        "type": "string",
+        "description": "The political party of the senator."
+      }
+    },
+    "required": [
+      "senator_name",
+      "birth_year",
+      "election_year",
+      "term_number",
+      "state_represented",
+      "political_party"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Jericho (UK TV series): Jericho (also known as Jericho of Scotland Yard) is a British period crime drama series, first broadcast as a series of four episodes on ITV from October 16, 2005.  The series was written and created by Stewart Harcourt, and starred Robert Lindsay as Detective Inspector Michael Jericho, a Scotland Yard detective who is loved by the public but embarrassed by his status as a hero.  The series was set in London in 1958.  The series was seen as an attempt to exploit ITV's success in period crime drama, best exemplified by "Foyle's War", and to rival the BBC's staple dramas such as "Waking the Dead".
-
-Ben Miller: Bennet Evan "Ben" Miller (born 24 February 1966) is an English comedian, actor and director.  He is best known as one half of comedy double act Armstrong and Miller, with Alexander Armstrong.  Miller and Armstrong wrote and starred in the Channel 4 sketch show "Armstrong and Miller", as well as the BBC sketch show "The Armstrong & Miller Show".  Miller is also known for playing the lead role of DI Richard Poole in the first 2 series of the BBC Crime Drama "Death in Paradise".
-
-Humphrey Goodman: Detective Inspector Humphrey Goodman is a character in the crime drama television series "Death in Paradise", portrayed by Kris Marshall.
-
-The Inspector Lynley Mysteries: The Inspector Lynley Mysteries is a British crime drama, broadcast on BBC One from 12 March 2001 to 1 June 2008, encompassing six series and a total of twenty-three episodes.  The protagonist, Detective Inspector Thomas "Tommy" Lynley, 8th Earl of Asherton (Nathaniel Parker), who is assigned to Scotland Yard, finds himself paired with Detective Sergeant Barbara Havers (Sharon Small).  In addition to the tensions involved in solving murder cases, the series thrives on the characters' clashes regarding personality, gender, and class, as Lynley is dapper, male and a peer of the realm, while Havers is untidy, female and comes from a working-class background.
-
-Richard Poole (character): Detective Inspector Richard Poole is a character in the crime drama television series "Death in Paradise", portrayed by Ben Miller.
-
-Inspector Lewis: Detective Sergeant/Detective Inspector Robert "Robbie" Lewis is a fictional character in the "Inspector Morse" crime novels by Colin Dexter.  The "sidekick" to Morse, Lewis is a Detective Sergeant in the Thames Valley Police, and appears in all 13 "Morse" novels.  In the television adaptation, "Inspector Morse", he is played by Kevin Whately.  Following the conclusion of the series, Whately reprised the role as the lead character in "Lewis", in which the character has been promoted to Inspector.
-
-Shetland (TV series): Shetland is a BBC Scotland crime drama television series starring Douglas Henshall as Detective Inspector Jimmy Perez.  The story takes place largely on the Scottish archipelago of Shetland, though much of the filming is done on the Scottish mainland, with some on location in Shetland.  It is largely based on the novels by Ann Cleeves.  Three seasons have aired and a fourth season has also started filming.  Star Douglas Henshall won the 2016 BAFTA Scotland award for best television actor and the show (made by ITV for BBC One) received the award for best TV drama.
-
-Lewis (TV series): Lewis is a British television detective drama produced for ITV.  It is a spin-off from "Inspector Morse" and, like that series, it is set in Oxford.  Kevin Whately reprises his character Robert "Robbie" Lewis, who was Morse's sergeant in the original series.  Lewis has now been promoted to detective inspector and is assisted by DS James Hathaway, portrayed by Laurence Fox, who became promoted to inspector in the eighth series airing in 2014.  The series also stars Clare Holman as forensic pathologist Dr Laura Hobson, likewise reprising her role from "Inspector Morse", and Angela Griffin as DS Lizzie Maddox.
-
-Ian Kelsey: Ian Kelsey (born 17 December 1966) is an English actor.  He is best known for his roles as Dave Glover in ITV Soap "Emmerdale", Matt Brewer in "Down to Earth", Patrick Spiller in BBC Continuing Drama "Casualty" and Howard Bellamy in daytime soap opera "Doctors", and for his 6-year long role as Detective Inspector Richard Mayne in the TV crime series "Blue Murder" alongside Caroline Quentin in her lead role as DCI Janine Lewis.
-
-Inspector Morse: Detective Constable/Detective Sergeant/Detective Inspector/Detective Chief Inspector Endeavour Morse GM is the eponymous fictional character in the series of detective novels by British author Colin Dexter.  On television, he appears in the 33-episode 1987–2000 drama series "Inspector Morse", in which John Thaw played the character, as well as the 2012 prequel series "Endeavour", portrayed by Shaun Evans.  Morse originally is described as a senior CID (Criminal Investigation Department) officer with the Thames Valley Police force in Oxford, England.  Morse presents, to some, a reasonably sympathetic persona, despite his sullen and snobbish temperament, with a Jaguar car (a Lancia in the early novels), a thirst for English real ale, and a penchant for music (especially opera and Wagner), poetry, art, classics, classic cars, and cryptic crossword puzzles.  He is often assisted by his Sergeant Robert "Robbie" Lewis.  Morse's partnership and friendship with Lewis is a fundamental aspect of the series.
-
-Question: Detective Inspector Richard Poole is a character in the crime drama television series "Death in Paradise", portrayed by an actor born in which year ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "character_name": {
-      "type": "string",
-      "description": "The name of the detective character."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "tv_series_name": {
-      "type": "string",
-      "description": "The name of the television series the character appears in."
-    },
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor portraying the character."
-    },
-    "actor_birth_year": {
-      "type": "integer",
-      "description": "The birth year of the actor."
+    {
+      "role": "user",
+      "content": "Context:\nJericho (UK TV series): Jericho (also known as Jericho of Scotland Yard) is a British period crime drama series, first broadcast as a series of four episodes on ITV from October 16, 2005.  The series was written and created by Stewart Harcourt, and starred Robert Lindsay as Detective Inspector Michael Jericho, a Scotland Yard detective who is loved by the public but embarrassed by his status as a hero.  The series was set in London in 1958.  The series was seen as an attempt to exploit ITV's success in period crime drama, best exemplified by \"Foyle's War\", and to rival the BBC's staple dramas such as \"Waking the Dead\".\n\nBen Miller: Bennet Evan \"Ben\" Miller (born 24 February 1966) is an English comedian, actor and director.  He is best known as one half of comedy double act Armstrong and Miller, with Alexander Armstrong.  Miller and Armstrong wrote and starred in the Channel 4 sketch show \"Armstrong and Miller\", as well as the BBC sketch show \"The Armstrong & Miller Show\".  Miller is also known for playing the lead role of DI Richard Poole in the first 2 series of the BBC Crime Drama \"Death in Paradise\".\n\nHumphrey Goodman: Detective Inspector Humphrey Goodman is a character in the crime drama television series \"Death in Paradise\", portrayed by Kris Marshall.\n\nThe Inspector Lynley Mysteries: The Inspector Lynley Mysteries is a British crime drama, broadcast on BBC One from 12 March 2001 to 1 June 2008, encompassing six series and a total of twenty-three episodes.  The protagonist, Detective Inspector Thomas \"Tommy\" Lynley, 8th Earl of Asherton (Nathaniel Parker), who is assigned to Scotland Yard, finds himself paired with Detective Sergeant Barbara Havers (Sharon Small).  In addition to the tensions involved in solving murder cases, the series thrives on the characters' clashes regarding personality, gender, and class, as Lynley is dapper, male and a peer of the realm, while Havers is untidy, female and comes from a working-class background.\n\nRichard Poole (character): Detective Inspector Richard Poole is a character in the crime drama television series \"Death in Paradise\", portrayed by Ben Miller.\n\nInspector Lewis: Detective Sergeant/Detective Inspector Robert \"Robbie\" Lewis is a fictional character in the \"Inspector Morse\" crime novels by Colin Dexter.  The \"sidekick\" to Morse, Lewis is a Detective Sergeant in the Thames Valley Police, and appears in all 13 \"Morse\" novels.  In the television adaptation, \"Inspector Morse\", he is played by Kevin Whately.  Following the conclusion of the series, Whately reprised the role as the lead character in \"Lewis\", in which the character has been promoted to Inspector.\n\nShetland (TV series): Shetland is a BBC Scotland crime drama television series starring Douglas Henshall as Detective Inspector Jimmy Perez.  The story takes place largely on the Scottish archipelago of Shetland, though much of the filming is done on the Scottish mainland, with some on location in Shetland.  It is largely based on the novels by Ann Cleeves.  Three seasons have aired and a fourth season has also started filming.  Star Douglas Henshall won the 2016 BAFTA Scotland award for best television actor and the show (made by ITV for BBC One) received the award for best TV drama.\n\nLewis (TV series): Lewis is a British television detective drama produced for ITV.  It is a spin-off from \"Inspector Morse\" and, like that series, it is set in Oxford.  Kevin Whately reprises his character Robert \"Robbie\" Lewis, who was Morse's sergeant in the original series.  Lewis has now been promoted to detective inspector and is assisted by DS James Hathaway, portrayed by Laurence Fox, who became promoted to inspector in the eighth series airing in 2014.  The series also stars Clare Holman as forensic pathologist Dr Laura Hobson, likewise reprising her role from \"Inspector Morse\", and Angela Griffin as DS Lizzie Maddox.\n\nIan Kelsey: Ian Kelsey (born 17 December 1966) is an English actor.  He is best known for his roles as Dave Glover in ITV Soap \"Emmerdale\", Matt Brewer in \"Down to Earth\", Patrick Spiller in BBC Continuing Drama \"Casualty\" and Howard Bellamy in daytime soap opera \"Doctors\", and for his 6-year long role as Detective Inspector Richard Mayne in the TV crime series \"Blue Murder\" alongside Caroline Quentin in her lead role as DCI Janine Lewis.\n\nInspector Morse: Detective Constable/Detective Sergeant/Detective Inspector/Detective Chief Inspector Endeavour Morse GM is the eponymous fictional character in the series of detective novels by British author Colin Dexter.  On television, he appears in the 33-episode 1987–2000 drama series \"Inspector Morse\", in which John Thaw played the character, as well as the 2012 prequel series \"Endeavour\", portrayed by Shaun Evans.  Morse originally is described as a senior CID (Criminal Investigation Department) officer with the Thames Valley Police force in Oxford, England.  Morse presents, to some, a reasonably sympathetic persona, despite his sullen and snobbish temperament, with a Jaguar car (a Lancia in the early novels), a thirst for English real ale, and a penchant for music (especially opera and Wagner), poetry, art, classics, classic cars, and cryptic crossword puzzles.  He is often assisted by his Sergeant Robert \"Robbie\" Lewis.  Morse's partnership and friendship with Lewis is a fundamental aspect of the series.\n\nQuestion: Detective Inspector Richard Poole is a character in the crime drama television series \"Death in Paradise\", portrayed by an actor born in which year ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the detective character.\"\n    },\n    \"tv_series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the television series the character appears in.\"\n    },\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor portraying the character.\"\n    },\n    \"actor_birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the actor.\"\n    }\n  },\n  \"required\": [\n    \"character_name\",\n    \"tv_series_name\",\n    \"actor_name\",\n    \"actor_birth_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "character_name",
-    "tv_series_name",
-    "actor_name",
-    "actor_birth_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "character_name": {
+        "type": "string",
+        "description": "The name of the detective character."
+      },
+      "tv_series_name": {
+        "type": "string",
+        "description": "The name of the television series the character appears in."
+      },
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor portraying the character."
+      },
+      "actor_birth_year": {
+        "type": "integer",
+        "description": "The birth year of the actor."
+      }
+    },
+    "required": [
+      "character_name",
+      "tv_series_name",
+      "actor_name",
+      "actor_birth_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

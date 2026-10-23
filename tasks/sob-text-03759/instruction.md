@@ -1,105 +1,82 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Crown of Castile: The Crown of Castile was a medieval state in the Iberian Peninsula that formed in 1230 as a result of the third and definitive union of the crowns and, some decades later, the parliaments of the kingdoms of Castile and León upon the accession of the then Castilian king, Ferdinand III, to the vacant Leonese throne.  It continued to exist as a separate entity after the personal union in 1469 of the crowns of Castile and Aragon with the marriage of the Catholic Monarchs up to the promulgation of the Nueva Planta decrees by Philip V in 1715.
-
-List of British monarchs: There have been 12 monarchs of the Kingdom of Great Britain and the United Kingdom (see Monarchy of the United Kingdom) since the merger of the Kingdom of England and the Kingdom of Scotland on 1 May 1707.  England and Scotland had been in personal union under the House of Stuart since 24 March 1603.  On 1 January 1801, Great Britain merged with the Kingdom of Ireland (also previously in personal union with Great Britain) to form the United Kingdom of Great Britain and Ireland.  After most of Ireland left the union on 6 December 1922, its name was amended on 12 April 1927 to the United Kingdom of Great Britain and Northern Ireland.
-
-Elizabeth of Bosnia: Elizabeth of Bosnia (  1339  – January 1387) was queen consort and later regent of Hungary and Croatia, as well as queen consort of Poland.  Daughter of Ban Stephen II of Bosnia, Elizabeth married King Louis I of Hungary in 1353.  In 1370, she gave birth to a long-anticipated heir, Catherine, and became Queen of Poland when Louis succeeded his uncle, Casimir III.  The royal couple had two more daughters, Mary and Hedwig, but Catherine died in 1378.  Initially a powerless consort with no substantial influence, Elizabeth then started surrounding herself with noblemen loyal to her, led by her favourite, Nicholas I Garai.  When Louis died in 1382, Mary ascended to the throne of Hungary with Elizabeth as regent.  Unable to preserve the personal union of Hungary and Poland, the queen dowager secured the Polish throne for her youngest daughter, Hedwig.
-
-Union of the Crowns: The Union of the Crowns (Scottish Gaelic: "Aonadh nan Crùintean" ; Scots: "Union o the Crouns" ) was the accession of James VI of Scotland to the thrones of England and Ireland, and the consequential unification for some purposes (such as overseas diplomacy) of the three realms under a single monarch on 24 March 1603.  The Union of Crowns followed the death of Elizabeth I of England — the last monarch of the Tudor dynasty, who was James's unmarried and childless first cousin twice removed.
-
-Margaret Tudor: Margaret Tudor (28 November 1489 – 18 October 1541) was Queen of Scots from 1503 until 1513 by marriage to James IV of Scotland and then, after her husband died fighting the English, she became regent for their son James V of Scotland.  She was born at Westminster Palace as the oldest daughter of Henry VII of England and Elizabeth of York, and granddaughter of Margaret Beaufort, Edward IV of England and Queen Elizabeth Woodville.  Margaret Tudor had several pregnancies, but most of her children died young or were stillborn.  As queen dowager she married Archibald Douglas, 6th Earl of Angus.  Through her first and second marriages, respectively, Margaret was the grandmother of both Mary, Queen of Scots, and Mary's second husband, Lord Darnley.  Margaret's marriage to James IV foreshadowed the Union of the Crowns – their great-grandson, James VI and I, was the first to be monarch of both Scotland and England.
-
-James VI and I: James VI and I (James Charles Stuart; 19 June 1566 – 27 March 1625) was King of Scotland as James VI from 24 July 1567 and King of England and Ireland as James I from the union of the Scottish and English crowns on 24 March 1603 until his death.  The kingdoms of Scotland and England were individual sovereign states, with their own parliaments, judiciary, and laws, though both were ruled by James in personal union.
-
-Elizabeth I of England: Elizabeth I (7 September 1533 – 24 March 1603) was Queen of England and Ireland from 17 November 1558 until her death.  Sometimes called The Virgin Queen, Gloriana or Good Queen Bess, Elizabeth was the last monarch of the House of Tudor.
-
-Emblems of the Kalmar Union: The Kalmar Union was the personal union of the kingdoms of Denmark, Norway and Sweden during the 15th century.  The first king of the Kalmar Union was Eric of Pomerania.  His seal combined the coats of arms of Norway (center, as an inescutcheon upon a cross over all), Denmark (in dexter chief), Sweden (the Folkung lion, in dexter base) and Pomerania (a griffin, in sinister base), and in addition the Three Crowns symbol in sinister chief; the latter heraldic design predates the Kalmar Union, and is now mostly associated with the coat of arms of Sweden, but which during the 15th century came to represent the three kingdoms of the union.
-
-Anglo-Scottish Wars: The Anglo-Scottish Wars were a series of wars fought between the Kingdom of England and the Kingdom of Scotland following the Wars of Scottish Independence in the 14th century, and ended by the Union of the Crowns in 1603, wherein England and Scotland entered a personal union under James VI and I, who inherited both crowns.
-
-Monarchy of Ireland: A monarchical system of government existed in Ireland from ancient times until, for what became the Republic of Ireland, the mid-twentieth century.  Northern Ireland, as part of the United Kingdom, remains under a monarchical system of government.  The Gaelic kingdoms of Ireland ended with the Norman invasion of Ireland, when the kingdom became a fief of the Holy See under the Lordship of the King of England.  This lasted until the Parliament of Ireland conferred the crown of Ireland upon King Henry VIII of England during the English Reformation.  The monarch of England held the crowns of England and Ireland in a personal union.  The Union of the Crowns in 1603 expanded the personal union to include Scotland.  The personal union between England and Scotland became a political union with the enactments of the Acts of Union 1707, which created the Kingdom of Great Britain.  The crowns of Great Britain and Ireland remained in personal union until it was ended by the Acts of Union 1800, which united Ireland and Great Britain into the United Kingdom of Great Britain and Ireland from January 1801 until December 1922.
-
-Question: In what year did the Union of the Crowns expand the personal union to include Scotland which was the year when Elizabeth I,Queen of England and Ireland, died?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "union_year": {
-      "type": "integer",
-      "description": "The year the Union of the Crowns expanded to include Scotland."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "union_details": {
-      "type": "object",
-      "properties": {
-        "union_type": {
-          "type": "string",
-          "description": "The type of union formed or expanded."
-        },
-        "kingdoms_involved": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "List of kingdoms involved in the expanded personal union."
-        },
-        "accession_monarch": {
-          "type": "string",
-          "description": "The monarch whose accession led to the union."
-        }
-      },
-      "required": [
-        "union_type",
-        "kingdoms_involved",
-        "accession_monarch"
-      ],
-      "additionalProperties": false
-    },
-    "related_monarch_death": {
-      "type": "object",
-      "properties": {
-        "monarch_name": {
-          "type": "string",
-          "description": "The name of the monarch who died."
-        },
-        "death_year": {
-          "type": "integer",
-          "description": "The year of the monarch's death."
-        },
-        "monarch_role": {
-          "type": "string",
-          "description": "The role of the monarch at the time of death."
-        }
-      },
-      "required": [
-        "monarch_name",
-        "death_year",
-        "monarch_role"
-      ],
-      "additionalProperties": false
-    },
-    "is_death_year_same_as_union_year": {
-      "type": "boolean",
-      "description": "Indicates if the year of the monarch's death is the same as the union year."
+    {
+      "role": "user",
+      "content": "Context:\nCrown of Castile: The Crown of Castile was a medieval state in the Iberian Peninsula that formed in 1230 as a result of the third and definitive union of the crowns and, some decades later, the parliaments of the kingdoms of Castile and León upon the accession of the then Castilian king, Ferdinand III, to the vacant Leonese throne.  It continued to exist as a separate entity after the personal union in 1469 of the crowns of Castile and Aragon with the marriage of the Catholic Monarchs up to the promulgation of the Nueva Planta decrees by Philip V in 1715.\n\nList of British monarchs: There have been 12 monarchs of the Kingdom of Great Britain and the United Kingdom (see Monarchy of the United Kingdom) since the merger of the Kingdom of England and the Kingdom of Scotland on 1 May 1707.  England and Scotland had been in personal union under the House of Stuart since 24 March 1603.  On 1 January 1801, Great Britain merged with the Kingdom of Ireland (also previously in personal union with Great Britain) to form the United Kingdom of Great Britain and Ireland.  After most of Ireland left the union on 6 December 1922, its name was amended on 12 April 1927 to the United Kingdom of Great Britain and Northern Ireland.\n\nElizabeth of Bosnia: Elizabeth of Bosnia (  1339  – January 1387) was queen consort and later regent of Hungary and Croatia, as well as queen consort of Poland.  Daughter of Ban Stephen II of Bosnia, Elizabeth married King Louis I of Hungary in 1353.  In 1370, she gave birth to a long-anticipated heir, Catherine, and became Queen of Poland when Louis succeeded his uncle, Casimir III.  The royal couple had two more daughters, Mary and Hedwig, but Catherine died in 1378.  Initially a powerless consort with no substantial influence, Elizabeth then started surrounding herself with noblemen loyal to her, led by her favourite, Nicholas I Garai.  When Louis died in 1382, Mary ascended to the throne of Hungary with Elizabeth as regent.  Unable to preserve the personal union of Hungary and Poland, the queen dowager secured the Polish throne for her youngest daughter, Hedwig.\n\nUnion of the Crowns: The Union of the Crowns (Scottish Gaelic: \"Aonadh nan Crùintean\" ; Scots: \"Union o the Crouns\" ) was the accession of James VI of Scotland to the thrones of England and Ireland, and the consequential unification for some purposes (such as overseas diplomacy) of the three realms under a single monarch on 24 March 1603.  The Union of Crowns followed the death of Elizabeth I of England — the last monarch of the Tudor dynasty, who was James's unmarried and childless first cousin twice removed.\n\nMargaret Tudor: Margaret Tudor (28 November 1489 – 18 October 1541) was Queen of Scots from 1503 until 1513 by marriage to James IV of Scotland and then, after her husband died fighting the English, she became regent for their son James V of Scotland.  She was born at Westminster Palace as the oldest daughter of Henry VII of England and Elizabeth of York, and granddaughter of Margaret Beaufort, Edward IV of England and Queen Elizabeth Woodville.  Margaret Tudor had several pregnancies, but most of her children died young or were stillborn.  As queen dowager she married Archibald Douglas, 6th Earl of Angus.  Through her first and second marriages, respectively, Margaret was the grandmother of both Mary, Queen of Scots, and Mary's second husband, Lord Darnley.  Margaret's marriage to James IV foreshadowed the Union of the Crowns – their great-grandson, James VI and I, was the first to be monarch of both Scotland and England.\n\nJames VI and I: James VI and I (James Charles Stuart; 19 June 1566 – 27 March 1625) was King of Scotland as James VI from 24 July 1567 and King of England and Ireland as James I from the union of the Scottish and English crowns on 24 March 1603 until his death.  The kingdoms of Scotland and England were individual sovereign states, with their own parliaments, judiciary, and laws, though both were ruled by James in personal union.\n\nElizabeth I of England: Elizabeth I (7 September 1533 – 24 March 1603) was Queen of England and Ireland from 17 November 1558 until her death.  Sometimes called The Virgin Queen, Gloriana or Good Queen Bess, Elizabeth was the last monarch of the House of Tudor.\n\nEmblems of the Kalmar Union: The Kalmar Union was the personal union of the kingdoms of Denmark, Norway and Sweden during the 15th century.  The first king of the Kalmar Union was Eric of Pomerania.  His seal combined the coats of arms of Norway (center, as an inescutcheon upon a cross over all), Denmark (in dexter chief), Sweden (the Folkung lion, in dexter base) and Pomerania (a griffin, in sinister base), and in addition the Three Crowns symbol in sinister chief; the latter heraldic design predates the Kalmar Union, and is now mostly associated with the coat of arms of Sweden, but which during the 15th century came to represent the three kingdoms of the union.\n\nAnglo-Scottish Wars: The Anglo-Scottish Wars were a series of wars fought between the Kingdom of England and the Kingdom of Scotland following the Wars of Scottish Independence in the 14th century, and ended by the Union of the Crowns in 1603, wherein England and Scotland entered a personal union under James VI and I, who inherited both crowns.\n\nMonarchy of Ireland: A monarchical system of government existed in Ireland from ancient times until, for what became the Republic of Ireland, the mid-twentieth century.  Northern Ireland, as part of the United Kingdom, remains under a monarchical system of government.  The Gaelic kingdoms of Ireland ended with the Norman invasion of Ireland, when the kingdom became a fief of the Holy See under the Lordship of the King of England.  This lasted until the Parliament of Ireland conferred the crown of Ireland upon King Henry VIII of England during the English Reformation.  The monarch of England held the crowns of England and Ireland in a personal union.  The Union of the Crowns in 1603 expanded the personal union to include Scotland.  The personal union between England and Scotland became a political union with the enactments of the Acts of Union 1707, which created the Kingdom of Great Britain.  The crowns of Great Britain and Ireland remained in personal union until it was ended by the Acts of Union 1800, which united Ireland and Great Britain into the United Kingdom of Great Britain and Ireland from January 1801 until December 1922.\n\nQuestion: In what year did the Union of the Crowns expand the personal union to include Scotland which was the year when Elizabeth I,Queen of England and Ireland, died?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"union_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the Union of the Crowns expanded to include Scotland.\"\n    },\n    \"union_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"union_type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of union formed or expanded.\"\n        },\n        \"kingdoms_involved\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"List of kingdoms involved in the expanded personal union.\"\n        },\n        \"accession_monarch\": {\n          \"type\": \"string\",\n          \"description\": \"The monarch whose accession led to the union.\"\n        }\n      },\n      \"required\": [\n        \"union_type\",\n        \"kingdoms_involved\",\n        \"accession_monarch\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"related_monarch_death\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"monarch_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the monarch who died.\"\n        },\n        \"death_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year of the monarch's death.\"\n        },\n        \"monarch_role\": {\n          \"type\": \"string\",\n          \"description\": \"The role of the monarch at the time of death.\"\n        }\n      },\n      \"required\": [\n        \"monarch_name\",\n        \"death_year\",\n        \"monarch_role\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"is_death_year_same_as_union_year\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the year of the monarch's death is the same as the union year.\"\n    }\n  },\n  \"required\": [\n    \"union_year\",\n    \"union_details\",\n    \"related_monarch_death\",\n    \"is_death_year_same_as_union_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "union_year",
-    "union_details",
-    "related_monarch_death",
-    "is_death_year_same_as_union_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "union_year": {
+        "type": "integer",
+        "description": "The year the Union of the Crowns expanded to include Scotland."
+      },
+      "union_details": {
+        "type": "object",
+        "properties": {
+          "union_type": {
+            "type": "string",
+            "description": "The type of union formed or expanded."
+          },
+          "kingdoms_involved": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "List of kingdoms involved in the expanded personal union."
+          },
+          "accession_monarch": {
+            "type": "string",
+            "description": "The monarch whose accession led to the union."
+          }
+        },
+        "required": [
+          "union_type",
+          "kingdoms_involved",
+          "accession_monarch"
+        ],
+        "additionalProperties": false
+      },
+      "related_monarch_death": {
+        "type": "object",
+        "properties": {
+          "monarch_name": {
+            "type": "string",
+            "description": "The name of the monarch who died."
+          },
+          "death_year": {
+            "type": "integer",
+            "description": "The year of the monarch's death."
+          },
+          "monarch_role": {
+            "type": "string",
+            "description": "The role of the monarch at the time of death."
+          }
+        },
+        "required": [
+          "monarch_name",
+          "death_year",
+          "monarch_role"
+        ],
+        "additionalProperties": false
+      },
+      "is_death_year_same_as_union_year": {
+        "type": "boolean",
+        "description": "Indicates if the year of the monarch's death is the same as the union year."
+      }
+    },
+    "required": [
+      "union_year",
+      "union_details",
+      "related_monarch_death",
+      "is_death_year_same_as_union_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

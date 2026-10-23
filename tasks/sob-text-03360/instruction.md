@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Todd J. Leach: Todd J. Leach, PhD is an American administrator and the Chancellor of the University System of New Hampshire, which consists of University of New Hampshire, Plymouth State University, Keene State College, and Granite State College.
-
-Plymouth State University: Plymouth State University (PSU), formerly Plymouth State College, is a coeducational, residential university located in Plymouth, New Hampshire, United States, with an enrollment of approximately 4,200 undergraduate students and 2,100 graduate students.  The school was founded as Plymouth Normal School in 1871.  Since that time it has evolved to a teachers college, a state college, and finally to a state university in 2003.  PSU is part of the University System of New Hampshire.
-
-University System of Georgia: The University System of Georgia (USG) is the State of Georgia Government Agency that includes 28 public institutions of higher learning in the U.S. state of Georgia.  The System is governed by the Georgia Board of Regents.  It sets goals and dictates general policy to educational institutions as well as administering Public Library Service of the state which includes 58 public library systems.  The USG also dispenses public funds (allocated by the state's legislature) to the institutions but not the lottery-funded HOPE Scholarship.  The USG is the fifth largest university system in the United States by total student enrollment, with 318,027 students in 28 public institutions.  The four larger systems are the University System of Ohio, City University of New York, California State University, and the State University of New York.  USG institutions are divided into four categories depending on their mission statements.  The categories include research universities, state universities, state colleges and regional universities.
-
-Concordia University Nebraska: Concordia University, Nebraska is a private, coeducational university in Seward, Nebraska, established in 1894.  It is affiliated with the Lutheran Church–Missouri Synod as one of its ten schools in the Concordia University System.  The university is organized into three schools: the College of Arts and Sciences, the College of Education, and the College of Graduate Studies.  Degree completion and graduate programs are available online.
-
-Lamar University: Lamar University, often referred to as Lamar or LU, is a public coeducational doctoral/research university in Beaumont, Texas.  Lamar has been a member of the Texas State University System since 1995.  It was the flagship institution of the former Lamar University System.  As of the fall of 2016, the university enrollment was 15,022 students.  Lamar University is accredited by the Southern Association of Colleges and Schools.
-
-University System of New Hampshire: The University System of New Hampshire (USNH), established in 1963, is responsible for overseeing the University of New Hampshire, Plymouth State University, Keene State College, and Granite State College.  The University System is the largest provider of post-secondary education in New Hampshire.  The university system is governed by a single Board of Trustees (BOT) which is responsible for ensuring that each institution has a unique character and educational mission.
-
-University of New Hampshire: The University of New Hampshire (UNH) is a public research university in the University System of New Hampshire, in the United States.  The university's Durham campus, comprising six colleges, is located in the Seacoast region of the state.  A seventh college, the University of New Hampshire at Manchester, occupies the university's campus in Manchester, the state's largest city.  The University of New Hampshire School of Law, known as the Franklin Pierce Law Center until 2010, is located in Concord, the state's capital.
-
-Oklahoma State University System: The Oklahoma State University System is a university system comprising six educational institutes across Oklahoma: four general academic universities and two health institutions.  Its flagship institute is the Oklahoma State University–Stillwater.  The Oklahoma State University System has a total enrollment of about 35,073 students and is the largest university in the state of Oklahoma.  It is governed by the Oklahoma Agricultural and Mechanical Colleges Board of Regents in Oklahoma City, Oklahoma.  The System also has Agricultural Experiment Stations throughout Oklahoma and Cooperative Extension offices that serve all 77 counties.  V. Burns Hargis currently serves as CEO of the Oklahoma State University System, in addition to his service as president of OSU-Stillwater.
-
-California State University: The California State University (Cal State or CSU) is a public university system in California.  With 23 campuses and eight off-campus centers enrolling 478,638 students with 24,405 faculty and 23,012 staff, CSU describes itself the largest four-year public university system in the United States.  It is one of three public higher education systems in the state, with the other two being the University of California system and the California Community Colleges System.  The CSU System is incorporated as The Trustees of the California State University.  The California State University system headquarters are at 401 Golden Shore in Long Beach, California.
-
-Stephen Reno: Stephen J. Reno was Chancellor of the University System of New Hampshire from 2000 to 2009.  The university system comprises four institutions, the University of New Hampshire, Keene State College, Plymouth State University, and Granite State College.  Is currently the Executive Director of Leadership New Hampshire, a leadership development program created to “increase civic engagement and strengthen communities through connecting and educating a diverse pool of engaged or emerging leaders about the state of New Hampshire.”
-
-Question: The University System of New Hampshire oversees a coeducational university in Plymouth that has how many undergrad students?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "university_system_name": {
-      "type": "string",
-      "description": "The name of the university system."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "university_name": {
-      "type": "string",
-      "description": "The name of the university."
-    },
-    "university_location": {
-      "type": "string",
-      "description": "The city where the university is located."
-    },
-    "undergraduate_student_enrollment": {
-      "type": "integer",
-      "description": "The number of undergraduate students enrolled at the university."
+    {
+      "role": "user",
+      "content": "Context:\nTodd J. Leach: Todd J. Leach, PhD is an American administrator and the Chancellor of the University System of New Hampshire, which consists of University of New Hampshire, Plymouth State University, Keene State College, and Granite State College.\n\nPlymouth State University: Plymouth State University (PSU), formerly Plymouth State College, is a coeducational, residential university located in Plymouth, New Hampshire, United States, with an enrollment of approximately 4,200 undergraduate students and 2,100 graduate students.  The school was founded as Plymouth Normal School in 1871.  Since that time it has evolved to a teachers college, a state college, and finally to a state university in 2003.  PSU is part of the University System of New Hampshire.\n\nUniversity System of Georgia: The University System of Georgia (USG) is the State of Georgia Government Agency that includes 28 public institutions of higher learning in the U.S. state of Georgia.  The System is governed by the Georgia Board of Regents.  It sets goals and dictates general policy to educational institutions as well as administering Public Library Service of the state which includes 58 public library systems.  The USG also dispenses public funds (allocated by the state's legislature) to the institutions but not the lottery-funded HOPE Scholarship.  The USG is the fifth largest university system in the United States by total student enrollment, with 318,027 students in 28 public institutions.  The four larger systems are the University System of Ohio, City University of New York, California State University, and the State University of New York.  USG institutions are divided into four categories depending on their mission statements.  The categories include research universities, state universities, state colleges and regional universities.\n\nConcordia University Nebraska: Concordia University, Nebraska is a private, coeducational university in Seward, Nebraska, established in 1894.  It is affiliated with the Lutheran Church–Missouri Synod as one of its ten schools in the Concordia University System.  The university is organized into three schools: the College of Arts and Sciences, the College of Education, and the College of Graduate Studies.  Degree completion and graduate programs are available online.\n\nLamar University: Lamar University, often referred to as Lamar or LU, is a public coeducational doctoral/research university in Beaumont, Texas.  Lamar has been a member of the Texas State University System since 1995.  It was the flagship institution of the former Lamar University System.  As of the fall of 2016, the university enrollment was 15,022 students.  Lamar University is accredited by the Southern Association of Colleges and Schools.\n\nUniversity System of New Hampshire: The University System of New Hampshire (USNH), established in 1963, is responsible for overseeing the University of New Hampshire, Plymouth State University, Keene State College, and Granite State College.  The University System is the largest provider of post-secondary education in New Hampshire.  The university system is governed by a single Board of Trustees (BOT) which is responsible for ensuring that each institution has a unique character and educational mission.\n\nUniversity of New Hampshire: The University of New Hampshire (UNH) is a public research university in the University System of New Hampshire, in the United States.  The university's Durham campus, comprising six colleges, is located in the Seacoast region of the state.  A seventh college, the University of New Hampshire at Manchester, occupies the university's campus in Manchester, the state's largest city.  The University of New Hampshire School of Law, known as the Franklin Pierce Law Center until 2010, is located in Concord, the state's capital.\n\nOklahoma State University System: The Oklahoma State University System is a university system comprising six educational institutes across Oklahoma: four general academic universities and two health institutions.  Its flagship institute is the Oklahoma State University–Stillwater.  The Oklahoma State University System has a total enrollment of about 35,073 students and is the largest university in the state of Oklahoma.  It is governed by the Oklahoma Agricultural and Mechanical Colleges Board of Regents in Oklahoma City, Oklahoma.  The System also has Agricultural Experiment Stations throughout Oklahoma and Cooperative Extension offices that serve all 77 counties.  V. Burns Hargis currently serves as CEO of the Oklahoma State University System, in addition to his service as president of OSU-Stillwater.\n\nCalifornia State University: The California State University (Cal State or CSU) is a public university system in California.  With 23 campuses and eight off-campus centers enrolling 478,638 students with 24,405 faculty and 23,012 staff, CSU describes itself the largest four-year public university system in the United States.  It is one of three public higher education systems in the state, with the other two being the University of California system and the California Community Colleges System.  The CSU System is incorporated as The Trustees of the California State University.  The California State University system headquarters are at 401 Golden Shore in Long Beach, California.\n\nStephen Reno: Stephen J. Reno was Chancellor of the University System of New Hampshire from 2000 to 2009.  The university system comprises four institutions, the University of New Hampshire, Keene State College, Plymouth State University, and Granite State College.  Is currently the Executive Director of Leadership New Hampshire, a leadership development program created to “increase civic engagement and strengthen communities through connecting and educating a diverse pool of engaged or emerging leaders about the state of New Hampshire.”\n\nQuestion: The University System of New Hampshire oversees a coeducational university in Plymouth that has how many undergrad students?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"university_system_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the university system.\"\n    },\n    \"university_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the university.\"\n    },\n    \"university_location\": {\n      \"type\": \"string\",\n      \"description\": \"The city where the university is located.\"\n    },\n    \"undergraduate_student_enrollment\": {\n      \"type\": \"integer\",\n      \"description\": \"The number of undergraduate students enrolled at the university.\"\n    }\n  },\n  \"required\": [\n    \"university_system_name\",\n    \"university_name\",\n    \"university_location\",\n    \"undergraduate_student_enrollment\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "university_system_name",
-    "university_name",
-    "university_location",
-    "undergraduate_student_enrollment"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "university_system_name": {
+        "type": "string",
+        "description": "The name of the university system."
+      },
+      "university_name": {
+        "type": "string",
+        "description": "The name of the university."
+      },
+      "university_location": {
+        "type": "string",
+        "description": "The city where the university is located."
+      },
+      "undergraduate_student_enrollment": {
+        "type": "integer",
+        "description": "The number of undergraduate students enrolled at the university."
+      }
+    },
+    "required": [
+      "university_system_name",
+      "university_name",
+      "university_location",
+      "undergraduate_student_enrollment"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

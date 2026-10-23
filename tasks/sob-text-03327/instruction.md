@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Edinburgh Labour Students: Edinburgh Labour Students (ELS) is a society of the Edinburgh University Students' Association for University of Edinburgh students who support the Labour Party.  The society is affiliated with Scottish Labour Students, the Scottish Labour Party, and the national counterparts Labour Students and the Labour Party.  It is one of the largest student Labour societies in the United Kingdom and actively campaigns as part of the Labour Party.
-
-Trevor Beattie: Trevor Beattie (born 24 December 1959) is a British advertising executive.  He is a founding partner, chairman and creative director of Beattie McGuinness Bungay (BMB), and was formerly the chairman and creative director of TBWA London.  Considered one of the leading figures in advertising in Britain, Beattie has been responsible for a number of high-profile and sometimes controversial advertising campaigns, most notably the "fcuk" campaign for French Connection and the 1994 Playtex Wonderbra campaign featuring Eva Herzigová.  He has managed campaigns for the Labour Party, being a friend of Peter Mandelson and a supporter of New Labour.  Beattie masterminded the ad campaigns for the Labour party in the 2001 and 2005 general elections.
-
-Ruairi Quinn: Ruairi Michael Quinn (born 2 April 1946) is a former Irish Labour Party politician who served as Minister for Education and Skills from 2011 to 2014, he was Leader of the Labour Party from 1997 to 2002, Deputy Leader of the Labour Party from 1989 to 1997, Minister for Finance from 1994 to 1997, Minister for Enterprise and Employment from 1993 to 1994, Minister for the Public Service from 1986 to 1987, Minister for Labour from 1983 to 1986, Minister of State for Urban Affairs and Housing from 1982 to 1983.  He served as a Teachta Dála (TD) for the Dublin South-East constituency from 1977 to 1981 and again from 1982 to 2016.  He was a Senator from 1976 to 1977 upon being Nominated by the Taoiseach and again from 1981 to 1982 for the Industrial and Commercial Panel.
-
-Peter Mandelson: Peter Benjamin Mandelson, Baron Mandelson {'1': ", '2': ", '3': ", '4': "} (born 21 October 1953) is a British Labour politician, president of international think tank Policy Network and Chairman of strategic advisory firm Global Counsel. 
-
-Iain McNicol: Iain McNicol (born 17 August 1969) is a British Labour politician and trade unionist.  He is the General Secretary of the Labour Party, the most senior employee of the Labour Party, following on from being National Political Officer of the GMB Union, and has a long history of organising in both the Labour Party and the trade union movement.
-
-Harriet Harman: Harriet Ruth Harman, {'1': ", '2': ", '3': ", '4': "} (born 30 July 1950) is a British solicitor and Labour Party politician who has been a Member of Parliament (MP) since 1982, first for Peckham, and then for its successor constituency of Camberwell and Peckham since 1997.  She has served in various Cabinet and Shadow Cabinet positions and, in her role as Deputy Leader of the Labour Party, she was twice the Acting Leader of the Labour Party and Leader of the Opposition: from May to September 2010 and from May to September 2015.  She remains the only politician to have held this position on two separate occasions.
-
-Rainbow Labour: Rainbow Labour is part of the New Zealand Labour Party.  It started as a branch in Chris Carter's Auckland Waipareira electorate in 1997, just after Chris Carter had been narrowly defeated in the election the previous year.  At about the same time, Tim Barnett, newly elected to Parliament as an openly gay man, started a Rainbow branch in Christchurch.  During the next few years the branches expanded in size, with the Auckland branch becoming one of the largest in the Labour Party.  This led to the formation of a Rainbow Sector Council within the Labour Party, which gave the branches a nationwide focus and co-ordinating body.  In 2004, at a vote at the Party's Annual Conference, Rainbow Labour was invited to nominate candidates for a permanent representative position elected from the floor of Conference, on the Party's controlling body, the New Zealand Council.
-
-Ad Melkert: Adrianus Petrus Wilhelmus "Ad" Melkert (] ; born 12 February 1956) is a Dutch politician and diplomat of the Labour Party (PvdA).  He served as a Member of the House of Representatives from 3 June 1986 until 22 August 1994 when he became Minister of Social Affairs and Employment in the Cabinet Kok I following the Dutch general election of 1994.  At the end of the parliamentary period, he was not included in the Cabinet Kok II after the Dutch general election of 1998 by his own request, as he wanted to focus his energies on his candidacy to succeed Wim Kok as the next Party leader of the Labour Party.  Melkert returned to the Member of the House of Representatives on 13 July 1998 and became the Parliamentary leader of the Labour Party in the House of Representatives on 13 July 1998 and became the presumed de facto next Party leader of the Labour Party in all but name.  He was elected the official Party leader of the Labour Party on 15 December 2001 and became the lijsttrekker (top candidate) for the Dutch general election of 2002.
-
-Anthony Crosland: Charles Anthony Raven Crosland (29 August 1918 – 19 February 1977), otherwise Tony Crosland or C.A.R. Crosland, was a British Labour Party politician and author.  He served as Member of Parliament for South Gloucestershire and later for Great Grimsby.  Throughout his long career he occupied the cabinet positions of Secretary of State for Education and Science, President of the Board of Trade, Secretary of State for Local Government and Regional Planning and Foreign Secretary.  A prominent socialist intellectual, he became one of the Labour Party's revisionists on the right, as an intellectual leader of Gaitskellism.  His highly influential book "The Future of Socialism" (1956) argued against many Marxist notions and Labour Party orthodoxy that public ownership was essential to make socialism work.  He offered positive alternatives to both right and left wings of his Labour Party.  He questioned the need for public ownership of the means of production – the classic socialist formulation – and argued instead for making the highest priority the end of poverty and improved public services.  He led the Labour battle to replace grammar schools with comprehensive schools that did not sort students at age 11.  As foreign secretary he promoted détente with the Soviet Union.
-
-Clement Attlee: Clement Richard Attlee, 1st Earl Attlee, {'1': ", '2': ", '3': ", '4': "} (3 January 1883 – 8 October 1967) was a British Labour politician who served as Prime Minister of the United Kingdom from 1945 to 1951 and Leader of the Labour Party from 1935 to 1955.  In 1940, Attlee took Labour into the wartime coalition government and served under Winston Churchill, becoming the first person to hold the office of Deputy Prime Minister of the United Kingdom.  He went on to lead the Labour Party to an unexpected landslide victory at the 1945 general election; forming the first Labour majority government, and a mandate to implement its postwar reforms.  The 12.0% national swing from the Conservatives to Labour was unprecedented at that time and remains the largest ever achieved by any party at a general election in British electoral history.  He was re-elected with a narrow majority at the 1950 general election.  In the following year, Attlee called a snap general election, hoping to increase his parliamentary majority.  However, he was narrowly defeated by the Conservatives under the leadership of Winston Churchill; despite winning the most votes of any political party in any general election in British political history until the Conservative Party's fourth consecutive victory in 1992.  Attlee remains the longest-ever serving Leader of the Labour Party.
-
-Question: Trevor Beattie got to manage campaigns for the Labour Party because he was friends with a man who was what type of politician?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the individual who is friends with Trevor Beattie."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "relationship_to_trevor_beattie": {
-      "type": "string",
-      "description": "The nature of the relationship between the person and Trevor Beattie."
-    },
-    "politician_details": {
-      "type": "object",
-      "properties": {
-        "nationality": {
-          "type": "string",
-          "description": "The nationality of the politician."
-        },
-        "party_affiliation": {
-          "type": "string",
-          "description": "The political party the person is affiliated with."
-        },
-        "politician_type_description": {
-          "type": "string",
-          "description": "A general description of the type of politician."
-        }
-      },
-      "required": [
-        "nationality",
-        "party_affiliation",
-        "politician_type_description"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nEdinburgh Labour Students: Edinburgh Labour Students (ELS) is a society of the Edinburgh University Students' Association for University of Edinburgh students who support the Labour Party.  The society is affiliated with Scottish Labour Students, the Scottish Labour Party, and the national counterparts Labour Students and the Labour Party.  It is one of the largest student Labour societies in the United Kingdom and actively campaigns as part of the Labour Party.\n\nTrevor Beattie: Trevor Beattie (born 24 December 1959) is a British advertising executive.  He is a founding partner, chairman and creative director of Beattie McGuinness Bungay (BMB), and was formerly the chairman and creative director of TBWA London.  Considered one of the leading figures in advertising in Britain, Beattie has been responsible for a number of high-profile and sometimes controversial advertising campaigns, most notably the \"fcuk\" campaign for French Connection and the 1994 Playtex Wonderbra campaign featuring Eva Herzigová.  He has managed campaigns for the Labour Party, being a friend of Peter Mandelson and a supporter of New Labour.  Beattie masterminded the ad campaigns for the Labour party in the 2001 and 2005 general elections.\n\nRuairi Quinn: Ruairi Michael Quinn (born 2 April 1946) is a former Irish Labour Party politician who served as Minister for Education and Skills from 2011 to 2014, he was Leader of the Labour Party from 1997 to 2002, Deputy Leader of the Labour Party from 1989 to 1997, Minister for Finance from 1994 to 1997, Minister for Enterprise and Employment from 1993 to 1994, Minister for the Public Service from 1986 to 1987, Minister for Labour from 1983 to 1986, Minister of State for Urban Affairs and Housing from 1982 to 1983.  He served as a Teachta Dála (TD) for the Dublin South-East constituency from 1977 to 1981 and again from 1982 to 2016.  He was a Senator from 1976 to 1977 upon being Nominated by the Taoiseach and again from 1981 to 1982 for the Industrial and Commercial Panel.\n\nPeter Mandelson: Peter Benjamin Mandelson, Baron Mandelson {'1': \", '2': \", '3': \", '4': \"} (born 21 October 1953) is a British Labour politician, president of international think tank Policy Network and Chairman of strategic advisory firm Global Counsel. \n\nIain McNicol: Iain McNicol (born 17 August 1969) is a British Labour politician and trade unionist.  He is the General Secretary of the Labour Party, the most senior employee of the Labour Party, following on from being National Political Officer of the GMB Union, and has a long history of organising in both the Labour Party and the trade union movement.\n\nHarriet Harman: Harriet Ruth Harman, {'1': \", '2': \", '3': \", '4': \"} (born 30 July 1950) is a British solicitor and Labour Party politician who has been a Member of Parliament (MP) since 1982, first for Peckham, and then for its successor constituency of Camberwell and Peckham since 1997.  She has served in various Cabinet and Shadow Cabinet positions and, in her role as Deputy Leader of the Labour Party, she was twice the Acting Leader of the Labour Party and Leader of the Opposition: from May to September 2010 and from May to September 2015.  She remains the only politician to have held this position on two separate occasions.\n\nRainbow Labour: Rainbow Labour is part of the New Zealand Labour Party.  It started as a branch in Chris Carter's Auckland Waipareira electorate in 1997, just after Chris Carter had been narrowly defeated in the election the previous year.  At about the same time, Tim Barnett, newly elected to Parliament as an openly gay man, started a Rainbow branch in Christchurch.  During the next few years the branches expanded in size, with the Auckland branch becoming one of the largest in the Labour Party.  This led to the formation of a Rainbow Sector Council within the Labour Party, which gave the branches a nationwide focus and co-ordinating body.  In 2004, at a vote at the Party's Annual Conference, Rainbow Labour was invited to nominate candidates for a permanent representative position elected from the floor of Conference, on the Party's controlling body, the New Zealand Council.\n\nAd Melkert: Adrianus Petrus Wilhelmus \"Ad\" Melkert (] ; born 12 February 1956) is a Dutch politician and diplomat of the Labour Party (PvdA).  He served as a Member of the House of Representatives from 3 June 1986 until 22 August 1994 when he became Minister of Social Affairs and Employment in the Cabinet Kok I following the Dutch general election of 1994.  At the end of the parliamentary period, he was not included in the Cabinet Kok II after the Dutch general election of 1998 by his own request, as he wanted to focus his energies on his candidacy to succeed Wim Kok as the next Party leader of the Labour Party.  Melkert returned to the Member of the House of Representatives on 13 July 1998 and became the Parliamentary leader of the Labour Party in the House of Representatives on 13 July 1998 and became the presumed de facto next Party leader of the Labour Party in all but name.  He was elected the official Party leader of the Labour Party on 15 December 2001 and became the lijsttrekker (top candidate) for the Dutch general election of 2002.\n\nAnthony Crosland: Charles Anthony Raven Crosland (29 August 1918 – 19 February 1977), otherwise Tony Crosland or C.A.R. Crosland, was a British Labour Party politician and author.  He served as Member of Parliament for South Gloucestershire and later for Great Grimsby.  Throughout his long career he occupied the cabinet positions of Secretary of State for Education and Science, President of the Board of Trade, Secretary of State for Local Government and Regional Planning and Foreign Secretary.  A prominent socialist intellectual, he became one of the Labour Party's revisionists on the right, as an intellectual leader of Gaitskellism.  His highly influential book \"The Future of Socialism\" (1956) argued against many Marxist notions and Labour Party orthodoxy that public ownership was essential to make socialism work.  He offered positive alternatives to both right and left wings of his Labour Party.  He questioned the need for public ownership of the means of production – the classic socialist formulation – and argued instead for making the highest priority the end of poverty and improved public services.  He led the Labour battle to replace grammar schools with comprehensive schools that did not sort students at age 11.  As foreign secretary he promoted détente with the Soviet Union.\n\nClement Attlee: Clement Richard Attlee, 1st Earl Attlee, {'1': \", '2': \", '3': \", '4': \"} (3 January 1883 – 8 October 1967) was a British Labour politician who served as Prime Minister of the United Kingdom from 1945 to 1951 and Leader of the Labour Party from 1935 to 1955.  In 1940, Attlee took Labour into the wartime coalition government and served under Winston Churchill, becoming the first person to hold the office of Deputy Prime Minister of the United Kingdom.  He went on to lead the Labour Party to an unexpected landslide victory at the 1945 general election; forming the first Labour majority government, and a mandate to implement its postwar reforms.  The 12.0% national swing from the Conservatives to Labour was unprecedented at that time and remains the largest ever achieved by any party at a general election in British electoral history.  He was re-elected with a narrow majority at the 1950 general election.  In the following year, Attlee called a snap general election, hoping to increase his parliamentary majority.  However, he was narrowly defeated by the Conservatives under the leadership of Winston Churchill; despite winning the most votes of any political party in any general election in British political history until the Conservative Party's fourth consecutive victory in 1992.  Attlee remains the longest-ever serving Leader of the Labour Party.\n\nQuestion: Trevor Beattie got to manage campaigns for the Labour Party because he was friends with a man who was what type of politician?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the individual who is friends with Trevor Beattie.\"\n    },\n    \"relationship_to_trevor_beattie\": {\n      \"type\": \"string\",\n      \"description\": \"The nature of the relationship between the person and Trevor Beattie.\"\n    },\n    \"politician_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"nationality\": {\n          \"type\": \"string\",\n          \"description\": \"The nationality of the politician.\"\n        },\n        \"party_affiliation\": {\n          \"type\": \"string\",\n          \"description\": \"The political party the person is affiliated with.\"\n        },\n        \"politician_type_description\": {\n          \"type\": \"string\",\n          \"description\": \"A general description of the type of politician.\"\n        }\n      },\n      \"required\": [\n        \"nationality\",\n        \"party_affiliation\",\n        \"politician_type_description\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"relationship_to_trevor_beattie\",\n    \"politician_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "relationship_to_trevor_beattie",
-    "politician_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the individual who is friends with Trevor Beattie."
+      },
+      "relationship_to_trevor_beattie": {
+        "type": "string",
+        "description": "The nature of the relationship between the person and Trevor Beattie."
+      },
+      "politician_details": {
+        "type": "object",
+        "properties": {
+          "nationality": {
+            "type": "string",
+            "description": "The nationality of the politician."
+          },
+          "party_affiliation": {
+            "type": "string",
+            "description": "The political party the person is affiliated with."
+          },
+          "politician_type_description": {
+            "type": "string",
+            "description": "A general description of the type of politician."
+          }
+        },
+        "required": [
+          "nationality",
+          "party_affiliation",
+          "politician_type_description"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "person_name",
+      "relationship_to_trevor_beattie",
+      "politician_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Ulysses Cuadra: Ulysses Cuadra Jr. (born February 24, 1987) is an American actor and voice actor involved in cinema, television, and animation.  English-language TV audiences may recognize him as the voice of Vaz on "Clifford the Big Red Dog".  He is the voice of Maurice "Twister" Rodriguez Nickelodeon animated series "Rocket Power", and Segura on Disney Channel movie "Gotta Kick It Up! ".  Cuadra has also starred in numerous movies such as "The End of Violence", "Price of Glory", and "Tortilla Soup".
-
-Christopher Masterson: Christopher Kennedy Masterson (born January 22, 1980) is an American actor and disc jockey known best for his role as Francis on "Malcolm in the Middle".  He is the younger brother of "That '70s Show" cast member Danny Masterson, older brother of "The Walking Dead" cast member Alanna Masterson, and older brother of "Last Man Standing" cast member Jordan Masterson.
-
-Michael McDonald (comedian): Michael James McDonald (born December 31, 1964) is an American actor, director, writer, and comedian.  He is best known for starring in the sketch comedy show "MADtv".  McDonald joined the show during the fourth season (1998) and remained in the cast until the end of the thirteenth and penultimate season, having become the longest-tenured cast member.  While on the show, he developed many memorable characters.  He was a contributing writer and director on "MADtv".
-
-Jeff Dumas: Jeff Dumas (born June 28, 1971) is an American actor.  Most recently, he made his Lyric Opera of Chicago debut as Njegus in "The Merry Widow", directed by Gary Griffin.  Prior to that, he was seen as Patsy in the first US national tour of "Monty Python's Spamalot", for which he received the 2007 Helen Hayes Award as Actor in a Supporting Role.  A Chicago actor for more than 15 years, his credits include several World Premieres including Stephen Sondheim's "Bounce", directed by Harold Prince at the Goodman Theatre and The Kennedy Center (Original Cast Recording), "The House of Martin Guerre" at the Goodman Theatre, Kid Twist in David Bell's "Bowery Boys" at The Marriott Theatre as well as Joe Welling and Enoch Robinson in "Winesburg, Ohio" at Steppenwolf for which he received the 2004 Joseph Jefferson Award as Actor in a Supporting Role.  His other credits include the original Chicago cast of "Wicked" at the Ford Center - Oriental Theatre, Nicely-Nicely Johnson in "Guys and Dolls" at Court Theatre, Sancho Panza in "The Man of La Mancha" at Light Opera Works, "Sunday in the Park With George and the nationally acclaimed "Pacific Overtures" at Chicago Shakespeare Theatre.  Additional credits: "Light up the Sky" (Goodman) and Gus Fielding in "Babes in Arms" and Taxi Black in "One Touch of Venus (Ovations!  at the Auditorium Theatre).  Regionally, he has appeared as Seymour Krelborn in "Little Shop of Horrors" at Madison Repertory Theatre and Robert Benchley in the world premiere of "At Wit's End" at Florida Stage.  He resides in Chicago with his wife, Ali Wayer, and their cats, Clark & Olive.
-
-The End of Violence: The End of Violence is a 1997 film by the German director Wim Wenders.  The film's cast includes Bill Pullman, Andie MacDowell, Gabriel Byrne, Traci Lind, Rosalind Chao, and Loren Dean, among others.  It also features a soundtrack marked with the signature sounds of Wenders regulars Jon Hassell, Ry Cooder, and Bono.  The film was praised by a select few critics for its cinematography, but performed poorly in the box office.  It was entered into the 1997 Cannes Film Festival.
-
-Bill Pullman: William James "Bill" Pullman (born December 17, 1953) is an American actor.  He made his film debut in the 1986 film "Ruthless People", and has since gone on to star in other films, such as "Spaceballs" (1987), "The Accidental Tourist" (1988), "While You Were Sleeping" (1995), "Casper" (1995), "Independence Day" (1996) and "Lost Highway" (1997).  He has also appeared regularly on television, usually in films and miniseries, though he also had a starring role in the one-season show "1600 Penn".  As of late summer 2017, he is in the main cast of USA Network's new eight-episode, murder-mystery limited series "The Sinner".
-
-John Lloyd Young: John Lloyd Mills Young (born July 4, 1975) is an American actor and singer.  In 2006, he won the Tony Award for Best Leading Actor in a Musical for his role as Frankie Valli in Broadway's "Jersey Boys".  He is the only American actor to date to have received a Lead Actor in a Musical Tony, Drama Desk, Outer Critics Circle and Theatre World Award for a Broadway debut.  Young sang lead vocals on the Grammy-award winning "Jersey Boys" cast album, certified Platinum by the Recording Industry Association of America.  Young reprised his role as Frankie Valli in Warner Brothers' film adaptation of "Jersey Boys", directed by Clint Eastwood and released June 20, 2014.
-
-Justin Bruening: Justin Bruening (born September 24, 1979) is an American actor and former fashion model.  In 2003, his acting career began when he was cast in the role of Jamie Martin on the daytime drama "All My Children", earning him a Soap Opera Digest Award in 2005 for the portrayal.  In late 2007, not long after leaving the role, Bruening was cast as Mike Traceur, the son of character Michael Knight, a new take on the original "Knight Rider" series.  In 2011, he was cast as Tyler Berrett, a recurring role on The CW series "Ringer" starring Sarah Michelle Gellar and in 2013, he joined "Ravenswood."
-
-Kenan Thompson: Kenan Thompson ( born May 10, 1978) is an American actor and comedian.  He is known for his work as a cast member of NBC's "Saturday Night Live".  In his teenage years, he was an original cast member of Nickelodeon's sketch comedy series "All That."  Thompson is also known for his roles as Kenan Rockmore in the sitcom "Kenan & Kel", Russ Tyler in "The Mighty Ducks" franchise, Dexter Reed in the film "Good Burger", and "Fat Albert" as the title character.  In his early career, he often collaborated with fellow comedian and "All That" cast member Kel Mitchell.  He is ranked at #88 on VH1's 100 Greatest Teen Stars.
-
-Josh Wingate: Josh Wingate is an American actor best known for his recurring role as Carter on the ABC daytime series "General Hospital".  His storyline made history as the first time a soap opera had addressed the taboo topic of male survivors of sexual violence.  In 2011, Wingate won a TV Guide Canada Soap Opera Spirit Award nomination for Outstanding Male Actor in a Recurring Role.
-
-Question: which American actor is a cast in The End of Violence
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actor_name": {
-      "type": "string",
-      "description": "The common name of the American actor."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "full_name": {
-      "type": "string",
-      "description": "The full name of the actor."
-    },
-    "nationality": {
-      "type": "string",
-      "description": "The nationality of the actor."
-    },
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film the actor was cast in."
+    {
+      "role": "user",
+      "content": "Context:\nUlysses Cuadra: Ulysses Cuadra Jr. (born February 24, 1987) is an American actor and voice actor involved in cinema, television, and animation.  English-language TV audiences may recognize him as the voice of Vaz on \"Clifford the Big Red Dog\".  He is the voice of Maurice \"Twister\" Rodriguez Nickelodeon animated series \"Rocket Power\", and Segura on Disney Channel movie \"Gotta Kick It Up! \".  Cuadra has also starred in numerous movies such as \"The End of Violence\", \"Price of Glory\", and \"Tortilla Soup\".\n\nChristopher Masterson: Christopher Kennedy Masterson (born January 22, 1980) is an American actor and disc jockey known best for his role as Francis on \"Malcolm in the Middle\".  He is the younger brother of \"That '70s Show\" cast member Danny Masterson, older brother of \"The Walking Dead\" cast member Alanna Masterson, and older brother of \"Last Man Standing\" cast member Jordan Masterson.\n\nMichael McDonald (comedian): Michael James McDonald (born December 31, 1964) is an American actor, director, writer, and comedian.  He is best known for starring in the sketch comedy show \"MADtv\".  McDonald joined the show during the fourth season (1998) and remained in the cast until the end of the thirteenth and penultimate season, having become the longest-tenured cast member.  While on the show, he developed many memorable characters.  He was a contributing writer and director on \"MADtv\".\n\nJeff Dumas: Jeff Dumas (born June 28, 1971) is an American actor.  Most recently, he made his Lyric Opera of Chicago debut as Njegus in \"The Merry Widow\", directed by Gary Griffin.  Prior to that, he was seen as Patsy in the first US national tour of \"Monty Python's Spamalot\", for which he received the 2007 Helen Hayes Award as Actor in a Supporting Role.  A Chicago actor for more than 15 years, his credits include several World Premieres including Stephen Sondheim's \"Bounce\", directed by Harold Prince at the Goodman Theatre and The Kennedy Center (Original Cast Recording), \"The House of Martin Guerre\" at the Goodman Theatre, Kid Twist in David Bell's \"Bowery Boys\" at The Marriott Theatre as well as Joe Welling and Enoch Robinson in \"Winesburg, Ohio\" at Steppenwolf for which he received the 2004 Joseph Jefferson Award as Actor in a Supporting Role.  His other credits include the original Chicago cast of \"Wicked\" at the Ford Center - Oriental Theatre, Nicely-Nicely Johnson in \"Guys and Dolls\" at Court Theatre, Sancho Panza in \"The Man of La Mancha\" at Light Opera Works, \"Sunday in the Park With George and the nationally acclaimed \"Pacific Overtures\" at Chicago Shakespeare Theatre.  Additional credits: \"Light up the Sky\" (Goodman) and Gus Fielding in \"Babes in Arms\" and Taxi Black in \"One Touch of Venus (Ovations!  at the Auditorium Theatre).  Regionally, he has appeared as Seymour Krelborn in \"Little Shop of Horrors\" at Madison Repertory Theatre and Robert Benchley in the world premiere of \"At Wit's End\" at Florida Stage.  He resides in Chicago with his wife, Ali Wayer, and their cats, Clark & Olive.\n\nThe End of Violence: The End of Violence is a 1997 film by the German director Wim Wenders.  The film's cast includes Bill Pullman, Andie MacDowell, Gabriel Byrne, Traci Lind, Rosalind Chao, and Loren Dean, among others.  It also features a soundtrack marked with the signature sounds of Wenders regulars Jon Hassell, Ry Cooder, and Bono.  The film was praised by a select few critics for its cinematography, but performed poorly in the box office.  It was entered into the 1997 Cannes Film Festival.\n\nBill Pullman: William James \"Bill\" Pullman (born December 17, 1953) is an American actor.  He made his film debut in the 1986 film \"Ruthless People\", and has since gone on to star in other films, such as \"Spaceballs\" (1987), \"The Accidental Tourist\" (1988), \"While You Were Sleeping\" (1995), \"Casper\" (1995), \"Independence Day\" (1996) and \"Lost Highway\" (1997).  He has also appeared regularly on television, usually in films and miniseries, though he also had a starring role in the one-season show \"1600 Penn\".  As of late summer 2017, he is in the main cast of USA Network's new eight-episode, murder-mystery limited series \"The Sinner\".\n\nJohn Lloyd Young: John Lloyd Mills Young (born July 4, 1975) is an American actor and singer.  In 2006, he won the Tony Award for Best Leading Actor in a Musical for his role as Frankie Valli in Broadway's \"Jersey Boys\".  He is the only American actor to date to have received a Lead Actor in a Musical Tony, Drama Desk, Outer Critics Circle and Theatre World Award for a Broadway debut.  Young sang lead vocals on the Grammy-award winning \"Jersey Boys\" cast album, certified Platinum by the Recording Industry Association of America.  Young reprised his role as Frankie Valli in Warner Brothers' film adaptation of \"Jersey Boys\", directed by Clint Eastwood and released June 20, 2014.\n\nJustin Bruening: Justin Bruening (born September 24, 1979) is an American actor and former fashion model.  In 2003, his acting career began when he was cast in the role of Jamie Martin on the daytime drama \"All My Children\", earning him a Soap Opera Digest Award in 2005 for the portrayal.  In late 2007, not long after leaving the role, Bruening was cast as Mike Traceur, the son of character Michael Knight, a new take on the original \"Knight Rider\" series.  In 2011, he was cast as Tyler Berrett, a recurring role on The CW series \"Ringer\" starring Sarah Michelle Gellar and in 2013, he joined \"Ravenswood.\"\n\nKenan Thompson: Kenan Thompson ( born May 10, 1978) is an American actor and comedian.  He is known for his work as a cast member of NBC's \"Saturday Night Live\".  In his teenage years, he was an original cast member of Nickelodeon's sketch comedy series \"All That.\"  Thompson is also known for his roles as Kenan Rockmore in the sitcom \"Kenan & Kel\", Russ Tyler in \"The Mighty Ducks\" franchise, Dexter Reed in the film \"Good Burger\", and \"Fat Albert\" as the title character.  In his early career, he often collaborated with fellow comedian and \"All That\" cast member Kel Mitchell.  He is ranked at #88 on VH1's 100 Greatest Teen Stars.\n\nJosh Wingate: Josh Wingate is an American actor best known for his recurring role as Carter on the ABC daytime series \"General Hospital\".  His storyline made history as the first time a soap opera had addressed the taboo topic of male survivors of sexual violence.  In 2011, Wingate won a TV Guide Canada Soap Opera Spirit Award nomination for Outstanding Male Actor in a Recurring Role.\n\nQuestion: which American actor is a cast in The End of Violence\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The common name of the American actor.\"\n    },\n    \"full_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the actor.\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the actor.\"\n    },\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film the actor was cast in.\"\n    }\n  },\n  \"required\": [\n    \"actor_name\",\n    \"full_name\",\n    \"nationality\",\n    \"film_title\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actor_name",
-    "full_name",
-    "nationality",
-    "film_title"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actor_name": {
+        "type": "string",
+        "description": "The common name of the American actor."
+      },
+      "full_name": {
+        "type": "string",
+        "description": "The full name of the actor."
+      },
+      "nationality": {
+        "type": "string",
+        "description": "The nationality of the actor."
+      },
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film the actor was cast in."
+      }
+    },
+    "required": [
+      "actor_name",
+      "full_name",
+      "nationality",
+      "film_title"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

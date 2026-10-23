@@ -1,86 +1,63 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Physicians Mutual: Physicians Mutual is a privately held insurance company headquartered in Omaha, Nebraska, United States, that consists of Physicians Mutual Insurance Company and Physicians Life Insurance Company.  Founded as Physicians Mutual Insurance Company in 1902 by Edwin E. Elliott, Physicians Mutual began by selling health insurance to medical professionals.  Policies were offered to the general public starting in 1962, and by 1970 the company expanded into life insurance when it founded Physicians Life Insurance Company.  Today the company offers a variety of insurance products, annuities, Medicare, Medigap, Medicare Supplement, Term Life Insurance, Whole Life Insurance, Cancer and funeral pre-planning services.  It holds over US$3 billion in assets and employs over one thousand people.  Robert A. Reed is chief executive officer and president.
-
-FMG Insurance: FMG Insurance (formerly Farmers' Mutual Group) is a mutual insurance company in New Zealand that was established from a merger of the Farmers' Mutual Insurance Association, Taranaki Farmers' Mutual Insurance Association and Primary Industries Insurance Company Limited in 1978.  The company is incorporated under the Farmers’ Mutual Group Act 2007 and can trace its origins back to the original farmer's fire mutual organisations established in 1905.
-
-The Norfolk &amp; Dedham Group: The N&D Group is a group of mutual insurance companies based in Dedham, Massachusetts.  The group comprises three regional property and casualty insurance companies which market personal and commercial insurance product lines through independent insurance agents.  The group conducts business in New England, New Jersey, Arkansas, and Missouri, and wrote about a third of a billion dollars in annual insurance premium in 2013.  Founded as The Norfolk Mutual Fire Insurance Company in 1825, the group is one of the oldest mutual insurance companies in the United States.
-
-Surplus note: In the United States a contingent surplus note is a bond-like instrument issued by an insurance company.  These securities are subordinated obligations, and fall at the very bottom of the operating insurance company's capital structure.  They are issued primarily by mutual insurance companies, which are not public and owned instead by their policy holders.  Surplus notes are debt-like in that they pay a coupon and have a finite maturity.  However, in many cases, state insurance regulators have allowed insurance companies to classify the capital raised via surplus notes as “surplus” (which is the statutory equivalent of equity), because surplus note holders are last in line to make a claim on the company's assets in a default scenario, much like where equity holders reside in a public company.  The motivation for mutual companies to issue these instruments was to raise surplus (or equity) in response to new risk-based capital guidelines developed in the early 1990s.  Because mutual companies are owned by policyholders, not shareholders, there was no alternative method to raise surplus or equity.  While surplus note holders have last claim on the assets of the operating insurance company, it is important to realize that this claim is at the operating company level, which is still ahead of holding company obligations.
-
-Columbia, Missouri: Columbia is a city in the U.S. state of Missouri and the county seat of Boone County.  Founded in 1821, it is home to the University of Missouri and is the principal city of the Columbia Metropolitan Area.  It is Missouri's fourth most-populous city, with an estimated population of 120,612 in 2016.  As a midwestern college town, the city has a reputation for progressive politics, public art, and powerful journalism.  The tripartite establishment of Stephens College (1833), the University of Missouri (1839), and Columbia College (1851) has ever since made the city a center of education, culture, and athletic competition; these three schools surround the city's central business district to the east, south, and north.  At the center of Downtown is 8th Street, also known as the Avenue of the Columns, which connects Francis Quadrangle and Jesse Hall to the Boone County Courthouse and the City Hall.  Originally an agricultural town, the cultivation of the mind is Columbia's chief economic concern today.  Never a major center of manufacturing, the city also depends on healthcare, insurance, and technology businesses.  Several companies, such as Shelter Insurance, Carfax, and Slackers CDs and Games, were founded in the city.  Cultural institutions include the State Historical Society of Missouri, the Museum of Art and Archaeology, and the annual True/False Film Festival.  The Missouri Tigers, the state's only major college athletic program, play football at Faurot Field and basketball at Mizzou Arena as members of the Southeastern Conference (SEC).
-
-Mutual insurance: A mutual insurance company is an insurance company owned entirely by its policyholders. Any profits earned by a mutual insurance company are either retained within the company or rebated to policyholders in the form of dividend distributions or reduced future premiums.  In contrast, a stock insurance company is owned by investors who have purchased company stock; any profits generated by a stock insurance company are distributed to the investors without necessarily benefiting the policyholders.
-
-Shelter Insurance: Shelter Insurance Company is a mutual insurance company which focuses on Auto, Property, Business, and Life Insurance.  It operates in fourteen U.S. states and the headquarters is in Columbia, Missouri.
-
-Ohio Mutual Insurance Group: "Ohio Mutual Insurance Group" is a group of property and casualty insurance companies based in Bucyrus, Ohio.  The group is composed of three affiliates: Ohio Mutual Insurance Company, United Ohio Insurance Company and Casco Indemnity Company.  As a mutual insurance company, Ohio Mutual Insurance Group is not a stock company but one that is mutually owned by its policyholders.  A board of directors and an appointed president and chief executive officer manage the company.
-
-Atlantic Mutual Insurance Company: The Atlantic Mutual Insurance Company is a mutual insurance company which offers personal, marine, commercial property, and casualty insurance.  It is part of the Atlantic Mutual Companies, which includes Centennial Insurance Company.  Its corporate headquarters are at 140 Broadway, a block from the World Trade Center.
-
-Western Mutual Insurance Group: Western Mutual Insurance Group is an American group of Property and Casualty Insurance companies, made up of Western Mutual Insurance Company, its sister company Residence Mutual Insurance Company, and their jointly owned subsidiary, Arizona Home Insurance Company.  Based in Irvine, CA, the group writes direct property and casualty insurance in Arizona, California, Colorado, New Mexico, Nevada, Utah and Texas for preferred homeowners.  The Western Mutual Insurance Group has a financial strength rating of 'A+' (Superior) by A.M. Best, a Nationally Recognized Statistical Rating Organization (NRSRO) by the United States Securities and Exchange Commission.
-
-Question: Columbia, Missouri was the home city for which mutual insurance company?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "company_name": {
-      "type": "string",
-      "description": "The name of the mutual insurance company."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "company_type": {
-      "type": "string",
-      "description": "The type of the insurance company, e.g., mutual insurance company."
-    },
-    "headquarters_location": {
-      "type": "object",
-      "properties": {
-        "city": {
-          "type": "string",
-          "description": "The city where the company's headquarters is located."
-        },
-        "state": {
-          "type": "string",
-          "description": "The U.S. state where the company's headquarters is located."
-        }
-      },
-      "required": [
-        "city",
-        "state"
-      ],
-      "additionalProperties": false
-    },
-    "insurance_products_offered": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of insurance products offered by the company."
-    },
-    "operational_states_count": {
-      "type": "integer",
-      "description": "The number of U.S. states in which the company operates."
+    {
+      "role": "user",
+      "content": "Context:\nPhysicians Mutual: Physicians Mutual is a privately held insurance company headquartered in Omaha, Nebraska, United States, that consists of Physicians Mutual Insurance Company and Physicians Life Insurance Company.  Founded as Physicians Mutual Insurance Company in 1902 by Edwin E. Elliott, Physicians Mutual began by selling health insurance to medical professionals.  Policies were offered to the general public starting in 1962, and by 1970 the company expanded into life insurance when it founded Physicians Life Insurance Company.  Today the company offers a variety of insurance products, annuities, Medicare, Medigap, Medicare Supplement, Term Life Insurance, Whole Life Insurance, Cancer and funeral pre-planning services.  It holds over US$3 billion in assets and employs over one thousand people.  Robert A. Reed is chief executive officer and president.\n\nFMG Insurance: FMG Insurance (formerly Farmers' Mutual Group) is a mutual insurance company in New Zealand that was established from a merger of the Farmers' Mutual Insurance Association, Taranaki Farmers' Mutual Insurance Association and Primary Industries Insurance Company Limited in 1978.  The company is incorporated under the Farmers’ Mutual Group Act 2007 and can trace its origins back to the original farmer's fire mutual organisations established in 1905.\n\nThe Norfolk &amp; Dedham Group: The N&D Group is a group of mutual insurance companies based in Dedham, Massachusetts.  The group comprises three regional property and casualty insurance companies which market personal and commercial insurance product lines through independent insurance agents.  The group conducts business in New England, New Jersey, Arkansas, and Missouri, and wrote about a third of a billion dollars in annual insurance premium in 2013.  Founded as The Norfolk Mutual Fire Insurance Company in 1825, the group is one of the oldest mutual insurance companies in the United States.\n\nSurplus note: In the United States a contingent surplus note is a bond-like instrument issued by an insurance company.  These securities are subordinated obligations, and fall at the very bottom of the operating insurance company's capital structure.  They are issued primarily by mutual insurance companies, which are not public and owned instead by their policy holders.  Surplus notes are debt-like in that they pay a coupon and have a finite maturity.  However, in many cases, state insurance regulators have allowed insurance companies to classify the capital raised via surplus notes as “surplus” (which is the statutory equivalent of equity), because surplus note holders are last in line to make a claim on the company's assets in a default scenario, much like where equity holders reside in a public company.  The motivation for mutual companies to issue these instruments was to raise surplus (or equity) in response to new risk-based capital guidelines developed in the early 1990s.  Because mutual companies are owned by policyholders, not shareholders, there was no alternative method to raise surplus or equity.  While surplus note holders have last claim on the assets of the operating insurance company, it is important to realize that this claim is at the operating company level, which is still ahead of holding company obligations.\n\nColumbia, Missouri: Columbia is a city in the U.S. state of Missouri and the county seat of Boone County.  Founded in 1821, it is home to the University of Missouri and is the principal city of the Columbia Metropolitan Area.  It is Missouri's fourth most-populous city, with an estimated population of 120,612 in 2016.  As a midwestern college town, the city has a reputation for progressive politics, public art, and powerful journalism.  The tripartite establishment of Stephens College (1833), the University of Missouri (1839), and Columbia College (1851) has ever since made the city a center of education, culture, and athletic competition; these three schools surround the city's central business district to the east, south, and north.  At the center of Downtown is 8th Street, also known as the Avenue of the Columns, which connects Francis Quadrangle and Jesse Hall to the Boone County Courthouse and the City Hall.  Originally an agricultural town, the cultivation of the mind is Columbia's chief economic concern today.  Never a major center of manufacturing, the city also depends on healthcare, insurance, and technology businesses.  Several companies, such as Shelter Insurance, Carfax, and Slackers CDs and Games, were founded in the city.  Cultural institutions include the State Historical Society of Missouri, the Museum of Art and Archaeology, and the annual True/False Film Festival.  The Missouri Tigers, the state's only major college athletic program, play football at Faurot Field and basketball at Mizzou Arena as members of the Southeastern Conference (SEC).\n\nMutual insurance: A mutual insurance company is an insurance company owned entirely by its policyholders. Any profits earned by a mutual insurance company are either retained within the company or rebated to policyholders in the form of dividend distributions or reduced future premiums.  In contrast, a stock insurance company is owned by investors who have purchased company stock; any profits generated by a stock insurance company are distributed to the investors without necessarily benefiting the policyholders.\n\nShelter Insurance: Shelter Insurance Company is a mutual insurance company which focuses on Auto, Property, Business, and Life Insurance.  It operates in fourteen U.S. states and the headquarters is in Columbia, Missouri.\n\nOhio Mutual Insurance Group: \"Ohio Mutual Insurance Group\" is a group of property and casualty insurance companies based in Bucyrus, Ohio.  The group is composed of three affiliates: Ohio Mutual Insurance Company, United Ohio Insurance Company and Casco Indemnity Company.  As a mutual insurance company, Ohio Mutual Insurance Group is not a stock company but one that is mutually owned by its policyholders.  A board of directors and an appointed president and chief executive officer manage the company.\n\nAtlantic Mutual Insurance Company: The Atlantic Mutual Insurance Company is a mutual insurance company which offers personal, marine, commercial property, and casualty insurance.  It is part of the Atlantic Mutual Companies, which includes Centennial Insurance Company.  Its corporate headquarters are at 140 Broadway, a block from the World Trade Center.\n\nWestern Mutual Insurance Group: Western Mutual Insurance Group is an American group of Property and Casualty Insurance companies, made up of Western Mutual Insurance Company, its sister company Residence Mutual Insurance Company, and their jointly owned subsidiary, Arizona Home Insurance Company.  Based in Irvine, CA, the group writes direct property and casualty insurance in Arizona, California, Colorado, New Mexico, Nevada, Utah and Texas for preferred homeowners.  The Western Mutual Insurance Group has a financial strength rating of 'A+' (Superior) by A.M. Best, a Nationally Recognized Statistical Rating Organization (NRSRO) by the United States Securities and Exchange Commission.\n\nQuestion: Columbia, Missouri was the home city for which mutual insurance company?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"company_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the mutual insurance company.\"\n    },\n    \"company_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of the insurance company, e.g., mutual insurance company.\"\n    },\n    \"headquarters_location\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"city\": {\n          \"type\": \"string\",\n          \"description\": \"The city where the company's headquarters is located.\"\n        },\n        \"state\": {\n          \"type\": \"string\",\n          \"description\": \"The U.S. state where the company's headquarters is located.\"\n        }\n      },\n      \"required\": [\n        \"city\",\n        \"state\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"insurance_products_offered\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of insurance products offered by the company.\"\n    },\n    \"operational_states_count\": {\n      \"type\": \"integer\",\n      \"description\": \"The number of U.S. states in which the company operates.\"\n    }\n  },\n  \"required\": [\n    \"company_name\",\n    \"company_type\",\n    \"headquarters_location\",\n    \"insurance_products_offered\",\n    \"operational_states_count\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "company_name",
-    "company_type",
-    "headquarters_location",
-    "insurance_products_offered",
-    "operational_states_count"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "company_name": {
+        "type": "string",
+        "description": "The name of the mutual insurance company."
+      },
+      "company_type": {
+        "type": "string",
+        "description": "The type of the insurance company, e.g., mutual insurance company."
+      },
+      "headquarters_location": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "The city where the company's headquarters is located."
+          },
+          "state": {
+            "type": "string",
+            "description": "The U.S. state where the company's headquarters is located."
+          }
+        },
+        "required": [
+          "city",
+          "state"
+        ],
+        "additionalProperties": false
+      },
+      "insurance_products_offered": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of insurance products offered by the company."
+      },
+      "operational_states_count": {
+        "type": "integer",
+        "description": "The number of U.S. states in which the company operates."
+      }
+    },
+    "required": [
+      "company_name",
+      "company_type",
+      "headquarters_location",
+      "insurance_products_offered",
+      "operational_states_count"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

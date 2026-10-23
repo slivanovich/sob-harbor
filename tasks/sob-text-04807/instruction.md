@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Lance Stephenson: Lance Stephenson Jr. (born September 5, 1990) is an American professional basketball player for the Indiana Pacers of the National Basketball Association (NBA).  He attended Lincoln High School in the Coney Island section of Brooklyn.  Stephenson won city basketball championships in all four years of high school, and is New York State's all-time leading scorer in high school basketball.  He was named Mr. New York Basketball after his senior year and appeared in the 2009 McDonald's All-American Game.  He was drafted with the 40th overall pick in the 2010 NBA draft by the Indiana Pacers and played for the franchise until signing with the Charlotte Hornets in 2014.  After three years splitting time with the Hornets, Los Angeles Clippers, Memphis Grizzlies, New Orleans Pelicans and Minnesota Timberwolves, Stephenson returned to the Pacers in March 2017.
-
-Tom Binford: Thomas Wyatt Wilson Binford (April 6, 1924 – January 14, 1999) was an Indianapolis-based entrepreneur and philanthropist.  One of Indianapolis' most influential men, Thomas W. Binford was a pioneer, visionary and civil rights leader.  He participated in civic, philanthropic, cultural and political aspects of the city and state and was valued for his sensitivity, wise counsel, personal and financial support, and sincerity.  In addition to his many personal interests, Binford spearheaded a group to buy the Indiana Pacers basketball team in 1975 and served as its president and general manager for one year.  From 1974-1995, Binford served as the Chief Steward of the Indianapolis 500, presiding over its transition from United States Auto Club to Indy Racing League governance.
-
-Boomer (mascot): Boomer is the official mascot of the Indiana Pacers, a professional basketball team that plays in the National Basketball Association (NBA).  He appears at each of the Pacers' home games, at special events for the NBA, as well as at other community & sporting events in central Indiana.
-
-List of Indiana Pacers head coaches: The Indiana Pacers are an American professional basketball team based in Indianapolis, Indiana.  The Pacers play in the Central Division of the Eastern Conference in the National Basketball Association (NBA).  The team began playing in 1967 as a charter member of the American Basketball Association (ABA), and joined the NBA as part of the ABA-NBA merger.  The team has played their home games at the Bankers Life Fieldhouse since the 1999–2000 NBA season.  The Pacers are owned by Herbert and Melvin Simon, and David Morway is their general manager.
-
-Bob Ford (basketball): Robert Alan "Bob" Ford (born January 26, 1950) is a retired American basketball player.  He graduated from Evansville North High School in 1968 and led North High School to the 1967 Indiana high school basketball championship.  He played on the 1968 Indiana High School All-Star basketball team against the Kentucky All-Stars.  He played college basketball at Purdue University where he totaled 1,244 points and 648 rebounds, he was the team MVP during his junior season (1970–71) leading the Boilermakers to the NIT.  He played briefly for the Memphis Tams of the ABA in the 1972-73 season, averaging 1.6 points and 1.3 rebounds in nine games played; a mid-season trade with the Indiana Pacers failed to materialize and Ford was released.  In spent the 1974-75 basketball season with the Lafayette Lasers of the short lived IBA.  During his collegiate career, he was a 2x member of USA Basketball (National) teams, the Silver Medal-winning 1970 World University Games squad and the 1971 Pan-Am Games team.  Currently, Bob Ford is a full-time telecaster for Purdue Boilermaker men's basketball games.
-
-List of Indiana Pacers seasons: The Indiana Pacers are a professional basketball team based in Indianapolis, Indiana, United States.  They are members of the Central Division of the Eastern Conference in the National Basketball Association (NBA).  The Pacers were founded in 1967, originally as members of the American Basketball Association, where they were crowned league champions three times and made the playoffs in all of the nine seasons they participated in the league.  The Pacers were led during the ABA days by two-time MVP Mel Daniels and by head coach Bobby Leonard.
-
-History of the Indiana Pacers: The Indiana Pacers were founded on February 2, 1967 as an American Basketball Association franchise, and moved to the National Basketball Association in 1976.  The Pacers were considered a dynasty in the ABA, winning three titles and six conference titles.  The Pacers play in the Eastern Conference and Central Division, and they play their home games at Bankers Life Fieldhouse. The Pacers have enjoyed sparring moments of success in the NBA, most notably during the career of Reggie Miller, however have never won an NBA championship.
-
-1996–97 Denver Nuggets season: The 1996–97 NBA season was the Nuggets' 21st season in the National Basketball Association, and 30th season as a franchise.  In the offseason, the Nuggets acquired Mark Jackson and Ricky Pierce from the Indiana Pacers, and signed free agent Ervin Johnson.  However, after a 4–9 start to the season, Bernie Bickerstaff was forced out as head coach and replaced with Dick Motta, where the Nuggets then lost ten straight games along the way.  Midway through the season, Jackson was traded back to the Indiana Pacers, while Pierce was dealt to the Charlotte Hornets.  Meanwhile, the Nuggets signed free agent Kenny Smith, who won championships with the Houston Rockets.  As the season drew, the Nuggets still struggled losing 26 of their final 30 games, finishing fifth in the Midwest Division with a 21–61 record.  Despite playing just 55 games due to a knee injury and a ruptured achilles tendon, LaPhonso Ellis led the team in scoring with a career high of 21.9 points per game.
-
-Indiana Pacers: The Indiana Pacers are an American professional basketball team based in Indianapolis, Indiana.  The Pacers compete in the National Basketball Association (NBA) as a member club of the league's Eastern Conference Central Division.  The Pacers were first established in 1967 as a member of the American Basketball Association (ABA) and became a member of the NBA in 1976 as a result of the ABA–NBA merger.  They play their home games at Bankers Life Fieldhouse.  The team is named after Indiana's history with the Indianapolis 500's pace cars and with the harness racing industry.
-
-Reb Porter: Rebel "Reb" Porter is a retired American public address (PA) announcer who worked for the Indiana Pacers basketball team of the NBA until retiring in 2010.  Porter also worked as an announcer/disk jockey for the legendary WIFE (AM-1310) in Indianapolis during that station's heyday in the 1960s.
-
-Question: Where does Lance Stephenson of the Indiana Pacers basketball team play his home games?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "player_name": {
-      "type": "string",
-      "description": "The name of the basketball player."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "team_name": {
-      "type": "string",
-      "description": "The name of the basketball team the player plays for."
-    },
-    "league": {
-      "type": "string",
-      "description": "The professional basketball league the team belongs to."
-    },
-    "home_arena": {
-      "type": "string",
-      "description": "The name of the arena where the team plays its home games."
-    },
-    "arena_location": {
-      "type": "string",
-      "description": "The city and state where the home arena is located."
+    {
+      "role": "user",
+      "content": "Context:\nLance Stephenson: Lance Stephenson Jr. (born September 5, 1990) is an American professional basketball player for the Indiana Pacers of the National Basketball Association (NBA).  He attended Lincoln High School in the Coney Island section of Brooklyn.  Stephenson won city basketball championships in all four years of high school, and is New York State's all-time leading scorer in high school basketball.  He was named Mr. New York Basketball after his senior year and appeared in the 2009 McDonald's All-American Game.  He was drafted with the 40th overall pick in the 2010 NBA draft by the Indiana Pacers and played for the franchise until signing with the Charlotte Hornets in 2014.  After three years splitting time with the Hornets, Los Angeles Clippers, Memphis Grizzlies, New Orleans Pelicans and Minnesota Timberwolves, Stephenson returned to the Pacers in March 2017.\n\nTom Binford: Thomas Wyatt Wilson Binford (April 6, 1924 – January 14, 1999) was an Indianapolis-based entrepreneur and philanthropist.  One of Indianapolis' most influential men, Thomas W. Binford was a pioneer, visionary and civil rights leader.  He participated in civic, philanthropic, cultural and political aspects of the city and state and was valued for his sensitivity, wise counsel, personal and financial support, and sincerity.  In addition to his many personal interests, Binford spearheaded a group to buy the Indiana Pacers basketball team in 1975 and served as its president and general manager for one year.  From 1974-1995, Binford served as the Chief Steward of the Indianapolis 500, presiding over its transition from United States Auto Club to Indy Racing League governance.\n\nBoomer (mascot): Boomer is the official mascot of the Indiana Pacers, a professional basketball team that plays in the National Basketball Association (NBA).  He appears at each of the Pacers' home games, at special events for the NBA, as well as at other community & sporting events in central Indiana.\n\nList of Indiana Pacers head coaches: The Indiana Pacers are an American professional basketball team based in Indianapolis, Indiana.  The Pacers play in the Central Division of the Eastern Conference in the National Basketball Association (NBA).  The team began playing in 1967 as a charter member of the American Basketball Association (ABA), and joined the NBA as part of the ABA-NBA merger.  The team has played their home games at the Bankers Life Fieldhouse since the 1999–2000 NBA season.  The Pacers are owned by Herbert and Melvin Simon, and David Morway is their general manager.\n\nBob Ford (basketball): Robert Alan \"Bob\" Ford (born January 26, 1950) is a retired American basketball player.  He graduated from Evansville North High School in 1968 and led North High School to the 1967 Indiana high school basketball championship.  He played on the 1968 Indiana High School All-Star basketball team against the Kentucky All-Stars.  He played college basketball at Purdue University where he totaled 1,244 points and 648 rebounds, he was the team MVP during his junior season (1970–71) leading the Boilermakers to the NIT.  He played briefly for the Memphis Tams of the ABA in the 1972-73 season, averaging 1.6 points and 1.3 rebounds in nine games played; a mid-season trade with the Indiana Pacers failed to materialize and Ford was released.  In spent the 1974-75 basketball season with the Lafayette Lasers of the short lived IBA.  During his collegiate career, he was a 2x member of USA Basketball (National) teams, the Silver Medal-winning 1970 World University Games squad and the 1971 Pan-Am Games team.  Currently, Bob Ford is a full-time telecaster for Purdue Boilermaker men's basketball games.\n\nList of Indiana Pacers seasons: The Indiana Pacers are a professional basketball team based in Indianapolis, Indiana, United States.  They are members of the Central Division of the Eastern Conference in the National Basketball Association (NBA).  The Pacers were founded in 1967, originally as members of the American Basketball Association, where they were crowned league champions three times and made the playoffs in all of the nine seasons they participated in the league.  The Pacers were led during the ABA days by two-time MVP Mel Daniels and by head coach Bobby Leonard.\n\nHistory of the Indiana Pacers: The Indiana Pacers were founded on February 2, 1967 as an American Basketball Association franchise, and moved to the National Basketball Association in 1976.  The Pacers were considered a dynasty in the ABA, winning three titles and six conference titles.  The Pacers play in the Eastern Conference and Central Division, and they play their home games at Bankers Life Fieldhouse. The Pacers have enjoyed sparring moments of success in the NBA, most notably during the career of Reggie Miller, however have never won an NBA championship.\n\n1996–97 Denver Nuggets season: The 1996–97 NBA season was the Nuggets' 21st season in the National Basketball Association, and 30th season as a franchise.  In the offseason, the Nuggets acquired Mark Jackson and Ricky Pierce from the Indiana Pacers, and signed free agent Ervin Johnson.  However, after a 4–9 start to the season, Bernie Bickerstaff was forced out as head coach and replaced with Dick Motta, where the Nuggets then lost ten straight games along the way.  Midway through the season, Jackson was traded back to the Indiana Pacers, while Pierce was dealt to the Charlotte Hornets.  Meanwhile, the Nuggets signed free agent Kenny Smith, who won championships with the Houston Rockets.  As the season drew, the Nuggets still struggled losing 26 of their final 30 games, finishing fifth in the Midwest Division with a 21–61 record.  Despite playing just 55 games due to a knee injury and a ruptured achilles tendon, LaPhonso Ellis led the team in scoring with a career high of 21.9 points per game.\n\nIndiana Pacers: The Indiana Pacers are an American professional basketball team based in Indianapolis, Indiana.  The Pacers compete in the National Basketball Association (NBA) as a member club of the league's Eastern Conference Central Division.  The Pacers were first established in 1967 as a member of the American Basketball Association (ABA) and became a member of the NBA in 1976 as a result of the ABA–NBA merger.  They play their home games at Bankers Life Fieldhouse.  The team is named after Indiana's history with the Indianapolis 500's pace cars and with the harness racing industry.\n\nReb Porter: Rebel \"Reb\" Porter is a retired American public address (PA) announcer who worked for the Indiana Pacers basketball team of the NBA until retiring in 2010.  Porter also worked as an announcer/disk jockey for the legendary WIFE (AM-1310) in Indianapolis during that station's heyday in the 1960s.\n\nQuestion: Where does Lance Stephenson of the Indiana Pacers basketball team play his home games?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"player_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the basketball player.\"\n    },\n    \"team_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the basketball team the player plays for.\"\n    },\n    \"league\": {\n      \"type\": \"string\",\n      \"description\": \"The professional basketball league the team belongs to.\"\n    },\n    \"home_arena\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the arena where the team plays its home games.\"\n    },\n    \"arena_location\": {\n      \"type\": \"string\",\n      \"description\": \"The city and state where the home arena is located.\"\n    }\n  },\n  \"required\": [\n    \"player_name\",\n    \"team_name\",\n    \"league\",\n    \"home_arena\",\n    \"arena_location\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "player_name",
-    "team_name",
-    "league",
-    "home_arena",
-    "arena_location"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "player_name": {
+        "type": "string",
+        "description": "The name of the basketball player."
+      },
+      "team_name": {
+        "type": "string",
+        "description": "The name of the basketball team the player plays for."
+      },
+      "league": {
+        "type": "string",
+        "description": "The professional basketball league the team belongs to."
+      },
+      "home_arena": {
+        "type": "string",
+        "description": "The name of the arena where the team plays its home games."
+      },
+      "arena_location": {
+        "type": "string",
+        "description": "The city and state where the home arena is located."
+      }
+    },
+    "required": [
+      "player_name",
+      "team_name",
+      "league",
+      "home_arena",
+      "arena_location"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

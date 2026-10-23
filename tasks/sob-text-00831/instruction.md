@@ -1,81 +1,58 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-RuPaul: RuPaul Andre Charles (born November 17, 1960), known professionally by the mononym RuPaul, is an American actor, drag queen, television personality, and singer/songwriter.  Since 2009, he has produced and hosted the reality competition series "RuPaul's Drag Race", for which he received two Primetime Emmy Awards.
-
-Drag queen: A drag queen is a person, usually male, who dresses in clothing of the opposite sex and often acts with exaggerated femininity and in feminine gender roles for the purpose of entertainment or fashion.  Often, they will exaggerate certain characteristics such as make-up and eyelashes for comic, dramatic, or satirical effect.  While drag is very much associated with gay men and gay culture, there are drag artists of all sexualities.  There are many kinds of drag artists and they vary greatly in dedication, from professionals who have starred in films to people who just try it once, or those who simply prefer clothing and makeup that is usually worn by the opposite sex in their culture.  Drag queens can vary widely by class and culture.  Other drag performers include drag kings, women who perform in male roles and attire, faux queens, who are women who dress in an exaggerated style to emulate drag queens, and faux kings, who are men who dress to impersonate drag kings.
-
-Looking Good, Feeling Gorgeous: "Looking Good Feeling Gorgeous" is the first single from RuPaul's album "Red Hot".  The dance/house song is a self-affirming anthem of self-confidence, particularly in relation to one's appearance.  It was released exclusively on a CD single on RuCo, Inc., RuPaul's own label.
-
-Red Hot (album): Red Hot is RuPaul's fourth official album release.  "Red Hot" consists of a mixture of house, pop, club/dance and R&B songs.  It includes the three Top 10 Hot Dance Music/Club Play chart hits, "Looking Good, Feeling Gorgeous", "Workout" and "People Are People".  Highlights include, "Are You Man Enough", "Hollywood USA", "Freaky/Kinky" and "Just a Little In & Out".
-
-Bob the Drag Queen: Bob the Drag Queen is the stage name of Christopher Caldwell, an American drag queen, comedian and reality television personality.  He is best known for winning the eighth season of "RuPaul's Drag Race".
-
-Willam Belli: Willam Belli (born June 30, 1982) commonly referred to as simply Willam, is an American actor, drag queen, model, reality television personality, recording artist and author, who is known for his recurring role as transgender woman Cherry Peck in Ryan Murphy's medical drama "Nip/Tuck" and for being a contestant on the fourth season of "RuPaul's Drag Race", for which he remains the only contestant ever disqualified from the series.  In addition to acting, Belli found viral success with his music video parodies "Chow Down" and "Boy Is a Bottom" with his Los Angeles drag queen pop trio, DWV.  However, the group split in June 2014, because of a personal conflict among the groupmates.
-
-Kim Chi (drag queen): Kim Chi (born August 8, 1987) is the stage name of Sang-Young Shin, a Korean-American drag queen, artist, and reality television contestant.  She first became recognized for her participation in "RuPaul's Drag Race" season 8, where she made the top three.  She was the first Korean-American participant on the show as well as the first Korean-American drag queen on American national television.
-
-Faux queen: A faux queen or bio queen or diva queen or female queen is a female performance artist who adopts the style typical of male drag queens.  A faux queen may be jocularly described as "a drag queen trapped in a woman's body".  Other descriptions include "biologically-challenged" drag queen, "female female impersonator", or "female impersonator impersonator".  Like traditional drag queens and drag kings, faux queens play with traditional gender roles and gender norms to educate and entertain.  Faux queens can appear alongside drag kings at lesbian drag shows and are interchangeable with "regular" (assigned male at birth) drag queens as emcees, performers, hostesses, and spokesmodels.
-
-List of RuPaul's Drag Race contestants: This is a list of contestants who have appeared on the American television show "RuPaul's Drag Race".  Contestants compete against each other and are progressively eliminated, until just a winner remains, who is crowned "next drag superstar".  They are judged by drag queen RuPaul and her panel of judges.  The series first aired in 2009 and as of 2017, there have been nine seasons of the show.  A total of 113 different participants have been selected as finalists in the show in its eight years running, with nine drag queens — BeBe Zahara Benet, Tyra Sanchez, Raja, Sharon Needles, Jinkx Monsoon, Bianca Del Rio, Violet Chachki, Bob the Drag Queen, and Sasha Velour being crowned so far as "America's Next Drag Superstar".  In addition, an season aired in 2012 featuring twelve returning contestants from the first four seasons, each competing for a place in the "Drag Race Hall of Fame".  The season was won by Chad Michaels, previously a runner-up in season four.  In 2015, it was announced "All Stars" had been renewed and a premiered on August 25, 2016.  The second season was won by Alaska, who was previously a runner-up in season 5.
-
-List of RuPaul's Drag Race episodes: "RuPaul's Drag Race" is an American reality competition television series produced by World of Wonder for Logo TV.  The show documents RuPaul in his search for "America's next drag superstar."  Queen RuPaul plays the roles of host, mentor, and source of inspiration for this series, as contestants are given different challenges each week.  "RuPaul's Drag Race" employs a panel of judges, including RuPaul, Michelle Visage and a host of other guest judges, who critique contestants' progress throughout the competition.  The title of the show is a play on drag queen and drag racing, and the title sequence and song "Drag Race" both have a drag-racing theme.
-
-Question: What famous drag queen sings the song "Looking Good Feeling Gorgeous"?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "artist_name": {
-      "type": "string",
-      "description": "The professional name of the artist who sings the song."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song being asked about."
-    },
-    "album_name": {
-      "type": "string",
-      "description": "The name of the album from which the song is a single."
-    },
-    "artist_details": {
-      "type": "object",
-      "properties": {
-        "primary_profession": {
-          "type": "string",
-          "description": "The primary profession of the artist as described in the context."
-        },
-        "other_professions": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A list of other professions held by the artist."
-        }
-      },
-      "required": [
-        "primary_profession",
-        "other_professions"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nRuPaul: RuPaul Andre Charles (born November 17, 1960), known professionally by the mononym RuPaul, is an American actor, drag queen, television personality, and singer/songwriter.  Since 2009, he has produced and hosted the reality competition series \"RuPaul's Drag Race\", for which he received two Primetime Emmy Awards.\n\nDrag queen: A drag queen is a person, usually male, who dresses in clothing of the opposite sex and often acts with exaggerated femininity and in feminine gender roles for the purpose of entertainment or fashion.  Often, they will exaggerate certain characteristics such as make-up and eyelashes for comic, dramatic, or satirical effect.  While drag is very much associated with gay men and gay culture, there are drag artists of all sexualities.  There are many kinds of drag artists and they vary greatly in dedication, from professionals who have starred in films to people who just try it once, or those who simply prefer clothing and makeup that is usually worn by the opposite sex in their culture.  Drag queens can vary widely by class and culture.  Other drag performers include drag kings, women who perform in male roles and attire, faux queens, who are women who dress in an exaggerated style to emulate drag queens, and faux kings, who are men who dress to impersonate drag kings.\n\nLooking Good, Feeling Gorgeous: \"Looking Good Feeling Gorgeous\" is the first single from RuPaul's album \"Red Hot\".  The dance/house song is a self-affirming anthem of self-confidence, particularly in relation to one's appearance.  It was released exclusively on a CD single on RuCo, Inc., RuPaul's own label.\n\nRed Hot (album): Red Hot is RuPaul's fourth official album release.  \"Red Hot\" consists of a mixture of house, pop, club/dance and R&B songs.  It includes the three Top 10 Hot Dance Music/Club Play chart hits, \"Looking Good, Feeling Gorgeous\", \"Workout\" and \"People Are People\".  Highlights include, \"Are You Man Enough\", \"Hollywood USA\", \"Freaky/Kinky\" and \"Just a Little In & Out\".\n\nBob the Drag Queen: Bob the Drag Queen is the stage name of Christopher Caldwell, an American drag queen, comedian and reality television personality.  He is best known for winning the eighth season of \"RuPaul's Drag Race\".\n\nWillam Belli: Willam Belli (born June 30, 1982) commonly referred to as simply Willam, is an American actor, drag queen, model, reality television personality, recording artist and author, who is known for his recurring role as transgender woman Cherry Peck in Ryan Murphy's medical drama \"Nip/Tuck\" and for being a contestant on the fourth season of \"RuPaul's Drag Race\", for which he remains the only contestant ever disqualified from the series.  In addition to acting, Belli found viral success with his music video parodies \"Chow Down\" and \"Boy Is a Bottom\" with his Los Angeles drag queen pop trio, DWV.  However, the group split in June 2014, because of a personal conflict among the groupmates.\n\nKim Chi (drag queen): Kim Chi (born August 8, 1987) is the stage name of Sang-Young Shin, a Korean-American drag queen, artist, and reality television contestant.  She first became recognized for her participation in \"RuPaul's Drag Race\" season 8, where she made the top three.  She was the first Korean-American participant on the show as well as the first Korean-American drag queen on American national television.\n\nFaux queen: A faux queen or bio queen or diva queen or female queen is a female performance artist who adopts the style typical of male drag queens.  A faux queen may be jocularly described as \"a drag queen trapped in a woman's body\".  Other descriptions include \"biologically-challenged\" drag queen, \"female female impersonator\", or \"female impersonator impersonator\".  Like traditional drag queens and drag kings, faux queens play with traditional gender roles and gender norms to educate and entertain.  Faux queens can appear alongside drag kings at lesbian drag shows and are interchangeable with \"regular\" (assigned male at birth) drag queens as emcees, performers, hostesses, and spokesmodels.\n\nList of RuPaul's Drag Race contestants: This is a list of contestants who have appeared on the American television show \"RuPaul's Drag Race\".  Contestants compete against each other and are progressively eliminated, until just a winner remains, who is crowned \"next drag superstar\".  They are judged by drag queen RuPaul and her panel of judges.  The series first aired in 2009 and as of 2017, there have been nine seasons of the show.  A total of 113 different participants have been selected as finalists in the show in its eight years running, with nine drag queens — BeBe Zahara Benet, Tyra Sanchez, Raja, Sharon Needles, Jinkx Monsoon, Bianca Del Rio, Violet Chachki, Bob the Drag Queen, and Sasha Velour being crowned so far as \"America's Next Drag Superstar\".  In addition, an season aired in 2012 featuring twelve returning contestants from the first four seasons, each competing for a place in the \"Drag Race Hall of Fame\".  The season was won by Chad Michaels, previously a runner-up in season four.  In 2015, it was announced \"All Stars\" had been renewed and a premiered on August 25, 2016.  The second season was won by Alaska, who was previously a runner-up in season 5.\n\nList of RuPaul's Drag Race episodes: \"RuPaul's Drag Race\" is an American reality competition television series produced by World of Wonder for Logo TV.  The show documents RuPaul in his search for \"America's next drag superstar.\"  Queen RuPaul plays the roles of host, mentor, and source of inspiration for this series, as contestants are given different challenges each week.  \"RuPaul's Drag Race\" employs a panel of judges, including RuPaul, Michelle Visage and a host of other guest judges, who critique contestants' progress throughout the competition.  The title of the show is a play on drag queen and drag racing, and the title sequence and song \"Drag Race\" both have a drag-racing theme.\n\nQuestion: What famous drag queen sings the song \"Looking Good Feeling Gorgeous\"?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"artist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The professional name of the artist who sings the song.\"\n    },\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song being asked about.\"\n    },\n    \"album_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the album from which the song is a single.\"\n    },\n    \"artist_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"primary_profession\": {\n          \"type\": \"string\",\n          \"description\": \"The primary profession of the artist as described in the context.\"\n        },\n        \"other_professions\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"A list of other professions held by the artist.\"\n        }\n      },\n      \"required\": [\n        \"primary_profession\",\n        \"other_professions\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"artist_name\",\n    \"song_title\",\n    \"album_name\",\n    \"artist_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "artist_name",
-    "song_title",
-    "album_name",
-    "artist_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "artist_name": {
+        "type": "string",
+        "description": "The professional name of the artist who sings the song."
+      },
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song being asked about."
+      },
+      "album_name": {
+        "type": "string",
+        "description": "The name of the album from which the song is a single."
+      },
+      "artist_details": {
+        "type": "object",
+        "properties": {
+          "primary_profession": {
+            "type": "string",
+            "description": "The primary profession of the artist as described in the context."
+          },
+          "other_professions": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of other professions held by the artist."
+          }
+        },
+        "required": [
+          "primary_profession",
+          "other_professions"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "artist_name",
+      "song_title",
+      "album_name",
+      "artist_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

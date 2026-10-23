@@ -1,97 +1,74 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-James Hannigan: James Hannigan (born 23 July 1971) is a multiple award-winning British composer and music producer.  His work has included single or multiple entries in the multi-million selling Command & Conquer, Harry Potter, The Lord of the Rings, Dead Space, Warhammer, Space Hulk, Grand Prix and Theme Park game series; video games including The "Transformers" Universe, Freelancer, RuneScape, Cloudy With a Chance of Meatballs, Red Alert 3, Republic: The Revolution, Evil Genius, Sim Theme Park, , Conquest, Nintendo's Art Academy, Reign of Fire and others, along with television such as BBC America’s Primeval.  He has also contributed music to EA Sports titles, such as those belonging to the FIFA and F1 series and his music has been heard in games such as Super Smash Bros.  Wii U and Saints Row 4.  In the earlier years of his career, Hannigan was based at Pinewood Studios where he sometimes worked as a Sound Designer on films alongside composing.  James Hannigan's other music credits include the Dirk Maggs directed dramas, Alien: Out of the Shadows and the acclaimed BBC Radio 4 adaptations of Neil Gaiman’s Good Omens and Neverwhere.
-
-Space Hulk (1993 video game): Space Hulk is a 1993 real-time tactical video game for MS-DOS, Amiga and PC-98.  The game was based on Games Workshop's 1989 board game of the same name.  Set in the fictional "Warhammer 40,000" universe, the player directs squads of Space Marines, genetically enhanced armoured soldiers, in their missions to protect the human race from deadly aliens.  "Space Hulk" was developed and published by Electronic Arts, with support from Games Workshop.
-
-Space Hulk: Vengeance of the Blood Angels: Space Hulk: Vengeance of the Blood Angels is a video game published by Electronic Arts in 1995 for the 3DO which was later ported to the PC, PlayStation, and Sega Saturn.  It is based on Games Workshop's board game "Space Hulk" and is the sequel to the 1993 video game "Space Hulk".  Like its predecessor, "Vengeance of the Blood Angels" combines first-person shooter gameplay with real-time tactical elements.  Space Hulk: Vengeance of the Blood Angels is part of the "Warhammer 40,000" universe.
-
-Space Hulk: Space Hulk is a board game for two players by Games Workshop.  It was first released in 1989.  The game is set in the fictional universe of "Warhammer 40,000".  In the game, a "space hulk" is a mass of ancient, derelict space ships, asteroids, and other assorted space debris.  One player takes the role of Space Marine Terminators, Human elite soldiers who have been sent to investigate such a space hulk.  The other player takes the role of Tyranid Genestealers, an aggressive alien species which have made their home aboard such mass.
-
-Ultra Marines: Ultra Marines is one of a series of 4 "introductory" board games released by Games Workshop in 1991 (The other three being Space Fleet, Kerrunch and Mighty Warriors).  Set in the "Warhammer 40,000" universe, it is effectively a 'scaled-down' version of "Space Hulk" and "Tyranid Attack", using plastic Marine Scouts from the Ultramarines, Space Wolves, Dark Angels and Blood Angels chapters.  Other components include event cards, a simple ruleset, as well as corridor and room tiles from the game "Space Hulk".
-
-Space Hulk (2013 video game): Space Hulk is a turn-based tactics video game developed by Full Control and released on August 15, 2013.  It based on the tabletop game of the same name by Games Workshop.  It features the Blood Angels Chapter of the Space Marines battling grotesque aliens known as Genestealers.
-
-Torres (board game): Torres is a German-style board game designed by Wolfgang Kramer and Michael Kiesling and published in 1999 by FX Schmid in German and by Rio Grande Games in English.  The game strongly influenced Kramer and Kiesling's Mask Trilogy of games, but is not considered to be a part of the trilogy.  The game has since been reprinted (in 2005).
-
-Genestealer: Genestealers ("Corporaptor Hominii") are an alien species in the "Warhammer 40,000" universe, and the opponents of the marines in the "Space Hulk" board game.  In more recent versions of that universe, Genestealers are a biological subgroup of the Tyranids, a nomadic alien race comprising many genetically engineered forms.
-
-Space Hulk: Deathwing: Space Hulk: Deathwing is a first-person shooter developed by Streum On Studio with assistance from Cyanide and published by Focus Home Interactive.  The game is set in the "Warhammer 40,000" universe and based upon the strategy board game "Space Hulk".  The game was released in December 14, 2016 on PC and will be released in early 2017 for consoles.
-
-BlazBlue: Chrono Phantasma: BlazBlue: Chrono Phantasma, released in Japan as BlazBlue: Chronophantasma (ブレイブルー クロノファンタズマ , BureiBurū Kuronofantazuma ) , is a 2-D fighting game developed by Arc System Works.  It is the third game of the Blazblue series, set after the events of "".  The game was originally to be released first as an arcade game in the early fourth quarter of 2012, which was later pushed forward to November 2012.  A PlayStation 3 version of the game was released in Japan on October 24, 2013, while it was released in the United States on March 25, 2014.  Due to limited hardware and disc space the game was not released on the Xbox 360.  An updated version of the game titled BlazBlue: Chrono Phantasma Extend (ブレイブルー クロノファンタズマ エクステンド , BureiBurū: Kuronofantazuma Ekusutendo , BlazBlue: Chronophantasma Extend) , dubbed as BlazBlue: Chrono Phantasma 2.0 (ブレイブルー クロノファンタズマ ２.０ , BureiBurū: Kuronofantazuma 2.0 , BlazBlue: Chronophantasma 2.0) in the Arcade version, was originally released for Arcades in October 2014, and for the PlayStation 3, PlayStation Vita, PlayStation 4, and Xbox One in April 2015.  It was released on June 30, 2015 in North America, with the European region version releasing on October 23, 2015.
-
-Question: Which role-playing board game was originally released first: Space Hulk or Torres?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "game_comparison": {
-      "type": "object",
-      "properties": {
-        "game_a": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "release_year": {
-              "type": "integer"
-            }
-          },
-          "required": [
-            "name",
-            "release_year"
-          ],
-          "additionalProperties": false
-        },
-        "game_b": {
-          "type": "object",
-          "properties": {
-            "name": {
-              "type": "string"
-            },
-            "release_year": {
-              "type": "integer"
-            }
-          },
-          "required": [
-            "name",
-            "release_year"
-          ],
-          "additionalProperties": false
-        }
-      },
-      "required": [
-        "game_a",
-        "game_b"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "first_released_game_name": {
-      "type": "string",
-      "description": "The name of the board game that was originally released first."
-    },
-    "comparison_result": {
-      "type": "string",
-      "description": "A statement comparing the release years of the two games."
+    {
+      "role": "user",
+      "content": "Context:\nJames Hannigan: James Hannigan (born 23 July 1971) is a multiple award-winning British composer and music producer.  His work has included single or multiple entries in the multi-million selling Command & Conquer, Harry Potter, The Lord of the Rings, Dead Space, Warhammer, Space Hulk, Grand Prix and Theme Park game series; video games including The \"Transformers\" Universe, Freelancer, RuneScape, Cloudy With a Chance of Meatballs, Red Alert 3, Republic: The Revolution, Evil Genius, Sim Theme Park, , Conquest, Nintendo's Art Academy, Reign of Fire and others, along with television such as BBC America’s Primeval.  He has also contributed music to EA Sports titles, such as those belonging to the FIFA and F1 series and his music has been heard in games such as Super Smash Bros.  Wii U and Saints Row 4.  In the earlier years of his career, Hannigan was based at Pinewood Studios where he sometimes worked as a Sound Designer on films alongside composing.  James Hannigan's other music credits include the Dirk Maggs directed dramas, Alien: Out of the Shadows and the acclaimed BBC Radio 4 adaptations of Neil Gaiman’s Good Omens and Neverwhere.\n\nSpace Hulk (1993 video game): Space Hulk is a 1993 real-time tactical video game for MS-DOS, Amiga and PC-98.  The game was based on Games Workshop's 1989 board game of the same name.  Set in the fictional \"Warhammer 40,000\" universe, the player directs squads of Space Marines, genetically enhanced armoured soldiers, in their missions to protect the human race from deadly aliens.  \"Space Hulk\" was developed and published by Electronic Arts, with support from Games Workshop.\n\nSpace Hulk: Vengeance of the Blood Angels: Space Hulk: Vengeance of the Blood Angels is a video game published by Electronic Arts in 1995 for the 3DO which was later ported to the PC, PlayStation, and Sega Saturn.  It is based on Games Workshop's board game \"Space Hulk\" and is the sequel to the 1993 video game \"Space Hulk\".  Like its predecessor, \"Vengeance of the Blood Angels\" combines first-person shooter gameplay with real-time tactical elements.  Space Hulk: Vengeance of the Blood Angels is part of the \"Warhammer 40,000\" universe.\n\nSpace Hulk: Space Hulk is a board game for two players by Games Workshop.  It was first released in 1989.  The game is set in the fictional universe of \"Warhammer 40,000\".  In the game, a \"space hulk\" is a mass of ancient, derelict space ships, asteroids, and other assorted space debris.  One player takes the role of Space Marine Terminators, Human elite soldiers who have been sent to investigate such a space hulk.  The other player takes the role of Tyranid Genestealers, an aggressive alien species which have made their home aboard such mass.\n\nUltra Marines: Ultra Marines is one of a series of 4 \"introductory\" board games released by Games Workshop in 1991 (The other three being Space Fleet, Kerrunch and Mighty Warriors).  Set in the \"Warhammer 40,000\" universe, it is effectively a 'scaled-down' version of \"Space Hulk\" and \"Tyranid Attack\", using plastic Marine Scouts from the Ultramarines, Space Wolves, Dark Angels and Blood Angels chapters.  Other components include event cards, a simple ruleset, as well as corridor and room tiles from the game \"Space Hulk\".\n\nSpace Hulk (2013 video game): Space Hulk is a turn-based tactics video game developed by Full Control and released on August 15, 2013.  It based on the tabletop game of the same name by Games Workshop.  It features the Blood Angels Chapter of the Space Marines battling grotesque aliens known as Genestealers.\n\nTorres (board game): Torres is a German-style board game designed by Wolfgang Kramer and Michael Kiesling and published in 1999 by FX Schmid in German and by Rio Grande Games in English.  The game strongly influenced Kramer and Kiesling's Mask Trilogy of games, but is not considered to be a part of the trilogy.  The game has since been reprinted (in 2005).\n\nGenestealer: Genestealers (\"Corporaptor Hominii\") are an alien species in the \"Warhammer 40,000\" universe, and the opponents of the marines in the \"Space Hulk\" board game.  In more recent versions of that universe, Genestealers are a biological subgroup of the Tyranids, a nomadic alien race comprising many genetically engineered forms.\n\nSpace Hulk: Deathwing: Space Hulk: Deathwing is a first-person shooter developed by Streum On Studio with assistance from Cyanide and published by Focus Home Interactive.  The game is set in the \"Warhammer 40,000\" universe and based upon the strategy board game \"Space Hulk\".  The game was released in December 14, 2016 on PC and will be released in early 2017 for consoles.\n\nBlazBlue: Chrono Phantasma: BlazBlue: Chrono Phantasma, released in Japan as BlazBlue: Chronophantasma (ブレイブルー クロノファンタズマ , BureiBurū Kuronofantazuma ) , is a 2-D fighting game developed by Arc System Works.  It is the third game of the Blazblue series, set after the events of \"\".  The game was originally to be released first as an arcade game in the early fourth quarter of 2012, which was later pushed forward to November 2012.  A PlayStation 3 version of the game was released in Japan on October 24, 2013, while it was released in the United States on March 25, 2014.  Due to limited hardware and disc space the game was not released on the Xbox 360.  An updated version of the game titled BlazBlue: Chrono Phantasma Extend (ブレイブルー クロノファンタズマ エクステンド , BureiBurū: Kuronofantazuma Ekusutendo , BlazBlue: Chronophantasma Extend) , dubbed as BlazBlue: Chrono Phantasma 2.0 (ブレイブルー クロノファンタズマ ２.０ , BureiBurū: Kuronofantazuma 2.0 , BlazBlue: Chronophantasma 2.0) in the Arcade version, was originally released for Arcades in October 2014, and for the PlayStation 3, PlayStation Vita, PlayStation 4, and Xbox One in April 2015.  It was released on June 30, 2015 in North America, with the European region version releasing on October 23, 2015.\n\nQuestion: Which role-playing board game was originally released first: Space Hulk or Torres?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"game_comparison\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"game_a\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"name\": {\n              \"type\": \"string\"\n            },\n            \"release_year\": {\n              \"type\": \"integer\"\n            }\n          },\n          \"required\": [\n            \"name\",\n            \"release_year\"\n          ],\n          \"additionalProperties\": false\n        },\n        \"game_b\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"name\": {\n              \"type\": \"string\"\n            },\n            \"release_year\": {\n              \"type\": \"integer\"\n            }\n          },\n          \"required\": [\n            \"name\",\n            \"release_year\"\n          ],\n          \"additionalProperties\": false\n        }\n      },\n      \"required\": [\n        \"game_a\",\n        \"game_b\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"first_released_game_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the board game that was originally released first.\"\n    },\n    \"comparison_result\": {\n      \"type\": \"string\",\n      \"description\": \"A statement comparing the release years of the two games.\"\n    }\n  },\n  \"required\": [\n    \"game_comparison\",\n    \"first_released_game_name\",\n    \"comparison_result\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "game_comparison",
-    "first_released_game_name",
-    "comparison_result"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "game_comparison": {
+        "type": "object",
+        "properties": {
+          "game_a": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "release_year": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "name",
+              "release_year"
+            ],
+            "additionalProperties": false
+          },
+          "game_b": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "release_year": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "name",
+              "release_year"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "game_a",
+          "game_b"
+        ],
+        "additionalProperties": false
+      },
+      "first_released_game_name": {
+        "type": "string",
+        "description": "The name of the board game that was originally released first."
+      },
+      "comparison_result": {
+        "type": "string",
+        "description": "A statement comparing the release years of the two games."
+      }
+    },
+    "required": [
+      "game_comparison",
+      "first_released_game_name",
+      "comparison_result"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

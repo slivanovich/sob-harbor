@@ -1,75 +1,52 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Fermi liquid theory: Fermi liquid theory (also known as Landau–Fermi liquid theory) is a theoretical model of interacting fermions that describes the normal state of most metals at sufficiently low temperatures.  The interaction between the particles of the many-body system does not need to be small.  The phenomenological theory of Fermi liquids was introduced by the Soviet physicist Lev Davidovich Landau in 1956, and later developed by Alexei Abrikosov and Isaak Khalatnikov using diagrammatic perturbation theory.  The theory explains why some of the properties of an interacting fermion system are very similar to those of the Fermi gas (i.e. non-interacting fermions), and why other properties differ.
-
-Weyl semimetal: Weyl fermions are massless chiral fermions that play an important role in quantum field theory and the standard model.  They are considered a building block for fermions in quantum field theory, and were predicted from a solution to the Dirac equation derived by Hermann Weyl called the Weyl equation.  For example, one-half of a charged Dirac fermion of a definite chirality is a Weyl fermion.  They have not been observed as a fundamental particle in nature.  Weyl fermions may be realized as emergent quasiparticles in a low-energy condensed matter system.  This was first predicted by C. Herring in the context of electronic band structures of solid state systems such as electronic crystals.  The first (non-electronic) liquid state which is suggested has similarly emergent but neutral excitation and theoretically interpreted superfluid's chiral anomaly as observation of Fermi points is in Helium-3 A liquids.  Crystalline TaAs is the first discovered topological Weyl fermion semimetal exhibiting topological surface Fermi arcs where Weyl fermion is electrically charged along the line of original suggestion by C. Herring.  An electronic Weyl fermion is not only charged but stable at room temperature where there is no such superfluid or liquid state known.
-
-Lev Landau: Lev Davidovich Landau (Russian: Лев Дави́дович Ланда́у ; ] ; January 22 [O.S. January 9] 1908 1 April 1968) was a Soviet physicist who made fundamental contributions to many areas of theoretical physics.  His accomplishments include the independent co-discovery of the density matrix method in quantum mechanics (alongside John von Neumann), the quantum mechanical theory of diamagnetism, the theory of superfluidity, the theory of second-order phase transitions, the Ginzburg–Landau theory of superconductivity, the theory of Fermi liquid, the explanation of Landau damping in plasma physics, the Landau pole in quantum electrodynamics, the two-component theory of neutrinos, and Landau's equations for "S" matrix singularities.  He received the 1962 Nobel Prize in Physics for his development of a mathematical theory of superfluidity that accounts for the properties of liquid helium II at a temperature below ( ).
-
-Edward Teller: Edward Teller (Hungarian: "Teller Ede" ; January 15, 1908 – September 9, 2003) was a Hungarian-American theoretical physicist who was born in Hungary, and is known colloquially as "the father of the hydrogen bomb", although he claimed he did not care for the title.  He made numerous contributions to nuclear and molecular physics, spectroscopy (in particular the Jahn–Teller and Renner–Teller effects), and surface physics.  His extension of Enrico Fermi's theory of beta decay, in the form of Gamow–Teller transitions, provided an important stepping stone in its application, while the Jahn–Teller effect and the Brunauer–Emmett–Teller (BET) theory have retained their original formulation and are still mainstays in physics and chemistry.  Teller also made contributions to Thomas–Fermi theory, the precursor of density functional theory, a standard modern tool in the quantum mechanical treatment of complex molecules.  In 1953, along with Nicholas Metropolis, Arianna Rosenbluth, Marshall Rosenbluth, and Augusta Teller, Teller co-authored a paper which is a standard starting point for the applications of the Monte Carlo method to statistical mechanics.
-
-Luttinger liquid: A Luttinger liquid, or Tomonaga-Luttinger liquid, is a theoretical model describing interacting electrons (or other fermions) in a one-dimensional conductor (e.g. quantum wires such as carbon nanotubes).  Such a model is necessary as the commonly used Fermi liquid model breaks down for one dimension.
-
-Marcela Carena: Marcela Carena (born 22 March 22, 1962 in Buenos Aires, Argentina) is a theoretical physicist at the Fermi National Accelerator Laboratory and a professor at the University of Chicago and the Enrico Fermi Institute.  She is the Director of International Relations at Fermilab, as well as the head of the Theoretical Physics Department.  As of January 1, 2016 she is the Chair Elect of the Division of Particles and Fields of the American Physical Society.
-
-Friedel oscillations: Friedel oscillations arise from localized perturbations in a metallic or semiconductor system caused by a defect in the Fermi gas or Fermi liquid.  Friedel oscillations are a quantum mechanical analog to electric charge screening of charged species in a pool of ions.  Whereas electrical charge screening utilizes a point entity treatment to describe the make-up of the ion pool, Friedel oscillations describing fermions in a Fermi fluid or Fermi gas require a quasi-particle or a scattering treatment.  Such oscillations depict a characteristic exponential decay in the fermionic density near the perturbation followed by an ongoing sinusoidal decay resembling sin(x)/x.
-
-Quantum oscillations (experimental technique): In condensed matter physics, Quantum oscillations describes a series of related experimental techniques used to map the Fermi surface of a metal in the presence of a strong magnetic field.  These techniques are based on the principle of Landau quantization of Fermions moving in a magnetic field.  For a gas of free fermions in a strong magnetic field, the energy levels are quantized into bands, called the "Landau levels", whose separation is inversely proportional to the strength of the magnetic field.  In a quantum oscillation experiment, the external magnetic field is varied, which causes the Landau levels to pass over the Fermi surface, which in turn results in oscillations of the electronic density of states at the Fermi level; this produces oscillations in the many material properties which depend on this, including resistance (the Shubnikov-de Haas effect), Hall resistance, and magnetic susceptibility (the de Haas-van Alphen effect).  Observation of quantum oscillations in a material is considered a signature of Fermi liquid behaviour.
-
-Alexei Alexeyevich Abrikosov: Alexei Alexeyevich Abrikosov (Russian: Алексе́й Алексе́евич Абрико́сов ; 25 June 1928 – 29 March 2017) was a Soviet, Russian and American theoretical physicist whose main contributions are in the field of condensed matter physics.  He was awarded the Nobel Prize in Physics in 2003.
-
-Viatcheslav Mukhanov: Viatcheslav Fyodorovich Mukhanov (Russian: Вячесла́в Фёдорович Муха́нов ; born October 2, 1956) is a Soviet/Russian theoretical physicist and cosmologist.  He is best known for the theory of Quantum Origin of the Universe Structure.  Working in 1980-1981 with Gennady Chibisov in the Lebedev Physical Institute in Moscow he predicted the spectrum of inhomogeneities in the Universe, which are originated from the initial quantum fluctuations.  The numerous experiments in which there were measured the temperature fluctuations of the Cosmic Microwave Background Radiation are in excellent agreement with this theoretical prediction, thus confirming that the galaxies and their clusters originated from the initial quantum fluctuations.  Later on V. Mukhanov proved that the results, he obtained with G. Chibisov in 1981, are of the generic origin and he has developed the general consistent quantum cosmological perturbation theory.
-
-Question: Fermi liquid theory was later developed by which theoretical physicist of Soviet, Russian and American background?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "physicist_name": {
-      "type": "string",
-      "description": "The full name of the theoretical physicist."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "nationalities": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of nationalities or backgrounds associated with the physicist."
-    },
-    "developed_theory": {
-      "type": "object",
-      "properties": {
-        "theory_name": {
-          "type": "string",
-          "description": "The name of the theory developed by the physicist."
-        },
-        "development_method": {
-          "type": "string",
-          "description": "The method or approach used in developing the theory."
-        }
-      },
-      "required": [
-        "theory_name"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nFermi liquid theory: Fermi liquid theory (also known as Landau–Fermi liquid theory) is a theoretical model of interacting fermions that describes the normal state of most metals at sufficiently low temperatures.  The interaction between the particles of the many-body system does not need to be small.  The phenomenological theory of Fermi liquids was introduced by the Soviet physicist Lev Davidovich Landau in 1956, and later developed by Alexei Abrikosov and Isaak Khalatnikov using diagrammatic perturbation theory.  The theory explains why some of the properties of an interacting fermion system are very similar to those of the Fermi gas (i.e. non-interacting fermions), and why other properties differ.\n\nWeyl semimetal: Weyl fermions are massless chiral fermions that play an important role in quantum field theory and the standard model.  They are considered a building block for fermions in quantum field theory, and were predicted from a solution to the Dirac equation derived by Hermann Weyl called the Weyl equation.  For example, one-half of a charged Dirac fermion of a definite chirality is a Weyl fermion.  They have not been observed as a fundamental particle in nature.  Weyl fermions may be realized as emergent quasiparticles in a low-energy condensed matter system.  This was first predicted by C. Herring in the context of electronic band structures of solid state systems such as electronic crystals.  The first (non-electronic) liquid state which is suggested has similarly emergent but neutral excitation and theoretically interpreted superfluid's chiral anomaly as observation of Fermi points is in Helium-3 A liquids.  Crystalline TaAs is the first discovered topological Weyl fermion semimetal exhibiting topological surface Fermi arcs where Weyl fermion is electrically charged along the line of original suggestion by C. Herring.  An electronic Weyl fermion is not only charged but stable at room temperature where there is no such superfluid or liquid state known.\n\nLev Landau: Lev Davidovich Landau (Russian: Лев Дави́дович Ланда́у ; ] ; January 22 [O.S. January 9] 1908 1 April 1968) was a Soviet physicist who made fundamental contributions to many areas of theoretical physics.  His accomplishments include the independent co-discovery of the density matrix method in quantum mechanics (alongside John von Neumann), the quantum mechanical theory of diamagnetism, the theory of superfluidity, the theory of second-order phase transitions, the Ginzburg–Landau theory of superconductivity, the theory of Fermi liquid, the explanation of Landau damping in plasma physics, the Landau pole in quantum electrodynamics, the two-component theory of neutrinos, and Landau's equations for \"S\" matrix singularities.  He received the 1962 Nobel Prize in Physics for his development of a mathematical theory of superfluidity that accounts for the properties of liquid helium II at a temperature below ( ).\n\nEdward Teller: Edward Teller (Hungarian: \"Teller Ede\" ; January 15, 1908 – September 9, 2003) was a Hungarian-American theoretical physicist who was born in Hungary, and is known colloquially as \"the father of the hydrogen bomb\", although he claimed he did not care for the title.  He made numerous contributions to nuclear and molecular physics, spectroscopy (in particular the Jahn–Teller and Renner–Teller effects), and surface physics.  His extension of Enrico Fermi's theory of beta decay, in the form of Gamow–Teller transitions, provided an important stepping stone in its application, while the Jahn–Teller effect and the Brunauer–Emmett–Teller (BET) theory have retained their original formulation and are still mainstays in physics and chemistry.  Teller also made contributions to Thomas–Fermi theory, the precursor of density functional theory, a standard modern tool in the quantum mechanical treatment of complex molecules.  In 1953, along with Nicholas Metropolis, Arianna Rosenbluth, Marshall Rosenbluth, and Augusta Teller, Teller co-authored a paper which is a standard starting point for the applications of the Monte Carlo method to statistical mechanics.\n\nLuttinger liquid: A Luttinger liquid, or Tomonaga-Luttinger liquid, is a theoretical model describing interacting electrons (or other fermions) in a one-dimensional conductor (e.g. quantum wires such as carbon nanotubes).  Such a model is necessary as the commonly used Fermi liquid model breaks down for one dimension.\n\nMarcela Carena: Marcela Carena (born 22 March 22, 1962 in Buenos Aires, Argentina) is a theoretical physicist at the Fermi National Accelerator Laboratory and a professor at the University of Chicago and the Enrico Fermi Institute.  She is the Director of International Relations at Fermilab, as well as the head of the Theoretical Physics Department.  As of January 1, 2016 she is the Chair Elect of the Division of Particles and Fields of the American Physical Society.\n\nFriedel oscillations: Friedel oscillations arise from localized perturbations in a metallic or semiconductor system caused by a defect in the Fermi gas or Fermi liquid.  Friedel oscillations are a quantum mechanical analog to electric charge screening of charged species in a pool of ions.  Whereas electrical charge screening utilizes a point entity treatment to describe the make-up of the ion pool, Friedel oscillations describing fermions in a Fermi fluid or Fermi gas require a quasi-particle or a scattering treatment.  Such oscillations depict a characteristic exponential decay in the fermionic density near the perturbation followed by an ongoing sinusoidal decay resembling sin(x)/x.\n\nQuantum oscillations (experimental technique): In condensed matter physics, Quantum oscillations describes a series of related experimental techniques used to map the Fermi surface of a metal in the presence of a strong magnetic field.  These techniques are based on the principle of Landau quantization of Fermions moving in a magnetic field.  For a gas of free fermions in a strong magnetic field, the energy levels are quantized into bands, called the \"Landau levels\", whose separation is inversely proportional to the strength of the magnetic field.  In a quantum oscillation experiment, the external magnetic field is varied, which causes the Landau levels to pass over the Fermi surface, which in turn results in oscillations of the electronic density of states at the Fermi level; this produces oscillations in the many material properties which depend on this, including resistance (the Shubnikov-de Haas effect), Hall resistance, and magnetic susceptibility (the de Haas-van Alphen effect).  Observation of quantum oscillations in a material is considered a signature of Fermi liquid behaviour.\n\nAlexei Alexeyevich Abrikosov: Alexei Alexeyevich Abrikosov (Russian: Алексе́й Алексе́евич Абрико́сов ; 25 June 1928 – 29 March 2017) was a Soviet, Russian and American theoretical physicist whose main contributions are in the field of condensed matter physics.  He was awarded the Nobel Prize in Physics in 2003.\n\nViatcheslav Mukhanov: Viatcheslav Fyodorovich Mukhanov (Russian: Вячесла́в Фёдорович Муха́нов ; born October 2, 1956) is a Soviet/Russian theoretical physicist and cosmologist.  He is best known for the theory of Quantum Origin of the Universe Structure.  Working in 1980-1981 with Gennady Chibisov in the Lebedev Physical Institute in Moscow he predicted the spectrum of inhomogeneities in the Universe, which are originated from the initial quantum fluctuations.  The numerous experiments in which there were measured the temperature fluctuations of the Cosmic Microwave Background Radiation are in excellent agreement with this theoretical prediction, thus confirming that the galaxies and their clusters originated from the initial quantum fluctuations.  Later on V. Mukhanov proved that the results, he obtained with G. Chibisov in 1981, are of the generic origin and he has developed the general consistent quantum cosmological perturbation theory.\n\nQuestion: Fermi liquid theory was later developed by which theoretical physicist of Soviet, Russian and American background?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"physicist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the theoretical physicist.\"\n    },\n    \"nationalities\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of nationalities or backgrounds associated with the physicist.\"\n    },\n    \"developed_theory\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"theory_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the theory developed by the physicist.\"\n        },\n        \"development_method\": {\n          \"type\": \"string\",\n          \"description\": \"The method or approach used in developing the theory.\"\n        }\n      },\n      \"required\": [\n        \"theory_name\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"physicist_name\",\n    \"nationalities\",\n    \"developed_theory\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "physicist_name",
-    "nationalities",
-    "developed_theory"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "physicist_name": {
+        "type": "string",
+        "description": "The full name of the theoretical physicist."
+      },
+      "nationalities": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of nationalities or backgrounds associated with the physicist."
+      },
+      "developed_theory": {
+        "type": "object",
+        "properties": {
+          "theory_name": {
+            "type": "string",
+            "description": "The name of the theory developed by the physicist."
+          },
+          "development_method": {
+            "type": "string",
+            "description": "The method or approach used in developing the theory."
+          }
+        },
+        "required": [
+          "theory_name"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "physicist_name",
+      "nationalities",
+      "developed_theory"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

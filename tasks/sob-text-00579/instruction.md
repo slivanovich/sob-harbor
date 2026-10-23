@@ -1,84 +1,61 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Frank Abagnale: Frank William Abagnale Jr. ( ; born April 27, 1948) is an American security consultant known for his history as a former confidence trickster, check forger, and impostor between the ages of 15 and 21.  He became one of the most famous impostors ever, claiming to have assumed no fewer than eight identities, including an airline pilot, a physician, a U.S. Bureau of Prisons agent, and a lawyer.  He escaped from police custody twice (once from a taxiing airliner and once from a U.S. federal penitentiary), before he was 21 years old.  He served less than five years in prison before starting to work for the federal government.  He is currently a consultant and lecturer for the FBI academy and field offices.  He also runs Abagnale & Associates, a financial fraud consultancy company.
-
-Big Sky (film): Big Sky is a 2015 American drama thriller film directed by Jorge Michel Grau and starring Bella Thorne, Kyra Sedgwick, Frank Grillo, and Aaron Tveit.  It was produced by The Archive and Papagjika Salloway Productions.  Entertainment One gave it a limited release on August 14, 2015.
-
-Aaron Tveit: Aaron Kyle Tveit ( ; born October 21, 1983) is an American actor and singer.  He is known for originating the roles of Gabe in "Next to Normal" and Frank Abagnale Jr. in the stage version of "Catch Me If You Can" on Broadway.  He is also known for his recurring role as Tripp van der Bilt on The CW's teen drama series "Gossip Girl," his portrayal of Enjolras in the 2012 film adaptation of "Les Misérables", as Mike Warren on the USA Network series "Graceland," and as Danny Zuko in "."  Tveit also starred in the CBS series "BrainDead" as Gareth Ritter.
-
-Robert Castelli: Robert J. "Bob" Castelli (born December 16, 1949) is an American security consultant, professor and media personality from Goldens Bridge, New York.  He served two terms as a member of the New York State Assembly, representing northeastern Westchester County, New York.
-
-Peter Tarlow: Peter E. Tarlow (born May 4, 1946) is a rabbi and was the executive director of Texas A&M Hillel from 1983 to 2013.  He is a scholar in the area of tourism safety, a consultant for the tourism industry, and the founder of Tourism & More Inc.  He worked as a security consultant to the city of Arlington, Texas, in preparation for Super Bowl XLV.  Tarlow's scholarship in tourism and security has been relied upon by mainstram media for his expertise.  He is the author of "Event Risk Management and Safety," which was reviewed by "Security Management" magazine in 2003 and 2005.  In 2007 he was a speaker at The Intelligence Summit.  His Ph.D. is in sociology and aside from his work at Texas A&M, he "teaches 'tourism safety' to police chiefs around the world".
-
-Paul Rogers (academic): Paul Rogers (born 10 February 1943) is Professor of Peace Studies at the University of Bradford and Global Security Consultant with Oxford Research Group (ORG).  He has worked in the field of international security, arms control and political violence for over 30 years.  He lectures at universities and defence colleges in several countries and has written or edited 26 books, including "Global Security and the War on Terror: Elite Power and the Illusion of Control" (Routledge, 2008) and "Why We're Losing the War on Terror" (Polity, 2008).  Since October 2001 he has written monthly Briefing Papers on international security and the "war on terror" for ORG.  He is also a regular commentator on global security issues in both the national and international media, and is openDemocracy’s International Security Editor.
-
-Max Butler: Max Ray Vision (formerly Max Ray Butler, alias Iceman) is a former computer security consultant and hacker who is serving a 13-year prison sentence, the longest sentence ever given at the time for hacking charges in the United States.  He was convicted of two counts of wire fraud, including stealing nearly 2 million credit card numbers and running up about $86 million in fraudulent charges.
-
-Grease: Live: Grease: Live is a television special that was originally broadcast by Fox on January 31, 2016.  It was a live, televised remake of the 1978 film "Grease", produced by Marc Platt, directed by Thomas Kail, and starring Julianne Hough, Aaron Tveit, Vanessa Hudgens and Carlos PenaVega.
-
-Christopher Hadnagy: Christopher James Hadnagy is an American security consultant, author and professional social engineer.  He is in the field of social engineering (SE) and authored three books: "", Unmasking the Social Engineer and Phishing Dark Waters.
-
-Undrafted (film): Undrafted is a 2016 sports comedy-drama film.  It is the directorial debut of Joseph Mazzello, who also wrote, co-produced and starred in the film.  It also stars Aaron Tveit, Tyler Hoechlin, Chace Crawford and Philip Winchester.  It is based on the true story of Mazzello's brother who missed out on the Major League Baseball draft.  The film was released on July 15, 2016, by Vertical Entertainment.
-
-Question: The American security consultant whom Aaron Tveit portrayed on stage did what after serving time in prison?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the American security consultant."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "portrayed_by_actor": {
-      "type": "string",
-      "description": "The name of the actor who portrayed the person on stage."
-    },
-    "prison_sentence_details": {
-      "type": "object",
-      "properties": {
-        "duration_description": {
-          "type": "string",
-          "description": "Description of the length of time served in prison."
-        }
-      },
-      "required": [
-        "duration_description"
-      ],
-      "additionalProperties": false
-    },
-    "post_prison_activities": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of activities the person engaged in after serving time in prison."
-    },
-    "current_professional_roles": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of the person's current professional roles."
+    {
+      "role": "user",
+      "content": "Context:\nFrank Abagnale: Frank William Abagnale Jr. ( ; born April 27, 1948) is an American security consultant known for his history as a former confidence trickster, check forger, and impostor between the ages of 15 and 21.  He became one of the most famous impostors ever, claiming to have assumed no fewer than eight identities, including an airline pilot, a physician, a U.S. Bureau of Prisons agent, and a lawyer.  He escaped from police custody twice (once from a taxiing airliner and once from a U.S. federal penitentiary), before he was 21 years old.  He served less than five years in prison before starting to work for the federal government.  He is currently a consultant and lecturer for the FBI academy and field offices.  He also runs Abagnale & Associates, a financial fraud consultancy company.\n\nBig Sky (film): Big Sky is a 2015 American drama thriller film directed by Jorge Michel Grau and starring Bella Thorne, Kyra Sedgwick, Frank Grillo, and Aaron Tveit.  It was produced by The Archive and Papagjika Salloway Productions.  Entertainment One gave it a limited release on August 14, 2015.\n\nAaron Tveit: Aaron Kyle Tveit ( ; born October 21, 1983) is an American actor and singer.  He is known for originating the roles of Gabe in \"Next to Normal\" and Frank Abagnale Jr. in the stage version of \"Catch Me If You Can\" on Broadway.  He is also known for his recurring role as Tripp van der Bilt on The CW's teen drama series \"Gossip Girl,\" his portrayal of Enjolras in the 2012 film adaptation of \"Les Misérables\", as Mike Warren on the USA Network series \"Graceland,\" and as Danny Zuko in \".\"  Tveit also starred in the CBS series \"BrainDead\" as Gareth Ritter.\n\nRobert Castelli: Robert J. \"Bob\" Castelli (born December 16, 1949) is an American security consultant, professor and media personality from Goldens Bridge, New York.  He served two terms as a member of the New York State Assembly, representing northeastern Westchester County, New York.\n\nPeter Tarlow: Peter E. Tarlow (born May 4, 1946) is a rabbi and was the executive director of Texas A&M Hillel from 1983 to 2013.  He is a scholar in the area of tourism safety, a consultant for the tourism industry, and the founder of Tourism & More Inc.  He worked as a security consultant to the city of Arlington, Texas, in preparation for Super Bowl XLV.  Tarlow's scholarship in tourism and security has been relied upon by mainstram media for his expertise.  He is the author of \"Event Risk Management and Safety,\" which was reviewed by \"Security Management\" magazine in 2003 and 2005.  In 2007 he was a speaker at The Intelligence Summit.  His Ph.D. is in sociology and aside from his work at Texas A&M, he \"teaches 'tourism safety' to police chiefs around the world\".\n\nPaul Rogers (academic): Paul Rogers (born 10 February 1943) is Professor of Peace Studies at the University of Bradford and Global Security Consultant with Oxford Research Group (ORG).  He has worked in the field of international security, arms control and political violence for over 30 years.  He lectures at universities and defence colleges in several countries and has written or edited 26 books, including \"Global Security and the War on Terror: Elite Power and the Illusion of Control\" (Routledge, 2008) and \"Why We're Losing the War on Terror\" (Polity, 2008).  Since October 2001 he has written monthly Briefing Papers on international security and the \"war on terror\" for ORG.  He is also a regular commentator on global security issues in both the national and international media, and is openDemocracy’s International Security Editor.\n\nMax Butler: Max Ray Vision (formerly Max Ray Butler, alias Iceman) is a former computer security consultant and hacker who is serving a 13-year prison sentence, the longest sentence ever given at the time for hacking charges in the United States.  He was convicted of two counts of wire fraud, including stealing nearly 2 million credit card numbers and running up about $86 million in fraudulent charges.\n\nGrease: Live: Grease: Live is a television special that was originally broadcast by Fox on January 31, 2016.  It was a live, televised remake of the 1978 film \"Grease\", produced by Marc Platt, directed by Thomas Kail, and starring Julianne Hough, Aaron Tveit, Vanessa Hudgens and Carlos PenaVega.\n\nChristopher Hadnagy: Christopher James Hadnagy is an American security consultant, author and professional social engineer.  He is in the field of social engineering (SE) and authored three books: \"\", Unmasking the Social Engineer and Phishing Dark Waters.\n\nUndrafted (film): Undrafted is a 2016 sports comedy-drama film.  It is the directorial debut of Joseph Mazzello, who also wrote, co-produced and starred in the film.  It also stars Aaron Tveit, Tyler Hoechlin, Chace Crawford and Philip Winchester.  It is based on the true story of Mazzello's brother who missed out on the Major League Baseball draft.  The film was released on July 15, 2016, by Vertical Entertainment.\n\nQuestion: The American security consultant whom Aaron Tveit portrayed on stage did what after serving time in prison?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the American security consultant.\"\n    },\n    \"portrayed_by_actor\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor who portrayed the person on stage.\"\n    },\n    \"prison_sentence_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"duration_description\": {\n          \"type\": \"string\",\n          \"description\": \"Description of the length of time served in prison.\"\n        }\n      },\n      \"required\": [\n        \"duration_description\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"post_prison_activities\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of activities the person engaged in after serving time in prison.\"\n    },\n    \"current_professional_roles\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of the person's current professional roles.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"portrayed_by_actor\",\n    \"prison_sentence_details\",\n    \"post_prison_activities\",\n    \"current_professional_roles\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "portrayed_by_actor",
-    "prison_sentence_details",
-    "post_prison_activities",
-    "current_professional_roles"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the American security consultant."
+      },
+      "portrayed_by_actor": {
+        "type": "string",
+        "description": "The name of the actor who portrayed the person on stage."
+      },
+      "prison_sentence_details": {
+        "type": "object",
+        "properties": {
+          "duration_description": {
+            "type": "string",
+            "description": "Description of the length of time served in prison."
+          }
+        },
+        "required": [
+          "duration_description"
+        ],
+        "additionalProperties": false
+      },
+      "post_prison_activities": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of activities the person engaged in after serving time in prison."
+      },
+      "current_professional_roles": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of the person's current professional roles."
+      }
+    },
+    "required": [
+      "person_name",
+      "portrayed_by_actor",
+      "prison_sentence_details",
+      "post_prison_activities",
+      "current_professional_roles"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

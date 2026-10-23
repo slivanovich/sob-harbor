@@ -1,95 +1,72 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Auto-text: Auto-text is a portion of a text preexisting in the computer memory, available as a supplement to newly composed documents, and suggested to the document author by software.  A block of Auto-text can contain a few letters, words, sentences or paragraphs.  It can be chosen by the document author via menu or be offered automatically after typing specific words or letters (word prediction or text prediction), or be added to the document automatically after typing specific words or letters (word / text completion).
-
-List of Cyrillic letters: Variants of Cyrillic are used by the writing systems of many languages, especially languages used in the former Soviet Union.  The tables below list the Cyrillic letters in use in various modern languages and show the primary sounds they represent in them (see the articles on the specific languages for more detail).  Letter forms with a combined diacritic which are not considered separate letters in any language (notably vowels with accent marks which are sometimes used in some languages to indicate stress and/or tone) are excluded from the tables, with the exception of ѐ and ѝ .  The highlighted letters are those of the basic (original) Cyrillic alphabet; archaic letters no longer in use in any language today are not listed.
-
-Phonetic algorithm: A phonetic algorithm is an algorithm for indexing of words by their pronunciation.  Most phonetic algorithms were developed for use with the English language; consequently, applying the rules to words in other languages might not give a meaningful result.
-
-Biblical accommodation: Biblical accommodation is the adaptation of words or sentences from the Bible to signify ideas different from those expressed therein.  Thus, if a sinner excuses his fault by saying, "The serpent deceived me", he applies the scriptural words of Eve (Gen., iii, 13) to express an idea which the sentence does not convey in the Bible.  Similarly, a blind person might use the words of Tob., v, 12, "What manner of joy shall be to me, who sit in darkness, and see not the light of heaven".  Here, again, the words would have a meaning which they do not bear in Sacred Scripture.  This accommodation is sometimes incorrectly styled the accommodated, or accommodative, sense of Scripture.  From the definition it is clear that it is not a sense of Scripture at all.  The possibility of such accommodation may arise, first, from some similarity between the ideas in the sacred text and the subject to which the passage is accommodated; secondly, from the fact that the words of Scripture may be understood in two different senses.  The first is called extensive accommodation.  Examples of it are found in the Church's offices, both in the Breviary and the Missal, when the praises bestowed by the Holy Ghost on Noe, Isaac, and Moses are applied to other saints.  Thus the words of Ecclus., xxxii, 1, 5: "Have they made thee ruler?  . . . hinder not music" are sometimes applied to College presidents assuming the burden of their office; we need not say that the words of Sacred Scripture have quite a different meaning.  The second species of accommodation, called allusive, is often a mere play on words and at times seems due to a misunderstanding of the original meaning.  The Vulgate text, "Mirabilis Deus in sanctis suis" (Ps., lxvii, 36) means, in the mouth of the Psalmist, that God is wonderful in His sanctuary (sancta, -orum).  The Latin words may also be translated "God is wonderful in his saints" (sancti, -orum), and they are employed in this sense in the Missal.  As this second signification was not intended by the inspired writer, the English rendering of the text in the Douay-Rheims version is a mistranslation.
-
-Syntactic hierarchy: Syntactics, or syntax, is concerned with the way sentences are constructed from smaller parts, such as words and phrases.  Two steps can be distinguished in the study of syntactics.  The first step is to identify different types of units in the stream of speech and writing.  In natural languages, such units include sentences, phrases, and words.  In artificial languages, lexemes, tokens, and formulas are usually found among the basic units.  The second step is to analyse how these units build up larger patterns, and in particular to find general rules that govern the construction of sentences.  
-
-Samuel Beckett: Samuel Barclay Beckett ( ; 13 April 1906 – 22 December 1989) was an Irish avant-garde novelist, playwright, theatre director, and poet, who lived in Paris for most of his adult life and wrote in both English and French.
-
-Colognian declension: The Colognian declension system describes how the Colognian language alters words to reflect their roles in Colognian sentences, such as subject, direct object, indirect object, agent, patient, etc.  Declension allows speakers to mark a difference between subjects, direct objects, indirect objects, possessives, and so on by changing the form of nouns or associated adjectives or articles instead of indicating this meaning through word order or prepositions, although also this happens in Colognian.  Still, Colognian makes generally only limited use of word order, shifting words around does either not alter the meanings of sentences, or yields other types of sentences having different meanings but keeps the roles of the referents of the words as long as their declined forms are kept.
-
-Morphological typology: Morphological typology is a way of classifying the languages of the world (see linguistic typology) that groups languages according to their common morphological structures.  The field organizes languages on the basis of how those languages form words by combining morphemes. Analytic languages contain very little inflection, instead relying on features like word order and auxiliary words to convey meaning.  Synthetic languages, ones that are not analytic, are divided into two categories: agglutinative and fusional languages.  Agglutinative languages rely primarily on discrete particles (prefixes, suffixes, and infixes) for inflection, while fusional languages "fuse" inflectional categories together, often allowing one word ending to contain several categories, such that the original root can be difficult to extract.  A further subcategory of agglutinative languages are polysynthetic languages, which take agglutination to a higher level by constructing entire sentences, including nouns, as one word.
-
-Frances Stark: Frances Stark (born 1967) is an interdisciplinary artist and writer, whose work centers on the use and meaning of language, and the translation of this process into the creative act.  She often works with carbon paper to hand-trace letters, words, and sentences from classic works by Emily Dickinson, Goethe, Henry Miller, Samuel Beckett, and others to explore the voices and interior states of writers.  She uses these hand-traced words, often in repetition, as visual motifs in drawings and mixed media works that reference a subject, mood, or another discipline such as music, architecture, or philosophy.
-
-Function word: The distinction between function/structure words and content/lexical words proposed by C. C. Fries in 1952 has been highly influential in the grammar used in second language acquisition and English language teaching.  Function words (also called functors) are words that have little lexical meaning or have ambiguous meaning, and they express grammatical relationships with other words within a sentence, or specify the attitude or mood of the speaker.  They signal the structural relationships that words have to one another and are the glue that holds sentences together.  Thus, they serve as important elements to the structures of sentences.
-
-Question: What languages might you see in Frances Stark's hand-traced letters, words, and sentences?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "artist_name": {
-      "type": "string",
-      "description": "The name of the artist."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "art_medium": {
-      "type": "string",
-      "description": "The medium used by the artist for tracing."
-    },
-    "traced_content_types": {
-      "type": "array",
-      "description": "Types of content (e.g., letters, words, sentences) that the artist traces.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "traced_languages": {
-      "type": "array",
-      "description": "Languages that might be found in the artist's hand-traced works.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "source_authors_mentioned": {
-      "type": "array",
-      "description": "Authors whose works Frances Stark traces, providing context for the languages.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the author."
-          },
-          "languages_written_in": {
-            "type": "array",
-            "description": "Languages the author wrote in, if specified.",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "name"
-        ],
-        "additionalProperties": false
-      }
+    {
+      "role": "user",
+      "content": "Context:\nAuto-text: Auto-text is a portion of a text preexisting in the computer memory, available as a supplement to newly composed documents, and suggested to the document author by software.  A block of Auto-text can contain a few letters, words, sentences or paragraphs.  It can be chosen by the document author via menu or be offered automatically after typing specific words or letters (word prediction or text prediction), or be added to the document automatically after typing specific words or letters (word / text completion).\n\nList of Cyrillic letters: Variants of Cyrillic are used by the writing systems of many languages, especially languages used in the former Soviet Union.  The tables below list the Cyrillic letters in use in various modern languages and show the primary sounds they represent in them (see the articles on the specific languages for more detail).  Letter forms with a combined diacritic which are not considered separate letters in any language (notably vowels with accent marks which are sometimes used in some languages to indicate stress and/or tone) are excluded from the tables, with the exception of ѐ and ѝ .  The highlighted letters are those of the basic (original) Cyrillic alphabet; archaic letters no longer in use in any language today are not listed.\n\nPhonetic algorithm: A phonetic algorithm is an algorithm for indexing of words by their pronunciation.  Most phonetic algorithms were developed for use with the English language; consequently, applying the rules to words in other languages might not give a meaningful result.\n\nBiblical accommodation: Biblical accommodation is the adaptation of words or sentences from the Bible to signify ideas different from those expressed therein.  Thus, if a sinner excuses his fault by saying, \"The serpent deceived me\", he applies the scriptural words of Eve (Gen., iii, 13) to express an idea which the sentence does not convey in the Bible.  Similarly, a blind person might use the words of Tob., v, 12, \"What manner of joy shall be to me, who sit in darkness, and see not the light of heaven\".  Here, again, the words would have a meaning which they do not bear in Sacred Scripture.  This accommodation is sometimes incorrectly styled the accommodated, or accommodative, sense of Scripture.  From the definition it is clear that it is not a sense of Scripture at all.  The possibility of such accommodation may arise, first, from some similarity between the ideas in the sacred text and the subject to which the passage is accommodated; secondly, from the fact that the words of Scripture may be understood in two different senses.  The first is called extensive accommodation.  Examples of it are found in the Church's offices, both in the Breviary and the Missal, when the praises bestowed by the Holy Ghost on Noe, Isaac, and Moses are applied to other saints.  Thus the words of Ecclus., xxxii, 1, 5: \"Have they made thee ruler?  . . . hinder not music\" are sometimes applied to College presidents assuming the burden of their office; we need not say that the words of Sacred Scripture have quite a different meaning.  The second species of accommodation, called allusive, is often a mere play on words and at times seems due to a misunderstanding of the original meaning.  The Vulgate text, \"Mirabilis Deus in sanctis suis\" (Ps., lxvii, 36) means, in the mouth of the Psalmist, that God is wonderful in His sanctuary (sancta, -orum).  The Latin words may also be translated \"God is wonderful in his saints\" (sancti, -orum), and they are employed in this sense in the Missal.  As this second signification was not intended by the inspired writer, the English rendering of the text in the Douay-Rheims version is a mistranslation.\n\nSyntactic hierarchy: Syntactics, or syntax, is concerned with the way sentences are constructed from smaller parts, such as words and phrases.  Two steps can be distinguished in the study of syntactics.  The first step is to identify different types of units in the stream of speech and writing.  In natural languages, such units include sentences, phrases, and words.  In artificial languages, lexemes, tokens, and formulas are usually found among the basic units.  The second step is to analyse how these units build up larger patterns, and in particular to find general rules that govern the construction of sentences.  \n\nSamuel Beckett: Samuel Barclay Beckett ( ; 13 April 1906 – 22 December 1989) was an Irish avant-garde novelist, playwright, theatre director, and poet, who lived in Paris for most of his adult life and wrote in both English and French.\n\nColognian declension: The Colognian declension system describes how the Colognian language alters words to reflect their roles in Colognian sentences, such as subject, direct object, indirect object, agent, patient, etc.  Declension allows speakers to mark a difference between subjects, direct objects, indirect objects, possessives, and so on by changing the form of nouns or associated adjectives or articles instead of indicating this meaning through word order or prepositions, although also this happens in Colognian.  Still, Colognian makes generally only limited use of word order, shifting words around does either not alter the meanings of sentences, or yields other types of sentences having different meanings but keeps the roles of the referents of the words as long as their declined forms are kept.\n\nMorphological typology: Morphological typology is a way of classifying the languages of the world (see linguistic typology) that groups languages according to their common morphological structures.  The field organizes languages on the basis of how those languages form words by combining morphemes. Analytic languages contain very little inflection, instead relying on features like word order and auxiliary words to convey meaning.  Synthetic languages, ones that are not analytic, are divided into two categories: agglutinative and fusional languages.  Agglutinative languages rely primarily on discrete particles (prefixes, suffixes, and infixes) for inflection, while fusional languages \"fuse\" inflectional categories together, often allowing one word ending to contain several categories, such that the original root can be difficult to extract.  A further subcategory of agglutinative languages are polysynthetic languages, which take agglutination to a higher level by constructing entire sentences, including nouns, as one word.\n\nFrances Stark: Frances Stark (born 1967) is an interdisciplinary artist and writer, whose work centers on the use and meaning of language, and the translation of this process into the creative act.  She often works with carbon paper to hand-trace letters, words, and sentences from classic works by Emily Dickinson, Goethe, Henry Miller, Samuel Beckett, and others to explore the voices and interior states of writers.  She uses these hand-traced words, often in repetition, as visual motifs in drawings and mixed media works that reference a subject, mood, or another discipline such as music, architecture, or philosophy.\n\nFunction word: The distinction between function/structure words and content/lexical words proposed by C. C. Fries in 1952 has been highly influential in the grammar used in second language acquisition and English language teaching.  Function words (also called functors) are words that have little lexical meaning or have ambiguous meaning, and they express grammatical relationships with other words within a sentence, or specify the attitude or mood of the speaker.  They signal the structural relationships that words have to one another and are the glue that holds sentences together.  Thus, they serve as important elements to the structures of sentences.\n\nQuestion: What languages might you see in Frances Stark's hand-traced letters, words, and sentences?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"artist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the artist.\"\n    },\n    \"art_medium\": {\n      \"type\": \"string\",\n      \"description\": \"The medium used by the artist for tracing.\"\n    },\n    \"traced_content_types\": {\n      \"type\": \"array\",\n      \"description\": \"Types of content (e.g., letters, words, sentences) that the artist traces.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"traced_languages\": {\n      \"type\": \"array\",\n      \"description\": \"Languages that might be found in the artist's hand-traced works.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"source_authors_mentioned\": {\n      \"type\": \"array\",\n      \"description\": \"Authors whose works Frances Stark traces, providing context for the languages.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the author.\"\n          },\n          \"languages_written_in\": {\n            \"type\": \"array\",\n            \"description\": \"Languages the author wrote in, if specified.\",\n            \"items\": {\n              \"type\": \"string\"\n            }\n          }\n        },\n        \"required\": [\n          \"name\"\n        ],\n        \"additionalProperties\": false\n      }\n    }\n  },\n  \"required\": [\n    \"artist_name\",\n    \"art_medium\",\n    \"traced_content_types\",\n    \"traced_languages\",\n    \"source_authors_mentioned\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "artist_name",
-    "art_medium",
-    "traced_content_types",
-    "traced_languages",
-    "source_authors_mentioned"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "artist_name": {
+        "type": "string",
+        "description": "The name of the artist."
+      },
+      "art_medium": {
+        "type": "string",
+        "description": "The medium used by the artist for tracing."
+      },
+      "traced_content_types": {
+        "type": "array",
+        "description": "Types of content (e.g., letters, words, sentences) that the artist traces.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "traced_languages": {
+        "type": "array",
+        "description": "Languages that might be found in the artist's hand-traced works.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "source_authors_mentioned": {
+        "type": "array",
+        "description": "Authors whose works Frances Stark traces, providing context for the languages.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the author."
+            },
+            "languages_written_in": {
+              "type": "array",
+              "description": "Languages the author wrote in, if specified.",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "artist_name",
+      "art_medium",
+      "traced_content_types",
+      "traced_languages",
+      "source_authors_mentioned"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

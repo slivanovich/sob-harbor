@@ -1,62 +1,39 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Snowflake (EP): Snowflake is the third extended play (EP) by South Korean girl group GFriend.  It was released by Source Music on January 25, 2016 and distributed by LOEN Entertainment.  The album contains five songs, including the single "Rough", and two instrumental tracks.  The album debuted at number two on the Gaon Album Chart and has sold more than 33,000 units.  GFriend promoted the album with a series of televised live performances on South Korea's music shows, winning a total of 15 music show awards.  "Rough" was also commercially successful, topping the Gaon Digital Chart and selling more than one million digital downloads.  Musically, the album is similar in style to K-pop from the late 1990s and 2000s.
-
-Parallel (EP): Parallel is the fifth extended play (EP) by South Korean girl group GFriend.  The EP was released digitally and physically by Source Music on August 1, 2017 and distributed by LOEN Entertainment.  The album contains eight songs, including the single "Love Whisper", and two instrumental tracks.  It has sold over 60,000 physical copies as of August 2017.  The extended play was re-released on September 13 under the title Rainbow with the single "Summer Rain" and a bonus track of the same name.
-
-List of songs recorded by Fifth Harmony: Fifth Harmony is an American four-piece girl group, consisting of members Ally Brooke, Normani Kordei, Dinah Jane, Lauren Jauregui and formerly Camila Cabello.  The group began working on their debut EP, "Better Together".  It was released in 2013, following their exit from the second season of the American televised singing competition, "The X Factor".  At this time, the group contributed guest vocals on two covers, "When I Was Your Man" by Bruno Mars and "Mirrors" by Justin Timberlake, for Boyce Avenue's cover EP, "Cover Collaborations, Volume 2".  The first single released from their debut EP, "Better Together", was "Miss Movin' On", a power pop song with a synth-backed chorus written by singer Julia Michaels among other writers.  While the group had very limited songwriting credits in their EP, they are credited as writers on the promotional single, "Me & My Girls" with collaborations from Patrick James Bianco, Beau Alexandrè Dozier and John Ryan.  Their EP was subsequently released four times with an acoustic version, a remixes EP, and two Spanish versions, one standard and one acoustic.
-
-GFriend: GFriend (Hangul: 여자친구 ; RR: "Yeoja Chingu " ) is a six-member South Korean girl group formed by Source Music in 2015.  The group consists of Sowon, Yerin, Eunha, Yuju, SinB, and Umji.  They made their debut with the EP "Season of Glass" on January 16, 2015.  GFriend won several 2015 female rookie awards and has garnered momentum since their debut, despite coming from a small company.  In 2016, they continued their success with their third EP "Snowflake" and won first place on many music shows with the title song "Rough".  They released their first full-length album "LOL" in July 2016.
-
-Electric Shock (EP): "Electric Shock" is the second studio extended play (EP) by South Korean girl group f(x).  The EP was released digitally on June 10, 2012, and released physically on June 13, 2012, under S.M. Entertainment.  The EP's title track, "Electric Shock", as well as the EP, reached at the top spot on the weekly Gaon Charts.  The EP sold a total of more than 70,000 copies in South Korea.
-
-Apache Railway: The Apache Railway (reporting mark APA) is an Arizona short-line railroad that operates from a connection with the BNSF Railway (BNSF) at Holbrook to the Snowflake Mill near Snowflake, Arizona, 38 mi .  The APA was acquired by Catalyst Paper from Abitibi Consolidated in 2008.  The Snowflake paper mill shut down permanently on September 30, 2012.  In late 2015, the railway was purchased out of bankruptcy by a group including Aztec Land & Cattle Company and Midwest Poultry Producers, L.P., thereby avoiding a shutdown and scrappage of the line.  The railway continues to operate, and its revenues are driven primarily by car repair and storage.  The railway's freight revenues have not yet recovered from the shutdown of the Snowflake paper mill then owned by Catalyst, although efforts to enhance them continue.
-
-Twice discography: South Korea-based girl group Twice have released four extended plays (one of which was reissued under a different title), one compilation album, one compilation EP, and five singles.  Formed by JYP Entertainment in 2015 through the survival show "Sixteen", Twice debuted in October 2015 with the release of their first EP, "The Story Begins", and its single "Like Ooh-Ahh".  The EP and the single peaked at No. 3 and No. 10 on the Gaon Music Chart, respectively.  "The Story Begins" eventually sold over 120,000 copies, becoming the best-selling debut extended play by a K-pop girl group of all time, breaking the record set by Girls' Generation's first extended play "Gee" (2009), which sold nearly 100,000 copies.
-
-Twicecoaster: Lane 1: Twicecoaster: Lane 1 (stylized as TWICEcoaster : LANE 1) is the third extended play (EP) by South Korean girl group Twice.  The EP was released digitally and physically on October 24, 2016 by JYP Entertainment and distributed by KT Music.  It contains seven tracks, including the lead single "TT" (refers to the emoticon used to express crying or sadness).  The EP is the highest selling K-pop girl group album of 2016, which sold 350,852 units at year-end.
-
-Snowflake (airline): Snowflake was a low-cost airline that operated out of Stockholm, Sweden, and Copenhagen, Denmark between 30 March 2003 and 30 October 2004.  Owned by the SAS Group, it was organized as a business unit within Scandinavian Airlines, operating as a virtual airline using their crew and aircraft.  Snowflake served a total 28 destinations from its bases at Stockholm Arlanda Airport and Copenhagen Airport.
-
-Black Pearl (K-Pop Group): Black Pearl (Hangul: 블랙펄) was a South Korean girl group official made up of Oh Nami, Hwl Eun, Young Joo, and Mikka.  When the group debuted in 2007 they marketed as the new girl group to dominate the girl group charts in the following years of 2007 and 2008 alongside some artist Wonder Girls, and Kara.  They were also known to follow the steps of SG Wannabe, SeeYa, and M2M.  In 2009 Mikka left due to personal reasons.  New member Jung Min was added by 2010 or 2011.  As for the 2010 and therefore the group only consisted of the following 4 until their disbandment in 2012.
-
-Question: Parrallel and Snowflake are EP's of what girl group? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "girl_group_name": {
-      "type": "string",
-      "description": "The name of the girl group that released the EPs."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "eps_mentioned": {
-      "type": "array",
-      "description": "A list of the EPs mentioned in the question.",
-      "items": {
-        "type": "string"
+    {
+      "role": "user",
+      "content": "Context:\nSnowflake (EP): Snowflake is the third extended play (EP) by South Korean girl group GFriend.  It was released by Source Music on January 25, 2016 and distributed by LOEN Entertainment.  The album contains five songs, including the single \"Rough\", and two instrumental tracks.  The album debuted at number two on the Gaon Album Chart and has sold more than 33,000 units.  GFriend promoted the album with a series of televised live performances on South Korea's music shows, winning a total of 15 music show awards.  \"Rough\" was also commercially successful, topping the Gaon Digital Chart and selling more than one million digital downloads.  Musically, the album is similar in style to K-pop from the late 1990s and 2000s.\n\nParallel (EP): Parallel is the fifth extended play (EP) by South Korean girl group GFriend.  The EP was released digitally and physically by Source Music on August 1, 2017 and distributed by LOEN Entertainment.  The album contains eight songs, including the single \"Love Whisper\", and two instrumental tracks.  It has sold over 60,000 physical copies as of August 2017.  The extended play was re-released on September 13 under the title Rainbow with the single \"Summer Rain\" and a bonus track of the same name.\n\nList of songs recorded by Fifth Harmony: Fifth Harmony is an American four-piece girl group, consisting of members Ally Brooke, Normani Kordei, Dinah Jane, Lauren Jauregui and formerly Camila Cabello.  The group began working on their debut EP, \"Better Together\".  It was released in 2013, following their exit from the second season of the American televised singing competition, \"The X Factor\".  At this time, the group contributed guest vocals on two covers, \"When I Was Your Man\" by Bruno Mars and \"Mirrors\" by Justin Timberlake, for Boyce Avenue's cover EP, \"Cover Collaborations, Volume 2\".  The first single released from their debut EP, \"Better Together\", was \"Miss Movin' On\", a power pop song with a synth-backed chorus written by singer Julia Michaels among other writers.  While the group had very limited songwriting credits in their EP, they are credited as writers on the promotional single, \"Me & My Girls\" with collaborations from Patrick James Bianco, Beau Alexandrè Dozier and John Ryan.  Their EP was subsequently released four times with an acoustic version, a remixes EP, and two Spanish versions, one standard and one acoustic.\n\nGFriend: GFriend (Hangul: 여자친구 ; RR: \"Yeoja Chingu \" ) is a six-member South Korean girl group formed by Source Music in 2015.  The group consists of Sowon, Yerin, Eunha, Yuju, SinB, and Umji.  They made their debut with the EP \"Season of Glass\" on January 16, 2015.  GFriend won several 2015 female rookie awards and has garnered momentum since their debut, despite coming from a small company.  In 2016, they continued their success with their third EP \"Snowflake\" and won first place on many music shows with the title song \"Rough\".  They released their first full-length album \"LOL\" in July 2016.\n\nElectric Shock (EP): \"Electric Shock\" is the second studio extended play (EP) by South Korean girl group f(x).  The EP was released digitally on June 10, 2012, and released physically on June 13, 2012, under S.M. Entertainment.  The EP's title track, \"Electric Shock\", as well as the EP, reached at the top spot on the weekly Gaon Charts.  The EP sold a total of more than 70,000 copies in South Korea.\n\nApache Railway: The Apache Railway (reporting mark APA) is an Arizona short-line railroad that operates from a connection with the BNSF Railway (BNSF) at Holbrook to the Snowflake Mill near Snowflake, Arizona, 38 mi .  The APA was acquired by Catalyst Paper from Abitibi Consolidated in 2008.  The Snowflake paper mill shut down permanently on September 30, 2012.  In late 2015, the railway was purchased out of bankruptcy by a group including Aztec Land & Cattle Company and Midwest Poultry Producers, L.P., thereby avoiding a shutdown and scrappage of the line.  The railway continues to operate, and its revenues are driven primarily by car repair and storage.  The railway's freight revenues have not yet recovered from the shutdown of the Snowflake paper mill then owned by Catalyst, although efforts to enhance them continue.\n\nTwice discography: South Korea-based girl group Twice have released four extended plays (one of which was reissued under a different title), one compilation album, one compilation EP, and five singles.  Formed by JYP Entertainment in 2015 through the survival show \"Sixteen\", Twice debuted in October 2015 with the release of their first EP, \"The Story Begins\", and its single \"Like Ooh-Ahh\".  The EP and the single peaked at No. 3 and No. 10 on the Gaon Music Chart, respectively.  \"The Story Begins\" eventually sold over 120,000 copies, becoming the best-selling debut extended play by a K-pop girl group of all time, breaking the record set by Girls' Generation's first extended play \"Gee\" (2009), which sold nearly 100,000 copies.\n\nTwicecoaster: Lane 1: Twicecoaster: Lane 1 (stylized as TWICEcoaster : LANE 1) is the third extended play (EP) by South Korean girl group Twice.  The EP was released digitally and physically on October 24, 2016 by JYP Entertainment and distributed by KT Music.  It contains seven tracks, including the lead single \"TT\" (refers to the emoticon used to express crying or sadness).  The EP is the highest selling K-pop girl group album of 2016, which sold 350,852 units at year-end.\n\nSnowflake (airline): Snowflake was a low-cost airline that operated out of Stockholm, Sweden, and Copenhagen, Denmark between 30 March 2003 and 30 October 2004.  Owned by the SAS Group, it was organized as a business unit within Scandinavian Airlines, operating as a virtual airline using their crew and aircraft.  Snowflake served a total 28 destinations from its bases at Stockholm Arlanda Airport and Copenhagen Airport.\n\nBlack Pearl (K-Pop Group): Black Pearl (Hangul: 블랙펄) was a South Korean girl group official made up of Oh Nami, Hwl Eun, Young Joo, and Mikka.  When the group debuted in 2007 they marketed as the new girl group to dominate the girl group charts in the following years of 2007 and 2008 alongside some artist Wonder Girls, and Kara.  They were also known to follow the steps of SG Wannabe, SeeYa, and M2M.  In 2009 Mikka left due to personal reasons.  New member Jung Min was added by 2010 or 2011.  As for the 2010 and therefore the group only consisted of the following 4 until their disbandment in 2012.\n\nQuestion: Parrallel and Snowflake are EP's of what girl group? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"girl_group_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the girl group that released the EPs.\"\n    },\n    \"eps_mentioned\": {\n      \"type\": \"array\",\n      \"description\": \"A list of the EPs mentioned in the question.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"ep_count\": {\n      \"type\": \"integer\",\n      \"description\": \"The number of EPs mentioned in the question.\"\n    }\n  },\n  \"required\": [\n    \"girl_group_name\",\n    \"eps_mentioned\",\n    \"ep_count\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "girl_group_name": {
+        "type": "string",
+        "description": "The name of the girl group that released the EPs."
+      },
+      "eps_mentioned": {
+        "type": "array",
+        "description": "A list of the EPs mentioned in the question.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "ep_count": {
+        "type": "integer",
+        "description": "The number of EPs mentioned in the question."
       }
     },
-    "ep_count": {
-      "type": "integer",
-      "description": "The number of EPs mentioned in the question."
-    }
+    "required": [
+      "girl_group_name",
+      "eps_mentioned",
+      "ep_count"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "girl_group_name",
-    "eps_mentioned",
-    "ep_count"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

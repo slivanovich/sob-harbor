@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-PEPS: The "Pavillon de l'éducation physique et des sports de l'Université Laval" ("Laval University Sports and Physical Education Complex"), usually called PEPS for short, is a sports complex located in Quebec City, Quebec, on the Université Laval campus.  PEPS opened in 1970 and includes an outdoor stadium, an indoor stadium, two indoor swimming pools (aquatic centre), basketball and tennis courts, a fitness centre, and two hockey arenas that can be combined into one for long track speed skating.
-
-Georgia Institute of Technology: The Georgia Institute of Technology (commonly referred to as Georgia Tech, Tech, or GT) is a public research university in Atlanta, Georgia, in the United States.  It is a part of the University System of Georgia and has satellite campuses in Savannah, Georgia; Metz, France; Athlone, Ireland; Shenzhen, China; and Singapore.
-
-Érudit: Érudit is a Quebec non-profit publishing platform.  Founded in 1998, it publishes research in the humanities and social sciences, as well as select physical and natural science journals.  The organization is a consortium of Université de Montréal, Université Laval, and Université du Québec à Montréal.  Érudit is the largest provider of Canadian French and bilingual research publications.  "90% of content on Érudit is offer in open access.  For some journals, the last 2 or 3 years old publications are restricted by a subscription."
-
-Louis de Lotbiniere-Harwood: Dr Louis de Lotbinière-Harwood (1866–1934) M.D., F.A.C.S., was a Canadian gynaecologist.  He was Dean of Medicine at Université de Montréal, the second campus of Université Laval.  He was President of the Medical Union of Canada, President of the Hôpital Notre-Dame and President of the Radium Institute, Paris.  His reputation as an educator and a surgeon extended throughout North America and Europe, recognised through his creation as an "Officier de Le Légion d'honneur" in France.  He has been referred to as the 'Father of Canadian Gynaecology'.
-
-Mont Mégantic Observatory: The Mont Mégantic Observatory (French: "Observatoire du Mont-Mégantic" ; OMM) is an astronomical observatory owned and operated jointly by the Université de Montréal (UdeM), the Université Laval (ULaval), and McGill University.  Founded in 1978, the observatory houses the second largest telescope in Eastern Canada after David Dunlap Observatory near Toronto.  It is situated at the summit of Mont Mégantic, the highest point of Eastern Canada accessible by car.  OMM is about 60 km east of Sherbrooke and 190 km east of Montreal.
-
-Alf Schwarz: Alf Schwarz ( 22 May 1935 – 3 August 2015) was a Canadian sociologist noted for his research in Sub-Saharan Africa.  After studies at the Sorbonne (Paris) with Raymond Aron, Pierre Bourdieu, Claude Lévi-Strauss, Roger Bastide, Georges Balandier and research assignment at Université de Dakar (Senegal), he began his academic career in 1963 with a faculty position at the Institut de recherches économiques et sociales of Université Lovanium (Kinshasa, RDC).  He joined in 1966 Université Laval (Quebec City) as professor of sociology.  He founded at Laval University the first academic program in African studies in French speaking Canada.  As one of the pioneers of African studies in Canada he was decidedly involved in the creation of the Canadian Association of African Studies and edited for many years the Canadian Journal of African Studies/La Revue Canadienne des Études Africaines.  He retired from Laval University in 1998.  He died in Natal, Brazil in 2015.
-
-Université Laval: Université Laval is a French-language, public research university in Quebec City, Quebec, Canada.  The University was founded by royal charter issued by Queen Victoria in 1852, with roots in the founding of the Séminaire de Québec in 1663 by François de Montmorency-Laval, making it the oldest centre of higher education in Canada and the first North American institution to offer higher education in French.  The university, whose main campus was erected from the 1950s onward in the suburban borough Sainte-Foy–Sillery–Cap-Rouge, is ranked among the top ten Canadian universities in terms of research funding and holds four Canada Excellence Research Chairs.
-
-Gérard Bélanger: Gérard Bélanger (born 1940) is a Canadian economics professor.  He holds a Bachelor of Arts from the Université de Montréal, a Bachelor of Science and a master's degree in Social sciences from the Université Laval, as well as a master's degree from Princeton University.  He is a member of the Royal Society of Canada.
-
-Guy Laforest: Guy Laforest is the director of the department of political science at the Université Laval.  He was educated at Université Laval and McGill University.  A former member of the University of Calgary's Political Science department, Laforest is the author of numerous publications on Canadian public policy.
-
-Université Laval Faculté de droit: The Université Laval Faculté de droit (English: Faculty of Law at Laval University ), founded in 1852, is one of the oldest institutions of its kind in North America.  It hosts more than 1,000 students in its curriculum of first, second and third years, with more than 45 lecturers teaching and supervising research projects in most areas of law.  The research activity is particularly intense in the field of human rights and public freedoms in light of legal issues, economic law, environmental law and public law and private international trade.
-
-Question: Which is a university founded by royal charter, Université Laval or Georgia Institute of Technology?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "university_name": {
-      "type": "string",
-      "description": "The name of the university founded by royal charter."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "founded_by_royal_charter": {
-      "type": "boolean",
-      "description": "Indicates whether the university was founded by a royal charter."
-    },
-    "founding_year": {
-      "type": "integer",
-      "description": "The year the university was founded by royal charter."
-    },
-    "charter_issuer": {
-      "type": "string",
-      "description": "The entity that issued the royal charter."
+    {
+      "role": "user",
+      "content": "Context:\nPEPS: The \"Pavillon de l'éducation physique et des sports de l'Université Laval\" (\"Laval University Sports and Physical Education Complex\"), usually called PEPS for short, is a sports complex located in Quebec City, Quebec, on the Université Laval campus.  PEPS opened in 1970 and includes an outdoor stadium, an indoor stadium, two indoor swimming pools (aquatic centre), basketball and tennis courts, a fitness centre, and two hockey arenas that can be combined into one for long track speed skating.\n\nGeorgia Institute of Technology: The Georgia Institute of Technology (commonly referred to as Georgia Tech, Tech, or GT) is a public research university in Atlanta, Georgia, in the United States.  It is a part of the University System of Georgia and has satellite campuses in Savannah, Georgia; Metz, France; Athlone, Ireland; Shenzhen, China; and Singapore.\n\nÉrudit: Érudit is a Quebec non-profit publishing platform.  Founded in 1998, it publishes research in the humanities and social sciences, as well as select physical and natural science journals.  The organization is a consortium of Université de Montréal, Université Laval, and Université du Québec à Montréal.  Érudit is the largest provider of Canadian French and bilingual research publications.  \"90% of content on Érudit is offer in open access.  For some journals, the last 2 or 3 years old publications are restricted by a subscription.\"\n\nLouis de Lotbiniere-Harwood: Dr Louis de Lotbinière-Harwood (1866–1934) M.D., F.A.C.S., was a Canadian gynaecologist.  He was Dean of Medicine at Université de Montréal, the second campus of Université Laval.  He was President of the Medical Union of Canada, President of the Hôpital Notre-Dame and President of the Radium Institute, Paris.  His reputation as an educator and a surgeon extended throughout North America and Europe, recognised through his creation as an \"Officier de Le Légion d'honneur\" in France.  He has been referred to as the 'Father of Canadian Gynaecology'.\n\nMont Mégantic Observatory: The Mont Mégantic Observatory (French: \"Observatoire du Mont-Mégantic\" ; OMM) is an astronomical observatory owned and operated jointly by the Université de Montréal (UdeM), the Université Laval (ULaval), and McGill University.  Founded in 1978, the observatory houses the second largest telescope in Eastern Canada after David Dunlap Observatory near Toronto.  It is situated at the summit of Mont Mégantic, the highest point of Eastern Canada accessible by car.  OMM is about 60 km east of Sherbrooke and 190 km east of Montreal.\n\nAlf Schwarz: Alf Schwarz ( 22 May 1935 – 3 August 2015) was a Canadian sociologist noted for his research in Sub-Saharan Africa.  After studies at the Sorbonne (Paris) with Raymond Aron, Pierre Bourdieu, Claude Lévi-Strauss, Roger Bastide, Georges Balandier and research assignment at Université de Dakar (Senegal), he began his academic career in 1963 with a faculty position at the Institut de recherches économiques et sociales of Université Lovanium (Kinshasa, RDC).  He joined in 1966 Université Laval (Quebec City) as professor of sociology.  He founded at Laval University the first academic program in African studies in French speaking Canada.  As one of the pioneers of African studies in Canada he was decidedly involved in the creation of the Canadian Association of African Studies and edited for many years the Canadian Journal of African Studies/La Revue Canadienne des Études Africaines.  He retired from Laval University in 1998.  He died in Natal, Brazil in 2015.\n\nUniversité Laval: Université Laval is a French-language, public research university in Quebec City, Quebec, Canada.  The University was founded by royal charter issued by Queen Victoria in 1852, with roots in the founding of the Séminaire de Québec in 1663 by François de Montmorency-Laval, making it the oldest centre of higher education in Canada and the first North American institution to offer higher education in French.  The university, whose main campus was erected from the 1950s onward in the suburban borough Sainte-Foy–Sillery–Cap-Rouge, is ranked among the top ten Canadian universities in terms of research funding and holds four Canada Excellence Research Chairs.\n\nGérard Bélanger: Gérard Bélanger (born 1940) is a Canadian economics professor.  He holds a Bachelor of Arts from the Université de Montréal, a Bachelor of Science and a master's degree in Social sciences from the Université Laval, as well as a master's degree from Princeton University.  He is a member of the Royal Society of Canada.\n\nGuy Laforest: Guy Laforest is the director of the department of political science at the Université Laval.  He was educated at Université Laval and McGill University.  A former member of the University of Calgary's Political Science department, Laforest is the author of numerous publications on Canadian public policy.\n\nUniversité Laval Faculté de droit: The Université Laval Faculté de droit (English: Faculty of Law at Laval University ), founded in 1852, is one of the oldest institutions of its kind in North America.  It hosts more than 1,000 students in its curriculum of first, second and third years, with more than 45 lecturers teaching and supervising research projects in most areas of law.  The research activity is particularly intense in the field of human rights and public freedoms in light of legal issues, economic law, environmental law and public law and private international trade.\n\nQuestion: Which is a university founded by royal charter, Université Laval or Georgia Institute of Technology?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"university_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the university founded by royal charter.\"\n    },\n    \"founded_by_royal_charter\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates whether the university was founded by a royal charter.\"\n    },\n    \"founding_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the university was founded by royal charter.\"\n    },\n    \"charter_issuer\": {\n      \"type\": \"string\",\n      \"description\": \"The entity that issued the royal charter.\"\n    }\n  },\n  \"required\": [\n    \"university_name\",\n    \"founded_by_royal_charter\",\n    \"founding_year\",\n    \"charter_issuer\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "university_name",
-    "founded_by_royal_charter",
-    "founding_year",
-    "charter_issuer"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "university_name": {
+        "type": "string",
+        "description": "The name of the university founded by royal charter."
+      },
+      "founded_by_royal_charter": {
+        "type": "boolean",
+        "description": "Indicates whether the university was founded by a royal charter."
+      },
+      "founding_year": {
+        "type": "integer",
+        "description": "The year the university was founded by royal charter."
+      },
+      "charter_issuer": {
+        "type": "string",
+        "description": "The entity that issued the royal charter."
+      }
+    },
+    "required": [
+      "university_name",
+      "founded_by_royal_charter",
+      "founding_year",
+      "charter_issuer"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

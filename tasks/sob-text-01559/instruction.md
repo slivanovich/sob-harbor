@@ -1,82 +1,59 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Hope International University: Hope International University is a private Christian university in Fullerton, California, United States.  The campus is located just south of California State University, Fullerton.  Hope International University has an enrollment of more than 2,000 students representing 35 states and 40 countries.  While Hope is non-denominational, it has strong ties to the Restoration Movement and the Christian churches and churches of Christ.  Hope is accredited by the Western Association of Schools and Colleges (WASC).
-
-Joe A. Martinez: Joseph Anthony Martinez (born April 10, 1975 in Apple Valley, California) is the ring announcer for Golden Boy Promotions' "Boxeo Estelar" on Estrella TV.  A Communications graduate of California State University, Fullerton, Martinez began his professional career in 1996 as both the public address announcer for the Lake Elsinore Storm Minor League Baseball team (a San Diego Padres affiliate) and various Cal State Fullerton athletic programs.  He continues to announce for the Storm and retired from Cal State Fullerton in 2014.
-
-Cal State Fullerton Titans football: The Cal State Fullerton Titans football program represented California State University, Fullerton from the 1970 through 1992 seasons.  The Titans originally competed as a member of the California Collegiate Athletic Association from 1970 to 1973 before moving to the Pacific Coast Athletic Association (now the Big West) in 1974 where they remained through the 1991 season.  The Titans would compete in their final year as an I-A Independent prior to the program being disbanded.  Fullerton played its home games at multiple stadiums throughout their history with the most recent being Titan Stadium, in Fullerton, California.
-
-University of Houston: The University of Houston (UH) is a Carnegie Tier One state research university and the flagship institution of the University of Houston System.  Founded in 1927, UH is the third-largest university in Texas with nearly 43,000 students.  Its campus spans 667 acres in southeast Houston, and was known as University of Houston–University Park from 1983 to 1991.  The Carnegie Foundation classifies UH as a doctoral degree-granting institution with "highest research activity."  The "U.S. News & World Report" ranks the university No. 194 in its National University Rankings, and No. 103 among top public universities.
-
-Lynn Eilefson: Lindberg E. Eilefson (November 26, 1932 – May 25, 2001) was an American college athletics administrator.  He served as the athletic director at California State University, Fullerton from 1982 to 1985 and at San Jose State University from 1985 to 1986.  Eilefson worked at California State University, Fresno during the 1970s in a number a positions before taking a job at the University of California, Los Angeles (UCLA) as senior assistant athletic director in 1980.  A native of Billings, Montana, he graduated from the University of Montana.
-
-Cal State Fullerton Titans women's basketball: The Cal State Fullerton Titans women's basketball team is the basketball team that represents California State University, Fullerton in Fullerton, California.  The school's team currently competes in the Big West Conference.
-
-California State University, Fullerton massacre: The California State University, Fullerton massacre was an incident of mass murder committed by a custodian, Edward Charles Allaway, on July 12, 1976, at California State University, Fullerton, in Fullerton, California, United States.  It was the worst mass murder in Orange County until the 2011 Seal Beach shooting, in which eight people died.
-
-California State University, Fullerton: California State University, Fullerton (also known as CSUF or Cal State Fullerton) is a public research university located in Fullerton, California.  With a total enrollment of about 40,200 it has the largest student body out of the 23-campus California State University ("CSU") system, and its approximately 5,800 graduate student body is also the largest in the CSU and one of the largest in all of California.  As of Fall 2013, the school had 1,932 faculty, of which 707 (36.6%) were on the tenure track.
-
-Tony Hudson: Anthony Lamont Hudson (born: June 29, 1958) was a pitcher who is most notable for winning the 1979 College World Series Most Outstanding Player award while a sophomore at California State University, Fullerton.  He is one of five players from California State University, Fullerton to win that award.  The others are John Fishel, Phil Nevin, Mark Kotsay and Jason Windsor.
-
-Bill Kernen: Bill Kernen (born August 1, 1948 in Boise, Idaho) is the retired former head coach of the California State University, Bakersfield baseball team.  Prior to that position he was the head coach of the California State University, Northridge baseball team from 1989–1995, and the pitching coach for the California State University, Fullerton baseball team from 1978–1982 and 1986-87.  Following this he was the pitching coach at University of Illinois from 1987-88.  He was the pitching coach at North Carolina State from 2001-1003.  Before founding and building the program at CS Bakersfield, he was again an assistant at CS Fullerton in 2006-2007.  In addition to his baseball coaching achievements, Kernen is also an accomplished playwright, having been produced on the New York stage seven times.  He is the producer, writer and director of a short film made in 2006.  Kernen was a professional baseball player in the Baltimore Oriole organization from 1970-72.
-
-Question: Which university has more students California State University, Fullerton or University of Houston?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "university_with_more_students": {
-      "type": "string",
-      "description": "The name of the university with the higher student enrollment."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "universities_compared": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "university_name": {
-            "type": "string",
-            "description": "The name of the university."
-          },
-          "student_enrollment": {
-            "type": "integer",
-            "description": "The total student enrollment of the university."
-          }
-        },
-        "required": [
-          "university_name",
-          "student_enrollment"
-        ],
-        "additionalProperties": false
-      },
-      "description": "Details of the universities involved in the comparison, including their student enrollments."
-    },
-    "enrollment_difference": {
-      "type": "integer",
-      "description": "The numerical difference in student enrollment between the two universities."
-    },
-    "comparison_statement": {
-      "type": "string",
-      "description": "A concise statement summarizing which university has more students and by how many."
+    {
+      "role": "user",
+      "content": "Context:\nHope International University: Hope International University is a private Christian university in Fullerton, California, United States.  The campus is located just south of California State University, Fullerton.  Hope International University has an enrollment of more than 2,000 students representing 35 states and 40 countries.  While Hope is non-denominational, it has strong ties to the Restoration Movement and the Christian churches and churches of Christ.  Hope is accredited by the Western Association of Schools and Colleges (WASC).\n\nJoe A. Martinez: Joseph Anthony Martinez (born April 10, 1975 in Apple Valley, California) is the ring announcer for Golden Boy Promotions' \"Boxeo Estelar\" on Estrella TV.  A Communications graduate of California State University, Fullerton, Martinez began his professional career in 1996 as both the public address announcer for the Lake Elsinore Storm Minor League Baseball team (a San Diego Padres affiliate) and various Cal State Fullerton athletic programs.  He continues to announce for the Storm and retired from Cal State Fullerton in 2014.\n\nCal State Fullerton Titans football: The Cal State Fullerton Titans football program represented California State University, Fullerton from the 1970 through 1992 seasons.  The Titans originally competed as a member of the California Collegiate Athletic Association from 1970 to 1973 before moving to the Pacific Coast Athletic Association (now the Big West) in 1974 where they remained through the 1991 season.  The Titans would compete in their final year as an I-A Independent prior to the program being disbanded.  Fullerton played its home games at multiple stadiums throughout their history with the most recent being Titan Stadium, in Fullerton, California.\n\nUniversity of Houston: The University of Houston (UH) is a Carnegie Tier One state research university and the flagship institution of the University of Houston System.  Founded in 1927, UH is the third-largest university in Texas with nearly 43,000 students.  Its campus spans 667 acres in southeast Houston, and was known as University of Houston–University Park from 1983 to 1991.  The Carnegie Foundation classifies UH as a doctoral degree-granting institution with \"highest research activity.\"  The \"U.S. News & World Report\" ranks the university No. 194 in its National University Rankings, and No. 103 among top public universities.\n\nLynn Eilefson: Lindberg E. Eilefson (November 26, 1932 – May 25, 2001) was an American college athletics administrator.  He served as the athletic director at California State University, Fullerton from 1982 to 1985 and at San Jose State University from 1985 to 1986.  Eilefson worked at California State University, Fresno during the 1970s in a number a positions before taking a job at the University of California, Los Angeles (UCLA) as senior assistant athletic director in 1980.  A native of Billings, Montana, he graduated from the University of Montana.\n\nCal State Fullerton Titans women's basketball: The Cal State Fullerton Titans women's basketball team is the basketball team that represents California State University, Fullerton in Fullerton, California.  The school's team currently competes in the Big West Conference.\n\nCalifornia State University, Fullerton massacre: The California State University, Fullerton massacre was an incident of mass murder committed by a custodian, Edward Charles Allaway, on July 12, 1976, at California State University, Fullerton, in Fullerton, California, United States.  It was the worst mass murder in Orange County until the 2011 Seal Beach shooting, in which eight people died.\n\nCalifornia State University, Fullerton: California State University, Fullerton (also known as CSUF or Cal State Fullerton) is a public research university located in Fullerton, California.  With a total enrollment of about 40,200 it has the largest student body out of the 23-campus California State University (\"CSU\") system, and its approximately 5,800 graduate student body is also the largest in the CSU and one of the largest in all of California.  As of Fall 2013, the school had 1,932 faculty, of which 707 (36.6%) were on the tenure track.\n\nTony Hudson: Anthony Lamont Hudson (born: June 29, 1958) was a pitcher who is most notable for winning the 1979 College World Series Most Outstanding Player award while a sophomore at California State University, Fullerton.  He is one of five players from California State University, Fullerton to win that award.  The others are John Fishel, Phil Nevin, Mark Kotsay and Jason Windsor.\n\nBill Kernen: Bill Kernen (born August 1, 1948 in Boise, Idaho) is the retired former head coach of the California State University, Bakersfield baseball team.  Prior to that position he was the head coach of the California State University, Northridge baseball team from 1989–1995, and the pitching coach for the California State University, Fullerton baseball team from 1978–1982 and 1986-87.  Following this he was the pitching coach at University of Illinois from 1987-88.  He was the pitching coach at North Carolina State from 2001-1003.  Before founding and building the program at CS Bakersfield, he was again an assistant at CS Fullerton in 2006-2007.  In addition to his baseball coaching achievements, Kernen is also an accomplished playwright, having been produced on the New York stage seven times.  He is the producer, writer and director of a short film made in 2006.  Kernen was a professional baseball player in the Baltimore Oriole organization from 1970-72.\n\nQuestion: Which university has more students California State University, Fullerton or University of Houston?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"university_with_more_students\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the university with the higher student enrollment.\"\n    },\n    \"universities_compared\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"university_name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the university.\"\n          },\n          \"student_enrollment\": {\n            \"type\": \"integer\",\n            \"description\": \"The total student enrollment of the university.\"\n          }\n        },\n        \"required\": [\n          \"university_name\",\n          \"student_enrollment\"\n        ],\n        \"additionalProperties\": false\n      },\n      \"description\": \"Details of the universities involved in the comparison, including their student enrollments.\"\n    },\n    \"enrollment_difference\": {\n      \"type\": \"integer\",\n      \"description\": \"The numerical difference in student enrollment between the two universities.\"\n    },\n    \"comparison_statement\": {\n      \"type\": \"string\",\n      \"description\": \"A concise statement summarizing which university has more students and by how many.\"\n    }\n  },\n  \"required\": [\n    \"university_with_more_students\",\n    \"universities_compared\",\n    \"enrollment_difference\",\n    \"comparison_statement\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "university_with_more_students",
-    "universities_compared",
-    "enrollment_difference",
-    "comparison_statement"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "university_with_more_students": {
+        "type": "string",
+        "description": "The name of the university with the higher student enrollment."
+      },
+      "universities_compared": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "university_name": {
+              "type": "string",
+              "description": "The name of the university."
+            },
+            "student_enrollment": {
+              "type": "integer",
+              "description": "The total student enrollment of the university."
+            }
+          },
+          "required": [
+            "university_name",
+            "student_enrollment"
+          ],
+          "additionalProperties": false
+        },
+        "description": "Details of the universities involved in the comparison, including their student enrollments."
+      },
+      "enrollment_difference": {
+        "type": "integer",
+        "description": "The numerical difference in student enrollment between the two universities."
+      },
+      "comparison_statement": {
+        "type": "string",
+        "description": "A concise statement summarizing which university has more students and by how many."
+      }
+    },
+    "required": [
+      "university_with_more_students",
+      "universities_compared",
+      "enrollment_difference",
+      "comparison_statement"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

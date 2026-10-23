@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2010 Roger Federer tennis season: Roger Federer won the Australian Open, beating Briton Andy Murray, whom he also beat in the final of the 2008 US Open.  Federer played in eighteen tournaments in 2010, and won five.  He made the semifinals of his opening tournament at the Qatar Open in Doha, losing to Nikolay Davydenko, and at the Estoril Open, which he had won in 2008, losing to defending and eventual champion Albert Montañés.  Federer was runner-up in the Mutua Madrileña Madrid Open to Rafael Nadal.  At the French Open, he faced his opponent in the previous year's final, Robin Söderling at the quarterfinals stage and lost.  As defending champion at Wimbledon, he was defeated in the quarterfinals by Tomáš Berdych in four sets, thus ending his streak of seven consecutive Wimbledon finals also falling to world no. 3, his lowest ranking since 2003.  During the summer hard-court season, Federer hired Paul Annacone to be his coach and revive his form.  At the 2010 US Open, Federer advanced to his seventh straight semifinal appearance, but lost to Novak Djokovic in five sets, despite holding two match points in the final set.  Federer's ranking slipped from no. 2 to no. 3 after the tournament, but he finished the year strong with victories in Stockholm, Basel, and the ATP Tour Finals to pass Djokovic in the rankings and finish the year at no. 2.
-
-2014 Roger Federer tennis season: The 2014 Roger Federer tennis season officially began on 30 December 2013 with the start of the 2014 Brisbane International.  This season was a resurgent season for Federer that saw him return to the top of the games elite after a dismal 2013 season.  Before the start of the season Federer appointed his idol Stefan Edberg as his coach and he also changed racquets for the first time, changing from his longtime frame of 90 square inches to 97 square inches.  Federer reached a total of 11 finals the most since his 2007 season.  One of those finals included the Wimbledon final, his first major final since he won Wimbledon in 2012.  After winning Shanghai, Federer returned to No. 2 in the world for the first time since May 2013.  He also won the Davis Cup for the first time.  Federer ended the year at No. 2 with 5 titles and with the most match wins.
-
-2017 Australian Open – Men's singles final: The 2017 Australian Open Men's Singles final was the championship tennis match of the Men's Singles tournament at the 2017 Australian Open.  It was contested between Roger Federer and Rafael Nadal, ranked 17th and 9th in the world respectively.  It was their record ninth meeting in a Grand Slam final in their rivalry, and their 1st meeting in a Grand Slam final since the 2011 French Open.  In a rematch of the 2009 Australian Open final, which Nadal won in 5 sets, Roger Federer won the duel in 5 sets, beating Nadal for the first time in a Grand Slam since the 2007 Wimbledon final.  He also trailed Nadal 3–1 in the final set but won 5 games in a row to win the title.  This ended a 6-match losing streak against Nadal in Grand Slam events.  Having lost all of their previous three encounters, this was the first time Federer defeated Nadal at the Australian Open and also marked Federer's first Grand Slam victory over Nadal outside the grass courts of Wimbledon.  Federer extended his record of Grand Slam men's singles titles to 18, marking the third time he broke his own all-time record, after breaking the previous record of 14, held by Pete Sampras.
-
-2016 Roger Federer tennis season: The 2016 Roger Federer tennis season officially commenced on 3 January 2016 with the start of the 2016 Brisbane International.  This season saw Federer suffer from a knee injury which sidelined him for the majority of the year.  After having surgery, Federer returned but was hindered by a back injury which kept him out of the French Open, therefore ending his record of 65 consecutive appearances at Grand Slams.  Federer played his last match in the semifinals at Wimbledon.  On July 26, Federer shut down his season, not wanting to risk damaging his knee further.  Federer would end the year at No. 16, marking the first time that Federer dropped out of the Top 10 since 2002.  It also marked the first time since 2000 that Federer did not win a title.
-
-Federer–Roddick rivalry: The Federer–Roddick rivalry was a rivalry between two professional tennis players, Roger Federer of Switzerland and Andy Roddick of the United States.  The two met 24 times in official Association of Tennis Professionals (ATP) matches, and Federer led 21–3, making Roddick the player with the second-most tournament defeats to Federer in the ATP circuit (Novak Djokovic has lost to Federer on 22 occasions, but holds a positive record against him).  In terms of number of matches played, it ranks as the 14th largest rivalry in the Open Era.
-
-2007 Roger Federer tennis season: Roger Federer made all four Grand Slam finals in 2007, winning three of them.  He defeated Fernando González, 7–6(2), 6–4, 6–4, in the Australian Open final, Rafael Nadal, 7–6(7), 4–6, 7–6(3), 2–6, 6–2, in the final at Wimbledon, and Novak Djokovic, 7–6(4), 7–6(2), 6–4, at the US Open.  However, Federer lost the 2007 French Open final to Nadal, 3–6, 6–4, 3–6, 4–6.  Federer made five ATP Masters Series 1000 Finals in 2007, but only won two of those, in Hamburg and Cincinnati.  Federer won one ATP 500 series event in Dubai and ended the year by winning the year-end championships for the fourth time.  In December 2011 Stephen Tignor, chief editorial writer for Tennis.com, ranked Federer's 2007 season as the sixth greatest season of all-time during the open era.
-
-2008 Roger Federer tennis season: Roger Federer won one slam in 2008, which came at the 2008 US Open, defeating Briton Andy Murray, 6–2, 7–5, 6–2.  Federer was defeated by Rafael Nadal in two Grand Slam finals: at the 2008 French Open, which he lost 1–6, 3–6, 0–6, and at the 2008 Wimbledon Championships in a five-setter, 4–6, 4–6, 7–6, 7–6, 7–9, when he was going for six straight wins to break Björn Borg's record.  At the 2008 Australian Open, Federer lost in the semifinals to Novak Djokovic, ending his record of 10 consecutive Major finals.  Roger Federer lost twice in Master Series 1000 Finals on clay to Nadal at Monte Carlo and Hamburg.  However, Federer was able to capture three more victories in 250-level events at Estoril, Halle, and Basel.
-
-Roger Federer: Roger Federer (] ; born 8 August 1981) is a Swiss professional tennis player who is currently ranked world No. 2 in men's singles tennis by the Association of Tennis Professionals (ATP).  Federer has won 19 Grand Slam singles titles, the most in history for a male tennis player and has held the world No. 1 spot in the ATP rankings for a record total of 302 weeks, including a record 237 consecutive weeks.  After turning professional in 1998, he was continuously ranked in the top ten from October 2002 to November 2016.
-
-Roger Federer's early career: Roger Federer's first tournament as a professional was Gstaad in 1998, where he faced Lucas Arnold Ker in the round of 32 and lost, 4–6, 4–6.  Federer's first final came at the Marseille Open, which was in 2000, and he lost to fellow Swiss Marc Rosset, 6–2, 3–6, 6–7.  Federer's first win was at the 2001 Milan Indoor tournament, where he defeated Julien Boutter, 6–4, 6–7, 6–4.  The most prestigious event finals he was in at this time was the Miami Masters event, where he lost to Andre Agassi, 3–6, 3–6, 6–3, 4–6.  In addition, Federer won his first Master Series event at the Hamburg Masters on clay, 6–1, 6–3, 6–4, over Marat Safin.  Federer made ten singles finals between 1998 and 2002, of which he won four and lost six.  Federer made six doubles finals during this time, but lost the Indian Wells Masters event in 2002.  The most prestigious events he won were the Hamburg Masters in 2002 and two Rotterdam 500 series events in 2001 and 2002.
-
-Sue Barker: Susan Barker, OBE (born 19 April 1956 in Paignton, Devon) is an English television presenter and former professional tennis player.  During her tennis career, she won eleven WTA Tour singles titles, including one Grand Slam singles title at the 1976 French Open.  She reached a career-high singles ranking of World No. 3.  She is now one of the main sports presenters at the BBC, most notably fronting the corporation’s coverage of Wimbledon and A Question of Sport.
-
-Question: Who is older Roger Federer or Sue Barker ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_1_name": {
-      "type": "string",
-      "description": "The name of the first person being compared."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "person_1_birth_year": {
-      "type": "integer",
-      "description": "The birth year of the first person."
-    },
-    "person_2_name": {
-      "type": "string",
-      "description": "The name of the second person being compared."
-    },
-    "person_2_birth_year": {
-      "type": "integer",
-      "description": "The birth year of the second person."
-    },
-    "older_person_name": {
-      "type": "string",
-      "description": "The name of the person who is older."
-    },
-    "age_difference_years": {
-      "type": "integer",
-      "description": "The difference in birth years between the two people."
+    {
+      "role": "user",
+      "content": "Context:\n2010 Roger Federer tennis season: Roger Federer won the Australian Open, beating Briton Andy Murray, whom he also beat in the final of the 2008 US Open.  Federer played in eighteen tournaments in 2010, and won five.  He made the semifinals of his opening tournament at the Qatar Open in Doha, losing to Nikolay Davydenko, and at the Estoril Open, which he had won in 2008, losing to defending and eventual champion Albert Montañés.  Federer was runner-up in the Mutua Madrileña Madrid Open to Rafael Nadal.  At the French Open, he faced his opponent in the previous year's final, Robin Söderling at the quarterfinals stage and lost.  As defending champion at Wimbledon, he was defeated in the quarterfinals by Tomáš Berdych in four sets, thus ending his streak of seven consecutive Wimbledon finals also falling to world no. 3, his lowest ranking since 2003.  During the summer hard-court season, Federer hired Paul Annacone to be his coach and revive his form.  At the 2010 US Open, Federer advanced to his seventh straight semifinal appearance, but lost to Novak Djokovic in five sets, despite holding two match points in the final set.  Federer's ranking slipped from no. 2 to no. 3 after the tournament, but he finished the year strong with victories in Stockholm, Basel, and the ATP Tour Finals to pass Djokovic in the rankings and finish the year at no. 2.\n\n2014 Roger Federer tennis season: The 2014 Roger Federer tennis season officially began on 30 December 2013 with the start of the 2014 Brisbane International.  This season was a resurgent season for Federer that saw him return to the top of the games elite after a dismal 2013 season.  Before the start of the season Federer appointed his idol Stefan Edberg as his coach and he also changed racquets for the first time, changing from his longtime frame of 90 square inches to 97 square inches.  Federer reached a total of 11 finals the most since his 2007 season.  One of those finals included the Wimbledon final, his first major final since he won Wimbledon in 2012.  After winning Shanghai, Federer returned to No. 2 in the world for the first time since May 2013.  He also won the Davis Cup for the first time.  Federer ended the year at No. 2 with 5 titles and with the most match wins.\n\n2017 Australian Open – Men's singles final: The 2017 Australian Open Men's Singles final was the championship tennis match of the Men's Singles tournament at the 2017 Australian Open.  It was contested between Roger Federer and Rafael Nadal, ranked 17th and 9th in the world respectively.  It was their record ninth meeting in a Grand Slam final in their rivalry, and their 1st meeting in a Grand Slam final since the 2011 French Open.  In a rematch of the 2009 Australian Open final, which Nadal won in 5 sets, Roger Federer won the duel in 5 sets, beating Nadal for the first time in a Grand Slam since the 2007 Wimbledon final.  He also trailed Nadal 3–1 in the final set but won 5 games in a row to win the title.  This ended a 6-match losing streak against Nadal in Grand Slam events.  Having lost all of their previous three encounters, this was the first time Federer defeated Nadal at the Australian Open and also marked Federer's first Grand Slam victory over Nadal outside the grass courts of Wimbledon.  Federer extended his record of Grand Slam men's singles titles to 18, marking the third time he broke his own all-time record, after breaking the previous record of 14, held by Pete Sampras.\n\n2016 Roger Federer tennis season: The 2016 Roger Federer tennis season officially commenced on 3 January 2016 with the start of the 2016 Brisbane International.  This season saw Federer suffer from a knee injury which sidelined him for the majority of the year.  After having surgery, Federer returned but was hindered by a back injury which kept him out of the French Open, therefore ending his record of 65 consecutive appearances at Grand Slams.  Federer played his last match in the semifinals at Wimbledon.  On July 26, Federer shut down his season, not wanting to risk damaging his knee further.  Federer would end the year at No. 16, marking the first time that Federer dropped out of the Top 10 since 2002.  It also marked the first time since 2000 that Federer did not win a title.\n\nFederer–Roddick rivalry: The Federer–Roddick rivalry was a rivalry between two professional tennis players, Roger Federer of Switzerland and Andy Roddick of the United States.  The two met 24 times in official Association of Tennis Professionals (ATP) matches, and Federer led 21–3, making Roddick the player with the second-most tournament defeats to Federer in the ATP circuit (Novak Djokovic has lost to Federer on 22 occasions, but holds a positive record against him).  In terms of number of matches played, it ranks as the 14th largest rivalry in the Open Era.\n\n2007 Roger Federer tennis season: Roger Federer made all four Grand Slam finals in 2007, winning three of them.  He defeated Fernando González, 7–6(2), 6–4, 6–4, in the Australian Open final, Rafael Nadal, 7–6(7), 4–6, 7–6(3), 2–6, 6–2, in the final at Wimbledon, and Novak Djokovic, 7–6(4), 7–6(2), 6–4, at the US Open.  However, Federer lost the 2007 French Open final to Nadal, 3–6, 6–4, 3–6, 4–6.  Federer made five ATP Masters Series 1000 Finals in 2007, but only won two of those, in Hamburg and Cincinnati.  Federer won one ATP 500 series event in Dubai and ended the year by winning the year-end championships for the fourth time.  In December 2011 Stephen Tignor, chief editorial writer for Tennis.com, ranked Federer's 2007 season as the sixth greatest season of all-time during the open era.\n\n2008 Roger Federer tennis season: Roger Federer won one slam in 2008, which came at the 2008 US Open, defeating Briton Andy Murray, 6–2, 7–5, 6–2.  Federer was defeated by Rafael Nadal in two Grand Slam finals: at the 2008 French Open, which he lost 1–6, 3–6, 0–6, and at the 2008 Wimbledon Championships in a five-setter, 4–6, 4–6, 7–6, 7–6, 7–9, when he was going for six straight wins to break Björn Borg's record.  At the 2008 Australian Open, Federer lost in the semifinals to Novak Djokovic, ending his record of 10 consecutive Major finals.  Roger Federer lost twice in Master Series 1000 Finals on clay to Nadal at Monte Carlo and Hamburg.  However, Federer was able to capture three more victories in 250-level events at Estoril, Halle, and Basel.\n\nRoger Federer: Roger Federer (] ; born 8 August 1981) is a Swiss professional tennis player who is currently ranked world No. 2 in men's singles tennis by the Association of Tennis Professionals (ATP).  Federer has won 19 Grand Slam singles titles, the most in history for a male tennis player and has held the world No. 1 spot in the ATP rankings for a record total of 302 weeks, including a record 237 consecutive weeks.  After turning professional in 1998, he was continuously ranked in the top ten from October 2002 to November 2016.\n\nRoger Federer's early career: Roger Federer's first tournament as a professional was Gstaad in 1998, where he faced Lucas Arnold Ker in the round of 32 and lost, 4–6, 4–6.  Federer's first final came at the Marseille Open, which was in 2000, and he lost to fellow Swiss Marc Rosset, 6–2, 3–6, 6–7.  Federer's first win was at the 2001 Milan Indoor tournament, where he defeated Julien Boutter, 6–4, 6–7, 6–4.  The most prestigious event finals he was in at this time was the Miami Masters event, where he lost to Andre Agassi, 3–6, 3–6, 6–3, 4–6.  In addition, Federer won his first Master Series event at the Hamburg Masters on clay, 6–1, 6–3, 6–4, over Marat Safin.  Federer made ten singles finals between 1998 and 2002, of which he won four and lost six.  Federer made six doubles finals during this time, but lost the Indian Wells Masters event in 2002.  The most prestigious events he won were the Hamburg Masters in 2002 and two Rotterdam 500 series events in 2001 and 2002.\n\nSue Barker: Susan Barker, OBE (born 19 April 1956 in Paignton, Devon) is an English television presenter and former professional tennis player.  During her tennis career, she won eleven WTA Tour singles titles, including one Grand Slam singles title at the 1976 French Open.  She reached a career-high singles ranking of World No. 3.  She is now one of the main sports presenters at the BBC, most notably fronting the corporation’s coverage of Wimbledon and A Question of Sport.\n\nQuestion: Who is older Roger Federer or Sue Barker ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_1_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the first person being compared.\"\n    },\n    \"person_1_birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the first person.\"\n    },\n    \"person_2_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the second person being compared.\"\n    },\n    \"person_2_birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the second person.\"\n    },\n    \"older_person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person who is older.\"\n    },\n    \"age_difference_years\": {\n      \"type\": \"integer\",\n      \"description\": \"The difference in birth years between the two people.\"\n    }\n  },\n  \"required\": [\n    \"person_1_name\",\n    \"person_1_birth_year\",\n    \"person_2_name\",\n    \"person_2_birth_year\",\n    \"older_person_name\",\n    \"age_difference_years\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_1_name",
-    "person_1_birth_year",
-    "person_2_name",
-    "person_2_birth_year",
-    "older_person_name",
-    "age_difference_years"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_1_name": {
+        "type": "string",
+        "description": "The name of the first person being compared."
+      },
+      "person_1_birth_year": {
+        "type": "integer",
+        "description": "The birth year of the first person."
+      },
+      "person_2_name": {
+        "type": "string",
+        "description": "The name of the second person being compared."
+      },
+      "person_2_birth_year": {
+        "type": "integer",
+        "description": "The birth year of the second person."
+      },
+      "older_person_name": {
+        "type": "string",
+        "description": "The name of the person who is older."
+      },
+      "age_difference_years": {
+        "type": "integer",
+        "description": "The difference in birth years between the two people."
+      }
+    },
+    "required": [
+      "person_1_name",
+      "person_1_birth_year",
+      "person_2_name",
+      "person_2_birth_year",
+      "older_person_name",
+      "age_difference_years"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

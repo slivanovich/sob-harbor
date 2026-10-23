@@ -1,73 +1,50 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Days of Our Lives cast members: "Days of Our Lives" is a long-running American television soap opera drama, airing on NBC.  Created by Ted and Betty Corday, the series premiered on November 8, 1965.  The longest-running cast member is Suzanne Rogers, who has portrayed Maggie Horton since August 20, 1973, making her one of the longest-tenured actors in American soap operas.  Original cast member, Frances Reid, was previously the soap's longest-running cast member, portraying Horton family matriarch, Alice Horton, from 1965 to 2007.  Actresses Susan Seaforth Hayes and Deidre Hall, who portray Julie Olson Williams and Dr. Marlena Evans, are currently the second and third longest tenured actors on "Days of Our Lives", joining in 1968 and 1976, respectively.  The following list is of cast members who are currently on the show: the main and recurring cast members, or those who are debuting, departing or returning to the series.
-
-General Hospital cast members: "General Hospital" is the longest running American television serial drama, airing on ABC.  Created by Frank and Doris Hursley, the series premiered on April 1, 1963.  The longest-running cast member is Leslie Charleson, who has portrayed Dr. Monica Quartermaine since August 17, 1977, also making her one of the longest-tenured actors in American soap operas.  Former cast member Rachel Ames was previously the series' longest-running cast member, portraying Audrey Hardy from 1964 to 2007, and making guest appearances in 2009 and 2013, the latter for the series' fiftieth anniversary.  Ames made a special appearance on October 30, 2015.  Actors Genie Francis and Kin Shriner, who portray Laura Spencer and Scott Baldwin, are the second and third longest-running cast members, having joined "General Hospital" in February and August 1977, respectively.  Actress Jacklyn Zeman — who portrays Bobbie Spencer — is the fourth longest-running cast member, joining the serial in December 1977.  Actress Jane Elliot, who joined the serial in June 1978 as Tracy Quartermaine, is the fifth longest-running cast member, joining "General Hospital" in June 1978 until her departure in May 2017.  Former cast member Anthony Geary, who portrayed Luke Spencer, was the sixth longest-running cast member, having joined "General Hospital" in November 1978.  The following list is of cast members who are currently on the show: the main and recurring cast members, or those who are debuting, departing or returning to the series.
-
-James Van Praagh: James Van Praagh ( ; born August 23, 1958) is an American author, producer and television personality who describes himself as a clairvoyant and spiritual medium.  He has written numerous books, including "The New York Times" bestseller "Talking to Heaven".  He co-executive produced the CBS primetime series "Ghost Whisperer", which he claims was based on his life, and was portrayed by Ted Danson in the 2002 semi-biographical miniseries "Living with the Dead".  He hosted a short-lived paranormal talk show called "Beyond with James Van Praagh".
-
-Chills (TV series): Chills is an upcoming television show and paranormal investigation team based in Brighton, UK.  The main team consists of a spiritual medium, a research historian and a technological consultant, presented by Curtis Diamond.  The show is directed by the producer Jon Lovell.  Originating in the south coast of England, the team built a solid reputation for paranormal investigation through their unconventional format which involves cross-checking all claims made by the psychic medium against proven historical fact.  The show is awaiting official commission from a number of channels.  On 1 October 2011, it was leaked that post production on the first pilot episode had finished.
-
-Geordie Shore (series 8): The eighth series of Geordie Shore, a British television programme based in Newcastle upon Tyne was confirmed in October 2013 after cast member Holly Hagan announced it on Twitter and is expected to air 22 July 2014.  Filming began for this series on 25 March 2014.  This series will be the first not to feature former cast member Sophie Kasaei after she was axed during the seventh series following a racial slur.  All other cast members from the previous series return with the addition of new cast member Aaron Chalmers who had briefly appeared during series two of the show as a one-night stand of Holly's.  In May 2014, Gaz announced that the series would begin in July.  An exclusive first trailer for the series was released during an episode of Ex On The Beach on 3 June 2014.  It was revealed on 10 June 2014 that another new cast member had joined, 21-year-old Kyle Christie.
-
-The Only Way Is Essex (series 18): The eighteenth series of the British semi-reality television programme "The Only Way Is Essex" was confirmed on 3 June 2015 when it was announced that it had renewed for at least a further six series, taking it up to 21 series.  It is the third series to be included in its current contract.  The series launched on 17 July 2016 with a "The Only Way is Mallorca" special.  Ahead of the series it was announced that cast member Jake Hall had quit the show having appeared since the fourteenth series.  Despite quitting the show at the end of the sixteenth series, Jess Wright made a one-off appearance to support Bobby over the loss of his dog.  It was also the first series not to include long-running cast member Lewis Bloor, who quit during the previous series.  New cast member Amber Dowding joined the show for this series. " Love Island" winners Nathan Massey and Cara De La Hoyde also made guest appearances during the ninth episode of the series.  This was the final series to include Billie Faiers after it was announced she had quit the show.
-
-Philip Solomon (medium): Philip Solomon (born 23 July 1959, in Wolverhampton, England) is a Spiritualist medium, author, broadcaster and paranormal researcher.  Philip Solomon is UK-based and has appeared many times on television and radio in his role as a medium.  He has also written ten books on the paranormal world for the popular market as well as being a presenter for Wolverhampton City Radio 101.8 FM.  He is also a feature columnist for "Psychic World" and the Wolverhampton "Express & Star" newspapers, Haunted magazine and Take A Break's Fate & Fortune mag.  He has worked with several well-known mediums such as Derek Acorah and renowned parapsychologists such as Dr Hans Holzer.  In the past he has worked for organisations such as the BBC and continues to be a major fund-raiser for charitable organisations.
-
-Derek Acorah: Derek Acorah (born Derek Francis Johnson on 27 January 1950) describes himself as a spiritual medium.  He is best known for his television work on "Most Haunted", broadcast on Living TV (2002–2010).  He has received a lot of criticism casting doubts over his legitimacy as a medium.
-
-Geordie Shore (series 14): The fourteenth series of Geordie Shore, a British television programme based in Newcastle upon Tyne, was confirmed on 31 October 2016 when cast member Scotty T announced that he would be taking a break from the series to focus on other commitments.  The series was filmed in November 2016, and began airing on 28 March 2017.  Ahead of the series, it was also confirmed that original cast member Holly Hagan had quit the show, following her exit in the previous series.  On 28 February 2017, it was announced that eight new cast members had joined for this series.  Zahida Allen, Chelsea Barber, Sam Bentham, Sarah Goodhart, Abbie Holborn, Elettra Lamborghini, Billy Phillips and Eve Shannon all appeared throughout the series hoping to become permanent members of the cast, and in the series finale, Holborn was chosen.  Goodhart and Allen both previously appeared on "Ex on the Beach", with the former appearing on the third series of the show as the ex-girlfriend of current "Geordie Shore" cast member Marty McKenna (before he joined the cast).  Lamborghini has also appeared on "Super Shore" and participated in the fifth season of "Gran Hermano VIP", the Spanish version of "Celebrity Big Brother".  It was also confirmed that Scott would return later in the series.
-
-Ellen Cleghorne: Ellen Cleghorne (born November 29, 1965) is an American actress and comedian, best known as a cast member of "Saturday Night Live" from 1991 to 1995.  Cleghorne was the sketch comedy show's second African-American female repertory cast member, succeeding Danitra Vance in its eleventh season, and the first African-American female cast member to stay for more than one season.  She returned for its 40th anniversary special on February 15, 2015.  Cleghorne was ranked the 69th greatest "Saturday Night Live" cast member by "Rolling Stone" magazine.
-
-Question: What UK-based spiritual medium has worked with a cast member of the television show "Most Haunted?"
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "medium_name": {
-      "type": "string",
-      "description": "The name of the spiritual medium."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "country_of_origin": {
-      "type": "string",
-      "description": "The country where the medium is based or from."
-    },
-    "collaborated_with": {
-      "type": "object",
-      "properties": {
-        "cast_member_name": {
-          "type": "string",
-          "description": "The name of the cast member from 'Most Haunted' they collaborated with."
-        },
-        "television_show": {
-          "type": "string",
-          "description": "The television show the cast member is known for."
-        }
-      },
-      "required": [
-        "cast_member_name",
-        "television_show"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nDays of Our Lives cast members: \"Days of Our Lives\" is a long-running American television soap opera drama, airing on NBC.  Created by Ted and Betty Corday, the series premiered on November 8, 1965.  The longest-running cast member is Suzanne Rogers, who has portrayed Maggie Horton since August 20, 1973, making her one of the longest-tenured actors in American soap operas.  Original cast member, Frances Reid, was previously the soap's longest-running cast member, portraying Horton family matriarch, Alice Horton, from 1965 to 2007.  Actresses Susan Seaforth Hayes and Deidre Hall, who portray Julie Olson Williams and Dr. Marlena Evans, are currently the second and third longest tenured actors on \"Days of Our Lives\", joining in 1968 and 1976, respectively.  The following list is of cast members who are currently on the show: the main and recurring cast members, or those who are debuting, departing or returning to the series.\n\nGeneral Hospital cast members: \"General Hospital\" is the longest running American television serial drama, airing on ABC.  Created by Frank and Doris Hursley, the series premiered on April 1, 1963.  The longest-running cast member is Leslie Charleson, who has portrayed Dr. Monica Quartermaine since August 17, 1977, also making her one of the longest-tenured actors in American soap operas.  Former cast member Rachel Ames was previously the series' longest-running cast member, portraying Audrey Hardy from 1964 to 2007, and making guest appearances in 2009 and 2013, the latter for the series' fiftieth anniversary.  Ames made a special appearance on October 30, 2015.  Actors Genie Francis and Kin Shriner, who portray Laura Spencer and Scott Baldwin, are the second and third longest-running cast members, having joined \"General Hospital\" in February and August 1977, respectively.  Actress Jacklyn Zeman — who portrays Bobbie Spencer — is the fourth longest-running cast member, joining the serial in December 1977.  Actress Jane Elliot, who joined the serial in June 1978 as Tracy Quartermaine, is the fifth longest-running cast member, joining \"General Hospital\" in June 1978 until her departure in May 2017.  Former cast member Anthony Geary, who portrayed Luke Spencer, was the sixth longest-running cast member, having joined \"General Hospital\" in November 1978.  The following list is of cast members who are currently on the show: the main and recurring cast members, or those who are debuting, departing or returning to the series.\n\nJames Van Praagh: James Van Praagh ( ; born August 23, 1958) is an American author, producer and television personality who describes himself as a clairvoyant and spiritual medium.  He has written numerous books, including \"The New York Times\" bestseller \"Talking to Heaven\".  He co-executive produced the CBS primetime series \"Ghost Whisperer\", which he claims was based on his life, and was portrayed by Ted Danson in the 2002 semi-biographical miniseries \"Living with the Dead\".  He hosted a short-lived paranormal talk show called \"Beyond with James Van Praagh\".\n\nChills (TV series): Chills is an upcoming television show and paranormal investigation team based in Brighton, UK.  The main team consists of a spiritual medium, a research historian and a technological consultant, presented by Curtis Diamond.  The show is directed by the producer Jon Lovell.  Originating in the south coast of England, the team built a solid reputation for paranormal investigation through their unconventional format which involves cross-checking all claims made by the psychic medium against proven historical fact.  The show is awaiting official commission from a number of channels.  On 1 October 2011, it was leaked that post production on the first pilot episode had finished.\n\nGeordie Shore (series 8): The eighth series of Geordie Shore, a British television programme based in Newcastle upon Tyne was confirmed in October 2013 after cast member Holly Hagan announced it on Twitter and is expected to air 22 July 2014.  Filming began for this series on 25 March 2014.  This series will be the first not to feature former cast member Sophie Kasaei after she was axed during the seventh series following a racial slur.  All other cast members from the previous series return with the addition of new cast member Aaron Chalmers who had briefly appeared during series two of the show as a one-night stand of Holly's.  In May 2014, Gaz announced that the series would begin in July.  An exclusive first trailer for the series was released during an episode of Ex On The Beach on 3 June 2014.  It was revealed on 10 June 2014 that another new cast member had joined, 21-year-old Kyle Christie.\n\nThe Only Way Is Essex (series 18): The eighteenth series of the British semi-reality television programme \"The Only Way Is Essex\" was confirmed on 3 June 2015 when it was announced that it had renewed for at least a further six series, taking it up to 21 series.  It is the third series to be included in its current contract.  The series launched on 17 July 2016 with a \"The Only Way is Mallorca\" special.  Ahead of the series it was announced that cast member Jake Hall had quit the show having appeared since the fourteenth series.  Despite quitting the show at the end of the sixteenth series, Jess Wright made a one-off appearance to support Bobby over the loss of his dog.  It was also the first series not to include long-running cast member Lewis Bloor, who quit during the previous series.  New cast member Amber Dowding joined the show for this series. \" Love Island\" winners Nathan Massey and Cara De La Hoyde also made guest appearances during the ninth episode of the series.  This was the final series to include Billie Faiers after it was announced she had quit the show.\n\nPhilip Solomon (medium): Philip Solomon (born 23 July 1959, in Wolverhampton, England) is a Spiritualist medium, author, broadcaster and paranormal researcher.  Philip Solomon is UK-based and has appeared many times on television and radio in his role as a medium.  He has also written ten books on the paranormal world for the popular market as well as being a presenter for Wolverhampton City Radio 101.8 FM.  He is also a feature columnist for \"Psychic World\" and the Wolverhampton \"Express & Star\" newspapers, Haunted magazine and Take A Break's Fate & Fortune mag.  He has worked with several well-known mediums such as Derek Acorah and renowned parapsychologists such as Dr Hans Holzer.  In the past he has worked for organisations such as the BBC and continues to be a major fund-raiser for charitable organisations.\n\nDerek Acorah: Derek Acorah (born Derek Francis Johnson on 27 January 1950) describes himself as a spiritual medium.  He is best known for his television work on \"Most Haunted\", broadcast on Living TV (2002–2010).  He has received a lot of criticism casting doubts over his legitimacy as a medium.\n\nGeordie Shore (series 14): The fourteenth series of Geordie Shore, a British television programme based in Newcastle upon Tyne, was confirmed on 31 October 2016 when cast member Scotty T announced that he would be taking a break from the series to focus on other commitments.  The series was filmed in November 2016, and began airing on 28 March 2017.  Ahead of the series, it was also confirmed that original cast member Holly Hagan had quit the show, following her exit in the previous series.  On 28 February 2017, it was announced that eight new cast members had joined for this series.  Zahida Allen, Chelsea Barber, Sam Bentham, Sarah Goodhart, Abbie Holborn, Elettra Lamborghini, Billy Phillips and Eve Shannon all appeared throughout the series hoping to become permanent members of the cast, and in the series finale, Holborn was chosen.  Goodhart and Allen both previously appeared on \"Ex on the Beach\", with the former appearing on the third series of the show as the ex-girlfriend of current \"Geordie Shore\" cast member Marty McKenna (before he joined the cast).  Lamborghini has also appeared on \"Super Shore\" and participated in the fifth season of \"Gran Hermano VIP\", the Spanish version of \"Celebrity Big Brother\".  It was also confirmed that Scott would return later in the series.\n\nEllen Cleghorne: Ellen Cleghorne (born November 29, 1965) is an American actress and comedian, best known as a cast member of \"Saturday Night Live\" from 1991 to 1995.  Cleghorne was the sketch comedy show's second African-American female repertory cast member, succeeding Danitra Vance in its eleventh season, and the first African-American female cast member to stay for more than one season.  She returned for its 40th anniversary special on February 15, 2015.  Cleghorne was ranked the 69th greatest \"Saturday Night Live\" cast member by \"Rolling Stone\" magazine.\n\nQuestion: What UK-based spiritual medium has worked with a cast member of the television show \"Most Haunted?\"\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"medium_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the spiritual medium.\"\n    },\n    \"country_of_origin\": {\n      \"type\": \"string\",\n      \"description\": \"The country where the medium is based or from.\"\n    },\n    \"collaborated_with\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"cast_member_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the cast member from 'Most Haunted' they collaborated with.\"\n        },\n        \"television_show\": {\n          \"type\": \"string\",\n          \"description\": \"The television show the cast member is known for.\"\n        }\n      },\n      \"required\": [\n        \"cast_member_name\",\n        \"television_show\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"medium_name\",\n    \"country_of_origin\",\n    \"collaborated_with\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "medium_name",
-    "country_of_origin",
-    "collaborated_with"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "medium_name": {
+        "type": "string",
+        "description": "The name of the spiritual medium."
+      },
+      "country_of_origin": {
+        "type": "string",
+        "description": "The country where the medium is based or from."
+      },
+      "collaborated_with": {
+        "type": "object",
+        "properties": {
+          "cast_member_name": {
+            "type": "string",
+            "description": "The name of the cast member from 'Most Haunted' they collaborated with."
+          },
+          "television_show": {
+            "type": "string",
+            "description": "The television show the cast member is known for."
+          }
+        },
+        "required": [
+          "cast_member_name",
+          "television_show"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "medium_name",
+      "country_of_origin",
+      "collaborated_with"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

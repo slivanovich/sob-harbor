@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-The Man Behind The Curtain: The Man Behind The Curtain is a restaurant in Leeds, West Yorkshire, England, which was opened in 2014 by chef Michael O'Hare.  The restaurant has a reputation for modern and often unusual food, with modern and artistic presentation.  It was awarded a Michelin star in October 2015 and three AA Rosettes in 2016.  It is currently the only restaurant in Leeds which holds a Michelin star and the second restaurant in the city to have been awarded one.
-
-I'll Come Runnin': "I'll Come Runnin" is a single by American country music artist Connie Smith.  Released in February 1967, the song reached #10 on the "Billboard" Hot Country Singles chart.  The single was later released on Smith's first compilation album "The Best of Connie Smith" (1967).  "I'll Come Runnin'" was the first single written entirely by Smith herself.
-
-Coral Reef Restaurant: The Coral Reef Restaurant is a themed seafood restaurant in The Seas with Nemo & Friends, which is located in Epcot's Future World.  One entire wall of the restaurant consists of a glass window that is eight inches thick and that provides a view into an aquarium.  While they eat, restaurant guests are able to watch tarpons, sharks, sea turtles, stingrays, groupers, and sometimes scuba divers in the six-million-gallon aquarium.  Artist Kim Minichiello painted the underwater scene that appears on the restaurant's menu covers.  Ron Douglas's cookbook "America's Most Wanted Recipes: Just Desserts" includes two dishes from the Coral Reef Restaurant: the Baileys and Jack Daniel's Mousse and the Chocolate Wave Cake.  One reviewer from "The Guardian" compares the Coral Reef Restaurant to the Sci-Fi Dine-In Theater Restaurant in Disney's Hollywood Studios, writing that both restaurants "are great settings" where "eating is awful."  In "The Unofficial Guide to Walt Disney World with Kids 2015", Bob Sehlinger, Liliane Opsomer, and Len Testa call the Coral Reef Restaurant one of the two most overpriced restaurants in Epcot, the other being Monsieur Paul.  In "Pauline Frommer's Walt Disney World and Orlando", Jason Cochran writes of his experience of the Coral Reef Restaurant, saying, "I had some of the worst food in my life... although the setting rocks."  In "Beyond the Attractions: A Guide to Walt Disney World with Preschoolers", Lisa Battista calls the aquarium view "incredible".
-
-Cuisine of Houston: By 2005 "USA Today" referred to Houston, Texas as "the dining-out capital of [the United States <nowiki>]</nowiki>."  Houstonians ate out at restaurants more often than residents of other American cities, and Houston restaurants have the second lowest average prices of restaurants of major cities.  Tory Gattis, who published op-eds in the "Houston Chronicle", said in 2005 that Houston has "a great restaurant scene."  Gattis said that one factor contributing to the status is Houston's ethnic diversity, related to Houston's role as a major city of the energy industry, Houston's role as a port city, and Houston's proximity to Latin America and the Cajun areas of Louisiana.  Gattis cited Houston's lack of zoning, which makes it easy for a business owner to start a restaurant as land is less expensive and there are fewer regulations and permitting rules.  Gattis also cited Houston's freeway network, which, according to Gattis, puts restaurants within a 15-20 minute drive within the residences of most Houstonians during non-rush hour times.  Gattis explained that the size of Greater Houston's population allows the city to support niche ethnic restaurants and provides a large customer base for area restaurants.  Also he stated that the competition in Houston's restaurant industry forces restaurants of lower quality to go out of business, leaving high quality restaurants open.  The journalist explained that Houston's relatively low cost of living reduces labor costs for restaurants and allows its residents more leftover income that could be spent at restaurants.  Jobs in Houston have relatively high salaries, Gattis explains that the wages help support Houston's restaurant market.
-
-Cindy Brennan: Cindy Brennan is a member of the Brennan restaurant family who got their start in the restaurant business two generations ago in New Orleans.  She is co-owner and managing partner of Mr. B's Bistro, which opened in 1979 in the French Quarter of New Orleans.  Brennan is the author of "The Mr. B's Bistro Cookbook: Simply Legendary Recipes From New Orleans's Favorite French Quarter Restaurant" (ISBN  ).  The cookbook includes 112 recipes from the restaurant’s menu.
-
-Dee's Drive-In: Dee's Drive-In was a fast food hamburger drive-in restaurant chain based in Utah.  The chain was founded by Dee Frederick Anderson, who got his start selling hamburgers operating the Ute Hamburger Shop near the University of Utah in the 1920s.  Anderson opened the first Dee's Restaurant in 1932.  Dee's would evolve into two separate but related restaurant chains: Dee's Family Restaurant and Dee's Drive-In.
-
-Sticks and Stones (Tracy Lawrence album): Sticks and Stones is the debut album of American country music artist Tracy Lawrence.  Released in 1991 on Atlantic Records, it produced four singles: the title track, "Today's Lonely Fool", "Runnin' Behind", and "Somebody Paints the Wall", which peaked at #1, #3, #4, and #8, respectively, on the "Billboard" Hot Country Singles & Tracks (now Hot Country Songs) charts between 1991 and 1993.
-
-Franklin Barbecue: Franklin Barbecue is a barbecue restaurant located in Austin, Texas.  In 2009, Aaron Franklin launched the restaurant in a trailer.  The restaurant has sold out of brisket every day since its establishment.  Franklin Barbecue moved to a brick and mortar location in 2011.  The restaurant appeared on "" in September 2012.  In 2014, "Texas Monthly" listed the restaurant on its list of "the 50 Best BBQ Joints in the World."  That July, President Barack Obama visited the restaurant and bought lunch for those in line behind him.  The restaurant is prominently featured in a scene from the 2014 Jon Favreau film "Chef", with speaking cameos by owner Aaron Franklin and general manager Benji Jacob.
-
-Tracy Lawrence: Tracy Lee Lawrence (born January 27, 1968) is an American country music artist.  He started at a country music restaurant called "Live At Libby's" where owner Libby Knight would help local talent find their way into country music.  Lawrence signed to Atlantic Records in 1991, Lawrence debuted that year with the album "Sticks and Stones", which produced his first chart single and first Number One hit in its title track.  Five more studio albums, as well as a live album and a compilation album, followed throughout the 1990s and into 2000 on Atlantic before the label's country division was closed in 2001.  Afterward, he recorded for Warner Bros.  Records, DreamWorks Records, Mercury Records Nashville and his own label, Rocky Comfort Records.
-
-Runnin' Behind: "Runnin' Behind" is a song co-written by Mark D. Sanders and Ed Hill and recorded by American country music artist Tracy Lawrence.  It was released in June 1992 as the third single from his debut album, "Sticks and Stones".  It peaked at number 4 on the U.S. "Billboard" Hot Country Singles & Tracks chart and at number 6 on the Canadian "RPM" Country Tracks chart.  This song was also featured on "Tracy Lawrence Live and Unplugged" and "The Very Best of Tracy Lawrence".
-
-Question: What restaurant did the artist of "Runnin' Behind" start at?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "artist_name": {
-      "type": "string",
-      "description": "The name of the artist who recorded the song."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song mentioned in the question."
-    },
-    "starting_restaurant": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the restaurant where the artist started."
-        },
-        "type": {
-          "type": "string",
-          "description": "The type of restaurant."
-        },
-        "owner": {
-          "type": "string",
-          "description": "The owner of the restaurant."
-        }
-      },
-      "required": [
-        "name",
-        "type",
-        "owner"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nThe Man Behind The Curtain: The Man Behind The Curtain is a restaurant in Leeds, West Yorkshire, England, which was opened in 2014 by chef Michael O'Hare.  The restaurant has a reputation for modern and often unusual food, with modern and artistic presentation.  It was awarded a Michelin star in October 2015 and three AA Rosettes in 2016.  It is currently the only restaurant in Leeds which holds a Michelin star and the second restaurant in the city to have been awarded one.\n\nI'll Come Runnin': \"I'll Come Runnin\" is a single by American country music artist Connie Smith.  Released in February 1967, the song reached #10 on the \"Billboard\" Hot Country Singles chart.  The single was later released on Smith's first compilation album \"The Best of Connie Smith\" (1967).  \"I'll Come Runnin'\" was the first single written entirely by Smith herself.\n\nCoral Reef Restaurant: The Coral Reef Restaurant is a themed seafood restaurant in The Seas with Nemo & Friends, which is located in Epcot's Future World.  One entire wall of the restaurant consists of a glass window that is eight inches thick and that provides a view into an aquarium.  While they eat, restaurant guests are able to watch tarpons, sharks, sea turtles, stingrays, groupers, and sometimes scuba divers in the six-million-gallon aquarium.  Artist Kim Minichiello painted the underwater scene that appears on the restaurant's menu covers.  Ron Douglas's cookbook \"America's Most Wanted Recipes: Just Desserts\" includes two dishes from the Coral Reef Restaurant: the Baileys and Jack Daniel's Mousse and the Chocolate Wave Cake.  One reviewer from \"The Guardian\" compares the Coral Reef Restaurant to the Sci-Fi Dine-In Theater Restaurant in Disney's Hollywood Studios, writing that both restaurants \"are great settings\" where \"eating is awful.\"  In \"The Unofficial Guide to Walt Disney World with Kids 2015\", Bob Sehlinger, Liliane Opsomer, and Len Testa call the Coral Reef Restaurant one of the two most overpriced restaurants in Epcot, the other being Monsieur Paul.  In \"Pauline Frommer's Walt Disney World and Orlando\", Jason Cochran writes of his experience of the Coral Reef Restaurant, saying, \"I had some of the worst food in my life... although the setting rocks.\"  In \"Beyond the Attractions: A Guide to Walt Disney World with Preschoolers\", Lisa Battista calls the aquarium view \"incredible\".\n\nCuisine of Houston: By 2005 \"USA Today\" referred to Houston, Texas as \"the dining-out capital of [the United States <nowiki>]</nowiki>.\"  Houstonians ate out at restaurants more often than residents of other American cities, and Houston restaurants have the second lowest average prices of restaurants of major cities.  Tory Gattis, who published op-eds in the \"Houston Chronicle\", said in 2005 that Houston has \"a great restaurant scene.\"  Gattis said that one factor contributing to the status is Houston's ethnic diversity, related to Houston's role as a major city of the energy industry, Houston's role as a port city, and Houston's proximity to Latin America and the Cajun areas of Louisiana.  Gattis cited Houston's lack of zoning, which makes it easy for a business owner to start a restaurant as land is less expensive and there are fewer regulations and permitting rules.  Gattis also cited Houston's freeway network, which, according to Gattis, puts restaurants within a 15-20 minute drive within the residences of most Houstonians during non-rush hour times.  Gattis explained that the size of Greater Houston's population allows the city to support niche ethnic restaurants and provides a large customer base for area restaurants.  Also he stated that the competition in Houston's restaurant industry forces restaurants of lower quality to go out of business, leaving high quality restaurants open.  The journalist explained that Houston's relatively low cost of living reduces labor costs for restaurants and allows its residents more leftover income that could be spent at restaurants.  Jobs in Houston have relatively high salaries, Gattis explains that the wages help support Houston's restaurant market.\n\nCindy Brennan: Cindy Brennan is a member of the Brennan restaurant family who got their start in the restaurant business two generations ago in New Orleans.  She is co-owner and managing partner of Mr. B's Bistro, which opened in 1979 in the French Quarter of New Orleans.  Brennan is the author of \"The Mr. B's Bistro Cookbook: Simply Legendary Recipes From New Orleans's Favorite French Quarter Restaurant\" (ISBN  ).  The cookbook includes 112 recipes from the restaurant’s menu.\n\nDee's Drive-In: Dee's Drive-In was a fast food hamburger drive-in restaurant chain based in Utah.  The chain was founded by Dee Frederick Anderson, who got his start selling hamburgers operating the Ute Hamburger Shop near the University of Utah in the 1920s.  Anderson opened the first Dee's Restaurant in 1932.  Dee's would evolve into two separate but related restaurant chains: Dee's Family Restaurant and Dee's Drive-In.\n\nSticks and Stones (Tracy Lawrence album): Sticks and Stones is the debut album of American country music artist Tracy Lawrence.  Released in 1991 on Atlantic Records, it produced four singles: the title track, \"Today's Lonely Fool\", \"Runnin' Behind\", and \"Somebody Paints the Wall\", which peaked at #1, #3, #4, and #8, respectively, on the \"Billboard\" Hot Country Singles & Tracks (now Hot Country Songs) charts between 1991 and 1993.\n\nFranklin Barbecue: Franklin Barbecue is a barbecue restaurant located in Austin, Texas.  In 2009, Aaron Franklin launched the restaurant in a trailer.  The restaurant has sold out of brisket every day since its establishment.  Franklin Barbecue moved to a brick and mortar location in 2011.  The restaurant appeared on \"\" in September 2012.  In 2014, \"Texas Monthly\" listed the restaurant on its list of \"the 50 Best BBQ Joints in the World.\"  That July, President Barack Obama visited the restaurant and bought lunch for those in line behind him.  The restaurant is prominently featured in a scene from the 2014 Jon Favreau film \"Chef\", with speaking cameos by owner Aaron Franklin and general manager Benji Jacob.\n\nTracy Lawrence: Tracy Lee Lawrence (born January 27, 1968) is an American country music artist.  He started at a country music restaurant called \"Live At Libby's\" where owner Libby Knight would help local talent find their way into country music.  Lawrence signed to Atlantic Records in 1991, Lawrence debuted that year with the album \"Sticks and Stones\", which produced his first chart single and first Number One hit in its title track.  Five more studio albums, as well as a live album and a compilation album, followed throughout the 1990s and into 2000 on Atlantic before the label's country division was closed in 2001.  Afterward, he recorded for Warner Bros.  Records, DreamWorks Records, Mercury Records Nashville and his own label, Rocky Comfort Records.\n\nRunnin' Behind: \"Runnin' Behind\" is a song co-written by Mark D. Sanders and Ed Hill and recorded by American country music artist Tracy Lawrence.  It was released in June 1992 as the third single from his debut album, \"Sticks and Stones\".  It peaked at number 4 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart and at number 6 on the Canadian \"RPM\" Country Tracks chart.  This song was also featured on \"Tracy Lawrence Live and Unplugged\" and \"The Very Best of Tracy Lawrence\".\n\nQuestion: What restaurant did the artist of \"Runnin' Behind\" start at?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"artist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the artist who recorded the song.\"\n    },\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song mentioned in the question.\"\n    },\n    \"starting_restaurant\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the restaurant where the artist started.\"\n        },\n        \"type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of restaurant.\"\n        },\n        \"owner\": {\n          \"type\": \"string\",\n          \"description\": \"The owner of the restaurant.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"type\",\n        \"owner\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"artist_name\",\n    \"song_title\",\n    \"starting_restaurant\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "artist_name",
-    "song_title",
-    "starting_restaurant"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "artist_name": {
+        "type": "string",
+        "description": "The name of the artist who recorded the song."
+      },
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song mentioned in the question."
+      },
+      "starting_restaurant": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the restaurant where the artist started."
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of restaurant."
+          },
+          "owner": {
+            "type": "string",
+            "description": "The owner of the restaurant."
+          }
+        },
+        "required": [
+          "name",
+          "type",
+          "owner"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "artist_name",
+      "song_title",
+      "starting_restaurant"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

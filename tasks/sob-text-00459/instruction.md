@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Bond County Community Unit School District 2: Bond County Community Unit School District 2 is a unified school district based in Greenville, a city located in central Bond County, Illinois that serves as its county seat.  Today, the district is composed of five schools; Greenville Elementary School, a NASA Explorer school that serves grades Pre-K through 5; Pocahontas Elementary School, which serves grades Pre-K through 8; Sorento Elementary School, which serves grades K-8; Greenville Junior High School, a school that means to bridge Greenville Elementary and Greenville High by serving grades 6-8; and lastly, Greenville High School, of which all the schools ultimately feed into, serving grades 9-12.  The superintendent of the school district is Melanie Allyn; the principal of Greenville Elementary is Scott Pasley, the principal of Pocahontas Elementary is Eric Swingler, the principal of Sorento Elementary is Bill Carpenter, the principal of Greenville Junior High is Gary Brauns, and the principal of Greenville High is Wendy Porter.  Respectively, the mascot Greenville Elementary is the rocket; of Pocahontas, it is the Indian.  The mascot of Greenville Junior High is the blue jay, the mascot of Sorento Elementary is the greyhound, and the mascot of Greenville High is the Jacob Hall or Cubman.
-
-Vestal High School: Vestal High School is a public high school that operates as part of the Vestal Central School District which encompasses 57 sqmi just west of Binghamton in the Southern Tier of New York.  It is a four-year comprehensive school which annually receives both national and state recognition for excellence in education.  The high school offers Varsity and Junior Varsity sports as well as musical opportunities in orchestra, band, and chorus.  Clubs and student organizations accommodate a wide range of interests, from the physical sciences to martial arts.  The mascot of Vestal High School is the Golden Bear named Bruin.  Vestal High School holds an annual dance named after the mascot called the King Bruin dance, or KB.  Unlike most high schools, Vestal High School does not have a Homecoming dance, but instead a football game and later in the year the King Bruin dance.
-
-Bobcat: The bobcat ("Lynx rufus") is a North American cat that appeared during the Irvingtonian stage of around 1.8 million years ago (AEO).  Containing 12 recognized subspecies, it ranges from southern Canada to central Mexico, including most of the contiguous United States.  The bobcat is an adaptable predator that inhabits wooded areas, as well as semidesert, urban edge, forest edge, and swampland environments.  It remains in some of its original range, but populations are vulnerable to local extinction ("extirpation") by coyotes and domestic animals.  With a gray to brown coat, whiskered face, and black-tufted ears, the bobcat resembles the other species of the midsized "Lynx" genus.  It is smaller on average than the Canada lynx, with which it shares parts of its range, but is about twice as large as the domestic cat.  It has distinctive black bars on its forelegs and a black-tipped, stubby tail, from which it derives its name.
-
-Ridge Community High School: Ridge Community High School or RCHS is a public high school located on the Davenport, Florida and Haines City, Florida Line.  RCHS was established in 2005 in Polk County.  It currently serves 2,600 students and has 106 teachers on campus.  Ridge Community High School is one of many schools with a separate 9th Grade campus with its own front office.  The main campus holds students in 10th, 11th, and 12th grade with some exceptions.  Ridge Community High School sits on 76 acre of land.  Ridge Community High School is zoned for Davenport and Haines City.  Ridge Community High School's rivals include Haines City High School, Lake Wales High School and others in Polk County.  The principal of RCHS is currently Russell Donnelly who replaced Sherry Wells, the acting principal between the school's opening in 2005 and 2015 and has a few assistant principals.  Ridge Community High School is part of the Polk County School Board.  RCHS's mascot is the Bolt, and the school motto is Once a Bolt, always a Bolt.
-
-Herndon High School (Kansas): Herndon High School is a former high school located in Herndon, Kansas, USA, which served students in grades 9-12.  Herndon High School was the only high school within the city limits of Herndon, Kansas.  The school colors were blue and yellow and the school mascot was a Beaver.  The average annual enrollment was approximately 200 students from several communities.  Herndon High School was established in either 1912 or 1915.  A new building was erected in the spring of 1917 because of the growing population of the city.  In 1923, Herndon High School became Herndon Rural High School District #2.  The school was rebuilt in 1949 and classes were held at St. Mary's High School.  Classes resumed at the rebuilt high school in 1950.  This remained until the fall of 2003 when the decision was made to consolidate with Atwood USD #318.  The new district that was formed is now Unified School District #105 and Rawlins County Junior-Senior High School.
-
-Ohio Hi-Point Career Center: The Ohio Hi-Point Career Center is a career–technical school that provides career–technical training to high school students and adults in west-central Ohio.  Founded in 1974, Ohio Hi-Point (OHP) Career Center in Bellefontaine, Ohio, is a two-year career-technical school district serving 11th and 12th grade students in 14 partner school districts covering five counties, which comprises the career-technical planning district (CTPD).  Students may also opt to remain at their partner school and specialize in one of Ohio High-Point’s fifty-two satellite programs.  Career-technical programs offered at OHP are in the career fields of agriculture and animal science, arts and communication, business, engineering and manufacturing, health sciences, human and public service and transportation.  The high school services students from Bellefontaine High School, Benjamin Logan High School, Indian Lake High School, Waynesfield-Goshen High School, Upper Scioto Valley High School, Riverside High School, Mechanicsburg High School, Triad High School, Kenton High School, Ridgemont High School, Urbana High School, Marysville High School, West Liberty-Salem High School, and Graham High School.
-
-Miami Maniac: The Miami Maniac, often shortened to The Maniac, is the official mascot of the University of Miami Baseball program.  Although Sebastian the Ibis is the official mascot of most University of Miami sports, the Maniac is the only mascot which performs at Hurricane baseball games.  Created in 1982 by visionary College Baseball Hall of Fame head coach Ron Fraser in 1982 and originally performed by John Routh, the Miami Maniac has been a constant at Mark Light Field ever since.  Some believe that the mascot idea was modeled after the original Orofino High School Maniacs, from the small town of Orofino, Idaho.  The Maniac mascot was used there many decades prior, and has been the target of much scrutiny due to the high school's proximity adjacent to an Idaho State mental hospital.  More recently, the mascot received national attention after Idaho State officials proposed adding the Maniac mascot to an Idaho vehicle license plate.
-
-Central High School (Memphis, Tennessee): Central High School is a public high school (grades 9-12) in Memphis, Tennessee.  Since it was founded in the early 1900s and is considered the first high school in Memphis; Central is often called "THE" High School.  It is a part of the Shelby County Schools Optional School system where it is recognized as a school specializing in college preparatory programs.  The principal is Gregory McCullough.  Central's mascot is the Warrior and the school colors are green and gold.  For recognition as the successor to Memphis High School, the first high school in Memphis, Central High's football team, rather than having artwork denoting the "Warrior" mascot, simply has a capital "H", for THE High School
-
-McCurdy High School: McCurdy High School (MHS) is a K–12 private school in the city of Española, New Mexico, United States, associated with a local United Methodist church.  Founded in 1912 as a mission school, its mission statement is "Providing a quality education with a Christian emphasis".  The school colors are red and blue (white is an "unofficial-official" color); the mascot is the Bobcat.
-
-Holly High School: Holly High School, or "HHS" for short, is a public high school for grades 9–12 located in Holly, Michigan.  It provides secondary education for students living in Holly, Davisburg, Springfield Township, Rose Township, and White Lake Township.  Its official mascot is the Broncho and its colors are red, white, and grey.  In 1952, Holly High School opted to change the spelling of their mascot from "Bronco" to "Broncho" since the spelling was commonly used.  Holly High School is the only high school in the Holly Area School District.  The current high school, built in 1999 in Holly Township, Michigan, replaced a high school building that had been built down the street in 1958.  The 1958 building, which has for its official address 920 East Baird Street, became a middle school but today is home to Karl Richter Community Center and Holly Area Schools' administrative offices and had, in return, replaced a 1910s school building on College Street, today the site of a church.
-
-Question: How many subspecies does this animal, which is the mascot of McCurdy High School, have?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "school_name": {
-      "type": "string",
-      "description": "The name of the high school."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "mascot_animal": {
-      "type": "string",
-      "description": "The animal that serves as the school's mascot."
-    },
-    "animal_details": {
-      "type": "object",
-      "properties": {
-        "scientific_name": {
-          "type": "string",
-          "description": "The scientific name of the mascot animal."
-        },
-        "number_of_subspecies": {
-          "type": "integer",
-          "description": "The total number of recognized subspecies for the animal."
-        },
-        "subspecies_status": {
-          "type": "string",
-          "description": "The status of the subspecies recognition (e.g., 'recognized')."
-        }
-      },
-      "required": [
-        "scientific_name",
-        "number_of_subspecies",
-        "subspecies_status"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nBond County Community Unit School District 2: Bond County Community Unit School District 2 is a unified school district based in Greenville, a city located in central Bond County, Illinois that serves as its county seat.  Today, the district is composed of five schools; Greenville Elementary School, a NASA Explorer school that serves grades Pre-K through 5; Pocahontas Elementary School, which serves grades Pre-K through 8; Sorento Elementary School, which serves grades K-8; Greenville Junior High School, a school that means to bridge Greenville Elementary and Greenville High by serving grades 6-8; and lastly, Greenville High School, of which all the schools ultimately feed into, serving grades 9-12.  The superintendent of the school district is Melanie Allyn; the principal of Greenville Elementary is Scott Pasley, the principal of Pocahontas Elementary is Eric Swingler, the principal of Sorento Elementary is Bill Carpenter, the principal of Greenville Junior High is Gary Brauns, and the principal of Greenville High is Wendy Porter.  Respectively, the mascot Greenville Elementary is the rocket; of Pocahontas, it is the Indian.  The mascot of Greenville Junior High is the blue jay, the mascot of Sorento Elementary is the greyhound, and the mascot of Greenville High is the Jacob Hall or Cubman.\n\nVestal High School: Vestal High School is a public high school that operates as part of the Vestal Central School District which encompasses 57 sqmi just west of Binghamton in the Southern Tier of New York.  It is a four-year comprehensive school which annually receives both national and state recognition for excellence in education.  The high school offers Varsity and Junior Varsity sports as well as musical opportunities in orchestra, band, and chorus.  Clubs and student organizations accommodate a wide range of interests, from the physical sciences to martial arts.  The mascot of Vestal High School is the Golden Bear named Bruin.  Vestal High School holds an annual dance named after the mascot called the King Bruin dance, or KB.  Unlike most high schools, Vestal High School does not have a Homecoming dance, but instead a football game and later in the year the King Bruin dance.\n\nBobcat: The bobcat (\"Lynx rufus\") is a North American cat that appeared during the Irvingtonian stage of around 1.8 million years ago (AEO).  Containing 12 recognized subspecies, it ranges from southern Canada to central Mexico, including most of the contiguous United States.  The bobcat is an adaptable predator that inhabits wooded areas, as well as semidesert, urban edge, forest edge, and swampland environments.  It remains in some of its original range, but populations are vulnerable to local extinction (\"extirpation\") by coyotes and domestic animals.  With a gray to brown coat, whiskered face, and black-tufted ears, the bobcat resembles the other species of the midsized \"Lynx\" genus.  It is smaller on average than the Canada lynx, with which it shares parts of its range, but is about twice as large as the domestic cat.  It has distinctive black bars on its forelegs and a black-tipped, stubby tail, from which it derives its name.\n\nRidge Community High School: Ridge Community High School or RCHS is a public high school located on the Davenport, Florida and Haines City, Florida Line.  RCHS was established in 2005 in Polk County.  It currently serves 2,600 students and has 106 teachers on campus.  Ridge Community High School is one of many schools with a separate 9th Grade campus with its own front office.  The main campus holds students in 10th, 11th, and 12th grade with some exceptions.  Ridge Community High School sits on 76 acre of land.  Ridge Community High School is zoned for Davenport and Haines City.  Ridge Community High School's rivals include Haines City High School, Lake Wales High School and others in Polk County.  The principal of RCHS is currently Russell Donnelly who replaced Sherry Wells, the acting principal between the school's opening in 2005 and 2015 and has a few assistant principals.  Ridge Community High School is part of the Polk County School Board.  RCHS's mascot is the Bolt, and the school motto is Once a Bolt, always a Bolt.\n\nHerndon High School (Kansas): Herndon High School is a former high school located in Herndon, Kansas, USA, which served students in grades 9-12.  Herndon High School was the only high school within the city limits of Herndon, Kansas.  The school colors were blue and yellow and the school mascot was a Beaver.  The average annual enrollment was approximately 200 students from several communities.  Herndon High School was established in either 1912 or 1915.  A new building was erected in the spring of 1917 because of the growing population of the city.  In 1923, Herndon High School became Herndon Rural High School District #2.  The school was rebuilt in 1949 and classes were held at St. Mary's High School.  Classes resumed at the rebuilt high school in 1950.  This remained until the fall of 2003 when the decision was made to consolidate with Atwood USD #318.  The new district that was formed is now Unified School District #105 and Rawlins County Junior-Senior High School.\n\nOhio Hi-Point Career Center: The Ohio Hi-Point Career Center is a career–technical school that provides career–technical training to high school students and adults in west-central Ohio.  Founded in 1974, Ohio Hi-Point (OHP) Career Center in Bellefontaine, Ohio, is a two-year career-technical school district serving 11th and 12th grade students in 14 partner school districts covering five counties, which comprises the career-technical planning district (CTPD).  Students may also opt to remain at their partner school and specialize in one of Ohio High-Point’s fifty-two satellite programs.  Career-technical programs offered at OHP are in the career fields of agriculture and animal science, arts and communication, business, engineering and manufacturing, health sciences, human and public service and transportation.  The high school services students from Bellefontaine High School, Benjamin Logan High School, Indian Lake High School, Waynesfield-Goshen High School, Upper Scioto Valley High School, Riverside High School, Mechanicsburg High School, Triad High School, Kenton High School, Ridgemont High School, Urbana High School, Marysville High School, West Liberty-Salem High School, and Graham High School.\n\nMiami Maniac: The Miami Maniac, often shortened to The Maniac, is the official mascot of the University of Miami Baseball program.  Although Sebastian the Ibis is the official mascot of most University of Miami sports, the Maniac is the only mascot which performs at Hurricane baseball games.  Created in 1982 by visionary College Baseball Hall of Fame head coach Ron Fraser in 1982 and originally performed by John Routh, the Miami Maniac has been a constant at Mark Light Field ever since.  Some believe that the mascot idea was modeled after the original Orofino High School Maniacs, from the small town of Orofino, Idaho.  The Maniac mascot was used there many decades prior, and has been the target of much scrutiny due to the high school's proximity adjacent to an Idaho State mental hospital.  More recently, the mascot received national attention after Idaho State officials proposed adding the Maniac mascot to an Idaho vehicle license plate.\n\nCentral High School (Memphis, Tennessee): Central High School is a public high school (grades 9-12) in Memphis, Tennessee.  Since it was founded in the early 1900s and is considered the first high school in Memphis; Central is often called \"THE\" High School.  It is a part of the Shelby County Schools Optional School system where it is recognized as a school specializing in college preparatory programs.  The principal is Gregory McCullough.  Central's mascot is the Warrior and the school colors are green and gold.  For recognition as the successor to Memphis High School, the first high school in Memphis, Central High's football team, rather than having artwork denoting the \"Warrior\" mascot, simply has a capital \"H\", for THE High School\n\nMcCurdy High School: McCurdy High School (MHS) is a K–12 private school in the city of Española, New Mexico, United States, associated with a local United Methodist church.  Founded in 1912 as a mission school, its mission statement is \"Providing a quality education with a Christian emphasis\".  The school colors are red and blue (white is an \"unofficial-official\" color); the mascot is the Bobcat.\n\nHolly High School: Holly High School, or \"HHS\" for short, is a public high school for grades 9–12 located in Holly, Michigan.  It provides secondary education for students living in Holly, Davisburg, Springfield Township, Rose Township, and White Lake Township.  Its official mascot is the Broncho and its colors are red, white, and grey.  In 1952, Holly High School opted to change the spelling of their mascot from \"Bronco\" to \"Broncho\" since the spelling was commonly used.  Holly High School is the only high school in the Holly Area School District.  The current high school, built in 1999 in Holly Township, Michigan, replaced a high school building that had been built down the street in 1958.  The 1958 building, which has for its official address 920 East Baird Street, became a middle school but today is home to Karl Richter Community Center and Holly Area Schools' administrative offices and had, in return, replaced a 1910s school building on College Street, today the site of a church.\n\nQuestion: How many subspecies does this animal, which is the mascot of McCurdy High School, have?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"school_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the high school.\"\n    },\n    \"mascot_animal\": {\n      \"type\": \"string\",\n      \"description\": \"The animal that serves as the school's mascot.\"\n    },\n    \"animal_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"scientific_name\": {\n          \"type\": \"string\",\n          \"description\": \"The scientific name of the mascot animal.\"\n        },\n        \"number_of_subspecies\": {\n          \"type\": \"integer\",\n          \"description\": \"The total number of recognized subspecies for the animal.\"\n        },\n        \"subspecies_status\": {\n          \"type\": \"string\",\n          \"description\": \"The status of the subspecies recognition (e.g., 'recognized').\"\n        }\n      },\n      \"required\": [\n        \"scientific_name\",\n        \"number_of_subspecies\",\n        \"subspecies_status\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"school_name\",\n    \"mascot_animal\",\n    \"animal_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "school_name",
-    "mascot_animal",
-    "animal_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "school_name": {
+        "type": "string",
+        "description": "The name of the high school."
+      },
+      "mascot_animal": {
+        "type": "string",
+        "description": "The animal that serves as the school's mascot."
+      },
+      "animal_details": {
+        "type": "object",
+        "properties": {
+          "scientific_name": {
+            "type": "string",
+            "description": "The scientific name of the mascot animal."
+          },
+          "number_of_subspecies": {
+            "type": "integer",
+            "description": "The total number of recognized subspecies for the animal."
+          },
+          "subspecies_status": {
+            "type": "string",
+            "description": "The status of the subspecies recognition (e.g., 'recognized')."
+          }
+        },
+        "required": [
+          "scientific_name",
+          "number_of_subspecies",
+          "subspecies_status"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "school_name",
+      "mascot_animal",
+      "animal_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

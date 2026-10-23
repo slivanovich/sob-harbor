@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Super Monkey Ball: Banana Splitz: Super Monkey Ball: Banana Splitz is a platform video game developed by Marvelous AQL and published by Sega for the PlayStation Vita.  Similar to other entries in the "Super Monkey Ball" series, game involves the player directing a monkey encased in a sphere through and obstacle course to a gate at the end of the level.  The game was released early on in the Vita's lifespan, in June 2012 in Japan, and October 2012 in Western regions.  Reviewers were mixed on the game's merits; while some appreciated the game's core gameplay, others felt it was too redundant to prior entries.  The game did not perform well commercially, and was the last entry in the series to be released on a dedicated video game console with the game's core gameplay mechanics, with the next and final entry, "Super Monkey Ball Bounce", playing as a "Peggle" pachinko clone on mobile devices instead.
-
-Ceville: Ceville is a humorous graphic adventure video game developed by the German game studio Realmforge Studios and published by Kalypso Media.  Despite the game's use of 3D environments and sprites, the gameplay is very true to the graphical point-and-click adventure tradition of gameplay, immortalized by game series like Monkey Island from LucasArts and the King's Quest series from Sierra Online.
-
-Star Trek: Starship Creator: Star Trek: Starship Creator is a computer-based vehicle simulation game developed by Imergy and released by Simon & Schuster Interactive in 1998 for both Microsoft Windows and Mac OS, based on the official license of the "Star Trek" franchise.  Elements in the game were created in conjunction with the technical advisers for the series and films, such as Mike and Denise Okuda.  The gameplay in "Starship Creator" allowed for the player to equip and crew a series of different starship classes from across the "Star Trek" universe, including those from both the various series and the film series.  An expanded version was subsequently released as Star Trek: Starship Creator Deluxe in late 1999 which added further starships, missions and customization.  The official website also contained downloads for the characters from the "" series of books.  Reception by critics for "Starship Creator" was negative, with criticism directed at the gameplay and graphics, and the suggestion was made that the game would only appeal to "Star Trek" fans.  A sequel followed in 2000 entitled "".
-
-Controversies surrounding Grand Theft Auto IV: "Grand Theft Auto IV" is an open world, action-adventure video game developed by Rockstar North and published by Rockstar Games.  Upon its release on 29 April 2008 for the PlayStation 3 and Xbox 360, "Grand Theft Auto IV" generated controversy.  The game's depiction of violence received mass commentary from journalists and government officials, occasionally being referred to as a "murder simulator".  The ability to drive under the influence of alcohol in the game also received criticism, resulting in a request for the ESRB to change the game's rating.  Similarly, some gameplay features were censored for the Australian and New Zealand versions of the game, though these censors were subsequently removed.  Several crimes that were committed following the game's release, such as murder and sexual violence, were attributed to the perpetrators' experience with the game, generating further controversy.  Former attorney Jack Thompson, known for his campaigns against the series, heavily criticised "Grand Theft Auto IV" prior to its release, filing lawsuits against parent company Take-Two Interactive, and threatening to ban distribution of the game if some gameplay features were not removed.  The game also generated further controversy and lawsuits from city officials and organisations.
-
-Luminous Arc Infinity: Luminous Arc Infinity (ルミナスアーク インフィニティ , Ruminasu Āku Infiniti ) is a video game developed by Japanese video game company Felistella for the PlayStation Vita.  The game was published by Marvelous Entertainment and released in Japan on August 6, 2015.  The game is the fourth entry in the "Luminous Arc" series, and the first in the series not developed by Imageepoch, who suffered financial troubles around the time of the game's development, ultimately leading to a 2015 bankruptcy filing.  While Felistella made changes to the gameplay, it ultimately still retains the core gameplay mechanics of a tactical role-playing game.
-
-Minecraft: Minecraft is a sandbox video game created and designed by Swedish game designer Markus "Notch" Persson, and later fully developed and published by Mojang.  The creative and building aspects of "Minecraft" enable players to build constructions out of textured cubes in a 3D procedurally generated world.  Other activities in the game include exploration, resource gathering, crafting, and combat.  Multiple gameplay modes are available, including a survival mode where the player must acquire resources to build the world and maintain health, a creative mode where players have unlimited resources to build with and the ability to fly, an adventure mode where players can play custom maps created by other players, and a spectator mode where players can freely move throughout a world without being affected by gravity or collisions.  The PC version of the game is noted for its modding scene, where a dedicated community creates new gameplay mechanics, items, and assets for the game.
-
-Nier: Automata: Nier: Automata is an action role-playing video game developed by PlatinumGames and published by Square Enix for PlayStation 4 and Microsoft Windows.  The game was released in Japan in February 2017, and worldwide the following month.  "Nier: Automata" is a sequel to the 2010 video game "Nier", a spin-off of the "Drakengard" series.  Set in the midst of a proxy war between machines created by otherworldly invaders and the remnants of humanity, the story follows the battles of a combat android, her companion, and a fugitive prototype.  Gameplay combines role-playing elements with action-based combat and mixed genre gameplay similar to that of "Nier".
-
-Limbo (video game): Limbo is a puzzle-platform video game developed by independent studio Playdead.  The game was released in July 2010 on Xbox Live Arcade, and has since been ported to several other systems, including the PlayStation 3 and Microsoft Windows.  "Limbo" is a 2D side-scroller, incorporating a physics system that governs environmental objects and the player character.  The player guides an unnamed boy through dangerous environments and traps as he searches for his sister.  The developer built the game's puzzles expecting the player to fail before finding the correct solution.  Playdead called the style of play "trial and death", and used gruesome imagery for the boy's deaths to steer the player from unworkable solutions.
-
-Thoth (video game): Thoth (stylised as THOTH) is an abstract shoot 'em up video game created by Jeppe Carlsen, former lead gameplay designer of Playdead games "Limbo" and "Inside".  It is published by Double Fine Productions.
-
-Rocket: Robot on Wheels: Rocket: Robot on Wheels is a platformer video game developed by Sucker Punch Productions and published by Ubisoft for the Nintendo 64.  The game was released in North America on October 31, 1999, and in Europe on December 17, 1999.  This was the first game developed by Sucker Punch.  In the game the player takes control over Rocket, the titular robot.  "Rocket: Robot on Wheels" is notable for being the first game on a home platform to use a realistic physics engine to drive the gameplay.  The player is required to solve puzzles dealing with mass, inertia, friction, and other physical properties.  The game had been developed under the title "Sprocket" until three months before its release, when it was changed due to a trademark conflict with Game Sprockets.
-
-Question: Thoth was created by the gameplay designer of the game developed by which studio?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "game_created": {
-      "type": "string",
-      "description": "The name of the game created by the designer."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "designer_name": {
-      "type": "string",
-      "description": "The name of the gameplay designer."
-    },
-    "previous_games_designed": {
-      "type": "array",
-      "description": "A list of previous games the designer worked on.",
-      "items": {
-        "type": "string"
+    {
+      "role": "user",
+      "content": "Context:\nSuper Monkey Ball: Banana Splitz: Super Monkey Ball: Banana Splitz is a platform video game developed by Marvelous AQL and published by Sega for the PlayStation Vita.  Similar to other entries in the \"Super Monkey Ball\" series, game involves the player directing a monkey encased in a sphere through and obstacle course to a gate at the end of the level.  The game was released early on in the Vita's lifespan, in June 2012 in Japan, and October 2012 in Western regions.  Reviewers were mixed on the game's merits; while some appreciated the game's core gameplay, others felt it was too redundant to prior entries.  The game did not perform well commercially, and was the last entry in the series to be released on a dedicated video game console with the game's core gameplay mechanics, with the next and final entry, \"Super Monkey Ball Bounce\", playing as a \"Peggle\" pachinko clone on mobile devices instead.\n\nCeville: Ceville is a humorous graphic adventure video game developed by the German game studio Realmforge Studios and published by Kalypso Media.  Despite the game's use of 3D environments and sprites, the gameplay is very true to the graphical point-and-click adventure tradition of gameplay, immortalized by game series like Monkey Island from LucasArts and the King's Quest series from Sierra Online.\n\nStar Trek: Starship Creator: Star Trek: Starship Creator is a computer-based vehicle simulation game developed by Imergy and released by Simon & Schuster Interactive in 1998 for both Microsoft Windows and Mac OS, based on the official license of the \"Star Trek\" franchise.  Elements in the game were created in conjunction with the technical advisers for the series and films, such as Mike and Denise Okuda.  The gameplay in \"Starship Creator\" allowed for the player to equip and crew a series of different starship classes from across the \"Star Trek\" universe, including those from both the various series and the film series.  An expanded version was subsequently released as Star Trek: Starship Creator Deluxe in late 1999 which added further starships, missions and customization.  The official website also contained downloads for the characters from the \"\" series of books.  Reception by critics for \"Starship Creator\" was negative, with criticism directed at the gameplay and graphics, and the suggestion was made that the game would only appeal to \"Star Trek\" fans.  A sequel followed in 2000 entitled \"\".\n\nControversies surrounding Grand Theft Auto IV: \"Grand Theft Auto IV\" is an open world, action-adventure video game developed by Rockstar North and published by Rockstar Games.  Upon its release on 29 April 2008 for the PlayStation 3 and Xbox 360, \"Grand Theft Auto IV\" generated controversy.  The game's depiction of violence received mass commentary from journalists and government officials, occasionally being referred to as a \"murder simulator\".  The ability to drive under the influence of alcohol in the game also received criticism, resulting in a request for the ESRB to change the game's rating.  Similarly, some gameplay features were censored for the Australian and New Zealand versions of the game, though these censors were subsequently removed.  Several crimes that were committed following the game's release, such as murder and sexual violence, were attributed to the perpetrators' experience with the game, generating further controversy.  Former attorney Jack Thompson, known for his campaigns against the series, heavily criticised \"Grand Theft Auto IV\" prior to its release, filing lawsuits against parent company Take-Two Interactive, and threatening to ban distribution of the game if some gameplay features were not removed.  The game also generated further controversy and lawsuits from city officials and organisations.\n\nLuminous Arc Infinity: Luminous Arc Infinity (ルミナスアーク インフィニティ , Ruminasu Āku Infiniti ) is a video game developed by Japanese video game company Felistella for the PlayStation Vita.  The game was published by Marvelous Entertainment and released in Japan on August 6, 2015.  The game is the fourth entry in the \"Luminous Arc\" series, and the first in the series not developed by Imageepoch, who suffered financial troubles around the time of the game's development, ultimately leading to a 2015 bankruptcy filing.  While Felistella made changes to the gameplay, it ultimately still retains the core gameplay mechanics of a tactical role-playing game.\n\nMinecraft: Minecraft is a sandbox video game created and designed by Swedish game designer Markus \"Notch\" Persson, and later fully developed and published by Mojang.  The creative and building aspects of \"Minecraft\" enable players to build constructions out of textured cubes in a 3D procedurally generated world.  Other activities in the game include exploration, resource gathering, crafting, and combat.  Multiple gameplay modes are available, including a survival mode where the player must acquire resources to build the world and maintain health, a creative mode where players have unlimited resources to build with and the ability to fly, an adventure mode where players can play custom maps created by other players, and a spectator mode where players can freely move throughout a world without being affected by gravity or collisions.  The PC version of the game is noted for its modding scene, where a dedicated community creates new gameplay mechanics, items, and assets for the game.\n\nNier: Automata: Nier: Automata is an action role-playing video game developed by PlatinumGames and published by Square Enix for PlayStation 4 and Microsoft Windows.  The game was released in Japan in February 2017, and worldwide the following month.  \"Nier: Automata\" is a sequel to the 2010 video game \"Nier\", a spin-off of the \"Drakengard\" series.  Set in the midst of a proxy war between machines created by otherworldly invaders and the remnants of humanity, the story follows the battles of a combat android, her companion, and a fugitive prototype.  Gameplay combines role-playing elements with action-based combat and mixed genre gameplay similar to that of \"Nier\".\n\nLimbo (video game): Limbo is a puzzle-platform video game developed by independent studio Playdead.  The game was released in July 2010 on Xbox Live Arcade, and has since been ported to several other systems, including the PlayStation 3 and Microsoft Windows.  \"Limbo\" is a 2D side-scroller, incorporating a physics system that governs environmental objects and the player character.  The player guides an unnamed boy through dangerous environments and traps as he searches for his sister.  The developer built the game's puzzles expecting the player to fail before finding the correct solution.  Playdead called the style of play \"trial and death\", and used gruesome imagery for the boy's deaths to steer the player from unworkable solutions.\n\nThoth (video game): Thoth (stylised as THOTH) is an abstract shoot 'em up video game created by Jeppe Carlsen, former lead gameplay designer of Playdead games \"Limbo\" and \"Inside\".  It is published by Double Fine Productions.\n\nRocket: Robot on Wheels: Rocket: Robot on Wheels is a platformer video game developed by Sucker Punch Productions and published by Ubisoft for the Nintendo 64.  The game was released in North America on October 31, 1999, and in Europe on December 17, 1999.  This was the first game developed by Sucker Punch.  In the game the player takes control over Rocket, the titular robot.  \"Rocket: Robot on Wheels\" is notable for being the first game on a home platform to use a realistic physics engine to drive the gameplay.  The player is required to solve puzzles dealing with mass, inertia, friction, and other physical properties.  The game had been developed under the title \"Sprocket\" until three months before its release, when it was changed due to a trademark conflict with Game Sprockets.\n\nQuestion: Thoth was created by the gameplay designer of the game developed by which studio?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"game_created\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the game created by the designer.\"\n    },\n    \"designer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the gameplay designer.\"\n    },\n    \"previous_games_designed\": {\n      \"type\": \"array\",\n      \"description\": \"A list of previous games the designer worked on.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"developing_studio\": {\n      \"type\": \"string\",\n      \"description\": \"The studio that developed the previous game(s) mentioned.\"\n    }\n  },\n  \"required\": [\n    \"game_created\",\n    \"designer_name\",\n    \"previous_games_designed\",\n    \"developing_studio\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "game_created": {
+        "type": "string",
+        "description": "The name of the game created by the designer."
+      },
+      "designer_name": {
+        "type": "string",
+        "description": "The name of the gameplay designer."
+      },
+      "previous_games_designed": {
+        "type": "array",
+        "description": "A list of previous games the designer worked on.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "developing_studio": {
+        "type": "string",
+        "description": "The studio that developed the previous game(s) mentioned."
       }
     },
-    "developing_studio": {
-      "type": "string",
-      "description": "The studio that developed the previous game(s) mentioned."
-    }
+    "required": [
+      "game_created",
+      "designer_name",
+      "previous_games_designed",
+      "developing_studio"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "game_created",
-    "designer_name",
-    "previous_games_designed",
-    "developing_studio"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

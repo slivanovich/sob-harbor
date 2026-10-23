@@ -1,83 +1,60 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Fritz Zwicky: Fritz Zwicky (February 14, 1898 – February 8, 1974) was a Swiss astronomer.  He worked most of his life at the California Institute of Technology in the United States of America, where he made many important contributions in theoretical and observational astronomy.  In 1933, Zwicky was the first to use the virial theorem to infer the existence of unseen dark matter, describing it as ""dunkle Materie "".
-
-SN 1939C: SN 1939C was a supernova in the Fireworks Galaxy first discovered by Fritz Zwicky on 17 July 1939.  With a right ascension of 20:34:23.0 and a declination of +60:09:37.3, it lies 215"W and 24"N from the center of the Fireworks Galaxy.  It peaked at a magnitude of 13.0 mag.
-
-NGC 1614: NGC 1614 is the "New General Catalogue" identifier for a spiral galaxy in the equatorial constellation of Eridanus.  It was discovered on December 29, 1885 by American astronomer Lewis Swift, who described it in a shorthand notation as: pretty faint, small, round, a little brighter middle.  The nebula was then catalogued by Danish-Irish astronomer J. L. E. Drayer in 1888.  When direct photography became available, it was noted that this galaxy displayed some conspicuous peculiarities.  American astronomer Halton Arp included it in his 1966 "Atlas of Peculiar Galaxies".  In 1971, Swiss astronomer Fritz Zwicky described it as a "blue post-eruptive galaxy, compact patchy core, spiral plumes, long blue jet SSW".
-
-SN 1979C: SN 1979C was a supernova about 50 million light-years away in Messier 100, a spiral galaxy in the constellation Coma Berenices.  The Type II supernova was discovered April 19, 1979 by Gus Johnson, a school teacher and amateur astronomer.  This type of supernova is known as a core collapse and is the result of the internal collapse and violent explosion of a large star.  A star must have at least 9 times the mass of the Sun in order to undergo this type of collapse.  The star that resulted in this supernova was estimated to be in the range of 20 solar masses.
-
-SN 1994I: SN 1994I is a Type Ic supernova discovered on April 2, 1994 in the Whirlpool Galaxy by amateur astronomers Tim Puckett and Jerry Armstrong of the Atlanta Astronomy Club.  Type Ic supernova are a rare type of supernova that result from the explosion of a very massive star that has shed its outer layers of hydrogen and helium.  The explosion results in a highly luminous burst of radiation that then dims over the course of weeks or months.  SN 1994I was a relatively nearby supernova, and provided an important addition to the then small collection of known Type Ic supernova.  Very early images were captured of SN 1994I, as two high school students in Oil City, Pennsylvania serendipitously took images of the Whirlpool Galaxy using the 30-inch telescope at Leuschner Observatory on March 31, 1994, which included SN 1994I just after it began to brighten.
-
-SN 1917A: SN 1917A is a supernova that occurred in the Fireworks Galaxy on 19 July 1917.  Discovered by George Willis Ritchey, it reached a peak magnitude of 14.6 mag and is 37"W and 105"S of the core of the Fireworks Galaxy
-
-SN 2006gy: SN 2006gy was an extremely energetic supernova, sometimes referred to as a hypernova or quark-nova, that was discovered on September 18, 2006.  It was first observed by Robert Quimby and P. Mondol, and then studied by several teams of astronomers using facilities that included the Chandra, Lick, and Keck Observatories.  In May 2007 NASA and several of the astronomers announced the first detailed analyses of the supernova, describing it as the "brightest stellar explosion ever recorded".  In October 2007 Quimby announced that SN 2005ap had broken SN 2006gy's record as the brightest ever recorded supernova, and several subsequent discoveries are brighter still.  Time magazine listed the discovery of SN 2006gy as third in its Top 10 Scientific Discoveries for 2007.
-
-SN 1987A: SN 1987A was a supernova in the outskirts of the Tarantula Nebula in the Large Magellanic Cloud (a nearby dwarf galaxy).  It occurred approximately 51.4 kpc from Earth.  This was close enough that it was easily visible to the naked eye and it could be seen from the Southern Hemisphere.  It was the closest observed supernova since SN 1604, which occurred in the Milky Way itself.  The light from the new supernova reached Earth on February 23, 1987.  As the first supernova discovered in 1987, it was labeled “1987A”.  Its brightness peaked in May with an apparent magnitude of about 3 and slowly declined in the following months.  It was the first opportunity for modern astronomers to study the development of a supernova in great detail, and its observations have provided much insight into core-collapse supernovae.
-
-SN 2005ap: SN 2005ap was an extremely energetic type Ic supernova in the galaxy SDSS J130115.12+274327.5.  With a peak absolute magnitude of around −22.7, it is the brightest supernova yet recorded, twice as bright as the previous record holder, SN 2006gy.  It was initially classified as type II-L, but later revised to type Ic.  It was discovered on 3 March 2005 on unfiltered optical images taken with the 0.45 m ROTSE-IIIb (Robotic Optical Transient Search Experiment) telescope, which is located at the McDonald observatory in West Texas, by Robert Quimby as part of the Texas Supernova Search that also discovered SN 2006gy.  Although it was discovered before SN 2006gy it was not recognised as being brighter until October 2007.  As it occurred 4.7 billion light years from Earth it was not visible to the naked eye.
-
-SN 2011fe: SN 2011fe, initially designated PTF 11kly, was a Type Ia supernova discovered by the Palomar Transient Factory (PTF) survey on 24 August 2011 during an automated review of images of the Messier 101 from the nights of 22 and 23 August 2011.  It was located in Messier 101, the Pinwheel Galaxy, 21 million light years from Earth.  It was observed by the PTF survey very near the beginning of its supernova event, when it was approximately 1 million times too dim to be visible to the naked eye.  It is the youngest type Ia ever discovered.  About 13 September 2011, it reached its maximum brightness of apparent magnitude +9.9 which equals an absolute magnitude of about -19, equal to 2.5 billion Suns.  At +10 apparent magnitude around 5 September, SN 2011fe was visible in small telescopes.  As of 30 September the supernova was at +11 apparent magnitude in the early evening sky after sunset above the northwest horizon.  It had dropped to +13.7 as of 26 November 2011.
-
-Question: SN 1939C was a supernova in the Fireworks Galaxy first discovered on 17 July 1939, by which Swiss astronomer, who worked most of his life at the California Institute of Technology?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "supernova_name": {
-      "type": "string",
-      "description": "The official designation of the supernova."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "discovery_date": {
-      "type": "string",
-      "description": "The date the supernova was first discovered."
-    },
-    "discoverer": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the astronomer who discovered the supernova."
-        },
-        "nationality": {
-          "type": "string",
-          "description": "The nationality of the discoverer."
-        },
-        "primary_affiliation": {
-          "type": "string",
-          "description": "The primary institution where the discoverer worked."
-        }
-      },
-      "required": [
-        "name",
-        "nationality",
-        "primary_affiliation"
-      ],
-      "additionalProperties": false
-    },
-    "host_galaxy": {
-      "type": "string",
-      "description": "The galaxy where the supernova occurred."
+    {
+      "role": "user",
+      "content": "Context:\nFritz Zwicky: Fritz Zwicky (February 14, 1898 – February 8, 1974) was a Swiss astronomer.  He worked most of his life at the California Institute of Technology in the United States of America, where he made many important contributions in theoretical and observational astronomy.  In 1933, Zwicky was the first to use the virial theorem to infer the existence of unseen dark matter, describing it as \"\"dunkle Materie \"\".\n\nSN 1939C: SN 1939C was a supernova in the Fireworks Galaxy first discovered by Fritz Zwicky on 17 July 1939.  With a right ascension of 20:34:23.0 and a declination of +60:09:37.3, it lies 215\"W and 24\"N from the center of the Fireworks Galaxy.  It peaked at a magnitude of 13.0 mag.\n\nNGC 1614: NGC 1614 is the \"New General Catalogue\" identifier for a spiral galaxy in the equatorial constellation of Eridanus.  It was discovered on December 29, 1885 by American astronomer Lewis Swift, who described it in a shorthand notation as: pretty faint, small, round, a little brighter middle.  The nebula was then catalogued by Danish-Irish astronomer J. L. E. Drayer in 1888.  When direct photography became available, it was noted that this galaxy displayed some conspicuous peculiarities.  American astronomer Halton Arp included it in his 1966 \"Atlas of Peculiar Galaxies\".  In 1971, Swiss astronomer Fritz Zwicky described it as a \"blue post-eruptive galaxy, compact patchy core, spiral plumes, long blue jet SSW\".\n\nSN 1979C: SN 1979C was a supernova about 50 million light-years away in Messier 100, a spiral galaxy in the constellation Coma Berenices.  The Type II supernova was discovered April 19, 1979 by Gus Johnson, a school teacher and amateur astronomer.  This type of supernova is known as a core collapse and is the result of the internal collapse and violent explosion of a large star.  A star must have at least 9 times the mass of the Sun in order to undergo this type of collapse.  The star that resulted in this supernova was estimated to be in the range of 20 solar masses.\n\nSN 1994I: SN 1994I is a Type Ic supernova discovered on April 2, 1994 in the Whirlpool Galaxy by amateur astronomers Tim Puckett and Jerry Armstrong of the Atlanta Astronomy Club.  Type Ic supernova are a rare type of supernova that result from the explosion of a very massive star that has shed its outer layers of hydrogen and helium.  The explosion results in a highly luminous burst of radiation that then dims over the course of weeks or months.  SN 1994I was a relatively nearby supernova, and provided an important addition to the then small collection of known Type Ic supernova.  Very early images were captured of SN 1994I, as two high school students in Oil City, Pennsylvania serendipitously took images of the Whirlpool Galaxy using the 30-inch telescope at Leuschner Observatory on March 31, 1994, which included SN 1994I just after it began to brighten.\n\nSN 1917A: SN 1917A is a supernova that occurred in the Fireworks Galaxy on 19 July 1917.  Discovered by George Willis Ritchey, it reached a peak magnitude of 14.6 mag and is 37\"W and 105\"S of the core of the Fireworks Galaxy\n\nSN 2006gy: SN 2006gy was an extremely energetic supernova, sometimes referred to as a hypernova or quark-nova, that was discovered on September 18, 2006.  It was first observed by Robert Quimby and P. Mondol, and then studied by several teams of astronomers using facilities that included the Chandra, Lick, and Keck Observatories.  In May 2007 NASA and several of the astronomers announced the first detailed analyses of the supernova, describing it as the \"brightest stellar explosion ever recorded\".  In October 2007 Quimby announced that SN 2005ap had broken SN 2006gy's record as the brightest ever recorded supernova, and several subsequent discoveries are brighter still.  Time magazine listed the discovery of SN 2006gy as third in its Top 10 Scientific Discoveries for 2007.\n\nSN 1987A: SN 1987A was a supernova in the outskirts of the Tarantula Nebula in the Large Magellanic Cloud (a nearby dwarf galaxy).  It occurred approximately 51.4 kpc from Earth.  This was close enough that it was easily visible to the naked eye and it could be seen from the Southern Hemisphere.  It was the closest observed supernova since SN 1604, which occurred in the Milky Way itself.  The light from the new supernova reached Earth on February 23, 1987.  As the first supernova discovered in 1987, it was labeled “1987A”.  Its brightness peaked in May with an apparent magnitude of about 3 and slowly declined in the following months.  It was the first opportunity for modern astronomers to study the development of a supernova in great detail, and its observations have provided much insight into core-collapse supernovae.\n\nSN 2005ap: SN 2005ap was an extremely energetic type Ic supernova in the galaxy SDSS J130115.12+274327.5.  With a peak absolute magnitude of around −22.7, it is the brightest supernova yet recorded, twice as bright as the previous record holder, SN 2006gy.  It was initially classified as type II-L, but later revised to type Ic.  It was discovered on 3 March 2005 on unfiltered optical images taken with the 0.45 m ROTSE-IIIb (Robotic Optical Transient Search Experiment) telescope, which is located at the McDonald observatory in West Texas, by Robert Quimby as part of the Texas Supernova Search that also discovered SN 2006gy.  Although it was discovered before SN 2006gy it was not recognised as being brighter until October 2007.  As it occurred 4.7 billion light years from Earth it was not visible to the naked eye.\n\nSN 2011fe: SN 2011fe, initially designated PTF 11kly, was a Type Ia supernova discovered by the Palomar Transient Factory (PTF) survey on 24 August 2011 during an automated review of images of the Messier 101 from the nights of 22 and 23 August 2011.  It was located in Messier 101, the Pinwheel Galaxy, 21 million light years from Earth.  It was observed by the PTF survey very near the beginning of its supernova event, when it was approximately 1 million times too dim to be visible to the naked eye.  It is the youngest type Ia ever discovered.  About 13 September 2011, it reached its maximum brightness of apparent magnitude +9.9 which equals an absolute magnitude of about -19, equal to 2.5 billion Suns.  At +10 apparent magnitude around 5 September, SN 2011fe was visible in small telescopes.  As of 30 September the supernova was at +11 apparent magnitude in the early evening sky after sunset above the northwest horizon.  It had dropped to +13.7 as of 26 November 2011.\n\nQuestion: SN 1939C was a supernova in the Fireworks Galaxy first discovered on 17 July 1939, by which Swiss astronomer, who worked most of his life at the California Institute of Technology?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"supernova_name\": {\n      \"type\": \"string\",\n      \"description\": \"The official designation of the supernova.\"\n    },\n    \"discovery_date\": {\n      \"type\": \"string\",\n      \"description\": \"The date the supernova was first discovered.\"\n    },\n    \"discoverer\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the astronomer who discovered the supernova.\"\n        },\n        \"nationality\": {\n          \"type\": \"string\",\n          \"description\": \"The nationality of the discoverer.\"\n        },\n        \"primary_affiliation\": {\n          \"type\": \"string\",\n          \"description\": \"The primary institution where the discoverer worked.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"nationality\",\n        \"primary_affiliation\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"host_galaxy\": {\n      \"type\": \"string\",\n      \"description\": \"The galaxy where the supernova occurred.\"\n    }\n  },\n  \"required\": [\n    \"supernova_name\",\n    \"discovery_date\",\n    \"discoverer\",\n    \"host_galaxy\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "supernova_name",
-    "discovery_date",
-    "discoverer",
-    "host_galaxy"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "supernova_name": {
+        "type": "string",
+        "description": "The official designation of the supernova."
+      },
+      "discovery_date": {
+        "type": "string",
+        "description": "The date the supernova was first discovered."
+      },
+      "discoverer": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the astronomer who discovered the supernova."
+          },
+          "nationality": {
+            "type": "string",
+            "description": "The nationality of the discoverer."
+          },
+          "primary_affiliation": {
+            "type": "string",
+            "description": "The primary institution where the discoverer worked."
+          }
+        },
+        "required": [
+          "name",
+          "nationality",
+          "primary_affiliation"
+        ],
+        "additionalProperties": false
+      },
+      "host_galaxy": {
+        "type": "string",
+        "description": "The galaxy where the supernova occurred."
+      }
+    },
+    "required": [
+      "supernova_name",
+      "discovery_date",
+      "discoverer",
+      "host_galaxy"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

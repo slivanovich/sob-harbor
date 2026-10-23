@@ -1,97 +1,74 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Fredrik Heffermehl: Fredrik Stang Heffermehl (born 11 November 1938) is a Norwegian jurist, writer and peace activist.  He formerly worked as a lawyer and civil servant from 1965 to 1982 and was the first secretary-general of the Norwegian Humanist Association from 1980 to 1982.  He later made his mark as a writer and activist for peace and against nuclear arms.  He is the honorary president, and former president, of the Norwegian Peace Council, a former vice president of the International Peace Bureau, which received the 1910 Nobel Peace Prize, and a former vice president of the International Association of Lawyers against Nuclear Arms.
-
-Jim Lentz: Jim Lentz is the chief executive officer for Toyota North America; president and chief operating officer of Toyota Motor North America, Inc. (TMA); and a senior managing officer of the parent company Toyota Motor Corporation (TMC) which is located in Japan.  In that role Lentz manages all of Toyota’s North American affiliate companies which include TMA, Toyota Motor Sales, U.S.A., Inc. (TMS), and Toyota Motor Engineering & Manufacturing, North America, Inc. (TEMA), which includes responsibilities for Toyota Motor Manufacturing Canada Inc. (TMMC), and oversight for Toyota Canada, Inc. (TCI).  Lentz also serves as the chairman of the North American Executive Committee.  This is composed of the top leaders from the affiliate companies.  Most recently Lentz was the president and chief executive officer of TMS and senior vice president of TMA and served in a global advisory capacity as the managing officer for TMC.  Before that he served as president and chief operating officer and executive vice president of TMS.  Lentz previously held several executive positions including Toyota division group vice president and general manager where he oversaw all sales, logistics and marketing activities for Toyota and Scion regional sales offices and distributors.  He also served as the group vice president of marketing for the Toyota division and vice president of Scion, and was responsible for the initial launch of a new line of vehicles.  Lentz spent several years in the field as vice president and general manager of the Los Angeles region and before that general manager of the San Francisco region.  Prior to his role as general manager Lentz was vice president of marketing services for CAT in Maryland.  He has also held several other TMS positions, including field training manager, sales administration manager and truck sales team member.  Lentz joined Toyota in 1982 as the merchandising manager for its Portland, Oregon region where he later became the distribution manager and field operations manager.  He serves as chairman on the board of directors of The Global Automakers and is also a member of the executive advisory board for Daniels College of Business at the University of Denver (DU), his alma mater.  He was named “Marketer of the Year” by Advertising Age in 2006, an Automotive News “All Star” in 2007 and honored at Industry Leader of the year.
-
-Barbara Chernow: Barbara Chernow is an American educator and since March 2015, Executive Vice President for Finance and Administration at Brown University.  She served as Senior Vice President for Administration at Stony Brook University from 2012 to 2015.  On December 12, 2014 Chernow was named as the next Executive Vice President of Finance and Administration at Brown University.
-
-Horace A. Judson: Horace A. Judson is an African American educator and academic administrator who served as the ninth president of the State University of New York at Plattsburgh from 1994-2003.  He also served as president of Grambling State University in Louisiana from 2004 to 2009 and of the Knoxville College from 2010 to 2013.  He was a graduate of Lincoln University, a historically black college in Pennsylvania and earned his Ph.D. in physical organic chemistry from Cornell University in Ithaca, New York.  Prior to his presidency at SUNY Plattsburgh, he worked as vice president for academic affairs at Morgan State University and provost and vice president for Academic Affairs at the California State University, Stanislaus.
-
-Glen Post: Glen F. Post III (born October 4, 1952) is the chief executive officer and president of CenturyLink, an S&P 500 integrated communications service provider based out of Monroe, Louisiana.  He earned a bachelor's degree in accounting in 1974 at Louisiana Tech University and an MBA in 1976 at Louisiana Tech.  Post joined CenturyTel in 1976.  He was named vice president in 1982 and was promoted to senior vice president and treasurer in 1984.  He was appointed to the CenturyTel board of directors in 1985, and the following year he was promoted to senior vice president and chief financial officer.  In 1988 Post was named executive vice president and chief operating officer.  He became the president and chief operating officer of CenturyTel in 1990.  In 1992 Post was named vice chairman of the board, president, and chief executive officer.  In 2002 he was appointed chairman of the board and chief executive officer.  Since 2009 Post has served as chief executive officer and president of CenturyLink.  His honors include: Louisiana Tech College of Administration and Business Distinguished Alumni in 1991, Louisiana Tech University Tower Medallion Award in 1997 and DeGree Enterprises Lifetime Achievement Award in Business 2003.
-
-Jill Biden: Jill Tracy Biden (née Jacobs , previously Stevenson; born June 3, 1951) is an American educator who is married to the 47th Vice President of the United States, Joe Biden.  She was the Second Lady of the United States from 2009 to 2017.
-
-Larry Zimmerman: Mr. Lawrence A. Zimmerman, also known as Larry, served as the Chief Financial Officer and Executive Vice President of Xerox Corporation from June 1, 2002 to April 2011 and its Senior Vice President from June 1, 2002 to April 2007.  Prior to joining Xerox in 2002, Mr. Zimmerman served at System Software Associates, Inc. where he served as an Executive Vice President and Chief Financial Officer from 1998 to 1999.  He worked with International Business Machines Corporation (IBM), where he served in various senior finance executive positions, as Vice President of Finance for Europe, Middle East & Africa Operations from 1994 to 1996 and a Corporate Controller from 1991 to 1994.  He held various other positions at IBM from 1967 to 1991.  Mr. Zimmerman served as an Assistant General Manager in finance and planning for the Enterprise System division from 1989 to 1991 and Director of Budgets from 1988 to 1989.  A 32-year employee of IBM, he served as Vice President of Finance and Planning for Brunswick Corp. 's multibillion-dollar Server and Technology division from 1996 to 1998.  He served as a Vice Chairman of Xerox Corporation from July 2009 to April 2011.  He has been an Independent Director at Flex Ltd. since October 2012, Global Imaging Systems Inc. since May 9, 2007 and Delphi Automotive PLC since November 2009.  He served as an Independent Director of Brunswick Corporation from February 7, 2006 to May 6, 2015.  He served as a Director of Computer Sciences Corporation from August 7, 2012 to August 13, 2014.  He served as a Director at Stanley, Black & Decker, Inc. (formerly Stanley Works) from July 26, 2005 to December 31, 2011.  Mr. Zimmerman graduated from New York University in 1965 with a Bachelor of Science degree in Finance and Master's Degree in Business Administration from Adelphia University in 1967.
-
-Sheila Nix: Sheila Nix is an American political strategist, most recently serving as Chief of Staff to Jill Biden, the wife of Vice President Joe Biden since April, 2013.
-
-Bobby Mehta: Siddharth N. "Bobby" Mehta was former CEO and vice chairman of HSBC North America.  Mehta served as an Advisor of TransUnion since December 31, 2012.  Mehta serves as consultant of TransUnion.  He served the chief executive officer and president of TransUnion from August 2007 to December 31, 2012, and Transunion Financing Corp. until December 31, 2012.  From May 2007 to July 2007, he served as a consultant to the board of directors at TransUnion.  He served as the chief executive officer and president of TransUnion until December 31, 2012.  He served as the chief executive officer of TransUnion LLC.  He served as chairman of the board and chief executive officer of HSBC Finance Corporation from April 2005 to February 2007.  He served as chief executive officer and president of TransUnion LLC from 2007 to 2012.  From 1998 to 2007, he held a variety of positions with HSBC Finance Corporation and HSBC North America Holdings, Inc.  Mehta served as chief executive officer of HSBC North America until February 2007.  Mehta served as consultant of TransUnion since May 2007 until July 2007.  Mehta served as group managing director of HSBC Holdings PLC of HSBC Finance Corp. since April 30, 2005, and its unit chief executive officer since March 2005.  He served as the chief executive of HS BC North America Holdings Inc., of HSBC Finance Corp., from March 2005 to February 15, 2007.  He served as an executive chairman of HSBC Financial Corporation Limited since April 2005 and served as its chief executive officer from April 2005 to February 15, 2007.  He served as the chief executive officer of HSBC Bank USA, N.A. until February 2007.  He served as the chief executive officer of HSBC North America Holdings Inc. since March 2005.  He served as chairman and chief executive officer of HSBC Financial Corp., Ltd.  He oversaw HSBC's global credit card services, its North American consumer lending and mortgage services businesses and its first mortgage operation.  He was also responsible for corporate marketing, strategic planning and corporate development for HSBC North America Holdings Inc. and had responsibility for the strategic management of credit cards throughout the HSBC Group.  Mehta served as group executive of Credit Card Services, Auto Finance and Canada of Household International Inc., since July 2002.  He worked at MasterCard’s U.S. region board since March 2000.  Mehta joined Household International Inc., in 1998.  He served as senior vice president of The Boston Consulting Group in Los Angeles and co-leader of Boston Consulting Group Financial Services Practice in the United States.  Mehta served as a director of Global Board of MasterCard Incorporated since March 17, 2005.  He served as unit chairman of HSBC Holdings PLC and served as its board member since March 2005.  He served as vice chairman and director of HSBC Financial Corporation Limited., (Formerly Household International Inc.).  He has been a director of Avant Credit Corporation since December 18, 2014.  He has been an independent director of The Allstate Corporation since February 19, 2014.  He serves as a member of the advisory board at Core2 Group, Inc.  He has been non-executive independent director at Piramal Enterprises Ltd since April 1, 2013.  He serves on the boards of Datacard, Chicago Public Education Fund, University of Chicago Laboratory Schools, The Economic Club of Chicago, The Field Museum and Myelin Repair Foundation.  He serves as a director of TransUnion Corp. and TransUnion LLC.  He served as a director of MasterCard International Inc. (also known as MasterCard Worldwide) (formerly, MasterCard Inc.), since March 17, 2005.  He served as a director of HSBC Financial Corp.  Ltd.  He has been a director of TransUnion since April 2012.  Mehta serves on the board of international advisors for the Monterey, California, Institute of International Studies and is a member of the Financial Services Roundtable.  He also serves on the board of advisors for the Myelin Repair Foundation.  Mehta holds a Bachelor of Arts in economics from the London School of Economics and Masters of Business Administration from the University of Chicago.  He stepped down as head of the North American unit after the lender raised its forecast for bad loans in the U.S.  He is of Indian descent.
-
-Jesse Divnich: Jesse Divnich is the current Vice President of Product at Hibernum Creations and former Vice President of Product Strategy & Insights at Tilting Point as well as the former Vice President of Insights and Analysis for Electronic Entertainment Design and Research (EEDAR).
-
-Question: What is the name of this American educator who is married to a former Vice PResident and for whom Sheila Nix served as Chief of Staff?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The full name of the American educator."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "occupation": {
-      "type": "string",
-      "description": "The primary occupation of the person."
-    },
-    "marital_status": {
-      "type": "boolean",
-      "description": "Indicates if the person is married."
-    },
-    "spouse_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the spouse."
-        },
-        "former_role": {
-          "type": "string",
-          "description": "The former political role of the spouse."
-        }
-      },
-      "required": [
-        "name",
-        "former_role"
-      ],
-      "additionalProperties": false
-    },
-    "chief_of_staff_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the person who served as Chief of Staff."
-        },
-        "start_date": {
-          "type": "string",
-          "description": "The start date of the Chief of Staff's service."
-        }
-      },
-      "required": [
-        "name",
-        "start_date"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nFredrik Heffermehl: Fredrik Stang Heffermehl (born 11 November 1938) is a Norwegian jurist, writer and peace activist.  He formerly worked as a lawyer and civil servant from 1965 to 1982 and was the first secretary-general of the Norwegian Humanist Association from 1980 to 1982.  He later made his mark as a writer and activist for peace and against nuclear arms.  He is the honorary president, and former president, of the Norwegian Peace Council, a former vice president of the International Peace Bureau, which received the 1910 Nobel Peace Prize, and a former vice president of the International Association of Lawyers against Nuclear Arms.\n\nJim Lentz: Jim Lentz is the chief executive officer for Toyota North America; president and chief operating officer of Toyota Motor North America, Inc. (TMA); and a senior managing officer of the parent company Toyota Motor Corporation (TMC) which is located in Japan.  In that role Lentz manages all of Toyota’s North American affiliate companies which include TMA, Toyota Motor Sales, U.S.A., Inc. (TMS), and Toyota Motor Engineering & Manufacturing, North America, Inc. (TEMA), which includes responsibilities for Toyota Motor Manufacturing Canada Inc. (TMMC), and oversight for Toyota Canada, Inc. (TCI).  Lentz also serves as the chairman of the North American Executive Committee.  This is composed of the top leaders from the affiliate companies.  Most recently Lentz was the president and chief executive officer of TMS and senior vice president of TMA and served in a global advisory capacity as the managing officer for TMC.  Before that he served as president and chief operating officer and executive vice president of TMS.  Lentz previously held several executive positions including Toyota division group vice president and general manager where he oversaw all sales, logistics and marketing activities for Toyota and Scion regional sales offices and distributors.  He also served as the group vice president of marketing for the Toyota division and vice president of Scion, and was responsible for the initial launch of a new line of vehicles.  Lentz spent several years in the field as vice president and general manager of the Los Angeles region and before that general manager of the San Francisco region.  Prior to his role as general manager Lentz was vice president of marketing services for CAT in Maryland.  He has also held several other TMS positions, including field training manager, sales administration manager and truck sales team member.  Lentz joined Toyota in 1982 as the merchandising manager for its Portland, Oregon region where he later became the distribution manager and field operations manager.  He serves as chairman on the board of directors of The Global Automakers and is also a member of the executive advisory board for Daniels College of Business at the University of Denver (DU), his alma mater.  He was named “Marketer of the Year” by Advertising Age in 2006, an Automotive News “All Star” in 2007 and honored at Industry Leader of the year.\n\nBarbara Chernow: Barbara Chernow is an American educator and since March 2015, Executive Vice President for Finance and Administration at Brown University.  She served as Senior Vice President for Administration at Stony Brook University from 2012 to 2015.  On December 12, 2014 Chernow was named as the next Executive Vice President of Finance and Administration at Brown University.\n\nHorace A. Judson: Horace A. Judson is an African American educator and academic administrator who served as the ninth president of the State University of New York at Plattsburgh from 1994-2003.  He also served as president of Grambling State University in Louisiana from 2004 to 2009 and of the Knoxville College from 2010 to 2013.  He was a graduate of Lincoln University, a historically black college in Pennsylvania and earned his Ph.D. in physical organic chemistry from Cornell University in Ithaca, New York.  Prior to his presidency at SUNY Plattsburgh, he worked as vice president for academic affairs at Morgan State University and provost and vice president for Academic Affairs at the California State University, Stanislaus.\n\nGlen Post: Glen F. Post III (born October 4, 1952) is the chief executive officer and president of CenturyLink, an S&P 500 integrated communications service provider based out of Monroe, Louisiana.  He earned a bachelor's degree in accounting in 1974 at Louisiana Tech University and an MBA in 1976 at Louisiana Tech.  Post joined CenturyTel in 1976.  He was named vice president in 1982 and was promoted to senior vice president and treasurer in 1984.  He was appointed to the CenturyTel board of directors in 1985, and the following year he was promoted to senior vice president and chief financial officer.  In 1988 Post was named executive vice president and chief operating officer.  He became the president and chief operating officer of CenturyTel in 1990.  In 1992 Post was named vice chairman of the board, president, and chief executive officer.  In 2002 he was appointed chairman of the board and chief executive officer.  Since 2009 Post has served as chief executive officer and president of CenturyLink.  His honors include: Louisiana Tech College of Administration and Business Distinguished Alumni in 1991, Louisiana Tech University Tower Medallion Award in 1997 and DeGree Enterprises Lifetime Achievement Award in Business 2003.\n\nJill Biden: Jill Tracy Biden (née Jacobs , previously Stevenson; born June 3, 1951) is an American educator who is married to the 47th Vice President of the United States, Joe Biden.  She was the Second Lady of the United States from 2009 to 2017.\n\nLarry Zimmerman: Mr. Lawrence A. Zimmerman, also known as Larry, served as the Chief Financial Officer and Executive Vice President of Xerox Corporation from June 1, 2002 to April 2011 and its Senior Vice President from June 1, 2002 to April 2007.  Prior to joining Xerox in 2002, Mr. Zimmerman served at System Software Associates, Inc. where he served as an Executive Vice President and Chief Financial Officer from 1998 to 1999.  He worked with International Business Machines Corporation (IBM), where he served in various senior finance executive positions, as Vice President of Finance for Europe, Middle East & Africa Operations from 1994 to 1996 and a Corporate Controller from 1991 to 1994.  He held various other positions at IBM from 1967 to 1991.  Mr. Zimmerman served as an Assistant General Manager in finance and planning for the Enterprise System division from 1989 to 1991 and Director of Budgets from 1988 to 1989.  A 32-year employee of IBM, he served as Vice President of Finance and Planning for Brunswick Corp. 's multibillion-dollar Server and Technology division from 1996 to 1998.  He served as a Vice Chairman of Xerox Corporation from July 2009 to April 2011.  He has been an Independent Director at Flex Ltd. since October 2012, Global Imaging Systems Inc. since May 9, 2007 and Delphi Automotive PLC since November 2009.  He served as an Independent Director of Brunswick Corporation from February 7, 2006 to May 6, 2015.  He served as a Director of Computer Sciences Corporation from August 7, 2012 to August 13, 2014.  He served as a Director at Stanley, Black & Decker, Inc. (formerly Stanley Works) from July 26, 2005 to December 31, 2011.  Mr. Zimmerman graduated from New York University in 1965 with a Bachelor of Science degree in Finance and Master's Degree in Business Administration from Adelphia University in 1967.\n\nSheila Nix: Sheila Nix is an American political strategist, most recently serving as Chief of Staff to Jill Biden, the wife of Vice President Joe Biden since April, 2013.\n\nBobby Mehta: Siddharth N. \"Bobby\" Mehta was former CEO and vice chairman of HSBC North America.  Mehta served as an Advisor of TransUnion since December 31, 2012.  Mehta serves as consultant of TransUnion.  He served the chief executive officer and president of TransUnion from August 2007 to December 31, 2012, and Transunion Financing Corp. until December 31, 2012.  From May 2007 to July 2007, he served as a consultant to the board of directors at TransUnion.  He served as the chief executive officer and president of TransUnion until December 31, 2012.  He served as the chief executive officer of TransUnion LLC.  He served as chairman of the board and chief executive officer of HSBC Finance Corporation from April 2005 to February 2007.  He served as chief executive officer and president of TransUnion LLC from 2007 to 2012.  From 1998 to 2007, he held a variety of positions with HSBC Finance Corporation and HSBC North America Holdings, Inc.  Mehta served as chief executive officer of HSBC North America until February 2007.  Mehta served as consultant of TransUnion since May 2007 until July 2007.  Mehta served as group managing director of HSBC Holdings PLC of HSBC Finance Corp. since April 30, 2005, and its unit chief executive officer since March 2005.  He served as the chief executive of HS BC North America Holdings Inc., of HSBC Finance Corp., from March 2005 to February 15, 2007.  He served as an executive chairman of HSBC Financial Corporation Limited since April 2005 and served as its chief executive officer from April 2005 to February 15, 2007.  He served as the chief executive officer of HSBC Bank USA, N.A. until February 2007.  He served as the chief executive officer of HSBC North America Holdings Inc. since March 2005.  He served as chairman and chief executive officer of HSBC Financial Corp., Ltd.  He oversaw HSBC's global credit card services, its North American consumer lending and mortgage services businesses and its first mortgage operation.  He was also responsible for corporate marketing, strategic planning and corporate development for HSBC North America Holdings Inc. and had responsibility for the strategic management of credit cards throughout the HSBC Group.  Mehta served as group executive of Credit Card Services, Auto Finance and Canada of Household International Inc., since July 2002.  He worked at MasterCard’s U.S. region board since March 2000.  Mehta joined Household International Inc., in 1998.  He served as senior vice president of The Boston Consulting Group in Los Angeles and co-leader of Boston Consulting Group Financial Services Practice in the United States.  Mehta served as a director of Global Board of MasterCard Incorporated since March 17, 2005.  He served as unit chairman of HSBC Holdings PLC and served as its board member since March 2005.  He served as vice chairman and director of HSBC Financial Corporation Limited., (Formerly Household International Inc.).  He has been a director of Avant Credit Corporation since December 18, 2014.  He has been an independent director of The Allstate Corporation since February 19, 2014.  He serves as a member of the advisory board at Core2 Group, Inc.  He has been non-executive independent director at Piramal Enterprises Ltd since April 1, 2013.  He serves on the boards of Datacard, Chicago Public Education Fund, University of Chicago Laboratory Schools, The Economic Club of Chicago, The Field Museum and Myelin Repair Foundation.  He serves as a director of TransUnion Corp. and TransUnion LLC.  He served as a director of MasterCard International Inc. (also known as MasterCard Worldwide) (formerly, MasterCard Inc.), since March 17, 2005.  He served as a director of HSBC Financial Corp.  Ltd.  He has been a director of TransUnion since April 2012.  Mehta serves on the board of international advisors for the Monterey, California, Institute of International Studies and is a member of the Financial Services Roundtable.  He also serves on the board of advisors for the Myelin Repair Foundation.  Mehta holds a Bachelor of Arts in economics from the London School of Economics and Masters of Business Administration from the University of Chicago.  He stepped down as head of the North American unit after the lender raised its forecast for bad loans in the U.S.  He is of Indian descent.\n\nJesse Divnich: Jesse Divnich is the current Vice President of Product at Hibernum Creations and former Vice President of Product Strategy & Insights at Tilting Point as well as the former Vice President of Insights and Analysis for Electronic Entertainment Design and Research (EEDAR).\n\nQuestion: What is the name of this American educator who is married to a former Vice PResident and for whom Sheila Nix served as Chief of Staff?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the American educator.\"\n    },\n    \"occupation\": {\n      \"type\": \"string\",\n      \"description\": \"The primary occupation of the person.\"\n    },\n    \"marital_status\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the person is married.\"\n    },\n    \"spouse_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the spouse.\"\n        },\n        \"former_role\": {\n          \"type\": \"string\",\n          \"description\": \"The former political role of the spouse.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"former_role\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"chief_of_staff_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the person who served as Chief of Staff.\"\n        },\n        \"start_date\": {\n          \"type\": \"string\",\n          \"description\": \"The start date of the Chief of Staff's service.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"start_date\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"occupation\",\n    \"marital_status\",\n    \"spouse_details\",\n    \"chief_of_staff_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "occupation",
-    "marital_status",
-    "spouse_details",
-    "chief_of_staff_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The full name of the American educator."
+      },
+      "occupation": {
+        "type": "string",
+        "description": "The primary occupation of the person."
+      },
+      "marital_status": {
+        "type": "boolean",
+        "description": "Indicates if the person is married."
+      },
+      "spouse_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the spouse."
+          },
+          "former_role": {
+            "type": "string",
+            "description": "The former political role of the spouse."
+          }
+        },
+        "required": [
+          "name",
+          "former_role"
+        ],
+        "additionalProperties": false
+      },
+      "chief_of_staff_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the person who served as Chief of Staff."
+          },
+          "start_date": {
+            "type": "string",
+            "description": "The start date of the Chief of Staff's service."
+          }
+        },
+        "required": [
+          "name",
+          "start_date"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "person_name",
+      "occupation",
+      "marital_status",
+      "spouse_details",
+      "chief_of_staff_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

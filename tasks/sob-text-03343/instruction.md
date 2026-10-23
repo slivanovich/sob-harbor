@@ -1,80 +1,57 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Stereo (Paul Westerberg album): Stereo is the fourth solo album by Paul Westerberg.  At this point in his career, the former Replacements leader was entering a new phase.  He said goodbye to professional studios and big-name producers like Brendan O'Brien and Don Was, recording the album in his basement by himself.  As detailed in the liner notes, Westerberg made no effort to fix imperfections like the tape running out in the middle of a song.  "Stereo" was packaged with "Mono", which he credited to his Grandpaboy alter ego.
-
-Peter Baldrachi: Peter Baldrachi (born February 12, 1967) is an American Boston-based singer-songwriter, drummer and guitarist.  His style and sound has been compared to the likes of Paul Westerberg, The Posies, Velvet Crush, Teenage Fanclub, and Big Star.  His classic pop songwriting mixes in bits and pieces of Matthew Sweet, late-era Replacements, "Goats Head Soup" -era Rolling Stones, and on the more obscure side, "The Beatifics" and "The Gladhands".  He is a respected songwriter in the Power pop community, and has performed at David Bash's International Pop Overthrow, an American-originated music festival devoted to power pop music and related genres.
-
-Sam Lapides: Sam Lapides (born David Samuel Lapides, August 14, 1962, Irvington, New Jersey) is an American singer-songwriter, known as the guitarist and lead vocalist for the bands Ghosthouse and Folkminers.  He cites Paul Westerberg, The Replacements, The Rolling Stones, and Bob Dylan as influences.  His folk-rock sound has been classified as Americana (music).  Throughout his career, he has produced a variety of recordings and completed numerous tours of the United States and Europe.
-
-Besterberg: The Best of Paul Westerberg: Besterberg: The Best of Paul Westerberg is a compilation album of recordings by Paul Westerberg.
-
-The Replacements (band): The Replacements were an American rock band formed in Minneapolis, Minnesota, in 1979.  Initially a punk rock band, they are considered pioneers of alternative rock.  The band was composed of the guitarist and vocalist Paul Westerberg, guitarist Bob Stinson, bass guitarist Tommy Stinson and drummer Chris Mars for most of its career.  Following several acclaimed albums, including "Let It Be" and "Tim", Bob Stinson left the band in 1986, and Slim Dunlap joined as lead guitarist.  Steve Foley replaced Mars in 1990.  Towards the end of the band's career, Westerberg exerted more control over the creative output.  The group disbanded in 1991, with the members eventually pursuing various projects.  A reunion was announced on October 3, 2012.  The Replacements never had significant commercial success, except for "I'll Be You", which hit number 1 on the "Billboard" Alt Rock chart, but they influenced numerous alternative rock acts.
-
-Paul Westerberg: Paul Harold Westerberg (born December 31, 1959) is an American musician, best known as the lead singer, guitarist and songwriter in The Replacements, one of the seminal alternative rock bands of the 1980s.  He launched a solo career after the dissolution of that band.  In recent years, he has cultivated a more independent-minded approach, primarily recording his music at home in his basement.
-
-So Far Away (Goo Goo Dolls song): "So Far Away" is a 1993 song by alternative rock band the Goo Goo Dolls.  It is from their fourth album "Superstar Car Wash", which brought them face to face with one of their primary influences, Paul Westerberg of The Replacements.  The song is a strong fan favorite even though it has never been performed live and is the only song from the Goo Goo Dolls sung by lead singer Johnny Rzeznik from 1993's "Superstar Car Wash" to 1998's "Dizzy Up the Girl" not to make it onto one of the band's three compilation albums.  It is the fourteenth and last song on the album.
-
-The Mendoza Line (band): The Mendoza Line was a rock band whose members began playing together while in college in the mid-1990s in Athens, Georgia, USA, and who eventually settled in Brooklyn.  Their name comes from the dismal .200 batting average of Mario Mendoza.  They released eight full albums of sometimes folky, occasionally country-styled indie rock that is influenced by classic songwriters like Bob Dylan, John Cale and Paul Westerberg, and alt-country bands like Whiskeytown and Wilco.  They recorded for several labels, such as Kindercore, Misra, Bar/None Records and Loose Music.
-
-Hello Sleepwalkers: Hello Sleepwalkers (ハロー・スリープウォーカーズ ) is a five member Japanese alternative rock band from Okinawa formed in 2008.  The band is signed to A-Sketch Music Label and have currently released three studio albums, one extended play, four single albums, and ten singles.  They are best known for performing the opening theme song of the anime "Noragami", "Goya no Machiawase" (午夜の待ち合わせ , Midnight's Appointment ) .
-
-Swingin Party: "Swingin Party" is a song written by Paul Westerberg and recorded by his band The Replacements for their fourth studio album "Tim" (1985).  The song is an indie rock and rock and roll ballad with influences from jazz, country and new wave.  Lyrically, it portrays the protagonist's "feigned nonchalance".  It was well received by music critics, who praised Westerberg's songwriting talent.  The song has been covered by other artists, notably Kindness in 2009 and Lorde in 2013.
-
-Question: Which genre of music is performed by both Paul Westerberg and Hello Sleepwalkers?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "shared_music_genre": {
-      "type": "string",
-      "description": "The music genre performed by both artists."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "artists": {
-      "type": "array",
-      "description": "List of artists confirmed to perform the shared genre.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the artist."
-          },
-          "is_associated_with_genre": {
-            "type": "boolean",
-            "description": "True if the artist is explicitly associated with the shared genre in the context."
-          }
-        },
-        "required": [
-          "name",
-          "is_associated_with_genre"
-        ],
-        "additionalProperties": false
-      }
-    },
-    "genre_pioneers_or_influences": {
-      "type": "array",
-      "description": "Bands or artists identified as pioneers or significant influences for the shared genre.",
-      "items": {
-        "type": "string"
-      }
+    {
+      "role": "user",
+      "content": "Context:\nStereo (Paul Westerberg album): Stereo is the fourth solo album by Paul Westerberg.  At this point in his career, the former Replacements leader was entering a new phase.  He said goodbye to professional studios and big-name producers like Brendan O'Brien and Don Was, recording the album in his basement by himself.  As detailed in the liner notes, Westerberg made no effort to fix imperfections like the tape running out in the middle of a song.  \"Stereo\" was packaged with \"Mono\", which he credited to his Grandpaboy alter ego.\n\nPeter Baldrachi: Peter Baldrachi (born February 12, 1967) is an American Boston-based singer-songwriter, drummer and guitarist.  His style and sound has been compared to the likes of Paul Westerberg, The Posies, Velvet Crush, Teenage Fanclub, and Big Star.  His classic pop songwriting mixes in bits and pieces of Matthew Sweet, late-era Replacements, \"Goats Head Soup\" -era Rolling Stones, and on the more obscure side, \"The Beatifics\" and \"The Gladhands\".  He is a respected songwriter in the Power pop community, and has performed at David Bash's International Pop Overthrow, an American-originated music festival devoted to power pop music and related genres.\n\nSam Lapides: Sam Lapides (born David Samuel Lapides, August 14, 1962, Irvington, New Jersey) is an American singer-songwriter, known as the guitarist and lead vocalist for the bands Ghosthouse and Folkminers.  He cites Paul Westerberg, The Replacements, The Rolling Stones, and Bob Dylan as influences.  His folk-rock sound has been classified as Americana (music).  Throughout his career, he has produced a variety of recordings and completed numerous tours of the United States and Europe.\n\nBesterberg: The Best of Paul Westerberg: Besterberg: The Best of Paul Westerberg is a compilation album of recordings by Paul Westerberg.\n\nThe Replacements (band): The Replacements were an American rock band formed in Minneapolis, Minnesota, in 1979.  Initially a punk rock band, they are considered pioneers of alternative rock.  The band was composed of the guitarist and vocalist Paul Westerberg, guitarist Bob Stinson, bass guitarist Tommy Stinson and drummer Chris Mars for most of its career.  Following several acclaimed albums, including \"Let It Be\" and \"Tim\", Bob Stinson left the band in 1986, and Slim Dunlap joined as lead guitarist.  Steve Foley replaced Mars in 1990.  Towards the end of the band's career, Westerberg exerted more control over the creative output.  The group disbanded in 1991, with the members eventually pursuing various projects.  A reunion was announced on October 3, 2012.  The Replacements never had significant commercial success, except for \"I'll Be You\", which hit number 1 on the \"Billboard\" Alt Rock chart, but they influenced numerous alternative rock acts.\n\nPaul Westerberg: Paul Harold Westerberg (born December 31, 1959) is an American musician, best known as the lead singer, guitarist and songwriter in The Replacements, one of the seminal alternative rock bands of the 1980s.  He launched a solo career after the dissolution of that band.  In recent years, he has cultivated a more independent-minded approach, primarily recording his music at home in his basement.\n\nSo Far Away (Goo Goo Dolls song): \"So Far Away\" is a 1993 song by alternative rock band the Goo Goo Dolls.  It is from their fourth album \"Superstar Car Wash\", which brought them face to face with one of their primary influences, Paul Westerberg of The Replacements.  The song is a strong fan favorite even though it has never been performed live and is the only song from the Goo Goo Dolls sung by lead singer Johnny Rzeznik from 1993's \"Superstar Car Wash\" to 1998's \"Dizzy Up the Girl\" not to make it onto one of the band's three compilation albums.  It is the fourteenth and last song on the album.\n\nThe Mendoza Line (band): The Mendoza Line was a rock band whose members began playing together while in college in the mid-1990s in Athens, Georgia, USA, and who eventually settled in Brooklyn.  Their name comes from the dismal .200 batting average of Mario Mendoza.  They released eight full albums of sometimes folky, occasionally country-styled indie rock that is influenced by classic songwriters like Bob Dylan, John Cale and Paul Westerberg, and alt-country bands like Whiskeytown and Wilco.  They recorded for several labels, such as Kindercore, Misra, Bar/None Records and Loose Music.\n\nHello Sleepwalkers: Hello Sleepwalkers (ハロー・スリープウォーカーズ ) is a five member Japanese alternative rock band from Okinawa formed in 2008.  The band is signed to A-Sketch Music Label and have currently released three studio albums, one extended play, four single albums, and ten singles.  They are best known for performing the opening theme song of the anime \"Noragami\", \"Goya no Machiawase\" (午夜の待ち合わせ , Midnight's Appointment ) .\n\nSwingin Party: \"Swingin Party\" is a song written by Paul Westerberg and recorded by his band The Replacements for their fourth studio album \"Tim\" (1985).  The song is an indie rock and rock and roll ballad with influences from jazz, country and new wave.  Lyrically, it portrays the protagonist's \"feigned nonchalance\".  It was well received by music critics, who praised Westerberg's songwriting talent.  The song has been covered by other artists, notably Kindness in 2009 and Lorde in 2013.\n\nQuestion: Which genre of music is performed by both Paul Westerberg and Hello Sleepwalkers?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"shared_music_genre\": {\n      \"type\": \"string\",\n      \"description\": \"The music genre performed by both artists.\"\n    },\n    \"artists\": {\n      \"type\": \"array\",\n      \"description\": \"List of artists confirmed to perform the shared genre.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the artist.\"\n          },\n          \"is_associated_with_genre\": {\n            \"type\": \"boolean\",\n            \"description\": \"True if the artist is explicitly associated with the shared genre in the context.\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"is_associated_with_genre\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"genre_pioneers_or_influences\": {\n      \"type\": \"array\",\n      \"description\": \"Bands or artists identified as pioneers or significant influences for the shared genre.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    }\n  },\n  \"required\": [\n    \"shared_music_genre\",\n    \"artists\",\n    \"genre_pioneers_or_influences\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "shared_music_genre",
-    "artists",
-    "genre_pioneers_or_influences"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "shared_music_genre": {
+        "type": "string",
+        "description": "The music genre performed by both artists."
+      },
+      "artists": {
+        "type": "array",
+        "description": "List of artists confirmed to perform the shared genre.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the artist."
+            },
+            "is_associated_with_genre": {
+              "type": "boolean",
+              "description": "True if the artist is explicitly associated with the shared genre in the context."
+            }
+          },
+          "required": [
+            "name",
+            "is_associated_with_genre"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "genre_pioneers_or_influences": {
+        "type": "array",
+        "description": "Bands or artists identified as pioneers or significant influences for the shared genre.",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "shared_music_genre",
+      "artists",
+      "genre_pioneers_or_influences"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

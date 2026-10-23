@@ -1,77 +1,54 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Suburban Roulette: Suburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis starring, among others, William Kerwin and Allison Louise Downe who are involved in wife swapping to overcome the boredom of living in the suburbs.  It was produced as an independent film by Lewis and was shown in Chicago area movie theaters during the summer of 1968.  It contains implied sex, boozing, adult themes, fighting, but is without nudity (which would have prohibited mainstream movie theater distribution).
-
-Blood Feast 2: All U Can Eat: Blood Feast 2: All U Can Eat is a 2002 splatter film directed by Herschell Gordon Lewis.  It is a sequel to Lewis's 1963 cult classic original "Blood Feast".  Filmed under a working title of "Blood Feast 2: Buffet of Blood" and using the same grindhouse style as its predecessor, the film continues the story began in the original film, where a grandson of Fuad Ramses attempts to restart his grandfather's catering business.  The film features a cameo appearance by John Waters, a fan of Lewis' work.
-
-Something Weird Video: Something Weird Video is an American film distributor company based in Seattle, Washington.  They specialize in exploitation films, particularly the works of Harry Novak, Doris Wishman, David F. Friedman and Herschell Gordon Lewis.  The company is named after Lewis' 1967 film "Something Weird", and the logo is taken from that film's original poster art.  Something Weird usually focus on B to Z movies.  Something Weird has distributed well over 2,500 films to date.
-
-Detlev Buck: Detlev Buck (born December 1, 1962 in Bad Segeberg) is a German film director, actor, producer and screenwriter.
-
-Monster a Go-Go: Monster a Go-Go!  is a 1965 American science-fiction horror film directed by Bill Rebane and Herschell Gordon Lewis (who remained uncredited in association with this film).  The film is considered to be one of the worst films ever made.
-
-Something Weird (film): Something Weird is a 1967 American exploitation film directed by Herschell Gordon Lewis.  It stars, among others, Tony McCabe and Elizabeth Lee and features a paranormal plot involving LSD drug use, a psychic, a hideous witch who morphs into a sexy young woman, a séance, a kung-fu chopping socialite, ghosts, psychopaths and federal agents.
-
-Multiple Maniacs: Multiple Maniacs is a 1970 American black comedy film composed, shot, edited, written, produced, and directed by American cult filmmaker John Waters, and was his second feature film.  The film features several actors who were part of the Dreamland acting troupe for Waters' films, including Divine, Mary Vivian Pearce, David Lochary, Mink Stole, Edith Massey, George Figgs, and Cookie Mueller.  The title pays tribute to Herschell Gordon Lewis's "2000 Maniacs", as Waters states in his book "Shock Value".
-
-A Taste of Blood: A Taste of Blood is a 1967 American horror film, produced and directed by Herschell Gordon Lewis.  It stars, among others, Bill Rogers and Elizabeth Wilkinson.  The movie was also known as "The Secret of Dr. Alucard".  Lewis considered this his masterpiece, which may account for the film's relatively long running time of two hours (most of Lewis's films run no longer than 80 minutes).
-
-Herschell Gordon Lewis: Herschell Gordon Lewis (June 15, 1926 – September 26, 2016) was an American filmmaker, best known for creating the "splatter" subgenre of horror films.  He is often called the "Godfather of Gore" (a title also given to Lucio Fulci), though his film career included works in a range of exploitation film genres including juvenile delinquent films, nudie-cuties, two children's films and at least one rural comedy.  On Lewis' career, AllMovie wrote: "With his better-known gore films, Herschell Gordon Lewis was a pioneer, going farther than anyone else dared, probing the depths of disgust and discomfort onscreen with more bad taste and imagination than anyone of his era."
-
-The Wizard of Gore: The Wizard of Gore is a 1970 American splatter film written by Allen Kahn, directed by Herschell Gordon Lewis, and starring Ray Sager, Judy Cler, and Wayne Ratay.
-
-Question: Detlev Buck and Herschell Gordon Lewis, are American?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "question_asked": {
-      "type": "string",
-      "description": "The original question posed."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "is_both_american": {
-      "type": "boolean",
-      "description": "True if both individuals are American, false otherwise."
-    },
-    "individuals_details": {
-      "type": "array",
-      "description": "Details about each individual mentioned in the question.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the individual."
-          },
-          "nationality": {
-            "type": "string",
-            "description": "The stated nationality of the individual."
-          }
-        },
-        "required": [
-          "name",
-          "nationality"
-        ],
-        "additionalProperties": false
-      }
+    {
+      "role": "user",
+      "content": "Context:\nSuburban Roulette: Suburban Roulette is a 1968 American drama film directed by Herschell Gordon Lewis starring, among others, William Kerwin and Allison Louise Downe who are involved in wife swapping to overcome the boredom of living in the suburbs.  It was produced as an independent film by Lewis and was shown in Chicago area movie theaters during the summer of 1968.  It contains implied sex, boozing, adult themes, fighting, but is without nudity (which would have prohibited mainstream movie theater distribution).\n\nBlood Feast 2: All U Can Eat: Blood Feast 2: All U Can Eat is a 2002 splatter film directed by Herschell Gordon Lewis.  It is a sequel to Lewis's 1963 cult classic original \"Blood Feast\".  Filmed under a working title of \"Blood Feast 2: Buffet of Blood\" and using the same grindhouse style as its predecessor, the film continues the story began in the original film, where a grandson of Fuad Ramses attempts to restart his grandfather's catering business.  The film features a cameo appearance by John Waters, a fan of Lewis' work.\n\nSomething Weird Video: Something Weird Video is an American film distributor company based in Seattle, Washington.  They specialize in exploitation films, particularly the works of Harry Novak, Doris Wishman, David F. Friedman and Herschell Gordon Lewis.  The company is named after Lewis' 1967 film \"Something Weird\", and the logo is taken from that film's original poster art.  Something Weird usually focus on B to Z movies.  Something Weird has distributed well over 2,500 films to date.\n\nDetlev Buck: Detlev Buck (born December 1, 1962 in Bad Segeberg) is a German film director, actor, producer and screenwriter.\n\nMonster a Go-Go: Monster a Go-Go!  is a 1965 American science-fiction horror film directed by Bill Rebane and Herschell Gordon Lewis (who remained uncredited in association with this film).  The film is considered to be one of the worst films ever made.\n\nSomething Weird (film): Something Weird is a 1967 American exploitation film directed by Herschell Gordon Lewis.  It stars, among others, Tony McCabe and Elizabeth Lee and features a paranormal plot involving LSD drug use, a psychic, a hideous witch who morphs into a sexy young woman, a séance, a kung-fu chopping socialite, ghosts, psychopaths and federal agents.\n\nMultiple Maniacs: Multiple Maniacs is a 1970 American black comedy film composed, shot, edited, written, produced, and directed by American cult filmmaker John Waters, and was his second feature film.  The film features several actors who were part of the Dreamland acting troupe for Waters' films, including Divine, Mary Vivian Pearce, David Lochary, Mink Stole, Edith Massey, George Figgs, and Cookie Mueller.  The title pays tribute to Herschell Gordon Lewis's \"2000 Maniacs\", as Waters states in his book \"Shock Value\".\n\nA Taste of Blood: A Taste of Blood is a 1967 American horror film, produced and directed by Herschell Gordon Lewis.  It stars, among others, Bill Rogers and Elizabeth Wilkinson.  The movie was also known as \"The Secret of Dr. Alucard\".  Lewis considered this his masterpiece, which may account for the film's relatively long running time of two hours (most of Lewis's films run no longer than 80 minutes).\n\nHerschell Gordon Lewis: Herschell Gordon Lewis (June 15, 1926 – September 26, 2016) was an American filmmaker, best known for creating the \"splatter\" subgenre of horror films.  He is often called the \"Godfather of Gore\" (a title also given to Lucio Fulci), though his film career included works in a range of exploitation film genres including juvenile delinquent films, nudie-cuties, two children's films and at least one rural comedy.  On Lewis' career, AllMovie wrote: \"With his better-known gore films, Herschell Gordon Lewis was a pioneer, going farther than anyone else dared, probing the depths of disgust and discomfort onscreen with more bad taste and imagination than anyone of his era.\"\n\nThe Wizard of Gore: The Wizard of Gore is a 1970 American splatter film written by Allen Kahn, directed by Herschell Gordon Lewis, and starring Ray Sager, Judy Cler, and Wayne Ratay.\n\nQuestion: Detlev Buck and Herschell Gordon Lewis, are American?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"question_asked\": {\n      \"type\": \"string\",\n      \"description\": \"The original question posed.\"\n    },\n    \"is_both_american\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if both individuals are American, false otherwise.\"\n    },\n    \"individuals_details\": {\n      \"type\": \"array\",\n      \"description\": \"Details about each individual mentioned in the question.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the individual.\"\n          },\n          \"nationality\": {\n            \"type\": \"string\",\n            \"description\": \"The stated nationality of the individual.\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"nationality\"\n        ],\n        \"additionalProperties\": false\n      }\n    }\n  },\n  \"required\": [\n    \"question_asked\",\n    \"is_both_american\",\n    \"individuals_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "question_asked",
-    "is_both_american",
-    "individuals_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "question_asked": {
+        "type": "string",
+        "description": "The original question posed."
+      },
+      "is_both_american": {
+        "type": "boolean",
+        "description": "True if both individuals are American, false otherwise."
+      },
+      "individuals_details": {
+        "type": "array",
+        "description": "Details about each individual mentioned in the question.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the individual."
+            },
+            "nationality": {
+              "type": "string",
+              "description": "The stated nationality of the individual."
+            }
+          },
+          "required": [
+            "name",
+            "nationality"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "question_asked",
+      "is_both_american",
+      "individuals_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

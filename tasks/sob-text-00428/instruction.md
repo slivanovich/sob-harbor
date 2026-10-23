@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-List of Kansas Jayhawks in the NFL Draft: The University of Kansas Jayhawks football team has had 174 players drafted into the National Football League (NFL) since the first draft held in 1936, through the 2017 NFL Draft.  KU has seen nine players taken in the first round, including six top-10 picks: Gale Sayers, John Riggins, Ray Evans, Mike Butler, John Hadl, and David Verser.  Sayers, a College and Pro Football Hall of Famer, was the highest pick from KU as the fourth overall pick in the 1965 NFL Draft.
-
-2005 PBA draft: The 2005 Philippine Basketball Association (PBA) rookie draft was an event at which teams drafted players from the amateur ranks.  It was the first PBA Draft to feature only two rounds of drafting and the first draft held in August due to the league's adjustment of the season calendar.  It was held on August 14, 2005 at the Sta.  Lucia East Grand Mall in Cainta, Rizal.
-
-List of Iowa State Cyclones in the NFL Draft: The Iowa State Cyclones college football team competes as part of the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision (FBS), and represents the Iowa State University in the Big 12 Conference (Big 12).  ISU has had 123 players drafted into the National Football League (NFL) since the first draft held in 1936, through the 2016 NFL Draft.  ISU has only seen one player taken in the first round, George Amundson with the 14th overall pick in the 1973 NFL Draft by the Houston Oilers.  Troy Davis was drafted in the third round of the 1997 NFL draft by the New Orleans Saints, he has since been inducted into the College Football Hall of Fame.  Kelechi Osemele was drafted in the second round of the 2012 NFL draft by the Baltimore Ravens; he went on to win Super Bowl XLVII with the Ravens as their starting right tackle.  Six former Cyclones who were drafted have been selected to a Pro Bowl or AFL All-Star Game.
-
-1997 WNBA draft: The 1997 WNBA draft was the inaugural draft held by the WNBA through which teams could select new players from a talent pool of college and professional women's basketball players.  Unlike later drafts, this draft was unique because there were three different stages in which teams built their rosters.  First on January 22, 1997, the Initial Player Allocation draft took place in which 16 players were assigned to each team in no particular order.  The elite draft portion comprised professional women's basketball players who had competed in other leagues, usually international leagues.  On February 27, 1997, an elite draft added two more players to each team.  On April 28, 1997, the four rounds of the regular WNBA draft took place.  Draftees Cynthia Cooper, Sheryl Swoopes, and Tina Thompson would become the core pieces of the Houston Comets dynasty.
-
-2011 WWE draft: The 2011 WWE draft was the eighth annual (ninth overall) draft held by WWE, which took place on April 25.  With a core business of professional wrestling, the corporation held a draft to exchange personnel assigned to one of its two television programs ("Raw" and "SmackDown") that are (in terms of storyline) independent brands that represent WWE.  The draft aired live on the USA Network on "Raw" in the United States for two hours in Raleigh, North Carolina from the RBC Center.  As a standard for previous drafts, most on-air personnel were eligible to be drafted.  A continuation of the draft took place on WWE's official website at 12:00pm Eastern time on the following afternoon.
-
-1952 IRFU College Draft: The 1952 IRFU College Draft was an unofficial sports draft held by the Interprovincial Rugby Football Union, a predecessor of the East Division of the Canadian Football League, in the spring of 1952.  The concept was first developed at a meeting between Eastern officials on April 6, 1952.  In the meeting, the delegates agreed, in principle, that eligible college athletes would be selected by member clubs with the last place team selecting first in each round.  While the draft was unofficial, players selected in this draft were indeed added to the rosters of the clubs that had drafted them.
-
-Chukwudiebere Maduabum: Chukwudiebere "Chu" Maduabum (born March 19, 1991), sometimes credited as "Chuk", "Chuck", or "Chu Chu", is a Nigerian professional basketball player for Kagoshima Rebnise of the Japanese Second Division.  He was drafted 56th overall by the Los Angeles Lakers in the 2011 NBA draft before his rights were traded to the Denver Nuggets.
-
-2011 NBA draft: The 2011 NBA draft was held on June 23, 2011, at Prudential Center in Newark, New Jersey.  The draft started at 7:00 pm Eastern Daylight Time (2300 UTC), and was broadcast in the United States on ESPN.  In this draft, National Basketball Association (NBA) teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The Cleveland Cavaliers had the first pick due to a previous trade they had involving the Los Angeles Clippers, choosing point guard Kyrie Irving of Duke.  Of the 60 players drafted, 7 were freshmen, 7 were sophomores, 14 were juniors, 19 were seniors, 12 were international players without U.S. college basketball experience (including the first ever Qatari-selected player), and 1 was a D-League player.
-
-2014 PBA Expansion Draft: The 2014 PBA Expansion Draft is the third expansion draft of the Philippine Basketball Association (PBA).  The draft was held on July 18, 2014, so that the newly founded teams Blackwater Elite and the Kia Sorento could acquire players for the 2014–15 season.  A "protect 12" scheme was implemented for the draft, meaning that the 10 existing PBA teams can protect up to 12 players in their rosters and will unconditionally release their unprotected players to the expansion pool.  This was the first expansion draft held by the PBA, since Batang Red Bull Energizers entered the league as an expansion team in 2000.  The draft will be closed to the public as the final list will be distributed only to the expansion clubs.  Players involved will be returned to their original teams if they are not chosen, provided they are unaware of their inclusion in the draft.
-
-1990 AFL draft: The 1990 AFL draft was the 5th annual draft of Australian rules footballers to the 14 clubs in the Australian Football League.  It consisted of the national draft held at the end of the 1990 season, the pre-season draft, held before 1991 AFL season and a mid-season draft.
-
-Question: Where was the draft held in which Chukwudiebere Maduabum was drafted?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "draft_name": {
-      "type": "string",
-      "description": "The name of the draft event."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "player_name": {
-      "type": "string",
-      "description": "The name of the player who was drafted."
-    },
-    "draft_location": {
-      "type": "object",
-      "properties": {
-        "venue": {
-          "type": "string",
-          "description": "The specific venue where the draft was held."
-        },
-        "city": {
-          "type": "string",
-          "description": "The city where the draft was held."
-        },
-        "state_or_country": {
-          "type": "string",
-          "description": "The state or country where the draft was held."
-        }
-      },
-      "required": [
-        "venue",
-        "city",
-        "state_or_country"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nList of Kansas Jayhawks in the NFL Draft: The University of Kansas Jayhawks football team has had 174 players drafted into the National Football League (NFL) since the first draft held in 1936, through the 2017 NFL Draft.  KU has seen nine players taken in the first round, including six top-10 picks: Gale Sayers, John Riggins, Ray Evans, Mike Butler, John Hadl, and David Verser.  Sayers, a College and Pro Football Hall of Famer, was the highest pick from KU as the fourth overall pick in the 1965 NFL Draft.\n\n2005 PBA draft: The 2005 Philippine Basketball Association (PBA) rookie draft was an event at which teams drafted players from the amateur ranks.  It was the first PBA Draft to feature only two rounds of drafting and the first draft held in August due to the league's adjustment of the season calendar.  It was held on August 14, 2005 at the Sta.  Lucia East Grand Mall in Cainta, Rizal.\n\nList of Iowa State Cyclones in the NFL Draft: The Iowa State Cyclones college football team competes as part of the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision (FBS), and represents the Iowa State University in the Big 12 Conference (Big 12).  ISU has had 123 players drafted into the National Football League (NFL) since the first draft held in 1936, through the 2016 NFL Draft.  ISU has only seen one player taken in the first round, George Amundson with the 14th overall pick in the 1973 NFL Draft by the Houston Oilers.  Troy Davis was drafted in the third round of the 1997 NFL draft by the New Orleans Saints, he has since been inducted into the College Football Hall of Fame.  Kelechi Osemele was drafted in the second round of the 2012 NFL draft by the Baltimore Ravens; he went on to win Super Bowl XLVII with the Ravens as their starting right tackle.  Six former Cyclones who were drafted have been selected to a Pro Bowl or AFL All-Star Game.\n\n1997 WNBA draft: The 1997 WNBA draft was the inaugural draft held by the WNBA through which teams could select new players from a talent pool of college and professional women's basketball players.  Unlike later drafts, this draft was unique because there were three different stages in which teams built their rosters.  First on January 22, 1997, the Initial Player Allocation draft took place in which 16 players were assigned to each team in no particular order.  The elite draft portion comprised professional women's basketball players who had competed in other leagues, usually international leagues.  On February 27, 1997, an elite draft added two more players to each team.  On April 28, 1997, the four rounds of the regular WNBA draft took place.  Draftees Cynthia Cooper, Sheryl Swoopes, and Tina Thompson would become the core pieces of the Houston Comets dynasty.\n\n2011 WWE draft: The 2011 WWE draft was the eighth annual (ninth overall) draft held by WWE, which took place on April 25.  With a core business of professional wrestling, the corporation held a draft to exchange personnel assigned to one of its two television programs (\"Raw\" and \"SmackDown\") that are (in terms of storyline) independent brands that represent WWE.  The draft aired live on the USA Network on \"Raw\" in the United States for two hours in Raleigh, North Carolina from the RBC Center.  As a standard for previous drafts, most on-air personnel were eligible to be drafted.  A continuation of the draft took place on WWE's official website at 12:00pm Eastern time on the following afternoon.\n\n1952 IRFU College Draft: The 1952 IRFU College Draft was an unofficial sports draft held by the Interprovincial Rugby Football Union, a predecessor of the East Division of the Canadian Football League, in the spring of 1952.  The concept was first developed at a meeting between Eastern officials on April 6, 1952.  In the meeting, the delegates agreed, in principle, that eligible college athletes would be selected by member clubs with the last place team selecting first in each round.  While the draft was unofficial, players selected in this draft were indeed added to the rosters of the clubs that had drafted them.\n\nChukwudiebere Maduabum: Chukwudiebere \"Chu\" Maduabum (born March 19, 1991), sometimes credited as \"Chuk\", \"Chuck\", or \"Chu Chu\", is a Nigerian professional basketball player for Kagoshima Rebnise of the Japanese Second Division.  He was drafted 56th overall by the Los Angeles Lakers in the 2011 NBA draft before his rights were traded to the Denver Nuggets.\n\n2011 NBA draft: The 2011 NBA draft was held on June 23, 2011, at Prudential Center in Newark, New Jersey.  The draft started at 7:00 pm Eastern Daylight Time (2300 UTC), and was broadcast in the United States on ESPN.  In this draft, National Basketball Association (NBA) teams took turns selecting amateur U.S. college basketball players and other eligible players, including international players.  The Cleveland Cavaliers had the first pick due to a previous trade they had involving the Los Angeles Clippers, choosing point guard Kyrie Irving of Duke.  Of the 60 players drafted, 7 were freshmen, 7 were sophomores, 14 were juniors, 19 were seniors, 12 were international players without U.S. college basketball experience (including the first ever Qatari-selected player), and 1 was a D-League player.\n\n2014 PBA Expansion Draft: The 2014 PBA Expansion Draft is the third expansion draft of the Philippine Basketball Association (PBA).  The draft was held on July 18, 2014, so that the newly founded teams Blackwater Elite and the Kia Sorento could acquire players for the 2014–15 season.  A \"protect 12\" scheme was implemented for the draft, meaning that the 10 existing PBA teams can protect up to 12 players in their rosters and will unconditionally release their unprotected players to the expansion pool.  This was the first expansion draft held by the PBA, since Batang Red Bull Energizers entered the league as an expansion team in 2000.  The draft will be closed to the public as the final list will be distributed only to the expansion clubs.  Players involved will be returned to their original teams if they are not chosen, provided they are unaware of their inclusion in the draft.\n\n1990 AFL draft: The 1990 AFL draft was the 5th annual draft of Australian rules footballers to the 14 clubs in the Australian Football League.  It consisted of the national draft held at the end of the 1990 season, the pre-season draft, held before 1991 AFL season and a mid-season draft.\n\nQuestion: Where was the draft held in which Chukwudiebere Maduabum was drafted?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"draft_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the draft event.\"\n    },\n    \"player_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the player who was drafted.\"\n    },\n    \"draft_location\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"venue\": {\n          \"type\": \"string\",\n          \"description\": \"The specific venue where the draft was held.\"\n        },\n        \"city\": {\n          \"type\": \"string\",\n          \"description\": \"The city where the draft was held.\"\n        },\n        \"state_or_country\": {\n          \"type\": \"string\",\n          \"description\": \"The state or country where the draft was held.\"\n        }\n      },\n      \"required\": [\n        \"venue\",\n        \"city\",\n        \"state_or_country\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"draft_name\",\n    \"player_name\",\n    \"draft_location\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "draft_name",
-    "player_name",
-    "draft_location"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "draft_name": {
+        "type": "string",
+        "description": "The name of the draft event."
+      },
+      "player_name": {
+        "type": "string",
+        "description": "The name of the player who was drafted."
+      },
+      "draft_location": {
+        "type": "object",
+        "properties": {
+          "venue": {
+            "type": "string",
+            "description": "The specific venue where the draft was held."
+          },
+          "city": {
+            "type": "string",
+            "description": "The city where the draft was held."
+          },
+          "state_or_country": {
+            "type": "string",
+            "description": "The state or country where the draft was held."
+          }
+        },
+        "required": [
+          "venue",
+          "city",
+          "state_or_country"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "draft_name",
+      "player_name",
+      "draft_location"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

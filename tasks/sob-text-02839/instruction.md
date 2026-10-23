@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Agents and Patients: Agents and Patients is the fourth novel by the English writer Anthony Powell.  It combines two of the aspects of 1930s life, film and psychoanalysis.  In what Powell himself has acknowledged is a "roman a clef" of sorts (Anthony Powell, "Journals 1987-1989", 121), a comically critical eye is cast across "entre deux guerres" society and its often self-indulgent, usually unsatisfied quest for contentment.
-
-Venusberg (novel): Venusberg is the second novel by the English writer Anthony Powell.  Published in 1932, it is set in an unidentified Baltic country which draws clearly on Powell's experiences in Finland and Estonia.  Some see the novel as part of the Ruritanian tradition (cf. "The Prisoner of Zenda"), perhaps a modernist pastiche of the form.
-
-Picnic (1955 film): Picnic is a 1955 American Technicolor romantic comedy-drama film filmed in Cinemascope.  It was adapted for the screen by Daniel Taradash from William Inge's 1953 Pulitzer Prize-winning play of the same name.  Joshua Logan, director of the original Broadway stage production, directed the film version, which stars William Holden, Kim Novak, and Rosalind Russell, with Susan Strasberg and Cliff Robertson in supporting roles.  "Picnic" was nominated for six Academy Awards and won two.
-
-Tess (film): Tess is a 1979 drama film directed by Roman Polanski, an adaptation of Thomas Hardy's 1891 novel "Tess of the d'Urbervilles".  The screenplay was written by Gérard Brach, John Brownjohn, and Roman Polanski.  The film received positive critical reviews upon release and was nominated for six Academy Awards including Best Picture, winning three for Best Cinematography, Best Art Direction and Best Costume Design.
-
-Waldon O. Watson: Waldon O. Watson (January 20, 1907 – August 15, 1986) was an American sound engineer.  He was nominated for six Academy Awards in the category Sound Recording.  He worked on nearly 150 films between 1948 and 1973.
-
-Killer Films: Killer Films is a New York City-based independent film production company founded by movie producers Christine Vachon and Pamela Koffler in 1995.  The company has produced a number of the most acclaimed American independent films over the past two decades including "Far From Heaven" (nominated for four Academy Awards), "Boys Don't Cry" (Academy Award winner), "One Hour Photo", "Kids", "Hedwig and the Angry Inch", "Happiness", "Velvet Goldmine", "Safe", "I Shot Andy Warhol", "Swoon", "I'm Not There" (Academy Award nominated), "Kill Your Darlings", "Still Alice" (Academy Award winner) and "Carol" (nominated for six Academy Awards).  Killer Films executive produced Todd Haynes' five episode HBO miniseries "Mildred Pierce" featuring Kate Winslet and Guy Pearce, which went on to win five Emmys, a Golden Globe and a Screen Actors Guild Award.
-
-Glen Robinson (visual effects): Thomas Glenn Robinson, better known as Glen Robinson (September 20, 1914 – March 27, 2002), was an American special and visual effects artist, winner of six Academy Awards: two Academy Awards for Technical Achievement and four Special Achievement Academy Awards.  As a special effects artist his career spans over six decades from the mid-1930s to the mid-1980s, having worked literally on dozens of films.
-
-List of science fiction films of the 2000s: This is a list of science fiction films released in the 2000s.  These films include core elements of science fiction, but can cross into other genres.  They have been released to a cinema audience by the commercial film industry and are widely distributed with reviews by reputable critics.  Collectively, the science fiction films from the 2000s have received six Academy Awards, twenty Saturn Awards, two Hugo Awards, one Nebula Award, five BAFTA awards, and six Magritte Awards. However, these films also received 17 Golden Raspberry Awards.
-
-Anthony Powell (designer): Anthony Powell (born 2 June 1935, Chorlton-cum-Hardy, Manchester, England) is an English costume designer for stage and screen.  He has won three Academy Awards, for "Travels with My Aunt" (1972), "Death on the Nile" (1978) and "Tess" (1979).  He has worked with directors such as George Cukor, Roman Polanski, Steven Spielberg, Robert Altman and David Lean.  Among the stars who have worn his creations are Dame Maggie Smith, Dame Angela Lansbury, Paul Newman, Bette Davis, Warren Beatty, Steve McQueen, Sean Connery, Dustin Hoffman, Roger Moore, Harrison Ford and Johnny Depp.
-
-List of Polish Academy Award winners and nominees: This is a list of Polish Academy Award winners and nominees.  This list details the performances of Polish actors, actresses, and films that have either been submitted or nominated for, or have won, an Academy Award.  This list is current as of the 80th Academy Awards ceremony held on February 24, 2008.  There were 12 Academy Awards given to Polish filmmakers or their work (see Foreign Film category), including two Honorary Academy Awards and a Technical Achievement Award.  The category of Cinematography has the strongest presence of Polish filmmakers, with two wins (both by Janusz Kamiński) and five other nominations (including two noms for Kamiński).  As of that, the cinematographer Janusz Kamiński is the most Oscar-awarded Polish filmmaker.  The second most-awarded Pole was designer Anton Grot, who won one Academy Award and was nominated to the Oscars five times more.  The director Roman Polanski won an Oscar and was nominated four more times (additionally, "Knife in the Water", film directed and written by him was also nominated).  The composer Bronislau Kaper was awarded an Oscar and was nominated three times more.
-
-Question: What film did Anthony Powell take part in that was nominated for six Academy Awards?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "anthony_powell_role": {
-      "type": "string",
-      "description": "The role Anthony Powell had in the film production."
-    },
-    "academy_award_nominations": {
-      "type": "integer",
-      "description": "The total number of Academy Award nominations the film received."
-    },
-    "academy_award_wins": {
-      "type": "integer",
-      "description": "The total number of Academy Awards the film won."
-    },
-    "anthony_powell_award_for_film": {
-      "type": "string",
-      "description": "The specific Academy Award Anthony Powell won for this film, if mentioned."
+    {
+      "role": "user",
+      "content": "Context:\nAgents and Patients: Agents and Patients is the fourth novel by the English writer Anthony Powell.  It combines two of the aspects of 1930s life, film and psychoanalysis.  In what Powell himself has acknowledged is a \"roman a clef\" of sorts (Anthony Powell, \"Journals 1987-1989\", 121), a comically critical eye is cast across \"entre deux guerres\" society and its often self-indulgent, usually unsatisfied quest for contentment.\n\nVenusberg (novel): Venusberg is the second novel by the English writer Anthony Powell.  Published in 1932, it is set in an unidentified Baltic country which draws clearly on Powell's experiences in Finland and Estonia.  Some see the novel as part of the Ruritanian tradition (cf. \"The Prisoner of Zenda\"), perhaps a modernist pastiche of the form.\n\nPicnic (1955 film): Picnic is a 1955 American Technicolor romantic comedy-drama film filmed in Cinemascope.  It was adapted for the screen by Daniel Taradash from William Inge's 1953 Pulitzer Prize-winning play of the same name.  Joshua Logan, director of the original Broadway stage production, directed the film version, which stars William Holden, Kim Novak, and Rosalind Russell, with Susan Strasberg and Cliff Robertson in supporting roles.  \"Picnic\" was nominated for six Academy Awards and won two.\n\nTess (film): Tess is a 1979 drama film directed by Roman Polanski, an adaptation of Thomas Hardy's 1891 novel \"Tess of the d'Urbervilles\".  The screenplay was written by Gérard Brach, John Brownjohn, and Roman Polanski.  The film received positive critical reviews upon release and was nominated for six Academy Awards including Best Picture, winning three for Best Cinematography, Best Art Direction and Best Costume Design.\n\nWaldon O. Watson: Waldon O. Watson (January 20, 1907 – August 15, 1986) was an American sound engineer.  He was nominated for six Academy Awards in the category Sound Recording.  He worked on nearly 150 films between 1948 and 1973.\n\nKiller Films: Killer Films is a New York City-based independent film production company founded by movie producers Christine Vachon and Pamela Koffler in 1995.  The company has produced a number of the most acclaimed American independent films over the past two decades including \"Far From Heaven\" (nominated for four Academy Awards), \"Boys Don't Cry\" (Academy Award winner), \"One Hour Photo\", \"Kids\", \"Hedwig and the Angry Inch\", \"Happiness\", \"Velvet Goldmine\", \"Safe\", \"I Shot Andy Warhol\", \"Swoon\", \"I'm Not There\" (Academy Award nominated), \"Kill Your Darlings\", \"Still Alice\" (Academy Award winner) and \"Carol\" (nominated for six Academy Awards).  Killer Films executive produced Todd Haynes' five episode HBO miniseries \"Mildred Pierce\" featuring Kate Winslet and Guy Pearce, which went on to win five Emmys, a Golden Globe and a Screen Actors Guild Award.\n\nGlen Robinson (visual effects): Thomas Glenn Robinson, better known as Glen Robinson (September 20, 1914 – March 27, 2002), was an American special and visual effects artist, winner of six Academy Awards: two Academy Awards for Technical Achievement and four Special Achievement Academy Awards.  As a special effects artist his career spans over six decades from the mid-1930s to the mid-1980s, having worked literally on dozens of films.\n\nList of science fiction films of the 2000s: This is a list of science fiction films released in the 2000s.  These films include core elements of science fiction, but can cross into other genres.  They have been released to a cinema audience by the commercial film industry and are widely distributed with reviews by reputable critics.  Collectively, the science fiction films from the 2000s have received six Academy Awards, twenty Saturn Awards, two Hugo Awards, one Nebula Award, five BAFTA awards, and six Magritte Awards. However, these films also received 17 Golden Raspberry Awards.\n\nAnthony Powell (designer): Anthony Powell (born 2 June 1935, Chorlton-cum-Hardy, Manchester, England) is an English costume designer for stage and screen.  He has won three Academy Awards, for \"Travels with My Aunt\" (1972), \"Death on the Nile\" (1978) and \"Tess\" (1979).  He has worked with directors such as George Cukor, Roman Polanski, Steven Spielberg, Robert Altman and David Lean.  Among the stars who have worn his creations are Dame Maggie Smith, Dame Angela Lansbury, Paul Newman, Bette Davis, Warren Beatty, Steve McQueen, Sean Connery, Dustin Hoffman, Roger Moore, Harrison Ford and Johnny Depp.\n\nList of Polish Academy Award winners and nominees: This is a list of Polish Academy Award winners and nominees.  This list details the performances of Polish actors, actresses, and films that have either been submitted or nominated for, or have won, an Academy Award.  This list is current as of the 80th Academy Awards ceremony held on February 24, 2008.  There were 12 Academy Awards given to Polish filmmakers or their work (see Foreign Film category), including two Honorary Academy Awards and a Technical Achievement Award.  The category of Cinematography has the strongest presence of Polish filmmakers, with two wins (both by Janusz Kamiński) and five other nominations (including two noms for Kamiński).  As of that, the cinematographer Janusz Kamiński is the most Oscar-awarded Polish filmmaker.  The second most-awarded Pole was designer Anton Grot, who won one Academy Award and was nominated to the Oscars five times more.  The director Roman Polanski won an Oscar and was nominated four more times (additionally, \"Knife in the Water\", film directed and written by him was also nominated).  The composer Bronislau Kaper was awarded an Oscar and was nominated three times more.\n\nQuestion: What film did Anthony Powell take part in that was nominated for six Academy Awards?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"anthony_powell_role\": {\n      \"type\": \"string\",\n      \"description\": \"The role Anthony Powell had in the film production.\"\n    },\n    \"academy_award_nominations\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of Academy Award nominations the film received.\"\n    },\n    \"academy_award_wins\": {\n      \"type\": \"integer\",\n      \"description\": \"The total number of Academy Awards the film won.\"\n    },\n    \"anthony_powell_award_for_film\": {\n      \"type\": \"string\",\n      \"description\": \"The specific Academy Award Anthony Powell won for this film, if mentioned.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"anthony_powell_role\",\n    \"academy_award_nominations\",\n    \"academy_award_wins\",\n    \"anthony_powell_award_for_film\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "anthony_powell_role",
-    "academy_award_nominations",
-    "academy_award_wins",
-    "anthony_powell_award_for_film"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "anthony_powell_role": {
+        "type": "string",
+        "description": "The role Anthony Powell had in the film production."
+      },
+      "academy_award_nominations": {
+        "type": "integer",
+        "description": "The total number of Academy Award nominations the film received."
+      },
+      "academy_award_wins": {
+        "type": "integer",
+        "description": "The total number of Academy Awards the film won."
+      },
+      "anthony_powell_award_for_film": {
+        "type": "string",
+        "description": "The specific Academy Award Anthony Powell won for this film, if mentioned."
+      }
+    },
+    "required": [
+      "film_title",
+      "anthony_powell_role",
+      "academy_award_nominations",
+      "academy_award_wins",
+      "anthony_powell_award_for_film"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

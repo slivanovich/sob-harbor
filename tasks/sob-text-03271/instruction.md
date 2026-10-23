@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Red Cliffs National Conservation Area: The Red Cliffs National Conservation Area is a 44724 acres National Conservation Area located in southwest Utah, north of St. George at the northeastern-most edge of the Mojave Desert.  It is managed by the Bureau of Land Management as part of the National Landscape Conservation System, and was created as part of the Omnibus Public Land Management Act of 2009.
-
-Steese National Conservation Area: The Steese National Conservation Area encompasses 1200000 acre of public land about 100 mi northeast of Fairbanks, Alaska, and is administered by the Bureau of Land Management as part of the National Landscape Conservation System.  Created by the Alaska National Interest Lands Conservation Act in 1980, the Steese NCA's special values include Birch Creek National Wild River, crucial caribou calving grounds and home range, and Dall sheep habitat.  While various land uses are allowed in the Steese NCA, the area is managed so that its scenic, scientific, cultural and other resources are protected.
-
-Red Rock Canyon National Conservation Area: The Red Rock Canyon National Conservation Area in Nevada is an area managed by the Bureau of Land Management as part of its National Landscape Conservation System, and protected as a National Conservation Area.  It is located about 15 mi west of Las Vegas, and is easily seen from the Las Vegas Strip.  The area is visited by more than two million people each year.
-
-National Conservation Area: National Conservation Area is a designation for certain protected areas in the United States.  They are nature conservation areas managed by the Bureau of Land Management (BLM) under the National Landscape Conservation System.
-
-The Lakes, Las Vegas: The Lakes is an affluent 2 sqmi planned community located within the city limits of Las Vegas, Nevada.  It is located in the western part of the Las Vegas Valley near the Spring Mountains and Red Rock Canyon National Conservation Area.  The centerpiece of the community, and its namesake, is a large man-made lake, Lake Sahara.  It was originally planned to have two man-made lakes but was downscoped to one.  It was built from the mid-1980s to the mid-1990s, and at the time was at the edge of development in the valley.  It consists of a mixture of gated communities consisting of large single-family homes, condominia, commercial areas and offices.
-
-El Malpais National Conservation Area: The El Malpais National Conservation Area is a federally protected conservation area in the U.S. state of New Mexico.  The El Malpais National Conservation area was established in 1987 and is managed by the Bureau of Land Management as part of the National Landscape Conservation System.  The adjoining El Malpais National Monument was established at the same time and is managed by the National Park Service.
-
-Gunnison Gorge National Conservation Area: The Gunnison Gorge National Conservation Area is a 62844 acres National Conservation Area located in west-central Colorado near Montrose.  It is managed by the Bureau of Land Management (BLM) as part of the National Landscape Conservation System.  57725 acres were designated in the Black Canyon of the Gunnison National Park and Gunnison Gorge National Conservation Area Act of 1999 (Public Law 106-76).  The Black Canyon of the Gunnison Boundary Revision Act of 2003 (PL 108-78) expanded the NCA to its current size.
-
-Canyons of the Ancients National Monument: Canyons of the Ancients National Monument is a national monument protecting an archaeologically-significant landscape located in the southwestern region of the U.S. state of Colorado.  The monument's 176,056 acre are managed by the Bureau of Land Management, as directed in the Presidential proclamation which created the site on June 9, 2000.  Canyons of the Ancients National Monument is part of the National Landscape Conservation System, better known as the National Conservation Lands.  This system comprises 32 million acres managed by the Bureau of Land Management to conserve, protect, and restore these nationally significant landscapes recognized for their outstanding cultural, ecological, and scientific values.  Canyons of the Ancients encompasses and surrounds three of the four separate sections of Hovenweep National Monument, which is administered by the National Park Service.  The monument was proclaimed in order to preserve the largest concentration of archaeological sites in the United States, primarily Ancestral Puebloan ruins.  As of 2005, over 6,000 individual archeological sites had been identified within the monument.
-
-Yaquina Head: Yaquina Head ( ) is a headland extending into the Pacific Ocean north of Newport, in the U.S. state of Oregon.  It is the site of the Yaquina Head Light, and is managed as Yaquina Head Outstanding Natural Area by the Bureau of Land Management.  It is part of the National Landscape Conservation System, commonly known as the National Conservation Lands.
-
-Beaver Dam Wash National Conservation Area: The Beaver Dam Wash National Conservation Area is a 63500 acres United States National Conservation Area located in southwest Utah west of St. George along the borders with Arizona and Nevada.  It is managed by the U.S. Bureau of Land Management as part of the National Landscape Conservation System, and was authorized in the Omnibus Public Land Management Act of 2009.
-
-Question: What as part of its National Landscape Conservation System, and  protected as a National Conservation Area is located in the western part of Las Vegas?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "conservation_area_name": {
-      "type": "string",
-      "description": "The name of the National Conservation Area."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "location_description": {
-      "type": "string",
-      "description": "A description of the conservation area's location relative to Las Vegas."
-    },
-    "is_part_of_national_landscape_conservation_system": {
-      "type": "boolean",
-      "description": "Indicates if the area is part of the National Landscape Conservation System."
+    {
+      "role": "user",
+      "content": "Context:\nRed Cliffs National Conservation Area: The Red Cliffs National Conservation Area is a 44724 acres National Conservation Area located in southwest Utah, north of St. George at the northeastern-most edge of the Mojave Desert.  It is managed by the Bureau of Land Management as part of the National Landscape Conservation System, and was created as part of the Omnibus Public Land Management Act of 2009.\n\nSteese National Conservation Area: The Steese National Conservation Area encompasses 1200000 acre of public land about 100 mi northeast of Fairbanks, Alaska, and is administered by the Bureau of Land Management as part of the National Landscape Conservation System.  Created by the Alaska National Interest Lands Conservation Act in 1980, the Steese NCA's special values include Birch Creek National Wild River, crucial caribou calving grounds and home range, and Dall sheep habitat.  While various land uses are allowed in the Steese NCA, the area is managed so that its scenic, scientific, cultural and other resources are protected.\n\nRed Rock Canyon National Conservation Area: The Red Rock Canyon National Conservation Area in Nevada is an area managed by the Bureau of Land Management as part of its National Landscape Conservation System, and protected as a National Conservation Area.  It is located about 15 mi west of Las Vegas, and is easily seen from the Las Vegas Strip.  The area is visited by more than two million people each year.\n\nNational Conservation Area: National Conservation Area is a designation for certain protected areas in the United States.  They are nature conservation areas managed by the Bureau of Land Management (BLM) under the National Landscape Conservation System.\n\nThe Lakes, Las Vegas: The Lakes is an affluent 2 sqmi planned community located within the city limits of Las Vegas, Nevada.  It is located in the western part of the Las Vegas Valley near the Spring Mountains and Red Rock Canyon National Conservation Area.  The centerpiece of the community, and its namesake, is a large man-made lake, Lake Sahara.  It was originally planned to have two man-made lakes but was downscoped to one.  It was built from the mid-1980s to the mid-1990s, and at the time was at the edge of development in the valley.  It consists of a mixture of gated communities consisting of large single-family homes, condominia, commercial areas and offices.\n\nEl Malpais National Conservation Area: The El Malpais National Conservation Area is a federally protected conservation area in the U.S. state of New Mexico.  The El Malpais National Conservation area was established in 1987 and is managed by the Bureau of Land Management as part of the National Landscape Conservation System.  The adjoining El Malpais National Monument was established at the same time and is managed by the National Park Service.\n\nGunnison Gorge National Conservation Area: The Gunnison Gorge National Conservation Area is a 62844 acres National Conservation Area located in west-central Colorado near Montrose.  It is managed by the Bureau of Land Management (BLM) as part of the National Landscape Conservation System.  57725 acres were designated in the Black Canyon of the Gunnison National Park and Gunnison Gorge National Conservation Area Act of 1999 (Public Law 106-76).  The Black Canyon of the Gunnison Boundary Revision Act of 2003 (PL 108-78) expanded the NCA to its current size.\n\nCanyons of the Ancients National Monument: Canyons of the Ancients National Monument is a national monument protecting an archaeologically-significant landscape located in the southwestern region of the U.S. state of Colorado.  The monument's 176,056 acre are managed by the Bureau of Land Management, as directed in the Presidential proclamation which created the site on June 9, 2000.  Canyons of the Ancients National Monument is part of the National Landscape Conservation System, better known as the National Conservation Lands.  This system comprises 32 million acres managed by the Bureau of Land Management to conserve, protect, and restore these nationally significant landscapes recognized for their outstanding cultural, ecological, and scientific values.  Canyons of the Ancients encompasses and surrounds three of the four separate sections of Hovenweep National Monument, which is administered by the National Park Service.  The monument was proclaimed in order to preserve the largest concentration of archaeological sites in the United States, primarily Ancestral Puebloan ruins.  As of 2005, over 6,000 individual archeological sites had been identified within the monument.\n\nYaquina Head: Yaquina Head ( ) is a headland extending into the Pacific Ocean north of Newport, in the U.S. state of Oregon.  It is the site of the Yaquina Head Light, and is managed as Yaquina Head Outstanding Natural Area by the Bureau of Land Management.  It is part of the National Landscape Conservation System, commonly known as the National Conservation Lands.\n\nBeaver Dam Wash National Conservation Area: The Beaver Dam Wash National Conservation Area is a 63500 acres United States National Conservation Area located in southwest Utah west of St. George along the borders with Arizona and Nevada.  It is managed by the U.S. Bureau of Land Management as part of the National Landscape Conservation System, and was authorized in the Omnibus Public Land Management Act of 2009.\n\nQuestion: What as part of its National Landscape Conservation System, and  protected as a National Conservation Area is located in the western part of Las Vegas?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"conservation_area_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the National Conservation Area.\"\n    },\n    \"location_description\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the conservation area's location relative to Las Vegas.\"\n    },\n    \"is_part_of_national_landscape_conservation_system\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the area is part of the National Landscape Conservation System.\"\n    }\n  },\n  \"required\": [\n    \"conservation_area_name\",\n    \"location_description\",\n    \"is_part_of_national_landscape_conservation_system\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "conservation_area_name",
-    "location_description",
-    "is_part_of_national_landscape_conservation_system"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "conservation_area_name": {
+        "type": "string",
+        "description": "The name of the National Conservation Area."
+      },
+      "location_description": {
+        "type": "string",
+        "description": "A description of the conservation area's location relative to Las Vegas."
+      },
+      "is_part_of_national_landscape_conservation_system": {
+        "type": "boolean",
+        "description": "Indicates if the area is part of the National Landscape Conservation System."
+      }
+    },
+    "required": [
+      "conservation_area_name",
+      "location_description",
+      "is_part_of_national_landscape_conservation_system"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

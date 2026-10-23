@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Academy of Public Administration (Belarus): The Academy of Public Administration under the aegis of the President of the Republic of Belarus (Belarusian: "Акадэ́мiя кiрава́ння пры Прэзiдэ́нце Рэспу́блiкi Белару́сь" , Russian: "Акаде́мия управле́ния при Президе́нте Респу́блики Белару́сь" ), Minsk, is the leading higher educational establishment in a national education system of the Republic of Belarus and head establishment of education in system of training, retraining and in-service training of the personnel in management sphere.
-
-The Alisher Navoi State Museum of Literature: The Alisher Navoi State Museum of Literature of the Academy of Sciences of Uzbekistan is a unique and scientific-cultural, educational establishment which mainly focuses on collecting and researching the historical materials and objects which are related to the Uzbekistan’s history.  The museum plays big role in cultural development of young generation in Uzbekistan and it keeps various documents, manuscripts from the Middle Ages.
-
-Saint Petersburg Art and Industry Academy: The Saint Petersburg Stieglitz State Academy of Art and Design, named again in post-Soviet Russia after its founder Alexander von Stieglitz and known in Soviet times as the Leningrad Vera Mukhina Higher School of Art and Design, was set up in Saint Petersburg in 1876 as the Baron Alexander von Stieglitz's School of Technical Drawing.  In 1945, by decision of the Soviet Government School of Technical Drawing, it was re-established as the College of Art and Design which provides training in the monumental, decorative and industrial arts.  In 1948 it became the Leningrad Higher School of Art and Industry.  Vera Mukhina (the monumentalist author of Worker and Kolkhoz Woman), whose name had been a symbol of Soviet art, was not considered after the collapse of the Soviet Union personally linked to the school, and the educational establishment was renamed after its originator.
-
-Igor P. Kaidashev: Igor Petrovych Kaidashev (Ukrainian: Ігор Петрович Кайдашев , Russian: Игорь Петрович Кайдашев ; 30 May 1969, Zaporizhia, Ukraine) is a Ukrainian immunologist and allergist, MD, and Professor.  Igor Kaidashev is President of the Ukrainian Society of Immunology, Allergy and Immunorehabilitation, Head of the Department of Internal Medicine No. 3 at Higher State Educational Establishment of Ukraine "Ukrainian Medical Stomatological Academy", and Prorector for Research & Development at Higher State Educational Establishment of Ukraine "Ukrainian Medical Stomatological Academy" (UMSA) since 2010.
-
-Sidney Webb, 1st Baron Passfield: Sidney James Webb, 1st Baron Passfield (13 July 1859 – 13 October 1947) was a British socialist, economist, reformer and a co-founder of the London School of Economics.  He was one of the early members of the Fabian Society in 1884, along with George Bernard Shaw (they joined three months after its inception).  Along with his wife Beatrice Webb, Annie Besant, Graham Wallas, Edward R. Pease, Hubert Bland, and Sydney Olivier, Shaw and Webb turned the Fabian Society into the pre-eminent political-intellectual society of England during the Edwardian era and beyond.  He wrote the original Clause IV for the British Labour Party.
-
-Ural State University: The Ural State University (Russian: Урáльский госудáрственный университéт и́мени А.М.  Гóрького, "Urál'skiy gosudárstvennyy universitét ímeni A. M. Gór'kogo", often shortened to USU, УрГУ ) is located in the city of Yekaterinburg, Sverdlovsk Oblast, Russian Federation.  Founded in 1920, it was an exclusive educational establishment made of several institutes (educational and scientific divisions) which later became independent universities and schools.
-
-Bukovinian State Medical University: Bukovinian State Medical University (abbreviated as BSMU or БДМУ) is one of the largest higher educational establishment in Chernivtsi.  It has recently celebrated the 65th anniversary of its foundation.  It is a modern multiprofile educational institution of the IV accreditation level, included into the general register of the WHO, Magna Charta Universitatum (Bologna, Italy), the Association of the Carpathian Region Universities that provides qualified training according to the grade system of education.  The University includes a medical lyceum, Chernivtsi, Vashkivtsi, Novoselytsia and Kovel’ (Volyn’) Medical Colleges, 4 medical faculties, stomatological and pharmaceutical faculties, the department of post-graduate education, preparatory department for foreign students.
-
-Frank Wallace Galton: Frank Wallace Galton, sometimes known as Frank Wallis Galton, (1867 - 9 April 1952) was an English political writer and journalist who was secretary to Sidney and Beatrice Webb and later to the Fabian Society.  In 1929, he was appointed to the Royal Commission on Transport.
-
-Army Aviation School: An Army Aviation School is a military educational establishment responsible for the training and development of the personnel and equipment of the aviation element in those armies that have a separate aviation branch.
-
-Kanak Language Academy: The Kanak Language Academy (Académie des Langues Kanak; KLA) is a local, public educational establishment in New Caledonia.  Founded in 2007, with roots reaching to the Nouméa Accords of 1998, the legislative assembly endorsed the setting up of the French territory’s first indigenous Kanak languages institute.  Its mission is "to establish rules of usage and to help promote and develop all Kanak languages and dialects".  The KLA is expected to standardise, protect, and develop the about forty Kanak languages and dialects, as well as standardize the written form for Kanak languages.
-
-Question: Frank Galton was once secretary to the founder of what educational establishment?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "secretary_details": {
-      "type": "object",
-      "properties": {
-        "secretary_name": {
-          "type": "string",
-          "description": "The name of the secretary."
-        },
-        "served_person_name": {
-          "type": "string",
-          "description": "The name of the person the secretary served."
-        },
-        "served_person_role_in_establishment": {
-          "type": "string",
-          "description": "The role of the served person in the educational establishment."
-        }
-      },
-      "required": [
-        "secretary_name",
-        "served_person_name",
-        "served_person_role_in_establishment"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "educational_establishment_name": {
-      "type": "string",
-      "description": "The name of the educational establishment."
-    },
-    "relationship_description": {
-      "type": "string",
-      "description": "A description of the relationship between the secretary, the served person, and the educational establishment."
+    {
+      "role": "user",
+      "content": "Context:\nAcademy of Public Administration (Belarus): The Academy of Public Administration under the aegis of the President of the Republic of Belarus (Belarusian: \"Акадэ́мiя кiрава́ння пры Прэзiдэ́нце Рэспу́блiкi Белару́сь\" , Russian: \"Акаде́мия управле́ния при Президе́нте Респу́блики Белару́сь\" ), Minsk, is the leading higher educational establishment in a national education system of the Republic of Belarus and head establishment of education in system of training, retraining and in-service training of the personnel in management sphere.\n\nThe Alisher Navoi State Museum of Literature: The Alisher Navoi State Museum of Literature of the Academy of Sciences of Uzbekistan is a unique and scientific-cultural, educational establishment which mainly focuses on collecting and researching the historical materials and objects which are related to the Uzbekistan’s history.  The museum plays big role in cultural development of young generation in Uzbekistan and it keeps various documents, manuscripts from the Middle Ages.\n\nSaint Petersburg Art and Industry Academy: The Saint Petersburg Stieglitz State Academy of Art and Design, named again in post-Soviet Russia after its founder Alexander von Stieglitz and known in Soviet times as the Leningrad Vera Mukhina Higher School of Art and Design, was set up in Saint Petersburg in 1876 as the Baron Alexander von Stieglitz's School of Technical Drawing.  In 1945, by decision of the Soviet Government School of Technical Drawing, it was re-established as the College of Art and Design which provides training in the monumental, decorative and industrial arts.  In 1948 it became the Leningrad Higher School of Art and Industry.  Vera Mukhina (the monumentalist author of Worker and Kolkhoz Woman), whose name had been a symbol of Soviet art, was not considered after the collapse of the Soviet Union personally linked to the school, and the educational establishment was renamed after its originator.\n\nIgor P. Kaidashev: Igor Petrovych Kaidashev (Ukrainian: Ігор Петрович Кайдашев , Russian: Игорь Петрович Кайдашев ; 30 May 1969, Zaporizhia, Ukraine) is a Ukrainian immunologist and allergist, MD, and Professor.  Igor Kaidashev is President of the Ukrainian Society of Immunology, Allergy and Immunorehabilitation, Head of the Department of Internal Medicine No. 3 at Higher State Educational Establishment of Ukraine \"Ukrainian Medical Stomatological Academy\", and Prorector for Research & Development at Higher State Educational Establishment of Ukraine \"Ukrainian Medical Stomatological Academy\" (UMSA) since 2010.\n\nSidney Webb, 1st Baron Passfield: Sidney James Webb, 1st Baron Passfield (13 July 1859 – 13 October 1947) was a British socialist, economist, reformer and a co-founder of the London School of Economics.  He was one of the early members of the Fabian Society in 1884, along with George Bernard Shaw (they joined three months after its inception).  Along with his wife Beatrice Webb, Annie Besant, Graham Wallas, Edward R. Pease, Hubert Bland, and Sydney Olivier, Shaw and Webb turned the Fabian Society into the pre-eminent political-intellectual society of England during the Edwardian era and beyond.  He wrote the original Clause IV for the British Labour Party.\n\nUral State University: The Ural State University (Russian: Урáльский госудáрственный университéт и́мени А.М.  Гóрького, \"Urál'skiy gosudárstvennyy universitét ímeni A. M. Gór'kogo\", often shortened to USU, УрГУ ) is located in the city of Yekaterinburg, Sverdlovsk Oblast, Russian Federation.  Founded in 1920, it was an exclusive educational establishment made of several institutes (educational and scientific divisions) which later became independent universities and schools.\n\nBukovinian State Medical University: Bukovinian State Medical University (abbreviated as BSMU or БДМУ) is one of the largest higher educational establishment in Chernivtsi.  It has recently celebrated the 65th anniversary of its foundation.  It is a modern multiprofile educational institution of the IV accreditation level, included into the general register of the WHO, Magna Charta Universitatum (Bologna, Italy), the Association of the Carpathian Region Universities that provides qualified training according to the grade system of education.  The University includes a medical lyceum, Chernivtsi, Vashkivtsi, Novoselytsia and Kovel’ (Volyn’) Medical Colleges, 4 medical faculties, stomatological and pharmaceutical faculties, the department of post-graduate education, preparatory department for foreign students.\n\nFrank Wallace Galton: Frank Wallace Galton, sometimes known as Frank Wallis Galton, (1867 - 9 April 1952) was an English political writer and journalist who was secretary to Sidney and Beatrice Webb and later to the Fabian Society.  In 1929, he was appointed to the Royal Commission on Transport.\n\nArmy Aviation School: An Army Aviation School is a military educational establishment responsible for the training and development of the personnel and equipment of the aviation element in those armies that have a separate aviation branch.\n\nKanak Language Academy: The Kanak Language Academy (Académie des Langues Kanak; KLA) is a local, public educational establishment in New Caledonia.  Founded in 2007, with roots reaching to the Nouméa Accords of 1998, the legislative assembly endorsed the setting up of the French territory’s first indigenous Kanak languages institute.  Its mission is \"to establish rules of usage and to help promote and develop all Kanak languages and dialects\".  The KLA is expected to standardise, protect, and develop the about forty Kanak languages and dialects, as well as standardize the written form for Kanak languages.\n\nQuestion: Frank Galton was once secretary to the founder of what educational establishment?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"secretary_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"secretary_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the secretary.\"\n        },\n        \"served_person_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the person the secretary served.\"\n        },\n        \"served_person_role_in_establishment\": {\n          \"type\": \"string\",\n          \"description\": \"The role of the served person in the educational establishment.\"\n        }\n      },\n      \"required\": [\n        \"secretary_name\",\n        \"served_person_name\",\n        \"served_person_role_in_establishment\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"educational_establishment_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the educational establishment.\"\n    },\n    \"relationship_description\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the relationship between the secretary, the served person, and the educational establishment.\"\n    }\n  },\n  \"required\": [\n    \"secretary_details\",\n    \"educational_establishment_name\",\n    \"relationship_description\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "secretary_details",
-    "educational_establishment_name",
-    "relationship_description"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "secretary_details": {
+        "type": "object",
+        "properties": {
+          "secretary_name": {
+            "type": "string",
+            "description": "The name of the secretary."
+          },
+          "served_person_name": {
+            "type": "string",
+            "description": "The name of the person the secretary served."
+          },
+          "served_person_role_in_establishment": {
+            "type": "string",
+            "description": "The role of the served person in the educational establishment."
+          }
+        },
+        "required": [
+          "secretary_name",
+          "served_person_name",
+          "served_person_role_in_establishment"
+        ],
+        "additionalProperties": false
+      },
+      "educational_establishment_name": {
+        "type": "string",
+        "description": "The name of the educational establishment."
+      },
+      "relationship_description": {
+        "type": "string",
+        "description": "A description of the relationship between the secretary, the served person, and the educational establishment."
+      }
+    },
+    "required": [
+      "secretary_details",
+      "educational_establishment_name",
+      "relationship_description"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

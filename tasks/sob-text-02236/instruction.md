@@ -1,62 +1,39 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Bideford RFC: Bideford RFC is an English Rugby union team formed in 1926.  The club is based in Bideford, Devon, and operates four senior men's teams including the colts, as well as multiple youth, ladies and mini teams.  The first team, known as the "Chiefs", currently play in Tribute South West 1 West.  The club has a longstanding rivalry with neighbours Barnstaple, and the traditional Boxing Day fixture between the two sides often attracts crowds in excess of a thousand supporters.  Bideford plays home games at King George's Field.
-
-2010 Warrington Wolves season: The Wolves played three pre-season fixtures in total.  The traditional Boxing Day fixture with rivals Widnes Vikings was postponed first on the 26/12/2009 and then on the 03/01/2010 due to the pitch being frozen.  No further dates were attempted for this fixture.  The Wolves first pre-season fixture saw them travel for the first time to Leigh Sports Village to face Leigh Centurions on the 17/01/2010.  The Wolves ran out 16-60 victors on the day.  The club then travelled to Derwent Park to face Workington Town on the 23/01/2010 in a game that helped raise funds for the area following the floods earlier this year.  Warrington sent the Under 21's team but still had enough strength to record a 12-34 victory against the semi-professionals from Cumbria.  Warrington's final warm up fixture was for Paul Wood's Testimonial and take place at Halliwell Jones Stadium on 27/01/2010 against Super League rivals Wigan Warriors.  Wigan stole the show and recorded a 12-20 victory, this being the Warriors first ever victory at the new home of the Wolves since 2003.
-
-Kyar Ba Nyein: "Kyar" Ba Nyein (Burmese: ကျား ဘငြိမ်း ] ; 23 November 1923 – 8 July 1979) was the Burmese boxer who participated in boxing at the 1952 Summer Olympics and was a pioneer in modernizing the Lethwei, or Burmese style of traditional boxing.  Ba Nyein started boxing at the age of 13 and fought in about 50 matches over 20 years until retiring from fighting at the age of 33.
-
-Knockout punch: A knockout punch, also known as a chassis punch, panel punch, Greenlee punch, or a Q-max, is a hand tool used to punch a hole through sheet metal.  It is a very simple tool that consists of a punch, die, and screw.  There are three different drive systems: manual, ratchet, and hydraulic.
-
-Teiken Boxing Gym: Teiken Boxing Gym (帝拳ボクシングジム ) in Tokyo, a Japan's traditional boxing club whose genesis dates back to 1926, manages professional boxers as a member of the East Japan Boxing Association (東日本ボクシング協会 , abbreviated as JPBA-east) , a subsidiary body of Japan Pro Boxing Association (日本プロボクシング協会 , abbreviated as JPBA) .  Currently located in Kagurazaka, Shinjuku, its president is the International Boxing Hall of Famer Akihiko Honda (本田 明彦 ) , the representative is Tsuyoshi Hamada (浜田 剛史 ) , and the long-time female manager is Haru Nagano (長野 ハル ) .  In order to distinguish from three related clubs i.e. Osaka Teiken Boxing Gym, Fukuoka Teiken Boxing Gym and Hachinohe Teiken Boxing Gym, it is often referred to as "Teiken (Boxing) Gym in Tokyo" or "Tokyo's Teiken (Boxing) Gym".
-
-Bolo punch: A bolo punch is a punch used in martial arts.  The bolo punch is not among the traditional boxing punches (jab, uppercut, hook and cross).
-
-Pakistani cricket team in South Africa in 2012–13: The Pakistani cricket team are touring South Africa from 1 February to 24 March 2013.  The tour will consist of two Twenty20 Internationals (T20Is), three Test matches and five One Day Internationals (ODIs).  South Africa announced their summer schedule of January–March in which they replaced their traditional Boxing Day Test with a T20I for the 2012–13 home season, during which they will host New Zealand and Pakistan.
-
-Cross (boxing): In boxing, a cross (also commonly called a straight) is a power-punch like the uppercut and hook.  Compubox, a computerized punch scoring system, counts the cross as a "power-punch".
-
-Punch and Judy: Punch and Judy is a traditional, popular, and usually violent puppet show featuring Pulcinella (Mr. Punch) and his wife Judy.  The performance consists of a sequence of short scenes, each depicting an interaction between two characters, most typically Mr. Punch and one other character who usually falls victim to Judy's club.  It is often associated with traditional British seaside culture.  The various episodes of Punch and Judy are performed in the spirit of outrageous comedy—often provoking shocked laughter—and are dominated by the clowning of Mr. Punch.
-
-Sucker punch: A sucker punch (American English), also known as a coward punch, or cold-cock (American English), is a punch made without warning, allowing no time for preparation or defense on the part of the recipient.  The term is generally used in situations where the way in which the punch has been delivered is considered unfair or unethical.  In practice, this often includes punches delivered from behind.  While the one hit punch and king hit (Australian English) is a different style of one-on-one fighting - pitting one individual against another .  It can be considered as a sucker punch when the recipient isn't expecting it, or if they are unevenly matched by weight - which some people use to help strengthen the amount of force used .
-
-Question: What other punch besides the "power-punches" is used in traditional boxing?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "non_power_traditional_punch": {
-      "type": "string",
-      "description": "The name of the traditional boxing punch that is not classified as a power-punch."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "is_traditional_boxing_punch": {
-      "type": "boolean",
-      "description": "Indicates if the identified punch is considered a traditional boxing punch."
-    },
-    "power_punches_mentioned": {
-      "type": "array",
-      "description": "A list of punches explicitly identified as 'power-punches' in the context.",
-      "items": {
-        "type": "string"
-      }
+    {
+      "role": "user",
+      "content": "Context:\nBideford RFC: Bideford RFC is an English Rugby union team formed in 1926.  The club is based in Bideford, Devon, and operates four senior men's teams including the colts, as well as multiple youth, ladies and mini teams.  The first team, known as the \"Chiefs\", currently play in Tribute South West 1 West.  The club has a longstanding rivalry with neighbours Barnstaple, and the traditional Boxing Day fixture between the two sides often attracts crowds in excess of a thousand supporters.  Bideford plays home games at King George's Field.\n\n2010 Warrington Wolves season: The Wolves played three pre-season fixtures in total.  The traditional Boxing Day fixture with rivals Widnes Vikings was postponed first on the 26/12/2009 and then on the 03/01/2010 due to the pitch being frozen.  No further dates were attempted for this fixture.  The Wolves first pre-season fixture saw them travel for the first time to Leigh Sports Village to face Leigh Centurions on the 17/01/2010.  The Wolves ran out 16-60 victors on the day.  The club then travelled to Derwent Park to face Workington Town on the 23/01/2010 in a game that helped raise funds for the area following the floods earlier this year.  Warrington sent the Under 21's team but still had enough strength to record a 12-34 victory against the semi-professionals from Cumbria.  Warrington's final warm up fixture was for Paul Wood's Testimonial and take place at Halliwell Jones Stadium on 27/01/2010 against Super League rivals Wigan Warriors.  Wigan stole the show and recorded a 12-20 victory, this being the Warriors first ever victory at the new home of the Wolves since 2003.\n\nKyar Ba Nyein: \"Kyar\" Ba Nyein (Burmese: ကျား ဘငြိမ်း ] ; 23 November 1923 – 8 July 1979) was the Burmese boxer who participated in boxing at the 1952 Summer Olympics and was a pioneer in modernizing the Lethwei, or Burmese style of traditional boxing.  Ba Nyein started boxing at the age of 13 and fought in about 50 matches over 20 years until retiring from fighting at the age of 33.\n\nKnockout punch: A knockout punch, also known as a chassis punch, panel punch, Greenlee punch, or a Q-max, is a hand tool used to punch a hole through sheet metal.  It is a very simple tool that consists of a punch, die, and screw.  There are three different drive systems: manual, ratchet, and hydraulic.\n\nTeiken Boxing Gym: Teiken Boxing Gym (帝拳ボクシングジム ) in Tokyo, a Japan's traditional boxing club whose genesis dates back to 1926, manages professional boxers as a member of the East Japan Boxing Association (東日本ボクシング協会 , abbreviated as JPBA-east) , a subsidiary body of Japan Pro Boxing Association (日本プロボクシング協会 , abbreviated as JPBA) .  Currently located in Kagurazaka, Shinjuku, its president is the International Boxing Hall of Famer Akihiko Honda (本田 明彦 ) , the representative is Tsuyoshi Hamada (浜田 剛史 ) , and the long-time female manager is Haru Nagano (長野 ハル ) .  In order to distinguish from three related clubs i.e. Osaka Teiken Boxing Gym, Fukuoka Teiken Boxing Gym and Hachinohe Teiken Boxing Gym, it is often referred to as \"Teiken (Boxing) Gym in Tokyo\" or \"Tokyo's Teiken (Boxing) Gym\".\n\nBolo punch: A bolo punch is a punch used in martial arts.  The bolo punch is not among the traditional boxing punches (jab, uppercut, hook and cross).\n\nPakistani cricket team in South Africa in 2012–13: The Pakistani cricket team are touring South Africa from 1 February to 24 March 2013.  The tour will consist of two Twenty20 Internationals (T20Is), three Test matches and five One Day Internationals (ODIs).  South Africa announced their summer schedule of January–March in which they replaced their traditional Boxing Day Test with a T20I for the 2012–13 home season, during which they will host New Zealand and Pakistan.\n\nCross (boxing): In boxing, a cross (also commonly called a straight) is a power-punch like the uppercut and hook.  Compubox, a computerized punch scoring system, counts the cross as a \"power-punch\".\n\nPunch and Judy: Punch and Judy is a traditional, popular, and usually violent puppet show featuring Pulcinella (Mr. Punch) and his wife Judy.  The performance consists of a sequence of short scenes, each depicting an interaction between two characters, most typically Mr. Punch and one other character who usually falls victim to Judy's club.  It is often associated with traditional British seaside culture.  The various episodes of Punch and Judy are performed in the spirit of outrageous comedy—often provoking shocked laughter—and are dominated by the clowning of Mr. Punch.\n\nSucker punch: A sucker punch (American English), also known as a coward punch, or cold-cock (American English), is a punch made without warning, allowing no time for preparation or defense on the part of the recipient.  The term is generally used in situations where the way in which the punch has been delivered is considered unfair or unethical.  In practice, this often includes punches delivered from behind.  While the one hit punch and king hit (Australian English) is a different style of one-on-one fighting - pitting one individual against another .  It can be considered as a sucker punch when the recipient isn't expecting it, or if they are unevenly matched by weight - which some people use to help strengthen the amount of force used .\n\nQuestion: What other punch besides the \"power-punches\" is used in traditional boxing?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"non_power_traditional_punch\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the traditional boxing punch that is not classified as a power-punch.\"\n    },\n    \"is_traditional_boxing_punch\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the identified punch is considered a traditional boxing punch.\"\n    },\n    \"power_punches_mentioned\": {\n      \"type\": \"array\",\n      \"description\": \"A list of punches explicitly identified as 'power-punches' in the context.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    }\n  },\n  \"required\": [\n    \"non_power_traditional_punch\",\n    \"is_traditional_boxing_punch\",\n    \"power_punches_mentioned\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "non_power_traditional_punch",
-    "is_traditional_boxing_punch",
-    "power_punches_mentioned"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "non_power_traditional_punch": {
+        "type": "string",
+        "description": "The name of the traditional boxing punch that is not classified as a power-punch."
+      },
+      "is_traditional_boxing_punch": {
+        "type": "boolean",
+        "description": "Indicates if the identified punch is considered a traditional boxing punch."
+      },
+      "power_punches_mentioned": {
+        "type": "array",
+        "description": "A list of punches explicitly identified as 'power-punches' in the context.",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "non_power_traditional_punch",
+      "is_traditional_boxing_punch",
+      "power_punches_mentioned"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Betty Everett: Betty Everett (November 23, 1939 – August 19, 2001) was an American soul singer and pianist, best known for her biggest hit single, the million-selling "The Shoop Shoop Song (It's in His Kiss)".
-
-Whispering Your Name: "Whispering Your Name" is a song written by American singer-songwriter Jules Shear.  It was originally performed by Ignatius Jones in 1983, however Shear also recorded the song, which was issued as a single within months of Jones' recording and included on his 1983 album "Watch Dog".  It has been covered numerous times, including a charting version by Alison Moyet in 1994.
-
-Right in the Palm of Your Hand: "Right in the Palm of Your Hand" is the title of a country song written by Bob McDill.  The song was first recorded by Crystal Gayle on her 1976 album Crystal.  The only charting version of the song was recorded by American country music artist Mel McDaniel.  It was released in July 1981 as the fourth and final single from McDaniel's 1980 album, "I'm Countryfied".  It peaked at number 10 on the U.S. "Billboard" Hot Country Singles & Tracks chart and at number 17 on the Canadian "RPM" Country Tracks chart.
-
-Otis Blue/Otis Redding Sings Soul: Otis Blue/Otis Redding Sings Soul, or simply Otis Blue, released September 15, 1965 on Stax Records, is the third studio album by soul singer Otis Redding.  The album mainly consists of cover songs by popular R&B and soul artists, and, bar one track, was recorded in a 24-hour period over July 9/10 1965 at the Stax Recording Studios in Memphis, Tennessee.  "Otis Blue" was critically acclaimed upon release and became one of Redding's most successful albums; it reached number 6 on the UK Albums Chart, and was his first to reach the top spot of the "Billboard" R&B chart.  Furthermore, it produced three popular singles, all charting at least in the top 50 on both the "Billboard" R&B and the "Billboard" Hot 100 chart.  It is considered by many critics to be Redding's first fully realized album.
-
-Kevin Johnson (singer): Kevin Stephen Johnson (born 3 July 1942) is an Australian singer-songwriter.  Popular in the 1970s, his biggest hit is "Rock and Roll I Gave You the Best Years of My Life", which peaked at No. 4 on the Australian Kent Music Report Singles Chart in 1973 (as well as reaching the UK Top 40).  He also had a top 20 hit with "Bonnie Please Don't Go" (aka "She's Leavin'") in 1971.  "Rock and Roll" is one of the most covered songs written by an Australian with 27 different artists recording it in 1975 alone.  Covers include fellow Australians, Col Joye and Digby Richards, and international artists, Mac Davis, Terry Jacks, Gary Glitter, Joe Dassin (in French), The Cats and Tom Jones.  Davis' rendition became the highest charting version on the "Billboard" Hot 100, reaching No. 15 in 1975.
-
-Endless Love (song): "Endless Love" is a song written by Lionel Richie and originally recorded as a duet between Richie and fellow soul singer Diana Ross.  In this ballad, the singers declare their "endless love" for one another.  It was covered by soul singer Luther Vandross with R&B singer Mariah Carey and also by country music singer Shania Twain.  Richie's friend (and sometimes co-worker) Kenny Rogers has also recorded the song. " Billboard" has named the original version as the greatest song duet of all-time.
-
-E.C. Scott: E.C. Scott (born September 14, 1951 or late 1950s) is an American electric blues, soul blues, gospel and soul singer, songwriter, record producer and television host.  Jerry Wexler, called Scott "one honest-to-God soul singer."  She has been nominated for nine Blues Music Awards, and has shared the stage with Ray Charles, Patti LaBelle, Lou Rawls, John Lee Hooker, and the Ohio Players.
-
-You're No Good: "You're No Good" is a song written by Clint Ballard, Jr., first performed by Dee Dee Warwick for Jubilee Records in 1963 with production by Jerry Leiber and Mike Stoller.  It has since been covered by many artists, including charting versions by Betty Everett in 1963, The Swinging Blue Jeans in 1964, and Linda Ronstadt in 1975, whose version was a number 1 hit in the United States.
-
-Ain't That Good News (song): "Ain't That Good News", also known as "Good News", is a song written and performed by soul singer Sam Cooke, released on RCA Records in 1964.  The song was recorded in three takes for the 1964 album of the same name and reached number eleven on the pop chart, and number one on the Cashbox Magazine's R&B charts as a single.  Cooke performed the song live on American Bandstand on April 4 of the same year.  It is a modern adaptation of an older gospel song of the same title.  Cooke's version was later covered by many acts, such as Otis Rush, The Supremes (led by Florence Ballard), David Fathead Newman, and King Curtis.
-
-Iko Iko: "Iko Iko" ( ) is a much-covered New Orleans song that tells of a parade collision between two tribes of Mardi Gras Indians and the traditional confrontation.  The song, under the original title "Jock-A-Mo", was written and released as a single in 1953 by Sugar Boy and his Cane Cutters that failed to make the charts.  The song first became popular in 1965 by the girl group, The Dixie Cups, who scored an international hit with "Iko Iko".  In 1967 as part of a lawsuit settlement between "Sugar Boy" James Crawford and the Dixie Cups, the trio were given part songwriting credit to the song.  In 1972, Dr. John had a minor hit with his version of "Iko Iko".  The most successful charting version in the UK was recorded by Scottish singer Natasha England who took her 1982 version into the top 10.  "Iko Iko" became an international hit again twice more, the first being the Belle Stars in June 1982 and again with Captain Jack in 2001.
-
-Question: You're No Good: was covered in a charting version by which soul singer and pianist?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "song_title": {
-      "type": "string",
-      "description": "The title of the song in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "covered_by_artist": {
-      "type": "string",
-      "description": "The name of the artist who covered the song."
-    },
-    "artist_details": {
-      "type": "object",
-      "properties": {
-        "artist_type": {
-          "type": "string",
-          "description": "A description of the artist's primary musical role(s)."
-        },
-        "charting_year": {
-          "type": "integer",
-          "description": "The year the artist's version of the song charted."
-        }
-      },
-      "required": [
-        "artist_type",
-        "charting_year"
-      ],
-      "additionalProperties": false
-    },
-    "is_charting_version": {
-      "type": "boolean",
-      "description": "Indicates if the artist's version was a charting version."
+    {
+      "role": "user",
+      "content": "Context:\nBetty Everett: Betty Everett (November 23, 1939 – August 19, 2001) was an American soul singer and pianist, best known for her biggest hit single, the million-selling \"The Shoop Shoop Song (It's in His Kiss)\".\n\nWhispering Your Name: \"Whispering Your Name\" is a song written by American singer-songwriter Jules Shear.  It was originally performed by Ignatius Jones in 1983, however Shear also recorded the song, which was issued as a single within months of Jones' recording and included on his 1983 album \"Watch Dog\".  It has been covered numerous times, including a charting version by Alison Moyet in 1994.\n\nRight in the Palm of Your Hand: \"Right in the Palm of Your Hand\" is the title of a country song written by Bob McDill.  The song was first recorded by Crystal Gayle on her 1976 album Crystal.  The only charting version of the song was recorded by American country music artist Mel McDaniel.  It was released in July 1981 as the fourth and final single from McDaniel's 1980 album, \"I'm Countryfied\".  It peaked at number 10 on the U.S. \"Billboard\" Hot Country Singles & Tracks chart and at number 17 on the Canadian \"RPM\" Country Tracks chart.\n\nOtis Blue/Otis Redding Sings Soul: Otis Blue/Otis Redding Sings Soul, or simply Otis Blue, released September 15, 1965 on Stax Records, is the third studio album by soul singer Otis Redding.  The album mainly consists of cover songs by popular R&B and soul artists, and, bar one track, was recorded in a 24-hour period over July 9/10 1965 at the Stax Recording Studios in Memphis, Tennessee.  \"Otis Blue\" was critically acclaimed upon release and became one of Redding's most successful albums; it reached number 6 on the UK Albums Chart, and was his first to reach the top spot of the \"Billboard\" R&B chart.  Furthermore, it produced three popular singles, all charting at least in the top 50 on both the \"Billboard\" R&B and the \"Billboard\" Hot 100 chart.  It is considered by many critics to be Redding's first fully realized album.\n\nKevin Johnson (singer): Kevin Stephen Johnson (born 3 July 1942) is an Australian singer-songwriter.  Popular in the 1970s, his biggest hit is \"Rock and Roll I Gave You the Best Years of My Life\", which peaked at No. 4 on the Australian Kent Music Report Singles Chart in 1973 (as well as reaching the UK Top 40).  He also had a top 20 hit with \"Bonnie Please Don't Go\" (aka \"She's Leavin'\") in 1971.  \"Rock and Roll\" is one of the most covered songs written by an Australian with 27 different artists recording it in 1975 alone.  Covers include fellow Australians, Col Joye and Digby Richards, and international artists, Mac Davis, Terry Jacks, Gary Glitter, Joe Dassin (in French), The Cats and Tom Jones.  Davis' rendition became the highest charting version on the \"Billboard\" Hot 100, reaching No. 15 in 1975.\n\nEndless Love (song): \"Endless Love\" is a song written by Lionel Richie and originally recorded as a duet between Richie and fellow soul singer Diana Ross.  In this ballad, the singers declare their \"endless love\" for one another.  It was covered by soul singer Luther Vandross with R&B singer Mariah Carey and also by country music singer Shania Twain.  Richie's friend (and sometimes co-worker) Kenny Rogers has also recorded the song. \" Billboard\" has named the original version as the greatest song duet of all-time.\n\nE.C. Scott: E.C. Scott (born September 14, 1951 or late 1950s) is an American electric blues, soul blues, gospel and soul singer, songwriter, record producer and television host.  Jerry Wexler, called Scott \"one honest-to-God soul singer.\"  She has been nominated for nine Blues Music Awards, and has shared the stage with Ray Charles, Patti LaBelle, Lou Rawls, John Lee Hooker, and the Ohio Players.\n\nYou're No Good: \"You're No Good\" is a song written by Clint Ballard, Jr., first performed by Dee Dee Warwick for Jubilee Records in 1963 with production by Jerry Leiber and Mike Stoller.  It has since been covered by many artists, including charting versions by Betty Everett in 1963, The Swinging Blue Jeans in 1964, and Linda Ronstadt in 1975, whose version was a number 1 hit in the United States.\n\nAin't That Good News (song): \"Ain't That Good News\", also known as \"Good News\", is a song written and performed by soul singer Sam Cooke, released on RCA Records in 1964.  The song was recorded in three takes for the 1964 album of the same name and reached number eleven on the pop chart, and number one on the Cashbox Magazine's R&B charts as a single.  Cooke performed the song live on American Bandstand on April 4 of the same year.  It is a modern adaptation of an older gospel song of the same title.  Cooke's version was later covered by many acts, such as Otis Rush, The Supremes (led by Florence Ballard), David Fathead Newman, and King Curtis.\n\nIko Iko: \"Iko Iko\" ( ) is a much-covered New Orleans song that tells of a parade collision between two tribes of Mardi Gras Indians and the traditional confrontation.  The song, under the original title \"Jock-A-Mo\", was written and released as a single in 1953 by Sugar Boy and his Cane Cutters that failed to make the charts.  The song first became popular in 1965 by the girl group, The Dixie Cups, who scored an international hit with \"Iko Iko\".  In 1967 as part of a lawsuit settlement between \"Sugar Boy\" James Crawford and the Dixie Cups, the trio were given part songwriting credit to the song.  In 1972, Dr. John had a minor hit with his version of \"Iko Iko\".  The most successful charting version in the UK was recorded by Scottish singer Natasha England who took her 1982 version into the top 10.  \"Iko Iko\" became an international hit again twice more, the first being the Belle Stars in June 1982 and again with Captain Jack in 2001.\n\nQuestion: You're No Good: was covered in a charting version by which soul singer and pianist?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"song_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song in question.\"\n    },\n    \"covered_by_artist\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the artist who covered the song.\"\n    },\n    \"artist_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"artist_type\": {\n          \"type\": \"string\",\n          \"description\": \"A description of the artist's primary musical role(s).\"\n        },\n        \"charting_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the artist's version of the song charted.\"\n        }\n      },\n      \"required\": [\n        \"artist_type\",\n        \"charting_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"is_charting_version\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the artist's version was a charting version.\"\n    }\n  },\n  \"required\": [\n    \"song_title\",\n    \"covered_by_artist\",\n    \"artist_details\",\n    \"is_charting_version\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "song_title",
-    "covered_by_artist",
-    "artist_details",
-    "is_charting_version"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "song_title": {
+        "type": "string",
+        "description": "The title of the song in question."
+      },
+      "covered_by_artist": {
+        "type": "string",
+        "description": "The name of the artist who covered the song."
+      },
+      "artist_details": {
+        "type": "object",
+        "properties": {
+          "artist_type": {
+            "type": "string",
+            "description": "A description of the artist's primary musical role(s)."
+          },
+          "charting_year": {
+            "type": "integer",
+            "description": "The year the artist's version of the song charted."
+          }
+        },
+        "required": [
+          "artist_type",
+          "charting_year"
+        ],
+        "additionalProperties": false
+      },
+      "is_charting_version": {
+        "type": "boolean",
+        "description": "Indicates if the artist's version was a charting version."
+      }
+    },
+    "required": [
+      "song_title",
+      "covered_by_artist",
+      "artist_details",
+      "is_charting_version"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

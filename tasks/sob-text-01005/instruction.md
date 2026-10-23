@@ -1,68 +1,45 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Thriller (Michael Jackson album): Thriller is the sixth studio album by American singer Michael Jackson, released on November 30, 1982, in the United States by Epic Records and internationally by CBS Records.  The follow-up to Jackson's successful previous studio album, "Off the Wall", it explores genres similar to those of its predecessor, including pop, post-disco, rock and funk.  Recording sessions for the album took place from April to November 1982 at Westlake Recording Studios in Los Angeles, with a production budget of $750,000.  Quincy Jones produced the album, and Jackson wrote four of its nine songs.
-
-Don't Be Messin' 'Round: "Don't Be Messin' 'Round" is a song by American recording artist Michael Jackson.  The song was originally recorded in 1986 during initial recording sessions for Jackson's seventh studio album, "Bad", but was never finished and was left off the album.  Jackson reportedly revisited the track for his eighth and studio albums, but it was again abandoned from both.  In May 2012, it was announced that Jackson's original 1986 demo for "Don't Be Messin' 'Round" was to be included on a re-release of the original first single from "Bad," "I Just Can't Stop Loving You".  This release marked the beginning of the promotional campaign for "Bad 25," a twenty-fifth anniversary re-release of the "Bad" album.
-
-Black or White: "Black or White" is a single by American singer and songwriter Michael Jackson.  The song was released by Epic Records on November 11, 1991 as the first single from Jackson's eighth studio album, "Dangerous".  It was written, composed and produced by Michael Jackson and Bill Bottrell.
-
-Bad (Michael Jackson song): "Bad" is a song by an American artist Michael Jackson.  "Bad" was released by Epic Records in 1987 as the second single from Jackson's third major-label and seventh studio album of the same name.  The song was written and composed by Jackson and co-produced by Quincy Jones and Jackson.  Jackson stated that the song was influenced by a real-life story he had read about.
-
-Off the Wall: Off the Wall is the fifth studio album by American singer Michael Jackson, released on August 10, 1979 in the United States by Epic Records and internationally by CBS Records.  It was his nineteenth album in total since "Diana Ross Presents The Jackson 5" (1969), as well as his first album released through Epic Records, the label he would record on until his death roughly 30 years later.  It was released following Jackson's critically well-received film performance in "The Wiz".  While working on that project, Jackson and Quincy Jones had become friends, and Jones agreed to work with Jackson on his next studio album.
-
-Remember the Time: "Remember the Time" is a single by American singer and songwriter Michael Jackson recorded at Record One Studios.  The song was released by Epic Records on January 14, 1992, as the second single from Jackson's eighth studio album, "Dangerous".  Written and composed by Teddy Riley, Michael Jackson and Bernard Belle, the song was produced by Riley and Jackson.  "Remember the Time" was a successful attempt by Jackson to create a dance-oriented, new jack swing-flavored jam with the accompaniment of co-producer Riley.  The lyrics are about remembering being in love with someone.
-
-Who Is It (Michael Jackson song): "Who Is It" is a song by American recording artist Michael Jackson.  It was released by Epic Records on August 31, 1992, as the fifth single from Jackson's eighth studio album, "Dangerous" (1991).  The song was written and composed by Jackson, and produced by Jackson and Bill Bottrell.  The song's lyrics pertain to despair over being left by someone you love; some critics noted a comparison to the lyrics of the song to Jackson's single, "Billie Jean", from the album "Thriller".  As part of the promotion for the song, two music videos were released in 1992.  The song was not performed by Jackson on any of his world concert tours.  He did, however, perform a small segment of the song in his interview with Oprah Winfrey in early 1993.  An instrumental portion of the song was supposed to be used during the "This Is It" comeback concerts in London, which were canceled due to Jackson's death.
-
-The Way You Make Me Feel: "The Way You Make Me Feel" is a song by American recording artist Michael Jackson.  It was written and composed by Jackson and produced by Jackson and Quincy Jones.  Released by Epic Records in November 1987, it was the third single from Jackson's seventh studio album "Bad".
-
-Bad (album): Bad is the seventh studio album by American singer and songwriter Michael Jackson, released on August 31, 1987 in the United States by Epic Records and internationally by CBS Records.  It was released nearly five years after Jackson's previous solo studio album, "Thriller" (1982).  "Bad" was recorded during the first half of 1987.  The lyrical themes include media bias, paranoia, racial profiling, romance, self-improvement and world peace.  The album cemented Jackson's status as one of the most successful artists of the 1980s.
-
-Dangerous (Michael Jackson album): Dangerous is the eighth studio album by American recording artist Michael Jackson, released on November 26, 1991 by Epic Records.  It was his fourth studio album released under the Epic label, and his first since 1975's "Forever, Michael" not to be produced by longtime collaborator Quincy Jones, who had agreed to split after the final recording sessions for Jackson's 1987 album, "Bad".  "Dangerous" took over a year in production, and was produced by Jackson with additional production from his friend Bill Bottrell and Teddy Riley.  Jackson wrote twelve of the fourteen songs on the album.  Lyrical themes expressed on the album included racism, poverty, romance, the welfare of children and the world and self-improvement, topics Jackson had covered before.  Nine singles were released from "Dangerous" between November 1991 and December 1993, with seven singles issued in the United States, and two others released only outside the US.  The two singles released outside the United States were successful, charting within the top ten and top forty respectively.  "Dangerous" peaked at number one in nine countries, while charting at the top ten in four other territories.  The only songs not released as singles were "Why You Wanna Trip on Me", "She Drives Me Wild", "Can't Let Her Get Away", "Keep the Faith" and "Dangerous"; a video and a single release for the latter was said to have been planned, but was postponed indefinitely due to the musician's tour and allegations of child sexual abuse in 1993.
-
-Question: Dangerous is the eighth studio album by American recording artist Michael Jackson, released on November 26, 1991 by Epic Records, longtime collaborator Quincy Jones, had agreed to split after the final recording sessions for Jackson's 1987 album, "Bad", s the seventh studio album by American singer and songwriter Michael Jackson, released on which date in the United States by Epic Records and internationally by CBS Records?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "album_title": {
-      "type": "string",
-      "description": "The title of the album."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "studio_album_number": {
-      "type": "integer",
-      "description": "The sequential number of the studio album for the artist."
-    },
-    "release_date": {
-      "type": "string",
-      "format": "date",
-      "description": "The release date of the album in the United States."
-    },
-    "record_labels": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of record labels that released the album."
+    {
+      "role": "user",
+      "content": "Context:\nThriller (Michael Jackson album): Thriller is the sixth studio album by American singer Michael Jackson, released on November 30, 1982, in the United States by Epic Records and internationally by CBS Records.  The follow-up to Jackson's successful previous studio album, \"Off the Wall\", it explores genres similar to those of its predecessor, including pop, post-disco, rock and funk.  Recording sessions for the album took place from April to November 1982 at Westlake Recording Studios in Los Angeles, with a production budget of $750,000.  Quincy Jones produced the album, and Jackson wrote four of its nine songs.\n\nDon't Be Messin' 'Round: \"Don't Be Messin' 'Round\" is a song by American recording artist Michael Jackson.  The song was originally recorded in 1986 during initial recording sessions for Jackson's seventh studio album, \"Bad\", but was never finished and was left off the album.  Jackson reportedly revisited the track for his eighth and studio albums, but it was again abandoned from both.  In May 2012, it was announced that Jackson's original 1986 demo for \"Don't Be Messin' 'Round\" was to be included on a re-release of the original first single from \"Bad,\" \"I Just Can't Stop Loving You\".  This release marked the beginning of the promotional campaign for \"Bad 25,\" a twenty-fifth anniversary re-release of the \"Bad\" album.\n\nBlack or White: \"Black or White\" is a single by American singer and songwriter Michael Jackson.  The song was released by Epic Records on November 11, 1991 as the first single from Jackson's eighth studio album, \"Dangerous\".  It was written, composed and produced by Michael Jackson and Bill Bottrell.\n\nBad (Michael Jackson song): \"Bad\" is a song by an American artist Michael Jackson.  \"Bad\" was released by Epic Records in 1987 as the second single from Jackson's third major-label and seventh studio album of the same name.  The song was written and composed by Jackson and co-produced by Quincy Jones and Jackson.  Jackson stated that the song was influenced by a real-life story he had read about.\n\nOff the Wall: Off the Wall is the fifth studio album by American singer Michael Jackson, released on August 10, 1979 in the United States by Epic Records and internationally by CBS Records.  It was his nineteenth album in total since \"Diana Ross Presents The Jackson 5\" (1969), as well as his first album released through Epic Records, the label he would record on until his death roughly 30 years later.  It was released following Jackson's critically well-received film performance in \"The Wiz\".  While working on that project, Jackson and Quincy Jones had become friends, and Jones agreed to work with Jackson on his next studio album.\n\nRemember the Time: \"Remember the Time\" is a single by American singer and songwriter Michael Jackson recorded at Record One Studios.  The song was released by Epic Records on January 14, 1992, as the second single from Jackson's eighth studio album, \"Dangerous\".  Written and composed by Teddy Riley, Michael Jackson and Bernard Belle, the song was produced by Riley and Jackson.  \"Remember the Time\" was a successful attempt by Jackson to create a dance-oriented, new jack swing-flavored jam with the accompaniment of co-producer Riley.  The lyrics are about remembering being in love with someone.\n\nWho Is It (Michael Jackson song): \"Who Is It\" is a song by American recording artist Michael Jackson.  It was released by Epic Records on August 31, 1992, as the fifth single from Jackson's eighth studio album, \"Dangerous\" (1991).  The song was written and composed by Jackson, and produced by Jackson and Bill Bottrell.  The song's lyrics pertain to despair over being left by someone you love; some critics noted a comparison to the lyrics of the song to Jackson's single, \"Billie Jean\", from the album \"Thriller\".  As part of the promotion for the song, two music videos were released in 1992.  The song was not performed by Jackson on any of his world concert tours.  He did, however, perform a small segment of the song in his interview with Oprah Winfrey in early 1993.  An instrumental portion of the song was supposed to be used during the \"This Is It\" comeback concerts in London, which were canceled due to Jackson's death.\n\nThe Way You Make Me Feel: \"The Way You Make Me Feel\" is a song by American recording artist Michael Jackson.  It was written and composed by Jackson and produced by Jackson and Quincy Jones.  Released by Epic Records in November 1987, it was the third single from Jackson's seventh studio album \"Bad\".\n\nBad (album): Bad is the seventh studio album by American singer and songwriter Michael Jackson, released on August 31, 1987 in the United States by Epic Records and internationally by CBS Records.  It was released nearly five years after Jackson's previous solo studio album, \"Thriller\" (1982).  \"Bad\" was recorded during the first half of 1987.  The lyrical themes include media bias, paranoia, racial profiling, romance, self-improvement and world peace.  The album cemented Jackson's status as one of the most successful artists of the 1980s.\n\nDangerous (Michael Jackson album): Dangerous is the eighth studio album by American recording artist Michael Jackson, released on November 26, 1991 by Epic Records.  It was his fourth studio album released under the Epic label, and his first since 1975's \"Forever, Michael\" not to be produced by longtime collaborator Quincy Jones, who had agreed to split after the final recording sessions for Jackson's 1987 album, \"Bad\".  \"Dangerous\" took over a year in production, and was produced by Jackson with additional production from his friend Bill Bottrell and Teddy Riley.  Jackson wrote twelve of the fourteen songs on the album.  Lyrical themes expressed on the album included racism, poverty, romance, the welfare of children and the world and self-improvement, topics Jackson had covered before.  Nine singles were released from \"Dangerous\" between November 1991 and December 1993, with seven singles issued in the United States, and two others released only outside the US.  The two singles released outside the United States were successful, charting within the top ten and top forty respectively.  \"Dangerous\" peaked at number one in nine countries, while charting at the top ten in four other territories.  The only songs not released as singles were \"Why You Wanna Trip on Me\", \"She Drives Me Wild\", \"Can't Let Her Get Away\", \"Keep the Faith\" and \"Dangerous\"; a video and a single release for the latter was said to have been planned, but was postponed indefinitely due to the musician's tour and allegations of child sexual abuse in 1993.\n\nQuestion: Dangerous is the eighth studio album by American recording artist Michael Jackson, released on November 26, 1991 by Epic Records, longtime collaborator Quincy Jones, had agreed to split after the final recording sessions for Jackson's 1987 album, \"Bad\", s the seventh studio album by American singer and songwriter Michael Jackson, released on which date in the United States by Epic Records and internationally by CBS Records?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"album_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the album.\"\n    },\n    \"studio_album_number\": {\n      \"type\": \"integer\",\n      \"description\": \"The sequential number of the studio album for the artist.\"\n    },\n    \"release_date\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"The release date of the album in the United States.\"\n    },\n    \"record_labels\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of record labels that released the album.\"\n    }\n  },\n  \"required\": [\n    \"album_title\",\n    \"studio_album_number\",\n    \"release_date\",\n    \"record_labels\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "album_title",
-    "studio_album_number",
-    "release_date",
-    "record_labels"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "album_title": {
+        "type": "string",
+        "description": "The title of the album."
+      },
+      "studio_album_number": {
+        "type": "integer",
+        "description": "The sequential number of the studio album for the artist."
+      },
+      "release_date": {
+        "type": "string",
+        "format": "date",
+        "description": "The release date of the album in the United States."
+      },
+      "record_labels": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of record labels that released the album."
+      }
+    },
+    "required": [
+      "album_title",
+      "studio_album_number",
+      "release_date",
+      "record_labels"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

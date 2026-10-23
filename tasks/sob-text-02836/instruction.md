@@ -1,81 +1,58 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Langendorf Watch Company SA: Langendorf Watch Company was a Swiss watchmaker known for its fine craftsmanship and great attention to detail.  Around 1890, it was probably the largest producer of watches in the world.  The company produced watches in Langendorf, Switzerland for exactly a century, from 1873 to 1973.
-
-William W. Webster House: The William W. Webster House is a historic house in Clearwater, Minnesota, United States, built around 1863.  It was listed on the National Register of Historic Places in 1979 for having local significance in the themes of architecture and commerce.  It was nominated for its Greek Revival architecture, fine craftsmanship, and association with William W. Webster, an early settler and civic leader in Clearwater.
-
-Marie Zimmermann: Marie Zimmermann (17 June 1879 - 17 June 1972) was an American designer and maker of jewelry and metalwork.  Marie Zimmerman is noted for fine craftsmanship and innovative design in a variety of different mediums and styles.  Calling herself “a craftsman” rather than an artist, Zimmerman was inspired by Cellini and Michelangelo to master and employ many different crafts in her work such as metalsmithing, carving, painting, and sculpting.  Marie Zimmerman created in many different styles, and her work cannot be confined to one artistic movement.  A 1926 article in the Brooklyn Eagle by Harriette Ashbrook called her “perhaps the most versatile artist in the country”.
-
-Art Deco: Art Deco, sometimes referred to as Deco, is a style of visual arts, architecture and design that first appeared in France just before World War I.  Art Deco influenced the design of buildings, furniture, jewellery, fashion, cars, movie theatres, trains, ocean liners, and everyday objects such as radios and vacuum cleaners.  It took its name, short for "Arts Décoratifs", from the Exposition Internationale des Arts Décoratifs et Industriels Modernes (International Exhibition of Modern Decorative and Industrial Arts) held in Paris in 1925.  It combined modernist styles with fine craftsmanship and rich materials.  During its heyday, Art Deco represented luxury, glamour, exuberance, and faith in social and technological progress.
-
-Axel Törneman: Johan Axel Gustaf Törneman (28 October 1880 – 26 December 1925) was one of Sweden's earliest modernist painters.  Born in Persberg, Värmland, in Sweden, he grew to work in several modernist styles, was one of the first Swedish expressionist artists, and became a part of the international avant-garde in art after embracing more abstract art styles in Germany and France that were evolving there during the early 1900s.  He created his most famous paintings, "Night Café I" and "II", and "Trait", in France in 1905.  These night café paintings, made from studies in the Place Pigalle, and in other nightclubs popular with artists such as "Café du Rat Mort" (Dead Rat Café), are seen as two of Swedish modernism's most important works, and are considered breakthrough work of Swedish modernism.
-
-Australian Tonalism: Australian Tonalism was an art movement that emerged in Melbourne during the 1910s.  Its main exponent was Max Meldrum, who developed a unique theory of painting based on the importance of tonal values and objective optical analysis, resulting in simple representational works characterised by a "misty" or atmospheric quality.  Meldrum's published theories of art created a storm in the Australian art world, and his school of painting attracted equally passionate followers and critics.  Artists who adopted Meldrum's methods became derisively known as "Meldrumites".  They rejected the then-popular Heidelberg School tradition with its emphasis on colour and narrative, and attacked various forms of modern art which Meldrum considered to be ego-based and technically inferior.  Ironically, Australian Tonalism's conceptual complexities and illusionary soft focus aesthetic is now regarded as a precursor to modernist styles of painting, including minimalism.
-
-Mary Cecil Allen: Mary Cecil Allen (2 September 18937 April 1962) was an Australian artist, writer and lecturer.  She lived most of her adult life in America, where she was known as Cecil Allen.  Allen initially painted landscapes and portraits in her early career, but changed to modernist styles including cubism from the 1930s.  In 1927 Allen lectured at New York City venues including the Metropolitan Museum, Columbia University and other institutions.  She was sponsored by the Carnegie Corporation.  Allen wrote two books of art criticism, "The Mirror of the Passing World" (1928) and "Painters of the Modern Mind" (1929), based on her lectures.  In 1930 she curated the first exhibition of Australian art in New York, "First Contemporary All-Australian Art Exhibition", at the Roerich Museum.  During her lectures and talks in Australia, she helped introduce the ideas of modernism to Melbourne women and artists.  After living in New York, from 1949 Allen lived in Provincetown at its art colony.  Her cubist style painting, "Sea, studio: Winter", was presented in that year.  She died in 1962, at the colony, from "sinus arrest, cause unknown" (see sinoatrial arrest).
-
-Autoportrait (Tamara in a Green Bugatti): Autoportrait (Tamara in a Green Bugatti) is a self-portrait by the Polish-born artist Tamara de Lempicka, which she painted in Paris in 1929.  It was commissioned by the German fashion magazine 'Die Dame for the cover of the magazine, to celebrate the independence of women.  It is one of the most best-known examples of Art Deco portrait painting.
-
-Art Deco in the United States: The Art Deco style, which originated in France just before World War I, had an important impact on architecture and design in the United States in the 1920s and 1930s.  The most famous examples were the skyscrapers of New York, including the Empire State Building, Chrysler Building, and Rockefeller Center in New York City.  It combined modern aesthetics, fine craftsmanship and expensive materials, and became the symbol of luxury and modernity.  While rarely used in residences, it was frequently used for office buildings, government buildings, train stations, movie theaters, diners and department stores.  It also was frequently used in furniture, and in the design of automobiles, ocean liners, and everyday objects such as toasters and radio sets.  In the late 1930s, during the Great Depression, it featured prominently in the architecture of the immense public works projects sponsored by the Works Progress Administration and the Public Works Administration, such as the Golden Gate Bridge and Hoover Dam.  The style competed throughout the period with the modernist architecture, and came to an abrupt end in 1939 with the beginning of World War II.  The style was rediscovered in the 1960s, and many of the original buildings have been restored and are now historical landmarks.
-
-Avery Homestead: The Avery Homestead is a two-story Colonial-style home in Ledyard, Connecticut that was built circa 1696.  Evidence suggests that the house may have begun as a single-story, one-room house and later expanded to a two-story, two-room house by 1726.  The house underwent major additions and renovations by Theophilus Avery and later his grandson, Theophilus Avery.  In the mid-1950s, Amos Avery began a decade-long restoration effort to return the house to its 18th-century appearance.  The Avery Homestead is historically significant as a well-preserved example of an 18th-century farmhouse with fine craftsmanship.  The home is also historically important because more than twelve generations of the Avery family have resided there over the course of three centuries.  The Avery Homestead was listed on the National Register of Historic Places in 1992.
-
-Question: What is the style of art that combine modernist styles with fine craftsmanship and rich materials that autoportrait was most known for?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "art_style_name": {
-      "type": "string",
-      "description": "The name of the art style."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "characteristics": {
-      "type": "array",
-      "description": "Key characteristics of the art style as described in the context.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "notable_artwork": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "The title of the artwork mentioned in the question."
-        },
-        "artist": {
-          "type": "string",
-          "description": "The artist who created the artwork."
-        },
-        "style_association": {
-          "type": "string",
-          "description": "How the artwork is associated with the identified art style."
+    {
+      "role": "user",
+      "content": "Context:\nLangendorf Watch Company SA: Langendorf Watch Company was a Swiss watchmaker known for its fine craftsmanship and great attention to detail.  Around 1890, it was probably the largest producer of watches in the world.  The company produced watches in Langendorf, Switzerland for exactly a century, from 1873 to 1973.\n\nWilliam W. Webster House: The William W. Webster House is a historic house in Clearwater, Minnesota, United States, built around 1863.  It was listed on the National Register of Historic Places in 1979 for having local significance in the themes of architecture and commerce.  It was nominated for its Greek Revival architecture, fine craftsmanship, and association with William W. Webster, an early settler and civic leader in Clearwater.\n\nMarie Zimmermann: Marie Zimmermann (17 June 1879 - 17 June 1972) was an American designer and maker of jewelry and metalwork.  Marie Zimmerman is noted for fine craftsmanship and innovative design in a variety of different mediums and styles.  Calling herself “a craftsman” rather than an artist, Zimmerman was inspired by Cellini and Michelangelo to master and employ many different crafts in her work such as metalsmithing, carving, painting, and sculpting.  Marie Zimmerman created in many different styles, and her work cannot be confined to one artistic movement.  A 1926 article in the Brooklyn Eagle by Harriette Ashbrook called her “perhaps the most versatile artist in the country”.\n\nArt Deco: Art Deco, sometimes referred to as Deco, is a style of visual arts, architecture and design that first appeared in France just before World War I.  Art Deco influenced the design of buildings, furniture, jewellery, fashion, cars, movie theatres, trains, ocean liners, and everyday objects such as radios and vacuum cleaners.  It took its name, short for \"Arts Décoratifs\", from the Exposition Internationale des Arts Décoratifs et Industriels Modernes (International Exhibition of Modern Decorative and Industrial Arts) held in Paris in 1925.  It combined modernist styles with fine craftsmanship and rich materials.  During its heyday, Art Deco represented luxury, glamour, exuberance, and faith in social and technological progress.\n\nAxel Törneman: Johan Axel Gustaf Törneman (28 October 1880 – 26 December 1925) was one of Sweden's earliest modernist painters.  Born in Persberg, Värmland, in Sweden, he grew to work in several modernist styles, was one of the first Swedish expressionist artists, and became a part of the international avant-garde in art after embracing more abstract art styles in Germany and France that were evolving there during the early 1900s.  He created his most famous paintings, \"Night Café I\" and \"II\", and \"Trait\", in France in 1905.  These night café paintings, made from studies in the Place Pigalle, and in other nightclubs popular with artists such as \"Café du Rat Mort\" (Dead Rat Café), are seen as two of Swedish modernism's most important works, and are considered breakthrough work of Swedish modernism.\n\nAustralian Tonalism: Australian Tonalism was an art movement that emerged in Melbourne during the 1910s.  Its main exponent was Max Meldrum, who developed a unique theory of painting based on the importance of tonal values and objective optical analysis, resulting in simple representational works characterised by a \"misty\" or atmospheric quality.  Meldrum's published theories of art created a storm in the Australian art world, and his school of painting attracted equally passionate followers and critics.  Artists who adopted Meldrum's methods became derisively known as \"Meldrumites\".  They rejected the then-popular Heidelberg School tradition with its emphasis on colour and narrative, and attacked various forms of modern art which Meldrum considered to be ego-based and technically inferior.  Ironically, Australian Tonalism's conceptual complexities and illusionary soft focus aesthetic is now regarded as a precursor to modernist styles of painting, including minimalism.\n\nMary Cecil Allen: Mary Cecil Allen (2 September 18937 April 1962) was an Australian artist, writer and lecturer.  She lived most of her adult life in America, where she was known as Cecil Allen.  Allen initially painted landscapes and portraits in her early career, but changed to modernist styles including cubism from the 1930s.  In 1927 Allen lectured at New York City venues including the Metropolitan Museum, Columbia University and other institutions.  She was sponsored by the Carnegie Corporation.  Allen wrote two books of art criticism, \"The Mirror of the Passing World\" (1928) and \"Painters of the Modern Mind\" (1929), based on her lectures.  In 1930 she curated the first exhibition of Australian art in New York, \"First Contemporary All-Australian Art Exhibition\", at the Roerich Museum.  During her lectures and talks in Australia, she helped introduce the ideas of modernism to Melbourne women and artists.  After living in New York, from 1949 Allen lived in Provincetown at its art colony.  Her cubist style painting, \"Sea, studio: Winter\", was presented in that year.  She died in 1962, at the colony, from \"sinus arrest, cause unknown\" (see sinoatrial arrest).\n\nAutoportrait (Tamara in a Green Bugatti): Autoportrait (Tamara in a Green Bugatti) is a self-portrait by the Polish-born artist Tamara de Lempicka, which she painted in Paris in 1929.  It was commissioned by the German fashion magazine 'Die Dame for the cover of the magazine, to celebrate the independence of women.  It is one of the most best-known examples of Art Deco portrait painting.\n\nArt Deco in the United States: The Art Deco style, which originated in France just before World War I, had an important impact on architecture and design in the United States in the 1920s and 1930s.  The most famous examples were the skyscrapers of New York, including the Empire State Building, Chrysler Building, and Rockefeller Center in New York City.  It combined modern aesthetics, fine craftsmanship and expensive materials, and became the symbol of luxury and modernity.  While rarely used in residences, it was frequently used for office buildings, government buildings, train stations, movie theaters, diners and department stores.  It also was frequently used in furniture, and in the design of automobiles, ocean liners, and everyday objects such as toasters and radio sets.  In the late 1930s, during the Great Depression, it featured prominently in the architecture of the immense public works projects sponsored by the Works Progress Administration and the Public Works Administration, such as the Golden Gate Bridge and Hoover Dam.  The style competed throughout the period with the modernist architecture, and came to an abrupt end in 1939 with the beginning of World War II.  The style was rediscovered in the 1960s, and many of the original buildings have been restored and are now historical landmarks.\n\nAvery Homestead: The Avery Homestead is a two-story Colonial-style home in Ledyard, Connecticut that was built circa 1696.  Evidence suggests that the house may have begun as a single-story, one-room house and later expanded to a two-story, two-room house by 1726.  The house underwent major additions and renovations by Theophilus Avery and later his grandson, Theophilus Avery.  In the mid-1950s, Amos Avery began a decade-long restoration effort to return the house to its 18th-century appearance.  The Avery Homestead is historically significant as a well-preserved example of an 18th-century farmhouse with fine craftsmanship.  The home is also historically important because more than twelve generations of the Avery family have resided there over the course of three centuries.  The Avery Homestead was listed on the National Register of Historic Places in 1992.\n\nQuestion: What is the style of art that combine modernist styles with fine craftsmanship and rich materials that autoportrait was most known for?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"art_style_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the art style.\"\n    },\n    \"characteristics\": {\n      \"type\": \"array\",\n      \"description\": \"Key characteristics of the art style as described in the context.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"notable_artwork\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the artwork mentioned in the question.\"\n        },\n        \"artist\": {\n          \"type\": \"string\",\n          \"description\": \"The artist who created the artwork.\"\n        },\n        \"style_association\": {\n          \"type\": \"string\",\n          \"description\": \"How the artwork is associated with the identified art style.\"\n        }\n      },\n      \"required\": [\n        \"title\",\n        \"artist\",\n        \"style_association\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"art_style_name\",\n    \"characteristics\",\n    \"notable_artwork\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "art_style_name": {
+        "type": "string",
+        "description": "The name of the art style."
+      },
+      "characteristics": {
+        "type": "array",
+        "description": "Key characteristics of the art style as described in the context.",
+        "items": {
+          "type": "string"
         }
       },
-      "required": [
-        "title",
-        "artist",
-        "style_association"
-      ],
-      "additionalProperties": false
-    }
+      "notable_artwork": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the artwork mentioned in the question."
+          },
+          "artist": {
+            "type": "string",
+            "description": "The artist who created the artwork."
+          },
+          "style_association": {
+            "type": "string",
+            "description": "How the artwork is associated with the identified art style."
+          }
+        },
+        "required": [
+          "title",
+          "artist",
+          "style_association"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "art_style_name",
+      "characteristics",
+      "notable_artwork"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "art_style_name",
-    "characteristics",
-    "notable_artwork"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

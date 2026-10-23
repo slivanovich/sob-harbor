@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Matthew Morrison (album): Matthew Morrison is the self-titled debut album of "Glee" star Matthew Morrison released on May 10, 2011.  The song "Still Got Tonight", co-written by Kris Allen, was first released as a promo single for digital stores as a countdown to the album release along with the tracks "Over the Rainbow" (with Gwyneth Paltrow) and "Mona Lisas and Mad Hatters / Rocket Man" (with Elton John), and a month later performed at a Broadway stage by Matthew himself on the season finale of "Glee" (co-starred by Matthew as Will Schuester), "New York" (season 2, episode 22).  "Arms of a Woman" is a cover of the Amos Lee song.
-
-Scarlet's Walk: Scarlet's Walk is the seventh album released in singer-songwriter Tori Amos's solo career.  The 18-track concept album details the cross-country travels of Scarlet, a character loosely based on Amos, as well as the concept of America post-September 11, 2001.  The album was the first released by Amos on Epic Records after her split with former label Atlantic Records.  After a period of trouble with her last label, Amos proved her fan base was still with her when the album debuted at number 7 in the US, selling 107,000 copies in its first week, and reaching RIAA Gold status about a month after its release.
-
-Joanne (Lady Gaga song): "Joanne" is a song recorded by American singer Lady Gaga, for her fifth studio album, "Joanne" (2016).  "Joanne" was written by Gaga and Mark Ronson.  The track was produced by Gaga, Ronson, and BloodPop.  Musically, it is a country song, which pays homage to Gaga's deceased paternal aunt of the same name.  "Joanne" charted in France and the UK.
-
-Humble and Kind: "Humble and Kind" is a song written by Lori McKenna and first released by American singer Tim McGraw on January 20, 2016, as the second single from his 14th studio album, "Damn Country Music".  McKenna later recorded her rendition of the song for her eighth studio album, "The Bird and the Rifle", released in July 2016.  Among several other wins and nominations, the song won the award for Best Country Song at the 59th Annual Grammy Awards, "Video of the Year" at the 2016 CMT Music Awards, "Song of the Year" at 2016 CMA Awards and "Country Song of the Year" at 2016 American Music Awards.  It has been certified platinum and reached the number one position on the country music charts in both Canada and the United States.
-
-Killer BiSH: Killer BiSH is the third album by Japanese idol group BiSH released through Avex Trax on October 5, 2016.  The album is the first full album by the group to be released from a major label.  The album is the first release to feature new member Ayuni D, who joined the group in August 2016 following the departure of Hug Mii.  Unlike their independent label albums, songs from the album were not released as free downloads prior to release.  However, the album was released in its entirety in digital format a month prior to the physical release.  The first 24 hours of the digital release had all of the group's releases including KiLLER BiSH priced at 300 yen.  The album was preceded by the single "DEADMAN", released on May 4, 2016.  The music video for the track "Orchestra" was posted on Youtube on September 9.  RUKA from Visual-kei band Nightmare, a well known fan of BiSH and BiS, provided the music for the track "IDOL is SHiT".  The track title is an homage to BiS's album IDOL is DEAD while the track is an homage to the song "IDOL" from that album.
-
-Joanne (album): Joanne is the fifth studio album by American singer Lady Gaga.  It was released on October 21, 2016, by Streamline and Interscope Records.  Gaga collaborated with several producers on the album, including Mark Ronson, Jeff Bhasker, BloodPop and RedOne, and co-produced the majority of the material.  The music of "Joanne" features "stripped-down" soft rock and dance-pop styles in order to emphasize the singer's vocal abilities.  Lyrically, the album delves on the theme of family and life's emotions, with the death of her aunt, Joanne Stefani Germanotta, having a deep influence on the record.
-
-Lee Tae-min discography: The discography of the South Korean singer Lee Tae-min (most often credited as Taemin), consists of one studio album, three extended plays, six singles - five as lead artist and one as featured artist - and four appearances in soundtracks.  Taemin released his first extended play, entitled "Ace" on August 18, 2014, along with its title track "Danger".  On February 23, 2016, he released his first studio album, entitled "Press It", featuring the title track "Press Your Number".  The album peaked at #1 on iTunes charts in Japan, Vietnam, Taiwan, Singapore, Thailand, Finland, and Hong Kong.  It was also the #1 album sold on Hanteo and Synnara charts during its first week, in addition to selling more than 76,000 copies in its first month in South Korea. <ref name="Gaon Album Ranking Monthly (2/2016)"> </ref> "Press Your Number" debuted at #79 position on the Japan Hot 100, the first song by Taemin to appear on the chart.  On July 27, 2016, released his first Japanese mini-album, entitled "Sayonara Hitori", including 4 new songs and "Press Your Number" (Japanese Version).  The album sold more than 38,000 copies on the first day of release, and shot up to third place on the daily albums charts in Japan.  Released his second Japanese mini-album, titled "Flame of Love", on July 18, 2017.  After the release, the album immediately ranked #1 on Japan's daily albums charts, selling more than 45,000 copies.
-
-Neon Hitch discography: The discography of British singer and songwriter Neon Hitch.  Neon's debut digital single "Get Over U" was released in February 2011.  Hitch then released her single "Bad Dog", which was intended to be the lead single from her debut album.  Later in 2011, she was featured on Gym Class Heroes' song "Ass Back Home".  In 2012, Neon Hitch released "Fuck U Betta" and Gold" featuring Tyga, her official first and second singles respectively.  Both songs peaked at number one on the "Billboard" Dance/Club Play chart.  Neon then debuted an EP entitled "Happy Neon" in January 2013, which was released online for free.  In October 2013, Neon announced that her debut album "Beg, Borrow & Steal" had been scrapped and she would release a new album that had more of her soul in it.  In January 2014, Neon released the mixtape "301 to Paradise" for free.  In May 2014, it was announced that Hitch had parted ways with her label Warner Bros. and was gearing up to releasing her new debut album "Eleutheromaniac"; she also released "Happy Neon" and "301 to Paradise" to digital retailers independently in the same month.  She premiered the lead single of "Eleutheromaniac", "Yard Sale", in August 2014.  In January 2015, Neon released "Sparks" as the first single from the album.  In March 2015, Hitch released the EP "24:00" for free.  In 2016, it was announced that Hitch had changed the name of her debut album to "Anarchy", which was released on July 22, 2016.  The lead single from the album, "Please", was released on July 8, 2016.  The album did not contain any of the singles intended to be on "Eluetheromaniac", but included a promomotional single she released in 2015, "Freedom".
-
-As Long as You Love Me (Justin Bieber song): "As Long as You Love Me" is a song by Canadian recording artist Justin Bieber, from his third studio album, "Believe" (2012).  The track features American rapper Big Sean.  It was written by both artists with Nasri Atweh, and was produced by Rodney "Darkchild" Jerkins and Andre Lindal.  It was first released on June 11, 2012, as a promotional single from the album, and one month later it was released as the album's second single.
-
-Million Reasons: "Million Reasons" is a song recorded by American singer Lady Gaga for her fifth studio album, "Joanne" (2016).  Initially released as a promotional single, it was released to radio stations on November 8, 2016, as the album's second single.  The track was written by Gaga, Hillary Lindsey and Mark Ronson, and produced by Ronson, Gaga and BloodPop.  It grew organically from the conversations that Lindsey and Gaga were having one day, with the title phrase lifted from the singer's musings about the men in her life.
-
-Question: The album on which the song "Joanne" was first released was released in what month in 2016?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "song_name": {
-      "type": "string",
-      "description": "The name of the song in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "album_name": {
-      "type": "string",
-      "description": "The name of the album on which the song was first released."
-    },
-    "artist": {
-      "type": "string",
-      "description": "The artist who recorded the song and album."
-    },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the album was released."
-    },
-    "release_month": {
-      "type": "string",
-      "description": "The month the album was released."
+    {
+      "role": "user",
+      "content": "Context:\nMatthew Morrison (album): Matthew Morrison is the self-titled debut album of \"Glee\" star Matthew Morrison released on May 10, 2011.  The song \"Still Got Tonight\", co-written by Kris Allen, was first released as a promo single for digital stores as a countdown to the album release along with the tracks \"Over the Rainbow\" (with Gwyneth Paltrow) and \"Mona Lisas and Mad Hatters / Rocket Man\" (with Elton John), and a month later performed at a Broadway stage by Matthew himself on the season finale of \"Glee\" (co-starred by Matthew as Will Schuester), \"New York\" (season 2, episode 22).  \"Arms of a Woman\" is a cover of the Amos Lee song.\n\nScarlet's Walk: Scarlet's Walk is the seventh album released in singer-songwriter Tori Amos's solo career.  The 18-track concept album details the cross-country travels of Scarlet, a character loosely based on Amos, as well as the concept of America post-September 11, 2001.  The album was the first released by Amos on Epic Records after her split with former label Atlantic Records.  After a period of trouble with her last label, Amos proved her fan base was still with her when the album debuted at number 7 in the US, selling 107,000 copies in its first week, and reaching RIAA Gold status about a month after its release.\n\nJoanne (Lady Gaga song): \"Joanne\" is a song recorded by American singer Lady Gaga, for her fifth studio album, \"Joanne\" (2016).  \"Joanne\" was written by Gaga and Mark Ronson.  The track was produced by Gaga, Ronson, and BloodPop.  Musically, it is a country song, which pays homage to Gaga's deceased paternal aunt of the same name.  \"Joanne\" charted in France and the UK.\n\nHumble and Kind: \"Humble and Kind\" is a song written by Lori McKenna and first released by American singer Tim McGraw on January 20, 2016, as the second single from his 14th studio album, \"Damn Country Music\".  McKenna later recorded her rendition of the song for her eighth studio album, \"The Bird and the Rifle\", released in July 2016.  Among several other wins and nominations, the song won the award for Best Country Song at the 59th Annual Grammy Awards, \"Video of the Year\" at the 2016 CMT Music Awards, \"Song of the Year\" at 2016 CMA Awards and \"Country Song of the Year\" at 2016 American Music Awards.  It has been certified platinum and reached the number one position on the country music charts in both Canada and the United States.\n\nKiller BiSH: Killer BiSH is the third album by Japanese idol group BiSH released through Avex Trax on October 5, 2016.  The album is the first full album by the group to be released from a major label.  The album is the first release to feature new member Ayuni D, who joined the group in August 2016 following the departure of Hug Mii.  Unlike their independent label albums, songs from the album were not released as free downloads prior to release.  However, the album was released in its entirety in digital format a month prior to the physical release.  The first 24 hours of the digital release had all of the group's releases including KiLLER BiSH priced at 300 yen.  The album was preceded by the single \"DEADMAN\", released on May 4, 2016.  The music video for the track \"Orchestra\" was posted on Youtube on September 9.  RUKA from Visual-kei band Nightmare, a well known fan of BiSH and BiS, provided the music for the track \"IDOL is SHiT\".  The track title is an homage to BiS's album IDOL is DEAD while the track is an homage to the song \"IDOL\" from that album.\n\nJoanne (album): Joanne is the fifth studio album by American singer Lady Gaga.  It was released on October 21, 2016, by Streamline and Interscope Records.  Gaga collaborated with several producers on the album, including Mark Ronson, Jeff Bhasker, BloodPop and RedOne, and co-produced the majority of the material.  The music of \"Joanne\" features \"stripped-down\" soft rock and dance-pop styles in order to emphasize the singer's vocal abilities.  Lyrically, the album delves on the theme of family and life's emotions, with the death of her aunt, Joanne Stefani Germanotta, having a deep influence on the record.\n\nLee Tae-min discography: The discography of the South Korean singer Lee Tae-min (most often credited as Taemin), consists of one studio album, three extended plays, six singles - five as lead artist and one as featured artist - and four appearances in soundtracks.  Taemin released his first extended play, entitled \"Ace\" on August 18, 2014, along with its title track \"Danger\".  On February 23, 2016, he released his first studio album, entitled \"Press It\", featuring the title track \"Press Your Number\".  The album peaked at #1 on iTunes charts in Japan, Vietnam, Taiwan, Singapore, Thailand, Finland, and Hong Kong.  It was also the #1 album sold on Hanteo and Synnara charts during its first week, in addition to selling more than 76,000 copies in its first month in South Korea. <ref name=\"Gaon Album Ranking Monthly (2/2016)\"> </ref> \"Press Your Number\" debuted at #79 position on the Japan Hot 100, the first song by Taemin to appear on the chart.  On July 27, 2016, released his first Japanese mini-album, entitled \"Sayonara Hitori\", including 4 new songs and \"Press Your Number\" (Japanese Version).  The album sold more than 38,000 copies on the first day of release, and shot up to third place on the daily albums charts in Japan.  Released his second Japanese mini-album, titled \"Flame of Love\", on July 18, 2017.  After the release, the album immediately ranked #1 on Japan's daily albums charts, selling more than 45,000 copies.\n\nNeon Hitch discography: The discography of British singer and songwriter Neon Hitch.  Neon's debut digital single \"Get Over U\" was released in February 2011.  Hitch then released her single \"Bad Dog\", which was intended to be the lead single from her debut album.  Later in 2011, she was featured on Gym Class Heroes' song \"Ass Back Home\".  In 2012, Neon Hitch released \"Fuck U Betta\" and Gold\" featuring Tyga, her official first and second singles respectively.  Both songs peaked at number one on the \"Billboard\" Dance/Club Play chart.  Neon then debuted an EP entitled \"Happy Neon\" in January 2013, which was released online for free.  In October 2013, Neon announced that her debut album \"Beg, Borrow & Steal\" had been scrapped and she would release a new album that had more of her soul in it.  In January 2014, Neon released the mixtape \"301 to Paradise\" for free.  In May 2014, it was announced that Hitch had parted ways with her label Warner Bros. and was gearing up to releasing her new debut album \"Eleutheromaniac\"; she also released \"Happy Neon\" and \"301 to Paradise\" to digital retailers independently in the same month.  She premiered the lead single of \"Eleutheromaniac\", \"Yard Sale\", in August 2014.  In January 2015, Neon released \"Sparks\" as the first single from the album.  In March 2015, Hitch released the EP \"24:00\" for free.  In 2016, it was announced that Hitch had changed the name of her debut album to \"Anarchy\", which was released on July 22, 2016.  The lead single from the album, \"Please\", was released on July 8, 2016.  The album did not contain any of the singles intended to be on \"Eluetheromaniac\", but included a promomotional single she released in 2015, \"Freedom\".\n\nAs Long as You Love Me (Justin Bieber song): \"As Long as You Love Me\" is a song by Canadian recording artist Justin Bieber, from his third studio album, \"Believe\" (2012).  The track features American rapper Big Sean.  It was written by both artists with Nasri Atweh, and was produced by Rodney \"Darkchild\" Jerkins and Andre Lindal.  It was first released on June 11, 2012, as a promotional single from the album, and one month later it was released as the album's second single.\n\nMillion Reasons: \"Million Reasons\" is a song recorded by American singer Lady Gaga for her fifth studio album, \"Joanne\" (2016).  Initially released as a promotional single, it was released to radio stations on November 8, 2016, as the album's second single.  The track was written by Gaga, Hillary Lindsey and Mark Ronson, and produced by Ronson, Gaga and BloodPop.  It grew organically from the conversations that Lindsey and Gaga were having one day, with the title phrase lifted from the singer's musings about the men in her life.\n\nQuestion: The album on which the song \"Joanne\" was first released was released in what month in 2016?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"song_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the song in question.\"\n    },\n    \"album_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the album on which the song was first released.\"\n    },\n    \"artist\": {\n      \"type\": \"string\",\n      \"description\": \"The artist who recorded the song and album.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the album was released.\"\n    },\n    \"release_month\": {\n      \"type\": \"string\",\n      \"description\": \"The month the album was released.\"\n    }\n  },\n  \"required\": [\n    \"song_name\",\n    \"album_name\",\n    \"artist\",\n    \"release_year\",\n    \"release_month\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "song_name",
-    "album_name",
-    "artist",
-    "release_year",
-    "release_month"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "song_name": {
+        "type": "string",
+        "description": "The name of the song in question."
+      },
+      "album_name": {
+        "type": "string",
+        "description": "The name of the album on which the song was first released."
+      },
+      "artist": {
+        "type": "string",
+        "description": "The artist who recorded the song and album."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the album was released."
+      },
+      "release_month": {
+        "type": "string",
+        "description": "The month the album was released."
+      }
+    },
+    "required": [
+      "song_name",
+      "album_name",
+      "artist",
+      "release_year",
+      "release_month"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

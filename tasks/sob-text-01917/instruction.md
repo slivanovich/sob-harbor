@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-International Day of the Disappeared: The International Day of the Disappeared, on August 30 of each year, is a day created to draw attention to the fate of individuals imprisoned at places and under poor conditions unknown to their relatives and/or legal representatives.  The impulse for the day came from the Latin American Federation of Associations for Relatives of Detained-Disappeared "(Federación Latinoamericana de Asociaciones de Familiares de Detenidos-Desaparecidos," or FEDEFAM), a non-governmental organization founded in 1981 in Costa Rica as an association of local and regional groups actively working against secret imprisonment, forced disappearances and abduction in a number of Latin-American countries.
-
-R U Professional: "R U Professional" is a 2009 satirical song by the American indie rock band The Mae Shi, inspired by a July 2008 outburst by actor Christian Bale on the set of "Terminator Salvation".  Bale was filming with actress Bryce Dallas Howard when he berated director of photography, Shane Hurlbut, for walking into his line of sight.  An audio recording of the incident appeared on website TMZ on February 2, 2009.  The Mae Shi composed and recorded the song later in the same day, and released it the next day.  The group stated that the piece was created to honor Bale.  The song parodies Bale by sampling his voice from the 2008 diatribe.  The chorus incorporates Bale's use of the word "professional" from his flare-up.  The lyrics reference several films the actor starred in, including "Newsies", "Swing Kids", "American Psycho", and "The Dark Knight".
-
-Shivaji VI: Shivaji VI(April 05, 1863 – December 25, 1883) of the Bhonsle dynasty, was Raja of Kolhapur from 1871 to 1883.  A distant relation of the main family line, he was born as Shrimant Narayanrao Dinkarrao Bhonsle and was adopted at the age of eight by the widow of Rajaram II.  Owing to his youth, he reigned under a regency until he had attained his majority.  In 1875, he was presented with a sword of honour by the future Edward VII and on New Year's Day, 1877, was knighted with the title of Knight Commander of the Order of the Star of India(KCSI), at the age of 13, the youngest knight ever of that honour.  Later that same year, he also became the youngest recipient of the Empress of India Medal.
-
-Morning Star (comics): Morning Star is the alias of Schuyler Belial, a fictional Marvel Comics villain and Satanist who was an enemy of Moon Knight and the Werewolf by Night.  He first appeared in "Moon Knight", Volume 1 #29.  He was created by Doug Moench and Bill Sienkiewicz.
-
-Bang Bang!: Bang Bang!  is a 2014 Indian action comedy film directed by Siddharth Anand and produced by Fox Star Studios.  The film is an official remake of the Hollywood film "Knight and Day" and features Hrithik Roshan and Katrina Kaif in the lead roles performed by Tom Cruise and Cameron Diaz respectively in the original.  The main antagonist of the film is Danny Denzongpa.  The film was distributed and marketed by Fox Star Studios in collaboration with Fox International Productions worldwide.
-
-Saci day: Saci Day, in Portuguese "Dia do Saci", is a day created by the Brazilian Government to oppose the "American influenced" holiday of Halloween.  The Day of Saci is commemorated on the same day as the American holiday, October 31.  It was designed as a celebration of Brazil's culture and folklore, but only half of Brazilians commemorate it.
-
-Jill Knight: Joan Christabel Jill Knight, Baroness Knight of Collingtree, DBE ("née" Christie; born 9 July 1923) is a former British Conservative Member of Parliament.  She was created a Life Peer as "Baroness Knight of Collingtree, of Collingtree in the County of Northamptonshire" in 1997 after standing down at that year's general election, and retired from the House of Lords on 24 March 2016.  She was appointed MBE in 1964, and elevated to DBE in 1985.
-
-Goofy: Goofy is a funny-animal cartoon character created in 1932 at Walt Disney Productions.  Goofy is a tall, anthropomorphic dog with a Southern drawl, and typically wears a turtle neck and vest, with pants, shoes, white gloves, and a tall hat originally designed as a rumpled fedora.  Goofy is a close friend of Mickey Mouse and Donald Duck and is one of Disney's most recognizable characters.  He is normally characterized as extremely clumsy and dimwitted, yet this interpretation is not always definitive; occasionally Goofy is shown as intuitive, and clever, albeit in his own unique, eccentric way.
-
-A Knight for a Day: A Knight for a Day is a 1946 Disney short film starring Goofy.  Directed by Jack Hannah, this 7-minute animated comedy short was scripted by Bill Peet.  While classified as a Goofy cartoon, Goofy himself is not used in this film, but his lookalikes are used as a basis for all the characters.
-
-TBWA\Chiat\Day: TBWA\Chiat\Day is the American division of the advertising agency TBWA Worldwide.  Created in the 1995 merger of TBWA and Chiat/Day, the agency operates offices in Los Angeles, New York City, Nashville, and Mexico City.  Prior to the merger, Chiat/Day created internationally notable advertising, including "1984" for Apple Computer that introduced the Macintosh computer.  The merger also inspired the creation of the ad agency St.Lukes by Chiat/Day's London office's employees.
-
-Question: In which year was the star of A Knight for a Day created ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "star_character_name": {
-      "type": "string",
-      "description": "The name of the character starring in the film."
-    },
-    "star_character_creation_year": {
-      "type": "integer",
-      "description": "The year the star character was created."
+    {
+      "role": "user",
+      "content": "Context:\nInternational Day of the Disappeared: The International Day of the Disappeared, on August 30 of each year, is a day created to draw attention to the fate of individuals imprisoned at places and under poor conditions unknown to their relatives and/or legal representatives.  The impulse for the day came from the Latin American Federation of Associations for Relatives of Detained-Disappeared \"(Federación Latinoamericana de Asociaciones de Familiares de Detenidos-Desaparecidos,\" or FEDEFAM), a non-governmental organization founded in 1981 in Costa Rica as an association of local and regional groups actively working against secret imprisonment, forced disappearances and abduction in a number of Latin-American countries.\n\nR U Professional: \"R U Professional\" is a 2009 satirical song by the American indie rock band The Mae Shi, inspired by a July 2008 outburst by actor Christian Bale on the set of \"Terminator Salvation\".  Bale was filming with actress Bryce Dallas Howard when he berated director of photography, Shane Hurlbut, for walking into his line of sight.  An audio recording of the incident appeared on website TMZ on February 2, 2009.  The Mae Shi composed and recorded the song later in the same day, and released it the next day.  The group stated that the piece was created to honor Bale.  The song parodies Bale by sampling his voice from the 2008 diatribe.  The chorus incorporates Bale's use of the word \"professional\" from his flare-up.  The lyrics reference several films the actor starred in, including \"Newsies\", \"Swing Kids\", \"American Psycho\", and \"The Dark Knight\".\n\nShivaji VI: Shivaji VI(April 05, 1863 – December 25, 1883) of the Bhonsle dynasty, was Raja of Kolhapur from 1871 to 1883.  A distant relation of the main family line, he was born as Shrimant Narayanrao Dinkarrao Bhonsle and was adopted at the age of eight by the widow of Rajaram II.  Owing to his youth, he reigned under a regency until he had attained his majority.  In 1875, he was presented with a sword of honour by the future Edward VII and on New Year's Day, 1877, was knighted with the title of Knight Commander of the Order of the Star of India(KCSI), at the age of 13, the youngest knight ever of that honour.  Later that same year, he also became the youngest recipient of the Empress of India Medal.\n\nMorning Star (comics): Morning Star is the alias of Schuyler Belial, a fictional Marvel Comics villain and Satanist who was an enemy of Moon Knight and the Werewolf by Night.  He first appeared in \"Moon Knight\", Volume 1 #29.  He was created by Doug Moench and Bill Sienkiewicz.\n\nBang Bang!: Bang Bang!  is a 2014 Indian action comedy film directed by Siddharth Anand and produced by Fox Star Studios.  The film is an official remake of the Hollywood film \"Knight and Day\" and features Hrithik Roshan and Katrina Kaif in the lead roles performed by Tom Cruise and Cameron Diaz respectively in the original.  The main antagonist of the film is Danny Denzongpa.  The film was distributed and marketed by Fox Star Studios in collaboration with Fox International Productions worldwide.\n\nSaci day: Saci Day, in Portuguese \"Dia do Saci\", is a day created by the Brazilian Government to oppose the \"American influenced\" holiday of Halloween.  The Day of Saci is commemorated on the same day as the American holiday, October 31.  It was designed as a celebration of Brazil's culture and folklore, but only half of Brazilians commemorate it.\n\nJill Knight: Joan Christabel Jill Knight, Baroness Knight of Collingtree, DBE (\"née\" Christie; born 9 July 1923) is a former British Conservative Member of Parliament.  She was created a Life Peer as \"Baroness Knight of Collingtree, of Collingtree in the County of Northamptonshire\" in 1997 after standing down at that year's general election, and retired from the House of Lords on 24 March 2016.  She was appointed MBE in 1964, and elevated to DBE in 1985.\n\nGoofy: Goofy is a funny-animal cartoon character created in 1932 at Walt Disney Productions.  Goofy is a tall, anthropomorphic dog with a Southern drawl, and typically wears a turtle neck and vest, with pants, shoes, white gloves, and a tall hat originally designed as a rumpled fedora.  Goofy is a close friend of Mickey Mouse and Donald Duck and is one of Disney's most recognizable characters.  He is normally characterized as extremely clumsy and dimwitted, yet this interpretation is not always definitive; occasionally Goofy is shown as intuitive, and clever, albeit in his own unique, eccentric way.\n\nA Knight for a Day: A Knight for a Day is a 1946 Disney short film starring Goofy.  Directed by Jack Hannah, this 7-minute animated comedy short was scripted by Bill Peet.  While classified as a Goofy cartoon, Goofy himself is not used in this film, but his lookalikes are used as a basis for all the characters.\n\nTBWA\\Chiat\\Day: TBWA\\Chiat\\Day is the American division of the advertising agency TBWA Worldwide.  Created in the 1995 merger of TBWA and Chiat/Day, the agency operates offices in Los Angeles, New York City, Nashville, and Mexico City.  Prior to the merger, Chiat/Day created internationally notable advertising, including \"1984\" for Apple Computer that introduced the Macintosh computer.  The merger also inspired the creation of the ad agency St.Lukes by Chiat/Day's London office's employees.\n\nQuestion: In which year was the star of A Knight for a Day created ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film.\"\n    },\n    \"star_character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character starring in the film.\"\n    },\n    \"star_character_creation_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the star character was created.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"star_character_name\",\n    \"star_character_creation_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "star_character_name",
-    "star_character_creation_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film."
+      },
+      "star_character_name": {
+        "type": "string",
+        "description": "The name of the character starring in the film."
+      },
+      "star_character_creation_year": {
+        "type": "integer",
+        "description": "The year the star character was created."
+      }
+    },
+    "required": [
+      "film_title",
+      "star_character_name",
+      "star_character_creation_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

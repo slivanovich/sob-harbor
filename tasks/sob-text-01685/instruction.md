@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-1896 LSU Tigers football team: The 1896 LSU Tigers football team represented the LSU Tigers of Louisiana State University during the 1896 Southern Intercollegiate Athletic Association football season.  This was LSU's first season playing as a member of the Southern Intercollegiate Athletic Association (SIAA).  The Tigers, led by coach Allen Jeardeau, went undefeated and were the SIAA co-champions.  It was LSU's second undefeated season in football.  The 1896 team was also the first LSU team to use the nickname "Tigers".
-
-List of LSU Tigers head football coaches: The LSU Tigers college football team represents Louisiana State University (LSU) in the West Division of the Southeastern Conference (SEC).  The Tigers compete as part of the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision.  The program has had 32 head coaches since it began play during the 1893 season.  Since September 2016, Ed Orgeron has served as LSU's head coach.
-
-History of LSU Tigers football: The LSU Tigers football team represents Louisiana State University in the sport of American football.  The university has fielded a team every year since it began play in 1893, except in 1918 due to World War I.  It has competed in the Southeastern Conference (SEC) since 1933, and in the conference's Western division since 1992.  Previously, LSU was a member of the Southern Intercollegiate Athletic Association (SIAA) from 1896 to 1921 and the Southern Conference (SoCon) from 1922 to 1932.  There have been 32 head coaches for the team, starting with Charles E. Coates in 1893.  Since 2016, the head coach of the Tigers is Ed Orgeron.  LSU has played 1,221 games in its 123 seasons of play, and has compiled an all-time record of 772 wins, 405 losses, and 47 ties as of the end of the 2016 season.
-
-2016 LSU Tigers football team: The 2016 LSU Tigers football team represented Louisiana State University in the 2016 NCAA Division I FBS football season.  The Tigers play their home games at Tiger Stadium in Baton Rouge, Louisiana, and compete in the Western Division of the Southeastern Conference (SEC).  They were led by 12th year head coach Les Miles for the first four games of the year before he was fired on September 25 along with offensive coordinator Cam Cameron.  Miles was replaced by interim head coach Ed Orgeron, who was later promoted to head coach on November 26, 2016.  They finished the season 8–4, 5–3 in SEC play to finish in a tie for second place in the Western Division.  They were invited to the Citrus Bowl where they defeated Louisville.
-
-Ed Orgeron: Edward Jim Orgeron Jr. (born July 27, 1961) is an American football coach and former player.  He is currently the head coach at Louisiana State University (LSU).  Orgeron previously served as the head football coach at University of Mississippi (Ole Miss) from 2005 to 2007 and was the interim head coach at the University of Southern California (USC) in 2013.  He is nicknamed "Coach O".
-
-Edgar Wingard: Edgar Ramey Wingard (September 21, 1878 – July 31, 1927) was an American football, basketball, and baseball coach and college athletics administrator.  He served as the head football coach at seven different schools: Ohio Northern University (1903), Butler University (1904–1905), Western University of Pennsylvania—now known as the University of Pittsburgh (1906), Louisiana State University (1907–1908), the University of Maine (1910–1911), Susquehanna University (1916–1917, 1919, 1924–1925), and Bucknell University (1918), compling a career record of 77–39–5.  In 1908, Wingard led his LSU team to a record of 10–0.  The team has been recognized as a national champion by the National Championship Foundation, although LSU does not officially claim a national title that season.  Wingard was the head coach of the basketball team at Butler from 1904 to 1906 and the head coach of the first LSU Tigers basketball team during the 1908–09 season.  He also coached the LSU Tigers baseball team in 1908 and 1909 and the baseball team at Maine in 1911.
-
-1979 LSU Tigers football team: The 1979 LSU Tigers football team represented Louisiana State University (LSU) during the 1979 NCAA Division I-A football season.  Under head coach Charles McClendon, the Tigers had a record of 7–5 with a Southeastern Conference record of 4–2.  It was McClendon's 18th and final season as head coach at LSU.
-
-1999 LSU Tigers football team: The 1999 LSU Tigers football team represented Louisiana State University in the 1999 NCAA Division I-A football season.  Coached by Gerry DiNardo in his last year at LSU, the Tigers played their home games at Tiger Stadium in Baton Rouge, Louisiana.  LSU fired DiNardo before the final game of the season against conference opponent Arkansas after eight consecutive losses and named Assistant Coach Hal Hunter as interim head coach for the final game.  In Coach Hunter's only game as the team's head coach, unranked LSU (2-8, 0-7) dominated #17 Arkansas (7-3, 4-3) in their lone victory over a conference opponent that season.  Former Michigan State University head football coach Nick Saban accepted LSU's offer and took over the team in December 1999.
-
-1901 LSU Tigers football team: The 1901 LSU Tigers football team represented the LSU Tigers of Louisiana State University during the 1901 Southern Intercollegiate Athletic Association football season.  Edmond Chavanne left the Tigers following the 1900 season and was replaced by W. S. Borland as head coach in 1901, leading the team to a successful 5–1 season.  Tulane forfeited the game on November 16 due to a ruling from the SIAA.  The 1901 edition of the Battle for the Flag against LSU was originally a 22-0 victory for Tulane.  It was later forfeited after a petition to the SIAA, and was recorded as a 0-11 loss for Tulane.  After the game, LSU protested to the Southern Intercollegiate Athletic Association, and alleged that Tulane had used a professional player during the game.  Several months later, the SIAA ruled the game an 11-0 forfeit in favor of LSU.
-
-1898 LSU Tigers football team: The 1898 LSU Tigers football team represented the LSU Tigers of Louisiana State University during the 1898 Southern Intercollegiate Athletic Association football season.  The Tigers, with new coach Edmond Chavanne, played only one game for the 1898 season.  It was their third undefeated season.  Another outbreak of yellow fever similar to the one in 1897 caused LSU to play only one game.  By the time LSU was able to play its only game of the season, Allen Jeardeau had departed from the school as head football coach, and no provision had been made to replace him.  The job of coach then fell to the team's captain, Edmond Chavanne, the only player-coach in LSU football history.  1898 marked the final year of play for William S. Slaughter.  He was LSU's first five time football letterman.
-
-Question: the head coach of the LSU Tigers football team is Ed Orgeron, who is currently the head coach at what university?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "coach_name": {
-      "type": "string",
-      "description": "The name of the head coach."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "current_university": {
-      "type": "string",
-      "description": "The full name of the university where the coach is currently employed."
-    },
-    "university_nickname": {
-      "type": "string",
-      "description": "The common nickname for the university."
+    {
+      "role": "user",
+      "content": "Context:\n1896 LSU Tigers football team: The 1896 LSU Tigers football team represented the LSU Tigers of Louisiana State University during the 1896 Southern Intercollegiate Athletic Association football season.  This was LSU's first season playing as a member of the Southern Intercollegiate Athletic Association (SIAA).  The Tigers, led by coach Allen Jeardeau, went undefeated and were the SIAA co-champions.  It was LSU's second undefeated season in football.  The 1896 team was also the first LSU team to use the nickname \"Tigers\".\n\nList of LSU Tigers head football coaches: The LSU Tigers college football team represents Louisiana State University (LSU) in the West Division of the Southeastern Conference (SEC).  The Tigers compete as part of the National Collegiate Athletic Association (NCAA) Division I Football Bowl Subdivision.  The program has had 32 head coaches since it began play during the 1893 season.  Since September 2016, Ed Orgeron has served as LSU's head coach.\n\nHistory of LSU Tigers football: The LSU Tigers football team represents Louisiana State University in the sport of American football.  The university has fielded a team every year since it began play in 1893, except in 1918 due to World War I.  It has competed in the Southeastern Conference (SEC) since 1933, and in the conference's Western division since 1992.  Previously, LSU was a member of the Southern Intercollegiate Athletic Association (SIAA) from 1896 to 1921 and the Southern Conference (SoCon) from 1922 to 1932.  There have been 32 head coaches for the team, starting with Charles E. Coates in 1893.  Since 2016, the head coach of the Tigers is Ed Orgeron.  LSU has played 1,221 games in its 123 seasons of play, and has compiled an all-time record of 772 wins, 405 losses, and 47 ties as of the end of the 2016 season.\n\n2016 LSU Tigers football team: The 2016 LSU Tigers football team represented Louisiana State University in the 2016 NCAA Division I FBS football season.  The Tigers play their home games at Tiger Stadium in Baton Rouge, Louisiana, and compete in the Western Division of the Southeastern Conference (SEC).  They were led by 12th year head coach Les Miles for the first four games of the year before he was fired on September 25 along with offensive coordinator Cam Cameron.  Miles was replaced by interim head coach Ed Orgeron, who was later promoted to head coach on November 26, 2016.  They finished the season 8–4, 5–3 in SEC play to finish in a tie for second place in the Western Division.  They were invited to the Citrus Bowl where they defeated Louisville.\n\nEd Orgeron: Edward Jim Orgeron Jr. (born July 27, 1961) is an American football coach and former player.  He is currently the head coach at Louisiana State University (LSU).  Orgeron previously served as the head football coach at University of Mississippi (Ole Miss) from 2005 to 2007 and was the interim head coach at the University of Southern California (USC) in 2013.  He is nicknamed \"Coach O\".\n\nEdgar Wingard: Edgar Ramey Wingard (September 21, 1878 – July 31, 1927) was an American football, basketball, and baseball coach and college athletics administrator.  He served as the head football coach at seven different schools: Ohio Northern University (1903), Butler University (1904–1905), Western University of Pennsylvania—now known as the University of Pittsburgh (1906), Louisiana State University (1907–1908), the University of Maine (1910–1911), Susquehanna University (1916–1917, 1919, 1924–1925), and Bucknell University (1918), compling a career record of 77–39–5.  In 1908, Wingard led his LSU team to a record of 10–0.  The team has been recognized as a national champion by the National Championship Foundation, although LSU does not officially claim a national title that season.  Wingard was the head coach of the basketball team at Butler from 1904 to 1906 and the head coach of the first LSU Tigers basketball team during the 1908–09 season.  He also coached the LSU Tigers baseball team in 1908 and 1909 and the baseball team at Maine in 1911.\n\n1979 LSU Tigers football team: The 1979 LSU Tigers football team represented Louisiana State University (LSU) during the 1979 NCAA Division I-A football season.  Under head coach Charles McClendon, the Tigers had a record of 7–5 with a Southeastern Conference record of 4–2.  It was McClendon's 18th and final season as head coach at LSU.\n\n1999 LSU Tigers football team: The 1999 LSU Tigers football team represented Louisiana State University in the 1999 NCAA Division I-A football season.  Coached by Gerry DiNardo in his last year at LSU, the Tigers played their home games at Tiger Stadium in Baton Rouge, Louisiana.  LSU fired DiNardo before the final game of the season against conference opponent Arkansas after eight consecutive losses and named Assistant Coach Hal Hunter as interim head coach for the final game.  In Coach Hunter's only game as the team's head coach, unranked LSU (2-8, 0-7) dominated #17 Arkansas (7-3, 4-3) in their lone victory over a conference opponent that season.  Former Michigan State University head football coach Nick Saban accepted LSU's offer and took over the team in December 1999.\n\n1901 LSU Tigers football team: The 1901 LSU Tigers football team represented the LSU Tigers of Louisiana State University during the 1901 Southern Intercollegiate Athletic Association football season.  Edmond Chavanne left the Tigers following the 1900 season and was replaced by W. S. Borland as head coach in 1901, leading the team to a successful 5–1 season.  Tulane forfeited the game on November 16 due to a ruling from the SIAA.  The 1901 edition of the Battle for the Flag against LSU was originally a 22-0 victory for Tulane.  It was later forfeited after a petition to the SIAA, and was recorded as a 0-11 loss for Tulane.  After the game, LSU protested to the Southern Intercollegiate Athletic Association, and alleged that Tulane had used a professional player during the game.  Several months later, the SIAA ruled the game an 11-0 forfeit in favor of LSU.\n\n1898 LSU Tigers football team: The 1898 LSU Tigers football team represented the LSU Tigers of Louisiana State University during the 1898 Southern Intercollegiate Athletic Association football season.  The Tigers, with new coach Edmond Chavanne, played only one game for the 1898 season.  It was their third undefeated season.  Another outbreak of yellow fever similar to the one in 1897 caused LSU to play only one game.  By the time LSU was able to play its only game of the season, Allen Jeardeau had departed from the school as head football coach, and no provision had been made to replace him.  The job of coach then fell to the team's captain, Edmond Chavanne, the only player-coach in LSU football history.  1898 marked the final year of play for William S. Slaughter.  He was LSU's first five time football letterman.\n\nQuestion: the head coach of the LSU Tigers football team is Ed Orgeron, who is currently the head coach at what university?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"coach_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the head coach.\"\n    },\n    \"current_university\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the university where the coach is currently employed.\"\n    },\n    \"university_nickname\": {\n      \"type\": \"string\",\n      \"description\": \"The common nickname for the university.\"\n    }\n  },\n  \"required\": [\n    \"coach_name\",\n    \"current_university\",\n    \"university_nickname\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "coach_name",
-    "current_university",
-    "university_nickname"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "coach_name": {
+        "type": "string",
+        "description": "The name of the head coach."
+      },
+      "current_university": {
+        "type": "string",
+        "description": "The full name of the university where the coach is currently employed."
+      },
+      "university_nickname": {
+        "type": "string",
+        "description": "The common nickname for the university."
+      }
+    },
+    "required": [
+      "coach_name",
+      "current_university",
+      "university_nickname"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

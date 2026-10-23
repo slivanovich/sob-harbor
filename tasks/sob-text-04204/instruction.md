@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Dual monarchy of England and France: The dual monarchy of England and France existed during the latter phase of the Hundred Years' War when Charles VII of France and Henry VI of England disputed the succession to the throne of France.  It commenced on 21 October 1422 upon the death of King Charles VI of France, who had signed the Treaty of Troyes which gave the French crown to his son-in-law Henry V of England and Henry's heirs.  It excluded King Charles's son, the Dauphin Charles, who by right of primogeniture was the heir to the Kingdom of France.  Although the Treaty was ratified by the Estates-General of France, the act was a contravention of the French law of succession which decreed that the French crown could not be alienated.  Henry VI, son of Henry V, became king of both England and France and was recognized only by the English and Burgundians until 1435 as King Henry II of France.  He was crowned King of France on 16 December 1431.
-
-Henriad: Henriad is a common title used by scholars for Shakespeare's second historical tetralogy, comprising "Richard II"; "Henry IV, Part 1"; "Henry IV, Part 2"; and "Henry V".  The plays depict the destabilising effects of the violation of political continuity with the overthrow of Richard II of England followed by the growth of Henry V of England from a wild youth to a great war leader in "Henry V".  Although it was the second tetralogy to be written and performed, the subject matter comes chronologically before the first tetralogy comprising the three "Henry VI" plays and "Richard III".  The term "Henriad" derives from the Classical epics the "Iliad" and "Aeneid".
-
-Edmund Mortimer, 5th Earl of March: Edmund de Mortimer, 5th Earl of March and 7th Earl of Ulster (6 November 1391 – 18 January 1425) was an English nobleman.  A great-great-grandson of King Edward III of England, he was heir presumptive to King Richard II of England, his first cousin twice removed, when Richard II was deposed in favour of Henry IV.  Edmund Mortimer's claim to the throne was the basis of rebellions and plots against Henry IV and his son Henry V, and was later taken up by the House of York in the Wars of the Roses, though Mortimer himself was an important and loyal vassal of Henry V and Henry VI.  Edmund Mortimer was the last Earl of March of the Mortimer family.
-
-Thomas Erpingham: Sir Thomas Erpingham KG (  1355 –1428) was an English knight who became famous as the commander of King Henry V's longbow wielding archers at the Battle of Agincourt.  He was immortalised as a character in the play "Henry V" by William Shakespeare.  It is, however, his lengthy and loyal service to John of Gaunt, Henry IV and Henry V, which contributed significantly to the establishment of the House of Lancaster upon the English throne, that is his true legacy.
-
-Henry V (1989 film): Henry V is a 1989 British historical drama film adapted for the screen and directed by Kenneth Branagh, based on William Shakespeare's play of the same name about King Henry V of England.  The film stars Branagh in the title role with Paul Scofield, Derek Jacobi, Ian Holm, Emma Thompson, Alec McCowen, Judi Dench, Robbie Coltrane, Brian Blessed, and Christian Bale in supporting roles.
-
-Suite from Henry V: Suite from Henry V is a 1963 orchestral arrangement of William Walton's musical score from the 1944 film "Henry V".  The suite, arranged by Muir Mathieson, is in five movements, although the second and fourth movements had already appeared in string arrangement form in Walton's own Two Pieces for Strings from Henry V.
-
-Henry V Events: Henry V is a full-service communications agency specializing in live events and experience marketing.  Founded in 1978 as National Meeting Company Inc., the company – now known as Henry V – is the Northwest's oldest and largest experiential marketing agency.  Henry V is headquartered in Portland, Oregon.  The privately owned company has more than 30 full-time employees with a national network of more than 100 contract event professionals.
-
-Shakespearean history: In the First Folio, the plays of William Shakespeare were grouped into three categories: comedies, histories, and tragedies.  The histories—along with those of contemporary Renaissance playwrights—help define the genre of history plays.  The histories might be more accurately called the "English history plays" and include the outliers "King John" and "Henry VIII" as well as a continuous sequence of eight plays covering the Wars of the Roses.  These last are considered to have been composed in two cycles.  The so-called first tetralogy, apparently written in the early 1590s, deals with the later part of the struggle and includes "Henry VI, parts one", "two" & "three" and "Richard III".  The second tetralogy, finished in 1599 and including "Richard II", "Henry IV, Part 1", "Henry IV, Part 2" and "Henry V", is frequently called the "Henriad" after its protagonist Prince Hal, the future Henry V.
-
-Hundred Years' War (1415–53): The Lancastrian War was the third phase of the Anglo-French Hundred Years' War.  It lasted from 1415, when Henry V of England invaded Normandy, to 1453 when the English lost Bordeaux.  It followed a long period of peace from the end of the Caroline War in 1389.  The phase was named after the House of Lancaster, the ruling house of the Kingdom of England, to which Henry V belonged.  After the invasion of 1419, Henry V and, after his death, his brother John of Lancaster, Duke of Bedford, brought the English to the height of their power in France, with an English king crowned in Paris.  However, by that time, with charismatic leaders such as Joan of Arc and La Hire, and with England losing its main allies, strong French counterattacks had started to win back all English continental territories, except the Pale of Calais (which was only captured in 1558).  Charles VII of France was crowned in Notre-Dame de Reims in 1429.  The Battle of Castillon (1453) was the last battle of the Hundred Years' War, but France and England remained formally at war until the Treaty of Picquigny in 1475.  English, and later British, monarchs would continue to nominally claim the French throne until 1801, though they would never again seriously pursue it.
-
-Brian Blessed: Brian Blessed {'1': ", '2': ", '3': ", '4': "} ( ; born 9 October 1936) is an English actor, writer, and presenter.  He is known for his booming voice and his roles in "I, Claudius", "Blackadder", and "Flash Gordon".
-
-Question: What star of I, Claudius and Blackadder appeared in Henry V?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_appeared_in": {
-      "type": "string",
-      "description": "The title of the film the actor appeared in, as per the question."
-    },
-    "other_notable_roles": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of other notable roles or works the actor is known for."
-    },
-    "is_known_for_other_roles": {
-      "type": "boolean",
-      "description": "Indicates if the actor is explicitly stated to be known for the other roles."
+    {
+      "role": "user",
+      "content": "Context:\nDual monarchy of England and France: The dual monarchy of England and France existed during the latter phase of the Hundred Years' War when Charles VII of France and Henry VI of England disputed the succession to the throne of France.  It commenced on 21 October 1422 upon the death of King Charles VI of France, who had signed the Treaty of Troyes which gave the French crown to his son-in-law Henry V of England and Henry's heirs.  It excluded King Charles's son, the Dauphin Charles, who by right of primogeniture was the heir to the Kingdom of France.  Although the Treaty was ratified by the Estates-General of France, the act was a contravention of the French law of succession which decreed that the French crown could not be alienated.  Henry VI, son of Henry V, became king of both England and France and was recognized only by the English and Burgundians until 1435 as King Henry II of France.  He was crowned King of France on 16 December 1431.\n\nHenriad: Henriad is a common title used by scholars for Shakespeare's second historical tetralogy, comprising \"Richard II\"; \"Henry IV, Part 1\"; \"Henry IV, Part 2\"; and \"Henry V\".  The plays depict the destabilising effects of the violation of political continuity with the overthrow of Richard II of England followed by the growth of Henry V of England from a wild youth to a great war leader in \"Henry V\".  Although it was the second tetralogy to be written and performed, the subject matter comes chronologically before the first tetralogy comprising the three \"Henry VI\" plays and \"Richard III\".  The term \"Henriad\" derives from the Classical epics the \"Iliad\" and \"Aeneid\".\n\nEdmund Mortimer, 5th Earl of March: Edmund de Mortimer, 5th Earl of March and 7th Earl of Ulster (6 November 1391 – 18 January 1425) was an English nobleman.  A great-great-grandson of King Edward III of England, he was heir presumptive to King Richard II of England, his first cousin twice removed, when Richard II was deposed in favour of Henry IV.  Edmund Mortimer's claim to the throne was the basis of rebellions and plots against Henry IV and his son Henry V, and was later taken up by the House of York in the Wars of the Roses, though Mortimer himself was an important and loyal vassal of Henry V and Henry VI.  Edmund Mortimer was the last Earl of March of the Mortimer family.\n\nThomas Erpingham: Sir Thomas Erpingham KG (  1355 –1428) was an English knight who became famous as the commander of King Henry V's longbow wielding archers at the Battle of Agincourt.  He was immortalised as a character in the play \"Henry V\" by William Shakespeare.  It is, however, his lengthy and loyal service to John of Gaunt, Henry IV and Henry V, which contributed significantly to the establishment of the House of Lancaster upon the English throne, that is his true legacy.\n\nHenry V (1989 film): Henry V is a 1989 British historical drama film adapted for the screen and directed by Kenneth Branagh, based on William Shakespeare's play of the same name about King Henry V of England.  The film stars Branagh in the title role with Paul Scofield, Derek Jacobi, Ian Holm, Emma Thompson, Alec McCowen, Judi Dench, Robbie Coltrane, Brian Blessed, and Christian Bale in supporting roles.\n\nSuite from Henry V: Suite from Henry V is a 1963 orchestral arrangement of William Walton's musical score from the 1944 film \"Henry V\".  The suite, arranged by Muir Mathieson, is in five movements, although the second and fourth movements had already appeared in string arrangement form in Walton's own Two Pieces for Strings from Henry V.\n\nHenry V Events: Henry V is a full-service communications agency specializing in live events and experience marketing.  Founded in 1978 as National Meeting Company Inc., the company – now known as Henry V – is the Northwest's oldest and largest experiential marketing agency.  Henry V is headquartered in Portland, Oregon.  The privately owned company has more than 30 full-time employees with a national network of more than 100 contract event professionals.\n\nShakespearean history: In the First Folio, the plays of William Shakespeare were grouped into three categories: comedies, histories, and tragedies.  The histories—along with those of contemporary Renaissance playwrights—help define the genre of history plays.  The histories might be more accurately called the \"English history plays\" and include the outliers \"King John\" and \"Henry VIII\" as well as a continuous sequence of eight plays covering the Wars of the Roses.  These last are considered to have been composed in two cycles.  The so-called first tetralogy, apparently written in the early 1590s, deals with the later part of the struggle and includes \"Henry VI, parts one\", \"two\" & \"three\" and \"Richard III\".  The second tetralogy, finished in 1599 and including \"Richard II\", \"Henry IV, Part 1\", \"Henry IV, Part 2\" and \"Henry V\", is frequently called the \"Henriad\" after its protagonist Prince Hal, the future Henry V.\n\nHundred Years' War (1415–53): The Lancastrian War was the third phase of the Anglo-French Hundred Years' War.  It lasted from 1415, when Henry V of England invaded Normandy, to 1453 when the English lost Bordeaux.  It followed a long period of peace from the end of the Caroline War in 1389.  The phase was named after the House of Lancaster, the ruling house of the Kingdom of England, to which Henry V belonged.  After the invasion of 1419, Henry V and, after his death, his brother John of Lancaster, Duke of Bedford, brought the English to the height of their power in France, with an English king crowned in Paris.  However, by that time, with charismatic leaders such as Joan of Arc and La Hire, and with England losing its main allies, strong French counterattacks had started to win back all English continental territories, except the Pale of Calais (which was only captured in 1558).  Charles VII of France was crowned in Notre-Dame de Reims in 1429.  The Battle of Castillon (1453) was the last battle of the Hundred Years' War, but France and England remained formally at war until the Treaty of Picquigny in 1475.  English, and later British, monarchs would continue to nominally claim the French throne until 1801, though they would never again seriously pursue it.\n\nBrian Blessed: Brian Blessed {'1': \", '2': \", '3': \", '4': \"} ( ; born 9 October 1936) is an English actor, writer, and presenter.  He is known for his booming voice and his roles in \"I, Claudius\", \"Blackadder\", and \"Flash Gordon\".\n\nQuestion: What star of I, Claudius and Blackadder appeared in Henry V?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor.\"\n    },\n    \"film_appeared_in\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film the actor appeared in, as per the question.\"\n    },\n    \"other_notable_roles\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of other notable roles or works the actor is known for.\"\n    },\n    \"is_known_for_other_roles\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the actor is explicitly stated to be known for the other roles.\"\n    }\n  },\n  \"required\": [\n    \"actor_name\",\n    \"film_appeared_in\",\n    \"other_notable_roles\",\n    \"is_known_for_other_roles\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actor_name",
-    "film_appeared_in",
-    "other_notable_roles",
-    "is_known_for_other_roles"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor."
+      },
+      "film_appeared_in": {
+        "type": "string",
+        "description": "The title of the film the actor appeared in, as per the question."
+      },
+      "other_notable_roles": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of other notable roles or works the actor is known for."
+      },
+      "is_known_for_other_roles": {
+        "type": "boolean",
+        "description": "Indicates if the actor is explicitly stated to be known for the other roles."
+      }
+    },
+    "required": [
+      "actor_name",
+      "film_appeared_in",
+      "other_notable_roles",
+      "is_known_for_other_roles"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

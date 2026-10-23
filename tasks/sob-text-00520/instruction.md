@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-1908 Florida football team: The 1908 Florida football team represented the University of Florida during the 1908 college football season.  The season was Jack Forsythe's third and last as the head coach of the University of Florida football team.  Forsythe's 1908 Florida football team posted a record of 5–2–1 in their third varsity season.
-
-2016 UCF Knights football team: The 2016 UCF Knights football team represented the University of Central Florida in the 2016 NCAA Division I FBS football season.  The Knights were members of the East Division of the American Athletic Conference (The American) and played their home games at Bright House Networks Stadium on UCF's main campus in Orlando, Florida.  They were led by first-year head coach Scott Frost.  They finished the season 6–7, 4–4 in American Athletic Conference play to finish in third place in the East Division.  They were invited to the Cure Bowl where they lost to Arkansas State.  This is the second time UCF became bowl eligible one year after going winless.
-
-1909 Florida football team: The 1909 Florida football team represented the University of Florida during the 1909 college football season.  The University of the State of Florida officially shortened its name to the University of Florida in 1909, and the season was George E. Pyle's first as the head coach of the University of Florida football team.  Pyle's 1909 Florida football team finished its fourth varsity football season 6–1–1.
-
-Offensive coordinator: An offensive coordinator is a member of the coaching staff of an American football or Canadian football team who is in charge of the team's offense.  Generally, along with the defensive coordinator, he represents the second level of command structure after the head coach.  The offensive coordinator is in charge of the team's offensive game plan, and typically calls offensive plays during the game, although some offensive-minded head coaches also handle play-calling.  Several position coaches work under the coordinator (position groupings can include quarterbacks, wide receivers, offensive line, running backs, and tight ends).  The coordinator may also coach a position (typically quarterbacks).
-
-1911 Florida Gators football team: The 1911 Florida Gators football team represented the University of Florida during the 1911 college football season.  The season was George Pyle's third as the head coach of the University of Florida football team.  The University of Florida adopted the "Florida Gators" nickname for its sports teams in 1911; the earlier Florida football teams were known simply as "Florida" or the "Orange and Blue."  Pyle's newly christened Florida Gators finished their sixth varsity football season 5–0–1—the first, and to date, the only undefeated season in the history of the Florida Gators football program.
-
-1910 Florida football team: The 1910 Florida football team represented the University of Florida during the 1910 college football season.  The season was George E. Pyle's second as the head coach of the University of Florida football team.  Pyle's 1910 Florida football team finished its fifth varsity football season undefeated on its home field, with an overall record of 6–1 and a Southern Intercollegiate Athletic Association (SIAA) record of 1–1.
-
-Scott Frost: Scott Andrew Frost (born January 4, 1975) is an American football coach and former player.  He is currently the head coach at the University of Central Florida (UCF).  He was previously the offensive coordinator at the University of Oregon.  He played six years in the National Football League with the New York Jets, Cleveland Browns, Green Bay Packers, and Tampa Bay Buccaneers.  Frost was the starting quarterback for Tom Osborne's undefeated Nebraska Cornhuskers 1997 team that shared the national championship with the Michigan Wolverines.
-
-Brian Partlow: Brian Partlow is a former arena football coach.  He last served as the offensive coordinator of the Cleveland Gladiators in the Arena Football League.  He is the former head coach for the Austin Wranglers where he had a career record of 4-12, including a 0-0 mark in the postseason.  He spent the 2006, 2005, and 2004 seasons as the offensive coordinator of the Colorado Crush.  The Crush won the ArenaBowl championship in 2005.  Partlow led one of the top ranked offenses in the league helping WR Damien Harrell win offensive player of the year in 2005 and 2006 while breaking the single season record for receiving touchdowns.  In 2003, 2002, 2001, and 2000 Partlow coached for the Indiana/Albany Firebirds in the Arena Football League spending two seasons as the offensive coordinator.  Partlow also has experience coaching college football including stops at The College of William and Mary, Shenandoah College, and Randolph Macon College.
-
-Gregg Brandon: Gregg Brandon (born February 29, 1956) is an American football coach and former player.  He is currently the head football coach at the Colorado School of Mines.  Previous to that, he was the offensive coordinator at New Mexico State University and coached tight ends in the UFL for the Las Vegas Locomotives.  He also spent two years as the offensive coordinator at the University of Wyoming and was offensive coordinator for the Virginia Cavaliers for the duration of the 2009 season.  He was head coach for the Bowling Green Falcons, but was fired following the conclusion of the 2008 season, after six years at the helm, which included three bowl appearances and shares of two division titles.  Brandon had previously been an assistant coach and offensive coordinator at Bowling Green under head coach Urban Meyer before Meyer left for the University of Utah in 2003.
-
-1907 Florida football team: The 1907 Florida football team represented the University of Florida during the 1907 college football season.  The season was Jack Forsythe's second as the head coach of the University of Florida football team.  The Orange and Blue lost to the Mercer Bears for the second season in a row, beat the Rollins College Tars in Gainesville, Florida, and tied the Tars on their home field in Winter Park, Florida.  Forsythe's 1907 Florida football team posted an overall record of 4–1–1 in their second varsity season.
-
-Question: The coach who led the 2016 University of Central Florida football team was previously the offensive coordinator for what other college?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "coach_name": {
-      "type": "string",
-      "description": "The name of the head coach for the specified team and season."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "team_coached_in_question": {
-      "type": "string",
-      "description": "The name of the team the coach led in the season mentioned in the question."
-    },
-    "season_coached_in_question": {
-      "type": "integer",
-      "description": "The year of the season the coach led the team mentioned in the question."
-    },
-    "previous_role": {
-      "type": "string",
-      "description": "The previous coaching role held by the coach."
-    },
-    "previous_college_team": {
-      "type": "string",
-      "description": "The college team where the coach held their previous role."
+    {
+      "role": "user",
+      "content": "Context:\n1908 Florida football team: The 1908 Florida football team represented the University of Florida during the 1908 college football season.  The season was Jack Forsythe's third and last as the head coach of the University of Florida football team.  Forsythe's 1908 Florida football team posted a record of 5–2–1 in their third varsity season.\n\n2016 UCF Knights football team: The 2016 UCF Knights football team represented the University of Central Florida in the 2016 NCAA Division I FBS football season.  The Knights were members of the East Division of the American Athletic Conference (The American) and played their home games at Bright House Networks Stadium on UCF's main campus in Orlando, Florida.  They were led by first-year head coach Scott Frost.  They finished the season 6–7, 4–4 in American Athletic Conference play to finish in third place in the East Division.  They were invited to the Cure Bowl where they lost to Arkansas State.  This is the second time UCF became bowl eligible one year after going winless.\n\n1909 Florida football team: The 1909 Florida football team represented the University of Florida during the 1909 college football season.  The University of the State of Florida officially shortened its name to the University of Florida in 1909, and the season was George E. Pyle's first as the head coach of the University of Florida football team.  Pyle's 1909 Florida football team finished its fourth varsity football season 6–1–1.\n\nOffensive coordinator: An offensive coordinator is a member of the coaching staff of an American football or Canadian football team who is in charge of the team's offense.  Generally, along with the defensive coordinator, he represents the second level of command structure after the head coach.  The offensive coordinator is in charge of the team's offensive game plan, and typically calls offensive plays during the game, although some offensive-minded head coaches also handle play-calling.  Several position coaches work under the coordinator (position groupings can include quarterbacks, wide receivers, offensive line, running backs, and tight ends).  The coordinator may also coach a position (typically quarterbacks).\n\n1911 Florida Gators football team: The 1911 Florida Gators football team represented the University of Florida during the 1911 college football season.  The season was George Pyle's third as the head coach of the University of Florida football team.  The University of Florida adopted the \"Florida Gators\" nickname for its sports teams in 1911; the earlier Florida football teams were known simply as \"Florida\" or the \"Orange and Blue.\"  Pyle's newly christened Florida Gators finished their sixth varsity football season 5–0–1—the first, and to date, the only undefeated season in the history of the Florida Gators football program.\n\n1910 Florida football team: The 1910 Florida football team represented the University of Florida during the 1910 college football season.  The season was George E. Pyle's second as the head coach of the University of Florida football team.  Pyle's 1910 Florida football team finished its fifth varsity football season undefeated on its home field, with an overall record of 6–1 and a Southern Intercollegiate Athletic Association (SIAA) record of 1–1.\n\nScott Frost: Scott Andrew Frost (born January 4, 1975) is an American football coach and former player.  He is currently the head coach at the University of Central Florida (UCF).  He was previously the offensive coordinator at the University of Oregon.  He played six years in the National Football League with the New York Jets, Cleveland Browns, Green Bay Packers, and Tampa Bay Buccaneers.  Frost was the starting quarterback for Tom Osborne's undefeated Nebraska Cornhuskers 1997 team that shared the national championship with the Michigan Wolverines.\n\nBrian Partlow: Brian Partlow is a former arena football coach.  He last served as the offensive coordinator of the Cleveland Gladiators in the Arena Football League.  He is the former head coach for the Austin Wranglers where he had a career record of 4-12, including a 0-0 mark in the postseason.  He spent the 2006, 2005, and 2004 seasons as the offensive coordinator of the Colorado Crush.  The Crush won the ArenaBowl championship in 2005.  Partlow led one of the top ranked offenses in the league helping WR Damien Harrell win offensive player of the year in 2005 and 2006 while breaking the single season record for receiving touchdowns.  In 2003, 2002, 2001, and 2000 Partlow coached for the Indiana/Albany Firebirds in the Arena Football League spending two seasons as the offensive coordinator.  Partlow also has experience coaching college football including stops at The College of William and Mary, Shenandoah College, and Randolph Macon College.\n\nGregg Brandon: Gregg Brandon (born February 29, 1956) is an American football coach and former player.  He is currently the head football coach at the Colorado School of Mines.  Previous to that, he was the offensive coordinator at New Mexico State University and coached tight ends in the UFL for the Las Vegas Locomotives.  He also spent two years as the offensive coordinator at the University of Wyoming and was offensive coordinator for the Virginia Cavaliers for the duration of the 2009 season.  He was head coach for the Bowling Green Falcons, but was fired following the conclusion of the 2008 season, after six years at the helm, which included three bowl appearances and shares of two division titles.  Brandon had previously been an assistant coach and offensive coordinator at Bowling Green under head coach Urban Meyer before Meyer left for the University of Utah in 2003.\n\n1907 Florida football team: The 1907 Florida football team represented the University of Florida during the 1907 college football season.  The season was Jack Forsythe's second as the head coach of the University of Florida football team.  The Orange and Blue lost to the Mercer Bears for the second season in a row, beat the Rollins College Tars in Gainesville, Florida, and tied the Tars on their home field in Winter Park, Florida.  Forsythe's 1907 Florida football team posted an overall record of 4–1–1 in their second varsity season.\n\nQuestion: The coach who led the 2016 University of Central Florida football team was previously the offensive coordinator for what other college?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"coach_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the head coach for the specified team and season.\"\n    },\n    \"team_coached_in_question\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the team the coach led in the season mentioned in the question.\"\n    },\n    \"season_coached_in_question\": {\n      \"type\": \"integer\",\n      \"description\": \"The year of the season the coach led the team mentioned in the question.\"\n    },\n    \"previous_role\": {\n      \"type\": \"string\",\n      \"description\": \"The previous coaching role held by the coach.\"\n    },\n    \"previous_college_team\": {\n      \"type\": \"string\",\n      \"description\": \"The college team where the coach held their previous role.\"\n    }\n  },\n  \"required\": [\n    \"coach_name\",\n    \"team_coached_in_question\",\n    \"season_coached_in_question\",\n    \"previous_role\",\n    \"previous_college_team\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "coach_name",
-    "team_coached_in_question",
-    "season_coached_in_question",
-    "previous_role",
-    "previous_college_team"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "coach_name": {
+        "type": "string",
+        "description": "The name of the head coach for the specified team and season."
+      },
+      "team_coached_in_question": {
+        "type": "string",
+        "description": "The name of the team the coach led in the season mentioned in the question."
+      },
+      "season_coached_in_question": {
+        "type": "integer",
+        "description": "The year of the season the coach led the team mentioned in the question."
+      },
+      "previous_role": {
+        "type": "string",
+        "description": "The previous coaching role held by the coach."
+      },
+      "previous_college_team": {
+        "type": "string",
+        "description": "The college team where the coach held their previous role."
+      }
+    },
+    "required": [
+      "coach_name",
+      "team_coached_in_question",
+      "season_coached_in_question",
+      "previous_role",
+      "previous_college_team"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

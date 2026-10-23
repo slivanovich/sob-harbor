@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-This Little Wiggy: "This Little Wiggy" is the eighteenth episode of "The Simpsons"<nowiki>'</nowiki> ninth season.  It originally aired on the Fox network in the United States on March 22, 1998.  It was written by Dan Greaney and directed by Neil Affleck.  The episode sees Ralph Wiggum becoming friends with Bart.  Phil Hartman guest stars as recurring character Troy McClure.
-
-The Long Con: "The Long Con" is the 38th episode of "Lost".  It is the 13th episode of the second season.  The episode was directed by Roxann Dawson, and written by Leonard Dick and Steven Maeda.  It first aired on February 8, 2006, on ABC.  The character of James "Sawyer" Ford is featured in the episode's flashbacks.
-
-The Itchy &amp; Scratchy &amp; Poochie Show: "The Itchy & Scratchy & Poochie Show" is the fourteenth episode in the eighth season of the American animated television series "The Simpsons".  It originally aired on the Fox network in the United States on February 9, 1997.  In the episode, "The Itchy & Scratchy Show" attempts to regain viewers by introducing a new character named Poochie, whose voice is provided by Homer.  The episode is largely self-referential and satirizes the world of television production, fans of "The Simpsons", and the series itself.  It was written by David X. Cohen and directed by Steven Dean Moore.  Alex Rocco is a credited guest voice as Roger Meyers, Jr. for the third and final time (having previously provided the character's voice in "Itchy & Scratchy & Marge" and "The Day the Violence Died"); Phil Hartman also guest stars as Troy McClure.  Poochie would become a minor recurring character and Comic Book Guy's catchphrase, "Worst episode ever", is introduced in this episode.  With "The Itchy & Scratchy & Poochie Show", the show's 167th episode, "The Simpsons" surpassed "The Flintstones" in the number of episodes produced for a prime-time animated series.
-
-A Fish Called Selma: "A Fish Called Selma" is the nineteenth episode of "The Simpsons"<nowiki>'</nowiki> seventh season.  It originally aired on the Fox network in the United States on March 24, 1996.  The episode features Troy McClure, who attempts to resurrect his acting career by marrying Selma Bouvier.  Show runners Bill Oakley and Josh Weinstein were fans of Phil Hartman and wished to produce an episode that focused on his character McClure.  Freelance writer Jack Barth wrote the episode, and Mark Kirkland directed it.
-
-There's Something About a War: "There's Something About a War" is the 36th episode of the ABC television series, "Desperate Housewives".  The episode was the 13th episode for the show's second season.  The episode was written by Kevin Etten and was directed by Larry Shaw.  It originally aired on Sunday, January 22, 2006.
-
-Troy McClure: Troy McClure is a fictional character from the American animated sitcom "The Simpsons".  He was voiced by Phil Hartman and first appeared in the second season episode "Homer vs. Lisa and the 8th Commandment".  McClure is usually shown doing low-level work, such as hosting infomercials and educational films.  He appears as the main character in "A Fish Called Selma", in which he marries Selma Bouvier to aid his failing career and quash rumors about his personal life.  McClure also 'hosts' "The Simpsons 138th Episode Spectacular" and "The Simpsons Spin-Off Showcase".
-
-Lisa's Wedding: "Lisa's Wedding" is the 19th episode of "The Simpsons"<nowiki>'</nowiki> sixth season.  It originally aired on the Fox network in the United States on March 19, 1995.  The plot focuses on Lisa visiting a carnival fortune teller and learning about her future love.  It was written by Greg Daniels and directed by Jim Reardon.  Mandy Patinkin guest stars as Hugh Parkfield and Phil Hartman guest stars as Troy McClure.  The episode won an Emmy Award in 1995 for Outstanding Animated Program, becoming the third episode of "The Simpsons" to win the award.
-
-The Simpsons 138th Episode Spectacular: "The Simpsons 138th Episode Spectacular" is the tenth episode of "The Simpsons"<nowiki>'</nowiki> seventh season.  It originally aired on the Fox network in the United States on December 3, 1995.  As the title suggests, it is the 138th episode and the third clip show episode of "The Simpsons", after "" and "Another Simpsons Clip Show".  While the "138th Episode Spectacular" compiles sequences from episodes throughout the entire series like the previous two, it also shows clips from the original Simpsons shorts from "The Tracey Ullman Show" and other previously unaired material.  Like the Halloween specials, the episode is considered non-canon and falls outside of the show's regular continuity.
-
-Angry Birds Stella (TV series): Angry Birds Stella is a Finnish computer-animated TV series based on the game "Angry Birds Stella" that was produced by Rovio Entertainment.  The first episode, "A Fork in the Friendship", aired on ToonsTV in November 1, 2014.  The series recounts the tale of Stella, along with her friends Luca, Willow, Poppy and Dahlia, as they work their way against Gale, the former friend of Stella, that is the queen of the pigs in Golden Island.  The first season focuses on Gale trying to hunt for the Golden Egg, but, fails as seen in the final episode of season 1, "To The Bitter End".  The second season focuses on Gale returning and trying to hunt for the Golden Egg again, and she succeeded as seen in "The Golden Queen", the 9th episode of season 2.  Also, Dahlia, one of the birds, tries searching for the egg as well for an experiment, but this time, she fails, as seen in "It's Mine!" , the 6th episode of season 2.  Soon enough, the birds realize how dangerous this egg can be, as seen in "Premonition", the 11th episode in season 2, which in when Gale with the Golden Egg, anything that is touched with it, turns to gold.  However, when that happens, another thing turns to stone, the opposite of gold, which causes nature, and even worse, food to be turned to stone as well.  Now, it is up to the Stella gang to save Golden Island before it is too late.  They do succeed, as seen in "You Asked For It", the 13th and final episode of season 2 and the series finale of "Angry Birds Stella", where after a long awful night, Stella and her gang launch the Golden Egg out of the island, never to be seen again.  Gale does not mind because when she saw the Golden Egg after she broke out of the gold in the episode, she ran away, back into her castle.
-
-Homer vs. Lisa and the 8th Commandment: "Homer vs. Lisa and the 8th Commandment" is the thirteenth episode of "The Simpsons"<nowiki>'</nowiki> second season.  The 26th episode of the series overall, it originally aired on the Fox network in the United States on February 7, 1991.  In the episode, Homer gets an illegal cable hook-up.  Despite the family's enjoyment of the new channels, Lisa becomes suspicious that they are stealing cable.  Her suspicions are confirmed by Reverend Lovejoy and she protests by no longer watching television.  Meanwhile, Bart manages to tune into a sexually explicit adult movie channel, and Homer invites his friends over to watch a boxing match, but Lisa's protest gets to him.  He decides not to watch the fight and cuts the cable.
-
-Question: Troy McClure first appeared in what 13th episode of The Simpsons second season?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "episode_title": {
-      "type": "string",
-      "description": "The title of the episode."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "season_number": {
-      "type": "integer",
-      "description": "The season number of the episode."
-    },
-    "episode_number_in_season": {
-      "type": "integer",
-      "description": "The episode number within its season."
-    },
-    "character_first_appearance": {
-      "type": "string",
-      "description": "The name of the character making their first appearance in this episode."
-    },
-    "network": {
-      "type": "string",
-      "description": "The network on which the episode originally aired."
-    },
-    "original_air_date": {
-      "type": "string",
-      "description": "The original air date of the episode."
+    {
+      "role": "user",
+      "content": "Context:\nThis Little Wiggy: \"This Little Wiggy\" is the eighteenth episode of \"The Simpsons\"<nowiki>'</nowiki> ninth season.  It originally aired on the Fox network in the United States on March 22, 1998.  It was written by Dan Greaney and directed by Neil Affleck.  The episode sees Ralph Wiggum becoming friends with Bart.  Phil Hartman guest stars as recurring character Troy McClure.\n\nThe Long Con: \"The Long Con\" is the 38th episode of \"Lost\".  It is the 13th episode of the second season.  The episode was directed by Roxann Dawson, and written by Leonard Dick and Steven Maeda.  It first aired on February 8, 2006, on ABC.  The character of James \"Sawyer\" Ford is featured in the episode's flashbacks.\n\nThe Itchy &amp; Scratchy &amp; Poochie Show: \"The Itchy & Scratchy & Poochie Show\" is the fourteenth episode in the eighth season of the American animated television series \"The Simpsons\".  It originally aired on the Fox network in the United States on February 9, 1997.  In the episode, \"The Itchy & Scratchy Show\" attempts to regain viewers by introducing a new character named Poochie, whose voice is provided by Homer.  The episode is largely self-referential and satirizes the world of television production, fans of \"The Simpsons\", and the series itself.  It was written by David X. Cohen and directed by Steven Dean Moore.  Alex Rocco is a credited guest voice as Roger Meyers, Jr. for the third and final time (having previously provided the character's voice in \"Itchy & Scratchy & Marge\" and \"The Day the Violence Died\"); Phil Hartman also guest stars as Troy McClure.  Poochie would become a minor recurring character and Comic Book Guy's catchphrase, \"Worst episode ever\", is introduced in this episode.  With \"The Itchy & Scratchy & Poochie Show\", the show's 167th episode, \"The Simpsons\" surpassed \"The Flintstones\" in the number of episodes produced for a prime-time animated series.\n\nA Fish Called Selma: \"A Fish Called Selma\" is the nineteenth episode of \"The Simpsons\"<nowiki>'</nowiki> seventh season.  It originally aired on the Fox network in the United States on March 24, 1996.  The episode features Troy McClure, who attempts to resurrect his acting career by marrying Selma Bouvier.  Show runners Bill Oakley and Josh Weinstein were fans of Phil Hartman and wished to produce an episode that focused on his character McClure.  Freelance writer Jack Barth wrote the episode, and Mark Kirkland directed it.\n\nThere's Something About a War: \"There's Something About a War\" is the 36th episode of the ABC television series, \"Desperate Housewives\".  The episode was the 13th episode for the show's second season.  The episode was written by Kevin Etten and was directed by Larry Shaw.  It originally aired on Sunday, January 22, 2006.\n\nTroy McClure: Troy McClure is a fictional character from the American animated sitcom \"The Simpsons\".  He was voiced by Phil Hartman and first appeared in the second season episode \"Homer vs. Lisa and the 8th Commandment\".  McClure is usually shown doing low-level work, such as hosting infomercials and educational films.  He appears as the main character in \"A Fish Called Selma\", in which he marries Selma Bouvier to aid his failing career and quash rumors about his personal life.  McClure also 'hosts' \"The Simpsons 138th Episode Spectacular\" and \"The Simpsons Spin-Off Showcase\".\n\nLisa's Wedding: \"Lisa's Wedding\" is the 19th episode of \"The Simpsons\"<nowiki>'</nowiki> sixth season.  It originally aired on the Fox network in the United States on March 19, 1995.  The plot focuses on Lisa visiting a carnival fortune teller and learning about her future love.  It was written by Greg Daniels and directed by Jim Reardon.  Mandy Patinkin guest stars as Hugh Parkfield and Phil Hartman guest stars as Troy McClure.  The episode won an Emmy Award in 1995 for Outstanding Animated Program, becoming the third episode of \"The Simpsons\" to win the award.\n\nThe Simpsons 138th Episode Spectacular: \"The Simpsons 138th Episode Spectacular\" is the tenth episode of \"The Simpsons\"<nowiki>'</nowiki> seventh season.  It originally aired on the Fox network in the United States on December 3, 1995.  As the title suggests, it is the 138th episode and the third clip show episode of \"The Simpsons\", after \"\" and \"Another Simpsons Clip Show\".  While the \"138th Episode Spectacular\" compiles sequences from episodes throughout the entire series like the previous two, it also shows clips from the original Simpsons shorts from \"The Tracey Ullman Show\" and other previously unaired material.  Like the Halloween specials, the episode is considered non-canon and falls outside of the show's regular continuity.\n\nAngry Birds Stella (TV series): Angry Birds Stella is a Finnish computer-animated TV series based on the game \"Angry Birds Stella\" that was produced by Rovio Entertainment.  The first episode, \"A Fork in the Friendship\", aired on ToonsTV in November 1, 2014.  The series recounts the tale of Stella, along with her friends Luca, Willow, Poppy and Dahlia, as they work their way against Gale, the former friend of Stella, that is the queen of the pigs in Golden Island.  The first season focuses on Gale trying to hunt for the Golden Egg, but, fails as seen in the final episode of season 1, \"To The Bitter End\".  The second season focuses on Gale returning and trying to hunt for the Golden Egg again, and she succeeded as seen in \"The Golden Queen\", the 9th episode of season 2.  Also, Dahlia, one of the birds, tries searching for the egg as well for an experiment, but this time, she fails, as seen in \"It's Mine!\" , the 6th episode of season 2.  Soon enough, the birds realize how dangerous this egg can be, as seen in \"Premonition\", the 11th episode in season 2, which in when Gale with the Golden Egg, anything that is touched with it, turns to gold.  However, when that happens, another thing turns to stone, the opposite of gold, which causes nature, and even worse, food to be turned to stone as well.  Now, it is up to the Stella gang to save Golden Island before it is too late.  They do succeed, as seen in \"You Asked For It\", the 13th and final episode of season 2 and the series finale of \"Angry Birds Stella\", where after a long awful night, Stella and her gang launch the Golden Egg out of the island, never to be seen again.  Gale does not mind because when she saw the Golden Egg after she broke out of the gold in the episode, she ran away, back into her castle.\n\nHomer vs. Lisa and the 8th Commandment: \"Homer vs. Lisa and the 8th Commandment\" is the thirteenth episode of \"The Simpsons\"<nowiki>'</nowiki> second season.  The 26th episode of the series overall, it originally aired on the Fox network in the United States on February 7, 1991.  In the episode, Homer gets an illegal cable hook-up.  Despite the family's enjoyment of the new channels, Lisa becomes suspicious that they are stealing cable.  Her suspicions are confirmed by Reverend Lovejoy and she protests by no longer watching television.  Meanwhile, Bart manages to tune into a sexually explicit adult movie channel, and Homer invites his friends over to watch a boxing match, but Lisa's protest gets to him.  He decides not to watch the fight and cuts the cable.\n\nQuestion: Troy McClure first appeared in what 13th episode of The Simpsons second season?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"episode_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the episode.\"\n    },\n    \"season_number\": {\n      \"type\": \"integer\",\n      \"description\": \"The season number of the episode.\"\n    },\n    \"episode_number_in_season\": {\n      \"type\": \"integer\",\n      \"description\": \"The episode number within its season.\"\n    },\n    \"character_first_appearance\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character making their first appearance in this episode.\"\n    },\n    \"network\": {\n      \"type\": \"string\",\n      \"description\": \"The network on which the episode originally aired.\"\n    },\n    \"original_air_date\": {\n      \"type\": \"string\",\n      \"description\": \"The original air date of the episode.\"\n    }\n  },\n  \"required\": [\n    \"episode_title\",\n    \"season_number\",\n    \"episode_number_in_season\",\n    \"character_first_appearance\",\n    \"network\",\n    \"original_air_date\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "episode_title",
-    "season_number",
-    "episode_number_in_season",
-    "character_first_appearance",
-    "network",
-    "original_air_date"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "episode_title": {
+        "type": "string",
+        "description": "The title of the episode."
+      },
+      "season_number": {
+        "type": "integer",
+        "description": "The season number of the episode."
+      },
+      "episode_number_in_season": {
+        "type": "integer",
+        "description": "The episode number within its season."
+      },
+      "character_first_appearance": {
+        "type": "string",
+        "description": "The name of the character making their first appearance in this episode."
+      },
+      "network": {
+        "type": "string",
+        "description": "The network on which the episode originally aired."
+      },
+      "original_air_date": {
+        "type": "string",
+        "description": "The original air date of the episode."
+      }
+    },
+    "required": [
+      "episode_title",
+      "season_number",
+      "episode_number_in_season",
+      "character_first_appearance",
+      "network",
+      "original_air_date"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

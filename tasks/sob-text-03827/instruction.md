@@ -1,63 +1,40 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-American Spectator (literary magazine): The American Spectator was a monthly literary magazine which made its first monthly appearance in November 1932.  It was edited by George Jean Nathan, though Eugene O'Neill, Ernest Boyd, Theodore Dreiser, and James Branch Cabell were also listed as joint editors.  The original editors left the publication in 1935, after which the paper continued monthly publication under new editors until October 1936.  "The American Spectator" lasted another six months on a bimonthly before folding altogether.
-
-Rachel Egglestone-Evans: Rachel 'Rae' Evans (born 6 September 1980 in Congleton, Cheshire, England) is the editor of Vintage Life Magazine, a British publication focusing on vintage fashion and lifestyle from the 1920s to the 1970s.  She is also well known as a leading historical re-enactor, live stream presenter, photographer and entrepreneur.
-
-Optics and Photonics News: Optics & Photonics News is the membership magazine of The Optical Society.  It is published monthly (with a double issue in July/August) and covers developments in optics, photonics, and related topics in physics and engineering.  It was established in 1975 as "Optics News".  The magazine adopted a regular bimonthly publication schedule beginning in 1982 and transitioned to monthly publication in 1985.  The name of the publication was changed to "Optics & Photonics News" in January 1990, in light of the dramatic growth of photonics as a new discipline in the wake of the discovery of the laser.  The format of the magazine has evolved from a newsletter format to a glossy magazine.
-
-Language magazine: First published in 1997, Language Magazine (formerly American Language Review) is the popular periodical of language, education and communication.  In 2001, Language Magazine increased its publication schedule from 6 to 12 issues a year to answer the demand of readers (including department heads, supervisors, government officials and other decision-makers) to be kept up to date with developments in the fast paced world of language and literacy education.  It has often published the works of Stephen Krashen, Aned Y. Muñiz Gracia and Eugene E. García, among others expert in the fields of linguistics and language instruction.  A great deal of its 150,000 monthly circulation are Teachers of Foreign Languages (TOFL), Teachers of English as Foreign Language (TOEFL), and teachers of English as a Second Language (ESL), as well as educational administrators and university language departments.  The California Language Teachers Association also uses it in lieu of a monthly publication.  Richard Lederer is also a monthly contributor.
-
-Monthly Climatic Data for the World: Monthly Climatic Data for the World (MCDW) is a monthly publication of the National Climatic Data Center (NCDC) division of the National Environmental Satellite, Data, and Information Service (NESDIS) division of the National Oceanic and Atmospheric Administration (NOAA) of the United States.  According to the website, each monthly issue "contains monthly mean temperature, pressure, precipitation, vapor pressure, and sunshine for approximately 2,000 surface data collection stations worldwide and monthly mean upper air temperatures, dew point depressions, and wind velocities for approximately 500 observing sites.  This is the final quality controlled copy and generally has a 4 - 6 month time lag."
-
-Tea ceremony: A tea ceremony is a ritualized form of making tea practiced in Asian culture by the Chinese, Korean, Japanese, Indian, and Vietnamese.  The tea ceremony, literally translated as ""way of tea"" in Japanese, and ""art of tea"" in Chinese , is a cultural activity involving the ceremonial preparation and presentation of tea.  The Japanese tea ceremony is better known, and was influenced by the Chinese tea culture during ancient and medieval times, starting in the 9th century when tea was first introduced to Japan from China.  The Vietnamese tea ceremony, also influenced by its Chinese counterpart, is only performed during weddings and other religious rituals.  One can also refer to the whole set of rituals, tools, gestures, etc. used in such ceremonies as tea culture.  All of these tea ceremonies and rituals contain "an adoration of the beautiful among the sordid facts of everyday life", as well as refinement, an inner spiritual content, humility, restraint and simplicity "as all arts that partake the extraordinary, an artistic artificiality, abstractness, symbolism and formalism" to one degree or another.
-
-Al Mesbar Studies and Research Centre: Al Mesbar Studies & Research Center is a Dubai based cultural phenomena think tank concentrating on the study of Islamic Movements.  The Center focuses on "contemporary Islamic Movements, their thoughts and practices, symbolisms and ideologies and especially those that have [an] historic impact which is still in effect today".  It was founded in 2007 by Turki Bin Abdullah Aldakhil.  Al-Mesbar Centre tries to materialize this transformation process through its various cultural, research and specialized scientific activities.  Al-Mesbar Centre pays special attention to studying contemporary Islamic movements in order to unveil the nature of these constructive movements, observe their relations with other movements and their interaction with their milieu, presenting an anticipatory view to its future on all levels, and a view of the future of the nation away from calls of isolation and extremism.  The core of the business is driven from its main monthly activity which is called Al-Mesbar Monthly Book; a monthly publication specialized in studying contemporary Islamic movements.  This publication is distributed by subscription to leaders and decision makers, in the Arab world region, on a monthly basis, and available to public readers after some period of time.
-
-Tea Moderna (magazine): Tea Moderna (Macedonian: Теа Модерна ) is a Macedonian woman's weekly magazine women.
-
-Vintage Life: Vintage Life is a British glossy fashion and lifestyle magazine, published by Dragoon Publishing, focusing on the 1920s-1970s.  It was founded in 2010 by British entrepreneur Rachel Egglestone-Evans.  Issue 1 was launched digitally in April 2010 and # a print version started from issue 2.  Since then, the magazine has developed from a bi-monthly handbag-sized 72 page magazine to a glossy high-end 148 page monthly publication available in WH Smith and Sainsbury's.  From May 2015, Vintage Life will be stocked in London's Selfridges and Harrods stores.  The magazine is also available by subscription worldwide.
-
-The Industrial Pioneer: The Industrial Pioneer was a monthly publication of the Industrial Workers of the World.  It was published in Chicago by the general executive board of the IWW from 1921 to 1926, under various editors.  The precursor of the "Industrial Pioneer" was the "One Big Union Monthly".  The editor of "One Big Union Monthly," John Sandgren, used his position to wage war on the Communists in the IWW.  When his editorials became too sectarian, the IWW replaced him as editor in 1921, and changed the name of the publication to the "Industrial Pioneer."  The new editor was a Communist, however, and this alienated the non-Communist majority of IWW members.  He was removed as editor in 1922.
-
-Question: Which is a monthly publication, Tea Moderna or Vintage Life?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "publication_name": {
-      "type": "string",
-      "description": "The name of the publication that is monthly."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "is_monthly": {
-      "type": "boolean",
-      "description": "True if the publication is monthly, false otherwise."
-    },
-    "previous_frequency": {
-      "type": "string",
-      "description": "The previous publication frequency if it changed."
-    },
-    "current_frequency_description": {
-      "type": "string",
-      "description": "A description of the current publication frequency as stated in the text."
+    {
+      "role": "user",
+      "content": "Context:\nAmerican Spectator (literary magazine): The American Spectator was a monthly literary magazine which made its first monthly appearance in November 1932.  It was edited by George Jean Nathan, though Eugene O'Neill, Ernest Boyd, Theodore Dreiser, and James Branch Cabell were also listed as joint editors.  The original editors left the publication in 1935, after which the paper continued monthly publication under new editors until October 1936.  \"The American Spectator\" lasted another six months on a bimonthly before folding altogether.\n\nRachel Egglestone-Evans: Rachel 'Rae' Evans (born 6 September 1980 in Congleton, Cheshire, England) is the editor of Vintage Life Magazine, a British publication focusing on vintage fashion and lifestyle from the 1920s to the 1970s.  She is also well known as a leading historical re-enactor, live stream presenter, photographer and entrepreneur.\n\nOptics and Photonics News: Optics & Photonics News is the membership magazine of The Optical Society.  It is published monthly (with a double issue in July/August) and covers developments in optics, photonics, and related topics in physics and engineering.  It was established in 1975 as \"Optics News\".  The magazine adopted a regular bimonthly publication schedule beginning in 1982 and transitioned to monthly publication in 1985.  The name of the publication was changed to \"Optics & Photonics News\" in January 1990, in light of the dramatic growth of photonics as a new discipline in the wake of the discovery of the laser.  The format of the magazine has evolved from a newsletter format to a glossy magazine.\n\nLanguage magazine: First published in 1997, Language Magazine (formerly American Language Review) is the popular periodical of language, education and communication.  In 2001, Language Magazine increased its publication schedule from 6 to 12 issues a year to answer the demand of readers (including department heads, supervisors, government officials and other decision-makers) to be kept up to date with developments in the fast paced world of language and literacy education.  It has often published the works of Stephen Krashen, Aned Y. Muñiz Gracia and Eugene E. García, among others expert in the fields of linguistics and language instruction.  A great deal of its 150,000 monthly circulation are Teachers of Foreign Languages (TOFL), Teachers of English as Foreign Language (TOEFL), and teachers of English as a Second Language (ESL), as well as educational administrators and university language departments.  The California Language Teachers Association also uses it in lieu of a monthly publication.  Richard Lederer is also a monthly contributor.\n\nMonthly Climatic Data for the World: Monthly Climatic Data for the World (MCDW) is a monthly publication of the National Climatic Data Center (NCDC) division of the National Environmental Satellite, Data, and Information Service (NESDIS) division of the National Oceanic and Atmospheric Administration (NOAA) of the United States.  According to the website, each monthly issue \"contains monthly mean temperature, pressure, precipitation, vapor pressure, and sunshine for approximately 2,000 surface data collection stations worldwide and monthly mean upper air temperatures, dew point depressions, and wind velocities for approximately 500 observing sites.  This is the final quality controlled copy and generally has a 4 - 6 month time lag.\"\n\nTea ceremony: A tea ceremony is a ritualized form of making tea practiced in Asian culture by the Chinese, Korean, Japanese, Indian, and Vietnamese.  The tea ceremony, literally translated as \"\"way of tea\"\" in Japanese, and \"\"art of tea\"\" in Chinese , is a cultural activity involving the ceremonial preparation and presentation of tea.  The Japanese tea ceremony is better known, and was influenced by the Chinese tea culture during ancient and medieval times, starting in the 9th century when tea was first introduced to Japan from China.  The Vietnamese tea ceremony, also influenced by its Chinese counterpart, is only performed during weddings and other religious rituals.  One can also refer to the whole set of rituals, tools, gestures, etc. used in such ceremonies as tea culture.  All of these tea ceremonies and rituals contain \"an adoration of the beautiful among the sordid facts of everyday life\", as well as refinement, an inner spiritual content, humility, restraint and simplicity \"as all arts that partake the extraordinary, an artistic artificiality, abstractness, symbolism and formalism\" to one degree or another.\n\nAl Mesbar Studies and Research Centre: Al Mesbar Studies & Research Center is a Dubai based cultural phenomena think tank concentrating on the study of Islamic Movements.  The Center focuses on \"contemporary Islamic Movements, their thoughts and practices, symbolisms and ideologies and especially those that have [an] historic impact which is still in effect today\".  It was founded in 2007 by Turki Bin Abdullah Aldakhil.  Al-Mesbar Centre tries to materialize this transformation process through its various cultural, research and specialized scientific activities.  Al-Mesbar Centre pays special attention to studying contemporary Islamic movements in order to unveil the nature of these constructive movements, observe their relations with other movements and their interaction with their milieu, presenting an anticipatory view to its future on all levels, and a view of the future of the nation away from calls of isolation and extremism.  The core of the business is driven from its main monthly activity which is called Al-Mesbar Monthly Book; a monthly publication specialized in studying contemporary Islamic movements.  This publication is distributed by subscription to leaders and decision makers, in the Arab world region, on a monthly basis, and available to public readers after some period of time.\n\nTea Moderna (magazine): Tea Moderna (Macedonian: Теа Модерна ) is a Macedonian woman's weekly magazine women.\n\nVintage Life: Vintage Life is a British glossy fashion and lifestyle magazine, published by Dragoon Publishing, focusing on the 1920s-1970s.  It was founded in 2010 by British entrepreneur Rachel Egglestone-Evans.  Issue 1 was launched digitally in April 2010 and # a print version started from issue 2.  Since then, the magazine has developed from a bi-monthly handbag-sized 72 page magazine to a glossy high-end 148 page monthly publication available in WH Smith and Sainsbury's.  From May 2015, Vintage Life will be stocked in London's Selfridges and Harrods stores.  The magazine is also available by subscription worldwide.\n\nThe Industrial Pioneer: The Industrial Pioneer was a monthly publication of the Industrial Workers of the World.  It was published in Chicago by the general executive board of the IWW from 1921 to 1926, under various editors.  The precursor of the \"Industrial Pioneer\" was the \"One Big Union Monthly\".  The editor of \"One Big Union Monthly,\" John Sandgren, used his position to wage war on the Communists in the IWW.  When his editorials became too sectarian, the IWW replaced him as editor in 1921, and changed the name of the publication to the \"Industrial Pioneer.\"  The new editor was a Communist, however, and this alienated the non-Communist majority of IWW members.  He was removed as editor in 1922.\n\nQuestion: Which is a monthly publication, Tea Moderna or Vintage Life?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"publication_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the publication that is monthly.\"\n    },\n    \"is_monthly\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if the publication is monthly, false otherwise.\"\n    },\n    \"previous_frequency\": {\n      \"type\": \"string\",\n      \"description\": \"The previous publication frequency if it changed.\"\n    },\n    \"current_frequency_description\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the current publication frequency as stated in the text.\"\n    }\n  },\n  \"required\": [\n    \"publication_name\",\n    \"is_monthly\",\n    \"current_frequency_description\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "publication_name",
-    "is_monthly",
-    "current_frequency_description"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "publication_name": {
+        "type": "string",
+        "description": "The name of the publication that is monthly."
+      },
+      "is_monthly": {
+        "type": "boolean",
+        "description": "True if the publication is monthly, false otherwise."
+      },
+      "previous_frequency": {
+        "type": "string",
+        "description": "The previous publication frequency if it changed."
+      },
+      "current_frequency_description": {
+        "type": "string",
+        "description": "A description of the current publication frequency as stated in the text."
+      }
+    },
+    "required": [
+      "publication_name",
+      "is_monthly",
+      "current_frequency_description"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

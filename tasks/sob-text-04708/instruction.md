@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-My Brother the Serial Killer: My Brother the Serial Killer is a 2012 American television documentary about serial killer Glen Rogers, otherwise known as the "Casanova Killer", who was convicted for a series of murders and arsons.  The documentary was narrated by Rogers' brother Clay Rogers and aired on Investigation Discovery in November 2012.  "My Brother the Serial Killer" received widespread media attention for Clay's claims that his brother was responsible for the 1994 murders of Nicole Brown Simpson and Ronald Lyle Goldman.
-
-Sun Hill Serial Killer: The Sun Hill Serial Killer was a major storyline from ITV's cop show "The Bill".  Known originally as the "River Murders", the storyline spanned several months in 2002 and served as the exit for popular cast regular Cass Rickman (played by Suzanne Maddock).  It was the first of several serial killer storylines from the show.  Events came to a head in the New Year of 2003, when Acting DI Samantha Nixon discovers the truth and is taken hostage by the serial killer, before a final confrontation in which she is overpowered by DC Duncan Lennox, charged and thrown into the cells at Sun Hill Station.
-
-The Spider and the Fly (2017 book): The Spider and the Fly was published on January 24, 2017, by Dey Street Books and was written by Claudia Rowe.  It chronicles interviews between Rowe and serial killer Kendall Francois also known as "The Poughkeepsie Killer" and "Stinky."
-
-Luis Garavito: Luis Alfredo Garavito Cubillos, also known as "La Bestia" ("The Beast") or "Tribilín" (named after Disney character "Goofy"'s Latin American Spanish name) is a Colombian rapist and serial killer.  In 1999, he admitted to the rape, torture and murder of 147 young boys.  His victims, based on the locations of skeletons listed on maps that Garavito drew in prison, could eventually exceed 300; Garavito continues to confess to more murders.  He has been described by local media as "the world's worst serial killer".  According to the Attorney General's Office and various judicial bodies, Luis Alfredo Garavito is the "second serial killer of the world."  Likewise, the judicial body ruled that all Garavito's sentences total 1853 years and nine days in jail.
-
-Henry: Portrait of a Serial Killer: Henry: Portrait of a Serial Killer is a 1986 American psychological horror crime film directed and co-written by John McNaughton about the random crime spree of a serial killer who seemingly operates with impunity.  It stars Michael Rooker as the nomadic killer Henry, Tom Towles as Otis, a prison buddy with whom Henry is living, and Tracy Arnold as Becky, Otis's sister.  The characters of Henry and Otis are loosely based on real life serial killers Henry Lee Lucas and Ottis Toole.
-
-Cold North Killers: Canadian Serial Murder: Cold North Killers: Canadian Serial Murder is a 2012 Canadian non-fiction book written by Lee Mellor and published by Dundurn Press.  It documents the lives of sixty Canadian serial killers, with the earliest being Edward H. Rulloff and the most recent being Russell Williams.  The book uses Katherine Ramsland's interpretation of what constitutes a serial killer—someone who has killed at least two people on two separate occasions, and who attempted to or likely would have killed again—as outlined in her 2007 book "The Human Predator".  "Cold North Killer's" own definition of what constitutes a Canadian serial killer includes both Canadians who committed murder abroad (such as Keith Hunter Jesperson and Gordon Stewart Northcott) and non-Canadians who committed murder in Canada (like William Dean Christenson and Earle Nelson).
-
-God's Spy: God's Spy is a 2007 bestselling thriller novel by Juan Gómez-Jurado originally published in Spain.  It has become an instant bestseller throughout Europe with a million copies sold to date and is going to be published in 42 countries.  The plot is set in the Vatican, where, in the aftermath of Pope John Paul II's death, the hunt for a serial killer and sex offender — and former priest — reveals a chilling conspiracy.  It is a detective story where the psychological portrait of Victor Karosky, the serial killer (which name is known from the first line of the book) is the spine of the novel.  The action also takes place in a Maryland institution called the Saint Matthew Institute, a center for the rehabilitation of priest with a history of sexual abuse, which is based in a real-life place.  This subject has aroused controversial issues in Catholic countries as Spain and Poland.
-
-Kendall Francois: Kendall Francois (July 26, 1971 – September 11, 2014) was an American serial killer from Poughkeepsie, New York, convicted of killing eight women, from 1996 to 1998.  After his conviction and sentencing, Francois was housed in the Attica Correctional Facility until shortly before his death, when he was transferred to the Wende Correctional Facility.  It was revealed in his trial in 2000 that he tested positive for HIV in 1995, but this was not said to have been related to his death.
-
-Charles Cullen: Charles Edmund Cullen (born February 22, 1960) is a former nurse who is the most prolific serial killer in New Jersey history and is suspected to be the most prolific serial killer in American history.  He confessed to authorities that he killed up to 40 patients during the course of his 16-year nursing career.  But in subsequent interviews with police, psychiatric professionals, and journalists Charles Graeber and Steve Kroft, it became clear that he had killed many more, whom he could not specifically remember by name, though he could often remember details of their case.  Experts have estimated that Charles Cullen may ultimately be responsible for 400 deaths, which would make him the most prolific serial killer in American history.
-
-Dexter (episode): "Dexter", or "Pilot", is the pilot episode of the first season television drama series "Dexter", which premiered on October 1, 2006 on Showtime in the United States.  The episode was written by developer James Manos, Jr. and directed by Michael Cuesta.  It was based on the opening of the novel "Darkly Dreaming Dexter" by Jeff Lindsay.  The pilot introduces the series' protagonist, Dexter Morgan (Michael C. Hall), a Miami Metro Police Department blood spatter analyst with a double life as a serial killer.  While solving murders in the Homicide division, Dexter also spends his time hunting and killing murderers and criminals who have escaped the justice system.  The pilot introduces the "Ice Truck Killer", a serial killer who targets prostitutes and leaves their bodies dismembered and bloodless, and the rivalry that develops between the killer and Dexter.
-
-Question: Where did the serial killer that the novel The Spider and the Fly was based on die? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "serial_killer_name": {
-      "type": "string",
-      "description": "The name of the serial killer featured in the novel."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "novel_title": {
-      "type": "string",
-      "description": "The title of the novel."
-    },
-    "death_location": {
-      "type": "string",
-      "description": "The facility where the serial killer died."
-    },
-    "death_year": {
-      "type": "integer",
-      "description": "The year the serial killer died."
-    },
-    "previous_housing_facility": {
-      "type": "string",
-      "description": "The correctional facility where the serial killer was housed before being transferred prior to death."
+    {
+      "role": "user",
+      "content": "Context:\nMy Brother the Serial Killer: My Brother the Serial Killer is a 2012 American television documentary about serial killer Glen Rogers, otherwise known as the \"Casanova Killer\", who was convicted for a series of murders and arsons.  The documentary was narrated by Rogers' brother Clay Rogers and aired on Investigation Discovery in November 2012.  \"My Brother the Serial Killer\" received widespread media attention for Clay's claims that his brother was responsible for the 1994 murders of Nicole Brown Simpson and Ronald Lyle Goldman.\n\nSun Hill Serial Killer: The Sun Hill Serial Killer was a major storyline from ITV's cop show \"The Bill\".  Known originally as the \"River Murders\", the storyline spanned several months in 2002 and served as the exit for popular cast regular Cass Rickman (played by Suzanne Maddock).  It was the first of several serial killer storylines from the show.  Events came to a head in the New Year of 2003, when Acting DI Samantha Nixon discovers the truth and is taken hostage by the serial killer, before a final confrontation in which she is overpowered by DC Duncan Lennox, charged and thrown into the cells at Sun Hill Station.\n\nThe Spider and the Fly (2017 book): The Spider and the Fly was published on January 24, 2017, by Dey Street Books and was written by Claudia Rowe.  It chronicles interviews between Rowe and serial killer Kendall Francois also known as \"The Poughkeepsie Killer\" and \"Stinky.\"\n\nLuis Garavito: Luis Alfredo Garavito Cubillos, also known as \"La Bestia\" (\"The Beast\") or \"Tribilín\" (named after Disney character \"Goofy\"'s Latin American Spanish name) is a Colombian rapist and serial killer.  In 1999, he admitted to the rape, torture and murder of 147 young boys.  His victims, based on the locations of skeletons listed on maps that Garavito drew in prison, could eventually exceed 300; Garavito continues to confess to more murders.  He has been described by local media as \"the world's worst serial killer\".  According to the Attorney General's Office and various judicial bodies, Luis Alfredo Garavito is the \"second serial killer of the world.\"  Likewise, the judicial body ruled that all Garavito's sentences total 1853 years and nine days in jail.\n\nHenry: Portrait of a Serial Killer: Henry: Portrait of a Serial Killer is a 1986 American psychological horror crime film directed and co-written by John McNaughton about the random crime spree of a serial killer who seemingly operates with impunity.  It stars Michael Rooker as the nomadic killer Henry, Tom Towles as Otis, a prison buddy with whom Henry is living, and Tracy Arnold as Becky, Otis's sister.  The characters of Henry and Otis are loosely based on real life serial killers Henry Lee Lucas and Ottis Toole.\n\nCold North Killers: Canadian Serial Murder: Cold North Killers: Canadian Serial Murder is a 2012 Canadian non-fiction book written by Lee Mellor and published by Dundurn Press.  It documents the lives of sixty Canadian serial killers, with the earliest being Edward H. Rulloff and the most recent being Russell Williams.  The book uses Katherine Ramsland's interpretation of what constitutes a serial killer—someone who has killed at least two people on two separate occasions, and who attempted to or likely would have killed again—as outlined in her 2007 book \"The Human Predator\".  \"Cold North Killer's\" own definition of what constitutes a Canadian serial killer includes both Canadians who committed murder abroad (such as Keith Hunter Jesperson and Gordon Stewart Northcott) and non-Canadians who committed murder in Canada (like William Dean Christenson and Earle Nelson).\n\nGod's Spy: God's Spy is a 2007 bestselling thriller novel by Juan Gómez-Jurado originally published in Spain.  It has become an instant bestseller throughout Europe with a million copies sold to date and is going to be published in 42 countries.  The plot is set in the Vatican, where, in the aftermath of Pope John Paul II's death, the hunt for a serial killer and sex offender — and former priest — reveals a chilling conspiracy.  It is a detective story where the psychological portrait of Victor Karosky, the serial killer (which name is known from the first line of the book) is the spine of the novel.  The action also takes place in a Maryland institution called the Saint Matthew Institute, a center for the rehabilitation of priest with a history of sexual abuse, which is based in a real-life place.  This subject has aroused controversial issues in Catholic countries as Spain and Poland.\n\nKendall Francois: Kendall Francois (July 26, 1971 – September 11, 2014) was an American serial killer from Poughkeepsie, New York, convicted of killing eight women, from 1996 to 1998.  After his conviction and sentencing, Francois was housed in the Attica Correctional Facility until shortly before his death, when he was transferred to the Wende Correctional Facility.  It was revealed in his trial in 2000 that he tested positive for HIV in 1995, but this was not said to have been related to his death.\n\nCharles Cullen: Charles Edmund Cullen (born February 22, 1960) is a former nurse who is the most prolific serial killer in New Jersey history and is suspected to be the most prolific serial killer in American history.  He confessed to authorities that he killed up to 40 patients during the course of his 16-year nursing career.  But in subsequent interviews with police, psychiatric professionals, and journalists Charles Graeber and Steve Kroft, it became clear that he had killed many more, whom he could not specifically remember by name, though he could often remember details of their case.  Experts have estimated that Charles Cullen may ultimately be responsible for 400 deaths, which would make him the most prolific serial killer in American history.\n\nDexter (episode): \"Dexter\", or \"Pilot\", is the pilot episode of the first season television drama series \"Dexter\", which premiered on October 1, 2006 on Showtime in the United States.  The episode was written by developer James Manos, Jr. and directed by Michael Cuesta.  It was based on the opening of the novel \"Darkly Dreaming Dexter\" by Jeff Lindsay.  The pilot introduces the series' protagonist, Dexter Morgan (Michael C. Hall), a Miami Metro Police Department blood spatter analyst with a double life as a serial killer.  While solving murders in the Homicide division, Dexter also spends his time hunting and killing murderers and criminals who have escaped the justice system.  The pilot introduces the \"Ice Truck Killer\", a serial killer who targets prostitutes and leaves their bodies dismembered and bloodless, and the rivalry that develops between the killer and Dexter.\n\nQuestion: Where did the serial killer that the novel The Spider and the Fly was based on die? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"serial_killer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the serial killer featured in the novel.\"\n    },\n    \"novel_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the novel.\"\n    },\n    \"death_location\": {\n      \"type\": \"string\",\n      \"description\": \"The facility where the serial killer died.\"\n    },\n    \"death_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the serial killer died.\"\n    },\n    \"previous_housing_facility\": {\n      \"type\": \"string\",\n      \"description\": \"The correctional facility where the serial killer was housed before being transferred prior to death.\"\n    }\n  },\n  \"required\": [\n    \"serial_killer_name\",\n    \"novel_title\",\n    \"death_location\",\n    \"death_year\",\n    \"previous_housing_facility\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "serial_killer_name",
-    "novel_title",
-    "death_location",
-    "death_year",
-    "previous_housing_facility"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "serial_killer_name": {
+        "type": "string",
+        "description": "The name of the serial killer featured in the novel."
+      },
+      "novel_title": {
+        "type": "string",
+        "description": "The title of the novel."
+      },
+      "death_location": {
+        "type": "string",
+        "description": "The facility where the serial killer died."
+      },
+      "death_year": {
+        "type": "integer",
+        "description": "The year the serial killer died."
+      },
+      "previous_housing_facility": {
+        "type": "string",
+        "description": "The correctional facility where the serial killer was housed before being transferred prior to death."
+      }
+    },
+    "required": [
+      "serial_killer_name",
+      "novel_title",
+      "death_location",
+      "death_year",
+      "previous_housing_facility"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

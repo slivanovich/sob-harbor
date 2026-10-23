@@ -2,12 +2,16 @@
 
 The 5,000-record text test split of [InterfazeAI/SOB](https://github.com/InterfazeAI/sob),
 converted into Harbor tasks. Each task supplies the original context, question
-and JSON schema. The agent writes `/tmp/answer.json`; the verifier evaluates it
+and JSON schema. The executor writes `/tmp/answer.json`; the verifier evaluates it
 using the pinned upstream `evaluate_record()` implementation.
 
-This measures a model together with its agent harness and tool/revision budget.
-It is not the original one-response SOB leaderboard protocol. Image and audio
-splits are not included.
+Version 2 uses one schema-constrained model response per task. The
+`structured-output` executor in harness-bench sends the original messages through
+Chat Completions with `response_format.type=json_schema`, `strict=true`, and the
+original schema. It saves the response verbatim, without tools, revisions or
+automatic repairs. Image and audio splits are not included. Launch generation
+parameters and unweighted aggregation must still be considered when comparing
+with leaderboard results.
 
 ## Data And Evaluation
 
@@ -24,10 +28,17 @@ The environment is a digest-pinned public Python 3.12 image. No per-task image
 build is necessary when Harbor uses `environment.docker_image`. The provided
 Dockerfile describes the same image for backends that build environments.
 Declared resources: 1 CPU, 2 GiB RAM, 1 GiB writable storage; agent budget 600 s,
-verifier budget 180 s. Agent setup and verifier dependency installation need
-network access. The verifier installs `jsonschema==4.26.0` in its own venv.
+verifier budget 180 s. The executor calls the model from the runner; verifier
+dependency installation needs task network access. The verifier installs
+`jsonschema==4.26.0` in its own venv.
 
-Agent-visible data is in `instruction.md`; reference outputs and scorer inputs
+Agent-visible data is a JSON object in `instruction.md`:
+
+- `messages`: the upstream system and user prompts;
+- `json_schema`: the original schema, without rewriting its constraints;
+- `answer_path`: `/tmp/answer.json`.
+
+Reference outputs and scorer inputs
 are under `tests/`, which Harbor uploads for verification after the agent stage.
 `solution/` contains upstream ground truth for oracle validation.
 
@@ -36,6 +47,12 @@ are under `tests/`, which Harbor uploads for verification after the agent stage.
 faithfulness, path recall, structure coverage, type safety and exact response
 match. Missing or malformed answer files are scored as invalid predictions.
 Scorer/dependency failures remain infrastructure errors.
+An API rejection or interrupted request also remains an error; it does not
+trigger a retry with a weaker response format. The executor records the actual
+serialized HTTP request, decoded stream chunks, request ID, finish reason,
+timing and local JSON/schema validation in `agent/structured-output.jsonl`.
+Those logs establish what was sent and received, not how the server internally
+enforced the schema.
 
 The catalog uses unweighted arithmetic means per metric. This is not SOB's
 cross-modality composite or schema-complexity-weighted leaderboard score.

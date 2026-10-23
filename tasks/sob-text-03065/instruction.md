@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Butler Bank: Butler Bank is a historic bank building located in downtown Hood River, Oregon, United States, built during Hood River's second major phase of urban development.  It was designed by Portland-based A. E. Doyle (1877–1928), one of the Pacific Northwest's most celebrated architects of the early 20th century, during the later years of his career.  It is one of only two commercial buildings he designed in the Columbia River Gorge region, and his only Egyptian Revival-style commission in Oregon.  It was erected in 1924 for Butler Banking Company, which was led by Leslie Butler (1847–1944).  Butler and his son Truman opened the Butler and Company Bank in 1900 as Hood River's first bank, and incorporated it as the Butler Banking Company in 1905.  Despite early commercial success, it fell victim to the circumstances of the Great Depression and failed in 1932.  The Butlers were regarded as blameless in the failure and continued as respected businessmen.  In addition to his prominent role in business during the early years of Hood River's development, Leslie Butler was very active in voluntary and philanthropic activities throughout Oregon, especially in the area of public health.
-
-Eagle Telephone System: Eagle Telephone System Inc. (known as Snake River PCS under its wireless brand) is an American telecommunications company headquarter in Richland, Oregon.  It provides land-line and wireless communications, as well as DSL to residential and business customers.  The company operates in Baker County, Oregon, with services available in Richland, New Bridge, Sparta, and Eagle Creek.
-
-MortgageIT: MortgageIT is a residential mortgage banking company that was founded in 1988 and is headquartered in New York City.  By 2004, the company had become one of the top mortgage lenders in the nation.  Also, in 2004, MortgageIT became a wholly owned subsidiary of MortgageIT Holdings, a self-administered REIT trading on the NYSE.  As a full-service residential mortgage banking company, MortgageIT’s primary business operations are to originate, sell and broker residential mortgage loans in 50 states and the District of Columbia.  Also, MortgageIT is an approved U.S. Department of Housing and Urban Development (HUD) delegated mortgagee.  At the end of January 3, 2007 the company employed 2,100 and had 47 branches throughout the United States.  The settlement, title and related services for mortgage loans were provided by Home Closer LLC, a subsidiary of MortgageIT.
-
-Georgia Railroad and Banking Company: The Georgia Railroad and Banking Company (reporting mark GA) also seen as "GARR", was a historic railroad and banking company that operated in the U.S. state of Georgia.  In 1967 it reported 833 million revenue-ton-miles of freight and 3 million passenger-miles; at the end of the year it operated 331 mi of road and 510 mi of track.
-
-Anderson Bank Building: The Anderson Bank Building is a historic bank building located at Anderson, Indiana in the United States.  It was built for the Anderson Banking Company in 1928.  The bank building is located at 931 Meridan Street.  The Anderson Banking Company began business on January 30, 1890.  It was the only bank in Anderson to survive the Great Depression without closing.  In 1985, the bank was acquired by Merchants National Corporation of Indianapolis.  In 1991 Merchants National Corporation was acquired by National City Bank.  National City Bank still operates a branch in the Anderson Bank Building.
-
-Cyware labs: Cyware Labs is a cyber security company providing cyber situational awareness, threat intelligence sharing and real-time incident reporting based solutions for organizations.  The company headquarter is located at New York, USA.  Cyware aggregates cyber security updates using its machine learning technology and summarizes them in 100-120 words and then disseminates them in Card format over its mobile app and website.  Cyware was awarded "Start-up of the Year" by Entrepreneur Media for the year 2016.
-
-ING Belgium: ING Belgium is the Belgian subsidiary of the ING Group, an international banking company.  The bank was formerly known as Bank Brussel Lambert which became part of ING Group in 1998.  It provides retail and commercial banking services to individuals and businesses in Belgium, together with related financial products such as insurance and asset management.
-
-ING Group: The ING Group (Dutch: "ING Groep" ) is a Dutch multinational banking and financial services corporation headquartered in Amsterdam.  Its primary businesses are retail banking, direct banking, commercial banking, investment banking, asset management, and insurance services.  ING is an abbreviation for "Internationale Nederlanden Groep " (English: International Netherlands Group).
-
-Central Service Flight Company: Central Vietnam Helicopter Company (VNHC) "(Vietnamese: Công ty Trực thăng miền Trung)" also known as Central Service Flight Company (CSFC) or VNH Central is a Vietnam People's Army-owned chartered helicopter airline in Vietnam that provides helicopter services for tourism as well as oil and gas exploration and VIP transportation.  The company headquarter based in Danang International Airport, Nguyen Van Linh St., Thac Gian Ward, Thanh Khe District, Danang.  It has a base in Nuoc Man Airport.
-
-Tennille Banking Company Building: Tennille Banking Company Building is a historic structure in Tennille, Georgia.  It was added to the National Register of Historic Places on July 28, 1994.  It is located at 102-104 North Main Street.  The Tennille Banking Company opened in 1900.  The building was designed by Charles E. Choate (August 31, 1865 – 1929) who lived for ten years in Tennille.
-
-Question: ING Belgium is a subsidiary of what international banking company headquarter in Amsterdam?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "subsidiary_company": {
-      "type": "string",
-      "description": "The name of the subsidiary company."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "parent_company": {
-      "type": "string",
-      "description": "The name of the international banking company that is the parent."
-    },
-    "parent_company_headquarters": {
-      "type": "string",
-      "description": "The city where the parent company is headquartered."
+    {
+      "role": "user",
+      "content": "Context:\nButler Bank: Butler Bank is a historic bank building located in downtown Hood River, Oregon, United States, built during Hood River's second major phase of urban development.  It was designed by Portland-based A. E. Doyle (1877–1928), one of the Pacific Northwest's most celebrated architects of the early 20th century, during the later years of his career.  It is one of only two commercial buildings he designed in the Columbia River Gorge region, and his only Egyptian Revival-style commission in Oregon.  It was erected in 1924 for Butler Banking Company, which was led by Leslie Butler (1847–1944).  Butler and his son Truman opened the Butler and Company Bank in 1900 as Hood River's first bank, and incorporated it as the Butler Banking Company in 1905.  Despite early commercial success, it fell victim to the circumstances of the Great Depression and failed in 1932.  The Butlers were regarded as blameless in the failure and continued as respected businessmen.  In addition to his prominent role in business during the early years of Hood River's development, Leslie Butler was very active in voluntary and philanthropic activities throughout Oregon, especially in the area of public health.\n\nEagle Telephone System: Eagle Telephone System Inc. (known as Snake River PCS under its wireless brand) is an American telecommunications company headquarter in Richland, Oregon.  It provides land-line and wireless communications, as well as DSL to residential and business customers.  The company operates in Baker County, Oregon, with services available in Richland, New Bridge, Sparta, and Eagle Creek.\n\nMortgageIT: MortgageIT is a residential mortgage banking company that was founded in 1988 and is headquartered in New York City.  By 2004, the company had become one of the top mortgage lenders in the nation.  Also, in 2004, MortgageIT became a wholly owned subsidiary of MortgageIT Holdings, a self-administered REIT trading on the NYSE.  As a full-service residential mortgage banking company, MortgageIT’s primary business operations are to originate, sell and broker residential mortgage loans in 50 states and the District of Columbia.  Also, MortgageIT is an approved U.S. Department of Housing and Urban Development (HUD) delegated mortgagee.  At the end of January 3, 2007 the company employed 2,100 and had 47 branches throughout the United States.  The settlement, title and related services for mortgage loans were provided by Home Closer LLC, a subsidiary of MortgageIT.\n\nGeorgia Railroad and Banking Company: The Georgia Railroad and Banking Company (reporting mark GA) also seen as \"GARR\", was a historic railroad and banking company that operated in the U.S. state of Georgia.  In 1967 it reported 833 million revenue-ton-miles of freight and 3 million passenger-miles; at the end of the year it operated 331 mi of road and 510 mi of track.\n\nAnderson Bank Building: The Anderson Bank Building is a historic bank building located at Anderson, Indiana in the United States.  It was built for the Anderson Banking Company in 1928.  The bank building is located at 931 Meridan Street.  The Anderson Banking Company began business on January 30, 1890.  It was the only bank in Anderson to survive the Great Depression without closing.  In 1985, the bank was acquired by Merchants National Corporation of Indianapolis.  In 1991 Merchants National Corporation was acquired by National City Bank.  National City Bank still operates a branch in the Anderson Bank Building.\n\nCyware labs: Cyware Labs is a cyber security company providing cyber situational awareness, threat intelligence sharing and real-time incident reporting based solutions for organizations.  The company headquarter is located at New York, USA.  Cyware aggregates cyber security updates using its machine learning technology and summarizes them in 100-120 words and then disseminates them in Card format over its mobile app and website.  Cyware was awarded \"Start-up of the Year\" by Entrepreneur Media for the year 2016.\n\nING Belgium: ING Belgium is the Belgian subsidiary of the ING Group, an international banking company.  The bank was formerly known as Bank Brussel Lambert which became part of ING Group in 1998.  It provides retail and commercial banking services to individuals and businesses in Belgium, together with related financial products such as insurance and asset management.\n\nING Group: The ING Group (Dutch: \"ING Groep\" ) is a Dutch multinational banking and financial services corporation headquartered in Amsterdam.  Its primary businesses are retail banking, direct banking, commercial banking, investment banking, asset management, and insurance services.  ING is an abbreviation for \"Internationale Nederlanden Groep \" (English: International Netherlands Group).\n\nCentral Service Flight Company: Central Vietnam Helicopter Company (VNHC) \"(Vietnamese: Công ty Trực thăng miền Trung)\" also known as Central Service Flight Company (CSFC) or VNH Central is a Vietnam People's Army-owned chartered helicopter airline in Vietnam that provides helicopter services for tourism as well as oil and gas exploration and VIP transportation.  The company headquarter based in Danang International Airport, Nguyen Van Linh St., Thac Gian Ward, Thanh Khe District, Danang.  It has a base in Nuoc Man Airport.\n\nTennille Banking Company Building: Tennille Banking Company Building is a historic structure in Tennille, Georgia.  It was added to the National Register of Historic Places on July 28, 1994.  It is located at 102-104 North Main Street.  The Tennille Banking Company opened in 1900.  The building was designed by Charles E. Choate (August 31, 1865 – 1929) who lived for ten years in Tennille.\n\nQuestion: ING Belgium is a subsidiary of what international banking company headquarter in Amsterdam?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"subsidiary_company\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the subsidiary company.\"\n    },\n    \"parent_company\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the international banking company that is the parent.\"\n    },\n    \"parent_company_headquarters\": {\n      \"type\": \"string\",\n      \"description\": \"The city where the parent company is headquartered.\"\n    }\n  },\n  \"required\": [\n    \"subsidiary_company\",\n    \"parent_company\",\n    \"parent_company_headquarters\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "subsidiary_company",
-    "parent_company",
-    "parent_company_headquarters"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "subsidiary_company": {
+        "type": "string",
+        "description": "The name of the subsidiary company."
+      },
+      "parent_company": {
+        "type": "string",
+        "description": "The name of the international banking company that is the parent."
+      },
+      "parent_company_headquarters": {
+        "type": "string",
+        "description": "The city where the parent company is headquartered."
+      }
+    },
+    "required": [
+      "subsidiary_company",
+      "parent_company",
+      "parent_company_headquarters"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

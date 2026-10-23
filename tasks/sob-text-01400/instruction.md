@@ -1,87 +1,64 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Mac McAnally: Lyman Corbitt "Mac" McAnally, Jr. ( ; born July 15, 1957) is an American country music singer-songwriter, session musician and record producer.  In his career, he has recorded ten studio albums and eight singles.  Two of his singles were hits on the "Billboard" Hot 100, and six more on the Hot Country Songs charts.  His ninth chart entry came in late 2008-early 2009 as a guest vocalist on Kenny Chesney's Number One cover of his 1990 single "Down the Road".  He has also produced for Sawyer Brown and Restless Heart, written several singles for other artists, and is a member of Jimmy Buffett's backing band, The Coral Reefer Band.
-
-Riddles in the Sand: Riddles in the Sand is the thirteenth studio album by American popular music singer-songwriter Jimmy Buffett.  It was released in September 1984 as MCA 5512 and was produced by noted country music producer Jimmy Bowen and represented a concerted shift toward a more country sound by Buffett.  He appeared on the album's cover in typical country singer garb and promoted the album at Fan Fair country music festival in Nashville, Tennessee.  The album was originally to have been titled "Gulf and Western Music" reflecting the fusion of musical styles seen in much of Buffett's music often called gulf and western music.  In the album's liner notes, Jim Harrison says, "This album has a musical range expanding in an arc from Bob Wills to Bob Marley with the Gulf somehow always there."
-
-Lane Brody: Lane Brody (born September 24, 1955 in Oak Park, Illinois) is an American country music singer-songwriter, active since the early 1980s, best known for her 1984 Billboard-topping country hit "The Yellow Rose" (a duet with country music singer Johnny Lee), and for the Oscar-nominated song "Over You" from the 1983 film "Tender Mercies".  She is the first female in country music to have an Oscar-nominated hit from a soundtrack album.  Besides "The Yellow Rose", Brody has eleven other chart singles on the Billboard country charts.
-
-Lefty Frizzell: William Orville Frizzell, known as Lefty Frizzell (March 31, 1928 – July 19, 1975), was an American country music singer-songwriter and honky-tonk singer.  A vocalist who set the style of singing "the country way" for the generations that followed, Frizzell became one of the most successful and influential artists of country music throughout his career.  He gained prominence in 1950 after two major hits, and throughout the decade was a very popular country performer.  He smoothed out the rough edges of a honky tonk song by sounding out syllables longer and singing longer.  Because of this, his music become much more mainstream without losing its honky-tonk attitude and persona.
-
-Jenny Lou Carson: Jenny Lou Carson, (January 13, 1915–December 16, 1978), born Virginia Lucille Overstake, was an American country music singer-songwriter and the first woman to write a No. 1 country music hit.  From 1945 to 1955 she was one of the most prolific songwriters in country music.
-
-Jim Reeves: James Travis Reeves (August 20, 1923July 31, 1964) was an American country and popular music singer-songwriter.  With records charting from the 1950s to the 1980s, he became well known as a practitioner of the Nashville sound (a mixture of older country-style music with elements of popular music).  Known as "Gentleman Jim", his songs continued to chart for years after his death.  Reeves died in the crash of his private airplane.  He is a member of both the Country Music and Texas Country Music Halls of Fame.
-
-Jimmy Rollins (musician): Jimmy Rollins "(né" James Rollins) is an American guitarist, songwriter, audio engineer, and record producer from Dallas who flourished in the 1950s, playing guitar on recordings as sideman with Lefty Frizzell, Billy Walker, Marty Robbins, and Sid King and the Five Strings.  Rollins composed songs recorded by Connie Smith, Jean Shepard, and Porter Wagoner.  As an audio engineer, he worked at the Jim Beck Studio in Dallas during the mid-1950s and in 1956, he worked at Tom Merriman's recording studio at 3104 Maple Avenue, Dallas.
-
-Tim Malchak: Tim Malchak (born June 25, 1957 in Binghamton, New York) is an American country music singer-songwriter.  Malchak partnered with Dwight Rucker in 1982 to form the country music duo Malchak & Rucker.  Together, they became the first black/white duo in country music history with a charting single when "Just Like That" debuted on the "Billboard" Hot Country Singles & Tracks chart in 1984.
-
-Buddy Brown (musician): Buddy Brown is a traditional American country music singer-songwriter who was discovered as a YouTube sensation.  Brown was born on May 12, 1982 to Dan and Cheryl Brown in Madison, Mississippi, a suburb of Jackson.  When Brown was nine years old, his family decided to relocate to Orlando, Florida for his father’s career.  In 2005, he graduated from Mississippi State with a degree in Psychology.  On October 13, 2009, he released a cover of Easton Corbin’s "A Little More Country Than That" that went viral.  A year later, he opened up for country music legend, John Anderson in Wildwood, FL.  On July 4, 2012, he released his first album titled Mason Jar.  His fan base pushed his first full-length CD to No. 34 on the iTunes country chart without a record deal.  March 11, 2014, he released a self-titled EP, Buddy Brown.  On October 14, 2014, Buddy released his second EP, Keepin’ It Country.  This EP reached to No. 12 on the iTunes charts.  In January 2014, Billboard put Keepin’ It Country on their Heat Seekers Albums list.  USA Today published a story on Brown, labeling him as a "YouTube Sensation."  His single "Takin’ You Huntin’" landed him a spot on the front page and an online feature in the Clarion Ledger.
-
-Loretta Lynn: Loretta Lynn (née Webb; born April 14, 1932) is an American country music singer-songwriter with multiple gold albums over a career of almost 60 years.  She has received numerous awards and other accolades for her groundbreaking role in country music, including awards from both the Country Music Association and Academy of Country Music as a duet partner and an individual artist.  She is the most awarded female country recording artist and the only female ACM Artist of the Decade (1970s).
-
-Question: which  American country music singer-songwriter has Jimmy Rollins as sideman
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "sideman_name": {
-      "type": "string",
-      "description": "The name of the musician who served as a sideman."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "role": {
-      "type": "string",
-      "description": "The role of the sideman."
-    },
-    "artists_with_sideman_collaboration": {
-      "type": "array",
-      "description": "A list of artists for whom the specified musician played as a sideman.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "country_music_singer_songwriter_with_sideman": {
-      "type": "object",
-      "description": "The American country music singer-songwriter who had the specified musician as a sideman.",
-      "properties": {
-        "stage_name": {
-          "type": "string",
-          "description": "The stage name of the artist."
-        },
-        "full_name": {
-          "type": "string",
-          "description": "The full name of the artist."
-        },
-        "genre": {
-          "type": "string",
-          "description": "The primary music genre of the artist."
+    {
+      "role": "user",
+      "content": "Context:\nMac McAnally: Lyman Corbitt \"Mac\" McAnally, Jr. ( ; born July 15, 1957) is an American country music singer-songwriter, session musician and record producer.  In his career, he has recorded ten studio albums and eight singles.  Two of his singles were hits on the \"Billboard\" Hot 100, and six more on the Hot Country Songs charts.  His ninth chart entry came in late 2008-early 2009 as a guest vocalist on Kenny Chesney's Number One cover of his 1990 single \"Down the Road\".  He has also produced for Sawyer Brown and Restless Heart, written several singles for other artists, and is a member of Jimmy Buffett's backing band, The Coral Reefer Band.\n\nRiddles in the Sand: Riddles in the Sand is the thirteenth studio album by American popular music singer-songwriter Jimmy Buffett.  It was released in September 1984 as MCA 5512 and was produced by noted country music producer Jimmy Bowen and represented a concerted shift toward a more country sound by Buffett.  He appeared on the album's cover in typical country singer garb and promoted the album at Fan Fair country music festival in Nashville, Tennessee.  The album was originally to have been titled \"Gulf and Western Music\" reflecting the fusion of musical styles seen in much of Buffett's music often called gulf and western music.  In the album's liner notes, Jim Harrison says, \"This album has a musical range expanding in an arc from Bob Wills to Bob Marley with the Gulf somehow always there.\"\n\nLane Brody: Lane Brody (born September 24, 1955 in Oak Park, Illinois) is an American country music singer-songwriter, active since the early 1980s, best known for her 1984 Billboard-topping country hit \"The Yellow Rose\" (a duet with country music singer Johnny Lee), and for the Oscar-nominated song \"Over You\" from the 1983 film \"Tender Mercies\".  She is the first female in country music to have an Oscar-nominated hit from a soundtrack album.  Besides \"The Yellow Rose\", Brody has eleven other chart singles on the Billboard country charts.\n\nLefty Frizzell: William Orville Frizzell, known as Lefty Frizzell (March 31, 1928 – July 19, 1975), was an American country music singer-songwriter and honky-tonk singer.  A vocalist who set the style of singing \"the country way\" for the generations that followed, Frizzell became one of the most successful and influential artists of country music throughout his career.  He gained prominence in 1950 after two major hits, and throughout the decade was a very popular country performer.  He smoothed out the rough edges of a honky tonk song by sounding out syllables longer and singing longer.  Because of this, his music become much more mainstream without losing its honky-tonk attitude and persona.\n\nJenny Lou Carson: Jenny Lou Carson, (January 13, 1915–December 16, 1978), born Virginia Lucille Overstake, was an American country music singer-songwriter and the first woman to write a No. 1 country music hit.  From 1945 to 1955 she was one of the most prolific songwriters in country music.\n\nJim Reeves: James Travis Reeves (August 20, 1923July 31, 1964) was an American country and popular music singer-songwriter.  With records charting from the 1950s to the 1980s, he became well known as a practitioner of the Nashville sound (a mixture of older country-style music with elements of popular music).  Known as \"Gentleman Jim\", his songs continued to chart for years after his death.  Reeves died in the crash of his private airplane.  He is a member of both the Country Music and Texas Country Music Halls of Fame.\n\nJimmy Rollins (musician): Jimmy Rollins \"(né\" James Rollins) is an American guitarist, songwriter, audio engineer, and record producer from Dallas who flourished in the 1950s, playing guitar on recordings as sideman with Lefty Frizzell, Billy Walker, Marty Robbins, and Sid King and the Five Strings.  Rollins composed songs recorded by Connie Smith, Jean Shepard, and Porter Wagoner.  As an audio engineer, he worked at the Jim Beck Studio in Dallas during the mid-1950s and in 1956, he worked at Tom Merriman's recording studio at 3104 Maple Avenue, Dallas.\n\nTim Malchak: Tim Malchak (born June 25, 1957 in Binghamton, New York) is an American country music singer-songwriter.  Malchak partnered with Dwight Rucker in 1982 to form the country music duo Malchak & Rucker.  Together, they became the first black/white duo in country music history with a charting single when \"Just Like That\" debuted on the \"Billboard\" Hot Country Singles & Tracks chart in 1984.\n\nBuddy Brown (musician): Buddy Brown is a traditional American country music singer-songwriter who was discovered as a YouTube sensation.  Brown was born on May 12, 1982 to Dan and Cheryl Brown in Madison, Mississippi, a suburb of Jackson.  When Brown was nine years old, his family decided to relocate to Orlando, Florida for his father’s career.  In 2005, he graduated from Mississippi State with a degree in Psychology.  On October 13, 2009, he released a cover of Easton Corbin’s \"A Little More Country Than That\" that went viral.  A year later, he opened up for country music legend, John Anderson in Wildwood, FL.  On July 4, 2012, he released his first album titled Mason Jar.  His fan base pushed his first full-length CD to No. 34 on the iTunes country chart without a record deal.  March 11, 2014, he released a self-titled EP, Buddy Brown.  On October 14, 2014, Buddy released his second EP, Keepin’ It Country.  This EP reached to No. 12 on the iTunes charts.  In January 2014, Billboard put Keepin’ It Country on their Heat Seekers Albums list.  USA Today published a story on Brown, labeling him as a \"YouTube Sensation.\"  His single \"Takin’ You Huntin’\" landed him a spot on the front page and an online feature in the Clarion Ledger.\n\nLoretta Lynn: Loretta Lynn (née Webb; born April 14, 1932) is an American country music singer-songwriter with multiple gold albums over a career of almost 60 years.  She has received numerous awards and other accolades for her groundbreaking role in country music, including awards from both the Country Music Association and Academy of Country Music as a duet partner and an individual artist.  She is the most awarded female country recording artist and the only female ACM Artist of the Decade (1970s).\n\nQuestion: which  American country music singer-songwriter has Jimmy Rollins as sideman\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"sideman_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the musician who served as a sideman.\"\n    },\n    \"role\": {\n      \"type\": \"string\",\n      \"description\": \"The role of the sideman.\"\n    },\n    \"artists_with_sideman_collaboration\": {\n      \"type\": \"array\",\n      \"description\": \"A list of artists for whom the specified musician played as a sideman.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"country_music_singer_songwriter_with_sideman\": {\n      \"type\": \"object\",\n      \"description\": \"The American country music singer-songwriter who had the specified musician as a sideman.\",\n      \"properties\": {\n        \"stage_name\": {\n          \"type\": \"string\",\n          \"description\": \"The stage name of the artist.\"\n        },\n        \"full_name\": {\n          \"type\": \"string\",\n          \"description\": \"The full name of the artist.\"\n        },\n        \"genre\": {\n          \"type\": \"string\",\n          \"description\": \"The primary music genre of the artist.\"\n        }\n      },\n      \"required\": [\n        \"stage_name\",\n        \"full_name\",\n        \"genre\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"sideman_name\",\n    \"role\",\n    \"artists_with_sideman_collaboration\",\n    \"country_music_singer_songwriter_with_sideman\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "sideman_name": {
+        "type": "string",
+        "description": "The name of the musician who served as a sideman."
+      },
+      "role": {
+        "type": "string",
+        "description": "The role of the sideman."
+      },
+      "artists_with_sideman_collaboration": {
+        "type": "array",
+        "description": "A list of artists for whom the specified musician played as a sideman.",
+        "items": {
+          "type": "string"
         }
       },
-      "required": [
-        "stage_name",
-        "full_name",
-        "genre"
-      ],
-      "additionalProperties": false
-    }
+      "country_music_singer_songwriter_with_sideman": {
+        "type": "object",
+        "description": "The American country music singer-songwriter who had the specified musician as a sideman.",
+        "properties": {
+          "stage_name": {
+            "type": "string",
+            "description": "The stage name of the artist."
+          },
+          "full_name": {
+            "type": "string",
+            "description": "The full name of the artist."
+          },
+          "genre": {
+            "type": "string",
+            "description": "The primary music genre of the artist."
+          }
+        },
+        "required": [
+          "stage_name",
+          "full_name",
+          "genre"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "sideman_name",
+      "role",
+      "artists_with_sideman_collaboration",
+      "country_music_singer_songwriter_with_sideman"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "sideman_name",
-    "role",
-    "artists_with_sideman_collaboration",
-    "country_music_singer_songwriter_with_sideman"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,93 +1,70 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Charley Ross: Charles Brewster "Charley" Ross (May 4, 1870 – disappeared July 1, 1874) was the primary victim of the first kidnapping for ransom in United States history to receive widespread attention from the media.
-
-Ball J: Albert Ayeh-Hanson (born November 8, 1984), known by his stage name Ball J or Ball J Beat, is a Ghanaian rapper, sound engineer, record producer and entrepreneur from Accra.  He spent most of his formative years in the U.S State of California.  Ball J is the CEO and founder of Nu Afrika Records.
-
-Disappearance of Amy Wroe Bechtel: Amy Joy Wroe Bechtel (August 4, 1972 – disappeared July 24, 1997; declared legally dead 2004) is an American woman who disappeared while jogging in the Wind River Mountains approximately 15 mi south of Lander, Wyoming.  Despite extensive investigative work and media portrayals, her case remains unsolved as of 2017.  She was declared dead in absentia by her husband, rock climber Steve Bechtel, in 2004.
-
-House Afrika Records: House Afrika Records is a deep and Afro house label owned by Tim White and Vinny Da Vinci and is one of the longest standing house music labels in South Africa.
-
-Amelia Earhart: Amelia Mary Earhart ( , born July 24, 1897; disappeared July 2, 1937) was an American aviation pioneer and author.  Earhart was the first female aviator to fly solo across the Atlantic Ocean.  She received the U.S. Distinguished Flying Cross for this accomplishment.  She set many other records, wrote best-selling books about her flying experiences and was instrumental in the formation of The Ninety-Nines, an organization for female pilots.  In 1935, Earhart became a visiting faculty member at Purdue University as an advisor to aeronautical engineering and a career counselor to women students.  She was also a member of the National Woman's Party and an early supporter of the Equal Rights Amendment.
-
-Nu Afrika Records: Nu Afrika Records, LLC is a Ghanaian entertainment company established by rapper/record producer Ball J.  The company is located at Spintex road, Accra-Ghana.  It is a full service entertainment company housing a record label and a video production company called 36 Men.  The company has worked with almost all the top music and movie stars in Ghana and across Africa such as Guru, Kwaw Kese, Sarkodie, Patoranking, Castro, Stonebwoy, Stay J, EL, Joey B, Nhyiraba Kojo, R2Bees, Obour, Yaa Pono, Praye, King Ayisoba, Rocky Dawuni, Ben Brako, Kojo Antwi, Hammer, Reggie Rockstone, Eddie Watson, Ingride Alabi, Ivan Quashigah etc.
-
-Castro (musician): Theophilus Tagoe (born 1 May 1982, disappeared 6 July 2014), popularly known as Castro or Castro Under Fire, was a Ghanaian hiplife recording artist and musician.
-
-Susan Walsh (missing person): Susan Walsh (February 18, 1960 – disappeared July 16, 1996) was an American writer and freelance journalist who disappeared outside her home in Nutley, New Jersey on July 16, 1996.  Walsh's disappearance was widely publicized into the late 1990s, especially after several newspapers and media outlets published articles alluding that her disappearance was potentially linked to the Russian mafia, as well as New York City's underground vampire community, both subjects that Walsh had investigated while writing for "The Village Voice".
-
-Jimmy Hoffa: James Riddle Hoffa (February 14, 1913 – disappeared July 30, 1975) was an American labor union leader who served as the President of the International Brotherhood of Teamsters (IBT) union from 1958 until 1971.  He vanished in late July 1975, at age 62.
-
-Chekannur Maulavi: Chekannur Maulavi (born Chekannur P. K. Mohammed Abul Hassan Maulavi on 1936, disappeared July 29, 1993) was a progressive Islamic cleric who lived in Edappal, in the Malappuram district of Kerala, India.  He was noted for his controversial and unconventional interpretation of Islam based on Quran.  He disappeared on 29 July 1993 under mysterious circumstances and is now widely believed to be dead.
-
-Question: What artist that Nu Afrika Records worked with disappeared July 6, 2014?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "disappeared_person": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the person who disappeared."
-        },
-        "disappearance_date": {
-          "type": "string",
-          "format": "date",
-          "description": "The date the person disappeared."
-        },
-        "occupation": {
-          "type": "string",
-          "description": "The occupation of the disappeared person."
-        }
-      },
-      "required": [
-        "name",
-        "disappearance_date",
-        "occupation"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "record_label": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the record label."
-        },
-        "location": {
-          "type": "string",
-          "description": "The location of the record label."
-        }
-      },
-      "required": [
-        "name",
-        "location"
-      ],
-      "additionalProperties": false
-    },
-    "relationship_confirmed": {
-      "type": "boolean",
-      "description": "Indicates if the disappeared person worked with the record label."
+    {
+      "role": "user",
+      "content": "Context:\nCharley Ross: Charles Brewster \"Charley\" Ross (May 4, 1870 – disappeared July 1, 1874) was the primary victim of the first kidnapping for ransom in United States history to receive widespread attention from the media.\n\nBall J: Albert Ayeh-Hanson (born November 8, 1984), known by his stage name Ball J or Ball J Beat, is a Ghanaian rapper, sound engineer, record producer and entrepreneur from Accra.  He spent most of his formative years in the U.S State of California.  Ball J is the CEO and founder of Nu Afrika Records.\n\nDisappearance of Amy Wroe Bechtel: Amy Joy Wroe Bechtel (August 4, 1972 – disappeared July 24, 1997; declared legally dead 2004) is an American woman who disappeared while jogging in the Wind River Mountains approximately 15 mi south of Lander, Wyoming.  Despite extensive investigative work and media portrayals, her case remains unsolved as of 2017.  She was declared dead in absentia by her husband, rock climber Steve Bechtel, in 2004.\n\nHouse Afrika Records: House Afrika Records is a deep and Afro house label owned by Tim White and Vinny Da Vinci and is one of the longest standing house music labels in South Africa.\n\nAmelia Earhart: Amelia Mary Earhart ( , born July 24, 1897; disappeared July 2, 1937) was an American aviation pioneer and author.  Earhart was the first female aviator to fly solo across the Atlantic Ocean.  She received the U.S. Distinguished Flying Cross for this accomplishment.  She set many other records, wrote best-selling books about her flying experiences and was instrumental in the formation of The Ninety-Nines, an organization for female pilots.  In 1935, Earhart became a visiting faculty member at Purdue University as an advisor to aeronautical engineering and a career counselor to women students.  She was also a member of the National Woman's Party and an early supporter of the Equal Rights Amendment.\n\nNu Afrika Records: Nu Afrika Records, LLC is a Ghanaian entertainment company established by rapper/record producer Ball J.  The company is located at Spintex road, Accra-Ghana.  It is a full service entertainment company housing a record label and a video production company called 36 Men.  The company has worked with almost all the top music and movie stars in Ghana and across Africa such as Guru, Kwaw Kese, Sarkodie, Patoranking, Castro, Stonebwoy, Stay J, EL, Joey B, Nhyiraba Kojo, R2Bees, Obour, Yaa Pono, Praye, King Ayisoba, Rocky Dawuni, Ben Brako, Kojo Antwi, Hammer, Reggie Rockstone, Eddie Watson, Ingride Alabi, Ivan Quashigah etc.\n\nCastro (musician): Theophilus Tagoe (born 1 May 1982, disappeared 6 July 2014), popularly known as Castro or Castro Under Fire, was a Ghanaian hiplife recording artist and musician.\n\nSusan Walsh (missing person): Susan Walsh (February 18, 1960 – disappeared July 16, 1996) was an American writer and freelance journalist who disappeared outside her home in Nutley, New Jersey on July 16, 1996.  Walsh's disappearance was widely publicized into the late 1990s, especially after several newspapers and media outlets published articles alluding that her disappearance was potentially linked to the Russian mafia, as well as New York City's underground vampire community, both subjects that Walsh had investigated while writing for \"The Village Voice\".\n\nJimmy Hoffa: James Riddle Hoffa (February 14, 1913 – disappeared July 30, 1975) was an American labor union leader who served as the President of the International Brotherhood of Teamsters (IBT) union from 1958 until 1971.  He vanished in late July 1975, at age 62.\n\nChekannur Maulavi: Chekannur Maulavi (born Chekannur P. K. Mohammed Abul Hassan Maulavi on 1936, disappeared July 29, 1993) was a progressive Islamic cleric who lived in Edappal, in the Malappuram district of Kerala, India.  He was noted for his controversial and unconventional interpretation of Islam based on Quran.  He disappeared on 29 July 1993 under mysterious circumstances and is now widely believed to be dead.\n\nQuestion: What artist that Nu Afrika Records worked with disappeared July 6, 2014?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"disappeared_person\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the person who disappeared.\"\n        },\n        \"disappearance_date\": {\n          \"type\": \"string\",\n          \"format\": \"date\",\n          \"description\": \"The date the person disappeared.\"\n        },\n        \"occupation\": {\n          \"type\": \"string\",\n          \"description\": \"The occupation of the disappeared person.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"disappearance_date\",\n        \"occupation\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"record_label\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the record label.\"\n        },\n        \"location\": {\n          \"type\": \"string\",\n          \"description\": \"The location of the record label.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"location\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"relationship_confirmed\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the disappeared person worked with the record label.\"\n    }\n  },\n  \"required\": [\n    \"disappeared_person\",\n    \"record_label\",\n    \"relationship_confirmed\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "disappeared_person",
-    "record_label",
-    "relationship_confirmed"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "disappeared_person": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the person who disappeared."
+          },
+          "disappearance_date": {
+            "type": "string",
+            "format": "date",
+            "description": "The date the person disappeared."
+          },
+          "occupation": {
+            "type": "string",
+            "description": "The occupation of the disappeared person."
+          }
+        },
+        "required": [
+          "name",
+          "disappearance_date",
+          "occupation"
+        ],
+        "additionalProperties": false
+      },
+      "record_label": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the record label."
+          },
+          "location": {
+            "type": "string",
+            "description": "The location of the record label."
+          }
+        },
+        "required": [
+          "name",
+          "location"
+        ],
+        "additionalProperties": false
+      },
+      "relationship_confirmed": {
+        "type": "boolean",
+        "description": "Indicates if the disappeared person worked with the record label."
+      }
+    },
+    "required": [
+      "disappeared_person",
+      "record_label",
+      "relationship_confirmed"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

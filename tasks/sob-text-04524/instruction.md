@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Greatest Moments – VH1 Storytellers Live: Greatest Moments is a greatest hits compilation by British band Culture Club.  It was released in the UK on 9 November 1998, and went platinum in the UK, reaching #15 in the album charts.  The album also contains three solo Boy George tracks.
-
-Greg Schulte: Greg Schulte is an American sportscaster, and is best known as the radio play-by-play voice of the Arizona Diamondbacks Major League Baseball team, a position he has held since the team's inaugural season in 1998.  Schulte's nickname is "The Gub'nuh" (like "The Governor" with an exaggerated English accent).  He is known for his unique home run call, "Deep drive. . warning track. . wall. . you can touch 'em all (player's name).  Schulte's voice will forever be linked with one of baseball's greatest moments as he delivered the call of Luis Gonzalez's ninth-inning single to win Game 7 of the 2001 World Series.
-
-InterContinental Miami: The InterContinental Miami is a hotel in Downtown Miami, Florida, United States.  It belongs to the InterContinental Hotels chain.  Located on Biscayne Bay, the hotel is in the form of a 35-story tower on the eastern edge of downtown in Bayfront Park.  The address is 100 Chopin Plaza.  The building is 122 m (366 ft) tall, has 35 stories, and was built in 1982.  There are 641 guest rooms.  Before the hotel was owned by InterContinental, it was known as Pavion Hotel.  Built in 1982 by famed architect Pietro Belluschi.  The hotel's exterior, porte cochere and lobby were redesigned by architect Thomas Roszak, of Lohan Anderson + Roszak in 2012.  In the tv series "the Golden Girls" durning the opening credits, right when "the golden girls" title shows up on the screen, if you freeze it, have a look in the middle right hand of the screen.  You can clearly see this hotel under construction.  The Golden Girls first season started late 1985, but this hotel was built in 1982, meaning they used old footage for the shot
-
-Rue La Rue Cafe: Rue la Rue Cafe is a "Golden Girls" themed cafe eatery located in the Washington Heights neighborhood of the New York City borough of Manhattan.  The restaurant was conceived and is operated by Michael LaRue, a close confidante of one of the four "Golden Girls", Rue McClanahan (1934–2010) while McClanahan's son Mark Bisch is a partner.  La Rue, who inherited many of the star's personal belongings, in turn decorated the restaurant with them (including her 1987 Emmy Award for Outstanding Lead Actress in a Comedy Series), as well as pictures of McClanahan (one each from the decades of her entertainment career) and other memorabilia related to the hit show.  The establishment is coincidentally located inside the Sofia storage building.  Touchingly, there is a plaque reminiscent of a star on Hollywood Boulevard "which reads "Thank You for being a Friend" fitted into concrete at the front door outside under which are some of McClanahan’s ashes.
-
-Floyd Rose: The Floyd Rose Locking Tremolo, or simply Floyd Rose, is a type of locking vibrato arm for a guitar.  Floyd D. Rose invented the locking vibrato in 1977, the first of its kind, and it is now manufactured by a company of the same name.  The Floyd Rose gained popularity in the 1980s through guitarists like Eddie Van Halen, Neal Schon, Brad Gillis, Joe Satriani, Steve Vai, and Alex Lifeson, who used its ability to stay in tune even with extreme changes in pitch.  Its tuning stability comes through the double-locking design that has been widely regarded as revolutionary; the design has been listed on "Guitar World"' s "10 Most Earth Shaking Guitar Innovations" and "Guitar Player"' s "101 Greatest Moments in Guitar History 1979–1983".
-
-The Golden Girls: Their Greatest Moments: The Golden Girls: Their Greatest Moments is a 2003 American television special celebrating the 1985–1992 sitcom "The Golden Girls" starring Bea Arthur, Rue McClanahan, and Betty White.  It originally aired on Lifetime on June 2, 2003.
-
-Doug Flutie: Douglas Richard Flutie (born October 23, 1962) is a former quarterback in the National Football League (NFL), Canadian Football League (CFL), and United States Football League (USFL).  He first rose to prominence during his college football career at Boston College, where he received the Heisman Trophy and the Davey O'Brien National Quarterback Award in 1984.  His "Hail Flutie" touchdown pass in a game against Miami on November 23, 1984 (dubbed "The Pass") is considered among the greatest moments in college football and American sports history.  Flutie was selected as the 285th pick in the 11th round of the 1985 NFL Draft by the Los Angeles Rams, making him the lowest drafted Heisman Award winner among those who were drafted.  Flutie played that year for the New Jersey Generals of the upstart USFL, having already signed a five-year $5 million contract with them prior to being drafted by the Rams.  In 1986, he signed with the NFL's Chicago Bears, and later played for the New England Patriots, becoming their starting quarterback in 1988.
-
-Morecambe &amp; Wise: Greatest Moments: Morecambe & Wise: Greatest Moments was a compilation programme originally aired on 2 December 2007 on the UKTV network channel UKTV Gold and featured clips, interviews and home move footage, culminating in the showing of the "best" sketch from their programmes.  It featured contributions from several of their guest stars such as Cliff Richard, Edward Woodward, Bruce Forsyth, Francis Matthews, Michele Dotrice and Elton John whom Eric always referred to as "Elephant John" as well as interviews with both Joan Morecambe and Doreen Wise, the latter's first appearance on a show of this kind.  There were also chats with writer Eddie Braben, co-star Ann Hamilton and fans Armstrong & Miller among others.  The show was narrated by Liza Tarbuck, daughter of comedian Jimmy Tarbuck and gave the following as the choice of "best" sketches from to duo:
-
-Betty White: Betty Marion White Ludden (known professionally as Betty White; born January 17, 1922) is an American actress and comedian, with the longest television career of a female entertainer.  Regarded as a pioneer of television, she was one of the first women to have control both in front of and behind the camera; and is recognized as the first woman to produce a sitcom, which contributed to her receiving the honorary title "Mayor of Hollywood" in 1955.
-
-Best! Movies! Ever!: Best!  Movies!  Ever!  is a weekly series that aimed to present "the greatest moments in movie history".  Each half-hour episode presented a themed "top 10 list" in which a rotating cast of Canadian media personalities (such as film critics, videographers, etc.) give their reasons as to why the selected scene is (or sometimes, should not be) considered to be one of the ten great moments appropriate to that week's theme.
-
-Question: What actress, who is also a comedian, played in the movie The Golden Girls: Their Greatest Moments?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actress_name": {
-      "type": "string",
-      "description": "The name of the actress."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "professions": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of professions held by the individual."
-    },
-    "movie_or_special_title": {
-      "type": "string",
-      "description": "The title of the movie or special the actress played in."
-    },
-    "release_year": {
-      "type": "integer",
-      "description": "The release year of the movie or special."
+    {
+      "role": "user",
+      "content": "Context:\nGreatest Moments – VH1 Storytellers Live: Greatest Moments is a greatest hits compilation by British band Culture Club.  It was released in the UK on 9 November 1998, and went platinum in the UK, reaching #15 in the album charts.  The album also contains three solo Boy George tracks.\n\nGreg Schulte: Greg Schulte is an American sportscaster, and is best known as the radio play-by-play voice of the Arizona Diamondbacks Major League Baseball team, a position he has held since the team's inaugural season in 1998.  Schulte's nickname is \"The Gub'nuh\" (like \"The Governor\" with an exaggerated English accent).  He is known for his unique home run call, \"Deep drive. . warning track. . wall. . you can touch 'em all (player's name).  Schulte's voice will forever be linked with one of baseball's greatest moments as he delivered the call of Luis Gonzalez's ninth-inning single to win Game 7 of the 2001 World Series.\n\nInterContinental Miami: The InterContinental Miami is a hotel in Downtown Miami, Florida, United States.  It belongs to the InterContinental Hotels chain.  Located on Biscayne Bay, the hotel is in the form of a 35-story tower on the eastern edge of downtown in Bayfront Park.  The address is 100 Chopin Plaza.  The building is 122 m (366 ft) tall, has 35 stories, and was built in 1982.  There are 641 guest rooms.  Before the hotel was owned by InterContinental, it was known as Pavion Hotel.  Built in 1982 by famed architect Pietro Belluschi.  The hotel's exterior, porte cochere and lobby were redesigned by architect Thomas Roszak, of Lohan Anderson + Roszak in 2012.  In the tv series \"the Golden Girls\" durning the opening credits, right when \"the golden girls\" title shows up on the screen, if you freeze it, have a look in the middle right hand of the screen.  You can clearly see this hotel under construction.  The Golden Girls first season started late 1985, but this hotel was built in 1982, meaning they used old footage for the shot\n\nRue La Rue Cafe: Rue la Rue Cafe is a \"Golden Girls\" themed cafe eatery located in the Washington Heights neighborhood of the New York City borough of Manhattan.  The restaurant was conceived and is operated by Michael LaRue, a close confidante of one of the four \"Golden Girls\", Rue McClanahan (1934–2010) while McClanahan's son Mark Bisch is a partner.  La Rue, who inherited many of the star's personal belongings, in turn decorated the restaurant with them (including her 1987 Emmy Award for Outstanding Lead Actress in a Comedy Series), as well as pictures of McClanahan (one each from the decades of her entertainment career) and other memorabilia related to the hit show.  The establishment is coincidentally located inside the Sofia storage building.  Touchingly, there is a plaque reminiscent of a star on Hollywood Boulevard \"which reads \"Thank You for being a Friend\" fitted into concrete at the front door outside under which are some of McClanahan’s ashes.\n\nFloyd Rose: The Floyd Rose Locking Tremolo, or simply Floyd Rose, is a type of locking vibrato arm for a guitar.  Floyd D. Rose invented the locking vibrato in 1977, the first of its kind, and it is now manufactured by a company of the same name.  The Floyd Rose gained popularity in the 1980s through guitarists like Eddie Van Halen, Neal Schon, Brad Gillis, Joe Satriani, Steve Vai, and Alex Lifeson, who used its ability to stay in tune even with extreme changes in pitch.  Its tuning stability comes through the double-locking design that has been widely regarded as revolutionary; the design has been listed on \"Guitar World\"' s \"10 Most Earth Shaking Guitar Innovations\" and \"Guitar Player\"' s \"101 Greatest Moments in Guitar History 1979–1983\".\n\nThe Golden Girls: Their Greatest Moments: The Golden Girls: Their Greatest Moments is a 2003 American television special celebrating the 1985–1992 sitcom \"The Golden Girls\" starring Bea Arthur, Rue McClanahan, and Betty White.  It originally aired on Lifetime on June 2, 2003.\n\nDoug Flutie: Douglas Richard Flutie (born October 23, 1962) is a former quarterback in the National Football League (NFL), Canadian Football League (CFL), and United States Football League (USFL).  He first rose to prominence during his college football career at Boston College, where he received the Heisman Trophy and the Davey O'Brien National Quarterback Award in 1984.  His \"Hail Flutie\" touchdown pass in a game against Miami on November 23, 1984 (dubbed \"The Pass\") is considered among the greatest moments in college football and American sports history.  Flutie was selected as the 285th pick in the 11th round of the 1985 NFL Draft by the Los Angeles Rams, making him the lowest drafted Heisman Award winner among those who were drafted.  Flutie played that year for the New Jersey Generals of the upstart USFL, having already signed a five-year $5 million contract with them prior to being drafted by the Rams.  In 1986, he signed with the NFL's Chicago Bears, and later played for the New England Patriots, becoming their starting quarterback in 1988.\n\nMorecambe &amp; Wise: Greatest Moments: Morecambe & Wise: Greatest Moments was a compilation programme originally aired on 2 December 2007 on the UKTV network channel UKTV Gold and featured clips, interviews and home move footage, culminating in the showing of the \"best\" sketch from their programmes.  It featured contributions from several of their guest stars such as Cliff Richard, Edward Woodward, Bruce Forsyth, Francis Matthews, Michele Dotrice and Elton John whom Eric always referred to as \"Elephant John\" as well as interviews with both Joan Morecambe and Doreen Wise, the latter's first appearance on a show of this kind.  There were also chats with writer Eddie Braben, co-star Ann Hamilton and fans Armstrong & Miller among others.  The show was narrated by Liza Tarbuck, daughter of comedian Jimmy Tarbuck and gave the following as the choice of \"best\" sketches from to duo:\n\nBetty White: Betty Marion White Ludden (known professionally as Betty White; born January 17, 1922) is an American actress and comedian, with the longest television career of a female entertainer.  Regarded as a pioneer of television, she was one of the first women to have control both in front of and behind the camera; and is recognized as the first woman to produce a sitcom, which contributed to her receiving the honorary title \"Mayor of Hollywood\" in 1955.\n\nBest! Movies! Ever!: Best!  Movies!  Ever!  is a weekly series that aimed to present \"the greatest moments in movie history\".  Each half-hour episode presented a themed \"top 10 list\" in which a rotating cast of Canadian media personalities (such as film critics, videographers, etc.) give their reasons as to why the selected scene is (or sometimes, should not be) considered to be one of the ten great moments appropriate to that week's theme.\n\nQuestion: What actress, who is also a comedian, played in the movie The Golden Girls: Their Greatest Moments?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actress_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actress.\"\n    },\n    \"professions\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of professions held by the individual.\"\n    },\n    \"movie_or_special_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the movie or special the actress played in.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the movie or special.\"\n    }\n  },\n  \"required\": [\n    \"actress_name\",\n    \"professions\",\n    \"movie_or_special_title\",\n    \"release_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actress_name",
-    "professions",
-    "movie_or_special_title",
-    "release_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actress_name": {
+        "type": "string",
+        "description": "The name of the actress."
+      },
+      "professions": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of professions held by the individual."
+      },
+      "movie_or_special_title": {
+        "type": "string",
+        "description": "The title of the movie or special the actress played in."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The release year of the movie or special."
+      }
+    },
+    "required": [
+      "actress_name",
+      "professions",
+      "movie_or_special_title",
+      "release_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

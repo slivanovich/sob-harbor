@@ -1,106 +1,83 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Tim Spicer: Timothy Simon "Tim" Spicer, {'1': ", '2': ", '3': 'OBE', '4': "} (born 1952) is a former British Army officer, and former chief executive officer of the private security company Aegis Defence Services.  He is a veteran of the Falklands War and also served with the British Army in Northern Ireland.  He became well known as an employee of Sandline International, a private military company which closed in April 2004.
-
-The White Rose (song): The White Rose is a traditional Cornish folk song, the chorus of which appeared in the film "Ladies in Lavender" (2005).  The song remains popular and has been recorded by many of the Cornish male voice choirs and is often performed at funerals.  In 2001 it was read at the funeral of Rick Rescorla, Cornish hero of 9/11.
-
-Floyd Mann: Floyd Mann (August 20, 1920 - January 12, 1996) was born in Daviston, Tallapoosa County, Alabama.  He was schooled in Davidson and Alexander City, Alabama.  He joined the United States Army Air Corps, serving as a tail gunner on a B-17, where he flew 27 combat missions including the first daylight raid on Berlin.  He received numerous awards including the Distinguished Flying Cross.  He married Grace Doss of Fort Worth, Texas, on November 25, 1944.  After his military service he served as a security officer at Republic Steel in Gadsden.  Afterwards he served as a police officer in Alexander City, where he rose to the rank of lieutenant.
-
-Screening Partnership Program: The Screening Partnership Program (SPP), instituted in 2004 by the Transportation Security Administration (TSA) in the United States, is a program that allows airports to employ private security agencies to conduct screening, instead of having the TSA conduct said screenings.  Airports and security agencies must complete applications in order to be eligible to participate in this program.  All private security agencies must follow all TSA screening policies and procedures, and use TSA-approved equipment.
-
-Charles W. Bagnal: Lieutenant General Charles Wilson Bagnal (April 15, 1934 – June 30, 2015) was a United States Army officer.  He was commander of the United States Army Western Command (later United States Army Pacific), from 1985 to 1989.  Previously he was Deputy Commanding General for Training of the United States Army Training and Doctrine Command (TRADOC), Deputy Superintendent at the United States Military Academy (from 1977 to 1980), Commander of the 101st Airborne Division (1981-1983), Commander of the Officer Personnel Management Directorate for the United States Army Military Personnel Center, and Special Assistant to the Deputy Chief of Staff for Personnel.  He is an alumnus of the United States Military Academy, United States Army Command & General Staff College, Georgia Tech, the United States Army War College and McLenaghan High School in Florence, South Carolina (class of 1952).  He retired August 31, 1989, and later obtained his juris doctor from the University of South Carolina and practiced law.  He resided in Columbia with his wife Patsy.  Bagnal died on June 30, 2015 after a battle with leukemia.
-
-Security company: A private security company is a business corporation, which provides armed and unarmed security services and expertise to private and public clients.  Private security companies are defined by the U.S. Bureau of Labor Statistics as companies primarily engaged in providing guard and patrol services, such as bodyguard, guard dog, parking security and security guard services.  Many of them will even provide advanced special operations services if the client demands it.  Examples of services provided by these companies include the prevention of unauthorized activity or entry, traffic regulation, access control, and fire and theft prevention and detection.  These services can be broadly described as the protection of personnel and/or assets.  Other security services such as roving patrol, bodyguard, and guard dog services are also included, but are a very small portion of the industry.  The private security industry is rapidly growing, currently there are 2 million full-time security workers in the United States and this number is expected to increase by 21% percent through 2020.  Making the security industry a $100 billion a year industry, with projected growth to $200 billion by 2010.
-
-White Rose Mission: The White Rose Mission (also known as the White Rose Home for Colored Working Girls and the White Rose Industrial Association) was created on February 11, 1897 as a “Christian, nonsectarian Home for Colored Girls and Women” by African American civic leaders, Victoria Earle Matthews (1861–1907) and Maritcha Remond Lyons (1848–1929).  The settlement house, located on Manhattan's Upper West side in the neighborhood known then as San Juan Hill, was founded to offer refuge, shelter and food for newly arrived African American /Colored women from the southern United States and the West Indies.  Aware of the perilous conditions for young African American women seeking work in New York City, Matthews and Lyons and other volunteers working with The White Rose Mission met incoming vessels.  At Manhattan’s piers, docks and railway stations, volunteers offered assistance to female travelers who often fell prey to unscrupulous employment agents and con artists.  As traveler’s assistance services were generally not available to African American women, the White Rose Mission, under the direction of Victoria Earle Matthews, was founded to address the specific problems facing African American female migrants.
-
-Algiers Motel incident: The Algiers Motel Incident occurred in Detroit, Michigan, United States, during the night of July 25–26, 1967 during the racially charged 12th Street Riot.  At the Algiers Motel, approximately one mile east of where the riots began, three teenage civilians, all of them black, were beaten and killed by police.  Nine others—two white females and seven black males—were badly beaten and humiliated by members of a riot task force composed of the Detroit Police Department, the Michigan State Police, and the Michigan Army National Guard, and a private security guard.  The incident occurred after reports were received that snipers, a gunman, or group of gunmen had been seen at or near the motel.  One death has never been explained as the body was allegedly found by responding officers.  Two deaths have been attributed to "justifiable homicide" or "self-defense".  Charges of felonious assault, conspiracy, murder, and conspiracy to commit civil rights abuse were filed against three officers and one private security guard.  All were found not guilty.
-
-Ira A. Lipman: Ira A. Lipman (born 1940) is an American businessman and philanthropist.  He is the founder and chairman emeritus of Guardsmark, a privately owned security company with a payroll of 17,000 employees and 130 offices in the United States, Puerto Rico, the United Kingdom and France.  In 2015, he sold Guardsmark to Universal Protection Service, the largest private security company in the United States, and he served as its vice chairman until its 2016 merger with AlliedBarton.  He has been called "a pioneer in the private security guard business".  His work has been cited by the United States Department of Justice's Law Enforcement Assistance Administration and the United States House Judiciary Subcommittee on Crime, Terrorism, Homeland Security and Investigations.  He supports the arts in Memphis, Tennessee and Judeo-Christian interfaith dialogue in the United States.
-
-Rick Rescorla: Cyril Richard Rescorla (May 27, 1939 – September 11, 2001) was a United States Army officer and private security officer of British origin who served in Northern Rhodesia as a member of the Northern Rhodesia Police (NRP) and as a commissioned officer in the Vietnam War, where he was a second lieutenant in the United States Army.
-
-Question: What is the name of this United States Army officer and private security officer of British origin and who had the White Rose read at his funeral in 2001?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The full name of the individual."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "military_service": {
-      "type": "object",
-      "properties": {
-        "branch": {
-          "type": "string",
-          "description": "The branch of the military the person served in."
-        },
-        "officer_status": {
-          "type": "boolean",
-          "description": "Indicates if the person was an officer."
-        }
-      },
-      "required": [
-        "branch",
-        "officer_status"
-      ],
-      "additionalProperties": false
-    },
-    "security_role": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "The type of security role held by the person."
-        },
-        "origin_country": {
-          "type": "string",
-          "description": "The country of origin for the person's security role."
-        }
-      },
-      "required": [
-        "type",
-        "origin_country"
-      ],
-      "additionalProperties": false
-    },
-    "funeral_details": {
-      "type": "object",
-      "properties": {
-        "song_read": {
-          "type": "string",
-          "description": "The name of the song read at the funeral."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year the funeral took place."
-        }
-      },
-      "required": [
-        "song_read",
-        "year"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nTim Spicer: Timothy Simon \"Tim\" Spicer, {'1': \", '2': \", '3': 'OBE', '4': \"} (born 1952) is a former British Army officer, and former chief executive officer of the private security company Aegis Defence Services.  He is a veteran of the Falklands War and also served with the British Army in Northern Ireland.  He became well known as an employee of Sandline International, a private military company which closed in April 2004.\n\nThe White Rose (song): The White Rose is a traditional Cornish folk song, the chorus of which appeared in the film \"Ladies in Lavender\" (2005).  The song remains popular and has been recorded by many of the Cornish male voice choirs and is often performed at funerals.  In 2001 it was read at the funeral of Rick Rescorla, Cornish hero of 9/11.\n\nFloyd Mann: Floyd Mann (August 20, 1920 - January 12, 1996) was born in Daviston, Tallapoosa County, Alabama.  He was schooled in Davidson and Alexander City, Alabama.  He joined the United States Army Air Corps, serving as a tail gunner on a B-17, where he flew 27 combat missions including the first daylight raid on Berlin.  He received numerous awards including the Distinguished Flying Cross.  He married Grace Doss of Fort Worth, Texas, on November 25, 1944.  After his military service he served as a security officer at Republic Steel in Gadsden.  Afterwards he served as a police officer in Alexander City, where he rose to the rank of lieutenant.\n\nScreening Partnership Program: The Screening Partnership Program (SPP), instituted in 2004 by the Transportation Security Administration (TSA) in the United States, is a program that allows airports to employ private security agencies to conduct screening, instead of having the TSA conduct said screenings.  Airports and security agencies must complete applications in order to be eligible to participate in this program.  All private security agencies must follow all TSA screening policies and procedures, and use TSA-approved equipment.\n\nCharles W. Bagnal: Lieutenant General Charles Wilson Bagnal (April 15, 1934 – June 30, 2015) was a United States Army officer.  He was commander of the United States Army Western Command (later United States Army Pacific), from 1985 to 1989.  Previously he was Deputy Commanding General for Training of the United States Army Training and Doctrine Command (TRADOC), Deputy Superintendent at the United States Military Academy (from 1977 to 1980), Commander of the 101st Airborne Division (1981-1983), Commander of the Officer Personnel Management Directorate for the United States Army Military Personnel Center, and Special Assistant to the Deputy Chief of Staff for Personnel.  He is an alumnus of the United States Military Academy, United States Army Command & General Staff College, Georgia Tech, the United States Army War College and McLenaghan High School in Florence, South Carolina (class of 1952).  He retired August 31, 1989, and later obtained his juris doctor from the University of South Carolina and practiced law.  He resided in Columbia with his wife Patsy.  Bagnal died on June 30, 2015 after a battle with leukemia.\n\nSecurity company: A private security company is a business corporation, which provides armed and unarmed security services and expertise to private and public clients.  Private security companies are defined by the U.S. Bureau of Labor Statistics as companies primarily engaged in providing guard and patrol services, such as bodyguard, guard dog, parking security and security guard services.  Many of them will even provide advanced special operations services if the client demands it.  Examples of services provided by these companies include the prevention of unauthorized activity or entry, traffic regulation, access control, and fire and theft prevention and detection.  These services can be broadly described as the protection of personnel and/or assets.  Other security services such as roving patrol, bodyguard, and guard dog services are also included, but are a very small portion of the industry.  The private security industry is rapidly growing, currently there are 2 million full-time security workers in the United States and this number is expected to increase by 21% percent through 2020.  Making the security industry a $100 billion a year industry, with projected growth to $200 billion by 2010.\n\nWhite Rose Mission: The White Rose Mission (also known as the White Rose Home for Colored Working Girls and the White Rose Industrial Association) was created on February 11, 1897 as a “Christian, nonsectarian Home for Colored Girls and Women” by African American civic leaders, Victoria Earle Matthews (1861–1907) and Maritcha Remond Lyons (1848–1929).  The settlement house, located on Manhattan's Upper West side in the neighborhood known then as San Juan Hill, was founded to offer refuge, shelter and food for newly arrived African American /Colored women from the southern United States and the West Indies.  Aware of the perilous conditions for young African American women seeking work in New York City, Matthews and Lyons and other volunteers working with The White Rose Mission met incoming vessels.  At Manhattan’s piers, docks and railway stations, volunteers offered assistance to female travelers who often fell prey to unscrupulous employment agents and con artists.  As traveler’s assistance services were generally not available to African American women, the White Rose Mission, under the direction of Victoria Earle Matthews, was founded to address the specific problems facing African American female migrants.\n\nAlgiers Motel incident: The Algiers Motel Incident occurred in Detroit, Michigan, United States, during the night of July 25–26, 1967 during the racially charged 12th Street Riot.  At the Algiers Motel, approximately one mile east of where the riots began, three teenage civilians, all of them black, were beaten and killed by police.  Nine others—two white females and seven black males—were badly beaten and humiliated by members of a riot task force composed of the Detroit Police Department, the Michigan State Police, and the Michigan Army National Guard, and a private security guard.  The incident occurred after reports were received that snipers, a gunman, or group of gunmen had been seen at or near the motel.  One death has never been explained as the body was allegedly found by responding officers.  Two deaths have been attributed to \"justifiable homicide\" or \"self-defense\".  Charges of felonious assault, conspiracy, murder, and conspiracy to commit civil rights abuse were filed against three officers and one private security guard.  All were found not guilty.\n\nIra A. Lipman: Ira A. Lipman (born 1940) is an American businessman and philanthropist.  He is the founder and chairman emeritus of Guardsmark, a privately owned security company with a payroll of 17,000 employees and 130 offices in the United States, Puerto Rico, the United Kingdom and France.  In 2015, he sold Guardsmark to Universal Protection Service, the largest private security company in the United States, and he served as its vice chairman until its 2016 merger with AlliedBarton.  He has been called \"a pioneer in the private security guard business\".  His work has been cited by the United States Department of Justice's Law Enforcement Assistance Administration and the United States House Judiciary Subcommittee on Crime, Terrorism, Homeland Security and Investigations.  He supports the arts in Memphis, Tennessee and Judeo-Christian interfaith dialogue in the United States.\n\nRick Rescorla: Cyril Richard Rescorla (May 27, 1939 – September 11, 2001) was a United States Army officer and private security officer of British origin who served in Northern Rhodesia as a member of the Northern Rhodesia Police (NRP) and as a commissioned officer in the Vietnam War, where he was a second lieutenant in the United States Army.\n\nQuestion: What is the name of this United States Army officer and private security officer of British origin and who had the White Rose read at his funeral in 2001?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the individual.\"\n    },\n    \"military_service\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"branch\": {\n          \"type\": \"string\",\n          \"description\": \"The branch of the military the person served in.\"\n        },\n        \"officer_status\": {\n          \"type\": \"boolean\",\n          \"description\": \"Indicates if the person was an officer.\"\n        }\n      },\n      \"required\": [\n        \"branch\",\n        \"officer_status\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"security_role\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of security role held by the person.\"\n        },\n        \"origin_country\": {\n          \"type\": \"string\",\n          \"description\": \"The country of origin for the person's security role.\"\n        }\n      },\n      \"required\": [\n        \"type\",\n        \"origin_country\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"funeral_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"song_read\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the song read at the funeral.\"\n        },\n        \"year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the funeral took place.\"\n        }\n      },\n      \"required\": [\n        \"song_read\",\n        \"year\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"military_service\",\n    \"security_role\",\n    \"funeral_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "military_service",
-    "security_role",
-    "funeral_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The full name of the individual."
+      },
+      "military_service": {
+        "type": "object",
+        "properties": {
+          "branch": {
+            "type": "string",
+            "description": "The branch of the military the person served in."
+          },
+          "officer_status": {
+            "type": "boolean",
+            "description": "Indicates if the person was an officer."
+          }
+        },
+        "required": [
+          "branch",
+          "officer_status"
+        ],
+        "additionalProperties": false
+      },
+      "security_role": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of security role held by the person."
+          },
+          "origin_country": {
+            "type": "string",
+            "description": "The country of origin for the person's security role."
+          }
+        },
+        "required": [
+          "type",
+          "origin_country"
+        ],
+        "additionalProperties": false
+      },
+      "funeral_details": {
+        "type": "object",
+        "properties": {
+          "song_read": {
+            "type": "string",
+            "description": "The name of the song read at the funeral."
+          },
+          "year": {
+            "type": "integer",
+            "description": "The year the funeral took place."
+          }
+        },
+        "required": [
+          "song_read",
+          "year"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "person_name",
+      "military_service",
+      "security_role",
+      "funeral_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

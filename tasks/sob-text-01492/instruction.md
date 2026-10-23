@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Thai lunar calendar: The Thai lunar calendar (Thai: ปฏิทินจันทรคติ , rtgs: "patithin chanthrakhati" ,  ] , literally, "Specific days according to lunar norms"), or Tai calendar, is a lunisolar Buddhist calendar.  It is used for calculating lunar-regulated holy days.  Based on the "SuriyaYatra", with likely influence from the traditional Hindu "Surya Siddhanta", it has its own unique structure that does not require the Surya Siddhanta to calculate.  Lunisolar calendars combine lunar and solar calendars for a nominal year of 12 months.  An extra day or an extra 30-day month is intercalated at regular intervals.
-
-Melanau calendar: The Melanau calendar (Malay: "Bulan Melanau" ) is a calendar used by the Melanau people of Borneo.  Its year consists of 12 months.  The first month, "Pengejin", signifies the celebration of the Kaul festival (a giving of thanks for the preceding year, with prayers for the year ahead).  Each month in the Melanau calendar consists of 30 days.  It is guided by the constellations, natural phenomena and guardian spirits. Each month is named for occurrences during the month or events which are supposed to have occurred during that particular month, according to legend.  The rise and fall of the sun, the moon and the stars determine the time for planting, harvesting, fishing, building, travel and marriage.
-
-Songkran (Thailand): Songkran (Thai: เทศกาลสงกรานต์ ,  ] ) is the Thai New Year's festival.  The Thai New Year's Day is 13 April every year, but the holiday period includes 14–15 April as well.  The word "Songkran" comes from the Sanskrit word "saṃkrānti " (Devanāgarī: संक्रांति), literally "astrological passage", meaning transformation or change.  The term was borrowed from "Makar Sankranti", the name of a Hindu harvest festival celebrated in India in January to mark the arrival of spring.  It coincides with the rising of Aries on the astrological chart and with the New Year of many calendars of South and Southeast Asia, in keeping with the Buddhist/Hindu solar calendar.
-
-Ancient Macedonian calendar: The Ancient Macedonian calendar is a lunisolar calendar that was in use in ancient Macedon in the 1st millennium BC.  It consisted of 12 synodic lunar months (i.e. 354 days per year), which needed intercalary months to stay in step with the seasons.  By the time the calendar was being used across the Hellenistic world, seven total "embolimoi" (intercalary months) were being added in each 19-year Metonic cycle.  The names of the ancient Macedonian Calendar remained in use in Syria even into the Christian era.  The Macedonian calendar was in essence the Babylonian calendar with the substitution of Macedonian names for the Babylonian ones.  An example of 6th century AD inscriptions from Decapolis, Jordan, bearing the Solar Macedonian calendar, starts from the month Audynaeus.  The solar type was merged later with the Julian calendar.  In Roman Macedonia, both calendars were used.  The Roman one is attested in inscriptions with the name "Kalandôn" gen.  καλανδῶν calendae and the Macedonian "Hellenikei" dat.  Ἑλληνικῇ Hellenic.  Finally an inscription from Kassandreia of about ca. 306-298 BC bearing a month Ἀθηναιῶν "Athenaion" suggests that some cities may have used their own months even after the 4th century BC Macedonian expansion.
-
-Telugu years: The Telugu year is the calendar year for the Telugu speaking people of India.  Each Yuga (Era) has a cycle of 60 years.  Each year of Ugadi year has a specific name in Panchangam (Astrnomical calendar) based on astrological influences and the name of the year would represent the character of that year.  The calendar includes 60 year names.  Every 60 years one name cycle completes and the names repeat in the next cycle.  For example, the Telugu name for 1954 is "jaya", repeated in 2014.  Ugadi is the Telugu new year festival that comes in the spring season (usually March or April).
-
-Monkey (zodiac): The Monkey (猴) is the ninth of the 12-year cycle of animals which appear in the Chinese zodiac related to the Chinese calendar.  The Year of the Monkey is associated with the Earthly Branch symbol 申.
-
-Age of Aquarius: "Age of Aquarius" is an astrological term denoting either the current or forthcoming astrological age, depending on the method of calculation.  Astrologers maintain that an astrological age is a product of the earth's slow precessional rotation and lasts for 2,160 years, on average (26,000-year period of precession / 12 zodiac signs = 2,160 years).
-
-Muisca calendar: The Muisca calendar was a lunisolar calendar used by the Muisca.  The calendar was composed of a complex combination of months and three types of years were used; rural years (according to Pedro Simón, Chibcha: "chocan"), holy years (Duquesne, Spanish: "acrótomo"), and common years (Duquesne, Chibcha: "zocam").  Each month consisted of thirty days and the common year of twenty months, as twenty was the 'perfect' number of the Muisca, representing the total of extremeties; fingers and toes.  The rural year usually contained twelve months, but one leap month was added.  This month (Spanish: "mes sordo"; "deaf month") represented a month of rest.  The holy year completed the full cycle with 37 months.
-
-Chinese calendar: The traditional Chinese calendar is a lunisolar calendar which reckons years, months and days according to astronomical phenomena.  s of 2017 , the Chinese calendar is defined by GB/T 33661-2017 "Calculation and promulgation of the Chinese calendar," which the Standardization Administration of the People's Republic of China issued on May 12, 2017.
-
-Burmese calendar: The Burmese calendar (Burmese: မြန်မာသက္ကရာဇ် , ] , or ကောဇာသက္ကရာဇ် , ] ; Burmese Era (BE) or Myanmar Era (ME)) is a lunisolar calendar in which the months are based on lunar months and years are based on sidereal years.  The calendar is largely based on an older version of the Hindu calendar, though unlike the Indian systems, it employs a version of the Metonic cycle.  The calendar therefore has to reconcile the sidereal years of the Hindu calendar with the Metonic cycle's near tropical years by adding intercalary months and days at "irregular" intervals.
-
-Question: What calendar includes the year of the monkey, and reckons years, months, and days according to astrological phenomena? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "calendar_name": {
-      "type": "string",
-      "description": "The name of the calendar."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "calendar_type": {
-      "type": "string",
-      "description": "The type of calendar, e.g., lunisolar."
-    },
-    "reckoning_basis": {
-      "type": "string",
-      "description": "The method by which the calendar reckons years, months, and days."
-    },
-    "zodiac_animal_example": {
-      "type": "string",
-      "description": "An example of a zodiac animal included in the calendar's cycle."
+    {
+      "role": "user",
+      "content": "Context:\nThai lunar calendar: The Thai lunar calendar (Thai: ปฏิทินจันทรคติ , rtgs: \"patithin chanthrakhati\" ,  ] , literally, \"Specific days according to lunar norms\"), or Tai calendar, is a lunisolar Buddhist calendar.  It is used for calculating lunar-regulated holy days.  Based on the \"SuriyaYatra\", with likely influence from the traditional Hindu \"Surya Siddhanta\", it has its own unique structure that does not require the Surya Siddhanta to calculate.  Lunisolar calendars combine lunar and solar calendars for a nominal year of 12 months.  An extra day or an extra 30-day month is intercalated at regular intervals.\n\nMelanau calendar: The Melanau calendar (Malay: \"Bulan Melanau\" ) is a calendar used by the Melanau people of Borneo.  Its year consists of 12 months.  The first month, \"Pengejin\", signifies the celebration of the Kaul festival (a giving of thanks for the preceding year, with prayers for the year ahead).  Each month in the Melanau calendar consists of 30 days.  It is guided by the constellations, natural phenomena and guardian spirits. Each month is named for occurrences during the month or events which are supposed to have occurred during that particular month, according to legend.  The rise and fall of the sun, the moon and the stars determine the time for planting, harvesting, fishing, building, travel and marriage.\n\nSongkran (Thailand): Songkran (Thai: เทศกาลสงกรานต์ ,  ] ) is the Thai New Year's festival.  The Thai New Year's Day is 13 April every year, but the holiday period includes 14–15 April as well.  The word \"Songkran\" comes from the Sanskrit word \"saṃkrānti \" (Devanāgarī: संक्रांति), literally \"astrological passage\", meaning transformation or change.  The term was borrowed from \"Makar Sankranti\", the name of a Hindu harvest festival celebrated in India in January to mark the arrival of spring.  It coincides with the rising of Aries on the astrological chart and with the New Year of many calendars of South and Southeast Asia, in keeping with the Buddhist/Hindu solar calendar.\n\nAncient Macedonian calendar: The Ancient Macedonian calendar is a lunisolar calendar that was in use in ancient Macedon in the 1st millennium BC.  It consisted of 12 synodic lunar months (i.e. 354 days per year), which needed intercalary months to stay in step with the seasons.  By the time the calendar was being used across the Hellenistic world, seven total \"embolimoi\" (intercalary months) were being added in each 19-year Metonic cycle.  The names of the ancient Macedonian Calendar remained in use in Syria even into the Christian era.  The Macedonian calendar was in essence the Babylonian calendar with the substitution of Macedonian names for the Babylonian ones.  An example of 6th century AD inscriptions from Decapolis, Jordan, bearing the Solar Macedonian calendar, starts from the month Audynaeus.  The solar type was merged later with the Julian calendar.  In Roman Macedonia, both calendars were used.  The Roman one is attested in inscriptions with the name \"Kalandôn\" gen.  καλανδῶν calendae and the Macedonian \"Hellenikei\" dat.  Ἑλληνικῇ Hellenic.  Finally an inscription from Kassandreia of about ca. 306-298 BC bearing a month Ἀθηναιῶν \"Athenaion\" suggests that some cities may have used their own months even after the 4th century BC Macedonian expansion.\n\nTelugu years: The Telugu year is the calendar year for the Telugu speaking people of India.  Each Yuga (Era) has a cycle of 60 years.  Each year of Ugadi year has a specific name in Panchangam (Astrnomical calendar) based on astrological influences and the name of the year would represent the character of that year.  The calendar includes 60 year names.  Every 60 years one name cycle completes and the names repeat in the next cycle.  For example, the Telugu name for 1954 is \"jaya\", repeated in 2014.  Ugadi is the Telugu new year festival that comes in the spring season (usually March or April).\n\nMonkey (zodiac): The Monkey (猴) is the ninth of the 12-year cycle of animals which appear in the Chinese zodiac related to the Chinese calendar.  The Year of the Monkey is associated with the Earthly Branch symbol 申.\n\nAge of Aquarius: \"Age of Aquarius\" is an astrological term denoting either the current or forthcoming astrological age, depending on the method of calculation.  Astrologers maintain that an astrological age is a product of the earth's slow precessional rotation and lasts for 2,160 years, on average (26,000-year period of precession / 12 zodiac signs = 2,160 years).\n\nMuisca calendar: The Muisca calendar was a lunisolar calendar used by the Muisca.  The calendar was composed of a complex combination of months and three types of years were used; rural years (according to Pedro Simón, Chibcha: \"chocan\"), holy years (Duquesne, Spanish: \"acrótomo\"), and common years (Duquesne, Chibcha: \"zocam\").  Each month consisted of thirty days and the common year of twenty months, as twenty was the 'perfect' number of the Muisca, representing the total of extremeties; fingers and toes.  The rural year usually contained twelve months, but one leap month was added.  This month (Spanish: \"mes sordo\"; \"deaf month\") represented a month of rest.  The holy year completed the full cycle with 37 months.\n\nChinese calendar: The traditional Chinese calendar is a lunisolar calendar which reckons years, months and days according to astronomical phenomena.  s of 2017 , the Chinese calendar is defined by GB/T 33661-2017 \"Calculation and promulgation of the Chinese calendar,\" which the Standardization Administration of the People's Republic of China issued on May 12, 2017.\n\nBurmese calendar: The Burmese calendar (Burmese: မြန်မာသက္ကရာဇ် , ] , or ကောဇာသက္ကရာဇ် , ] ; Burmese Era (BE) or Myanmar Era (ME)) is a lunisolar calendar in which the months are based on lunar months and years are based on sidereal years.  The calendar is largely based on an older version of the Hindu calendar, though unlike the Indian systems, it employs a version of the Metonic cycle.  The calendar therefore has to reconcile the sidereal years of the Hindu calendar with the Metonic cycle's near tropical years by adding intercalary months and days at \"irregular\" intervals.\n\nQuestion: What calendar includes the year of the monkey, and reckons years, months, and days according to astrological phenomena? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"calendar_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the calendar.\"\n    },\n    \"calendar_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of calendar, e.g., lunisolar.\"\n    },\n    \"reckoning_basis\": {\n      \"type\": \"string\",\n      \"description\": \"The method by which the calendar reckons years, months, and days.\"\n    },\n    \"zodiac_animal_example\": {\n      \"type\": \"string\",\n      \"description\": \"An example of a zodiac animal included in the calendar's cycle.\"\n    }\n  },\n  \"required\": [\n    \"calendar_name\",\n    \"calendar_type\",\n    \"reckoning_basis\",\n    \"zodiac_animal_example\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "calendar_name",
-    "calendar_type",
-    "reckoning_basis",
-    "zodiac_animal_example"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "calendar_name": {
+        "type": "string",
+        "description": "The name of the calendar."
+      },
+      "calendar_type": {
+        "type": "string",
+        "description": "The type of calendar, e.g., lunisolar."
+      },
+      "reckoning_basis": {
+        "type": "string",
+        "description": "The method by which the calendar reckons years, months, and days."
+      },
+      "zodiac_animal_example": {
+        "type": "string",
+        "description": "An example of a zodiac animal included in the calendar's cycle."
+      }
+    },
+    "required": [
+      "calendar_name",
+      "calendar_type",
+      "reckoning_basis",
+      "zodiac_animal_example"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

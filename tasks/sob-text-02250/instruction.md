@@ -1,72 +1,49 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Fort Night: "Fort Night" is the second episode of the fourth season of the American animated comedy series "Bob's Burgers".  The episode, written by Mike Olsen, is the series' second Halloween special, and features guest appearances from comedians Aziz Ansari and Molly Shannon.  Its plot centers around the Belcher siblings – Tina (Dan Mintz), Gene (Eugene Mirman), and Louise (Kristen Schaal) – getting trapped in their makeshift fort on Halloween with their friends Darryl (Ansari), Andy (Laura Silverman), and Ollie (Sarah Silverman), all the while being tormented by Millie (Shannon), a psychotic classmate of Louise's who refuses to send any help.  The children must try to escape the fort before trick-or-treating commences at night.
-
-Bob Fires the Kids: "Bob Fires the Kids" is the third episode of the third season of the American animated comedy series "Bob's Burgers".  Written by Lizzie and Wendy Molyneux, the episode sees Bob Belcher (H. Jon Benjamin) firing his children Tina (Dan Mintz), Gene (Eugene Mirman), and Louise (Kristen Schaal) from the family restaurant for the summer, not wanting to deprive them of normal childhood experiences as his own father did.  However, when the children grow bored of summer activities, they seek employment at a local farm, which unbeknownst to them grows marijuana.
-
-Kristen Schaal: Kristen Joy Schaal ( ; born January 24, 1978) is an American comedian, actress, voice artist and writer.  She is known for her roles of Mel on the HBO series "Flight of the Conchords", The Heart, She Holler as over-sexed Hurshe, Louise Belcher on FOX animated comedy "Bob's Burgers", and Mabel Pines on "Gravity Falls".  Other roles include her appearances as a commentator on "The Daily Show", Amanda Simmons on "The Hotwives of Orlando", Hazel Wassername on "30 Rock", Victoria Best on "WordGirl", Trixie from the "Toy Story" franchise, Anne on "Wilfred" and she has appeared on Celebrity Family Feud.  Since 2015, she has co-starred alongside Will Forte in the Fox comedy "The Last Man on Earth", playing the role of Carol.  She was nominated for a Primetime Emmy for her role of Sarah Lynn in "BoJack Horseman".
-
-Bob's Burgers (season 2): The second season of the animated sitcom "Bob's Burgers" began airing on Fox in the United States on  11, 2012 (2012--) , and concluded on  20, 2012 (2012--) .  The season was produced by Wilo Productions and Buck & Millie Productions in association with 20th Century Fox Television, and is distributed by 20th Century Fox Home Entertainment, along with its other seasons.  Actors H. Jon Benjamin, John Roberts, Dan Mintz, Eugene Mirman and Kristen Schaal reprised their roles as Bob Belcher, Linda Belcher, Tina Belcher, Gene Belcher and Louise Belcher.  These characters are all a part of the Belcher family, a nuclear family that run a hamburger restaurant, entitled Bob's Burgers.
-
-Glued, Where's My Bob?: "Glued, Where's My Bob" is the 19th episode and season finale of the sixth season of the American animated comedy series "Bob's Burgers".  Written by Steven Davis and Kelvin Yu, the episode features guest appearances from actors Rob Huebel, Kumail Nanjiani, and Keegan-Michael Key, as well as appearances by recurring guest stars Pamela Adlon, Ken Jeong, Tim Meadows, and Jenny Slate.  Its main plot sees Gene Belcher (Eugene Mirman), Louise Belcher (Kristen Schaal), and Tina (Dan Mintz) getting into a normal fight which causes Bob to end up in a sticky situation, where he learns that a journalist is coming to the restaurant to do a story on it, and the whole town ends up getting involved.
-
-Boyz 4 Now: "Boyz 4 Now" is the 21st episode of the third season of the American animated comedy series "Bob's Burgers".  Written by Lizzie and Wendy Molyneux, the episode features guest appearances from actors Max Greenfield and Jack McBrayer and comedian Tig Notaro.  Its main plot sees Louise Belcher (Kristen Schaal) becoming aghast to find herself developing a crush on a member of the boy band Boyz 4 Now (Greenfield), after she reluctantly attends one of their concerts with her sister Tina (Dan Mintz).  In a subplot, Gene Belcher (Eugene Mirman) qualifies for a regional competition in tablescaping, an activity involving the setting of dining tables based on a selected theme.
-
-Bob's Burgers (season 1): The first season of the American animated sitcom "Bob's Burgers" began airing on Fox in the United States on January 9, 2011, and concluded on May 22, 2011.  Thirteen episodes long, the season was produced by Bento Box Entertainment in association with 20th Century Fox Television.  The series follows the family—father Bob, mother Linda, daughters Louise and Tina Belcher, and son Gene.  The show features the voices of H. Jon Benjamin, Dan Mintz, Eugene Mirman, John Roberts and Kristen Schaal in their roles of the Belcher family.
-
-An Indecent Thanksgiving Proposal: "An Indecent Thanksgiving Proposal" is the fifth episode of the third season of the American animated comedy series "Bob's Burgers".  Written by Lizzie and Wendy Molyneux, the episode sees Bob Belcher (H. Jon Benjamin) reluctantly agree to rent out his wife Linda (John Roberts) and their children Tina (Dan Mintz), Gene (Eugene Mirman), and Louise (Kristen Schaal) to the family's landlord Calvin Fischoeder (guest voiced by Kevin Kline), who wants them to pose as his own family to impress a former flame named Shelby (Lindsey Stoddart) at Thanksgiving dinner.  As Thanksgiving goes by, Bob, who has also been hired to pose as Fischoeder's cook, begins to feel increasingly ignored by his family and ends up talking to the dinner turkey as his only companion.
-
-List of Bob's Burgers episodes: "Bob's Burgers" is an American animated television sitcom that premiered on the Fox network on January 9, 2011.  The series finished its seventh season on June 11, 2017.  It centers on the Belchers, a family consisting of parents Bob (H. Jon Benjamin) and Linda (John Roberts) and their children Tina (Dan Mintz), Gene (Eugene Mirman) and Louise (Kristen Schaal), who run a hamburger restaurant.  The show's premise originated with Loren Bouchard, who serves as an executive producer along with Jim Dauterive.  The show is said to fill the void created by the conclusion of "King of the Hill", which Dauterive worked on for nearly its entire run.
-
-Ambergris (Bob's Burgers): "Ambergris" is the 18th episode of the fourth season of the American animated comedy series "Bob's Burgers", and the 63rd episode overall.  Written by Scott Jacobson, the episode sees the Belcher children—Tina (Dan Mintz), Gene (Eugene Mirman), and Louise (Kristen Schaal)—discovering a lump of ambergris, which they decide to sell illegally with the assistance of former bank robber and family friend Mickey (guest voiced by Bill Hader) upon discovering its high monetary value.  Meanwhile, Mr. Fischoeder (guest voiced by Kevin Kline) brings in his neurotic brother Felix (guest voiced by Zach Galifianakis) to help Bob (H. Jon Benjamin) fix the plumbing system in his restaurant's bathroom.
-
-Question: Which character does Kristen Schaal play in the American animated sitcom "Bob's Burgers"?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "character_name": {
-      "type": "string",
-      "description": "The name of the character played by the actor."
-    },
-    "series_name": {
-      "type": "string",
-      "description": "The name of the series where the character appears."
-    },
-    "character_family_role": {
-      "type": "string",
-      "description": "The family role of the character within the series."
-    },
-    "other_notable_roles_by_actor": {
-      "type": "array",
-      "description": "A list of other notable roles played by the actor.",
-      "items": {
-        "type": "string"
-      }
+    {
+      "role": "user",
+      "content": "Context:\nFort Night: \"Fort Night\" is the second episode of the fourth season of the American animated comedy series \"Bob's Burgers\".  The episode, written by Mike Olsen, is the series' second Halloween special, and features guest appearances from comedians Aziz Ansari and Molly Shannon.  Its plot centers around the Belcher siblings – Tina (Dan Mintz), Gene (Eugene Mirman), and Louise (Kristen Schaal) – getting trapped in their makeshift fort on Halloween with their friends Darryl (Ansari), Andy (Laura Silverman), and Ollie (Sarah Silverman), all the while being tormented by Millie (Shannon), a psychotic classmate of Louise's who refuses to send any help.  The children must try to escape the fort before trick-or-treating commences at night.\n\nBob Fires the Kids: \"Bob Fires the Kids\" is the third episode of the third season of the American animated comedy series \"Bob's Burgers\".  Written by Lizzie and Wendy Molyneux, the episode sees Bob Belcher (H. Jon Benjamin) firing his children Tina (Dan Mintz), Gene (Eugene Mirman), and Louise (Kristen Schaal) from the family restaurant for the summer, not wanting to deprive them of normal childhood experiences as his own father did.  However, when the children grow bored of summer activities, they seek employment at a local farm, which unbeknownst to them grows marijuana.\n\nKristen Schaal: Kristen Joy Schaal ( ; born January 24, 1978) is an American comedian, actress, voice artist and writer.  She is known for her roles of Mel on the HBO series \"Flight of the Conchords\", The Heart, She Holler as over-sexed Hurshe, Louise Belcher on FOX animated comedy \"Bob's Burgers\", and Mabel Pines on \"Gravity Falls\".  Other roles include her appearances as a commentator on \"The Daily Show\", Amanda Simmons on \"The Hotwives of Orlando\", Hazel Wassername on \"30 Rock\", Victoria Best on \"WordGirl\", Trixie from the \"Toy Story\" franchise, Anne on \"Wilfred\" and she has appeared on Celebrity Family Feud.  Since 2015, she has co-starred alongside Will Forte in the Fox comedy \"The Last Man on Earth\", playing the role of Carol.  She was nominated for a Primetime Emmy for her role of Sarah Lynn in \"BoJack Horseman\".\n\nBob's Burgers (season 2): The second season of the animated sitcom \"Bob's Burgers\" began airing on Fox in the United States on  11, 2012 (2012--) , and concluded on  20, 2012 (2012--) .  The season was produced by Wilo Productions and Buck & Millie Productions in association with 20th Century Fox Television, and is distributed by 20th Century Fox Home Entertainment, along with its other seasons.  Actors H. Jon Benjamin, John Roberts, Dan Mintz, Eugene Mirman and Kristen Schaal reprised their roles as Bob Belcher, Linda Belcher, Tina Belcher, Gene Belcher and Louise Belcher.  These characters are all a part of the Belcher family, a nuclear family that run a hamburger restaurant, entitled Bob's Burgers.\n\nGlued, Where's My Bob?: \"Glued, Where's My Bob\" is the 19th episode and season finale of the sixth season of the American animated comedy series \"Bob's Burgers\".  Written by Steven Davis and Kelvin Yu, the episode features guest appearances from actors Rob Huebel, Kumail Nanjiani, and Keegan-Michael Key, as well as appearances by recurring guest stars Pamela Adlon, Ken Jeong, Tim Meadows, and Jenny Slate.  Its main plot sees Gene Belcher (Eugene Mirman), Louise Belcher (Kristen Schaal), and Tina (Dan Mintz) getting into a normal fight which causes Bob to end up in a sticky situation, where he learns that a journalist is coming to the restaurant to do a story on it, and the whole town ends up getting involved.\n\nBoyz 4 Now: \"Boyz 4 Now\" is the 21st episode of the third season of the American animated comedy series \"Bob's Burgers\".  Written by Lizzie and Wendy Molyneux, the episode features guest appearances from actors Max Greenfield and Jack McBrayer and comedian Tig Notaro.  Its main plot sees Louise Belcher (Kristen Schaal) becoming aghast to find herself developing a crush on a member of the boy band Boyz 4 Now (Greenfield), after she reluctantly attends one of their concerts with her sister Tina (Dan Mintz).  In a subplot, Gene Belcher (Eugene Mirman) qualifies for a regional competition in tablescaping, an activity involving the setting of dining tables based on a selected theme.\n\nBob's Burgers (season 1): The first season of the American animated sitcom \"Bob's Burgers\" began airing on Fox in the United States on January 9, 2011, and concluded on May 22, 2011.  Thirteen episodes long, the season was produced by Bento Box Entertainment in association with 20th Century Fox Television.  The series follows the family—father Bob, mother Linda, daughters Louise and Tina Belcher, and son Gene.  The show features the voices of H. Jon Benjamin, Dan Mintz, Eugene Mirman, John Roberts and Kristen Schaal in their roles of the Belcher family.\n\nAn Indecent Thanksgiving Proposal: \"An Indecent Thanksgiving Proposal\" is the fifth episode of the third season of the American animated comedy series \"Bob's Burgers\".  Written by Lizzie and Wendy Molyneux, the episode sees Bob Belcher (H. Jon Benjamin) reluctantly agree to rent out his wife Linda (John Roberts) and their children Tina (Dan Mintz), Gene (Eugene Mirman), and Louise (Kristen Schaal) to the family's landlord Calvin Fischoeder (guest voiced by Kevin Kline), who wants them to pose as his own family to impress a former flame named Shelby (Lindsey Stoddart) at Thanksgiving dinner.  As Thanksgiving goes by, Bob, who has also been hired to pose as Fischoeder's cook, begins to feel increasingly ignored by his family and ends up talking to the dinner turkey as his only companion.\n\nList of Bob's Burgers episodes: \"Bob's Burgers\" is an American animated television sitcom that premiered on the Fox network on January 9, 2011.  The series finished its seventh season on June 11, 2017.  It centers on the Belchers, a family consisting of parents Bob (H. Jon Benjamin) and Linda (John Roberts) and their children Tina (Dan Mintz), Gene (Eugene Mirman) and Louise (Kristen Schaal), who run a hamburger restaurant.  The show's premise originated with Loren Bouchard, who serves as an executive producer along with Jim Dauterive.  The show is said to fill the void created by the conclusion of \"King of the Hill\", which Dauterive worked on for nearly its entire run.\n\nAmbergris (Bob's Burgers): \"Ambergris\" is the 18th episode of the fourth season of the American animated comedy series \"Bob's Burgers\", and the 63rd episode overall.  Written by Scott Jacobson, the episode sees the Belcher children—Tina (Dan Mintz), Gene (Eugene Mirman), and Louise (Kristen Schaal)—discovering a lump of ambergris, which they decide to sell illegally with the assistance of former bank robber and family friend Mickey (guest voiced by Bill Hader) upon discovering its high monetary value.  Meanwhile, Mr. Fischoeder (guest voiced by Kevin Kline) brings in his neurotic brother Felix (guest voiced by Zach Galifianakis) to help Bob (H. Jon Benjamin) fix the plumbing system in his restaurant's bathroom.\n\nQuestion: Which character does Kristen Schaal play in the American animated sitcom \"Bob's Burgers\"?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor.\"\n    },\n    \"character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character played by the actor.\"\n    },\n    \"series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the series where the character appears.\"\n    },\n    \"character_family_role\": {\n      \"type\": \"string\",\n      \"description\": \"The family role of the character within the series.\"\n    },\n    \"other_notable_roles_by_actor\": {\n      \"type\": \"array\",\n      \"description\": \"A list of other notable roles played by the actor.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    }\n  },\n  \"required\": [\n    \"actor_name\",\n    \"character_name\",\n    \"series_name\",\n    \"character_family_role\",\n    \"other_notable_roles_by_actor\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actor_name",
-    "character_name",
-    "series_name",
-    "character_family_role",
-    "other_notable_roles_by_actor"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor."
+      },
+      "character_name": {
+        "type": "string",
+        "description": "The name of the character played by the actor."
+      },
+      "series_name": {
+        "type": "string",
+        "description": "The name of the series where the character appears."
+      },
+      "character_family_role": {
+        "type": "string",
+        "description": "The family role of the character within the series."
+      },
+      "other_notable_roles_by_actor": {
+        "type": "array",
+        "description": "A list of other notable roles played by the actor.",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
+    "required": [
+      "actor_name",
+      "character_name",
+      "series_name",
+      "character_family_role",
+      "other_notable_roles_by_actor"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

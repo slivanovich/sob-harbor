@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Beggar on Horseback (film): Beggar on Horseback is a 1925 American comedy silent film directed by James Cruze and written by Marc Connelly, George S. Kaufman and Walter Woods.  The film stars Edward Everett Horton, Esther Ralston, Erwin Connelly, Gertrude Short, Ethel Wales, Theodore Kosloff and Betty Compson.  The film was released on August 24, 1925, by Paramount Pictures.
-
-The Year of the Dragon (play): The Year of the Dragon is a play written by Chinese American playwright Frank Chin.  It is one of the first plays by an Asian American playwright to be produced on a mainstream New York stage.  It premiered in 1974 at the American Place Theatre, and starred Randall Duk Kim, who had played the lead in Chin's earlier play, "The Chickencoop Chinaman".  The rest of the cast included Pat Suzuki, Tina Chen, Conrad Yama, Lilah Kan, Doug Higgins, and Keenan Shimizu.
-
-Catherine Butterfield: Catherine Butterfield (born February 5, 1958 in Manhattan, New York City, New York) is an American playwright, TV/film writer and actress.  Her play "Joined at the Head" was performed at the Manhattan Theatre Club in 1992 and won the Robert L. Stevens/Kennedy Center award for excellence, as well as being published in "Best Plays of 1992-93" (ISBN  ).  Mel Gussow wrote, "In this, her first full-length play to be presented in New York, Butterfield is revealed as a playwright with a refreshing talent for probing the reality of relationships.  In a manner related to that of Tom Stoppard and John Guare, the work deals enticingly with truth and fiction... a vibrant reflection on life and art."  (New York Times, November 19, 1992, "When an Old Friendship Is More Than It Seems".)  Subsequent award-winning plays include "Life in the Trees" (Davie award—Best new play in regional theatre) and "The Sleeper" (2004 Kaufman and Hart Prize for new American comedy.)
-
-Sam Shepard: Samuel Shepard Rogers III (November 5, 1943 – July 27, 2017), known professionally as Sam Shepard, was an American playwright, actor, author, screenwriter, and director whose body of work spanned half a century.  He won 10 Obie Awards for writing and directing, the most given to any writer or director.  He wrote 44 plays as well as several books of short stories, essays, and memoirs.  Shepard received the Pulitzer Prize for Drama in 1979 for his play "Buried Child".  He was nominated for an Academy Award for Best Supporting Actor for his portrayal of pilot Chuck Yeager in "The Right Stuff" (1983).  Shepard received the PEN/Laura Pels International Foundation for Theater Award as a master American dramatist in 2009. " New York" magazine described him as "the greatest American playwright of his generation."
-
-Richard Stockton (playwright): Richard F. Stockton (Akron, Ohio February 3, 1932 – April 5, 1997) was an American playwright.  He was the first American Playwright to receive a world premiere at the Abbey Theatre, Ireland’s National Theatre, for his play "Prisoner of the Crown", co-produced by Sir Alfred Drake.  The play received its American premiere by the Repertory Company of the Virginia Museum Theater, under the title "The Royal Rape of Ruari Macasmunde", with Keith Fowler in the title role and under Alfred Drake's direction.  The play dramatizes the jury deliberations in the treason trial of Roger Casement.
-
-The Chip Woman's Fortune: The Chip Woman’s Fortune is a 1923 one act play written by American playwright Willis Richardson.  The play was produced by The Ethiopian Art Players and is historically important as the first serious work by an African American playwright to be presented on Broadway.  Although Broadway had seen African American musical comedies and revues, it had never seen a serious drama.
-
-George S. Kaufman: George Simon Kaufman (November 16, 1889 – June 2, 1961) was an American playwright, theatre director and producer, humorist, and drama critic.  In addition to comedies and political satire, he wrote several musicals, notably for the Marx Brothers.  One play and one musical that he wrote won the Pulitzer Prize for Drama: "You Can't Take It with You" (1937, with Moss Hart), and "Of Thee I Sing" (1932, with Morrie Ryskind and Ira Gershwin).  He also won the Tony Award as a Director, for the musical "Guys and Dolls".
-
-Beggar on Horseback: Beggar on Horseback is a 1924 play by George S. Kaufman and Marc Connelly.
-
-Guy Bolton: Guy Reginald Bolton (23 November 1884 – 4 September 1979) was an Anglo-American playwright and writer of musical comedies.  Born in England and educated in France and the US, he trained as an architect but turned to writing.  Bolton preferred working in collaboration with others, principally the English writers P. G. Wodehouse and Fred Thompson, with whom he wrote 21 and 14 shows respectively, and the American playwright George Middleton, with whom he wrote ten shows.  Among his other collaborators in Britain were George Grossmith Jr., Ian Hay and Weston and Lee.  In the US, he worked with George and Ira Gershwin, Kalmar and Ruby and Oscar Hammerstein II.
-
-Widget (economics): The word widget is a placeholder name for an object or, more specifically, a mechanical or other manufactured device.  It is an "abstract unit of production".  The "Oxford English Dictionary" defines it as "An indefinite name for a gadget or mechanical contrivance, esp.  a small manufactured item" and dates this use back to 1931.  It states that the origin is "perhaps U.S." and for etymology suggests that it may be a variant of "gadget".  However, the term also appears earlier in George S. Kaufman and Moss Hart's 1924 play "Beggar on Horseback".
-
-Question: George S Kaufman an American playwright, wrote the play "Beggar on Horseback" along with who?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "play_title": {
-      "type": "string",
-      "description": "The title of the play."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "primary_playwright": {
-      "type": "string",
-      "description": "The main playwright mentioned in the question."
-    },
-    "collaborator_name": {
-      "type": "string",
-      "description": "The name of the co-writer for the play."
-    },
-    "year_premiered": {
-      "type": "integer",
-      "description": "The year the play premiered."
+    {
+      "role": "user",
+      "content": "Context:\nBeggar on Horseback (film): Beggar on Horseback is a 1925 American comedy silent film directed by James Cruze and written by Marc Connelly, George S. Kaufman and Walter Woods.  The film stars Edward Everett Horton, Esther Ralston, Erwin Connelly, Gertrude Short, Ethel Wales, Theodore Kosloff and Betty Compson.  The film was released on August 24, 1925, by Paramount Pictures.\n\nThe Year of the Dragon (play): The Year of the Dragon is a play written by Chinese American playwright Frank Chin.  It is one of the first plays by an Asian American playwright to be produced on a mainstream New York stage.  It premiered in 1974 at the American Place Theatre, and starred Randall Duk Kim, who had played the lead in Chin's earlier play, \"The Chickencoop Chinaman\".  The rest of the cast included Pat Suzuki, Tina Chen, Conrad Yama, Lilah Kan, Doug Higgins, and Keenan Shimizu.\n\nCatherine Butterfield: Catherine Butterfield (born February 5, 1958 in Manhattan, New York City, New York) is an American playwright, TV/film writer and actress.  Her play \"Joined at the Head\" was performed at the Manhattan Theatre Club in 1992 and won the Robert L. Stevens/Kennedy Center award for excellence, as well as being published in \"Best Plays of 1992-93\" (ISBN  ).  Mel Gussow wrote, \"In this, her first full-length play to be presented in New York, Butterfield is revealed as a playwright with a refreshing talent for probing the reality of relationships.  In a manner related to that of Tom Stoppard and John Guare, the work deals enticingly with truth and fiction... a vibrant reflection on life and art.\"  (New York Times, November 19, 1992, \"When an Old Friendship Is More Than It Seems\".)  Subsequent award-winning plays include \"Life in the Trees\" (Davie award—Best new play in regional theatre) and \"The Sleeper\" (2004 Kaufman and Hart Prize for new American comedy.)\n\nSam Shepard: Samuel Shepard Rogers III (November 5, 1943 – July 27, 2017), known professionally as Sam Shepard, was an American playwright, actor, author, screenwriter, and director whose body of work spanned half a century.  He won 10 Obie Awards for writing and directing, the most given to any writer or director.  He wrote 44 plays as well as several books of short stories, essays, and memoirs.  Shepard received the Pulitzer Prize for Drama in 1979 for his play \"Buried Child\".  He was nominated for an Academy Award for Best Supporting Actor for his portrayal of pilot Chuck Yeager in \"The Right Stuff\" (1983).  Shepard received the PEN/Laura Pels International Foundation for Theater Award as a master American dramatist in 2009. \" New York\" magazine described him as \"the greatest American playwright of his generation.\"\n\nRichard Stockton (playwright): Richard F. Stockton (Akron, Ohio February 3, 1932 – April 5, 1997) was an American playwright.  He was the first American Playwright to receive a world premiere at the Abbey Theatre, Ireland’s National Theatre, for his play \"Prisoner of the Crown\", co-produced by Sir Alfred Drake.  The play received its American premiere by the Repertory Company of the Virginia Museum Theater, under the title \"The Royal Rape of Ruari Macasmunde\", with Keith Fowler in the title role and under Alfred Drake's direction.  The play dramatizes the jury deliberations in the treason trial of Roger Casement.\n\nThe Chip Woman's Fortune: The Chip Woman’s Fortune is a 1923 one act play written by American playwright Willis Richardson.  The play was produced by The Ethiopian Art Players and is historically important as the first serious work by an African American playwright to be presented on Broadway.  Although Broadway had seen African American musical comedies and revues, it had never seen a serious drama.\n\nGeorge S. Kaufman: George Simon Kaufman (November 16, 1889 – June 2, 1961) was an American playwright, theatre director and producer, humorist, and drama critic.  In addition to comedies and political satire, he wrote several musicals, notably for the Marx Brothers.  One play and one musical that he wrote won the Pulitzer Prize for Drama: \"You Can't Take It with You\" (1937, with Moss Hart), and \"Of Thee I Sing\" (1932, with Morrie Ryskind and Ira Gershwin).  He also won the Tony Award as a Director, for the musical \"Guys and Dolls\".\n\nBeggar on Horseback: Beggar on Horseback is a 1924 play by George S. Kaufman and Marc Connelly.\n\nGuy Bolton: Guy Reginald Bolton (23 November 1884 – 4 September 1979) was an Anglo-American playwright and writer of musical comedies.  Born in England and educated in France and the US, he trained as an architect but turned to writing.  Bolton preferred working in collaboration with others, principally the English writers P. G. Wodehouse and Fred Thompson, with whom he wrote 21 and 14 shows respectively, and the American playwright George Middleton, with whom he wrote ten shows.  Among his other collaborators in Britain were George Grossmith Jr., Ian Hay and Weston and Lee.  In the US, he worked with George and Ira Gershwin, Kalmar and Ruby and Oscar Hammerstein II.\n\nWidget (economics): The word widget is a placeholder name for an object or, more specifically, a mechanical or other manufactured device.  It is an \"abstract unit of production\".  The \"Oxford English Dictionary\" defines it as \"An indefinite name for a gadget or mechanical contrivance, esp.  a small manufactured item\" and dates this use back to 1931.  It states that the origin is \"perhaps U.S.\" and for etymology suggests that it may be a variant of \"gadget\".  However, the term also appears earlier in George S. Kaufman and Moss Hart's 1924 play \"Beggar on Horseback\".\n\nQuestion: George S Kaufman an American playwright, wrote the play \"Beggar on Horseback\" along with who?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"play_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the play.\"\n    },\n    \"primary_playwright\": {\n      \"type\": \"string\",\n      \"description\": \"The main playwright mentioned in the question.\"\n    },\n    \"collaborator_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the co-writer for the play.\"\n    },\n    \"year_premiered\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the play premiered.\"\n    }\n  },\n  \"required\": [\n    \"play_title\",\n    \"primary_playwright\",\n    \"collaborator_name\",\n    \"year_premiered\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "play_title",
-    "primary_playwright",
-    "collaborator_name",
-    "year_premiered"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "play_title": {
+        "type": "string",
+        "description": "The title of the play."
+      },
+      "primary_playwright": {
+        "type": "string",
+        "description": "The main playwright mentioned in the question."
+      },
+      "collaborator_name": {
+        "type": "string",
+        "description": "The name of the co-writer for the play."
+      },
+      "year_premiered": {
+        "type": "integer",
+        "description": "The year the play premiered."
+      }
+    },
+    "required": [
+      "play_title",
+      "primary_playwright",
+      "collaborator_name",
+      "year_premiered"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

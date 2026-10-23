@@ -1,83 +1,60 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Beowulf &amp; Grendel: Beowulf & Grendel is a 2005 film Canadian-Icelandic fantasy adventure film directed by Sturla Gunnarsson, loosely based on the Anglo-Saxon epic poem "Beowulf".  It stars Gerard Butler as Beowulf, Stellan Skarsgård as Hrothgar, Ingvar Eggert Sigurðsson as Grendel and Sarah Polley as the witch Selma.  The screenplay was written by Andrew Rai Berzins.  The soundtrack was composed by Hilmar Örn Hilmarsson.  While some of the film remains true to the original poem, other plot elements deviate from the original poem: three new characters, Grendel's father, the witch Selma, and Grendel's son are introduced, and several related plot points were developed specifically for the film.
-
-The Dragon (Beowulf): The final act of the Anglo-Saxon poem "Beowulf" is about the hero Beowulf's fight with a dragon, the third monster he encounters in the epic.  On his return from Heorot, where he killed Grendel and Grendel's mother, Beowulf becomes king of the Geats and rules peacefully for fifty winters until a slave awakens and angers a dragon by stealing a jewelled cup from its lair in order to gain freedom from killing his brother.  When the angry dragon mercilessly burns the Geats' homes and lands, Beowulf decides to fight and kill the monster personally.  He and his thanes climb to the dragon's lair where, upon seeing the beast, the thanes flee in terror, leaving only Wiglaf to battle at Beowulf's side.  When the dragon wounds Beowulf fatally, Wiglaf slays it.
-
-Matias Varela: Varela was born and grew up in Södermalm on the south side of Stockholm.  Both parents are from Spain and he did not learn proper Swedish until he started school.  During middle school a new friend was Gustaf Skarsgård, son of internationally noted Swedish actor Stellan Skarsgård.  Varela did not then know of the famous Skarsgård family because he mostly watched Spanish satellite television.  When his friend Skarsgård applied to a selective upper secondary school, Södra Latin’s drama program near where both boys lived, Varela wanted to do the same.  The elder Skarsgård gave the young Varela a few hours of acting instructions and he was accepted by the school.  Varela said he was surprised, because he had shown up in a track suit and looked more like a homeboy/chav than an aspiring actor.
-
-Hrothgar: Hrothgar (Old English: "Hrōðgār" ] ; ) was a legendary Danish king living in the early 6th century.
-
-Heorot: Heorot ( ), also Herot, is a mead-hall described in the Anglo-Saxon epic "Beowulf" as "the foremost of halls under heaven."  It served as a palace for King Hroðgar, a legendary Danish king of the sixth century.  "Heorot" means "Hall of the Hart" (male deer).  The Geatish hero Beowulf defends the royal hall and its residents from the demonic Grendel.
-
-Erik Selvig: Erik Selvig is a character portrayed by Stellan Skarsgård in the films of the Marvel Cinematic Universe (MCU).  An astrophysicist who becomes involved with the alien Thor and the government organization S.H.I.E.L.D., he first appeared in the 2011 film "Thor".  Skarsgård went on to reprise the role in "The Avengers" (2012), "" (2013), and "" (2015).  To tie into these appearances, the character is seen in several MCU tie-in comics.  The character also appears in other media, including non-MCU comics published by Marvel Comics.
-
-Moomins and the Comet Chase: Moomins and the Comet Chase is a 2010 3D stop motion animated fantasy adventure comedy family film compiled from the "Comet in Moominland"-based episodes of the 1977–1982 "The Moomins" TV series animated at Se-ma-for in Poland, restored and re-soundtracked with multiple voice actors replacing the single narrator.  It is the second such Moomin film produced by Finnish children's film company Filmkompaniet, the first being "Moomin and Midsummer Madness", and the first one converted to stereoscopic 3-D.  A similar revision of the remainder of the series for high-definition television of all 78 episodes will follow and is currently in production.  The same novel has been adapted into film at least twice before, with the 1978 Russian stop motion serial "Mumi-troll" and the 1992 Japanese traditional animation feature "Comet in Moominland".  The international version of the film features the voices of known Swedish actors like Stellan Skarsgård, Peter Stormare, Alexander Skarsgård.  Musician and Moomins fan Björk also wrote an original song for the film.  The international film debuted at the Cannes Film Festival in May 2010.  In Finland, it arrived in movie theaters on 6 August 2010 and was later broadcast on the MTV3 channel.  The film was also produced in dozens of other languages and subsequently received global distribution.
-
-Wrath of Gods: Wrath of Gods is a 2006 documentary film directed by Jon Gustafsson.  It tells the story of the dramatic circumstances Canadian director Sturla Gunnarsson and his crew had to go through during the making of the film "Beowulf & Grendel".  The main focus of the documentary is on director Sturla Gunnarsson, but other participants are Gerard Butler, Paul Stephens, Eric Jordan, Stellan Skarsgård, Peder Pedrero, Wendy Ord and Sarah Polley.  The director of "Wrath of Gods", Jon Gustafsson, was hired to play one of Beowulf's warriors and he is credited in "Beowulf & Grendel" as Geat Warrior #2, Gerard Butler and Martin Delaney co-produced the film.  The music was composed by Hilmar Örn Hilmarsson.
-
-Albert King (basketball): Albert King (born December 17, 1959) is a retired American professional basketball player.  King played at Fort Hamilton High School in Brooklyn and is regarded as one of the nation's greatest high school players of all time.  He was rated the top prep player in the nation over Magic Johnson and Gene Banks during his senior year.  A 6'6" guard-forward from the University of Maryland, King was selected by the New Jersey Nets in the 1st round (10th overall) of the 1981 NBA draft.  King played in nine NBA seasons for four different teams.
-
-Æschere: In the Anglo-Saxon epic Beowulf, Æschere is Hrothgar's most trusted advisor who is killed by Grendel's mother in her attack on Heorot after Grendel's death.  His name is composed of the Germanic elements Æsc, meaning 'ash', and here, meaning 'army'.  King Hrothgar describes Æschere as 'min runwita ond min rædbora' (1325), which implies that he knows mysteries or enigmas and also has a duty to explain those mysteries aloud to a community.  But by killing and decapitating Æschere, Grendel's mother highlights an anxiety within the poem about things that defy human interpretation.  Beowulf and his Geatish warriors find Æschere's severed head at the entrance to Grendel's mother's lair.
-
-Question: During which century did the king played by Stellan Skarsgård in 2005's Beowulf & Grendel actually live?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_title": {
-      "type": "string",
-      "description": "The title of the film where the actor played the role."
-    },
-    "character_played": {
-      "type": "string",
-      "description": "The name of the character played by the actor in the specified film."
-    },
-    "historical_figure_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the historical figure."
-        },
-        "century_of_life": {
-          "type": "string",
-          "description": "The century during which the historical figure lived."
-        },
-        "historical_period_description": {
-          "type": "string",
-          "description": "A more detailed description of the historical period."
-        }
-      },
-      "required": [
-        "name",
-        "century_of_life",
-        "historical_period_description"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nBeowulf &amp; Grendel: Beowulf & Grendel is a 2005 film Canadian-Icelandic fantasy adventure film directed by Sturla Gunnarsson, loosely based on the Anglo-Saxon epic poem \"Beowulf\".  It stars Gerard Butler as Beowulf, Stellan Skarsgård as Hrothgar, Ingvar Eggert Sigurðsson as Grendel and Sarah Polley as the witch Selma.  The screenplay was written by Andrew Rai Berzins.  The soundtrack was composed by Hilmar Örn Hilmarsson.  While some of the film remains true to the original poem, other plot elements deviate from the original poem: three new characters, Grendel's father, the witch Selma, and Grendel's son are introduced, and several related plot points were developed specifically for the film.\n\nThe Dragon (Beowulf): The final act of the Anglo-Saxon poem \"Beowulf\" is about the hero Beowulf's fight with a dragon, the third monster he encounters in the epic.  On his return from Heorot, where he killed Grendel and Grendel's mother, Beowulf becomes king of the Geats and rules peacefully for fifty winters until a slave awakens and angers a dragon by stealing a jewelled cup from its lair in order to gain freedom from killing his brother.  When the angry dragon mercilessly burns the Geats' homes and lands, Beowulf decides to fight and kill the monster personally.  He and his thanes climb to the dragon's lair where, upon seeing the beast, the thanes flee in terror, leaving only Wiglaf to battle at Beowulf's side.  When the dragon wounds Beowulf fatally, Wiglaf slays it.\n\nMatias Varela: Varela was born and grew up in Södermalm on the south side of Stockholm.  Both parents are from Spain and he did not learn proper Swedish until he started school.  During middle school a new friend was Gustaf Skarsgård, son of internationally noted Swedish actor Stellan Skarsgård.  Varela did not then know of the famous Skarsgård family because he mostly watched Spanish satellite television.  When his friend Skarsgård applied to a selective upper secondary school, Södra Latin’s drama program near where both boys lived, Varela wanted to do the same.  The elder Skarsgård gave the young Varela a few hours of acting instructions and he was accepted by the school.  Varela said he was surprised, because he had shown up in a track suit and looked more like a homeboy/chav than an aspiring actor.\n\nHrothgar: Hrothgar (Old English: \"Hrōðgār\" ] ; ) was a legendary Danish king living in the early 6th century.\n\nHeorot: Heorot ( ), also Herot, is a mead-hall described in the Anglo-Saxon epic \"Beowulf\" as \"the foremost of halls under heaven.\"  It served as a palace for King Hroðgar, a legendary Danish king of the sixth century.  \"Heorot\" means \"Hall of the Hart\" (male deer).  The Geatish hero Beowulf defends the royal hall and its residents from the demonic Grendel.\n\nErik Selvig: Erik Selvig is a character portrayed by Stellan Skarsgård in the films of the Marvel Cinematic Universe (MCU).  An astrophysicist who becomes involved with the alien Thor and the government organization S.H.I.E.L.D., he first appeared in the 2011 film \"Thor\".  Skarsgård went on to reprise the role in \"The Avengers\" (2012), \"\" (2013), and \"\" (2015).  To tie into these appearances, the character is seen in several MCU tie-in comics.  The character also appears in other media, including non-MCU comics published by Marvel Comics.\n\nMoomins and the Comet Chase: Moomins and the Comet Chase is a 2010 3D stop motion animated fantasy adventure comedy family film compiled from the \"Comet in Moominland\"-based episodes of the 1977–1982 \"The Moomins\" TV series animated at Se-ma-for in Poland, restored and re-soundtracked with multiple voice actors replacing the single narrator.  It is the second such Moomin film produced by Finnish children's film company Filmkompaniet, the first being \"Moomin and Midsummer Madness\", and the first one converted to stereoscopic 3-D.  A similar revision of the remainder of the series for high-definition television of all 78 episodes will follow and is currently in production.  The same novel has been adapted into film at least twice before, with the 1978 Russian stop motion serial \"Mumi-troll\" and the 1992 Japanese traditional animation feature \"Comet in Moominland\".  The international version of the film features the voices of known Swedish actors like Stellan Skarsgård, Peter Stormare, Alexander Skarsgård.  Musician and Moomins fan Björk also wrote an original song for the film.  The international film debuted at the Cannes Film Festival in May 2010.  In Finland, it arrived in movie theaters on 6 August 2010 and was later broadcast on the MTV3 channel.  The film was also produced in dozens of other languages and subsequently received global distribution.\n\nWrath of Gods: Wrath of Gods is a 2006 documentary film directed by Jon Gustafsson.  It tells the story of the dramatic circumstances Canadian director Sturla Gunnarsson and his crew had to go through during the making of the film \"Beowulf & Grendel\".  The main focus of the documentary is on director Sturla Gunnarsson, but other participants are Gerard Butler, Paul Stephens, Eric Jordan, Stellan Skarsgård, Peder Pedrero, Wendy Ord and Sarah Polley.  The director of \"Wrath of Gods\", Jon Gustafsson, was hired to play one of Beowulf's warriors and he is credited in \"Beowulf & Grendel\" as Geat Warrior #2, Gerard Butler and Martin Delaney co-produced the film.  The music was composed by Hilmar Örn Hilmarsson.\n\nAlbert King (basketball): Albert King (born December 17, 1959) is a retired American professional basketball player.  King played at Fort Hamilton High School in Brooklyn and is regarded as one of the nation's greatest high school players of all time.  He was rated the top prep player in the nation over Magic Johnson and Gene Banks during his senior year.  A 6'6\" guard-forward from the University of Maryland, King was selected by the New Jersey Nets in the 1st round (10th overall) of the 1981 NBA draft.  King played in nine NBA seasons for four different teams.\n\nÆschere: In the Anglo-Saxon epic Beowulf, Æschere is Hrothgar's most trusted advisor who is killed by Grendel's mother in her attack on Heorot after Grendel's death.  His name is composed of the Germanic elements Æsc, meaning 'ash', and here, meaning 'army'.  King Hrothgar describes Æschere as 'min runwita ond min rædbora' (1325), which implies that he knows mysteries or enigmas and also has a duty to explain those mysteries aloud to a community.  But by killing and decapitating Æschere, Grendel's mother highlights an anxiety within the poem about things that defy human interpretation.  Beowulf and his Geatish warriors find Æschere's severed head at the entrance to Grendel's mother's lair.\n\nQuestion: During which century did the king played by Stellan Skarsgård in 2005's Beowulf & Grendel actually live?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor in question.\"\n    },\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the film where the actor played the role.\"\n    },\n    \"character_played\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character played by the actor in the specified film.\"\n    },\n    \"historical_figure_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the historical figure.\"\n        },\n        \"century_of_life\": {\n          \"type\": \"string\",\n          \"description\": \"The century during which the historical figure lived.\"\n        },\n        \"historical_period_description\": {\n          \"type\": \"string\",\n          \"description\": \"A more detailed description of the historical period.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"century_of_life\",\n        \"historical_period_description\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"actor_name\",\n    \"film_title\",\n    \"character_played\",\n    \"historical_figure_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actor_name",
-    "film_title",
-    "character_played",
-    "historical_figure_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor in question."
+      },
+      "film_title": {
+        "type": "string",
+        "description": "The title of the film where the actor played the role."
+      },
+      "character_played": {
+        "type": "string",
+        "description": "The name of the character played by the actor in the specified film."
+      },
+      "historical_figure_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the historical figure."
+          },
+          "century_of_life": {
+            "type": "string",
+            "description": "The century during which the historical figure lived."
+          },
+          "historical_period_description": {
+            "type": "string",
+            "description": "A more detailed description of the historical period."
+          }
+        },
+        "required": [
+          "name",
+          "century_of_life",
+          "historical_period_description"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "actor_name",
+      "film_title",
+      "character_played",
+      "historical_figure_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

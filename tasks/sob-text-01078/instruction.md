@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Juan Fernández Plate: The Juan Fernandez Plate is a microplate in the Pacific Ocean.  With a surface area of approximately 10 km, the microplate is located between 32° and 35°S and 109° and 112°W.  The plate is located at a triple junction between the Pacific Plate, Antarctic Plate, and Nazca Plate.  Approximately 2000 km to the west of South America, it is, on average, 3000 meters deep with its shallowest point coming to approximately 1600 meters, and its deepest point reaching 4400 meters.
-
-Manymoon Lake (Minnesota): Manymoon Lake is a 24 acre lake in Cook County, Minnesota belonging to the Poplar River watershed.  At its deepest point it measures only 6.5 feet deep and has abundant aquatic plant life to a depth of 2.5 feet.  Water clarity as of 2008 measured 1.41 meters.  The substrate consists of muck and stones of no uniform size.  Manymoon lake has neither inlet nor permanent outlet, although an intermittent stream feeds a wetland on the end of the southeastern bay.  Nonetheless, Manymoon is located in the sub-watershed dominated by Rice Lake to the north, and water from Manymoon enters into lower portions of the Poplar River through Rice Lake's outflow.  Manymoon is accessible through a portage off Rice Lake Road.
-
-Somesville, Maine: Somesville is the earliest village of the town of Mount Desert on Mount Desert Island in southeastern Maine.  It is located on the north end of Somes Sound ("Acadia magic.com,").  The village was established by Abraham Somes who was the first settler on the island (Hartford).  It attracted many people because of its mills and quarries (Shettleworth, & Vandenbergh, 2001).  The entire village is part of the Somesville Historic District.
-
-Sebago Lake: Sebago Lake is the deepest and second largest lake in the U.S. state of Maine.  The lake is 316 ft deep at its deepest point, with a mean depth of 101 ft , covers about 45 sqmi in surface area, has a length of 12 mi and a shoreline length of 105 mi .  The surface is around 270 ft above sea level, so the deep bottom is below the present sea level.  It is located in Cumberland County, Maine, and bordered by the towns of Casco, Naples, Raymond, Sebago, Standish and Windham.  The seasonally occupied town of Frye Island is on an island in the lake.
-
-Nadir (topography): In topography, a nadir is a point on a surface that is lower in elevation than all points immediately adjacent to it.  Mathematically, a nadir is a local minimum of elevation.  A nadir may be the lowest point of a dry basin or depression, or the deepest point of a body of water or ice.  The nadir of a body of water is often called a "deep", as in the Challenger Deep, the nadir of the Earth's oceans.
-
-Platte Lake (Michigan): Platte Lake (sometimes referred to as Big Platte Lake) is one of the many lakes located in the northwestern part of Michigan's lower peninsula.  There are two lakes in Benzie County, Michigan based on the name Platte, the other being Little Platte.  Platte Lake covers 2,516 acres and is 3.3 miles long and 1.6 miles wide.  The average depth of Platte Lake is 24 feet deep.  The deepest point of the lake is measured at 95 feet deep.  The Platte River flows through the lake at a speed of 120 cubic feet per second.  This means the residence time for the water in Platte Lake is 6 months.  Also meaning that every hour 3.3 million gallons of water are passing through Platte Lake.  The Platte River flows through Platte Lake and continues downstream through Loon Lake until it finally reaches Lake Michigan.
-
-Chevé Cave: Chevé Cave ( ; Spanish: "Cueva Chevé" ) is a deep cave located in the Sierra Juárez mountain range in the southern Mexico state of Oaxaca.  As of 2003, its deepest point has been measured at 4869 ft deep, making it the second deepest known cavern in the Western Hemisphere and the world’s 12th deepest cave.  The cave's deepest known point is nearly one vertical mile and seven horizontal miles from the entrance, ending in a terminal sump.  The present limit of exploration in Chevé, at 9.3 kilometers from the nearest entrance, represents one of the most remote locations ever attained inside any cave on Earth.  The logistics of reaching this point are enormous: more than two kilometers of rope need to be rigged and three underground camps established.  Chevé is the deepest proven freshwater hydrological system in the world.  Temperatures in Chevé are moderate, ranging from 47 to .  It has been most thoroughly explored under the leadership of caver Bill Stone.
-
-Puerto Rico Trench: The Puerto Rico Trench is located on the boundary between the Caribbean Sea and the Atlantic Ocean.  The oceanic trench is associated with a complex transition between the Lesser Antilles subduction zone to the south and the major transform fault zone or plate boundary, which extends west between Cuba and Hispaniola through the Cayman Trench to the coast of Central America.  The trench is 800 km long and has a maximum depth of 8648 m or 5.373 miles at Milwaukee Deep, which is the deepest point in the Atlantic Ocean and the deepest point not in the Pacific Ocean.
-
-Somes Sound: a body of water running deep into Mount Desert Island, the main site of Acadia National Park in Maine, United States.  Its deepest point is approximately 175 ft , and it is over 100 ft deep in several places.  The sound almost splits the island in two.  While often described as the "only fjord on the East Coast", it lacks the extreme vertical relief and anoxic sediments associated with Norwegian fjords, and is now called a fjard by officials — a smaller drowned glacial embayment.
-
-Irondequoit Bay: Irondequoit Bay is a large body of water located in northeastern Monroe County, New York.  The bay, roughly 0.5 mi wide and 4 mi in length, is fed by Irondequoit Creek to the south and flows into Lake Ontario at its northern end.  On average, the surface of Irondequoit Bay rests at 245 ft above sea level and is 80 ft deep at its deepest point a short distance north of the Irondequoit Bay Bridge carrying the six-lane New York State Route 104 over the bay.
-
-Question: Approximately how deep is the deepest point of the body of water on the north end of which Somesville, Maine is located?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "body_of_water_name": {
-      "type": "string",
-      "description": "The name of the body of water."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "location_description": {
-      "type": "string",
-      "description": "Description of how the body of water is related to Somesville, Maine."
-    },
-    "deepest_point_depth_ft": {
-      "type": "integer",
-      "description": "The depth of the deepest point of the body of water in feet."
-    },
-    "unit_of_measurement": {
-      "type": "string",
-      "description": "The unit of measurement for the depth."
+    {
+      "role": "user",
+      "content": "Context:\nJuan Fernández Plate: The Juan Fernandez Plate is a microplate in the Pacific Ocean.  With a surface area of approximately 10 km, the microplate is located between 32° and 35°S and 109° and 112°W.  The plate is located at a triple junction between the Pacific Plate, Antarctic Plate, and Nazca Plate.  Approximately 2000 km to the west of South America, it is, on average, 3000 meters deep with its shallowest point coming to approximately 1600 meters, and its deepest point reaching 4400 meters.\n\nManymoon Lake (Minnesota): Manymoon Lake is a 24 acre lake in Cook County, Minnesota belonging to the Poplar River watershed.  At its deepest point it measures only 6.5 feet deep and has abundant aquatic plant life to a depth of 2.5 feet.  Water clarity as of 2008 measured 1.41 meters.  The substrate consists of muck and stones of no uniform size.  Manymoon lake has neither inlet nor permanent outlet, although an intermittent stream feeds a wetland on the end of the southeastern bay.  Nonetheless, Manymoon is located in the sub-watershed dominated by Rice Lake to the north, and water from Manymoon enters into lower portions of the Poplar River through Rice Lake's outflow.  Manymoon is accessible through a portage off Rice Lake Road.\n\nSomesville, Maine: Somesville is the earliest village of the town of Mount Desert on Mount Desert Island in southeastern Maine.  It is located on the north end of Somes Sound (\"Acadia magic.com,\").  The village was established by Abraham Somes who was the first settler on the island (Hartford).  It attracted many people because of its mills and quarries (Shettleworth, & Vandenbergh, 2001).  The entire village is part of the Somesville Historic District.\n\nSebago Lake: Sebago Lake is the deepest and second largest lake in the U.S. state of Maine.  The lake is 316 ft deep at its deepest point, with a mean depth of 101 ft , covers about 45 sqmi in surface area, has a length of 12 mi and a shoreline length of 105 mi .  The surface is around 270 ft above sea level, so the deep bottom is below the present sea level.  It is located in Cumberland County, Maine, and bordered by the towns of Casco, Naples, Raymond, Sebago, Standish and Windham.  The seasonally occupied town of Frye Island is on an island in the lake.\n\nNadir (topography): In topography, a nadir is a point on a surface that is lower in elevation than all points immediately adjacent to it.  Mathematically, a nadir is a local minimum of elevation.  A nadir may be the lowest point of a dry basin or depression, or the deepest point of a body of water or ice.  The nadir of a body of water is often called a \"deep\", as in the Challenger Deep, the nadir of the Earth's oceans.\n\nPlatte Lake (Michigan): Platte Lake (sometimes referred to as Big Platte Lake) is one of the many lakes located in the northwestern part of Michigan's lower peninsula.  There are two lakes in Benzie County, Michigan based on the name Platte, the other being Little Platte.  Platte Lake covers 2,516 acres and is 3.3 miles long and 1.6 miles wide.  The average depth of Platte Lake is 24 feet deep.  The deepest point of the lake is measured at 95 feet deep.  The Platte River flows through the lake at a speed of 120 cubic feet per second.  This means the residence time for the water in Platte Lake is 6 months.  Also meaning that every hour 3.3 million gallons of water are passing through Platte Lake.  The Platte River flows through Platte Lake and continues downstream through Loon Lake until it finally reaches Lake Michigan.\n\nChevé Cave: Chevé Cave ( ; Spanish: \"Cueva Chevé\" ) is a deep cave located in the Sierra Juárez mountain range in the southern Mexico state of Oaxaca.  As of 2003, its deepest point has been measured at 4869 ft deep, making it the second deepest known cavern in the Western Hemisphere and the world’s 12th deepest cave.  The cave's deepest known point is nearly one vertical mile and seven horizontal miles from the entrance, ending in a terminal sump.  The present limit of exploration in Chevé, at 9.3 kilometers from the nearest entrance, represents one of the most remote locations ever attained inside any cave on Earth.  The logistics of reaching this point are enormous: more than two kilometers of rope need to be rigged and three underground camps established.  Chevé is the deepest proven freshwater hydrological system in the world.  Temperatures in Chevé are moderate, ranging from 47 to .  It has been most thoroughly explored under the leadership of caver Bill Stone.\n\nPuerto Rico Trench: The Puerto Rico Trench is located on the boundary between the Caribbean Sea and the Atlantic Ocean.  The oceanic trench is associated with a complex transition between the Lesser Antilles subduction zone to the south and the major transform fault zone or plate boundary, which extends west between Cuba and Hispaniola through the Cayman Trench to the coast of Central America.  The trench is 800 km long and has a maximum depth of 8648 m or 5.373 miles at Milwaukee Deep, which is the deepest point in the Atlantic Ocean and the deepest point not in the Pacific Ocean.\n\nSomes Sound: a body of water running deep into Mount Desert Island, the main site of Acadia National Park in Maine, United States.  Its deepest point is approximately 175 ft , and it is over 100 ft deep in several places.  The sound almost splits the island in two.  While often described as the \"only fjord on the East Coast\", it lacks the extreme vertical relief and anoxic sediments associated with Norwegian fjords, and is now called a fjard by officials — a smaller drowned glacial embayment.\n\nIrondequoit Bay: Irondequoit Bay is a large body of water located in northeastern Monroe County, New York.  The bay, roughly 0.5 mi wide and 4 mi in length, is fed by Irondequoit Creek to the south and flows into Lake Ontario at its northern end.  On average, the surface of Irondequoit Bay rests at 245 ft above sea level and is 80 ft deep at its deepest point a short distance north of the Irondequoit Bay Bridge carrying the six-lane New York State Route 104 over the bay.\n\nQuestion: Approximately how deep is the deepest point of the body of water on the north end of which Somesville, Maine is located?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"body_of_water_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the body of water.\"\n    },\n    \"location_description\": {\n      \"type\": \"string\",\n      \"description\": \"Description of how the body of water is related to Somesville, Maine.\"\n    },\n    \"deepest_point_depth_ft\": {\n      \"type\": \"integer\",\n      \"description\": \"The depth of the deepest point of the body of water in feet.\"\n    },\n    \"unit_of_measurement\": {\n      \"type\": \"string\",\n      \"description\": \"The unit of measurement for the depth.\"\n    }\n  },\n  \"required\": [\n    \"body_of_water_name\",\n    \"location_description\",\n    \"deepest_point_depth_ft\",\n    \"unit_of_measurement\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "body_of_water_name",
-    "location_description",
-    "deepest_point_depth_ft",
-    "unit_of_measurement"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "body_of_water_name": {
+        "type": "string",
+        "description": "The name of the body of water."
+      },
+      "location_description": {
+        "type": "string",
+        "description": "Description of how the body of water is related to Somesville, Maine."
+      },
+      "deepest_point_depth_ft": {
+        "type": "integer",
+        "description": "The depth of the deepest point of the body of water in feet."
+      },
+      "unit_of_measurement": {
+        "type": "string",
+        "description": "The unit of measurement for the depth."
+      }
+    },
+    "required": [
+      "body_of_water_name",
+      "location_description",
+      "deepest_point_depth_ft",
+      "unit_of_measurement"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

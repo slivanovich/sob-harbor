@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-A Dangerous Man: A Dangerous Man is a 2009 American direct-to-DVD action film directed by Keoni Waxman.  It stars Steven Seagal as a man released from prison after spending six years locked up for a crime he did not commit.
-
-Force of Execution: Force of Execution is a 2013 action crime film directed by Keoni Waxman, written by Richard Beattie and Michael Black, and starring Steven Seagal, Ving Rhames, and Danny Trejo.  The movie marks the fourth collaboration between Steven Seagal and Keoni Waxman (following "The Keeper", "A Dangerous Man", and "Maximum Conviction"), and the fourth collaboration between Steven Seagal and executive producer Binh Dang (following "Into the Sun", "True Justice", and "Maximum Conviction").  The film is set and filmed in Albuquerque, New Mexico.
-
-Absolution (2015 film): Absolution (also known as The Mercenary: Absolution) is a 2015 action crime film directed by Keoni Waxman and starring Steven Seagal The film is a sequel to "A Good Man", and is the sixth collaboration between Steven Seagal and director Keoni Waxman.  The film also marks the third collaboration between Seagal and Jones (who starred in 2005's "Submerged" and 2014's "Gutshot Straight"), and between Seagal and Mann (who previously starred in 2003's "Belly of the Beast" and 2009's "A Dangerous Man").
-
-T. E. Lawrence: Thomas Edward Lawrence, (16 August 1888 – 19 May 1935) was a British archaeologist, military officer, diplomat, and writer.  He was renowned for his liaison role during the Sinai and Palestine Campaign and the Arab Revolt against the Ottoman Empire during the First World War.  The breadth and variety of his activities and associations, and his ability to describe them vividly in writing, earned him international fame as Lawrence of Arabia—a title used for the 1962 film based on his wartime activities.
-
-Ken Shamrock: Kenneth Shamrock (born Kenneth Wayne Kilpatrick; February 11, 1964) is an American mixed martial artist, Ultimate Fighting Championship (UFC) Hall of Famer, and retired professional wrestler.  He emerged as one of the biggest stars in the history of mixed martial arts, headlining over 15 main events and co-main events in the UFC and Pride Fighting Championships during the course of his career and set numerous pay-per-view records with his drawing power.  Shamrock is widely considered to be a legendary figure and icon in the sport of mixed martial arts.  Shamrock was named The World's Most Dangerous Man by ABC News in a special entitled "The World's Most Dangerous Things" in the early part of his UFC career, a moniker which has stuck as his nickname.
-
-Adrian Cronauer: Adrian Cronauer (born September 8, 1938) is a former United States Air Force sergeant and radio personality whose experiences as an innovative disc jockey in Vietnam inspired the 1987 film "Good Morning, Vietnam" (starring Robin Williams as Cronauer).
-
-Elim Garak: Elim Garak is a fictional character from the television series "", in which he is portrayed by Andrew J. Robinson.  In the series, Garak is an exiled spy from the Cardassian Union and a former member of the feared Cardassian intelligence group called the Obsidian Order.  Garak was exiled to the space station that became known as Deep Space Nine and established a tailoring business there.  While during most episodes of the series, he is indeed a harmless tailor, he sometimes wilfully or coincidentally plays a role in covert operations on the side of the United Federation of Planets running Deep Space Nine.  Occasionally, other Cardassians warn Federation personnel that he is "a very dangerous man with a traitorous mind", but in general he plays a rather positive, though sometimes sinister role during the series.
-
-Judith Ehrlich: Judith Ehrlich is an American film director.  She is best known for co-directing the 2009 documentary "The Most Dangerous Man in America" which was nominated for Best Documentary Feature at the 82nd Academy Awards and was screened at the 2009 Toronto International Film Festival.
-
-A Dangerous Man: Lawrence After Arabia: A Dangerous Man: Lawrence After Arabia is a British television film of 1992 depicting the experiences of T. E. Lawrence and Emir Feisal of the Hejaz at the Paris Peace Conference after the end of the First World War.  One of the conference's many concerns was determining the fates of territories formerly under the rule of the defeated Ottoman Empire.  The film stars Ralph Fiennes (in his first film role) as T. E. Lawrence, Alexander Siddig (then credited as Siddig El-Fadil) as Faisal, Denis Quilley as Lord Curzon, and Nicholas Jones as Lord Dyson.  It was made by Anglia Films and Enigma Television, and was first screened on 18 April 1992 on the ITV network.
-
-The Most Dangerous Man in America: The Most Dangerous Man in America: Daniel Ellsberg and the Pentagon Papers is a 2009 documentary film directed by Judith Ehrlich and Rick Goldsmith.  The film follows Daniel Ellsberg and explores the events leading up to the publication of the "Pentagon Papers", which exposed the top-secret military history of the United States involvement in Vietnam.
-
-Question: In what year was the man born whose experiences are depicted in the television film "A Dangerous Man: Lawrence After Arabia" born?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_title": {
-      "type": "string",
-      "description": "The title of the television film mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "depicted_person_name": {
-      "type": "string",
-      "description": "The name of the person whose experiences are depicted in the film."
-    },
-    "person_birth_year": {
-      "type": "integer",
-      "description": "The birth year of the person depicted in the film."
+    {
+      "role": "user",
+      "content": "Context:\nA Dangerous Man: A Dangerous Man is a 2009 American direct-to-DVD action film directed by Keoni Waxman.  It stars Steven Seagal as a man released from prison after spending six years locked up for a crime he did not commit.\n\nForce of Execution: Force of Execution is a 2013 action crime film directed by Keoni Waxman, written by Richard Beattie and Michael Black, and starring Steven Seagal, Ving Rhames, and Danny Trejo.  The movie marks the fourth collaboration between Steven Seagal and Keoni Waxman (following \"The Keeper\", \"A Dangerous Man\", and \"Maximum Conviction\"), and the fourth collaboration between Steven Seagal and executive producer Binh Dang (following \"Into the Sun\", \"True Justice\", and \"Maximum Conviction\").  The film is set and filmed in Albuquerque, New Mexico.\n\nAbsolution (2015 film): Absolution (also known as The Mercenary: Absolution) is a 2015 action crime film directed by Keoni Waxman and starring Steven Seagal The film is a sequel to \"A Good Man\", and is the sixth collaboration between Steven Seagal and director Keoni Waxman.  The film also marks the third collaboration between Seagal and Jones (who starred in 2005's \"Submerged\" and 2014's \"Gutshot Straight\"), and between Seagal and Mann (who previously starred in 2003's \"Belly of the Beast\" and 2009's \"A Dangerous Man\").\n\nT. E. Lawrence: Thomas Edward Lawrence, (16 August 1888 – 19 May 1935) was a British archaeologist, military officer, diplomat, and writer.  He was renowned for his liaison role during the Sinai and Palestine Campaign and the Arab Revolt against the Ottoman Empire during the First World War.  The breadth and variety of his activities and associations, and his ability to describe them vividly in writing, earned him international fame as Lawrence of Arabia—a title used for the 1962 film based on his wartime activities.\n\nKen Shamrock: Kenneth Shamrock (born Kenneth Wayne Kilpatrick; February 11, 1964) is an American mixed martial artist, Ultimate Fighting Championship (UFC) Hall of Famer, and retired professional wrestler.  He emerged as one of the biggest stars in the history of mixed martial arts, headlining over 15 main events and co-main events in the UFC and Pride Fighting Championships during the course of his career and set numerous pay-per-view records with his drawing power.  Shamrock is widely considered to be a legendary figure and icon in the sport of mixed martial arts.  Shamrock was named The World's Most Dangerous Man by ABC News in a special entitled \"The World's Most Dangerous Things\" in the early part of his UFC career, a moniker which has stuck as his nickname.\n\nAdrian Cronauer: Adrian Cronauer (born September 8, 1938) is a former United States Air Force sergeant and radio personality whose experiences as an innovative disc jockey in Vietnam inspired the 1987 film \"Good Morning, Vietnam\" (starring Robin Williams as Cronauer).\n\nElim Garak: Elim Garak is a fictional character from the television series \"\", in which he is portrayed by Andrew J. Robinson.  In the series, Garak is an exiled spy from the Cardassian Union and a former member of the feared Cardassian intelligence group called the Obsidian Order.  Garak was exiled to the space station that became known as Deep Space Nine and established a tailoring business there.  While during most episodes of the series, he is indeed a harmless tailor, he sometimes wilfully or coincidentally plays a role in covert operations on the side of the United Federation of Planets running Deep Space Nine.  Occasionally, other Cardassians warn Federation personnel that he is \"a very dangerous man with a traitorous mind\", but in general he plays a rather positive, though sometimes sinister role during the series.\n\nJudith Ehrlich: Judith Ehrlich is an American film director.  She is best known for co-directing the 2009 documentary \"The Most Dangerous Man in America\" which was nominated for Best Documentary Feature at the 82nd Academy Awards and was screened at the 2009 Toronto International Film Festival.\n\nA Dangerous Man: Lawrence After Arabia: A Dangerous Man: Lawrence After Arabia is a British television film of 1992 depicting the experiences of T. E. Lawrence and Emir Feisal of the Hejaz at the Paris Peace Conference after the end of the First World War.  One of the conference's many concerns was determining the fates of territories formerly under the rule of the defeated Ottoman Empire.  The film stars Ralph Fiennes (in his first film role) as T. E. Lawrence, Alexander Siddig (then credited as Siddig El-Fadil) as Faisal, Denis Quilley as Lord Curzon, and Nicholas Jones as Lord Dyson.  It was made by Anglia Films and Enigma Television, and was first screened on 18 April 1992 on the ITV network.\n\nThe Most Dangerous Man in America: The Most Dangerous Man in America: Daniel Ellsberg and the Pentagon Papers is a 2009 documentary film directed by Judith Ehrlich and Rick Goldsmith.  The film follows Daniel Ellsberg and explores the events leading up to the publication of the \"Pentagon Papers\", which exposed the top-secret military history of the United States involvement in Vietnam.\n\nQuestion: In what year was the man born whose experiences are depicted in the television film \"A Dangerous Man: Lawrence After Arabia\" born?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the television film mentioned in the question.\"\n    },\n    \"depicted_person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person whose experiences are depicted in the film.\"\n    },\n    \"person_birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the person depicted in the film.\"\n    }\n  },\n  \"required\": [\n    \"film_title\",\n    \"depicted_person_name\",\n    \"person_birth_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "film_title",
-    "depicted_person_name",
-    "person_birth_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_title": {
+        "type": "string",
+        "description": "The title of the television film mentioned in the question."
+      },
+      "depicted_person_name": {
+        "type": "string",
+        "description": "The name of the person whose experiences are depicted in the film."
+      },
+      "person_birth_year": {
+        "type": "integer",
+        "description": "The birth year of the person depicted in the film."
+      }
+    },
+    "required": [
+      "film_title",
+      "depicted_person_name",
+      "person_birth_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

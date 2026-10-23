@@ -1,102 +1,79 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Inside Amy Schumer: Inside Amy Schumer is an American sketch comedy television series created and hosted by its star, Amy Schumer.  The series premiered on April 30, 2013, on Comedy Central.  Schumer and Daniel Powell serve as the show's executive producers.  "Inside Amy Schumer" completed its second season on June 3, 2014, and was renewed for a third season a week later.  The third season premiered on April 21, 2015, with a fourth season ordered the same day.  The fourth season premiered on April 21, 2016.  The show has received a Peabody Award and has been nominated for eight Primetime Emmy Awards, winning two.  On January 6, 2016, the show was renewed for a fifth season.  However, in August 2016, Schumer revealed that while a fifth season would happen at some point, there were no plans for it to begin production in the near future.
-
-Amy Schumer: The Leather Special: Amy Schumer: The Leather Special is comedian Amy Schumer's first stand-up special for the streaming-service Netflix.  It was recorded at Colorado's Bellco Theatre in Denver on November 5, 2016.  The hour-long special premiered globally on March 7, 2017.
-
-Neil Casey: Neil Casey is an American actor, comedian, television writer, theatre director and playwright best known for his work as a writer on "Saturday Night Live" and "Inside Amy Schumer".  He was nominated for the Primetime Emmy Award for Outstanding Writing for a Variety Series both in 2013 for writing on "SNL" and in 2014 for "Inside Amy Schumer".  In 2016 he played the villain, Rowan North in the film "Ghostbusters".  He also co-starred in the Fox sitcom "Making History".
-
-2015 Lafayette shooting: On July 23, 2015, a shooting occurred at the Grand 16 movie theater in Lafayette, Louisiana.  John Russell Houser, age 59, opened fire during a showing of the film "Trainwreck", killing two people and injuring nine others before committing suicide.
-
-Jenuse Mohamed: Jenuse Mohamed is an Indian screenwriter and film director who works in Malayalam cinema.  Son of veteran filmmaker Kamal,Jenuse obtained his graduation from GRD College, Coimbatore and learnt filmmaking at London Film School and also obtained an MBA from UK.  He assisted Aashiq Abu in "22 Female Kottayam", Lal Jose in "Ayalum Njanum Thammil" and his father in "Celluloid" and "Nadan".  He made his debut as director with the 2015 romantic comedy "100 Days of Love" which featured Dulquer Salmaan and Nithya Menen in the lead roles.  The film received positive reviews and was described by a critic as "one of the cutest romantic comedy flicks ever made in Malayalam. "The film however was an average grosser.
-
-The Super Serious Show: The Super Serious Show is a live comedy show that mixes stand-up, sketch, musical comedy and videos from a blend of up-and-coming performers and established comedians.  Embracing a wide variety of non-polished acts and spontaneity, "The Super Serious Show" combines elements of tradition club comedy and alternative comedy.  The show is often a platform for well-known comics to test new material and "riff," or perform without any planned content.  The monthly Los Angeles event features a D.J., food trucks, free food and wine, along with surprise appearances from special guests.  In addition to the L.A. installment, the show tours the comedy festival circuit and has appeared at the Edinburgh Festival Fringe, Riot L.A., and South by Southwest in conjunction with Funny or Die and SoundCloud.  Notable past performers include Daniel Tosh, Sarah Silverman, "Weird Al" Yankovic, Amy Schumer, Aisha Tyler, Aziz Ansari, Chris Kattan, T.J. Miller, Reggie Watts, Margaret Cho, Demetri Martin, Kristen Schaal, and John Hodgman.
-
-Trainwreck (film): Trainwreck is a 2015 American romantic comedy film directed by Judd Apatow and written by Amy Schumer.  The film stars Schumer and Bill Hader along with an ensemble cast that includes Brie Larson, Colin Quinn, John Cena, Tilda Swinton, Ezra Miller and LeBron James.  The film is about a hard-drinking, promiscuous young magazine writer named Amy (Schumer) who has her first serious relationship with a sports doctor named Aaron (Hader).
-
-Amy Schumer: Live at the Apollo: Amy Schumer: Live at the Apollo is an hour-long comedy special from Amy Schumer that premiered on HBO on October 17, 2015.  The special was recorded in May 2015 with comedian Chris Rock directing; Rock's work earned a Primetime Emmy nomination for Outstanding Directing for a Variety Special.  "Amy Schumer: Live at the Apollo" also received Primetime Emmy nominations for Outstanding Variety, Music or Comedy Special and Outstanding Writing for a Variety Special.  The special also earned a Writer's Guild of America nomination.
-
-Amy Schumer: Amy Beth Schumer (born June 1, 1981) is an American stand-up comedian, writer, actress, and producer.  She ventured into comedy in the early 2000s before appearing as a contestant on the fifth season of the NBC reality competition series "Last Comic Standing" in 2007.  Since 2013, she has been the creator, co-producer, co-writer and star of the Comedy Central sketch comedy series "Inside Amy Schumer", for which she received a Peabody Award and for which Schumer has been nominated for five Primetime Emmy Awards for her work on the series, winning Outstanding Variety Sketch Series in 2015.  She wrote and made her film debut in a starring role in "Trainwreck" (2015), for which she received nominations for the Writers Guild of America Award for Best Original Screenplay and the Golden Globe Award for Best Actress – Motion Picture Comedy or Musical.  She published a memoir in 2016, "The Girl with the Lower Back Tattoo", which held the top position on "The New York Times" Non-Fiction Best Seller list for two weeks, and has also written for "Cosmopolitan" magazine.  Schumer also starred alongside Goldie Hawn in the comedy film "Snatched" (2017).
-
-Ana Maria in Novela Land: Ana Maria in Novela Land is a 2015 romantic comedy film about a titular superfan switching places with her favorite telenovela character, Ariana Tomosa.  It opened theatrically on February 27, 2015 in select markets through AMC, and stars Edy Ganem, Luis Guzmán, Michael Steger, Juan Pablo Gamboa and Elizabeth Peña in her final film role.  It was developed and distributed by Fluency, as part of NBC Universal.
-
-Question: Who opened fire during a 2015 romantic comedy staring Amy Schumer?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "shooter_name": {
-      "type": "string",
-      "description": "The name of the person who opened fire."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_details": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "The title of the film during which the shooting occurred."
-        },
-        "release_year": {
-          "type": "integer",
-          "description": "The release year of the film."
-        },
-        "starring_actress": {
-          "type": "string",
-          "description": "The name of the actress starring in the film."
-        }
-      },
-      "required": [
-        "title",
-        "release_year",
-        "starring_actress"
-      ],
-      "additionalProperties": false
-    },
-    "shooting_event_details": {
-      "type": "object",
-      "properties": {
-        "date": {
-          "type": "string",
-          "description": "The date of the shooting event."
-        },
-        "location": {
-          "type": "string",
-          "description": "The location where the shooting occurred."
-        },
-        "fatalities": {
-          "type": "integer",
-          "description": "The number of people killed in the shooting."
-        },
-        "injuries": {
-          "type": "integer",
-          "description": "The number of people injured in the shooting."
-        }
-      },
-      "required": [
-        "date",
-        "location",
-        "fatalities",
-        "injuries"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nInside Amy Schumer: Inside Amy Schumer is an American sketch comedy television series created and hosted by its star, Amy Schumer.  The series premiered on April 30, 2013, on Comedy Central.  Schumer and Daniel Powell serve as the show's executive producers.  \"Inside Amy Schumer\" completed its second season on June 3, 2014, and was renewed for a third season a week later.  The third season premiered on April 21, 2015, with a fourth season ordered the same day.  The fourth season premiered on April 21, 2016.  The show has received a Peabody Award and has been nominated for eight Primetime Emmy Awards, winning two.  On January 6, 2016, the show was renewed for a fifth season.  However, in August 2016, Schumer revealed that while a fifth season would happen at some point, there were no plans for it to begin production in the near future.\n\nAmy Schumer: The Leather Special: Amy Schumer: The Leather Special is comedian Amy Schumer's first stand-up special for the streaming-service Netflix.  It was recorded at Colorado's Bellco Theatre in Denver on November 5, 2016.  The hour-long special premiered globally on March 7, 2017.\n\nNeil Casey: Neil Casey is an American actor, comedian, television writer, theatre director and playwright best known for his work as a writer on \"Saturday Night Live\" and \"Inside Amy Schumer\".  He was nominated for the Primetime Emmy Award for Outstanding Writing for a Variety Series both in 2013 for writing on \"SNL\" and in 2014 for \"Inside Amy Schumer\".  In 2016 he played the villain, Rowan North in the film \"Ghostbusters\".  He also co-starred in the Fox sitcom \"Making History\".\n\n2015 Lafayette shooting: On July 23, 2015, a shooting occurred at the Grand 16 movie theater in Lafayette, Louisiana.  John Russell Houser, age 59, opened fire during a showing of the film \"Trainwreck\", killing two people and injuring nine others before committing suicide.\n\nJenuse Mohamed: Jenuse Mohamed is an Indian screenwriter and film director who works in Malayalam cinema.  Son of veteran filmmaker Kamal,Jenuse obtained his graduation from GRD College, Coimbatore and learnt filmmaking at London Film School and also obtained an MBA from UK.  He assisted Aashiq Abu in \"22 Female Kottayam\", Lal Jose in \"Ayalum Njanum Thammil\" and his father in \"Celluloid\" and \"Nadan\".  He made his debut as director with the 2015 romantic comedy \"100 Days of Love\" which featured Dulquer Salmaan and Nithya Menen in the lead roles.  The film received positive reviews and was described by a critic as \"one of the cutest romantic comedy flicks ever made in Malayalam. \"The film however was an average grosser.\n\nThe Super Serious Show: The Super Serious Show is a live comedy show that mixes stand-up, sketch, musical comedy and videos from a blend of up-and-coming performers and established comedians.  Embracing a wide variety of non-polished acts and spontaneity, \"The Super Serious Show\" combines elements of tradition club comedy and alternative comedy.  The show is often a platform for well-known comics to test new material and \"riff,\" or perform without any planned content.  The monthly Los Angeles event features a D.J., food trucks, free food and wine, along with surprise appearances from special guests.  In addition to the L.A. installment, the show tours the comedy festival circuit and has appeared at the Edinburgh Festival Fringe, Riot L.A., and South by Southwest in conjunction with Funny or Die and SoundCloud.  Notable past performers include Daniel Tosh, Sarah Silverman, \"Weird Al\" Yankovic, Amy Schumer, Aisha Tyler, Aziz Ansari, Chris Kattan, T.J. Miller, Reggie Watts, Margaret Cho, Demetri Martin, Kristen Schaal, and John Hodgman.\n\nTrainwreck (film): Trainwreck is a 2015 American romantic comedy film directed by Judd Apatow and written by Amy Schumer.  The film stars Schumer and Bill Hader along with an ensemble cast that includes Brie Larson, Colin Quinn, John Cena, Tilda Swinton, Ezra Miller and LeBron James.  The film is about a hard-drinking, promiscuous young magazine writer named Amy (Schumer) who has her first serious relationship with a sports doctor named Aaron (Hader).\n\nAmy Schumer: Live at the Apollo: Amy Schumer: Live at the Apollo is an hour-long comedy special from Amy Schumer that premiered on HBO on October 17, 2015.  The special was recorded in May 2015 with comedian Chris Rock directing; Rock's work earned a Primetime Emmy nomination for Outstanding Directing for a Variety Special.  \"Amy Schumer: Live at the Apollo\" also received Primetime Emmy nominations for Outstanding Variety, Music or Comedy Special and Outstanding Writing for a Variety Special.  The special also earned a Writer's Guild of America nomination.\n\nAmy Schumer: Amy Beth Schumer (born June 1, 1981) is an American stand-up comedian, writer, actress, and producer.  She ventured into comedy in the early 2000s before appearing as a contestant on the fifth season of the NBC reality competition series \"Last Comic Standing\" in 2007.  Since 2013, she has been the creator, co-producer, co-writer and star of the Comedy Central sketch comedy series \"Inside Amy Schumer\", for which she received a Peabody Award and for which Schumer has been nominated for five Primetime Emmy Awards for her work on the series, winning Outstanding Variety Sketch Series in 2015.  She wrote and made her film debut in a starring role in \"Trainwreck\" (2015), for which she received nominations for the Writers Guild of America Award for Best Original Screenplay and the Golden Globe Award for Best Actress – Motion Picture Comedy or Musical.  She published a memoir in 2016, \"The Girl with the Lower Back Tattoo\", which held the top position on \"The New York Times\" Non-Fiction Best Seller list for two weeks, and has also written for \"Cosmopolitan\" magazine.  Schumer also starred alongside Goldie Hawn in the comedy film \"Snatched\" (2017).\n\nAna Maria in Novela Land: Ana Maria in Novela Land is a 2015 romantic comedy film about a titular superfan switching places with her favorite telenovela character, Ariana Tomosa.  It opened theatrically on February 27, 2015 in select markets through AMC, and stars Edy Ganem, Luis Guzmán, Michael Steger, Juan Pablo Gamboa and Elizabeth Peña in her final film role.  It was developed and distributed by Fluency, as part of NBC Universal.\n\nQuestion: Who opened fire during a 2015 romantic comedy staring Amy Schumer?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"shooter_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person who opened fire.\"\n    },\n    \"film_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the film during which the shooting occurred.\"\n        },\n        \"release_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The release year of the film.\"\n        },\n        \"starring_actress\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the actress starring in the film.\"\n        }\n      },\n      \"required\": [\n        \"title\",\n        \"release_year\",\n        \"starring_actress\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"shooting_event_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"date\": {\n          \"type\": \"string\",\n          \"description\": \"The date of the shooting event.\"\n        },\n        \"location\": {\n          \"type\": \"string\",\n          \"description\": \"The location where the shooting occurred.\"\n        },\n        \"fatalities\": {\n          \"type\": \"integer\",\n          \"description\": \"The number of people killed in the shooting.\"\n        },\n        \"injuries\": {\n          \"type\": \"integer\",\n          \"description\": \"The number of people injured in the shooting.\"\n        }\n      },\n      \"required\": [\n        \"date\",\n        \"location\",\n        \"fatalities\",\n        \"injuries\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"shooter_name\",\n    \"film_details\",\n    \"shooting_event_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "shooter_name",
-    "film_details",
-    "shooting_event_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "shooter_name": {
+        "type": "string",
+        "description": "The name of the person who opened fire."
+      },
+      "film_details": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the film during which the shooting occurred."
+          },
+          "release_year": {
+            "type": "integer",
+            "description": "The release year of the film."
+          },
+          "starring_actress": {
+            "type": "string",
+            "description": "The name of the actress starring in the film."
+          }
+        },
+        "required": [
+          "title",
+          "release_year",
+          "starring_actress"
+        ],
+        "additionalProperties": false
+      },
+      "shooting_event_details": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "description": "The date of the shooting event."
+          },
+          "location": {
+            "type": "string",
+            "description": "The location where the shooting occurred."
+          },
+          "fatalities": {
+            "type": "integer",
+            "description": "The number of people killed in the shooting."
+          },
+          "injuries": {
+            "type": "integer",
+            "description": "The number of people injured in the shooting."
+          }
+        },
+        "required": [
+          "date",
+          "location",
+          "fatalities",
+          "injuries"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "shooter_name",
+      "film_details",
+      "shooting_event_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

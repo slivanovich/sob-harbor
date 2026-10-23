@@ -1,73 +1,50 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-ABBAMAIL: ABBAMAIL was an ABBA fan organisation on the Internet, based in Sydney, Australia.  It was founded by Graeme Read and Grant Whittingham on 13 January 1997.  The web site featured monthly columns, regular news updates, and a comprehensive archive including pictures, press releases and original articles.  Revenue for the web site came from a subscription based e-mail list and an online store.  It also contained a subscription-free forum and chat room.  ABBAMAIL claimed to be one of the popular ABBA fan sites on the web, with over 25,000 unique hits per month.  The web site was closed on 28 October 2008.
-
-EN World: EN World is a British-owned tabletop role-playing game news and reviews website founded in 2000, which grew from the earlier "Eric Noah's Unofficial D&D 3rd Edition News" site (which was active from 1999-2001).
-
-Rob Redding: Robert "Rob" Redding, Jr. (born January 13, 1976) is an American media proprietor, award-winning radio talk show host, political commentator, independent journalist, a best-selling American author, a best-selling American music artist and songwriter, visual artist and social entrepreneur.  Redding is known as the founder and publisher of "Redding News Review" and host of a talk radio show and podcast.  In 2003, he was among few blacks to be named to Talkers Magazine's "100 Most Important Radio Talk Show Hosts in America" and has received a proclamation for his work by the Atlanta City Council the same year.  He made history being the only black program director in white-dominated talk radio station in 2009.  His web site Redding News Review has earned three consecutive Black Web Awards.  He currently runs the web's oldest black news aggregation outlet and first and most successful stand-alone subscriber-based web site and talk show.
-
-Don't Make Me Think: Don't Make Me Think is a book by Steve Krug about human–computer interaction and web usability.  The book's premise is that a good software program or web site should let users accomplish their intended tasks as easily and directly as possible.  Krug points out that people are good at satisficing, or taking the first available solution to their problem, so design should take advantage of this.  He frequently cites Amazon.com as an example of a well-designed web site that manages to allow high-quality interaction, even though the web site gets bigger and more complex every day.
-
-Lissa Explains it All: LissaExplains.com is a Web site created by Alyssa "Lissa" Daniels (born 1986), a girl from Orlando, Florida, to teach people, especially children, how to make their own Web sites.  She was 11 years old when she set up the first site in 1997, and is currently a university junior in Florida.  Her site has taught many people how to create a Web site by writing their own HTML without the use of Web page creators.  The web site includes tutorials and an internet forum.
-
-Web development: Web development is a broad term for the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network).  Web development can range from developing the simplest static single page of plain text to the most complex web-based internet applications (or just 'web apps') electronic businesses, and social network services.  A more comprehensive list of tasks to which web development commonly refers, may include web engineering, web design, web content development, client liaison, client-side/server-side scripting, web server and network security configuration, and e-commerce development.  Among web professionals, "web development" usually refers to the main non-design aspects of building web sites: writing markup and coding.  Most recently Web development has come to mean the creation of content management systems or CMS.  These CMS can be made from scratch, proprietary or open source.  In broad terms the CMS acts as middleware between the database and the user through the browser.  A principle benefit of a CMS is that it allows non-technical people to make changes to their web site without having technical knowledge.
-
-ENnies: The Annual Gen Con EN World RPG Awards (or ENnie Awards) are annual, fan-based awards for role-playing game products and publishers hosted at Gen Con in Indianapolis, Indiana.  The name of the award is derived from the EN World web site that has hosted the awards since their inception in 2001.  The ENnies were created by Russ Morrissey and Eric Noah and have been run and owned by Russ Morrissey since 2001.
-
-Web callback: Web callback is a technology where a person can enter his or her telephone number in a form on a web site.  The company who owns that Web site will then receive the Web callback request and a call center agent will call the person who made the request back on the number they entered.
-
-Xtranormal: Xtranormal Technology, Inc. was an American digital entertainment company based in Newark, New Jersey, that produced do-it-yourself animation software for the web and desktop and turned words from a script into an animated movie using text-to-speech and animation technologies.  In June 2013, the company announced that it would be shutting down its online services as of July 31, 2013.  s of 2013 , the content of their web site had been replaced by a holding page showing "pause", hinting at a future relaunch.  However, in early October, the placeholder went away and the web site was shut down completely.  It was during this time, the company filed for Capital 1 Bankruptcy, before a different company named Nawmal purchased their property and technology, thus allowing the service to continue, although commencing operations in late 2015.
-
-The simExchange: The simExchange is a web-based prediction market in which players use virtual money to buy and sell stocks and futures contracts in upcoming video game properties.  The main purpose of the web site is to predict trends in the video game industry, particularly how upcoming products will sell and how they will be received by the critics.  For those who do not participate in the prediction market, the web site is a database of sales forecasts and game quality forecasts that are updated in real-time.  The web site also features a number of "Wisdom of the crowd"-type content collaboration and aggregation tools, including means for sharing information, articles, images, and videos about the games.
-
-Question: ENnies are named based on the web site that was founded in what year?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "award_name": {
-      "type": "string",
-      "description": "The name of the award."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "named_after_website": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the website the award is named after."
-        },
-        "founding_year": {
-          "type": "integer",
-          "description": "The year the website was founded."
-        }
-      },
-      "required": [
-        "name",
-        "founding_year"
-      ],
-      "additionalProperties": false
-    },
-    "award_inception_year": {
-      "type": "integer",
-      "description": "The year the awards were first hosted."
+    {
+      "role": "user",
+      "content": "Context:\nABBAMAIL: ABBAMAIL was an ABBA fan organisation on the Internet, based in Sydney, Australia.  It was founded by Graeme Read and Grant Whittingham on 13 January 1997.  The web site featured monthly columns, regular news updates, and a comprehensive archive including pictures, press releases and original articles.  Revenue for the web site came from a subscription based e-mail list and an online store.  It also contained a subscription-free forum and chat room.  ABBAMAIL claimed to be one of the popular ABBA fan sites on the web, with over 25,000 unique hits per month.  The web site was closed on 28 October 2008.\n\nEN World: EN World is a British-owned tabletop role-playing game news and reviews website founded in 2000, which grew from the earlier \"Eric Noah's Unofficial D&D 3rd Edition News\" site (which was active from 1999-2001).\n\nRob Redding: Robert \"Rob\" Redding, Jr. (born January 13, 1976) is an American media proprietor, award-winning radio talk show host, political commentator, independent journalist, a best-selling American author, a best-selling American music artist and songwriter, visual artist and social entrepreneur.  Redding is known as the founder and publisher of \"Redding News Review\" and host of a talk radio show and podcast.  In 2003, he was among few blacks to be named to Talkers Magazine's \"100 Most Important Radio Talk Show Hosts in America\" and has received a proclamation for his work by the Atlanta City Council the same year.  He made history being the only black program director in white-dominated talk radio station in 2009.  His web site Redding News Review has earned three consecutive Black Web Awards.  He currently runs the web's oldest black news aggregation outlet and first and most successful stand-alone subscriber-based web site and talk show.\n\nDon't Make Me Think: Don't Make Me Think is a book by Steve Krug about human–computer interaction and web usability.  The book's premise is that a good software program or web site should let users accomplish their intended tasks as easily and directly as possible.  Krug points out that people are good at satisficing, or taking the first available solution to their problem, so design should take advantage of this.  He frequently cites Amazon.com as an example of a well-designed web site that manages to allow high-quality interaction, even though the web site gets bigger and more complex every day.\n\nLissa Explains it All: LissaExplains.com is a Web site created by Alyssa \"Lissa\" Daniels (born 1986), a girl from Orlando, Florida, to teach people, especially children, how to make their own Web sites.  She was 11 years old when she set up the first site in 1997, and is currently a university junior in Florida.  Her site has taught many people how to create a Web site by writing their own HTML without the use of Web page creators.  The web site includes tutorials and an internet forum.\n\nWeb development: Web development is a broad term for the work involved in developing a web site for the Internet (World Wide Web) or an intranet (a private network).  Web development can range from developing the simplest static single page of plain text to the most complex web-based internet applications (or just 'web apps') electronic businesses, and social network services.  A more comprehensive list of tasks to which web development commonly refers, may include web engineering, web design, web content development, client liaison, client-side/server-side scripting, web server and network security configuration, and e-commerce development.  Among web professionals, \"web development\" usually refers to the main non-design aspects of building web sites: writing markup and coding.  Most recently Web development has come to mean the creation of content management systems or CMS.  These CMS can be made from scratch, proprietary or open source.  In broad terms the CMS acts as middleware between the database and the user through the browser.  A principle benefit of a CMS is that it allows non-technical people to make changes to their web site without having technical knowledge.\n\nENnies: The Annual Gen Con EN World RPG Awards (or ENnie Awards) are annual, fan-based awards for role-playing game products and publishers hosted at Gen Con in Indianapolis, Indiana.  The name of the award is derived from the EN World web site that has hosted the awards since their inception in 2001.  The ENnies were created by Russ Morrissey and Eric Noah and have been run and owned by Russ Morrissey since 2001.\n\nWeb callback: Web callback is a technology where a person can enter his or her telephone number in a form on a web site.  The company who owns that Web site will then receive the Web callback request and a call center agent will call the person who made the request back on the number they entered.\n\nXtranormal: Xtranormal Technology, Inc. was an American digital entertainment company based in Newark, New Jersey, that produced do-it-yourself animation software for the web and desktop and turned words from a script into an animated movie using text-to-speech and animation technologies.  In June 2013, the company announced that it would be shutting down its online services as of July 31, 2013.  s of 2013 , the content of their web site had been replaced by a holding page showing \"pause\", hinting at a future relaunch.  However, in early October, the placeholder went away and the web site was shut down completely.  It was during this time, the company filed for Capital 1 Bankruptcy, before a different company named Nawmal purchased their property and technology, thus allowing the service to continue, although commencing operations in late 2015.\n\nThe simExchange: The simExchange is a web-based prediction market in which players use virtual money to buy and sell stocks and futures contracts in upcoming video game properties.  The main purpose of the web site is to predict trends in the video game industry, particularly how upcoming products will sell and how they will be received by the critics.  For those who do not participate in the prediction market, the web site is a database of sales forecasts and game quality forecasts that are updated in real-time.  The web site also features a number of \"Wisdom of the crowd\"-type content collaboration and aggregation tools, including means for sharing information, articles, images, and videos about the games.\n\nQuestion: ENnies are named based on the web site that was founded in what year?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"award_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the award.\"\n    },\n    \"named_after_website\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the website the award is named after.\"\n        },\n        \"founding_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the website was founded.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"founding_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"award_inception_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the awards were first hosted.\"\n    }\n  },\n  \"required\": [\n    \"award_name\",\n    \"named_after_website\",\n    \"award_inception_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "award_name",
-    "named_after_website",
-    "award_inception_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "award_name": {
+        "type": "string",
+        "description": "The name of the award."
+      },
+      "named_after_website": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the website the award is named after."
+          },
+          "founding_year": {
+            "type": "integer",
+            "description": "The year the website was founded."
+          }
+        },
+        "required": [
+          "name",
+          "founding_year"
+        ],
+        "additionalProperties": false
+      },
+      "award_inception_year": {
+        "type": "integer",
+        "description": "The year the awards were first hosted."
+      }
+    },
+    "required": [
+      "award_name",
+      "named_after_website",
+      "award_inception_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

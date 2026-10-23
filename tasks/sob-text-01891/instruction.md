@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Aslam Sher Khan: Aslam Sher Khan (born 15 July 1953) is an Indian hockey player and a former member of the Indian team.  In the 1975 World Cup held at Kuala Lumpur, Aslam Sher Khan helped Indian Hockey Team to win the gold medal.  He as a member of the Indian team also participated in Munich Olympics held in 1972.
-
-Musakhel, Punjab: Musakhel (Urdu: ‎ ), all hilly and green, is hard to be traced in the historical descriptions as there is no isolated account of the area available.  However, by studying the history of Kandahár and northern Balochistan little can be ascertained about Musakhel.  According to the early history, this area, being a part of Kandahár province, has been ruled by the Ghaznavids, Maliks of Kurat Dynasty, Amir Timur and his successors (1383-1470 AD), Sultan Husain Mirza of Herát (1470-1480 AD), and Amir Shuja-ud-Din Zunnún (1480-1504).  In 1505 AD, the Mughals conquered the province of Kandahár and held it till 1559 AD when the Safavid Kings of Persia acquired it.  The Mughals regained the province in 1595 AD but lost it again in 1622 AD, to the Safavid Kings of Persia.  This time, the Safavids, conferred the government of Pishin and its tribal dependencies upon Sher Khan Tarin.  He, after 7 years, refused to submit to the governor of Kandahár and became semi-independent, but had to retreat later on.  In 1709 AD, the Afghan inhabitants rose under Mir Wais Ghilzai and established the Ghilzai power in Kandahár.  The Ghilzai power was terminated by Nadir Shah in 1737 AD.  After the assassination of Nadir Shah in 1747 AD, the first democratic government was established in Kandahár by the Afghans as they elected Ahmed Shah Durrani as their ruler.  In 1826, the first Amir of Afghanistan, Dost Muhammad Barakzai, took hold of the area and annexed it to Afghanistan.
-
-Sher Khan Nashir: Sher Khan Nashir (Sher Mohammad Nashir) was the hereditary Grand Khan (Loy Khan) of the Kharoti (Ghilji) tribe and governor of the Kunduz region in the 1930s.
-
-History of Radhanpur: Radhanpur is a town and a municipality in Patan district in the Indian state of Gujarat.  Radhanpur belonged to the Vaghelas in early years and later it was held as a fief under the Gujarat Sultanate by Fateh Khan Baloch.  During Mughal period, the descendants of Babi dynasty were appointed as the governor of Radhanpur and other villages of North Gujarat.  After decline of Mughal, they became free and established themselves as independent rulers.  In 1743, Babi descendant Jawan Mard Khan II took over viceroyalty of Ahmedabad and controlled several villages in North Gujarat.  He was defeated by Maratha Gaekwads in 1753 at Ahmedabad and Gaekwads agreed to his demand of control of villages in North Gujarat headquartered at Radhanpur State.  His descendants lost some of these villages to Gaekwads subsequently.  In 1813, Sher Khan made a treaty with the Gaekwar and British and became British protectorate.  His descendants ruled the state until independence of India in 1947.
-
-Sher Khan Bandar: Sher Khan Bandar (Pashto/Persian: شېرخان بندر ) is a border town and a port in the Kunduz Province of Afghanistan, next to the Panj River near the border with Tajikistan.  Its old name was Qezel Qal'eh.  It was renamed after Sher Khan Nashir, Khan of the Kharoti tribe, governor of the Kunduz region in the 1930s.  The port links Kunduz and Kabul in Afghanistan with Qurghonteppa and Dushanbe in Tajikistan.
-
-Ali Sher Khan Anchan: Ali Sher Khan Anchan (1590-1625) (Balti: علی شیر خان انچن) (also called Ali Rai, Ray Alī, Alī Rai, Raja Sher Ali Mir, Mir Ali, Sher Ali and Ali Zad) was a famous Balti king.  He was a Maqpon dynasty king who unified Baltistan and expanded its frontiers to Ladakh and western Tibet in the east, and in the west to the borders of Ghizar and Chitral.
-
-Kunduz Province: Kunduz (Pashto/Persian: کندز‎ ‎ ) is one of the 34 provinces of Afghanistan, located in the northern part of the country next to Tajikistan.  The population of the province is around 953,800, which is multi-ethnic and mostly a tribal society.  The city of Kunduz serves as the capital of the province.  The Kunduz Airport is located next to the provincial capital.
-
-SITAR GY-110 Sher Khan: The SITAR GY-110 Sher Khan was a light aircraft designed in France in the late 1960s as a larger and more powerful version of designer Yves Gardan's Bagheera.  Like the Bagheera, it was to be a conventional low-wing, cantilever monoplane with a fully enclosed cabin.  However, although the Bagheera had seating for up to four people in 2+2 configuration, the Sher Khan was to have a stretched fuselage with full seating for four people.  The wingspan was also to be enlarged, and unlike the Bagheera, whose tricycle undercarriage was fixed, the Sher Khan's was to be retractable.
-
-Gholam Nabi Nasher: Ghulam Nabi Nasher (10 May 1926 – 25 June 2010) was the son of Loe Khan Nasher and grandson of Sher Khan Nasher.  He was an ethnic Pushtun, the hereditary Khan of the Kharoti (Ghilzai) tribe, born in Qarabagh, Ghazni.  Ghulam Nabi Nasher was the Mayor of Kunduz and later he was elected for two terms as a Senator from Kunduz.  During the time of King Zaher Shah, he served as the president for the upper house (house of Lords) of the Afghan Parliament.
-
-Sher Khan of Bengal: Sher Khan was the Governor of North Bengal from 1268 to 1272 CE.
-
-Question: What is the current population of the province where Sher Khan Nashir was governor?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "governor_name": {
-      "type": "string",
-      "description": "The name of the governor."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "province_of_governorship": {
-      "type": "string",
-      "description": "The name of the province where the individual was governor."
-    },
-    "population_of_province": {
-      "type": "integer",
-      "description": "The current population of the specified province."
-    },
-    "governorship_period": {
-      "type": "string",
-      "description": "The time period during which the individual served as governor."
+    {
+      "role": "user",
+      "content": "Context:\nAslam Sher Khan: Aslam Sher Khan (born 15 July 1953) is an Indian hockey player and a former member of the Indian team.  In the 1975 World Cup held at Kuala Lumpur, Aslam Sher Khan helped Indian Hockey Team to win the gold medal.  He as a member of the Indian team also participated in Munich Olympics held in 1972.\n\nMusakhel, Punjab: Musakhel (Urdu: ‎ ), all hilly and green, is hard to be traced in the historical descriptions as there is no isolated account of the area available.  However, by studying the history of Kandahár and northern Balochistan little can be ascertained about Musakhel.  According to the early history, this area, being a part of Kandahár province, has been ruled by the Ghaznavids, Maliks of Kurat Dynasty, Amir Timur and his successors (1383-1470 AD), Sultan Husain Mirza of Herát (1470-1480 AD), and Amir Shuja-ud-Din Zunnún (1480-1504).  In 1505 AD, the Mughals conquered the province of Kandahár and held it till 1559 AD when the Safavid Kings of Persia acquired it.  The Mughals regained the province in 1595 AD but lost it again in 1622 AD, to the Safavid Kings of Persia.  This time, the Safavids, conferred the government of Pishin and its tribal dependencies upon Sher Khan Tarin.  He, after 7 years, refused to submit to the governor of Kandahár and became semi-independent, but had to retreat later on.  In 1709 AD, the Afghan inhabitants rose under Mir Wais Ghilzai and established the Ghilzai power in Kandahár.  The Ghilzai power was terminated by Nadir Shah in 1737 AD.  After the assassination of Nadir Shah in 1747 AD, the first democratic government was established in Kandahár by the Afghans as they elected Ahmed Shah Durrani as their ruler.  In 1826, the first Amir of Afghanistan, Dost Muhammad Barakzai, took hold of the area and annexed it to Afghanistan.\n\nSher Khan Nashir: Sher Khan Nashir (Sher Mohammad Nashir) was the hereditary Grand Khan (Loy Khan) of the Kharoti (Ghilji) tribe and governor of the Kunduz region in the 1930s.\n\nHistory of Radhanpur: Radhanpur is a town and a municipality in Patan district in the Indian state of Gujarat.  Radhanpur belonged to the Vaghelas in early years and later it was held as a fief under the Gujarat Sultanate by Fateh Khan Baloch.  During Mughal period, the descendants of Babi dynasty were appointed as the governor of Radhanpur and other villages of North Gujarat.  After decline of Mughal, they became free and established themselves as independent rulers.  In 1743, Babi descendant Jawan Mard Khan II took over viceroyalty of Ahmedabad and controlled several villages in North Gujarat.  He was defeated by Maratha Gaekwads in 1753 at Ahmedabad and Gaekwads agreed to his demand of control of villages in North Gujarat headquartered at Radhanpur State.  His descendants lost some of these villages to Gaekwads subsequently.  In 1813, Sher Khan made a treaty with the Gaekwar and British and became British protectorate.  His descendants ruled the state until independence of India in 1947.\n\nSher Khan Bandar: Sher Khan Bandar (Pashto/Persian: شېرخان بندر ) is a border town and a port in the Kunduz Province of Afghanistan, next to the Panj River near the border with Tajikistan.  Its old name was Qezel Qal'eh.  It was renamed after Sher Khan Nashir, Khan of the Kharoti tribe, governor of the Kunduz region in the 1930s.  The port links Kunduz and Kabul in Afghanistan with Qurghonteppa and Dushanbe in Tajikistan.\n\nAli Sher Khan Anchan: Ali Sher Khan Anchan (1590-1625) (Balti: علی شیر خان انچن) (also called Ali Rai, Ray Alī, Alī Rai, Raja Sher Ali Mir, Mir Ali, Sher Ali and Ali Zad) was a famous Balti king.  He was a Maqpon dynasty king who unified Baltistan and expanded its frontiers to Ladakh and western Tibet in the east, and in the west to the borders of Ghizar and Chitral.\n\nKunduz Province: Kunduz (Pashto/Persian: کندز‎ ‎ ) is one of the 34 provinces of Afghanistan, located in the northern part of the country next to Tajikistan.  The population of the province is around 953,800, which is multi-ethnic and mostly a tribal society.  The city of Kunduz serves as the capital of the province.  The Kunduz Airport is located next to the provincial capital.\n\nSITAR GY-110 Sher Khan: The SITAR GY-110 Sher Khan was a light aircraft designed in France in the late 1960s as a larger and more powerful version of designer Yves Gardan's Bagheera.  Like the Bagheera, it was to be a conventional low-wing, cantilever monoplane with a fully enclosed cabin.  However, although the Bagheera had seating for up to four people in 2+2 configuration, the Sher Khan was to have a stretched fuselage with full seating for four people.  The wingspan was also to be enlarged, and unlike the Bagheera, whose tricycle undercarriage was fixed, the Sher Khan's was to be retractable.\n\nGholam Nabi Nasher: Ghulam Nabi Nasher (10 May 1926 – 25 June 2010) was the son of Loe Khan Nasher and grandson of Sher Khan Nasher.  He was an ethnic Pushtun, the hereditary Khan of the Kharoti (Ghilzai) tribe, born in Qarabagh, Ghazni.  Ghulam Nabi Nasher was the Mayor of Kunduz and later he was elected for two terms as a Senator from Kunduz.  During the time of King Zaher Shah, he served as the president for the upper house (house of Lords) of the Afghan Parliament.\n\nSher Khan of Bengal: Sher Khan was the Governor of North Bengal from 1268 to 1272 CE.\n\nQuestion: What is the current population of the province where Sher Khan Nashir was governor?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"governor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the governor.\"\n    },\n    \"province_of_governorship\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the province where the individual was governor.\"\n    },\n    \"population_of_province\": {\n      \"type\": \"integer\",\n      \"description\": \"The current population of the specified province.\"\n    },\n    \"governorship_period\": {\n      \"type\": \"string\",\n      \"description\": \"The time period during which the individual served as governor.\"\n    }\n  },\n  \"required\": [\n    \"governor_name\",\n    \"province_of_governorship\",\n    \"population_of_province\",\n    \"governorship_period\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "governor_name",
-    "province_of_governorship",
-    "population_of_province",
-    "governorship_period"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "governor_name": {
+        "type": "string",
+        "description": "The name of the governor."
+      },
+      "province_of_governorship": {
+        "type": "string",
+        "description": "The name of the province where the individual was governor."
+      },
+      "population_of_province": {
+        "type": "integer",
+        "description": "The current population of the specified province."
+      },
+      "governorship_period": {
+        "type": "string",
+        "description": "The time period during which the individual served as governor."
+      }
+    },
+    "required": [
+      "governor_name",
+      "province_of_governorship",
+      "population_of_province",
+      "governorship_period"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

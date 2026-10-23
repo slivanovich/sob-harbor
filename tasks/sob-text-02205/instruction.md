@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Kent Brockman: Kent Brockman is a fictional character in the animated television series "The Simpsons".  He is voiced by Harry Shearer and first appeared in the episode "Krusty Gets Busted".  He is a grumpy, self-centered local Springfield news anchor.
-
-Krusty Gets Busted: "Krusty Gets Busted" is the twelfth episode of "The Simpsons"<nowiki>'</nowiki> first season.  It originally aired on the Fox network in the United States on April 29, 1990.  The episode was written by Jay Kogen and Wallace Wolodarsky, and directed by Brad Bird.  In the episode, Krusty the Clown is convicted of armed robbery of the Kwik-E-Mart.  Convinced that Krusty has been framed, Bart and Lisa investigate the incident and discover that Krusty's sidekick, Sideshow Bob, was the culprit.
-
-Heist (2015 film): Heist is a 2015 American crime thriller film directed by Scott Mann and written by Stephen Cyrus Sepher and Max Adams, based on the original story by Sepher.  The film stars Robert De Niro, Jeffrey Dean Morgan, Kate Bosworth, Morris Chestnut, Dave Bautista, Stephen Cyrus Sepher, Tyson Sullivan and Gina Carano.  The plot of the film revolves around a casino heist by a sick daughter's father, who has to pay for her treatment.
-
-Grey Street (song): "Grey Street" is the third and final radio single from Dave Matthews Band from their 2002 studio album, "Busted Stuff".  The first known recording of the song appears on the unofficially-released "The Lillywhite Sessions", produced by Steve Lillywhite.  The song revolves around the story of a girl who is consumed with feelings of loneliness, boredom and powerlessness.  Color—and the lack thereof—are motifs in the song.  The song has been played to date more than 450 times in concert, most often in 2000 and in 2002.  Dave Matthews has also admitted that the song is inspired by the life of the poet Anne Sexton.  Originally, this song had three verses, but since December 2002, live performances of it have only featured the first two.
-
-Krusty Gets Kancelled: "Krusty Gets Kancelled" is the 22nd and final episode of "The Simpsons"<nowiki>'</nowiki> fourth season.  It first aired on the Fox network in the United States on May 13, 1993.  In the episode, a new show featuring a puppet named Gabbo premieres in Springfield and competes with Krusty the Clown's show.  Krusty's show is soon cancelled, and Bart Simpson decides to help Krusty get back on the air by staging a comeback special.
-
-Sammi (2017 TV series): Sammi is a Pakistani television drama serial about Social cause that airs on Hum TV from January 28, 2017.  It is written by Noor-ul-Huda Shah and directed by Saife Hassan.  The series centers social issues on the rural society revolving around the concept of "Vanni", the series shows moral lessons against common issues such as gender discrimination.  Depicting the Vanni concept storyline revolves around the journey of Sammi, a young girl who was sold off by her family to the Chaudhry family where her brother had killed her fiancé.  Simultaneously it revolves around reality based issues with different characters within the same plot.
-
-Kwik-E-Mart: The Kwik-E-Mart (spelled "Quick-E-Mart" in "Bart the General") is a fictional convenience store in the animated television series "The Simpsons".  It is a parody of American convenience stores, such as 7-Eleven and Wawa Inc., and depicts many of the stereotypes about them.  It is notorious for its high prices and the poor quality of its merchandise.  The operator of the Springfield store is an Indian-American named Apu Nahasapeemapetilon.  It was first seen in the episode "The Telltale Head" and has since become a common setting in "The Simpsons".
-
-List of Beyond Words episodes: Beyond Words (simplified Chinese: 爱要怎么说) is a Malaysian television drama series produced by Mediacorp Studios Malaysia in 2015.  It revolves around the life of a white collar worker, whose plan to retire in his early 50s gets thwarted when a series of family problems crop up: his daughter-in-law gets in trouble with the law, he uses his savings to bail her out of trouble and his younger sister sacrifices her personal savings to tide the family through its financial woes.  He has no choice but to return to the workforce and lands a job in the hotel business where he enjoys a career reboot.  But things go awry when he ends up falling for his public relations officer colleague.
-
-Bart Gets Famous: "Bart Gets Famous" is the twelfth episode of "The Simpsons"<nowiki>'</nowiki> fifth season.  It originally aired on the Fox network in the United States on February 3, 1994.  In the episode, Bart gets a job as Krusty the Clown's production assistant.  However, he soon becomes sick of the job and comes close to quitting.  During one of his shows, Krusty says he needs to use Bart in a sketch.  Bart becomes an accidental star when he says, "I didn't do it" during the botched sketch.  He becomes famous for his catchphrase but soon becomes tired of being known for one line.
-
-Sideshow Bob: Robert Underdunk Terwilliger Jr., Ph.D., better known as Sideshow Bob, is a recurring character in the animated television series "The Simpsons."  He is voiced by Kelsey Grammer and first appeared briefly in the episode "The Telltale Head".  Bob is a self-proclaimed genius who is a graduate of Yale University, a member of the Republican Party, and a champion of high culture.  He began his career as a sidekick on Krusty the Clown's television show, but after enduring constant abuse, Bob attempted to frame his employer for armed robbery in "Krusty Gets Busted".  The plan was foiled by Bart Simpson, and Sideshow Bob was sent to prison.
-
-Question:  Krusty Gets Busted revolves around the heist of what marketplace?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "episode_title": {
-      "type": "string",
-      "description": "The title of the episode where the event occurred."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "event_type": {
-      "type": "string",
-      "description": "The type of criminal event that took place."
-    },
-    "marketplace_name": {
-      "type": "string",
-      "description": "The name of the marketplace that was the target of the event."
-    },
-    "initial_perpetrator": {
-      "type": "string",
-      "description": "The character initially convicted or believed to be the perpetrator."
-    },
-    "true_culprit": {
-      "type": "string",
-      "description": "The character ultimately revealed to be the true culprit."
+    {
+      "role": "user",
+      "content": "Context:\nKent Brockman: Kent Brockman is a fictional character in the animated television series \"The Simpsons\".  He is voiced by Harry Shearer and first appeared in the episode \"Krusty Gets Busted\".  He is a grumpy, self-centered local Springfield news anchor.\n\nKrusty Gets Busted: \"Krusty Gets Busted\" is the twelfth episode of \"The Simpsons\"<nowiki>'</nowiki> first season.  It originally aired on the Fox network in the United States on April 29, 1990.  The episode was written by Jay Kogen and Wallace Wolodarsky, and directed by Brad Bird.  In the episode, Krusty the Clown is convicted of armed robbery of the Kwik-E-Mart.  Convinced that Krusty has been framed, Bart and Lisa investigate the incident and discover that Krusty's sidekick, Sideshow Bob, was the culprit.\n\nHeist (2015 film): Heist is a 2015 American crime thriller film directed by Scott Mann and written by Stephen Cyrus Sepher and Max Adams, based on the original story by Sepher.  The film stars Robert De Niro, Jeffrey Dean Morgan, Kate Bosworth, Morris Chestnut, Dave Bautista, Stephen Cyrus Sepher, Tyson Sullivan and Gina Carano.  The plot of the film revolves around a casino heist by a sick daughter's father, who has to pay for her treatment.\n\nGrey Street (song): \"Grey Street\" is the third and final radio single from Dave Matthews Band from their 2002 studio album, \"Busted Stuff\".  The first known recording of the song appears on the unofficially-released \"The Lillywhite Sessions\", produced by Steve Lillywhite.  The song revolves around the story of a girl who is consumed with feelings of loneliness, boredom and powerlessness.  Color—and the lack thereof—are motifs in the song.  The song has been played to date more than 450 times in concert, most often in 2000 and in 2002.  Dave Matthews has also admitted that the song is inspired by the life of the poet Anne Sexton.  Originally, this song had three verses, but since December 2002, live performances of it have only featured the first two.\n\nKrusty Gets Kancelled: \"Krusty Gets Kancelled\" is the 22nd and final episode of \"The Simpsons\"<nowiki>'</nowiki> fourth season.  It first aired on the Fox network in the United States on May 13, 1993.  In the episode, a new show featuring a puppet named Gabbo premieres in Springfield and competes with Krusty the Clown's show.  Krusty's show is soon cancelled, and Bart Simpson decides to help Krusty get back on the air by staging a comeback special.\n\nSammi (2017 TV series): Sammi is a Pakistani television drama serial about Social cause that airs on Hum TV from January 28, 2017.  It is written by Noor-ul-Huda Shah and directed by Saife Hassan.  The series centers social issues on the rural society revolving around the concept of \"Vanni\", the series shows moral lessons against common issues such as gender discrimination.  Depicting the Vanni concept storyline revolves around the journey of Sammi, a young girl who was sold off by her family to the Chaudhry family where her brother had killed her fiancé.  Simultaneously it revolves around reality based issues with different characters within the same plot.\n\nKwik-E-Mart: The Kwik-E-Mart (spelled \"Quick-E-Mart\" in \"Bart the General\") is a fictional convenience store in the animated television series \"The Simpsons\".  It is a parody of American convenience stores, such as 7-Eleven and Wawa Inc., and depicts many of the stereotypes about them.  It is notorious for its high prices and the poor quality of its merchandise.  The operator of the Springfield store is an Indian-American named Apu Nahasapeemapetilon.  It was first seen in the episode \"The Telltale Head\" and has since become a common setting in \"The Simpsons\".\n\nList of Beyond Words episodes: Beyond Words (simplified Chinese: 爱要怎么说) is a Malaysian television drama series produced by Mediacorp Studios Malaysia in 2015.  It revolves around the life of a white collar worker, whose plan to retire in his early 50s gets thwarted when a series of family problems crop up: his daughter-in-law gets in trouble with the law, he uses his savings to bail her out of trouble and his younger sister sacrifices her personal savings to tide the family through its financial woes.  He has no choice but to return to the workforce and lands a job in the hotel business where he enjoys a career reboot.  But things go awry when he ends up falling for his public relations officer colleague.\n\nBart Gets Famous: \"Bart Gets Famous\" is the twelfth episode of \"The Simpsons\"<nowiki>'</nowiki> fifth season.  It originally aired on the Fox network in the United States on February 3, 1994.  In the episode, Bart gets a job as Krusty the Clown's production assistant.  However, he soon becomes sick of the job and comes close to quitting.  During one of his shows, Krusty says he needs to use Bart in a sketch.  Bart becomes an accidental star when he says, \"I didn't do it\" during the botched sketch.  He becomes famous for his catchphrase but soon becomes tired of being known for one line.\n\nSideshow Bob: Robert Underdunk Terwilliger Jr., Ph.D., better known as Sideshow Bob, is a recurring character in the animated television series \"The Simpsons.\"  He is voiced by Kelsey Grammer and first appeared briefly in the episode \"The Telltale Head\".  Bob is a self-proclaimed genius who is a graduate of Yale University, a member of the Republican Party, and a champion of high culture.  He began his career as a sidekick on Krusty the Clown's television show, but after enduring constant abuse, Bob attempted to frame his employer for armed robbery in \"Krusty Gets Busted\".  The plan was foiled by Bart Simpson, and Sideshow Bob was sent to prison.\n\nQuestion:  Krusty Gets Busted revolves around the heist of what marketplace?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"episode_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the episode where the event occurred.\"\n    },\n    \"event_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of criminal event that took place.\"\n    },\n    \"marketplace_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the marketplace that was the target of the event.\"\n    },\n    \"initial_perpetrator\": {\n      \"type\": \"string\",\n      \"description\": \"The character initially convicted or believed to be the perpetrator.\"\n    },\n    \"true_culprit\": {\n      \"type\": \"string\",\n      \"description\": \"The character ultimately revealed to be the true culprit.\"\n    }\n  },\n  \"required\": [\n    \"episode_title\",\n    \"event_type\",\n    \"marketplace_name\",\n    \"initial_perpetrator\",\n    \"true_culprit\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "episode_title",
-    "event_type",
-    "marketplace_name",
-    "initial_perpetrator",
-    "true_culprit"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "episode_title": {
+        "type": "string",
+        "description": "The title of the episode where the event occurred."
+      },
+      "event_type": {
+        "type": "string",
+        "description": "The type of criminal event that took place."
+      },
+      "marketplace_name": {
+        "type": "string",
+        "description": "The name of the marketplace that was the target of the event."
+      },
+      "initial_perpetrator": {
+        "type": "string",
+        "description": "The character initially convicted or believed to be the perpetrator."
+      },
+      "true_culprit": {
+        "type": "string",
+        "description": "The character ultimately revealed to be the true culprit."
+      }
+    },
+    "required": [
+      "episode_title",
+      "event_type",
+      "marketplace_name",
+      "initial_perpetrator",
+      "true_culprit"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

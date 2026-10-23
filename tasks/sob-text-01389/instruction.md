@@ -1,97 +1,74 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2016 UEFA Champions League Final: The 2016 UEFA Champions League Final was the final match of the 2015–16 UEFA Champions League, the 61st season of Europe's premier club football tournament organised by UEFA, and the 24th season since it was renamed from the European Champion Clubs' Cup to the UEFA Champions League.  It was played at the San Siro stadium in Milan, Italy, on 28 May 2016, between Spanish teams Real Madrid and Atlético Madrid, in a repeat of the 2014 final.  It was the second time in the tournament's history that both finalists were from the same city.  Real Madrid won 5–3 on a penalty shoot-out after a 1–1 draw at the end of extra time, securing a record-extending 11th title in the competition.
-
-Real Madrid Balonmano: Real Madrid Balonmano was the handball section of Real Madrid C.F..  The team participated in the Liga ASOBAL, the Spanish Handball National Championship, between the year of its creation –1952– until 1959 when the team was dissolved.  Real Madrid took part of both handball codes existing by then, "eleven" (11 players per side) and "seven" (7 players).
-
-2013 Copa del Rey Final: The 2013 Copa del Rey Final was the 111th final since its establishment.  The match was a Madrid derby between Real Madrid and Atlético Madrid on 17 May 2013 at the Santiago Bernabéu Stadium in Madrid.  It was the clubs' first meeting in the final since the 1992 final when Atlético won 2–0 over Real Madrid.  Before this match, the two teams have been finalists on four other occasions in 1960, 1961 and 1975 Copa del Rey; all Atlético wins; except 1975 when Real Madrid won.  Atlético lifted the trophy for the tenth time in their history.
-
-1989 FIBA European Super Cup: The 1989 FIBA European Super Cup was the 2nd edition of the FIBA European Super Cup for men's professional basketball clubs.  In this second edition of the competition, which faced Jugoplastika, champions of the 1988–89 FIBA European Champions Cup, and Real Madrid, champions of the 1988–89 FIBA European Cup Winners' Cup, was due to take place on 26 September and on 3 October 1989, but finally was suspended and not organized by the late appearance of Jugoplastika, claiming the Yugoslav club was unwilling to make an economic effort for the trip (despite A month earlier to play the ACEB International Tournament), for a competition still young, so that Real Madrid (who was willing to play) would be proclaimed champion for the final appearance of the rival, although the tournament was suspended and not recorded in FIBA competitions, and Real Madrid was never given officially the trophy.
-
-La Fábrica: 'La Fábrica' (English: "The Factory") is the name given to the Real Madrid Youth Academy and player farm system, or ""cantera"."  It is a world class youth academy that has contributed to Real Madrid's sporting success throughout its history.  For instance, in the 1980s, Real Madrid won five consecutive La Liga titles, two consecutive UEFA Europa Leagues and reached three consecutive UEFA Champions League semi-finals with a squad composed mostly of players formed at La Fábrica.
-
-2017 UEFA Champions League Final: The 2017 UEFA Champions League Final was the final match of the 2016–17 UEFA Champions League, the 62nd season of Europe's premier club football tournament organised by UEFA, and the 25th season since it was renamed from the European Champion Clubs' Cup to the UEFA Champions League.  It was played at the Millennium Stadium in Cardiff, Wales on 3 June 2017, between Italian side Juventus and Spanish side and title holders Real Madrid, in a repeat of the 1998 final.  Real Madrid won the match 4–1 to secure their 12th title in this competition.  With this victory, as the defending champions, Real Madrid became the first ever team to successfully defend their title in the Champions League era, and the first to do so since Milan in 1990.  On the other hand, Juventus lost a fifth final in a row and a seventh in nine finals reached.
-
-Alfredo di Stéfano Stadium: The Estadio Alfredo di Stéfano is a multi-purpose stadium in Madrid, Spain.  Named after former Real Madrid footballer Alfredo di Stéfano, the stadiums is currently used for football matches, serving as the home ground of Real Madrid Castilla; the reserve team of Real Madrid.
-
-List of Real Madrid C.F. records and statistics: Real Madrid C.F. is a Spanish professional association football club based in Madrid.  The club was formed in 1902 as "Madrid Football 'Club", and played its first competitive match on May 13, 1902, when it entered the semi-final of the Campeonato de Copa de S.M. Alfonso XIII.  Real Madrid currently plays in the Spanish La Liga.  Real Madrid was one of the founding members of La Liga in 1929, and is one of three clubs, including FC Barcelona and Athletic Bilbao, never to have been relegated from the league.  They have also been involved in European football ever since they became the first Spanish club to enter the European Cup in 1955, except for the 1977–78 and 1996–97 seasons.
-
-Santiago Bernabéu Yeste: Santiago Bernabéu de Yeste (] ; 8 June 1895 – 2 June 1978) was a footballer who played for Real Madrid as a forward, and is one of the most important men in Real Madrid's history.
-
-Trofeo Santiago Bernabéu: The Santiago Bernabéu Trophy (Spanish: "Trofeo Santiago Bernabéu" ) is dedicated to the memory of long-time Real Madrid president Santiago Bernabéu.  It is a friendly tournament organised each year by Real Madrid at the beginning of the season, somewhere around the end of August or the beginning of September.
-
-Question: This tournament named after one of the most important men in Real Madrid's history is a friendly tournament organized each year by Real Madrid at the beginning of the season?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "tournament_name": {
-      "type": "string",
-      "description": "The official name of the tournament."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "honoree_details": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the person the tournament is dedicated to."
-        },
-        "significance": {
-          "type": "string",
-          "description": "The significance or role of the honoree in Real Madrid's history."
-        }
-      },
-      "required": [
-        "name",
-        "significance"
-      ],
-      "additionalProperties": false
-    },
-    "tournament_characteristics": {
-      "type": "object",
-      "properties": {
-        "type": {
-          "type": "string",
-          "description": "The type of tournament, e.g., friendly."
-        },
-        "organizer": {
-          "type": "string",
-          "description": "The entity that organizes the tournament."
-        },
-        "frequency": {
-          "type": "string",
-          "description": "How often the tournament is organized."
-        },
-        "timing_in_season": {
-          "type": "string",
-          "description": "When the tournament is held relative to the season."
-        }
-      },
-      "required": [
-        "type",
-        "organizer",
-        "frequency",
-        "timing_in_season"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\n2016 UEFA Champions League Final: The 2016 UEFA Champions League Final was the final match of the 2015–16 UEFA Champions League, the 61st season of Europe's premier club football tournament organised by UEFA, and the 24th season since it was renamed from the European Champion Clubs' Cup to the UEFA Champions League.  It was played at the San Siro stadium in Milan, Italy, on 28 May 2016, between Spanish teams Real Madrid and Atlético Madrid, in a repeat of the 2014 final.  It was the second time in the tournament's history that both finalists were from the same city.  Real Madrid won 5–3 on a penalty shoot-out after a 1–1 draw at the end of extra time, securing a record-extending 11th title in the competition.\n\nReal Madrid Balonmano: Real Madrid Balonmano was the handball section of Real Madrid C.F..  The team participated in the Liga ASOBAL, the Spanish Handball National Championship, between the year of its creation –1952– until 1959 when the team was dissolved.  Real Madrid took part of both handball codes existing by then, \"eleven\" (11 players per side) and \"seven\" (7 players).\n\n2013 Copa del Rey Final: The 2013 Copa del Rey Final was the 111th final since its establishment.  The match was a Madrid derby between Real Madrid and Atlético Madrid on 17 May 2013 at the Santiago Bernabéu Stadium in Madrid.  It was the clubs' first meeting in the final since the 1992 final when Atlético won 2–0 over Real Madrid.  Before this match, the two teams have been finalists on four other occasions in 1960, 1961 and 1975 Copa del Rey; all Atlético wins; except 1975 when Real Madrid won.  Atlético lifted the trophy for the tenth time in their history.\n\n1989 FIBA European Super Cup: The 1989 FIBA European Super Cup was the 2nd edition of the FIBA European Super Cup for men's professional basketball clubs.  In this second edition of the competition, which faced Jugoplastika, champions of the 1988–89 FIBA European Champions Cup, and Real Madrid, champions of the 1988–89 FIBA European Cup Winners' Cup, was due to take place on 26 September and on 3 October 1989, but finally was suspended and not organized by the late appearance of Jugoplastika, claiming the Yugoslav club was unwilling to make an economic effort for the trip (despite A month earlier to play the ACEB International Tournament), for a competition still young, so that Real Madrid (who was willing to play) would be proclaimed champion for the final appearance of the rival, although the tournament was suspended and not recorded in FIBA competitions, and Real Madrid was never given officially the trophy.\n\nLa Fábrica: 'La Fábrica' (English: \"The Factory\") is the name given to the Real Madrid Youth Academy and player farm system, or \"\"cantera\".\"  It is a world class youth academy that has contributed to Real Madrid's sporting success throughout its history.  For instance, in the 1980s, Real Madrid won five consecutive La Liga titles, two consecutive UEFA Europa Leagues and reached three consecutive UEFA Champions League semi-finals with a squad composed mostly of players formed at La Fábrica.\n\n2017 UEFA Champions League Final: The 2017 UEFA Champions League Final was the final match of the 2016–17 UEFA Champions League, the 62nd season of Europe's premier club football tournament organised by UEFA, and the 25th season since it was renamed from the European Champion Clubs' Cup to the UEFA Champions League.  It was played at the Millennium Stadium in Cardiff, Wales on 3 June 2017, between Italian side Juventus and Spanish side and title holders Real Madrid, in a repeat of the 1998 final.  Real Madrid won the match 4–1 to secure their 12th title in this competition.  With this victory, as the defending champions, Real Madrid became the first ever team to successfully defend their title in the Champions League era, and the first to do so since Milan in 1990.  On the other hand, Juventus lost a fifth final in a row and a seventh in nine finals reached.\n\nAlfredo di Stéfano Stadium: The Estadio Alfredo di Stéfano is a multi-purpose stadium in Madrid, Spain.  Named after former Real Madrid footballer Alfredo di Stéfano, the stadiums is currently used for football matches, serving as the home ground of Real Madrid Castilla; the reserve team of Real Madrid.\n\nList of Real Madrid C.F. records and statistics: Real Madrid C.F. is a Spanish professional association football club based in Madrid.  The club was formed in 1902 as \"Madrid Football 'Club\", and played its first competitive match on May 13, 1902, when it entered the semi-final of the Campeonato de Copa de S.M. Alfonso XIII.  Real Madrid currently plays in the Spanish La Liga.  Real Madrid was one of the founding members of La Liga in 1929, and is one of three clubs, including FC Barcelona and Athletic Bilbao, never to have been relegated from the league.  They have also been involved in European football ever since they became the first Spanish club to enter the European Cup in 1955, except for the 1977–78 and 1996–97 seasons.\n\nSantiago Bernabéu Yeste: Santiago Bernabéu de Yeste (] ; 8 June 1895 – 2 June 1978) was a footballer who played for Real Madrid as a forward, and is one of the most important men in Real Madrid's history.\n\nTrofeo Santiago Bernabéu: The Santiago Bernabéu Trophy (Spanish: \"Trofeo Santiago Bernabéu\" ) is dedicated to the memory of long-time Real Madrid president Santiago Bernabéu.  It is a friendly tournament organised each year by Real Madrid at the beginning of the season, somewhere around the end of August or the beginning of September.\n\nQuestion: This tournament named after one of the most important men in Real Madrid's history is a friendly tournament organized each year by Real Madrid at the beginning of the season?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"tournament_name\": {\n      \"type\": \"string\",\n      \"description\": \"The official name of the tournament.\"\n    },\n    \"honoree_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the person the tournament is dedicated to.\"\n        },\n        \"significance\": {\n          \"type\": \"string\",\n          \"description\": \"The significance or role of the honoree in Real Madrid's history.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"significance\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"tournament_characteristics\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of tournament, e.g., friendly.\"\n        },\n        \"organizer\": {\n          \"type\": \"string\",\n          \"description\": \"The entity that organizes the tournament.\"\n        },\n        \"frequency\": {\n          \"type\": \"string\",\n          \"description\": \"How often the tournament is organized.\"\n        },\n        \"timing_in_season\": {\n          \"type\": \"string\",\n          \"description\": \"When the tournament is held relative to the season.\"\n        }\n      },\n      \"required\": [\n        \"type\",\n        \"organizer\",\n        \"frequency\",\n        \"timing_in_season\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"tournament_name\",\n    \"honoree_details\",\n    \"tournament_characteristics\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "tournament_name",
-    "honoree_details",
-    "tournament_characteristics"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "tournament_name": {
+        "type": "string",
+        "description": "The official name of the tournament."
+      },
+      "honoree_details": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the person the tournament is dedicated to."
+          },
+          "significance": {
+            "type": "string",
+            "description": "The significance or role of the honoree in Real Madrid's history."
+          }
+        },
+        "required": [
+          "name",
+          "significance"
+        ],
+        "additionalProperties": false
+      },
+      "tournament_characteristics": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "The type of tournament, e.g., friendly."
+          },
+          "organizer": {
+            "type": "string",
+            "description": "The entity that organizes the tournament."
+          },
+          "frequency": {
+            "type": "string",
+            "description": "How often the tournament is organized."
+          },
+          "timing_in_season": {
+            "type": "string",
+            "description": "When the tournament is held relative to the season."
+          }
+        },
+        "required": [
+          "type",
+          "organizer",
+          "frequency",
+          "timing_in_season"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "tournament_name",
+      "honoree_details",
+      "tournament_characteristics"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

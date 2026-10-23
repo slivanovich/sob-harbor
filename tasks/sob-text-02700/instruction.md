@@ -1,65 +1,42 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Gem Archer: Colin Murray "Gem" Archer (born 7 December 1966) is an English musician, best known as a member of the English rock bands Oasis, Beady Eye and Noel Gallagher's High Flying Birds.  He is also known for his work with Heavy Stereo.  He joined Oasis as rhythm guitarist in November 1999, and handled lead guitar for acoustic songs as well.  He also contributed to the writing of some of the band's songs.  Oasis broke up in August 2009, but in November 2009, Liam Gallagher announced he was writing new material with Archer as well as other ex-Oasis members minus his brother Noel, under the name Beady Eye.  After two albums with Beady Eye, 2011's "Different Gear, Still Speeding" and 2013's "BE", the band officially disbanded in October 2014.  In 2017, Archer joined Noel Gallagher's High Flying Birds as lead guitarist, thus reuniting with former Oasis member Noel Gallagher.
-
-Bring the Light (Beady Eye song): "Bring the Light" is a song and debut release by English rock band Beady Eye, released on Beady Eye Records as "EYE1".  The song, written for the band's debut album "Different Gear, Still Speeding" was released on 10 November 2010, as a free download, and was also available as a limited release single on 7" vinyl.  The B-side to the single is a cover of the World of Twist song "Sons of the Stage".
-
-BE (Beady Eye album): BE is the second and final studio album by English rock band Beady Eye, released on 10   2013 (2013--) .  It was recorded between November 2012 and March 2013.  The album was produced by Dave Sitek who has previously produced records for Yeah Yeah Yeahs, TV on the Radio and Jane's Addiction.  "BE" debuted at number two on the UK Albums Chart behind Black Sabbath's "13".  Despite receiving mixed reviews from contemporary critics, "BE" is considered by many fans to be an improvement from their debut album, "Different Gear, Still Speeding" and is notable for showcasing a rare experimental approach which departs from the sound of previous Beady Eye and Oasis albums.
-
-Minutemen (band): Minutemen were an American punk rock band formed in San Pedro, California in 1980.  Composed of guitarist/vocalist D. Boon, bassist/vocalist Mike Watt, and drummer George Hurley, Minutemen recorded four albums and eight EPs before Boon's death in an automobile accident in December 1985; after his death, the band broke up.  They were noted in the California punk community for a philosophy of "jamming econo"—a sense of thriftiness reflected in their touring and presentation—while their eclectic and experimental attitude was instrumental in pioneering alternative rock.
-
-One Strike: "One Strike" is a song recorded by English-Canadian girl group All Saints for their fourth studio album, "Red Flag" (2016).  The track was written by group member Shaznay Lewis and its producer Hutch, inspired by the breakdown of group member Nicole Appleton's highly publicised marriage to Oasis and Beady Eye frontman Liam Gallagher.  It is a mid-tempo, R&B, soul and synthpop song.  The production is more minimal than in the group's previous singles, featuring a progressive synth line, guitar and rattling percussion instruments.  The lyrics detail Nicole's emotions when it was revealed to her that Gallagher had an affair and was expecting a child with American journalist Liza Ghorbani.
-
-Beady Eye: Beady Eye were an English rock band formed in 2009, by lead vocalist Liam Gallagher, guitarists Gem Archer and Andy Bell, and drummer Chris Sharrock, all former members of Oasis.  In 2013, former Kasabian guitarist Jay Mehler joined the band playing bass guitar on tour.
-
-Chris Sharrock: Chris Sharrock (born 30 May 1964) is an English drummer from Bebington, Cheshire, England.  He has been a member of the Icicle Works, the La's, the Wild Swans, World Party, the Lightning Seeds, Robbie Williams Live, Oasis, Beady Eye and currently in Noel Gallagher's High Flying Birds.
-
-Second Bite of the Apple: "Second Bite of the Apple" is the first single released from British band Beady Eye's second album, "BE".  "Second Bite of the Apple" was released along with B-side "Dreaming of Some Space" which used backmasking.
-
-The Beat Goes On (Beady Eye song): "The Beat Goes On" is a song by English rock band Beady Eye.  Featured on their debut album "Different Gear, Still Speeding", it was the third official single released from the album, released on 15 July 2011.  They performed the single on Alan Carr: Chatty Man, on 1 July 2011.
-
-Four Letter Word (Beady Eye song): "Four Letter Word" is a single by English band Beady Eye, released on Beady Eye Records as "BEADY3".  The track is also featured on their 2011 debut album "Different Gear, Still Speeding" as the opening track.  The video for the song was premièred exclusively for NME and also on the band's official website on 26 December 2010, at the same time a limited edition 7" vinyl was released on 17 January 2011 on 7" vinyl backed with new track "World Outside My Room".
-
-Question: Beady Eye and Minutemen, have what in common?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "band_names": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Names of the bands being compared."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "common_attributes": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "List of attributes common to both bands."
-    },
-    "band_type": {
-      "type": "string",
-      "description": "The general type of band both entities are."
+    {
+      "role": "user",
+      "content": "Context:\nGem Archer: Colin Murray \"Gem\" Archer (born 7 December 1966) is an English musician, best known as a member of the English rock bands Oasis, Beady Eye and Noel Gallagher's High Flying Birds.  He is also known for his work with Heavy Stereo.  He joined Oasis as rhythm guitarist in November 1999, and handled lead guitar for acoustic songs as well.  He also contributed to the writing of some of the band's songs.  Oasis broke up in August 2009, but in November 2009, Liam Gallagher announced he was writing new material with Archer as well as other ex-Oasis members minus his brother Noel, under the name Beady Eye.  After two albums with Beady Eye, 2011's \"Different Gear, Still Speeding\" and 2013's \"BE\", the band officially disbanded in October 2014.  In 2017, Archer joined Noel Gallagher's High Flying Birds as lead guitarist, thus reuniting with former Oasis member Noel Gallagher.\n\nBring the Light (Beady Eye song): \"Bring the Light\" is a song and debut release by English rock band Beady Eye, released on Beady Eye Records as \"EYE1\".  The song, written for the band's debut album \"Different Gear, Still Speeding\" was released on 10 November 2010, as a free download, and was also available as a limited release single on 7\" vinyl.  The B-side to the single is a cover of the World of Twist song \"Sons of the Stage\".\n\nBE (Beady Eye album): BE is the second and final studio album by English rock band Beady Eye, released on 10   2013 (2013--) .  It was recorded between November 2012 and March 2013.  The album was produced by Dave Sitek who has previously produced records for Yeah Yeah Yeahs, TV on the Radio and Jane's Addiction.  \"BE\" debuted at number two on the UK Albums Chart behind Black Sabbath's \"13\".  Despite receiving mixed reviews from contemporary critics, \"BE\" is considered by many fans to be an improvement from their debut album, \"Different Gear, Still Speeding\" and is notable for showcasing a rare experimental approach which departs from the sound of previous Beady Eye and Oasis albums.\n\nMinutemen (band): Minutemen were an American punk rock band formed in San Pedro, California in 1980.  Composed of guitarist/vocalist D. Boon, bassist/vocalist Mike Watt, and drummer George Hurley, Minutemen recorded four albums and eight EPs before Boon's death in an automobile accident in December 1985; after his death, the band broke up.  They were noted in the California punk community for a philosophy of \"jamming econo\"—a sense of thriftiness reflected in their touring and presentation—while their eclectic and experimental attitude was instrumental in pioneering alternative rock.\n\nOne Strike: \"One Strike\" is a song recorded by English-Canadian girl group All Saints for their fourth studio album, \"Red Flag\" (2016).  The track was written by group member Shaznay Lewis and its producer Hutch, inspired by the breakdown of group member Nicole Appleton's highly publicised marriage to Oasis and Beady Eye frontman Liam Gallagher.  It is a mid-tempo, R&B, soul and synthpop song.  The production is more minimal than in the group's previous singles, featuring a progressive synth line, guitar and rattling percussion instruments.  The lyrics detail Nicole's emotions when it was revealed to her that Gallagher had an affair and was expecting a child with American journalist Liza Ghorbani.\n\nBeady Eye: Beady Eye were an English rock band formed in 2009, by lead vocalist Liam Gallagher, guitarists Gem Archer and Andy Bell, and drummer Chris Sharrock, all former members of Oasis.  In 2013, former Kasabian guitarist Jay Mehler joined the band playing bass guitar on tour.\n\nChris Sharrock: Chris Sharrock (born 30 May 1964) is an English drummer from Bebington, Cheshire, England.  He has been a member of the Icicle Works, the La's, the Wild Swans, World Party, the Lightning Seeds, Robbie Williams Live, Oasis, Beady Eye and currently in Noel Gallagher's High Flying Birds.\n\nSecond Bite of the Apple: \"Second Bite of the Apple\" is the first single released from British band Beady Eye's second album, \"BE\".  \"Second Bite of the Apple\" was released along with B-side \"Dreaming of Some Space\" which used backmasking.\n\nThe Beat Goes On (Beady Eye song): \"The Beat Goes On\" is a song by English rock band Beady Eye.  Featured on their debut album \"Different Gear, Still Speeding\", it was the third official single released from the album, released on 15 July 2011.  They performed the single on Alan Carr: Chatty Man, on 1 July 2011.\n\nFour Letter Word (Beady Eye song): \"Four Letter Word\" is a single by English band Beady Eye, released on Beady Eye Records as \"BEADY3\".  The track is also featured on their 2011 debut album \"Different Gear, Still Speeding\" as the opening track.  The video for the song was premièred exclusively for NME and also on the band's official website on 26 December 2010, at the same time a limited edition 7\" vinyl was released on 17 January 2011 on 7\" vinyl backed with new track \"World Outside My Room\".\n\nQuestion: Beady Eye and Minutemen, have what in common?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"band_names\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"Names of the bands being compared.\"\n    },\n    \"common_attributes\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"List of attributes common to both bands.\"\n    },\n    \"band_type\": {\n      \"type\": \"string\",\n      \"description\": \"The general type of band both entities are.\"\n    }\n  },\n  \"required\": [\n    \"band_names\",\n    \"common_attributes\",\n    \"band_type\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "band_names",
-    "common_attributes",
-    "band_type"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "band_names": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Names of the bands being compared."
+      },
+      "common_attributes": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "List of attributes common to both bands."
+      },
+      "band_type": {
+        "type": "string",
+        "description": "The general type of band both entities are."
+      }
+    },
+    "required": [
+      "band_names",
+      "common_attributes",
+      "band_type"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

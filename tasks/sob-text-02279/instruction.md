@@ -1,86 +1,63 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Tomb of Wang Chuzhi: The Tomb of Wang Chuzhi (Chinese 王處直墓 / 王处直墓 Wang Chizhi mu) is the grave of Wang Chuzhi (863-923 CE), a senior military governor of the late period of the Tang Dynasty and the Later Liang from the time of the Five Dynasties.  It was rediscovered in 1980 in Xiyanchuan village in Quyang district of the Chinese province of Hebei.
-
-(15430) 1998 UR31: (15430) 1998 UR is a main-belt binary asteroid.  It was discovered through the Beijing Schmidt CCD Asteroid Program at the Xinglong Station in the Chinese province of Hebei on October 22, 1998.  A moon was discovered orbiting the asteroid in 2010.  The moon has an orbital period of almost exactly a day, and is tidally locked with the asteroid.
-
-Xikang: Xikang or Sikang or Hsikang () was a province of the Republic of China comprising most of the Kham region of traditional Tibet, where the Khampa, a subgroup of the Tibetan people, live.  The eastern part of the province was inhabited by a number of different ethnic groups, such as Han Chinese, Yi, Qiang people and Tibetan, while the western part of the province was inhabited by Tibetans.  Xikang, then known as "Chuanbian" (川邊), was a special administrative region of the Republic of China until 1939, when it became an official province.  The provincial capital was Kangding from 1939 to 1951 and Ya'an from 1951 to 1955.  The province had a population of some 3.4 million in 1954.
-
-Shahe, Hebei: Shahe () is a county-level city in the prefecture-level city of Xingtai, in the southern part of Hebei province of the China.
-
-Dajingmen: Dajingmen (Chinese 大境门 / 大境門, Pinyin Dàjìngmén) is an important junction of the Great Wall of China in the prefecture-level city of Zhangjiakou within the Chinese province of Hebei.  Dajingmen was built in 1644 in the first year of the reign of the Shunzhi Emperor in the Qing Dynasty The gate is 12 metres high, 9 metres wide, and 13 metres deep.  Above the gate is a terrace measuring 12 by 7.5 metres.  The wall above the gate is topped by 1.7 metre high towers, which are accompanied by a 0.8 metre high parapet wall on the side.  The inscription 大好河山 ("Magnificent Rivers and Mountains") found over the lintel was mounted in traditional Han-Style in 1927 on the initiative of Gao Weiyue (高维岳), the ruler of the former province of Chahar (now Inner Mongolia).
-
-Allium chiwui: Allium chiwui is a plant species endemic to the Chinese Province of Hebei.  The plant grows on slopes at elevations of 2100–2500 m.
-
-Kangding: Kangding (Chinese) or Dartsedo (Tibetan), is a city and the location of the seat of Garzê Tibetan Autonomous Prefecture in western Sichuan province of Southwest China.  Kangding's urban center has around 100,000 inhabitants.
-
-Handan: Handan () is a prefecture-level city located in the southwestern part of Hebei province, China.  It borders Xingtai on the north, and the provinces of Shanxi on the west, Henan on the south and Shandong on the east.  At the 2010 census, its population was 9,174,683 inhabitants whom 2,845,790 lived in the built-up ("or metro") area made of 3 urban districts, Handan and Yangyan counties, and Shahe City in Xintai municipality, largely being conurbated now.
-
-Kangding Airport: Kangding Airport (IATA: KGT, ICAO: ZUKD) is an airport serving Kangding, the capital of Garzê Tibetan Autonomous Prefecture in western Sichuan Province, China.  It is located 40 km northwest of the city center.  Construction of the airport began in September 2006 and the airport started operation on April 26, 2009.
-
-Shahe, Gao County: Shahe () is a town in the northeast of Gao County, southeastern Sichuan Province in Southwest China, located 30 km southeast of the city of Yibin.  In 2009, it administered 26 villages.  It is the home of Shahe tofu (沙河豆腐), one of the better known food products of Southern Sichuan that is also tender and features brilliant colours and Shahe Salted Duck (沙河板鸭).
-
-Question: Are Kangding and Shahe, Hebei located in the same Chinese province?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "first_location": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "province": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "name",
-        "province"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "second_location": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string"
-        },
-        "province": {
-          "type": "string"
-        }
-      },
-      "required": [
-        "name",
-        "province"
-      ],
-      "additionalProperties": false
-    },
-    "are_in_same_province": {
-      "type": "boolean"
-    },
-    "comparison_summary": {
-      "type": "string"
+    {
+      "role": "user",
+      "content": "Context:\nTomb of Wang Chuzhi: The Tomb of Wang Chuzhi (Chinese 王處直墓 / 王处直墓 Wang Chizhi mu) is the grave of Wang Chuzhi (863-923 CE), a senior military governor of the late period of the Tang Dynasty and the Later Liang from the time of the Five Dynasties.  It was rediscovered in 1980 in Xiyanchuan village in Quyang district of the Chinese province of Hebei.\n\n(15430) 1998 UR31: (15430) 1998 UR is a main-belt binary asteroid.  It was discovered through the Beijing Schmidt CCD Asteroid Program at the Xinglong Station in the Chinese province of Hebei on October 22, 1998.  A moon was discovered orbiting the asteroid in 2010.  The moon has an orbital period of almost exactly a day, and is tidally locked with the asteroid.\n\nXikang: Xikang or Sikang or Hsikang () was a province of the Republic of China comprising most of the Kham region of traditional Tibet, where the Khampa, a subgroup of the Tibetan people, live.  The eastern part of the province was inhabited by a number of different ethnic groups, such as Han Chinese, Yi, Qiang people and Tibetan, while the western part of the province was inhabited by Tibetans.  Xikang, then known as \"Chuanbian\" (川邊), was a special administrative region of the Republic of China until 1939, when it became an official province.  The provincial capital was Kangding from 1939 to 1951 and Ya'an from 1951 to 1955.  The province had a population of some 3.4 million in 1954.\n\nShahe, Hebei: Shahe () is a county-level city in the prefecture-level city of Xingtai, in the southern part of Hebei province of the China.\n\nDajingmen: Dajingmen (Chinese 大境门 / 大境門, Pinyin Dàjìngmén) is an important junction of the Great Wall of China in the prefecture-level city of Zhangjiakou within the Chinese province of Hebei.  Dajingmen was built in 1644 in the first year of the reign of the Shunzhi Emperor in the Qing Dynasty The gate is 12 metres high, 9 metres wide, and 13 metres deep.  Above the gate is a terrace measuring 12 by 7.5 metres.  The wall above the gate is topped by 1.7 metre high towers, which are accompanied by a 0.8 metre high parapet wall on the side.  The inscription 大好河山 (\"Magnificent Rivers and Mountains\") found over the lintel was mounted in traditional Han-Style in 1927 on the initiative of Gao Weiyue (高维岳), the ruler of the former province of Chahar (now Inner Mongolia).\n\nAllium chiwui: Allium chiwui is a plant species endemic to the Chinese Province of Hebei.  The plant grows on slopes at elevations of 2100–2500 m.\n\nKangding: Kangding (Chinese) or Dartsedo (Tibetan), is a city and the location of the seat of Garzê Tibetan Autonomous Prefecture in western Sichuan province of Southwest China.  Kangding's urban center has around 100,000 inhabitants.\n\nHandan: Handan () is a prefecture-level city located in the southwestern part of Hebei province, China.  It borders Xingtai on the north, and the provinces of Shanxi on the west, Henan on the south and Shandong on the east.  At the 2010 census, its population was 9,174,683 inhabitants whom 2,845,790 lived in the built-up (\"or metro\") area made of 3 urban districts, Handan and Yangyan counties, and Shahe City in Xintai municipality, largely being conurbated now.\n\nKangding Airport: Kangding Airport (IATA: KGT, ICAO: ZUKD) is an airport serving Kangding, the capital of Garzê Tibetan Autonomous Prefecture in western Sichuan Province, China.  It is located 40 km northwest of the city center.  Construction of the airport began in September 2006 and the airport started operation on April 26, 2009.\n\nShahe, Gao County: Shahe () is a town in the northeast of Gao County, southeastern Sichuan Province in Southwest China, located 30 km southeast of the city of Yibin.  In 2009, it administered 26 villages.  It is the home of Shahe tofu (沙河豆腐), one of the better known food products of Southern Sichuan that is also tender and features brilliant colours and Shahe Salted Duck (沙河板鸭).\n\nQuestion: Are Kangding and Shahe, Hebei located in the same Chinese province?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"first_location\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\"\n        },\n        \"province\": {\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"province\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"second_location\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\"\n        },\n        \"province\": {\n          \"type\": \"string\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"province\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"are_in_same_province\": {\n      \"type\": \"boolean\"\n    },\n    \"comparison_summary\": {\n      \"type\": \"string\"\n    }\n  },\n  \"required\": [\n    \"first_location\",\n    \"second_location\",\n    \"are_in_same_province\",\n    \"comparison_summary\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "first_location",
-    "second_location",
-    "are_in_same_province",
-    "comparison_summary"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "first_location": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "province": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "province"
+        ],
+        "additionalProperties": false
+      },
+      "second_location": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "province": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "province"
+        ],
+        "additionalProperties": false
+      },
+      "are_in_same_province": {
+        "type": "boolean"
+      },
+      "comparison_summary": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "first_location",
+      "second_location",
+      "are_in_same_province",
+      "comparison_summary"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

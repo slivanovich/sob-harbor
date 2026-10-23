@@ -1,67 +1,44 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-The Empire (Warhammer): In Games Workshop's "Warhammer Fantasy" fictional universe, The Empire is one of the human political factions and armies, and is featured in many games and novels.  In terms of location, language, culture, and society, it is clearly based on the real-world medieval Holy Roman Empire.
-
-Gramadevata: Gramadevata (Sanskrit: ग्रामदेवता; "Village deity") is a Sanskrit term for the presiding deity or guardian deity (patron deity) in Hindu villages, towns and cities.  It is derived from the words "grāma" “village” and "devatā" “deity”.  Traditionally Kal Bhairav, a fierce form of Lord Shiva is the "Gramadevata" in the rural villages of Maharashtra and Tamil Nadu, where he is referred to as "Vairavar".
-
-Inti: Inti is the ancient Incan sun god.  He is revered as the national patron of the Inca state.  Although most consider Inti the sun god, he is more appropriately viewed as a cluster of solar aspects, since the Inca divided his identity according to the stages of the sun.  Worshiped as a patron deity of the Inca Empire, he is of unknown mythological origin.  The most common story says that he is the son of Viracocha, the god of civilization.
-
-Huitzilopochtli: In the Aztec religion, Huitzilopochtli (,    ), is a Mesoamerican deity of war, sun, human sacrifice and the patron of the city of Tenochtitlan.  He was also the national god of the Mexicas, also known as Aztecs, of Tenochtitlan.  Many in the pantheon of deities of the Aztecs were inclined to have a fondness for a particular aspect of warfare.  However, Huitzilopochtli was known as the primary god of war in ancient Mexico.  Since he was the patron god of the Mexica, he was credited with both the victories and defeats that the Mexica people had on the battlefield.  The people had to make sacrifices to him to protect the Aztec from infinite night.  It is important to remember that the defeat of their patron deity meant the defeat of his people.  This is one of the many reasons why they were concerned with providing exquisite tribute and food for him.  Not only was it important for him to survive his battles, but the fate of the Mexican people would have rested in the victory of Huitzilopochtli.  He wielded Xiuhcoatl as a weapon, associating him with fire.
-
-Khandoba: Khandoba (Marathi: खंडोबा , IAST: Khaṇḍobā), Martanda Bhairava or Malhari, is a Hindu deity worshipped as a manifestation of Shiva mainly in the Deccan plateau of India, especially in the states of Maharashtra and Karnataka.  He is the most popular Kuladaivat (family deity) in Maharashtra.  He is also the patron deity of select warrior, farming, herding and Brahmin (priestly) castes as well as several of the hunter/gatherer tribes that are native to the hills and forests of this region.  The cult of Khandoba has linkages with Vaishnava and Jain traditions, and also assimilates all communities irrespective of caste, including Muslims.  The worship of Khandoba developed during the 9th and 10th centuries from a folk deity into a composite god possessing the attributes of Shiva, Bhairava, Surya and Karttikeya (Skanda).  He is depicted either in the form of a Lingam, or as an image of a warrior riding on a bull or a horse.  The foremost centre of Khandoba worship is Jejuri in Maharashtra.  The legends of Khandoba, found in the text "Malhari Mahatmya" and also narrated in folk songs, revolve around his victory over demons Mani-malla and his marriages.
-
-Xuanwu (god): Xuánwǔ (玄武 "Dark Warrior" or "Mysterious Warrior") or Xuándì (玄帝 "Dark Deity"), also known as Zhēnwǔ (真武) or Zhēnwǔdàdì (真武大帝 "True Warrior Great Deity"), is a deity in Chinese religion, and one of the higher-ranking deities in Taoism.  He is revered as a powerful god, able to control the elements and capable of great magic.  He is identified as the god of the north "Hēidì" (黑帝 "Black Deity") and is particularly revered by martial artists.  He is the patron deity of Hebei, Manchuria and Mongolia.  As some Cantonese and Southern Min speakers (particularly Hokkien) fled into the south from Hebei with the Song dynasty, Xuanwu is also widely revered in Fujian and Guangdong as well as among the Chinese diaspora.
-
-Sigmar: Sigmar Heldenhammer is a fictional deity in the "Warhammer Fantasy" setting.  He is the patron deity of The Empire.  Before he became a god, Sigmar was a man, albeit an exceptional, perhaps even superhuman one.  The young chieftain of the Unberogens who lived 2,500 years before the present day of the Warhammer universe, he united the barbarian human tribes into what would become the mightiest human nation – the Empire.  His sign is a twin-tailed comet or a war hammer.
-
-Mixcoatl: Mixcoatl (Nahuatl: "Mixcōhuātl" , ] from mixtli ] "cloud" and cōātl ] "serpent"), or Camaztle ] from camaz "deer sandal" and atle "without". , or Camaxtli, was the god of the hunt and identified with the Milky Way, the stars, and the heavens in several Mesoamerican cultures.  He was the patron deity of the Otomi, the Chichimecs, and several groups that claimed descent from the Chichimecs.  While Mixcoatl was part of the Aztec pantheon, his role was less important than Huitzilopochtli, who was their central deity.  Under the name of Camaxtli, Mixcoatl was worshipped as the central deity of Huejotzingo and Tlaxcala.
-
-Tory: A Tory ( ) holds a political philosophy (Toryism) based on a British version of traditionalism and conservatism, which upholds the supremacy of social order as it has evolved throughout history.  The Tory ethos has been summed up with the phrase "God, King and Country".  Tories generally advocate monarchism, are usually of a high church Anglican religious heritage, and are opposed to the liberalism of the Whig faction.  In Britain, the Tory political faction originated with the Cavaliers during the English Civil War.  It also had exponents in other parts of the former British Empire, such as the Loyalists of British America who opposed American secession during the American War of Independence.  Following the American War of Independence, the Loyalists that fled to the Canadas referred to members of the colonies' political elites as Tories.  This political philosophy remains prominent in the politics of the United Kingdom, and also appears in parts of the Commonwealth realms, particularly in Canada.
-
-Kunapipi: In Australian aboriginal mythology, Kunapipi is a mother goddess and the patron deity of many heroes.  She gave birth to human beings as well as to most animals and plants, and Mother Goddess and patron deity of many heroes.  The mother goddess of the aboriginal tribes of northern Australia.  Now a vague, otiose, spiritual being, ‘the old woman’ once travelled across the land with a band of heroes and heroines, and during the ancestral period she gave birth to men and women as well as creating the natural species.  A ‘rainbow serpent’ went before in order to prepare her way
-
-Question: The political faction that Sigmar Heldenhammer is the patron deity of is based on what real-world empire?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "fictional_deity_name": {
-      "type": "string",
-      "description": "The name of the fictional deity."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "fictional_faction_name": {
-      "type": "string",
-      "description": "The name of the fictional political faction."
-    },
-    "real_world_inspiration": {
-      "type": "string",
-      "description": "The real-world empire that the fictional faction is based on."
-    },
-    "inspiration_aspects": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Aspects of the fictional faction that are based on the real-world inspiration."
+    {
+      "role": "user",
+      "content": "Context:\nThe Empire (Warhammer): In Games Workshop's \"Warhammer Fantasy\" fictional universe, The Empire is one of the human political factions and armies, and is featured in many games and novels.  In terms of location, language, culture, and society, it is clearly based on the real-world medieval Holy Roman Empire.\n\nGramadevata: Gramadevata (Sanskrit: ग्रामदेवता; \"Village deity\") is a Sanskrit term for the presiding deity or guardian deity (patron deity) in Hindu villages, towns and cities.  It is derived from the words \"grāma\" “village” and \"devatā\" “deity”.  Traditionally Kal Bhairav, a fierce form of Lord Shiva is the \"Gramadevata\" in the rural villages of Maharashtra and Tamil Nadu, where he is referred to as \"Vairavar\".\n\nInti: Inti is the ancient Incan sun god.  He is revered as the national patron of the Inca state.  Although most consider Inti the sun god, he is more appropriately viewed as a cluster of solar aspects, since the Inca divided his identity according to the stages of the sun.  Worshiped as a patron deity of the Inca Empire, he is of unknown mythological origin.  The most common story says that he is the son of Viracocha, the god of civilization.\n\nHuitzilopochtli: In the Aztec religion, Huitzilopochtli (,    ), is a Mesoamerican deity of war, sun, human sacrifice and the patron of the city of Tenochtitlan.  He was also the national god of the Mexicas, also known as Aztecs, of Tenochtitlan.  Many in the pantheon of deities of the Aztecs were inclined to have a fondness for a particular aspect of warfare.  However, Huitzilopochtli was known as the primary god of war in ancient Mexico.  Since he was the patron god of the Mexica, he was credited with both the victories and defeats that the Mexica people had on the battlefield.  The people had to make sacrifices to him to protect the Aztec from infinite night.  It is important to remember that the defeat of their patron deity meant the defeat of his people.  This is one of the many reasons why they were concerned with providing exquisite tribute and food for him.  Not only was it important for him to survive his battles, but the fate of the Mexican people would have rested in the victory of Huitzilopochtli.  He wielded Xiuhcoatl as a weapon, associating him with fire.\n\nKhandoba: Khandoba (Marathi: खंडोबा , IAST: Khaṇḍobā), Martanda Bhairava or Malhari, is a Hindu deity worshipped as a manifestation of Shiva mainly in the Deccan plateau of India, especially in the states of Maharashtra and Karnataka.  He is the most popular Kuladaivat (family deity) in Maharashtra.  He is also the patron deity of select warrior, farming, herding and Brahmin (priestly) castes as well as several of the hunter/gatherer tribes that are native to the hills and forests of this region.  The cult of Khandoba has linkages with Vaishnava and Jain traditions, and also assimilates all communities irrespective of caste, including Muslims.  The worship of Khandoba developed during the 9th and 10th centuries from a folk deity into a composite god possessing the attributes of Shiva, Bhairava, Surya and Karttikeya (Skanda).  He is depicted either in the form of a Lingam, or as an image of a warrior riding on a bull or a horse.  The foremost centre of Khandoba worship is Jejuri in Maharashtra.  The legends of Khandoba, found in the text \"Malhari Mahatmya\" and also narrated in folk songs, revolve around his victory over demons Mani-malla and his marriages.\n\nXuanwu (god): Xuánwǔ (玄武 \"Dark Warrior\" or \"Mysterious Warrior\") or Xuándì (玄帝 \"Dark Deity\"), also known as Zhēnwǔ (真武) or Zhēnwǔdàdì (真武大帝 \"True Warrior Great Deity\"), is a deity in Chinese religion, and one of the higher-ranking deities in Taoism.  He is revered as a powerful god, able to control the elements and capable of great magic.  He is identified as the god of the north \"Hēidì\" (黑帝 \"Black Deity\") and is particularly revered by martial artists.  He is the patron deity of Hebei, Manchuria and Mongolia.  As some Cantonese and Southern Min speakers (particularly Hokkien) fled into the south from Hebei with the Song dynasty, Xuanwu is also widely revered in Fujian and Guangdong as well as among the Chinese diaspora.\n\nSigmar: Sigmar Heldenhammer is a fictional deity in the \"Warhammer Fantasy\" setting.  He is the patron deity of The Empire.  Before he became a god, Sigmar was a man, albeit an exceptional, perhaps even superhuman one.  The young chieftain of the Unberogens who lived 2,500 years before the present day of the Warhammer universe, he united the barbarian human tribes into what would become the mightiest human nation – the Empire.  His sign is a twin-tailed comet or a war hammer.\n\nMixcoatl: Mixcoatl (Nahuatl: \"Mixcōhuātl\" , ] from mixtli ] \"cloud\" and cōātl ] \"serpent\"), or Camaztle ] from camaz \"deer sandal\" and atle \"without\". , or Camaxtli, was the god of the hunt and identified with the Milky Way, the stars, and the heavens in several Mesoamerican cultures.  He was the patron deity of the Otomi, the Chichimecs, and several groups that claimed descent from the Chichimecs.  While Mixcoatl was part of the Aztec pantheon, his role was less important than Huitzilopochtli, who was their central deity.  Under the name of Camaxtli, Mixcoatl was worshipped as the central deity of Huejotzingo and Tlaxcala.\n\nTory: A Tory ( ) holds a political philosophy (Toryism) based on a British version of traditionalism and conservatism, which upholds the supremacy of social order as it has evolved throughout history.  The Tory ethos has been summed up with the phrase \"God, King and Country\".  Tories generally advocate monarchism, are usually of a high church Anglican religious heritage, and are opposed to the liberalism of the Whig faction.  In Britain, the Tory political faction originated with the Cavaliers during the English Civil War.  It also had exponents in other parts of the former British Empire, such as the Loyalists of British America who opposed American secession during the American War of Independence.  Following the American War of Independence, the Loyalists that fled to the Canadas referred to members of the colonies' political elites as Tories.  This political philosophy remains prominent in the politics of the United Kingdom, and also appears in parts of the Commonwealth realms, particularly in Canada.\n\nKunapipi: In Australian aboriginal mythology, Kunapipi is a mother goddess and the patron deity of many heroes.  She gave birth to human beings as well as to most animals and plants, and Mother Goddess and patron deity of many heroes.  The mother goddess of the aboriginal tribes of northern Australia.  Now a vague, otiose, spiritual being, ‘the old woman’ once travelled across the land with a band of heroes and heroines, and during the ancestral period she gave birth to men and women as well as creating the natural species.  A ‘rainbow serpent’ went before in order to prepare her way\n\nQuestion: The political faction that Sigmar Heldenhammer is the patron deity of is based on what real-world empire?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"fictional_deity_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the fictional deity.\"\n    },\n    \"fictional_faction_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the fictional political faction.\"\n    },\n    \"real_world_inspiration\": {\n      \"type\": \"string\",\n      \"description\": \"The real-world empire that the fictional faction is based on.\"\n    },\n    \"inspiration_aspects\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"Aspects of the fictional faction that are based on the real-world inspiration.\"\n    }\n  },\n  \"required\": [\n    \"fictional_deity_name\",\n    \"fictional_faction_name\",\n    \"real_world_inspiration\",\n    \"inspiration_aspects\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "fictional_deity_name",
-    "fictional_faction_name",
-    "real_world_inspiration",
-    "inspiration_aspects"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "fictional_deity_name": {
+        "type": "string",
+        "description": "The name of the fictional deity."
+      },
+      "fictional_faction_name": {
+        "type": "string",
+        "description": "The name of the fictional political faction."
+      },
+      "real_world_inspiration": {
+        "type": "string",
+        "description": "The real-world empire that the fictional faction is based on."
+      },
+      "inspiration_aspects": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Aspects of the fictional faction that are based on the real-world inspiration."
+      }
+    },
+    "required": [
+      "fictional_deity_name",
+      "fictional_faction_name",
+      "real_world_inspiration",
+      "inspiration_aspects"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

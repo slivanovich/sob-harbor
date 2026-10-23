@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Foggy Mountain Boys: The Foggy Mountain Boys were an American bluegrass band.  The band was founded by guitarist Lester Flatt and banjo player Earl Scruggs and is viewed by music historians as one of the premier bluegrass groups in the history of the genre.  The band was originally formed in 1948 by Flatt, who had been a member of Bill Monroe's bluegrass band.  Flatt brought Scruggs with him shortly after leaving Monroe.
-
-The Pogues: The Pogues were an Irish punk band formed in 1982 and fronted by Shane MacGowan.  The band was founded in Kings Cross, London, as Pogue Mahone—the anglicisation of the Irish "póg mo thóin", meaning "kiss my arse".  The band reached international prominence in the 1980s and early 1990s, recording several hit albums and singles.  MacGowan left the band in 1991 due to drinking problems but the band continued first with Joe Strummer and then with Spider Stacy on vocals before breaking up in 1996.  The Pogues reformed in late 2001, and played regularly across the UK and Ireland and on the US East Coast, until dissolving again in 2014.  The group did not record any new material during this second incarnation.
-
-Boothill Foot Tappers: The Boothill Foot Tappers were a British folk/skiffle/bluegrass band, that was formed in the early 1980s and associated with the folk music revival in the UK.  They were featured in Ben Elton presented, London Weekend Television, show in 1984, as the head of a pack featuring The Pogues and The Shillelagh Sisters, of the then emerging British roots movement based in London.
-
-Bluegrass Cardinals: The Bluegrass Cardinals were a Bluegrass band from Los Angeles, California.  The group is credited with being the first bluegrass band to record bluegrass gospel in a cappella.  Founded in 1974, the Bluegrass Cardinals disbanded in 1997 when founding member Don Parmley announced his retirement from music.
-
-Mr. Fox: Mr Fox were an early 1970s British folk rock band.  They were seen as in the ‘second generation’ of British folk rock performers and for a time were compared with Steeleye Span and Sandy Denny’s Fotheringay.  Unlike Steeleye Span they mainly wrote their own material in a traditional style and developed a distinct ‘northern’ variant of the genre.  They demonstrate the impact and diversity of the British folk rock movement and the members went on to pursue significant careers within the folk rock and traditional music genres after they disbanded in 1972 having recording two highly regarded albums.
-
-British folk rock: British folk rock (sometimes called electric folk) is a form of folk rock developed in the United Kingdom from the mid 1960s, and was at its most significant in the 1970s.  Though the merging of folk and rock music came from several sources, it is widely regarded that the success of "The House of the Rising Sun" by British band the Animals in 1964 was a catalyst, prompting Bob Dylan to "go electric", in which, like the Animals, he brought folk and rock music together, from which other musicians followed.  In the same year, the Beatles began incorporating overt folk influences into their music, most noticeably on the song "I'm a Loser" from their "Beatles for Sale" album.  The Beatles and other British Invasion bands, in turn, influenced the Californian band the Byrds, who released their recording of Dylan's "Mr Tambourine Man" in April 1965, setting off the mid-1960s folk rock movement.  A number of British groups, usually those associated with the British folk revival, moved into folk rock in the mid-1960s, including the Strawbs, Pentangle, Eclection, and Fairport Convention.
-
-Nothin' Fancy: Nothin' Fancy is an award-winning bluegrass band based in Buena Vista, Virginia and was formed in September 1994.  The band's history is traceable to its parent band called East Coast Bluegrass Band, which was formed in Summer of 1985 with the purpose of competing in the East Coast Bluegrass Championship in Crimora, Virginia.
-
-The Dodge Brothers: The Dodge Brothers are a British skiffle band from Southampton playing Americana, rockabilly, bluegrass, folk, country and blues music.  The band includes film critic and BBC television presenter Mark Kermode, along with Mike and Alex Hammond and Aly Hirji.  The band played on the BBC Two programme "The Culture Show", which is co-presented by Kermode, on 19 May 2007 and took part in the same show’s ‘Busking Challenge’ on 29 March 2008.  The band have appeared on Kermode’s video blog ‘Kermode Uncut’, playing ‘skiffle’ covers of blockbuster movie soundtracks including Star Wars, Star Trek, The A-Team and Smurfs 3D.  The music heard on the 'Kermode Uncut' blog is extracts from The Dodge Brothers’ music.  They also provided skiffled movie theme tunes for one round of a quiz show on Simon Mayo and Kermode’s BBCRadio 5 Live Christmas show in 2010.
-
-Kentucky Colonels (band): The Kentucky Colonels were a bluegrass band that was popular during the American folk music revival of the early 1960s.  Formed in Burbank, California in 1954, the group released two albums, "The New Sound of Bluegrass America" (1963) and "Appalachian Swing! " (1964).  The band featured the influential bluegrass guitarist Clarence White, who was largely responsible for making the acoustic guitar a lead instrument within bluegrass, and who later went on to join the Los Angeles rock band the Byrds.  The Kentucky Colonels disbanded in late 1965, with two short-lived reunions taking place in 1966 and 1973.
-
-Skiffle: Skiffle is a music genre with jazz, blues, folk and American folk influences, usually using a combination of manufactured and homemade or improvised instruments.  Originating as a term in the United States in the first half of the 20th century, it became popular again in the UK in the 1950s, where it was associated with artists such as Lonnie Donegan, The Vipers Skiffle Group, Ken Colyer and Chas McDevitt.  Skiffle played a major part in beginning the careers of later eminent jazz, pop, blues, folk and rock musicians and has been seen as a critical stepping stone to the second British folk revival, blues boom and British Invasion of the US popular music scene.
-
-Question: Boothill Foot Tappers were a British folk/skiffle/bluegrass band, The Pogues were a punk band of what nationality?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "band_name": {
-      "type": "string",
-      "description": "The name of the band."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "nationality": {
-      "type": "string",
-      "description": "The nationality of the band."
-    },
-    "genre": {
-      "type": "string",
-      "description": "The primary music genre of the band."
-    },
-    "formation_year": {
-      "type": "integer",
-      "description": "The year the band was formed."
+    {
+      "role": "user",
+      "content": "Context:\nFoggy Mountain Boys: The Foggy Mountain Boys were an American bluegrass band.  The band was founded by guitarist Lester Flatt and banjo player Earl Scruggs and is viewed by music historians as one of the premier bluegrass groups in the history of the genre.  The band was originally formed in 1948 by Flatt, who had been a member of Bill Monroe's bluegrass band.  Flatt brought Scruggs with him shortly after leaving Monroe.\n\nThe Pogues: The Pogues were an Irish punk band formed in 1982 and fronted by Shane MacGowan.  The band was founded in Kings Cross, London, as Pogue Mahone—the anglicisation of the Irish \"póg mo thóin\", meaning \"kiss my arse\".  The band reached international prominence in the 1980s and early 1990s, recording several hit albums and singles.  MacGowan left the band in 1991 due to drinking problems but the band continued first with Joe Strummer and then with Spider Stacy on vocals before breaking up in 1996.  The Pogues reformed in late 2001, and played regularly across the UK and Ireland and on the US East Coast, until dissolving again in 2014.  The group did not record any new material during this second incarnation.\n\nBoothill Foot Tappers: The Boothill Foot Tappers were a British folk/skiffle/bluegrass band, that was formed in the early 1980s and associated with the folk music revival in the UK.  They were featured in Ben Elton presented, London Weekend Television, show in 1984, as the head of a pack featuring The Pogues and The Shillelagh Sisters, of the then emerging British roots movement based in London.\n\nBluegrass Cardinals: The Bluegrass Cardinals were a Bluegrass band from Los Angeles, California.  The group is credited with being the first bluegrass band to record bluegrass gospel in a cappella.  Founded in 1974, the Bluegrass Cardinals disbanded in 1997 when founding member Don Parmley announced his retirement from music.\n\nMr. Fox: Mr Fox were an early 1970s British folk rock band.  They were seen as in the ‘second generation’ of British folk rock performers and for a time were compared with Steeleye Span and Sandy Denny’s Fotheringay.  Unlike Steeleye Span they mainly wrote their own material in a traditional style and developed a distinct ‘northern’ variant of the genre.  They demonstrate the impact and diversity of the British folk rock movement and the members went on to pursue significant careers within the folk rock and traditional music genres after they disbanded in 1972 having recording two highly regarded albums.\n\nBritish folk rock: British folk rock (sometimes called electric folk) is a form of folk rock developed in the United Kingdom from the mid 1960s, and was at its most significant in the 1970s.  Though the merging of folk and rock music came from several sources, it is widely regarded that the success of \"The House of the Rising Sun\" by British band the Animals in 1964 was a catalyst, prompting Bob Dylan to \"go electric\", in which, like the Animals, he brought folk and rock music together, from which other musicians followed.  In the same year, the Beatles began incorporating overt folk influences into their music, most noticeably on the song \"I'm a Loser\" from their \"Beatles for Sale\" album.  The Beatles and other British Invasion bands, in turn, influenced the Californian band the Byrds, who released their recording of Dylan's \"Mr Tambourine Man\" in April 1965, setting off the mid-1960s folk rock movement.  A number of British groups, usually those associated with the British folk revival, moved into folk rock in the mid-1960s, including the Strawbs, Pentangle, Eclection, and Fairport Convention.\n\nNothin' Fancy: Nothin' Fancy is an award-winning bluegrass band based in Buena Vista, Virginia and was formed in September 1994.  The band's history is traceable to its parent band called East Coast Bluegrass Band, which was formed in Summer of 1985 with the purpose of competing in the East Coast Bluegrass Championship in Crimora, Virginia.\n\nThe Dodge Brothers: The Dodge Brothers are a British skiffle band from Southampton playing Americana, rockabilly, bluegrass, folk, country and blues music.  The band includes film critic and BBC television presenter Mark Kermode, along with Mike and Alex Hammond and Aly Hirji.  The band played on the BBC Two programme \"The Culture Show\", which is co-presented by Kermode, on 19 May 2007 and took part in the same show’s ‘Busking Challenge’ on 29 March 2008.  The band have appeared on Kermode’s video blog ‘Kermode Uncut’, playing ‘skiffle’ covers of blockbuster movie soundtracks including Star Wars, Star Trek, The A-Team and Smurfs 3D.  The music heard on the 'Kermode Uncut' blog is extracts from The Dodge Brothers’ music.  They also provided skiffled movie theme tunes for one round of a quiz show on Simon Mayo and Kermode’s BBCRadio 5 Live Christmas show in 2010.\n\nKentucky Colonels (band): The Kentucky Colonels were a bluegrass band that was popular during the American folk music revival of the early 1960s.  Formed in Burbank, California in 1954, the group released two albums, \"The New Sound of Bluegrass America\" (1963) and \"Appalachian Swing! \" (1964).  The band featured the influential bluegrass guitarist Clarence White, who was largely responsible for making the acoustic guitar a lead instrument within bluegrass, and who later went on to join the Los Angeles rock band the Byrds.  The Kentucky Colonels disbanded in late 1965, with two short-lived reunions taking place in 1966 and 1973.\n\nSkiffle: Skiffle is a music genre with jazz, blues, folk and American folk influences, usually using a combination of manufactured and homemade or improvised instruments.  Originating as a term in the United States in the first half of the 20th century, it became popular again in the UK in the 1950s, where it was associated with artists such as Lonnie Donegan, The Vipers Skiffle Group, Ken Colyer and Chas McDevitt.  Skiffle played a major part in beginning the careers of later eminent jazz, pop, blues, folk and rock musicians and has been seen as a critical stepping stone to the second British folk revival, blues boom and British Invasion of the US popular music scene.\n\nQuestion: Boothill Foot Tappers were a British folk/skiffle/bluegrass band, The Pogues were a punk band of what nationality?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"band_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the band.\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the band.\"\n    },\n    \"genre\": {\n      \"type\": \"string\",\n      \"description\": \"The primary music genre of the band.\"\n    },\n    \"formation_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the band was formed.\"\n    }\n  },\n  \"required\": [\n    \"band_name\",\n    \"nationality\",\n    \"genre\",\n    \"formation_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "band_name",
-    "nationality",
-    "genre",
-    "formation_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "band_name": {
+        "type": "string",
+        "description": "The name of the band."
+      },
+      "nationality": {
+        "type": "string",
+        "description": "The nationality of the band."
+      },
+      "genre": {
+        "type": "string",
+        "description": "The primary music genre of the band."
+      },
+      "formation_year": {
+        "type": "integer",
+        "description": "The year the band was formed."
+      }
+    },
+    "required": [
+      "band_name",
+      "nationality",
+      "genre",
+      "formation_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

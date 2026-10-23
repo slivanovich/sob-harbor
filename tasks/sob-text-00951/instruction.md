@@ -1,85 +1,62 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Funny Games (1997 film): Funny Games is a 1997 Austrian psychological thriller film written and directed by Michael Haneke.  The plot of the film involves two young men who hold a family hostage and torture them with sadistic games.  The film was entered into the 1997 Cannes Film Festival.  In 2007 it was remade in America by Haneke, this time with a different cast and a mostly American crew.
-
-Pardon Our Nerve: Pardon Our Nerve is a 1939 American comedy film directed by H. Bruce Humberstone and written by Robert Ellis and Helen Logan.  The film stars Lynn Bari, June Gale, Guinn "Big Boy" Williams, Michael Whalen, Edward Brophy and John Miljan.  The film was released on February 24, 1939, by 20th Century Fox.
-
-Marie Kremer: Marie Kremer (born 15 April 1982 in Uccle) is a Belgian actress.  Her first leading role was in the 2003 movie "I Always Wanted to be a Saint" ("J'ai toujours voulu être une sainte"). , for which she won the Créteil International Women's Film Festival's Female Talent Award.  After that, she played in "St.Jacques-La Mecque", a film about a group of people on their way to Santiago de Compostela.  She is also to be seen in "Caché" (directed by Michael Haneke, well-known from his movie "Funny Games"), and also in "Ravages", a film from Christophe Lamotte, "Blame it on Fidel" and "Beneath the rooftops of Paris".  In 2012 she was nominated for the Magritte Award for Best Supporting Actress.
-
-Funny Games (2007 film): Funny Games is a 2007 psychological thriller film written and directed by Michael Haneke, and a remake of his own 1997 Austrian film of the same name.  Naomi Watts, Tim Roth, Michael Pitt, and Brady Corbet star in the main roles.  The film is a shot-for-shot remake of the 1997 film, albeit in English and set in the United States with different actors.  Exterior scenes were filmed on Long Island.  The film is an international co-production of the United States, United Kingdom, France, Germany, and Italy.
-
-Arno Frisch: Arno Frisch (born 13 November 1975) is an Austrian actor.  He has had central roles in two films by Michael Haneke, namely, "Benny's Video" and "Funny Games".
-
-If I Had a Million: If I Had a Million is a 1932 American pre-Code Paramount Studios anthology film.  There were seven directors: Ernst Lubitsch, Norman Taurog, Stephen Roberts, Norman Z. McLeod, James Cruze, William A. Seiter, and H. Bruce Humberstone.  Lubitsch, Cruze, Seiter, and Humberstone were each responsible for a single vignette, Roberts and McLeod directed two each, and Taurog was in charge of the prologue and epilogue.  The screenplays were scripted by many different writers, with Joseph L. Mankiewicz making a large contribution.  "If I Had a Million" is based on a novel by Robert Hardy Andrews.
-
-Michael H – Profession: Director: Michael H – Profession: Director (German: "Michael Haneke – Porträt eines Film-Handwerkers" ) is a 2013 documentary film directed by Yves Montmayeur about the Austrian film director Michael Haneke.
-
-Michael Haneke: Michael Haneke (] ; born 23 March 1942) is an Austrian film director and screenwriter best known for films such as "Funny Games" (1997), "Caché" (2005), "The White Ribbon" (2009) and "Amour" (2012).  His work often examines social issues, and depicts the feelings of estrangement experienced by individuals in modern society.  Haneke has worked in television‚ theatre and cinema.  Besides working as a filmmaker, Haneke also teaches film direction at the Film Academy Vienna.
-
-Michael Pitt: Michael Carmen Pitt (born April 10, 1981) is an American actor, model and musician.  Pitt is known in film for his roles in Bernardo Bertolucci's "The Dreamers" (2003), Gus Van Sant's "Last Days" (2005), Michael Haneke's "Funny Games" (2007) and M. Night Shyamalan's "The Village" (2004), and in television for his roles as Henry Parker in the teen drama "Dawson's Creek", Jimmy Darmody in the HBO series "Boardwalk Empire" and Mason Verger in the NBC series "Hannibal".  He has also appeared in the films "Hedwig and the Angry Inch" (2001), "Bully" (2001), "Silk" (2007), "Seven Psychopaths" (2012) and "I Origins" (2014).  His most recent appearance is in the film "Ghost in the Shell" (2017).
-
-H. Bruce Humberstone: H. Bruce "Lucky" Humberstone (November 18, 1901 – October 11, 1984) was a movie actor (as a child), a script clerk, an assistant director, working with directors such as King Vidor, Edmund Goulding and Allan Dwan and, ultimately, a director.
-
-Question: Did both H. Bruce Humberstone and Michael Haneke work on the 1997 film "Funny Games?"
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "film_details": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string"
-        },
-        "year": {
-          "type": "integer"
-        }
-      },
-      "required": [
-        "title",
-        "year"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "directors_in_question": {
-      "type": "array",
-      "items": {
+    {
+      "role": "user",
+      "content": "Context:\nFunny Games (1997 film): Funny Games is a 1997 Austrian psychological thriller film written and directed by Michael Haneke.  The plot of the film involves two young men who hold a family hostage and torture them with sadistic games.  The film was entered into the 1997 Cannes Film Festival.  In 2007 it was remade in America by Haneke, this time with a different cast and a mostly American crew.\n\nPardon Our Nerve: Pardon Our Nerve is a 1939 American comedy film directed by H. Bruce Humberstone and written by Robert Ellis and Helen Logan.  The film stars Lynn Bari, June Gale, Guinn \"Big Boy\" Williams, Michael Whalen, Edward Brophy and John Miljan.  The film was released on February 24, 1939, by 20th Century Fox.\n\nMarie Kremer: Marie Kremer (born 15 April 1982 in Uccle) is a Belgian actress.  Her first leading role was in the 2003 movie \"I Always Wanted to be a Saint\" (\"J'ai toujours voulu être une sainte\"). , for which she won the Créteil International Women's Film Festival's Female Talent Award.  After that, she played in \"St.Jacques-La Mecque\", a film about a group of people on their way to Santiago de Compostela.  She is also to be seen in \"Caché\" (directed by Michael Haneke, well-known from his movie \"Funny Games\"), and also in \"Ravages\", a film from Christophe Lamotte, \"Blame it on Fidel\" and \"Beneath the rooftops of Paris\".  In 2012 she was nominated for the Magritte Award for Best Supporting Actress.\n\nFunny Games (2007 film): Funny Games is a 2007 psychological thriller film written and directed by Michael Haneke, and a remake of his own 1997 Austrian film of the same name.  Naomi Watts, Tim Roth, Michael Pitt, and Brady Corbet star in the main roles.  The film is a shot-for-shot remake of the 1997 film, albeit in English and set in the United States with different actors.  Exterior scenes were filmed on Long Island.  The film is an international co-production of the United States, United Kingdom, France, Germany, and Italy.\n\nArno Frisch: Arno Frisch (born 13 November 1975) is an Austrian actor.  He has had central roles in two films by Michael Haneke, namely, \"Benny's Video\" and \"Funny Games\".\n\nIf I Had a Million: If I Had a Million is a 1932 American pre-Code Paramount Studios anthology film.  There were seven directors: Ernst Lubitsch, Norman Taurog, Stephen Roberts, Norman Z. McLeod, James Cruze, William A. Seiter, and H. Bruce Humberstone.  Lubitsch, Cruze, Seiter, and Humberstone were each responsible for a single vignette, Roberts and McLeod directed two each, and Taurog was in charge of the prologue and epilogue.  The screenplays were scripted by many different writers, with Joseph L. Mankiewicz making a large contribution.  \"If I Had a Million\" is based on a novel by Robert Hardy Andrews.\n\nMichael H – Profession: Director: Michael H – Profession: Director (German: \"Michael Haneke – Porträt eines Film-Handwerkers\" ) is a 2013 documentary film directed by Yves Montmayeur about the Austrian film director Michael Haneke.\n\nMichael Haneke: Michael Haneke (] ; born 23 March 1942) is an Austrian film director and screenwriter best known for films such as \"Funny Games\" (1997), \"Caché\" (2005), \"The White Ribbon\" (2009) and \"Amour\" (2012).  His work often examines social issues, and depicts the feelings of estrangement experienced by individuals in modern society.  Haneke has worked in television‚ theatre and cinema.  Besides working as a filmmaker, Haneke also teaches film direction at the Film Academy Vienna.\n\nMichael Pitt: Michael Carmen Pitt (born April 10, 1981) is an American actor, model and musician.  Pitt is known in film for his roles in Bernardo Bertolucci's \"The Dreamers\" (2003), Gus Van Sant's \"Last Days\" (2005), Michael Haneke's \"Funny Games\" (2007) and M. Night Shyamalan's \"The Village\" (2004), and in television for his roles as Henry Parker in the teen drama \"Dawson's Creek\", Jimmy Darmody in the HBO series \"Boardwalk Empire\" and Mason Verger in the NBC series \"Hannibal\".  He has also appeared in the films \"Hedwig and the Angry Inch\" (2001), \"Bully\" (2001), \"Silk\" (2007), \"Seven Psychopaths\" (2012) and \"I Origins\" (2014).  His most recent appearance is in the film \"Ghost in the Shell\" (2017).\n\nH. Bruce Humberstone: H. Bruce \"Lucky\" Humberstone (November 18, 1901 – October 11, 1984) was a movie actor (as a child), a script clerk, an assistant director, working with directors such as King Vidor, Edmund Goulding and Allan Dwan and, ultimately, a director.\n\nQuestion: Did both H. Bruce Humberstone and Michael Haneke work on the 1997 film \"Funny Games?\"\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"film_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\"\n        },\n        \"year\": {\n          \"type\": \"integer\"\n        }\n      },\n      \"required\": [\n        \"title\",\n        \"year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"directors_in_question\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\"\n          },\n          \"worked_on_film\": {\n            \"type\": \"boolean\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"worked_on_film\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"both_directors_worked_on_film\": {\n      \"type\": \"boolean\"\n    }\n  },\n  \"required\": [\n    \"film_details\",\n    \"directors_in_question\",\n    \"both_directors_worked_on_film\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "film_details": {
         "type": "object",
         "properties": {
-          "name": {
+          "title": {
             "type": "string"
           },
-          "worked_on_film": {
-            "type": "boolean"
+          "year": {
+            "type": "integer"
           }
         },
         "required": [
-          "name",
-          "worked_on_film"
+          "title",
+          "year"
         ],
         "additionalProperties": false
+      },
+      "directors_in_question": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "worked_on_film": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "name",
+            "worked_on_film"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "both_directors_worked_on_film": {
+        "type": "boolean"
       }
     },
-    "both_directors_worked_on_film": {
-      "type": "boolean"
-    }
+    "required": [
+      "film_details",
+      "directors_in_question",
+      "both_directors_worked_on_film"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "film_details",
-    "directors_in_question",
-    "both_directors_worked_on_film"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Lee Il-hyung: Lee Il-hyung is a South Korean film director and screenwriter.  Prior to directing his first feature film "A Violent Prosecutor" (2016), Lee is an assistant director on films, such as "The Moonlight of Seoul" (2008), "My Way" (2011) and "" (2014), and commercial films.
-
-Mick Kaczorowski: Michael "Mick" Kaczorowski (born January 4, 1960) is the Creative Director and Producer of Bangkok Swagger is a nine time nominated and three time Emmy Award winning Producer and Executive Producer.  As Executive Producer, he is responsible for some of Animal Planet and Discovery’s biggest and most iconic hits including , Raising the Mammoth, and Walking with Prehistoric Beasts.  Kaczorowski is also responsible for many of Discovery Channel and Animal Planet long running hit series including Meerkat Manor, North Woods Law, River Monsters, Alaskan Bush Family, Wild West Alaska, Buggin with Rude, and American Stuffers.  Kaczorowski has worked in Washington D.C. for Discovery Channel, Animal Planet and the National Geographic Society.  Kaczorowski began his filmmaking career in 1982 working in feature films for Director Robert Altman on Streamers, O.C. and Stiggs and Secret Honor.  In 1985 Kaczorowski helped launch before it became National Geographic Television, and was a film editor for over 10 years editing over 40 films, earning two Emmy nominations for best editing for Dancing with Stingrays and Ocean Kayakers.  He edited Discovery Channel’s first original production Ivory Wars.  Kaczorowski joined Discovery Communications in 1994 holding many positions and titles across different Discovery networks.  Over the next 20 years, he developed, supervised and managed everything from documentary specials and long running series, IMAX movies “”, Discovery’s first feature film “”, Animal Planet’s first feature film “” and Animal Planet’s first scripted drama “The Whale”.  His production company Bangkok Swagger casts, develops and creates programing around the world for the web, social media and traditional television & cable networks.
-
-Afflicted (film): Afflicted is a 2013 Canadian found footage horror film that was written and directed by Derek Lee and Clif Prowse, and is their feature film directorial debut.  It had its world premiere on September 9, 2013 at the Toronto International Film Festival, where it won a special jury citation for Best Canadian First Feature Film.  Lee and Prowse also star in "Afflicted" as two friends whose goal to film themselves traveling the world is cut short when one of them contracts a mysterious disease.
-
-Kyle Thomas: Kyle Thomas (born 23 June 1983), is a Canadian writer, director, producer, and actor.  His first feature film The Valley Below premiered at the Toronto International Film Festival in 2014.  The film garnered two Canadian Screen Award nominations in the categories of Best Supporting Actor for Kris Demeanor and Best Original Song for Dan Mangan's "Wants".  The film received largely positive reviews from the Canadian media, including The Globe and Mail and The National Post, who called the film a "superb first feature".
-
-Red Doors: Red Doors is a 2005 American independent film written and directed by Georgia Lee.  Inspired by the director's own family, the film tells the coming of age story of a Chinese American family.  "Red Doors" is Lee’s first feature film.  Early drafts won the Jerome Foundation New York Media Arts Grant Award, and later won the best narrative feature prize at the 2005 Tribeca Film Festival.  Georgia Lee produced the movie alongside Jane Chen and Mia Riverton and co-producor John Fiorelli.
-
-Johnny Ma: Johnny Ma (born Ma Nan in Shanghai) is a Chinese-Canadian film director and screenwriter.  He is best known for his debut feature film "Old Stone", which premiered at the Berlin International Film Festival in 2016.  The film won the awards for Best Canadian First Feature Film at the 2016 Toronto International Film Festival, and Best First Feature at the 5th Canadian Screen Awards in 2017.
-
-William Eubank: William Eubank (born November 15, 1982) is an American film director, screenwriter, and cinematographer.  His third feature film, the estimated $65 million action thriller "Underwater", is scheduled to be released in 2018 by 20th Century Fox.  His second feature film "The Signal" premiered at the 2014 Sundance Film Festival and was released in theaters by Focus Features on June 13, 2014.  For his first feature film, "Love", released in 2011, in addition to directorial and director of photography duties, Eubank also served as production designer.
-
-Kenan Korkmaz: Kenan Korkmaz (born April 21, 1969 in Diyarbakır, Turkey) is a Turkish filmmaker, educated at Çukurova University where he has also lectured in cinematography and photography.  His first feature film, Lüks Otel (The Luxury Hotel) won the 2011 award Golden Orange for Best Cinematographer and the jury´s special awards for Best Film and Best Music at the 48th International Antalya Golden Orange Film Festival.  Korkmaz was the director of photography for the 2013 feature film Yola Çikmak (Take the Road) directed by Evren Erdem.  For the 2014 feature film Gittiler 'Sair ve Mechul'"""" (Gone 'The Other and the Unknown´""), Korkmaz was responsible for script, directing, photography and editing.
-
-A Violent Prosecutor: A Violent Prosecutor is a 2016 South Korean crime film directed by Lee Il-hyung, produced by Guk Su Ran and starring Hwang Jung-min, Kang Dong-won, Lee Sung-min and Park Sung-woong.  It was released in South Korea on February 3, 2016 by Showbox.
-
-Alê Abreu: Alê Abreu (born March 6, 1971) is a Brazilian film director and screenwriter.  "Sírius", his first short film, debuted at the 1993 Anima Mundi as the only Brazilian animation that year.  It won the Best Film Award at the Festival de Cine para Niños y Jovenes and was also screened at the Mostra Internacional de Cinema São Paulo and at the section Animation for Children of the Hiroshima International Animation Festival.  His second short film, "Espantalho" (lit.  "Scarecrow"), released in 1998, won the 3rd Best Brazilian Animation at the Anima Mundi, the Best Art Direction Award at the Brazilian Film Festival of Miami, and was nominated for Best Animated Feature at the 1st Grande Prêmio Cinema Brasil.  His first feature film, "Garoto Cósmico", debuted at the 2007 Anima Mundi.  In 2013, he released "The Boy and the World", his second film, at the Ottawa International Animation Festival which won the Grand Prix for best feature film at World Festival of Animated Film - Animafest Zagreb in 2015.
-
-Question: Lee Il-hyung's first feature film was released by which company ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "director_name": {
-      "type": "string",
-      "description": "The name of the film director."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_title": {
-      "type": "string",
-      "description": "The title of the director's first feature film."
-    },
-    "release_company": {
-      "type": "string",
-      "description": "The company that released the film."
-    },
-    "release_year": {
-      "type": "integer",
-      "description": "The year the film was released."
+    {
+      "role": "user",
+      "content": "Context:\nLee Il-hyung: Lee Il-hyung is a South Korean film director and screenwriter.  Prior to directing his first feature film \"A Violent Prosecutor\" (2016), Lee is an assistant director on films, such as \"The Moonlight of Seoul\" (2008), \"My Way\" (2011) and \"\" (2014), and commercial films.\n\nMick Kaczorowski: Michael \"Mick\" Kaczorowski (born January 4, 1960) is the Creative Director and Producer of Bangkok Swagger is a nine time nominated and three time Emmy Award winning Producer and Executive Producer.  As Executive Producer, he is responsible for some of Animal Planet and Discovery’s biggest and most iconic hits including , Raising the Mammoth, and Walking with Prehistoric Beasts.  Kaczorowski is also responsible for many of Discovery Channel and Animal Planet long running hit series including Meerkat Manor, North Woods Law, River Monsters, Alaskan Bush Family, Wild West Alaska, Buggin with Rude, and American Stuffers.  Kaczorowski has worked in Washington D.C. for Discovery Channel, Animal Planet and the National Geographic Society.  Kaczorowski began his filmmaking career in 1982 working in feature films for Director Robert Altman on Streamers, O.C. and Stiggs and Secret Honor.  In 1985 Kaczorowski helped launch before it became National Geographic Television, and was a film editor for over 10 years editing over 40 films, earning two Emmy nominations for best editing for Dancing with Stingrays and Ocean Kayakers.  He edited Discovery Channel’s first original production Ivory Wars.  Kaczorowski joined Discovery Communications in 1994 holding many positions and titles across different Discovery networks.  Over the next 20 years, he developed, supervised and managed everything from documentary specials and long running series, IMAX movies “”, Discovery’s first feature film “”, Animal Planet’s first feature film “” and Animal Planet’s first scripted drama “The Whale”.  His production company Bangkok Swagger casts, develops and creates programing around the world for the web, social media and traditional television & cable networks.\n\nAfflicted (film): Afflicted is a 2013 Canadian found footage horror film that was written and directed by Derek Lee and Clif Prowse, and is their feature film directorial debut.  It had its world premiere on September 9, 2013 at the Toronto International Film Festival, where it won a special jury citation for Best Canadian First Feature Film.  Lee and Prowse also star in \"Afflicted\" as two friends whose goal to film themselves traveling the world is cut short when one of them contracts a mysterious disease.\n\nKyle Thomas: Kyle Thomas (born 23 June 1983), is a Canadian writer, director, producer, and actor.  His first feature film The Valley Below premiered at the Toronto International Film Festival in 2014.  The film garnered two Canadian Screen Award nominations in the categories of Best Supporting Actor for Kris Demeanor and Best Original Song for Dan Mangan's \"Wants\".  The film received largely positive reviews from the Canadian media, including The Globe and Mail and The National Post, who called the film a \"superb first feature\".\n\nRed Doors: Red Doors is a 2005 American independent film written and directed by Georgia Lee.  Inspired by the director's own family, the film tells the coming of age story of a Chinese American family.  \"Red Doors\" is Lee’s first feature film.  Early drafts won the Jerome Foundation New York Media Arts Grant Award, and later won the best narrative feature prize at the 2005 Tribeca Film Festival.  Georgia Lee produced the movie alongside Jane Chen and Mia Riverton and co-producor John Fiorelli.\n\nJohnny Ma: Johnny Ma (born Ma Nan in Shanghai) is a Chinese-Canadian film director and screenwriter.  He is best known for his debut feature film \"Old Stone\", which premiered at the Berlin International Film Festival in 2016.  The film won the awards for Best Canadian First Feature Film at the 2016 Toronto International Film Festival, and Best First Feature at the 5th Canadian Screen Awards in 2017.\n\nWilliam Eubank: William Eubank (born November 15, 1982) is an American film director, screenwriter, and cinematographer.  His third feature film, the estimated $65 million action thriller \"Underwater\", is scheduled to be released in 2018 by 20th Century Fox.  His second feature film \"The Signal\" premiered at the 2014 Sundance Film Festival and was released in theaters by Focus Features on June 13, 2014.  For his first feature film, \"Love\", released in 2011, in addition to directorial and director of photography duties, Eubank also served as production designer.\n\nKenan Korkmaz: Kenan Korkmaz (born April 21, 1969 in Diyarbakır, Turkey) is a Turkish filmmaker, educated at Çukurova University where he has also lectured in cinematography and photography.  His first feature film, Lüks Otel (The Luxury Hotel) won the 2011 award Golden Orange for Best Cinematographer and the jury´s special awards for Best Film and Best Music at the 48th International Antalya Golden Orange Film Festival.  Korkmaz was the director of photography for the 2013 feature film Yola Çikmak (Take the Road) directed by Evren Erdem.  For the 2014 feature film Gittiler 'Sair ve Mechul'\"\"\"\" (Gone 'The Other and the Unknown´\"\"), Korkmaz was responsible for script, directing, photography and editing.\n\nA Violent Prosecutor: A Violent Prosecutor is a 2016 South Korean crime film directed by Lee Il-hyung, produced by Guk Su Ran and starring Hwang Jung-min, Kang Dong-won, Lee Sung-min and Park Sung-woong.  It was released in South Korea on February 3, 2016 by Showbox.\n\nAlê Abreu: Alê Abreu (born March 6, 1971) is a Brazilian film director and screenwriter.  \"Sírius\", his first short film, debuted at the 1993 Anima Mundi as the only Brazilian animation that year.  It won the Best Film Award at the Festival de Cine para Niños y Jovenes and was also screened at the Mostra Internacional de Cinema São Paulo and at the section Animation for Children of the Hiroshima International Animation Festival.  His second short film, \"Espantalho\" (lit.  \"Scarecrow\"), released in 1998, won the 3rd Best Brazilian Animation at the Anima Mundi, the Best Art Direction Award at the Brazilian Film Festival of Miami, and was nominated for Best Animated Feature at the 1st Grande Prêmio Cinema Brasil.  His first feature film, \"Garoto Cósmico\", debuted at the 2007 Anima Mundi.  In 2013, he released \"The Boy and the World\", his second film, at the Ottawa International Animation Festival which won the Grand Prix for best feature film at World Festival of Animated Film - Animafest Zagreb in 2015.\n\nQuestion: Lee Il-hyung's first feature film was released by which company ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"director_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the film director.\"\n    },\n    \"film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the director's first feature film.\"\n    },\n    \"release_company\": {\n      \"type\": \"string\",\n      \"description\": \"The company that released the film.\"\n    },\n    \"release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the film was released.\"\n    }\n  },\n  \"required\": [\n    \"director_name\",\n    \"film_title\",\n    \"release_company\",\n    \"release_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "director_name",
-    "film_title",
-    "release_company",
-    "release_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "director_name": {
+        "type": "string",
+        "description": "The name of the film director."
+      },
+      "film_title": {
+        "type": "string",
+        "description": "The title of the director's first feature film."
+      },
+      "release_company": {
+        "type": "string",
+        "description": "The company that released the film."
+      },
+      "release_year": {
+        "type": "integer",
+        "description": "The year the film was released."
+      }
+    },
+    "required": [
+      "director_name",
+      "film_title",
+      "release_company",
+      "release_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,87 +1,64 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Sea of Japan naming dispute: A dispute exists over the international name for the body of water which is bordered by Japan, Korea (North and South) and Russia.  In 1992, objections to the name Sea of Japan were first raised by North Korea and South Korea at the Sixth United Nations Conference on the Standardization of Geographical Names.  The Japanese government supports the exclusive use of the name "Sea of Japan" (日本海), while South Korea supports the alternative name "East Sea" (Hangul: 동해 ; Hanja: 東海 ), and North Korea supports the name "Korean East Sea" (Chosŏn'gŭl: 조선동해 ; Hancha: 朝鮮東海 ).  Currently, most international maps and documents use either the name Sea of Japan (or equivalent translation) exclusively, and far fewer maps include both the name Sea of Japan and East Sea, often with East Sea listed in parentheses or otherwise marked as a secondary name.  The International Hydrographic Organization, the international governing body for the naming of bodies of water around the world, in 2012 decided not to change the current single name "Sea of Japan" rejecting South Korea's request to use "East Sea" together with "Sea of Japan".
-
-Don C. Faith Jr.: Don Carlos Faith Jr. (August 26, 1918 – December 1, 1950) was an officer in the United States Army during the Korean War.  He was posthumously awarded the Medal of Honor for his actions from November 27, through December 1, 1950.  In 1976 LTC Faith was posthumously inducted into the U.S. Army Officer Candidate School Hall of Fame at Fort Benning, Georgia.
-
-People for Successful Corean Reunification: People for Successful Corean Reunification (PSCORE) is a non-governmental organization based in Seoul, South Korea, and Washington D.C. in the United States.  PSCORE addresses potential barriers to Korea reunification, suggests alternatives, and works to improve the situation of North Korean defectors in South Korea and China to bridge the gap between South Korea, North Korea, and the international community.  The organization is made up of North and South Korean staff, interns and volunteers from South Korea and abroad, and North Korean defectors.  While PSCORE provides news coverage on North Korea and helps defectors become South Korean citizens, a unique aspect is that educational programs are offered for North Korean defectors.
-
-New Zealand–North Korea relations: New Zealand–North Korea relations (Korean:뉴질랜드-조선민주주의인민공화국 관계) refers to international relations between New Zealand and North Korea.  Relations between the two countries have been almost non-existent since the division of Korea.  During the Korean War in the 1950s, New Zealand troops fought as part of the United Nations force that repelled the North Korean invasion of South Korea.  Since then, New Zealand and North Korea have had little contact, until July 2000 when North Korean Foreign Minister Paek Nam-sun and New Zealand Minister of Foreign Affairs Phil Goff met in Bangkok, leading to the establishment of diplomatic relations in March 2001.  The New Zealand ambassador to South Korea based in Seoul is also cross-accredited to North Korea.  In 2006, North Korea tested its first nuclear weapon, drawing criticism and suspension of relations by the New Zealand government, which holds a staunch anti-nuclear policy.  New Zealand began re-establishing formal relations in 2007, when the New Zealand Minister of Foreign Affairs Winston Peters visited Pyongyang on November 20 to discuss possible political and economic deals with North Korea, on the basis that it start dismantling its nuclear weapons facilities.
-
-Workers' Party of Korea: The Workers' Party of Korea (WPK) is the founding and ruling political party of the Democratic People's Republic of Korea (North Korea), and the largest party represented in the Supreme People's Assembly.  The WPK is the sole governing party of North Korea, although it coexists "de jure" with two other legal parties making up the Democratic Front for the Reunification of the Fatherland.  It was founded in 1949 with the merger of the Workers' Party of North Korea and the Workers' Party of South Korea.  The WPK also controls the world's 5th largest armed force – Korean People's Army.  This political party (and all of the other parties in the DPRK) remains illegal in South Korea (officially the Republic of Korea) under South Korea's own National Security Act and is sanctioned by Australia, the European Union, the United Nations and the United States.
-
-Liberty in North Korea: Liberty in North Korea (LiNK) is a 501(c)(3) nonprofit organization based out of Long Beach, California, United States, and Seoul, South Korea.  The organization rescues North Korean refugees hiding in China and resettles them in South Korea or the United States, so that they can avoid being forcibly repatriated back to North Korea, where they can face harsh punishments as a result of illegally emigrating.  The refugees first travel from China to Southeast Asia through what the organization calls a modern-day "Underground Railroad", where they can then be processed and travel to South Korea (or occasionally, the United States) where they are recognized as refugees.  From there, LiNK helps the refugees through its resettlement programs.  Each rescue costs approximately $3,000 USD, and includes $500 for resettlement programs.  As of February 2017, LiNK has resettled 600 refugees throughout the U.S. and South Korea.
-
-United States in the Korean War: At the conclusion of World War II the Allied nations began the process of disarmament of Axis controlled regions.  Japan occupied Korea at this time and had been in control since 1910.  In 1945, the decision was made to have American Marines forces oversee Japanese surrender and disarmament south of the 38th parallel and the Soviet Union would facilitate the change of power to the north.  At the time there was no political motivation and seemed to be a logical and convenient plan of action.  The original agreement and intent was to create a unified and independent Korea out of the post Japanese occupation era.  Instead each side of the 38th parallel established its own government under the influence of the occupational country; the United States in South Korea and the Soviet Union in North Korea.  Both new Korean governments discredited the other and claimed to be the only legitimate political system.  Tensions between the North and South escalated and each side began to petition foreign powers for resources and support.  South Korea wanted weapons and supplies from Truman and the United States government while North Korea sought help from Stalin and the Soviet Union.  The United States was still war weary from the disruptive World War II campaign and refused South Korea's request for weapons and troops.  North Korea convinced the Soviet Union to supply them with the weapons and support they requested.  This decision coincided with the United States withdrawing the last remaining combat troops from South Korea.  North Korea saw its opportunity and attacked South Korean forces at the 38th parallel on June 25, 1950 and thus initiating the Korean War.
-
-Foreign relations of North Korea: The foreign relations of North Korea – officially the Democratic People's Republic of Korea (DPRK) – have been shaped by its conflict with capitalist countries like South Korea and its historical ties with world communism.  Both the government of the DPRK and the government of South Korea (officially the Republic of Korea) claim to be the government of the whole of Korea.  The Korean War in the 1950s failed to resolve the issue, leaving the DPRK locked in a military confrontation with South Korea and the United States Forces Korea across the Demilitarized Zone.  At the start of the Cold War, the DPRK only had diplomatic recognition by Communist countries.  Over the following decades, it established relations with developing countries and joined the Non-Aligned Movement.  When the Eastern Bloc collapsed in the years 1989–1991, the DPRK made efforts to improve its diplomatic relations with developed capitalist countries.  At the same time there were international efforts to resolve the confrontation on the Korean peninsula, especially when the North acquired nuclear weapons after the demise of the Soviet Union, its main economic backer.
-
-Korean War: The Korean War (in South Korean Hangul: 한국전쟁 ; Hanja: 韓國戰爭 ; RR: "Hanguk Jeonjaeng " , "Korean War"; in North Korean Chosŏn'gŭl: 조국해방전쟁 ; Hancha: 祖國解放戰爭 ; MR: "Choguk haebang chǒnjaeng " , "Fatherland Liberation War"; 25 June 1950 – 27 July 1953) was a war between North Korea (with the support of China and the Soviet Union) and South Korea (with the principal support of the United States).  The war began on 25 June 1950 when North Korea invaded South Korea.  The United Nations, with the United States as the principal force, came to the aid of South Korea.  China came to the aid of North Korea, and the Soviet Union also gave some assistance to the North.
-
-Iran–North Korea relations: Iran–North Korea relations (Korean: 이란-조선민주주의인민공화국 관계 ; Persian: روابط ایران و کره‌ی شمالی‎ ‎ ) are described as being positive by official news agencies of the two countries.  Diplomatic relations picked up following the Iranian Revolution in 1979 and the establishment of an Islamic Republic.  Iran and North Korea pledge cooperation in educational, scientific, and cultural spheres.  Some media reports claim this cooperation extends to nuclear cooperation, though official U.S. government publications and academic studies have disputed this.  The United States has been greatly concerned by North Korea's arms deals with Iran, which started during the 1980s with North Korea acting as a third party in arms deals between the Communist bloc and Iran, as well as selling domestically produced weapons to Iran, and North Korea continues selling missile to Iran.  North Korea and Iran are the remaining two members of George W. Bush's "Axis of evil", which has led to many of the concerns regarding Iran–North Korea relations.
-
-Question: On which date did this conflict between North Korea and South Korea begin in which Don C. Faith Jr. served as an officer in the United States Army? 
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "conflict_name": {
-      "type": "string",
-      "description": "The name of the conflict."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "start_date": {
-      "type": "string",
-      "format": "date",
-      "description": "The date the conflict began."
-    },
-    "involved_parties": {
-      "type": "array",
-      "description": "List of primary countries involved in the conflict.",
-      "items": {
-        "type": "string"
-      }
-    },
-    "us_military_involvement": {
-      "type": "boolean",
-      "description": "Indicates if the United States military was involved in the conflict."
-    },
-    "us_officer_details": {
-      "type": "object",
-      "description": "Details about the US officer mentioned in the context.",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the US officer."
-        },
-        "rank_at_death": {
-          "type": "string",
-          "description": "The rank of the officer at the time of his death, if mentioned."
+    {
+      "role": "user",
+      "content": "Context:\nSea of Japan naming dispute: A dispute exists over the international name for the body of water which is bordered by Japan, Korea (North and South) and Russia.  In 1992, objections to the name Sea of Japan were first raised by North Korea and South Korea at the Sixth United Nations Conference on the Standardization of Geographical Names.  The Japanese government supports the exclusive use of the name \"Sea of Japan\" (日本海), while South Korea supports the alternative name \"East Sea\" (Hangul: 동해 ; Hanja: 東海 ), and North Korea supports the name \"Korean East Sea\" (Chosŏn'gŭl: 조선동해 ; Hancha: 朝鮮東海 ).  Currently, most international maps and documents use either the name Sea of Japan (or equivalent translation) exclusively, and far fewer maps include both the name Sea of Japan and East Sea, often with East Sea listed in parentheses or otherwise marked as a secondary name.  The International Hydrographic Organization, the international governing body for the naming of bodies of water around the world, in 2012 decided not to change the current single name \"Sea of Japan\" rejecting South Korea's request to use \"East Sea\" together with \"Sea of Japan\".\n\nDon C. Faith Jr.: Don Carlos Faith Jr. (August 26, 1918 – December 1, 1950) was an officer in the United States Army during the Korean War.  He was posthumously awarded the Medal of Honor for his actions from November 27, through December 1, 1950.  In 1976 LTC Faith was posthumously inducted into the U.S. Army Officer Candidate School Hall of Fame at Fort Benning, Georgia.\n\nPeople for Successful Corean Reunification: People for Successful Corean Reunification (PSCORE) is a non-governmental organization based in Seoul, South Korea, and Washington D.C. in the United States.  PSCORE addresses potential barriers to Korea reunification, suggests alternatives, and works to improve the situation of North Korean defectors in South Korea and China to bridge the gap between South Korea, North Korea, and the international community.  The organization is made up of North and South Korean staff, interns and volunteers from South Korea and abroad, and North Korean defectors.  While PSCORE provides news coverage on North Korea and helps defectors become South Korean citizens, a unique aspect is that educational programs are offered for North Korean defectors.\n\nNew Zealand–North Korea relations: New Zealand–North Korea relations (Korean:뉴질랜드-조선민주주의인민공화국 관계) refers to international relations between New Zealand and North Korea.  Relations between the two countries have been almost non-existent since the division of Korea.  During the Korean War in the 1950s, New Zealand troops fought as part of the United Nations force that repelled the North Korean invasion of South Korea.  Since then, New Zealand and North Korea have had little contact, until July 2000 when North Korean Foreign Minister Paek Nam-sun and New Zealand Minister of Foreign Affairs Phil Goff met in Bangkok, leading to the establishment of diplomatic relations in March 2001.  The New Zealand ambassador to South Korea based in Seoul is also cross-accredited to North Korea.  In 2006, North Korea tested its first nuclear weapon, drawing criticism and suspension of relations by the New Zealand government, which holds a staunch anti-nuclear policy.  New Zealand began re-establishing formal relations in 2007, when the New Zealand Minister of Foreign Affairs Winston Peters visited Pyongyang on November 20 to discuss possible political and economic deals with North Korea, on the basis that it start dismantling its nuclear weapons facilities.\n\nWorkers' Party of Korea: The Workers' Party of Korea (WPK) is the founding and ruling political party of the Democratic People's Republic of Korea (North Korea), and the largest party represented in the Supreme People's Assembly.  The WPK is the sole governing party of North Korea, although it coexists \"de jure\" with two other legal parties making up the Democratic Front for the Reunification of the Fatherland.  It was founded in 1949 with the merger of the Workers' Party of North Korea and the Workers' Party of South Korea.  The WPK also controls the world's 5th largest armed force – Korean People's Army.  This political party (and all of the other parties in the DPRK) remains illegal in South Korea (officially the Republic of Korea) under South Korea's own National Security Act and is sanctioned by Australia, the European Union, the United Nations and the United States.\n\nLiberty in North Korea: Liberty in North Korea (LiNK) is a 501(c)(3) nonprofit organization based out of Long Beach, California, United States, and Seoul, South Korea.  The organization rescues North Korean refugees hiding in China and resettles them in South Korea or the United States, so that they can avoid being forcibly repatriated back to North Korea, where they can face harsh punishments as a result of illegally emigrating.  The refugees first travel from China to Southeast Asia through what the organization calls a modern-day \"Underground Railroad\", where they can then be processed and travel to South Korea (or occasionally, the United States) where they are recognized as refugees.  From there, LiNK helps the refugees through its resettlement programs.  Each rescue costs approximately $3,000 USD, and includes $500 for resettlement programs.  As of February 2017, LiNK has resettled 600 refugees throughout the U.S. and South Korea.\n\nUnited States in the Korean War: At the conclusion of World War II the Allied nations began the process of disarmament of Axis controlled regions.  Japan occupied Korea at this time and had been in control since 1910.  In 1945, the decision was made to have American Marines forces oversee Japanese surrender and disarmament south of the 38th parallel and the Soviet Union would facilitate the change of power to the north.  At the time there was no political motivation and seemed to be a logical and convenient plan of action.  The original agreement and intent was to create a unified and independent Korea out of the post Japanese occupation era.  Instead each side of the 38th parallel established its own government under the influence of the occupational country; the United States in South Korea and the Soviet Union in North Korea.  Both new Korean governments discredited the other and claimed to be the only legitimate political system.  Tensions between the North and South escalated and each side began to petition foreign powers for resources and support.  South Korea wanted weapons and supplies from Truman and the United States government while North Korea sought help from Stalin and the Soviet Union.  The United States was still war weary from the disruptive World War II campaign and refused South Korea's request for weapons and troops.  North Korea convinced the Soviet Union to supply them with the weapons and support they requested.  This decision coincided with the United States withdrawing the last remaining combat troops from South Korea.  North Korea saw its opportunity and attacked South Korean forces at the 38th parallel on June 25, 1950 and thus initiating the Korean War.\n\nForeign relations of North Korea: The foreign relations of North Korea – officially the Democratic People's Republic of Korea (DPRK) – have been shaped by its conflict with capitalist countries like South Korea and its historical ties with world communism.  Both the government of the DPRK and the government of South Korea (officially the Republic of Korea) claim to be the government of the whole of Korea.  The Korean War in the 1950s failed to resolve the issue, leaving the DPRK locked in a military confrontation with South Korea and the United States Forces Korea across the Demilitarized Zone.  At the start of the Cold War, the DPRK only had diplomatic recognition by Communist countries.  Over the following decades, it established relations with developing countries and joined the Non-Aligned Movement.  When the Eastern Bloc collapsed in the years 1989–1991, the DPRK made efforts to improve its diplomatic relations with developed capitalist countries.  At the same time there were international efforts to resolve the confrontation on the Korean peninsula, especially when the North acquired nuclear weapons after the demise of the Soviet Union, its main economic backer.\n\nKorean War: The Korean War (in South Korean Hangul: 한국전쟁 ; Hanja: 韓國戰爭 ; RR: \"Hanguk Jeonjaeng \" , \"Korean War\"; in North Korean Chosŏn'gŭl: 조국해방전쟁 ; Hancha: 祖國解放戰爭 ; MR: \"Choguk haebang chǒnjaeng \" , \"Fatherland Liberation War\"; 25 June 1950 – 27 July 1953) was a war between North Korea (with the support of China and the Soviet Union) and South Korea (with the principal support of the United States).  The war began on 25 June 1950 when North Korea invaded South Korea.  The United Nations, with the United States as the principal force, came to the aid of South Korea.  China came to the aid of North Korea, and the Soviet Union also gave some assistance to the North.\n\nIran–North Korea relations: Iran–North Korea relations (Korean: 이란-조선민주주의인민공화국 관계 ; Persian: روابط ایران و کره‌ی شمالی‎ ‎ ) are described as being positive by official news agencies of the two countries.  Diplomatic relations picked up following the Iranian Revolution in 1979 and the establishment of an Islamic Republic.  Iran and North Korea pledge cooperation in educational, scientific, and cultural spheres.  Some media reports claim this cooperation extends to nuclear cooperation, though official U.S. government publications and academic studies have disputed this.  The United States has been greatly concerned by North Korea's arms deals with Iran, which started during the 1980s with North Korea acting as a third party in arms deals between the Communist bloc and Iran, as well as selling domestically produced weapons to Iran, and North Korea continues selling missile to Iran.  North Korea and Iran are the remaining two members of George W. Bush's \"Axis of evil\", which has led to many of the concerns regarding Iran–North Korea relations.\n\nQuestion: On which date did this conflict between North Korea and South Korea begin in which Don C. Faith Jr. served as an officer in the United States Army? \n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"conflict_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the conflict.\"\n    },\n    \"start_date\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"The date the conflict began.\"\n    },\n    \"involved_parties\": {\n      \"type\": \"array\",\n      \"description\": \"List of primary countries involved in the conflict.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"us_military_involvement\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the United States military was involved in the conflict.\"\n    },\n    \"us_officer_details\": {\n      \"type\": \"object\",\n      \"description\": \"Details about the US officer mentioned in the context.\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the US officer.\"\n        },\n        \"rank_at_death\": {\n          \"type\": \"string\",\n          \"description\": \"The rank of the officer at the time of his death, if mentioned.\"\n        }\n      },\n      \"required\": [\n        \"name\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"conflict_name\",\n    \"start_date\",\n    \"involved_parties\",\n    \"us_military_involvement\",\n    \"us_officer_details\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "conflict_name": {
+        "type": "string",
+        "description": "The name of the conflict."
+      },
+      "start_date": {
+        "type": "string",
+        "format": "date",
+        "description": "The date the conflict began."
+      },
+      "involved_parties": {
+        "type": "array",
+        "description": "List of primary countries involved in the conflict.",
+        "items": {
+          "type": "string"
         }
       },
-      "required": [
-        "name"
-      ],
-      "additionalProperties": false
-    }
+      "us_military_involvement": {
+        "type": "boolean",
+        "description": "Indicates if the United States military was involved in the conflict."
+      },
+      "us_officer_details": {
+        "type": "object",
+        "description": "Details about the US officer mentioned in the context.",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the US officer."
+          },
+          "rank_at_death": {
+            "type": "string",
+            "description": "The rank of the officer at the time of his death, if mentioned."
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "conflict_name",
+      "start_date",
+      "involved_parties",
+      "us_military_involvement",
+      "us_officer_details"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "conflict_name",
-    "start_date",
-    "involved_parties",
-    "us_military_involvement",
-    "us_officer_details"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

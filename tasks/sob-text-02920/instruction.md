@@ -1,83 +1,60 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Phoebus Levene: Phoebus Aaron Theodore Levene, M.D. (25 February 1869 – 6 September 1940) was an American biochemist who studied the structure and function of nucleic acids.  He characterized the different forms of nucleic acid, DNA from RNA, and found that DNA contained adenine, guanine, thymine, cytosine, deoxyribose, and a phosphate group.
-
-Phosphorylation: Phosphorylation allows coupling and addition of a phosphoryl group.  This particular biochemistry probably represents the origins of catecholamine overload (PO) to a molecule.  In biology, phosphorylation and its counterpart, dephosphorylation, are critical for many cellular processes.  A large fraction of proteins (between 1/3 to 2/3 of the proteome in eukaryotes ) are temporarily phosphorylated, as are many sugars, lipids, and other molecules.  Phosphorylation is especially important for protein function as this modification activates (or deactivates) almost half of the enzymes, thereby regulating their function.  Protein phosphorylation is considered the most abundant post-translational modification in eukaryotes.
-
-Ubiquitin-activating enzyme: Ubiquitin-activating enzymes, also known as E1 enzymes, catalyze the first step in the ubiquitination reaction, which (among other things) can target a protein for degradation via a proteasome.  This covalent attachment of ubiquitin or ubiquitin-like proteins to targeted proteins is a major mechanism for regulating protein function in eukaryotic organisms.  Many processes such as cell division, immune responses and embryonic development are also regulated by post-translational modification by ubiquitin and ubiquitin-like proteins.
-
-Protein phosphatase: A protein phosphatase is a phosphatase enzyme that removes a phosphate group from the phosphorylated amino acid residue of its substrate protein.  Protein phosphorylation is one of the most common forms of reversible protein posttranslational modification (PTM), with up to 30% of all proteins being phosphorylated at any given time.  Protein kinases (PKs) are the effectors of phosphorylation and catalyse the transfer of a γ-phosphate from ATP to specific amino acids on proteins.  Several hundred PKs exist in mammals and are classified into distinct super-families.  Proteins are phosphorylated predominantly on Ser, Thr and Tyr residues, which account for 79.3, 16.9 and 3.8% respectively of the phosphoproteome, at least in mammals.  In contrast, protein phosphatases (PPs) are the primary effectors of dephosphorylation and can be grouped into three main classes based on sequence, structure and catalytic function.  The largest class of PPs is the phosphoprotein phosphatase (PPP) family comprising PP1, PP2A, PP2B, PP4, PP5, PP6 and PP7, and the protein phosphatase Mg- or Mn-dependent (PPM) family, composed primarily of PP2C.  The protein Tyr phosphatase (PTP) super-family forms the second group, and the aspartate-based protein phosphatases the third.  The protein pseudophosphatases form part of the larger phosphatase family, and in most cases are thought to be catalytically inert, instead functioning as phosphate-binding proteins, integrators of signalling or subcellular traps.  Examples of membrane-spanning protein phosphatases containing both active (phosphatase) and inactive (pseudophosphatase) domains linked in tandem are known, conceptually similar to the kinase and pseudokinase domain polypeptide structure of the JAK pseudokinases.  A complete comparative analysis of human phosphatases and pseudophosphatases has been completed by Manning and colleagues, forming a companion piece to the ground-breaking analysis of the human kinome, which encodes the complete set of ~536 human protein kinases.
-
-Palmitoylation: Palmitoylation is the covalent attachment of fatty acids, such as palmitic acid, to cysteine and less frequently to serine and threonine residues of proteins, which are typically membrane proteins.  The precise function of palmitoylation depends on the particular protein being considered.  Palmitoylation enhances the hydrophobicity of proteins and contributes to their membrane association.  Palmitoylation also appears to play a significant role in subcellular trafficking of proteins between membrane compartments, as well as in modulating protein–protein interactions.  In contrast to prenylation and myristoylation, palmitoylation is usually reversible (because the bond between palmitic acid and protein is often a thioester bond).  The reverse reaction is catalysed by palmitoyl protein thioesterases. Because palmitoylation is a dynamic, post-translational process, it is believed to be employed by the cell to alter the subcellular localization, protein–protein interactions, or binding capacities of a protein.
-
-Biomolecular structure: Biomolecular structure is the intricate folded, three-dimensional shape that is formed by a molecule of protein, DNA, or RNA, and that is important to its function.  The structure of these molecules may be considered at any of several length scales ranging from the level of individual atoms to the relationships among entire protein subunits.  This useful distinction among scales is often expressed as a decomposition of molecular structure into four levels: primary, secondary, tertiary, and quaternary.  The scaffold for this multiscale organization of the molecule arises at the secondary level, where the fundamental structural elements are the molecule's various hydrogen bonds.  This leads to several recognizable "domains" of protein structure and nucleic acid structure, including such secondary-structure features as alpha helixes and beta sheets for proteins, and hairpin loops, bulges, and internal loops for nucleic acids.
-
-Phosphoproteomics: Phosphoproteomics is a branch of proteomics that identifies, catalogs, and characterizes proteins containing a phosphate group as a post-translational modification.  Phosphorylation is a key reversible modification that regulates protein function, subcellular localization, complex formation, degradation of proteins and therefore cell signalling networks.  With all of these modification results, it is estimated that between 30% - 65% of all proteins may be phosphorylated, some multiple times.  Based on statistical estimates from many datasets, 230,000 156,000 and 40,000 phosphorylation sites should exist in human, mouse, and yeast, respectively.
-
-Protein phosphorylation: Protein phosphorylation is a post-translational modification of proteins in which an amino acid residue is phosphorylated by a protein kinase by the addition of a covalently bound phosphate group.  Phosphorylation alters the structural conformation of a protein, causing it to become activated, deactivated, or modifying its function.  The reverse reaction of phosphorylation is called dephosphorylation, and is catalyzed by protein phosphatases. Protein kinases and phosphatases work independently and in a balance to regulate the function of proteins.  The amino acids most commonly phosphorylated are serine, threonine, and tyrosine in eukaryotes, and histidine in prokaryotes, which play important and well-characterized roles in signaling pathways and metabolism.  However, many other amino acids can also be phosphorylated, including arginine, lysine, and cysteine.  Protein phosphorylation was first reported in 1906 by Phoebus Levene at the Rockefeller Institute for Medical Research with the discovery of phosphorylated vitellin.  However, it was nearly 50 years until the enzymatic phosphorylation of proteins by protein kinases was discovered.
-
-Biomolecular engineering: Biomolecular engineering is the application of engineering principles and practices to the purposeful manipulation of molecules of biological origin.  Biomolecular engineers integrate knowledge of biological processes with the core knowledge of chemical engineering in order to focus on molecular level solutions to issues and problems in the life sciences related to the environment, agriculture, energy, industry, food production, biotechnology and medicine.  Biomolecular engineers purposefully manipulate carbohydrates, proteins, nucleic acids and lipids within the framework of the relation between their structure (see: nucleic acid structure, carbohydrate chemistry, protein structure,), function (see: protein function) and properties and in relation to applicability to such areas as environmental remediation, crop and livestock production, biofuel cells and biomolecular diagnostics.  Fundamental attention is given to the thermodynamics and kinetics of molecular recognition in enzymes, antibodies, DNA hybridization, bio-conjugation/bio-immobilization and bioseparations.  Attention is also given to the rudiments of engineered biomolecules in cell signaling, cell growth kinetics, biochemical pathway engineering and bioreactor engineering.  Biomolecular engineers are leading the major shift towards understanding and controlling the molecular mechanisms that define life as we know it.
-
-Protein tyrosine phosphatase: Protein tyrosine phosphatases are a group of enzymes that remove phosphate groups from phosphorylated tyrosine residues on proteins.  Protein tyrosine (pTyr) phosphorylation is a common post-translational modification that can create novel recognition motifs for protein interactions and cellular localization, affect protein stability, and regulate enzyme activity.  As a consequence, maintaining an appropriate level of protein tyrosine phosphorylation is essential for many cellular functions.  Tyrosine-specific protein phosphatases (PTPase; EC 3.1.3.48 ) catalyse the removal of a phosphate group attached to a tyrosine residue, using a cysteinyl-phosphate enzyme intermediate.  These enzymes are key regulatory components in signal transduction pathways (such as the MAP kinase pathway) and cell cycle control, and are important in the control of cell growth, proliferation, differentiation, transformation, and synaptic plasticity.
-
-Question: Protein phosphorylation is a post-translational modification of proteins, was first reported in 1906 by which American biochemist who studied the structure and function of nucleic acids, at the Rockefeller Institute for Medical Research?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "biochemist_name": {
-      "type": "string",
-      "description": "The full name of the biochemist."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "nationality": {
-      "type": "string",
-      "description": "The nationality of the biochemist."
-    },
-    "primary_research_area": {
-      "type": "string",
-      "description": "The primary area of research for the biochemist."
-    },
-    "discovery_details": {
-      "type": "object",
-      "properties": {
-        "event_year": {
-          "type": "integer",
-          "description": "The year the discovery was first reported."
-        },
-        "institution": {
-          "type": "string",
-          "description": "The institution where the discovery was reported."
-        },
-        "specific_discovery": {
-          "type": "string",
-          "description": "The specific substance or process discovered related to protein phosphorylation."
-        }
-      },
-      "required": [
-        "event_year",
-        "institution",
-        "specific_discovery"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nPhoebus Levene: Phoebus Aaron Theodore Levene, M.D. (25 February 1869 – 6 September 1940) was an American biochemist who studied the structure and function of nucleic acids.  He characterized the different forms of nucleic acid, DNA from RNA, and found that DNA contained adenine, guanine, thymine, cytosine, deoxyribose, and a phosphate group.\n\nPhosphorylation: Phosphorylation allows coupling and addition of a phosphoryl group.  This particular biochemistry probably represents the origins of catecholamine overload (PO) to a molecule.  In biology, phosphorylation and its counterpart, dephosphorylation, are critical for many cellular processes.  A large fraction of proteins (between 1/3 to 2/3 of the proteome in eukaryotes ) are temporarily phosphorylated, as are many sugars, lipids, and other molecules.  Phosphorylation is especially important for protein function as this modification activates (or deactivates) almost half of the enzymes, thereby regulating their function.  Protein phosphorylation is considered the most abundant post-translational modification in eukaryotes.\n\nUbiquitin-activating enzyme: Ubiquitin-activating enzymes, also known as E1 enzymes, catalyze the first step in the ubiquitination reaction, which (among other things) can target a protein for degradation via a proteasome.  This covalent attachment of ubiquitin or ubiquitin-like proteins to targeted proteins is a major mechanism for regulating protein function in eukaryotic organisms.  Many processes such as cell division, immune responses and embryonic development are also regulated by post-translational modification by ubiquitin and ubiquitin-like proteins.\n\nProtein phosphatase: A protein phosphatase is a phosphatase enzyme that removes a phosphate group from the phosphorylated amino acid residue of its substrate protein.  Protein phosphorylation is one of the most common forms of reversible protein posttranslational modification (PTM), with up to 30% of all proteins being phosphorylated at any given time.  Protein kinases (PKs) are the effectors of phosphorylation and catalyse the transfer of a γ-phosphate from ATP to specific amino acids on proteins.  Several hundred PKs exist in mammals and are classified into distinct super-families.  Proteins are phosphorylated predominantly on Ser, Thr and Tyr residues, which account for 79.3, 16.9 and 3.8% respectively of the phosphoproteome, at least in mammals.  In contrast, protein phosphatases (PPs) are the primary effectors of dephosphorylation and can be grouped into three main classes based on sequence, structure and catalytic function.  The largest class of PPs is the phosphoprotein phosphatase (PPP) family comprising PP1, PP2A, PP2B, PP4, PP5, PP6 and PP7, and the protein phosphatase Mg- or Mn-dependent (PPM) family, composed primarily of PP2C.  The protein Tyr phosphatase (PTP) super-family forms the second group, and the aspartate-based protein phosphatases the third.  The protein pseudophosphatases form part of the larger phosphatase family, and in most cases are thought to be catalytically inert, instead functioning as phosphate-binding proteins, integrators of signalling or subcellular traps.  Examples of membrane-spanning protein phosphatases containing both active (phosphatase) and inactive (pseudophosphatase) domains linked in tandem are known, conceptually similar to the kinase and pseudokinase domain polypeptide structure of the JAK pseudokinases.  A complete comparative analysis of human phosphatases and pseudophosphatases has been completed by Manning and colleagues, forming a companion piece to the ground-breaking analysis of the human kinome, which encodes the complete set of ~536 human protein kinases.\n\nPalmitoylation: Palmitoylation is the covalent attachment of fatty acids, such as palmitic acid, to cysteine and less frequently to serine and threonine residues of proteins, which are typically membrane proteins.  The precise function of palmitoylation depends on the particular protein being considered.  Palmitoylation enhances the hydrophobicity of proteins and contributes to their membrane association.  Palmitoylation also appears to play a significant role in subcellular trafficking of proteins between membrane compartments, as well as in modulating protein–protein interactions.  In contrast to prenylation and myristoylation, palmitoylation is usually reversible (because the bond between palmitic acid and protein is often a thioester bond).  The reverse reaction is catalysed by palmitoyl protein thioesterases. Because palmitoylation is a dynamic, post-translational process, it is believed to be employed by the cell to alter the subcellular localization, protein–protein interactions, or binding capacities of a protein.\n\nBiomolecular structure: Biomolecular structure is the intricate folded, three-dimensional shape that is formed by a molecule of protein, DNA, or RNA, and that is important to its function.  The structure of these molecules may be considered at any of several length scales ranging from the level of individual atoms to the relationships among entire protein subunits.  This useful distinction among scales is often expressed as a decomposition of molecular structure into four levels: primary, secondary, tertiary, and quaternary.  The scaffold for this multiscale organization of the molecule arises at the secondary level, where the fundamental structural elements are the molecule's various hydrogen bonds.  This leads to several recognizable \"domains\" of protein structure and nucleic acid structure, including such secondary-structure features as alpha helixes and beta sheets for proteins, and hairpin loops, bulges, and internal loops for nucleic acids.\n\nPhosphoproteomics: Phosphoproteomics is a branch of proteomics that identifies, catalogs, and characterizes proteins containing a phosphate group as a post-translational modification.  Phosphorylation is a key reversible modification that regulates protein function, subcellular localization, complex formation, degradation of proteins and therefore cell signalling networks.  With all of these modification results, it is estimated that between 30% - 65% of all proteins may be phosphorylated, some multiple times.  Based on statistical estimates from many datasets, 230,000 156,000 and 40,000 phosphorylation sites should exist in human, mouse, and yeast, respectively.\n\nProtein phosphorylation: Protein phosphorylation is a post-translational modification of proteins in which an amino acid residue is phosphorylated by a protein kinase by the addition of a covalently bound phosphate group.  Phosphorylation alters the structural conformation of a protein, causing it to become activated, deactivated, or modifying its function.  The reverse reaction of phosphorylation is called dephosphorylation, and is catalyzed by protein phosphatases. Protein kinases and phosphatases work independently and in a balance to regulate the function of proteins.  The amino acids most commonly phosphorylated are serine, threonine, and tyrosine in eukaryotes, and histidine in prokaryotes, which play important and well-characterized roles in signaling pathways and metabolism.  However, many other amino acids can also be phosphorylated, including arginine, lysine, and cysteine.  Protein phosphorylation was first reported in 1906 by Phoebus Levene at the Rockefeller Institute for Medical Research with the discovery of phosphorylated vitellin.  However, it was nearly 50 years until the enzymatic phosphorylation of proteins by protein kinases was discovered.\n\nBiomolecular engineering: Biomolecular engineering is the application of engineering principles and practices to the purposeful manipulation of molecules of biological origin.  Biomolecular engineers integrate knowledge of biological processes with the core knowledge of chemical engineering in order to focus on molecular level solutions to issues and problems in the life sciences related to the environment, agriculture, energy, industry, food production, biotechnology and medicine.  Biomolecular engineers purposefully manipulate carbohydrates, proteins, nucleic acids and lipids within the framework of the relation between their structure (see: nucleic acid structure, carbohydrate chemistry, protein structure,), function (see: protein function) and properties and in relation to applicability to such areas as environmental remediation, crop and livestock production, biofuel cells and biomolecular diagnostics.  Fundamental attention is given to the thermodynamics and kinetics of molecular recognition in enzymes, antibodies, DNA hybridization, bio-conjugation/bio-immobilization and bioseparations.  Attention is also given to the rudiments of engineered biomolecules in cell signaling, cell growth kinetics, biochemical pathway engineering and bioreactor engineering.  Biomolecular engineers are leading the major shift towards understanding and controlling the molecular mechanisms that define life as we know it.\n\nProtein tyrosine phosphatase: Protein tyrosine phosphatases are a group of enzymes that remove phosphate groups from phosphorylated tyrosine residues on proteins.  Protein tyrosine (pTyr) phosphorylation is a common post-translational modification that can create novel recognition motifs for protein interactions and cellular localization, affect protein stability, and regulate enzyme activity.  As a consequence, maintaining an appropriate level of protein tyrosine phosphorylation is essential for many cellular functions.  Tyrosine-specific protein phosphatases (PTPase; EC 3.1.3.48 ) catalyse the removal of a phosphate group attached to a tyrosine residue, using a cysteinyl-phosphate enzyme intermediate.  These enzymes are key regulatory components in signal transduction pathways (such as the MAP kinase pathway) and cell cycle control, and are important in the control of cell growth, proliferation, differentiation, transformation, and synaptic plasticity.\n\nQuestion: Protein phosphorylation is a post-translational modification of proteins, was first reported in 1906 by which American biochemist who studied the structure and function of nucleic acids, at the Rockefeller Institute for Medical Research?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"biochemist_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the biochemist.\"\n    },\n    \"nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the biochemist.\"\n    },\n    \"primary_research_area\": {\n      \"type\": \"string\",\n      \"description\": \"The primary area of research for the biochemist.\"\n    },\n    \"discovery_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"event_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the discovery was first reported.\"\n        },\n        \"institution\": {\n          \"type\": \"string\",\n          \"description\": \"The institution where the discovery was reported.\"\n        },\n        \"specific_discovery\": {\n          \"type\": \"string\",\n          \"description\": \"The specific substance or process discovered related to protein phosphorylation.\"\n        }\n      },\n      \"required\": [\n        \"event_year\",\n        \"institution\",\n        \"specific_discovery\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"biochemist_name\",\n    \"nationality\",\n    \"primary_research_area\",\n    \"discovery_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "biochemist_name",
-    "nationality",
-    "primary_research_area",
-    "discovery_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "biochemist_name": {
+        "type": "string",
+        "description": "The full name of the biochemist."
+      },
+      "nationality": {
+        "type": "string",
+        "description": "The nationality of the biochemist."
+      },
+      "primary_research_area": {
+        "type": "string",
+        "description": "The primary area of research for the biochemist."
+      },
+      "discovery_details": {
+        "type": "object",
+        "properties": {
+          "event_year": {
+            "type": "integer",
+            "description": "The year the discovery was first reported."
+          },
+          "institution": {
+            "type": "string",
+            "description": "The institution where the discovery was reported."
+          },
+          "specific_discovery": {
+            "type": "string",
+            "description": "The specific substance or process discovered related to protein phosphorylation."
+          }
+        },
+        "required": [
+          "event_year",
+          "institution",
+          "specific_discovery"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "biochemist_name",
+      "nationality",
+      "primary_research_area",
+      "discovery_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

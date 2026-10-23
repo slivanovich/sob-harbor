@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Návštěvníci (TV series): Návštěvníci ("The Visitors") is a Czechoslovak sci-fi TV series filmed between 1981 and 1983 by Czech director Jindřich Polák.  The 15 parts were co-produced with television-companies of the Federal Republic of Germany (West-Germany at that time), Switzerland and France.  As an additional 16th part for Germany a "Making Of" was produced under the title "Besuch bei den Besuchern" (Visiting the Visitors).  In West-Germany the series got the title "Die Besucher" (The Visitors), in the German Democratic Republic and Australia it was called "Expedition Adam 84".
-
-Made of Steel (novella): Made of Steel is a BBC Books original novella written by Terrance Dicks and based on the long-running British science fiction television series "Doctor Who".  It features the Tenth Doctor and Martha.  This paperback is part of the Quick Reads Initiative sponsored by the UK government, to encourage literacy.  It has a similar look to BBC Books' other new series adventures, except for its much shorter word count, being a paperback and not being numbered as part of the same series.  To date it is the one of only five novels based upon the revived series that have not been published in hardcover: the first, "I am a Dalek", was published in May 2006; the third, "Revenge of the Judoon", was published in March 2008; the fourth, "The Sontaran Games", was published in February 2009; and the fifth, "Code of the Krillitanes", was published in March 2010.  These four books are also part of the Quick Reads Initiative.
-
-Bicentennial Man (film): Bicentennial Man is a 1999 Canadian-American science fiction comedy-drama film starring Robin Williams, Sam Neill, Embeth Davidtz (in a dual role), Wendy Crewson, and Oliver Platt.  Based on the novel "The Positronic Man" by Isaac Asimov and Robert Silverberg (which is itself based on Asimov's original novella of the same name), the plot explores issues of humanity, slavery, prejudice, maturity, intellectual freedom, conformity, sex, love, and mortality.  The film, a co-production between Touchstone Pictures and Columbia Pictures, was directed by Chris Columbus.  The title comes from the main character existing to the age of two hundred years, and Asimov's novella was published in the year the United States had its bicentennial.
-
-James Clavell: James Clavell (10 October 1921 – 6 September 1994), born Charles Edmund Dumaresq Clavell, was an Australian-born British (later naturalized American) novelist, screenwriter, director, and World War II veteran and prisoner of war.  Clavell is best known as a writer for his The Asian Saga series of novels and their televised adaptations.  Clavell also authored screenplays, such as "The Great Escape" (1963) and "To Sir, with Love" (1967).  Clavell wrote science fiction, as well, including an episode of the early sci-fi TV series 'Men Into Space' in 1959, titled 'First Woman on the Moon,' as well as the film script for the original (1958) version of the sci-fi/horror classic "The Fly", starring Vincent Price.
-
-Doctor Who: Legacy (video game): Doctor Who: Legacy is a match-3 puzzle RPG video game released on 27 November 2013 based upon the BBC television programme.  It is a free-to-play game release to coincide with the 50th Anniversary of the popular BBC sci-fi TV show, with rights licensed by BBC Worldwide.  The game launched focusing on the 11th Doctor (as played by Matt Smith), then later shifted the focus to the 12th Doctor (played by Peter Capaldi), upon his debut in the show.  New characters and content are added to the game regularly upon them being "signed off" with both the actors and the BBC brand team.  The game includes every incarnation of the Doctor from the television series (including the War Doctor) and well over 200 companions from both Classic and Modern Doctor Who.  The game also closely followed Series 8 and 9 of the show with new levels launching each weekend alongside each episode and included new characters, costumes, and enemies from most of the episodes.
-
-Frayed: Frayed is an original novella written by Tara Samms (a pseudonym for Stephen Cole) and based on the long-running British science fiction television series "Doctor Who".  It features the First Doctor and Susan.  It was released both as a standard edition hardback and a deluxe edition (ISBN  ) featuring a frontispiece by Chris Moore.  Both editions have a foreword by Stephen Laws.
-
-Revenge of the Judoon: Revenge of the Judoon is a BBC Books original novella written by Terrance Dicks and based on the long-running British science fiction television series "Doctor Who".  It features the Tenth Doctor and his companion Martha Jones.  This paperback is part of the Quick Reads Initiative sponsored by the UK government, to encourage literacy.  It has a similar look to BBC Books' other new series adventures, except for its much shorter word count, being a paperback and not being numbered as part of the same series.  To date it is the one of only five novels based upon the revived series that have not been published in hardcover: the first, "I am a Dalek", was published in May 2006; the second, "Made of Steel", was published in March 2007; the fourth, "The Sontaran Games", was published in February 2009; and the fifth, "Code of the Krillitanes", was published in March 2010.  These four books are also part of the Quick Reads Initiative.
-
-I Am a Dalek: I am a Dalek is a BBC Books original novella written by Gareth Roberts and based on the long-running British science fiction television series "Doctor Who".  It features the Tenth Doctor and Rose.  This paperback is part of the Quick Reads Initiative sponsored by the UK government, to encourage literacy.  It has a similar look to BBC Books' other new series adventures, except for its much shorter word count, being a paperback and not being numbered as part of the same series.  To date it is the one of only five novels based upon the revived series that have not been published in hardcover: the second, "Made of Steel", was published in March 2007; the third, "Revenge of the Judoon", was published in March 2008; the fourth, "The Sontaran Games", was published in February 2009; and the fifth, "Code of the Krillitanes", was published in March 2010.  These four books are also part of the Quick Reads Initiative.
-
-The Sontaran Games: The Sontaran Games is a BBC Books original novella written by Jacqueline Rayner and based on the long-running British science fiction television series "Doctor Who".  It features the Tenth Doctor as played by David Tennant.  This paperback is part of the Quick Reads Initiative sponsored by the UK government, to encourage literacy.  It has a similar look to BBC Books' other new series adventures, except for its much shorter word count, being a paperback and not being numbered as part of the same series.  To date it is the one of only five novels based upon the revived series that have not been published in hardcover.
-
-Doctor Who: Doctor Who is a British science-fiction television programme produced by the BBC since 1963.  The programme depicts the adventures of a Time Lord called "the Doctor", an extraterrestrial being from the planet Gallifrey.  The Doctor explores the universe in a time-travelling space ship called the TARDIS.  Its exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired.  Accompanied by a number of companions, the Doctor combats a variety of foes, while working to save civilisations and help people in need.
-
-Question: Frayed is an original novella based on a sci-fi tv series produced by BBC since what year?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "novella_title": {
-      "type": "string",
-      "description": "The title of the novella."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "based_on_series": {
-      "type": "string",
-      "description": "The name of the science fiction TV series the novella is based on."
-    },
-    "series_producer": {
-      "type": "string",
-      "description": "The company that produced the TV series."
-    },
-    "series_start_year": {
-      "type": "integer",
-      "description": "The year the TV series began production."
+    {
+      "role": "user",
+      "content": "Context:\nNávštěvníci (TV series): Návštěvníci (\"The Visitors\") is a Czechoslovak sci-fi TV series filmed between 1981 and 1983 by Czech director Jindřich Polák.  The 15 parts were co-produced with television-companies of the Federal Republic of Germany (West-Germany at that time), Switzerland and France.  As an additional 16th part for Germany a \"Making Of\" was produced under the title \"Besuch bei den Besuchern\" (Visiting the Visitors).  In West-Germany the series got the title \"Die Besucher\" (The Visitors), in the German Democratic Republic and Australia it was called \"Expedition Adam 84\".\n\nMade of Steel (novella): Made of Steel is a BBC Books original novella written by Terrance Dicks and based on the long-running British science fiction television series \"Doctor Who\".  It features the Tenth Doctor and Martha.  This paperback is part of the Quick Reads Initiative sponsored by the UK government, to encourage literacy.  It has a similar look to BBC Books' other new series adventures, except for its much shorter word count, being a paperback and not being numbered as part of the same series.  To date it is the one of only five novels based upon the revived series that have not been published in hardcover: the first, \"I am a Dalek\", was published in May 2006; the third, \"Revenge of the Judoon\", was published in March 2008; the fourth, \"The Sontaran Games\", was published in February 2009; and the fifth, \"Code of the Krillitanes\", was published in March 2010.  These four books are also part of the Quick Reads Initiative.\n\nBicentennial Man (film): Bicentennial Man is a 1999 Canadian-American science fiction comedy-drama film starring Robin Williams, Sam Neill, Embeth Davidtz (in a dual role), Wendy Crewson, and Oliver Platt.  Based on the novel \"The Positronic Man\" by Isaac Asimov and Robert Silverberg (which is itself based on Asimov's original novella of the same name), the plot explores issues of humanity, slavery, prejudice, maturity, intellectual freedom, conformity, sex, love, and mortality.  The film, a co-production between Touchstone Pictures and Columbia Pictures, was directed by Chris Columbus.  The title comes from the main character existing to the age of two hundred years, and Asimov's novella was published in the year the United States had its bicentennial.\n\nJames Clavell: James Clavell (10 October 1921 – 6 September 1994), born Charles Edmund Dumaresq Clavell, was an Australian-born British (later naturalized American) novelist, screenwriter, director, and World War II veteran and prisoner of war.  Clavell is best known as a writer for his The Asian Saga series of novels and their televised adaptations.  Clavell also authored screenplays, such as \"The Great Escape\" (1963) and \"To Sir, with Love\" (1967).  Clavell wrote science fiction, as well, including an episode of the early sci-fi TV series 'Men Into Space' in 1959, titled 'First Woman on the Moon,' as well as the film script for the original (1958) version of the sci-fi/horror classic \"The Fly\", starring Vincent Price.\n\nDoctor Who: Legacy (video game): Doctor Who: Legacy is a match-3 puzzle RPG video game released on 27 November 2013 based upon the BBC television programme.  It is a free-to-play game release to coincide with the 50th Anniversary of the popular BBC sci-fi TV show, with rights licensed by BBC Worldwide.  The game launched focusing on the 11th Doctor (as played by Matt Smith), then later shifted the focus to the 12th Doctor (played by Peter Capaldi), upon his debut in the show.  New characters and content are added to the game regularly upon them being \"signed off\" with both the actors and the BBC brand team.  The game includes every incarnation of the Doctor from the television series (including the War Doctor) and well over 200 companions from both Classic and Modern Doctor Who.  The game also closely followed Series 8 and 9 of the show with new levels launching each weekend alongside each episode and included new characters, costumes, and enemies from most of the episodes.\n\nFrayed: Frayed is an original novella written by Tara Samms (a pseudonym for Stephen Cole) and based on the long-running British science fiction television series \"Doctor Who\".  It features the First Doctor and Susan.  It was released both as a standard edition hardback and a deluxe edition (ISBN  ) featuring a frontispiece by Chris Moore.  Both editions have a foreword by Stephen Laws.\n\nRevenge of the Judoon: Revenge of the Judoon is a BBC Books original novella written by Terrance Dicks and based on the long-running British science fiction television series \"Doctor Who\".  It features the Tenth Doctor and his companion Martha Jones.  This paperback is part of the Quick Reads Initiative sponsored by the UK government, to encourage literacy.  It has a similar look to BBC Books' other new series adventures, except for its much shorter word count, being a paperback and not being numbered as part of the same series.  To date it is the one of only five novels based upon the revived series that have not been published in hardcover: the first, \"I am a Dalek\", was published in May 2006; the second, \"Made of Steel\", was published in March 2007; the fourth, \"The Sontaran Games\", was published in February 2009; and the fifth, \"Code of the Krillitanes\", was published in March 2010.  These four books are also part of the Quick Reads Initiative.\n\nI Am a Dalek: I am a Dalek is a BBC Books original novella written by Gareth Roberts and based on the long-running British science fiction television series \"Doctor Who\".  It features the Tenth Doctor and Rose.  This paperback is part of the Quick Reads Initiative sponsored by the UK government, to encourage literacy.  It has a similar look to BBC Books' other new series adventures, except for its much shorter word count, being a paperback and not being numbered as part of the same series.  To date it is the one of only five novels based upon the revived series that have not been published in hardcover: the second, \"Made of Steel\", was published in March 2007; the third, \"Revenge of the Judoon\", was published in March 2008; the fourth, \"The Sontaran Games\", was published in February 2009; and the fifth, \"Code of the Krillitanes\", was published in March 2010.  These four books are also part of the Quick Reads Initiative.\n\nThe Sontaran Games: The Sontaran Games is a BBC Books original novella written by Jacqueline Rayner and based on the long-running British science fiction television series \"Doctor Who\".  It features the Tenth Doctor as played by David Tennant.  This paperback is part of the Quick Reads Initiative sponsored by the UK government, to encourage literacy.  It has a similar look to BBC Books' other new series adventures, except for its much shorter word count, being a paperback and not being numbered as part of the same series.  To date it is the one of only five novels based upon the revived series that have not been published in hardcover.\n\nDoctor Who: Doctor Who is a British science-fiction television programme produced by the BBC since 1963.  The programme depicts the adventures of a Time Lord called \"the Doctor\", an extraterrestrial being from the planet Gallifrey.  The Doctor explores the universe in a time-travelling space ship called the TARDIS.  Its exterior appears as a blue British police box, which was a common sight in Britain in 1963 when the series first aired.  Accompanied by a number of companions, the Doctor combats a variety of foes, while working to save civilisations and help people in need.\n\nQuestion: Frayed is an original novella based on a sci-fi tv series produced by BBC since what year?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"novella_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the novella.\"\n    },\n    \"based_on_series\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the science fiction TV series the novella is based on.\"\n    },\n    \"series_producer\": {\n      \"type\": \"string\",\n      \"description\": \"The company that produced the TV series.\"\n    },\n    \"series_start_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the TV series began production.\"\n    }\n  },\n  \"required\": [\n    \"novella_title\",\n    \"based_on_series\",\n    \"series_producer\",\n    \"series_start_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "novella_title",
-    "based_on_series",
-    "series_producer",
-    "series_start_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "novella_title": {
+        "type": "string",
+        "description": "The title of the novella."
+      },
+      "based_on_series": {
+        "type": "string",
+        "description": "The name of the science fiction TV series the novella is based on."
+      },
+      "series_producer": {
+        "type": "string",
+        "description": "The company that produced the TV series."
+      },
+      "series_start_year": {
+        "type": "integer",
+        "description": "The year the TV series began production."
+      }
+    },
+    "required": [
+      "novella_title",
+      "based_on_series",
+      "series_producer",
+      "series_start_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

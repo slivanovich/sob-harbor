@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Occupational hygiene: The British Occupational Hygiene Society (BOHS) defines that "occupational hygiene is about the prevention of ill-health from work, through recognizing, evaluating and controlling the risks".  The International Occupational Hygiene Association (IOHA) refers to occupational hygiene as "the discipline of anticipating, recognizing, evaluating and controlling health hazards in the working environment with the objective of protecting worker health and well-being and safeguarding the community at large."  The term "occupational hygiene" (used in the UK and Commonwealth countries as well as much of Europe) is synonymous with "industrial hygiene" (used in the US, Latin America, and other countries that received initial technical support or training from US sources).  The term "industrial hygiene" traditionally stems from industries with construction, mining or manufacturing and "occupational hygiene" refers to all types of industry such as those listed for "industrial hygiene" as well as financial and support services industries and refers to "work", "workplace" and "place of work" in general.  "Environmental hygiene" addresses similar issues to "occupational hygiene", but is likely to be about broad industry or broad issues affecting the local community, broader society, region or country.
-
-Evita (2008 film): Evita is a documentary film on the life of Eva Duarte created by Eduardo Montes-Bradley.  Conformed in its entirety with previously unseen historical footage and documents, the film reconstructs the life of the former Argentine first lady from an unbiased perspective.  The film starts with meticulous examination of Evita Duarte's origins, her relationship with her parents (particularly her father) and her siblings.  "Evita" goes on to reveal intimate aspects of Duarte's early childhood and adolescence, leading to her resolving to flee her home in the countryside for the capital city of Buenos Aires.  The latter segments of the film are highlighted by interviews with former teachers from her elementary schooling in Junin, a small city in the province of Buenos Aires.  Throughout the film, the director is steadily reminding the audience of the domestic and international context out of which Evita Duarte emerged, enhancing the viewer's understanding the facts.  The second act of the film concludes with her funeral in Buenos Aires.  The third act exposes the macabre plot to have Evita Peron's corpse disappear, and looks at the curious series of events leading to the exchange of cadavers between the so-called Peronist youth and the military regime.  "Evita" premiered in the US on WCVE Richmond-PBS, and WHTJ Charlottesville-PBS on July 12, 2012.  "Evita" has been included in courses on Political Science and History.  Most recently, the documentary was listed 11 in the “Top 25 Political Documentaries That Shed Light On Latin America’s Reality"
-
-Soriano (film): Soriano is a biographical documentary by Eduardo Montes-Bradley exploring the life and works of Osvaldo Soriano, author of Funny Dirty Little War through testimonies of friends and family in Argentina, France, Belgium, Germany, and Italy.  The documentary includes rare 16mm footage filmed by Soriano and friends during in his hometown of Tandil in the early 1960s.  Part of this original footage was used by the director to reconstruct a short film as it was scripted by a young Osvaldo Soriano.  The show film is now on the permanent collection of several university libraries.
-
-Harto The Borges: Harto The Borges is a documentary film by Eduardo Montes-Bradley.  "Harto The Borges" explores the narcissistic side of Jorge Luis Borges, the author of El Aleph, his frequent and often criticized comments to the press, his distinctive and gentle ironies.  Harto The Borges had a theatrical release in Buenos Aires in September 2000, and was well received by the critics.  Since then has been frequently exhibited at forums, campuses, and film festivals.  On October 4, 2011, Harto The Borges was made available to the general audience in Argentina through the On Line version of Revista Cultura Ñ, (Diario Clarin) in Buenos Aires.  The film was released alongside an article in which the director views the film ten years after its premier at the Cine Cosmos.  The film is currently available in Vimeo .
-
-Che: Rise and Fall: Che Rise and Fall is a documentary film created by Eduardo Montes-Bradley.  The film was entirely shot in Cuba at the time Che Guevara’s remains were airlifted from Bolivia to Santa Clara the final resting place.  The documentary features the testimonies of Guevara’s comrades-in-arms in Sierra Maestra, Congo and Bolivia, also with Alberto Granado with whom Guevara rode a motorcycle from Argentina on a trip that will end, tragically, sixteen years later in the jungles of Bolivia, an experience that was brought to the big screen on "The Motorcycle Diaries".  "Che Rise and Fall" begins with an account of Guevara's death in Bolivia in 1967, and fittingly ends with footage of the return of his remains for interment in a monument in Santa Clara's Revolution Square some 30 years later.
-
-Eduardo Montes-Bradley: Eduardo Montes-Bradley (born July 9, 1960) is an award-winning documentarian, photographer, lecturer, and published author.  His documentaries participate in film festivals, have beem incorporated in the syllabus of academic courses, and are frequently screened at cultural events such as the Frankfurt Book Fair.  Montes-Bradley is a board member with the African American Heritage Center, and member of the International Advisory Committee with the UNESCO Chair in Global Learning and Global Citizenship Education, and was most recently awarded as UCLA Regents Lecturer.  Montes-Bradley resides in [[Charlottesville, VA|Charlottesville]] where he produces photographic work, and documentary films for [[Heritage Film Project]].  Among his most recent productions is [[Monroe Hill]], documentary-essay tracing the roots and the historical context of [[James Monroe]]’s first home in [[Albemarle County]].  Montes-Bradley is currently working on "The Village", a documentary-essay celebrating art & architecture in the bicentennial of the University of Virginia, and "[[J.J. Lankes|Lankes]], Revival of Printmaking in America"
-
-Monroe Hill: Monroe Hill is a 2015 documentary film by Eduardo Montes-Bradley made possible, in part, through an award from the Jefferson Trust The film traces the roots, and historical context, of James Monroe’s first home in Albemarle County, and its transformation over a period of three decades until the laying of the cornerstone at the University of Virginia in October 6, 1817.  "Monroe Hill" premiered during the 28th edition of the Virginia Film Festival, on November 6, 2015, and was selected to compete in the Official Selection of the Richmond International Film Festival, 2016.  Monroe Hill premiered on PBS on March 28th, 2016.
-
-Rita Dove: An American Poet: Rita Dove: An American Poet is a documentary film produced, directed and edited by Eduardo Montes-Bradley.  It is a biographical sketch of U.S. Poet Laureate and National Medal of Arts winner Rita Dove.  The film explores the poet's life beyond the otherwise extensive and readily available information in Internet and Social Media, exposing fundamental facts of Dove's childhood and formative years growing up in Akron, Ohio in the 1950s and during the turbulent 1960s.
-
-Samba on Your Feet: Samba On Your Feet is a documentary film by Eduardo Montes-Bradley also known as "Samba!  reflections of Africa in Brazilian culture”.  The film goes behind the scenes of Samba and Carnival to reveal the cultural and racial clash that gave birth to a new tradition in Rio de Janeiro.
-
-Ken Annakin: Kenneth Cooper "Ken" Annakin, OBE (10 August 1914 – 22 April 2009) was a prolific English film director.
-
-Question: Ken Annakin and Eduardo Montes-Bradley, are in the same occupational industry?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_1_name": {
-      "type": "string",
-      "description": "The name of the first person mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "person_1_occupation": {
-      "type": "string",
-      "description": "The primary occupation of the first person as described in the context."
-    },
-    "person_2_name": {
-      "type": "string",
-      "description": "The name of the second person mentioned in the question."
-    },
-    "person_2_occupation": {
-      "type": "string",
-      "description": "The primary occupation of the second person as described in the context."
-    },
-    "are_in_same_industry": {
-      "type": "boolean",
-      "description": "True if both individuals are in the same occupational industry, false otherwise."
-    },
-    "common_industry_category": {
-      "type": "string",
-      "description": "A broader category that encompasses the shared occupational industry if they are in the same industry."
+    {
+      "role": "user",
+      "content": "Context:\nOccupational hygiene: The British Occupational Hygiene Society (BOHS) defines that \"occupational hygiene is about the prevention of ill-health from work, through recognizing, evaluating and controlling the risks\".  The International Occupational Hygiene Association (IOHA) refers to occupational hygiene as \"the discipline of anticipating, recognizing, evaluating and controlling health hazards in the working environment with the objective of protecting worker health and well-being and safeguarding the community at large.\"  The term \"occupational hygiene\" (used in the UK and Commonwealth countries as well as much of Europe) is synonymous with \"industrial hygiene\" (used in the US, Latin America, and other countries that received initial technical support or training from US sources).  The term \"industrial hygiene\" traditionally stems from industries with construction, mining or manufacturing and \"occupational hygiene\" refers to all types of industry such as those listed for \"industrial hygiene\" as well as financial and support services industries and refers to \"work\", \"workplace\" and \"place of work\" in general.  \"Environmental hygiene\" addresses similar issues to \"occupational hygiene\", but is likely to be about broad industry or broad issues affecting the local community, broader society, region or country.\n\nEvita (2008 film): Evita is a documentary film on the life of Eva Duarte created by Eduardo Montes-Bradley.  Conformed in its entirety with previously unseen historical footage and documents, the film reconstructs the life of the former Argentine first lady from an unbiased perspective.  The film starts with meticulous examination of Evita Duarte's origins, her relationship with her parents (particularly her father) and her siblings.  \"Evita\" goes on to reveal intimate aspects of Duarte's early childhood and adolescence, leading to her resolving to flee her home in the countryside for the capital city of Buenos Aires.  The latter segments of the film are highlighted by interviews with former teachers from her elementary schooling in Junin, a small city in the province of Buenos Aires.  Throughout the film, the director is steadily reminding the audience of the domestic and international context out of which Evita Duarte emerged, enhancing the viewer's understanding the facts.  The second act of the film concludes with her funeral in Buenos Aires.  The third act exposes the macabre plot to have Evita Peron's corpse disappear, and looks at the curious series of events leading to the exchange of cadavers between the so-called Peronist youth and the military regime.  \"Evita\" premiered in the US on WCVE Richmond-PBS, and WHTJ Charlottesville-PBS on July 12, 2012.  \"Evita\" has been included in courses on Political Science and History.  Most recently, the documentary was listed 11 in the “Top 25 Political Documentaries That Shed Light On Latin America’s Reality\"\n\nSoriano (film): Soriano is a biographical documentary by Eduardo Montes-Bradley exploring the life and works of Osvaldo Soriano, author of Funny Dirty Little War through testimonies of friends and family in Argentina, France, Belgium, Germany, and Italy.  The documentary includes rare 16mm footage filmed by Soriano and friends during in his hometown of Tandil in the early 1960s.  Part of this original footage was used by the director to reconstruct a short film as it was scripted by a young Osvaldo Soriano.  The show film is now on the permanent collection of several university libraries.\n\nHarto The Borges: Harto The Borges is a documentary film by Eduardo Montes-Bradley.  \"Harto The Borges\" explores the narcissistic side of Jorge Luis Borges, the author of El Aleph, his frequent and often criticized comments to the press, his distinctive and gentle ironies.  Harto The Borges had a theatrical release in Buenos Aires in September 2000, and was well received by the critics.  Since then has been frequently exhibited at forums, campuses, and film festivals.  On October 4, 2011, Harto The Borges was made available to the general audience in Argentina through the On Line version of Revista Cultura Ñ, (Diario Clarin) in Buenos Aires.  The film was released alongside an article in which the director views the film ten years after its premier at the Cine Cosmos.  The film is currently available in Vimeo .\n\nChe: Rise and Fall: Che Rise and Fall is a documentary film created by Eduardo Montes-Bradley.  The film was entirely shot in Cuba at the time Che Guevara’s remains were airlifted from Bolivia to Santa Clara the final resting place.  The documentary features the testimonies of Guevara’s comrades-in-arms in Sierra Maestra, Congo and Bolivia, also with Alberto Granado with whom Guevara rode a motorcycle from Argentina on a trip that will end, tragically, sixteen years later in the jungles of Bolivia, an experience that was brought to the big screen on \"The Motorcycle Diaries\".  \"Che Rise and Fall\" begins with an account of Guevara's death in Bolivia in 1967, and fittingly ends with footage of the return of his remains for interment in a monument in Santa Clara's Revolution Square some 30 years later.\n\nEduardo Montes-Bradley: Eduardo Montes-Bradley (born July 9, 1960) is an award-winning documentarian, photographer, lecturer, and published author.  His documentaries participate in film festivals, have beem incorporated in the syllabus of academic courses, and are frequently screened at cultural events such as the Frankfurt Book Fair.  Montes-Bradley is a board member with the African American Heritage Center, and member of the International Advisory Committee with the UNESCO Chair in Global Learning and Global Citizenship Education, and was most recently awarded as UCLA Regents Lecturer.  Montes-Bradley resides in [[Charlottesville, VA|Charlottesville]] where he produces photographic work, and documentary films for [[Heritage Film Project]].  Among his most recent productions is [[Monroe Hill]], documentary-essay tracing the roots and the historical context of [[James Monroe]]’s first home in [[Albemarle County]].  Montes-Bradley is currently working on \"The Village\", a documentary-essay celebrating art & architecture in the bicentennial of the University of Virginia, and \"[[J.J. Lankes|Lankes]], Revival of Printmaking in America\"\n\nMonroe Hill: Monroe Hill is a 2015 documentary film by Eduardo Montes-Bradley made possible, in part, through an award from the Jefferson Trust The film traces the roots, and historical context, of James Monroe’s first home in Albemarle County, and its transformation over a period of three decades until the laying of the cornerstone at the University of Virginia in October 6, 1817.  \"Monroe Hill\" premiered during the 28th edition of the Virginia Film Festival, on November 6, 2015, and was selected to compete in the Official Selection of the Richmond International Film Festival, 2016.  Monroe Hill premiered on PBS on March 28th, 2016.\n\nRita Dove: An American Poet: Rita Dove: An American Poet is a documentary film produced, directed and edited by Eduardo Montes-Bradley.  It is a biographical sketch of U.S. Poet Laureate and National Medal of Arts winner Rita Dove.  The film explores the poet's life beyond the otherwise extensive and readily available information in Internet and Social Media, exposing fundamental facts of Dove's childhood and formative years growing up in Akron, Ohio in the 1950s and during the turbulent 1960s.\n\nSamba on Your Feet: Samba On Your Feet is a documentary film by Eduardo Montes-Bradley also known as \"Samba!  reflections of Africa in Brazilian culture”.  The film goes behind the scenes of Samba and Carnival to reveal the cultural and racial clash that gave birth to a new tradition in Rio de Janeiro.\n\nKen Annakin: Kenneth Cooper \"Ken\" Annakin, OBE (10 August 1914 – 22 April 2009) was a prolific English film director.\n\nQuestion: Ken Annakin and Eduardo Montes-Bradley, are in the same occupational industry?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_1_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the first person mentioned in the question.\"\n    },\n    \"person_1_occupation\": {\n      \"type\": \"string\",\n      \"description\": \"The primary occupation of the first person as described in the context.\"\n    },\n    \"person_2_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the second person mentioned in the question.\"\n    },\n    \"person_2_occupation\": {\n      \"type\": \"string\",\n      \"description\": \"The primary occupation of the second person as described in the context.\"\n    },\n    \"are_in_same_industry\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if both individuals are in the same occupational industry, false otherwise.\"\n    },\n    \"common_industry_category\": {\n      \"type\": \"string\",\n      \"description\": \"A broader category that encompasses the shared occupational industry if they are in the same industry.\"\n    }\n  },\n  \"required\": [\n    \"person_1_name\",\n    \"person_1_occupation\",\n    \"person_2_name\",\n    \"person_2_occupation\",\n    \"are_in_same_industry\",\n    \"common_industry_category\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_1_name",
-    "person_1_occupation",
-    "person_2_name",
-    "person_2_occupation",
-    "are_in_same_industry",
-    "common_industry_category"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_1_name": {
+        "type": "string",
+        "description": "The name of the first person mentioned in the question."
+      },
+      "person_1_occupation": {
+        "type": "string",
+        "description": "The primary occupation of the first person as described in the context."
+      },
+      "person_2_name": {
+        "type": "string",
+        "description": "The name of the second person mentioned in the question."
+      },
+      "person_2_occupation": {
+        "type": "string",
+        "description": "The primary occupation of the second person as described in the context."
+      },
+      "are_in_same_industry": {
+        "type": "boolean",
+        "description": "True if both individuals are in the same occupational industry, false otherwise."
+      },
+      "common_industry_category": {
+        "type": "string",
+        "description": "A broader category that encompasses the shared occupational industry if they are in the same industry."
+      }
+    },
+    "required": [
+      "person_1_name",
+      "person_1_occupation",
+      "person_2_name",
+      "person_2_occupation",
+      "are_in_same_industry",
+      "common_industry_category"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

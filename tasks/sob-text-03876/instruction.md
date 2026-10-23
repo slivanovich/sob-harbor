@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-New York State Route 436: New York State Route 436 (NY 436) is an east–west state highway located in the western portion of New York in the United States.  It extends for 23.80 mi from an intersection with NY 39 in the Pike hamlet of Lamont to a junction with NY 36 in the village of Dansville.  In between, the route passes through Letchworth State Park near its southern tip and serves the village of Nunda, where it meets NY 408.  NY 436 also passes through the hamlet of Portageville, located at the southern end of Letchworth State Park on NY 19A, which NY 436 overlaps north of the community.  Most of NY 436 is a two-lane highway that traverses largely rural areas of Wyoming and Livingston counties.
-
-Ohio State Route 329: State Route 329 (SR 329) is a state highway located in southeastern Ohio.  The route is signed as a north–south route though the shape of the road is more of a backwards C.  The southern terminus of SR 329 is in the Rome Township community of Guysville at US 50 and SR 32.  After traveling north through the Athens County communities of Stewart and Amesville, the route briefly enters Morgan County before re-entering Athens County and ending at SR 13 in the village of Trimble.
-
-Wantagh State Parkway: The Wantagh State Parkway is a 13.33 mi long state parkway on Long Island, New York, in the United States.  It links the Ocean Parkway in Jones Beach State Park with the Northern State Parkway in Westbury.  The parkway is located approximately 30 mi east of Manhattan and 14 mi east of the Nassau–Queens border.  Construction began in 1927 on this, one of the earliest of the Long Island parkways, with the initial 5 mi segment opening two years later as the Jones Beach Causeway, connecting Merrick Road in Wantagh to newly opened Jones Beach State Park.  The parkway is inventoried by the New York State Department of Transportation (NYSDOT) as New York State Route 908T (NY 908T), an unsigned reference route.
-
-New York State Route 329: New York State Route 329 (NY 329) is a 2.57 mi long state highway near Watkins Glen, New York, in the United States.  The western terminus is at an intersection with Meads Hill Road in Dix.  The eastern terminus is at a junction with NY 14 and NY 414 in Watkins Glen.  NY 329 passes south of Watkins Glen State Park while New York State Route 419, a highway 0.30 mi in length, connects NY 329 to the park.  Both NY 329 and NY 419 pass through sparsely populated, rural areas.
-
-Niagara Scenic Parkway: The Niagara Scenic Parkway (known as the Robert Moses State Parkway until 2016) is an 18.42 mi long north–south highway in western Niagara County, New York, in the United States.  Its southern terminus is at the LaSalle Expressway on the east bank of the Niagara River in Niagara Falls.  The northern terminus is at NY 18 at Four Mile Creek State Park in Porter near Lake Ontario.  Originally, the parkway was one continuous road; however, due to low usage, a portion of the parkway near Niagara Falls was removed, separating the parkway into two sections.  The length of the parkway is designated as New York State Route 957A by the New York State Department of Transportation (NYSDOT).  A 1.16 mi long spur connecting the Niagara Scenic Parkway to Fort Niagara State Park near Youngstown is designated as New York State Route 958A.  Both reference route designations are unsigned.
-
-New York State Route 41: New York State Route 41 (NY 41) is a north–south state highway in Central New York in the United States.  The southern terminus of the route is at an interchange with NY 17 in the town of Sanford.  Its northern terminus is at an intersection with U.S. Route 20 (US 20) in the village of Skaneateles.  The route is almost 100 mi long and passes through Broome, Chenango, Cortland, and Onondaga counties.  NY 41 was assigned as part of the 1930 renumbering of state highways in New York, replacing New York State Route 70 from Homer to Skaneateles.  The route initially extended as far north as Jordan; however, NY 41 was cut back to its current northern terminus  1933 .
-
-Watkins Glen State Park: Watkins Glen State Park is located outside the village of Watkins Glen, south of Seneca Lake in Schuyler County in New York's Finger Lakes region.  The park's lower part is near the village, while the upper part is open woodland.  It was opened to the public in 1863 and was privately run as a tourist resort until 1906, when it was purchased by New York State.  Initially known as Watkins Glen State Reservation, the park was first managed by the American Scenic and Historic Preservation Society before being turned over to full state control in 1911.  Since 1924, it has been managed by the Finger Lakes Region of the New York State Office of Parks, Recreation and Historic Preservation.
-
-Lake Ontario State Parkway: The Lake Ontario State Parkway is a 35.05 mi parkway along the southern shore of Lake Ontario in western New York in the United States.  The western end of the highway is at a partial interchange within Lakeside Beach State Park in Carlton, Orleans County.  Its eastern terminus is at an intersection with Lake Avenue in the Charlotte neighborhood of the Monroe County city of Rochester.  The parkway is internally designated by the New York State Department of Transportation (NYSDOT) as New York State Route 947A (NY 947A), an unsigned reference route.  A short, 0.55 mi connector between the west end of the parkway and NY 18 is unsigned New York State Route 948A.
-
-New York State Route 27: New York State Route 27 (NY 27) is an east–west 120.58 mi long state highway extending from Interstate 278 (I-278) in the New York City borough of Brooklyn to Montauk Point State Park on Long Island, New York, in the United States.  Its two most prominent components are Sunrise Highway and Montauk Highway, the latter of which includes the Montauk Point State Parkway.  East of the interchange with the Heckscher State Parkway in Islip Terrace, NY 27 acts as the primary east–west highway on southern Long Island.  The entire route in Suffolk, Nassau, and Queens counties was designated by the New York State Senate as the POW/MIA Memorial Highway.  Every town on the South Shore is accessible through Sunrise Highway.  The service roads that parallel the highway from Farmingdale to Brookhaven are officially designated, but not signed, as New York State Route 906C and New York State Route 906D.
-
-Ohio State Route 144: State Route 144 (SR 144) is a north–south state highway in the southern portion of Ohio, a U.S. state.  The southern terminus of State Route 144 is at is a T-interchange with State Route 124 in Hockingport.  Its northern terminus is at another T-intersection, this time with State Route 329 in the unincorporated community of Stewart.
-
-Question: New York State Route 329 passes south of a state park that opened to the public in what year?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "route_name": {
-      "type": "string",
-      "description": "The name of the state route mentioned in the question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "park_name": {
-      "type": "string",
-      "description": "The name of the state park that the route passes near."
-    },
-    "park_location_relative_to_route": {
-      "type": "string",
-      "description": "Describes the geographical relationship of the park to the route."
-    },
-    "park_opening_year": {
-      "type": "integer",
-      "description": "The year the state park was opened to the public."
+    {
+      "role": "user",
+      "content": "Context:\nNew York State Route 436: New York State Route 436 (NY 436) is an east–west state highway located in the western portion of New York in the United States.  It extends for 23.80 mi from an intersection with NY 39 in the Pike hamlet of Lamont to a junction with NY 36 in the village of Dansville.  In between, the route passes through Letchworth State Park near its southern tip and serves the village of Nunda, where it meets NY 408.  NY 436 also passes through the hamlet of Portageville, located at the southern end of Letchworth State Park on NY 19A, which NY 436 overlaps north of the community.  Most of NY 436 is a two-lane highway that traverses largely rural areas of Wyoming and Livingston counties.\n\nOhio State Route 329: State Route 329 (SR 329) is a state highway located in southeastern Ohio.  The route is signed as a north–south route though the shape of the road is more of a backwards C.  The southern terminus of SR 329 is in the Rome Township community of Guysville at US 50 and SR 32.  After traveling north through the Athens County communities of Stewart and Amesville, the route briefly enters Morgan County before re-entering Athens County and ending at SR 13 in the village of Trimble.\n\nWantagh State Parkway: The Wantagh State Parkway is a 13.33 mi long state parkway on Long Island, New York, in the United States.  It links the Ocean Parkway in Jones Beach State Park with the Northern State Parkway in Westbury.  The parkway is located approximately 30 mi east of Manhattan and 14 mi east of the Nassau–Queens border.  Construction began in 1927 on this, one of the earliest of the Long Island parkways, with the initial 5 mi segment opening two years later as the Jones Beach Causeway, connecting Merrick Road in Wantagh to newly opened Jones Beach State Park.  The parkway is inventoried by the New York State Department of Transportation (NYSDOT) as New York State Route 908T (NY 908T), an unsigned reference route.\n\nNew York State Route 329: New York State Route 329 (NY 329) is a 2.57 mi long state highway near Watkins Glen, New York, in the United States.  The western terminus is at an intersection with Meads Hill Road in Dix.  The eastern terminus is at a junction with NY 14 and NY 414 in Watkins Glen.  NY 329 passes south of Watkins Glen State Park while New York State Route 419, a highway 0.30 mi in length, connects NY 329 to the park.  Both NY 329 and NY 419 pass through sparsely populated, rural areas.\n\nNiagara Scenic Parkway: The Niagara Scenic Parkway (known as the Robert Moses State Parkway until 2016) is an 18.42 mi long north–south highway in western Niagara County, New York, in the United States.  Its southern terminus is at the LaSalle Expressway on the east bank of the Niagara River in Niagara Falls.  The northern terminus is at NY 18 at Four Mile Creek State Park in Porter near Lake Ontario.  Originally, the parkway was one continuous road; however, due to low usage, a portion of the parkway near Niagara Falls was removed, separating the parkway into two sections.  The length of the parkway is designated as New York State Route 957A by the New York State Department of Transportation (NYSDOT).  A 1.16 mi long spur connecting the Niagara Scenic Parkway to Fort Niagara State Park near Youngstown is designated as New York State Route 958A.  Both reference route designations are unsigned.\n\nNew York State Route 41: New York State Route 41 (NY 41) is a north–south state highway in Central New York in the United States.  The southern terminus of the route is at an interchange with NY 17 in the town of Sanford.  Its northern terminus is at an intersection with U.S. Route 20 (US 20) in the village of Skaneateles.  The route is almost 100 mi long and passes through Broome, Chenango, Cortland, and Onondaga counties.  NY 41 was assigned as part of the 1930 renumbering of state highways in New York, replacing New York State Route 70 from Homer to Skaneateles.  The route initially extended as far north as Jordan; however, NY 41 was cut back to its current northern terminus  1933 .\n\nWatkins Glen State Park: Watkins Glen State Park is located outside the village of Watkins Glen, south of Seneca Lake in Schuyler County in New York's Finger Lakes region.  The park's lower part is near the village, while the upper part is open woodland.  It was opened to the public in 1863 and was privately run as a tourist resort until 1906, when it was purchased by New York State.  Initially known as Watkins Glen State Reservation, the park was first managed by the American Scenic and Historic Preservation Society before being turned over to full state control in 1911.  Since 1924, it has been managed by the Finger Lakes Region of the New York State Office of Parks, Recreation and Historic Preservation.\n\nLake Ontario State Parkway: The Lake Ontario State Parkway is a 35.05 mi parkway along the southern shore of Lake Ontario in western New York in the United States.  The western end of the highway is at a partial interchange within Lakeside Beach State Park in Carlton, Orleans County.  Its eastern terminus is at an intersection with Lake Avenue in the Charlotte neighborhood of the Monroe County city of Rochester.  The parkway is internally designated by the New York State Department of Transportation (NYSDOT) as New York State Route 947A (NY 947A), an unsigned reference route.  A short, 0.55 mi connector between the west end of the parkway and NY 18 is unsigned New York State Route 948A.\n\nNew York State Route 27: New York State Route 27 (NY 27) is an east–west 120.58 mi long state highway extending from Interstate 278 (I-278) in the New York City borough of Brooklyn to Montauk Point State Park on Long Island, New York, in the United States.  Its two most prominent components are Sunrise Highway and Montauk Highway, the latter of which includes the Montauk Point State Parkway.  East of the interchange with the Heckscher State Parkway in Islip Terrace, NY 27 acts as the primary east–west highway on southern Long Island.  The entire route in Suffolk, Nassau, and Queens counties was designated by the New York State Senate as the POW/MIA Memorial Highway.  Every town on the South Shore is accessible through Sunrise Highway.  The service roads that parallel the highway from Farmingdale to Brookhaven are officially designated, but not signed, as New York State Route 906C and New York State Route 906D.\n\nOhio State Route 144: State Route 144 (SR 144) is a north–south state highway in the southern portion of Ohio, a U.S. state.  The southern terminus of State Route 144 is at is a T-interchange with State Route 124 in Hockingport.  Its northern terminus is at another T-intersection, this time with State Route 329 in the unincorporated community of Stewart.\n\nQuestion: New York State Route 329 passes south of a state park that opened to the public in what year?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"route_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the state route mentioned in the question.\"\n    },\n    \"park_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the state park that the route passes near.\"\n    },\n    \"park_location_relative_to_route\": {\n      \"type\": \"string\",\n      \"description\": \"Describes the geographical relationship of the park to the route.\"\n    },\n    \"park_opening_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the state park was opened to the public.\"\n    }\n  },\n  \"required\": [\n    \"route_name\",\n    \"park_name\",\n    \"park_location_relative_to_route\",\n    \"park_opening_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "route_name",
-    "park_name",
-    "park_location_relative_to_route",
-    "park_opening_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "route_name": {
+        "type": "string",
+        "description": "The name of the state route mentioned in the question."
+      },
+      "park_name": {
+        "type": "string",
+        "description": "The name of the state park that the route passes near."
+      },
+      "park_location_relative_to_route": {
+        "type": "string",
+        "description": "Describes the geographical relationship of the park to the route."
+      },
+      "park_opening_year": {
+        "type": "integer",
+        "description": "The year the state park was opened to the public."
+      }
+    },
+    "required": [
+      "route_name",
+      "park_name",
+      "park_location_relative_to_route",
+      "park_opening_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

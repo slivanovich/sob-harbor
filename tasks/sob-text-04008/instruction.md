@@ -1,137 +1,114 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Tan Hill, North Yorkshire: Tan Hill ([ NY896067] ) is a high point on the Pennine Way in the Richmondshire district of North Yorkshire, England.  It lies north of Keld in the civil parish of Muker, near to the borders of County Durham and Cumbria, and close to the northern boundary of the Yorkshire Dales National Park.  It is in an isolated location, with the nearest town of Kirkby Stephen being an 11 mi drive away.
-
-Charles Springer Tavern: Charles Springer Tavern, also known as the Oak Hill Inn, Four Mile Inn, and Sign of the Three Tons, is a historic inn and tavern located near Wilmington, New Castle County, Delaware.  The building is a two-story, log and stone building that evolved
-
-West Stonesdale: West Stonesdale is a hamlet in the Yorkshire Dales, North Yorkshire, England.  The secluded village is near Keld to the south and Tan Hill to the north, and forms part of the civil parish of Muker.
-
-Milk Hill: Milk Hill, located near Alton Priors east of Devizes, is the highest point in the county of Wiltshire, southwest England, at some 295 m / 968 ft above sea level (the adjacent Tan Hill rises to 294 m).  It is the location of the Alton Barnes white horse (a hill figure cut in 1812).
-
-Bell Savage Inn: The Bell Savage Inn was a former public house in London, England, from the 15th century to 1873, originally located on the north side of what is now Ludgate Hill, in the City of London.  It was a playhouse during the Elizabethan Era, as well as a venue for various other entertainments.  It was also an important coaching inn.  Other names by which it has been known throughout history include: Savage's Inn, The Bel Savage, Belle Savage, Belle Sauvage, Bell on the Hoop, Old Bell Savage, Belly Savage and others.
-
-Tan Hill, Wiltshire: Tan Hill (grid reference [ SU080640] ) is a hill which lies just to the north of the village of Allington in the parish of All Cannings, Wiltshire, England.
-
-Richmond Hill Inn: The Richmond Hill Inn was a 25-room Inn located on the Historic Richmond Hill estate in North Carolina.  It was a Queen Anne style mansion that was built in 1889 and has now been gutted by the arson fire.  It served as the private residence of ambassador and congressman Richmond Pearson.  Its name derives from a combination of its builder, Richmond Pearson, and the designer, James G. Hill.  At the time of its construction, the mansion was one of the most elegant structures in Asheville, with running water, ten fireplaces, and a pulley-operated baggage elevator.  It served as a center for social and political activity for many years during Pearson's life.  The Estate is located on French Broad River, surrounded by rolling grounds with gardens.
-
-Juniper Hill Farm-Maxwell Evarts House: Juniper Hill Farm, also known historically as Juniper Hill Inn and the Maxwell Evarts House, is an historic estate and mansion house on Juniper Hill Road in Windsor, Vermont.  Built in 1902 by Maxwell Evarts, it is a large and elaborate example of Colonial Revival architecture.  Evarts was a prominent New York lawyer, who played host to two presidents of the United States here.  The property has seen a variety of commercial uses since the death of Evarts' son in 1936.  As the Juniper Hill Inn, it was featured in the opening episodes of "Hotel Hell".  It was sold at a foreclosure auction in 2014, and in 2016 reopened as the Windsor Mansion Inn.  It was listed on the National Register of Historic Places in 1988.
-
-Cat and Fiddle Inn: The Cat and Fiddle Inn is the second-highest inn or public house in England (the Tan Hill Inn being the highest).  The inn is situated on the eastern fringes of Cheshire in the Peak District National Park on the A537 road just west of the Derbyshire/Cheshire county boundary, on the western side of Axe Edge Moor.  It is at an elevation of 1689 ft above sea level (although a measurement commissioned by a former landlord suggested a figure of 1772 ft , which would surpass that of the Tan Hill Inn).  The Ordnance Survey have fixed an accurately measured flush-bracket benchmark to the front wall of the pub.  The height of this flush bracket is 515.1984 m , and the flush bracket is 0.4 m above the ground level, which casts doubt over the validity of the private survey.
-
-Cat and Fiddle Road: The Cat and Fiddle is a road in England between Buxton, Derbyshire, and Macclesfield, Cheshire, named after the Cat and Fiddle Inn public house at its summit.  Formed by parts of the A537, A54 and A53, it is famous for its scenic views across the Greater Manchester conurbation, the Peak District National Park and the Cheshire Plain, and for its many bends.  It is extremely popular with motorcyclists, and is often classed as the most dangerous road in the UK.
-
-Question: The Cat and Fiddle Inn is the second-highest inn or public house in England (the Tan Hill Inn being the highest), what is Tan Hill?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "entity_name": {
-      "type": "string",
-      "description": "The name of the entity being described."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "entity_type": {
-      "type": "string",
-      "description": "The general type of the entity, e.g., 'high point', 'hill'."
-    },
-    "main_definition": {
-      "type": "string",
-      "description": "The primary definition or description of Tan Hill as found in the context."
-    },
-    "geographical_context": {
-      "type": "object",
-      "properties": {
-        "region": {
-          "type": "string",
-          "description": "The district or region where Tan Hill is located."
-        },
-        "county": {
-          "type": "string",
-          "description": "The county where Tan Hill is located."
-        },
-        "country": {
-          "type": "string",
-          "description": "The country where Tan Hill is located."
-        },
-        "specific_route": {
-          "type": "string",
-          "description": "A specific route or path Tan Hill is part of."
-        },
-        "national_park_proximity": {
-          "type": "string",
-          "description": "Description of its relation to a national park."
-        }
-      },
-      "required": [
-        "region",
-        "county",
-        "country",
-        "specific_route",
-        "national_park_proximity"
-      ],
-      "additionalProperties": false
-    },
-    "nearby_locations": {
-      "type": "object",
-      "properties": {
-        "settlements": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A list of nearby villages or civil parishes."
-        },
-        "bordering_areas": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "A list of nearby counties or areas it borders."
-        }
-      },
-      "required": [
-        "settlements",
-        "bordering_areas"
-      ],
-      "additionalProperties": false
-    },
-    "isolation_attributes": {
-      "type": "object",
-      "properties": {
-        "nearest_town": {
-          "type": "string",
-          "description": "The name of the nearest town."
-        },
-        "distance_to_nearest_town_miles": {
-          "type": "integer",
-          "description": "The driving distance to the nearest town in miles."
-        }
-      },
-      "required": [
-        "nearest_town",
-        "distance_to_nearest_town_miles"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nTan Hill, North Yorkshire: Tan Hill ([ NY896067] ) is a high point on the Pennine Way in the Richmondshire district of North Yorkshire, England.  It lies north of Keld in the civil parish of Muker, near to the borders of County Durham and Cumbria, and close to the northern boundary of the Yorkshire Dales National Park.  It is in an isolated location, with the nearest town of Kirkby Stephen being an 11 mi drive away.\n\nCharles Springer Tavern: Charles Springer Tavern, also known as the Oak Hill Inn, Four Mile Inn, and Sign of the Three Tons, is a historic inn and tavern located near Wilmington, New Castle County, Delaware.  The building is a two-story, log and stone building that evolved\n\nWest Stonesdale: West Stonesdale is a hamlet in the Yorkshire Dales, North Yorkshire, England.  The secluded village is near Keld to the south and Tan Hill to the north, and forms part of the civil parish of Muker.\n\nMilk Hill: Milk Hill, located near Alton Priors east of Devizes, is the highest point in the county of Wiltshire, southwest England, at some 295 m / 968 ft above sea level (the adjacent Tan Hill rises to 294 m).  It is the location of the Alton Barnes white horse (a hill figure cut in 1812).\n\nBell Savage Inn: The Bell Savage Inn was a former public house in London, England, from the 15th century to 1873, originally located on the north side of what is now Ludgate Hill, in the City of London.  It was a playhouse during the Elizabethan Era, as well as a venue for various other entertainments.  It was also an important coaching inn.  Other names by which it has been known throughout history include: Savage's Inn, The Bel Savage, Belle Savage, Belle Sauvage, Bell on the Hoop, Old Bell Savage, Belly Savage and others.\n\nTan Hill, Wiltshire: Tan Hill (grid reference [ SU080640] ) is a hill which lies just to the north of the village of Allington in the parish of All Cannings, Wiltshire, England.\n\nRichmond Hill Inn: The Richmond Hill Inn was a 25-room Inn located on the Historic Richmond Hill estate in North Carolina.  It was a Queen Anne style mansion that was built in 1889 and has now been gutted by the arson fire.  It served as the private residence of ambassador and congressman Richmond Pearson.  Its name derives from a combination of its builder, Richmond Pearson, and the designer, James G. Hill.  At the time of its construction, the mansion was one of the most elegant structures in Asheville, with running water, ten fireplaces, and a pulley-operated baggage elevator.  It served as a center for social and political activity for many years during Pearson's life.  The Estate is located on French Broad River, surrounded by rolling grounds with gardens.\n\nJuniper Hill Farm-Maxwell Evarts House: Juniper Hill Farm, also known historically as Juniper Hill Inn and the Maxwell Evarts House, is an historic estate and mansion house on Juniper Hill Road in Windsor, Vermont.  Built in 1902 by Maxwell Evarts, it is a large and elaborate example of Colonial Revival architecture.  Evarts was a prominent New York lawyer, who played host to two presidents of the United States here.  The property has seen a variety of commercial uses since the death of Evarts' son in 1936.  As the Juniper Hill Inn, it was featured in the opening episodes of \"Hotel Hell\".  It was sold at a foreclosure auction in 2014, and in 2016 reopened as the Windsor Mansion Inn.  It was listed on the National Register of Historic Places in 1988.\n\nCat and Fiddle Inn: The Cat and Fiddle Inn is the second-highest inn or public house in England (the Tan Hill Inn being the highest).  The inn is situated on the eastern fringes of Cheshire in the Peak District National Park on the A537 road just west of the Derbyshire/Cheshire county boundary, on the western side of Axe Edge Moor.  It is at an elevation of 1689 ft above sea level (although a measurement commissioned by a former landlord suggested a figure of 1772 ft , which would surpass that of the Tan Hill Inn).  The Ordnance Survey have fixed an accurately measured flush-bracket benchmark to the front wall of the pub.  The height of this flush bracket is 515.1984 m , and the flush bracket is 0.4 m above the ground level, which casts doubt over the validity of the private survey.\n\nCat and Fiddle Road: The Cat and Fiddle is a road in England between Buxton, Derbyshire, and Macclesfield, Cheshire, named after the Cat and Fiddle Inn public house at its summit.  Formed by parts of the A537, A54 and A53, it is famous for its scenic views across the Greater Manchester conurbation, the Peak District National Park and the Cheshire Plain, and for its many bends.  It is extremely popular with motorcyclists, and is often classed as the most dangerous road in the UK.\n\nQuestion: The Cat and Fiddle Inn is the second-highest inn or public house in England (the Tan Hill Inn being the highest), what is Tan Hill?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"entity_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the entity being described.\"\n    },\n    \"entity_type\": {\n      \"type\": \"string\",\n      \"description\": \"The general type of the entity, e.g., 'high point', 'hill'.\"\n    },\n    \"main_definition\": {\n      \"type\": \"string\",\n      \"description\": \"The primary definition or description of Tan Hill as found in the context.\"\n    },\n    \"geographical_context\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"region\": {\n          \"type\": \"string\",\n          \"description\": \"The district or region where Tan Hill is located.\"\n        },\n        \"county\": {\n          \"type\": \"string\",\n          \"description\": \"The county where Tan Hill is located.\"\n        },\n        \"country\": {\n          \"type\": \"string\",\n          \"description\": \"The country where Tan Hill is located.\"\n        },\n        \"specific_route\": {\n          \"type\": \"string\",\n          \"description\": \"A specific route or path Tan Hill is part of.\"\n        },\n        \"national_park_proximity\": {\n          \"type\": \"string\",\n          \"description\": \"Description of its relation to a national park.\"\n        }\n      },\n      \"required\": [\n        \"region\",\n        \"county\",\n        \"country\",\n        \"specific_route\",\n        \"national_park_proximity\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"nearby_locations\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"settlements\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"A list of nearby villages or civil parishes.\"\n        },\n        \"bordering_areas\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"A list of nearby counties or areas it borders.\"\n        }\n      },\n      \"required\": [\n        \"settlements\",\n        \"bordering_areas\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"isolation_attributes\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"nearest_town\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the nearest town.\"\n        },\n        \"distance_to_nearest_town_miles\": {\n          \"type\": \"integer\",\n          \"description\": \"The driving distance to the nearest town in miles.\"\n        }\n      },\n      \"required\": [\n        \"nearest_town\",\n        \"distance_to_nearest_town_miles\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"entity_name\",\n    \"entity_type\",\n    \"main_definition\",\n    \"geographical_context\",\n    \"nearby_locations\",\n    \"isolation_attributes\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "entity_name",
-    "entity_type",
-    "main_definition",
-    "geographical_context",
-    "nearby_locations",
-    "isolation_attributes"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "entity_name": {
+        "type": "string",
+        "description": "The name of the entity being described."
+      },
+      "entity_type": {
+        "type": "string",
+        "description": "The general type of the entity, e.g., 'high point', 'hill'."
+      },
+      "main_definition": {
+        "type": "string",
+        "description": "The primary definition or description of Tan Hill as found in the context."
+      },
+      "geographical_context": {
+        "type": "object",
+        "properties": {
+          "region": {
+            "type": "string",
+            "description": "The district or region where Tan Hill is located."
+          },
+          "county": {
+            "type": "string",
+            "description": "The county where Tan Hill is located."
+          },
+          "country": {
+            "type": "string",
+            "description": "The country where Tan Hill is located."
+          },
+          "specific_route": {
+            "type": "string",
+            "description": "A specific route or path Tan Hill is part of."
+          },
+          "national_park_proximity": {
+            "type": "string",
+            "description": "Description of its relation to a national park."
+          }
+        },
+        "required": [
+          "region",
+          "county",
+          "country",
+          "specific_route",
+          "national_park_proximity"
+        ],
+        "additionalProperties": false
+      },
+      "nearby_locations": {
+        "type": "object",
+        "properties": {
+          "settlements": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of nearby villages or civil parishes."
+          },
+          "bordering_areas": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "A list of nearby counties or areas it borders."
+          }
+        },
+        "required": [
+          "settlements",
+          "bordering_areas"
+        ],
+        "additionalProperties": false
+      },
+      "isolation_attributes": {
+        "type": "object",
+        "properties": {
+          "nearest_town": {
+            "type": "string",
+            "description": "The name of the nearest town."
+          },
+          "distance_to_nearest_town_miles": {
+            "type": "integer",
+            "description": "The driving distance to the nearest town in miles."
+          }
+        },
+        "required": [
+          "nearest_town",
+          "distance_to_nearest_town_miles"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "entity_name",
+      "entity_type",
+      "main_definition",
+      "geographical_context",
+      "nearby_locations",
+      "isolation_attributes"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

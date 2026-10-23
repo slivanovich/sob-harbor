@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Ricky Martin singles discography: Puerto Rican singer Ricky Martin has released seventy-nine Spanish and English-language singles.  In 1984, thirteen-year-old Martin became a member of the Puerto Rican boy band Menudo.  After recording eleven albums with the group, he left Menudo in 1989, hoping to rest and evaluate his career path.  In 1990, he was signed to Sony Discos, the Sony Music Entertainment's Latin imprint.  Martin released his debut solo album, the Spanish-language "Ricky Martin", in November 1991.  It included hit singles: "Fuego Contra Fuego", "El Amor de Mi Vida" and "Vuelo".  His second Spanish-language solo album, "Me Amarás" (1993) featured further successful singles: "Me Amarás", "Que Dia Es Hoy" and "Entre el Amor y los Halagos".
-
-National Museum of Puerto Rican Arts and Culture: The National Museum of Puerto Rican Arts and Culture (formerly "Institute of Puerto Rican Arts and Culture") is a museum in Chicago dedicated to interpreting the arts and culture of the Puerto Rican people and of the Puerto Ricans in Chicago.  Founded in 2001, it is housed in the historic landmark Humboldt Park stables and receptory, near the Paseo Boricua.  It hosts visual arts exhibitions, community education, and festivals.  Its exhibitions have featured the artwork of Osvaldo Budet, Elizam Escobar, Antonio Martorell, Ramon Frade Leon, and Lizette Cruz, in addition to local Chicago or Puerto Rican artists.  The Institute also sponsors music events including an annual "Navi-Jazz" performance, described as a "fusion of Puerto Rican and African American musical elements."
-
-Ricky Martin: Enrique Martín Morales (born December 24, 1971), commonly known as Ricky Martin, is a Puerto Rican singer, actor and author.  Martin began his career at age 12 with the all-boy pop group Menudo.  After five years with the group, he released several Spanish-language solo albums throughout the 1990s.  He also acted on stage and on TV in Mexico, where he achieved modest stardom.  In 1994, he appeared on the US TV soap opera "General Hospital", playing a Puerto Rican singer.
-
-Love + Dance World Tour: The Love + Dance Wold Tour is the ninth concert tour by Puerto Rican singer Luis Fonsi, in support of his worldwide hit single, "Despacito" (2017).  The tour began on July 1, 2017, in Andújar, Spain, and is set to conclude on November 26, 2017, in Zagreb, Croatia.
-
-Música + Alma + Sexo World Tour: The Música + Alma + Sexo World Tour (also known as the M.A.S. Tour) was the eighth concert tour by Puerto Rican singer-songwriter Ricky Martin.  The tour supported his ninth studio album, "Música + Alma + Sexo" (2011).  It began with a series of concerts in Puerto Rico and North America, with international dates later in the year.  The tour was his first in four years, the previous being the 2007 Black and White Tour.  On the Pollstar Top 50 Worldwide Tours of the first half of 2011, Ricky Martin ranked at number 42.  His tour grossed $17.7, with 37 shows and 246,141 total tickets.  After visiting 28 countries throughout North America, Europe and Latin America, Ricky Martin formally ended his tour on November 12, 2011 in his homeland, Puerto Rico, at the Coliseo de Puerto Rico José Miguel Agrelot.  The tour closed on November 19, 2011 in Santo Domingo.
-
-Despacito: "Despacito" (] ; English: "Slowly") is a single by Puerto Rican singer Luis Fonsi featuring Puerto Rican rapper Daddy Yankee from Fonsi's upcoming studio album.  On January 12, 2017, Universal Music Latin released "Despacito" and its music video, which shows both artists performing the song in La Perla neighborhood of Old San Juan, Puerto Rico and the local bar La Factoría.  The song's music video is the first video to reach over three billion views on YouTube.  The song was written by Luis Fonsi, Erika Ender and Daddy Yankee, and was produced by Andrés Torres and Mauricio Rengifo.
-
-Mi Encuentro: Mi Encuentro is the 23rd studio album by Puerto Rican singer Yolandita Monge.  It was released in 1997.  This album marked another radical change of sound for the singer, which included bomba and plena arrangements.  The album contains two songs from Puerto Rican singer/songwriter Glenn Monroig, "Yo Solamente", and "Vete Ya".
-
-Humanos a Marte: "Humanos a Marte" (English: Humans to Mars ) is a song performed by Puerto Rican singer Chayanne, released as the lead single from his upcoming fifteenth studio album "En Todo Estaré", by Sony Music Latin in April 20, 2014.  The song was written by Chayanne and Fernando Montesinos.  In June 17, Chayanne released a remix urban version of the song, featuring the Puerto Rican singer Yandel.
-
-Poetas Puertorriqueños: Poetas Puertorriqueños is a compilation album from Puerto Rican singer Roy Brown.  It features eleven songs from Brown's previous albums, that are based on poems from Puerto Rican writers like Luis Palés Matos and Juan Antonio Corretjer, among others.  It also features a new, unreleased song titled "Ay, ay, ay de la grifa negra", based on a poem by Julia de Burgos.  The album was released under Brown's label Discos Lara-Yarí in 1992.  The album was also sponsored by the Puerto Rican Committee for the Celebration of the 500th Anniversary of the Discovery of Puerto Rico.
-
-Vivencias (Yolandita Monge album): Vivencias (Spanish: "Personal Experiences") is the 18th studio album by Puerto Rican singer Yolandita Monge.  It was released in 1988 and includes the massive hits "Este Amor Que Hay que Callar", "Débil", "Quítame A Ese Hombre Del Corazón", "Acaríciame", "Cuando Termina Un Amor", and "Por Tí (Call Me)".  Nearly all the tracks in this album were radio hits that the singer still performs in her live shows.  This album earned the first Platinum status for a female Puerto Rican singer.  Since then, it has earned double Platinum and double Gold status.  The album's cover picture was taken by late photographer and stylist Raúl Torres.
-
-Question: The Love + Dance Wold Tour was a tour by a Puerto Rican singer in support of his hit single that featured which rapper ?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "tour_name": {
-      "type": "string",
-      "description": "The name of the concert tour."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "supporting_artist": {
-      "type": "string",
-      "description": "The main artist of the tour."
-    },
-    "artist_nationality": {
-      "type": "string",
-      "description": "The nationality of the main artist."
-    },
-    "supported_single": {
-      "type": "string",
-      "description": "The name of the hit single that the tour supports."
-    },
-    "featured_rapper": {
-      "type": "string",
-      "description": "The rapper featured in the supported hit single."
+    {
+      "role": "user",
+      "content": "Context:\nRicky Martin singles discography: Puerto Rican singer Ricky Martin has released seventy-nine Spanish and English-language singles.  In 1984, thirteen-year-old Martin became a member of the Puerto Rican boy band Menudo.  After recording eleven albums with the group, he left Menudo in 1989, hoping to rest and evaluate his career path.  In 1990, he was signed to Sony Discos, the Sony Music Entertainment's Latin imprint.  Martin released his debut solo album, the Spanish-language \"Ricky Martin\", in November 1991.  It included hit singles: \"Fuego Contra Fuego\", \"El Amor de Mi Vida\" and \"Vuelo\".  His second Spanish-language solo album, \"Me Amarás\" (1993) featured further successful singles: \"Me Amarás\", \"Que Dia Es Hoy\" and \"Entre el Amor y los Halagos\".\n\nNational Museum of Puerto Rican Arts and Culture: The National Museum of Puerto Rican Arts and Culture (formerly \"Institute of Puerto Rican Arts and Culture\") is a museum in Chicago dedicated to interpreting the arts and culture of the Puerto Rican people and of the Puerto Ricans in Chicago.  Founded in 2001, it is housed in the historic landmark Humboldt Park stables and receptory, near the Paseo Boricua.  It hosts visual arts exhibitions, community education, and festivals.  Its exhibitions have featured the artwork of Osvaldo Budet, Elizam Escobar, Antonio Martorell, Ramon Frade Leon, and Lizette Cruz, in addition to local Chicago or Puerto Rican artists.  The Institute also sponsors music events including an annual \"Navi-Jazz\" performance, described as a \"fusion of Puerto Rican and African American musical elements.\"\n\nRicky Martin: Enrique Martín Morales (born December 24, 1971), commonly known as Ricky Martin, is a Puerto Rican singer, actor and author.  Martin began his career at age 12 with the all-boy pop group Menudo.  After five years with the group, he released several Spanish-language solo albums throughout the 1990s.  He also acted on stage and on TV in Mexico, where he achieved modest stardom.  In 1994, he appeared on the US TV soap opera \"General Hospital\", playing a Puerto Rican singer.\n\nLove + Dance World Tour: The Love + Dance Wold Tour is the ninth concert tour by Puerto Rican singer Luis Fonsi, in support of his worldwide hit single, \"Despacito\" (2017).  The tour began on July 1, 2017, in Andújar, Spain, and is set to conclude on November 26, 2017, in Zagreb, Croatia.\n\nMúsica + Alma + Sexo World Tour: The Música + Alma + Sexo World Tour (also known as the M.A.S. Tour) was the eighth concert tour by Puerto Rican singer-songwriter Ricky Martin.  The tour supported his ninth studio album, \"Música + Alma + Sexo\" (2011).  It began with a series of concerts in Puerto Rico and North America, with international dates later in the year.  The tour was his first in four years, the previous being the 2007 Black and White Tour.  On the Pollstar Top 50 Worldwide Tours of the first half of 2011, Ricky Martin ranked at number 42.  His tour grossed $17.7, with 37 shows and 246,141 total tickets.  After visiting 28 countries throughout North America, Europe and Latin America, Ricky Martin formally ended his tour on November 12, 2011 in his homeland, Puerto Rico, at the Coliseo de Puerto Rico José Miguel Agrelot.  The tour closed on November 19, 2011 in Santo Domingo.\n\nDespacito: \"Despacito\" (] ; English: \"Slowly\") is a single by Puerto Rican singer Luis Fonsi featuring Puerto Rican rapper Daddy Yankee from Fonsi's upcoming studio album.  On January 12, 2017, Universal Music Latin released \"Despacito\" and its music video, which shows both artists performing the song in La Perla neighborhood of Old San Juan, Puerto Rico and the local bar La Factoría.  The song's music video is the first video to reach over three billion views on YouTube.  The song was written by Luis Fonsi, Erika Ender and Daddy Yankee, and was produced by Andrés Torres and Mauricio Rengifo.\n\nMi Encuentro: Mi Encuentro is the 23rd studio album by Puerto Rican singer Yolandita Monge.  It was released in 1997.  This album marked another radical change of sound for the singer, which included bomba and plena arrangements.  The album contains two songs from Puerto Rican singer/songwriter Glenn Monroig, \"Yo Solamente\", and \"Vete Ya\".\n\nHumanos a Marte: \"Humanos a Marte\" (English: Humans to Mars ) is a song performed by Puerto Rican singer Chayanne, released as the lead single from his upcoming fifteenth studio album \"En Todo Estaré\", by Sony Music Latin in April 20, 2014.  The song was written by Chayanne and Fernando Montesinos.  In June 17, Chayanne released a remix urban version of the song, featuring the Puerto Rican singer Yandel.\n\nPoetas Puertorriqueños: Poetas Puertorriqueños is a compilation album from Puerto Rican singer Roy Brown.  It features eleven songs from Brown's previous albums, that are based on poems from Puerto Rican writers like Luis Palés Matos and Juan Antonio Corretjer, among others.  It also features a new, unreleased song titled \"Ay, ay, ay de la grifa negra\", based on a poem by Julia de Burgos.  The album was released under Brown's label Discos Lara-Yarí in 1992.  The album was also sponsored by the Puerto Rican Committee for the Celebration of the 500th Anniversary of the Discovery of Puerto Rico.\n\nVivencias (Yolandita Monge album): Vivencias (Spanish: \"Personal Experiences\") is the 18th studio album by Puerto Rican singer Yolandita Monge.  It was released in 1988 and includes the massive hits \"Este Amor Que Hay que Callar\", \"Débil\", \"Quítame A Ese Hombre Del Corazón\", \"Acaríciame\", \"Cuando Termina Un Amor\", and \"Por Tí (Call Me)\".  Nearly all the tracks in this album were radio hits that the singer still performs in her live shows.  This album earned the first Platinum status for a female Puerto Rican singer.  Since then, it has earned double Platinum and double Gold status.  The album's cover picture was taken by late photographer and stylist Raúl Torres.\n\nQuestion: The Love + Dance Wold Tour was a tour by a Puerto Rican singer in support of his hit single that featured which rapper ?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"tour_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the concert tour.\"\n    },\n    \"supporting_artist\": {\n      \"type\": \"string\",\n      \"description\": \"The main artist of the tour.\"\n    },\n    \"artist_nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the main artist.\"\n    },\n    \"supported_single\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the hit single that the tour supports.\"\n    },\n    \"featured_rapper\": {\n      \"type\": \"string\",\n      \"description\": \"The rapper featured in the supported hit single.\"\n    }\n  },\n  \"required\": [\n    \"tour_name\",\n    \"supporting_artist\",\n    \"artist_nationality\",\n    \"supported_single\",\n    \"featured_rapper\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "tour_name",
-    "supporting_artist",
-    "artist_nationality",
-    "supported_single",
-    "featured_rapper"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "tour_name": {
+        "type": "string",
+        "description": "The name of the concert tour."
+      },
+      "supporting_artist": {
+        "type": "string",
+        "description": "The main artist of the tour."
+      },
+      "artist_nationality": {
+        "type": "string",
+        "description": "The nationality of the main artist."
+      },
+      "supported_single": {
+        "type": "string",
+        "description": "The name of the hit single that the tour supports."
+      },
+      "featured_rapper": {
+        "type": "string",
+        "description": "The rapper featured in the supported hit single."
+      }
+    },
+    "required": [
+      "tour_name",
+      "supporting_artist",
+      "artist_nationality",
+      "supported_single",
+      "featured_rapper"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

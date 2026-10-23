@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2016 Ghana bus collision: At least 71 people were killed and 13 others injured in a head-on collision between a bus and a truck in Ghana on 18 February 2016.  The government-operated bus was heading to Tamale when it collided head-on with the cargo truck, which was carrying tomatoes, near the town of Kintampo on Wednesday evening.  A regional police spokesman said: “It was very serious … we had to use chainsaws to cut through parts of the mangled bus to get bodies and survivors out.  The police affirmed it was one of the worst road accident in Ghana in years.  Even if the cause of the accident is unknow, some sources said that it could have been a problem of brakes, but speeding could also been in cause.  It seems the bus was overload, carrying more than the maximum of 63 passengers.
-
-Kintampo, Ghana: Kintampo or Kintapo is a town and tourist destination in the Brong-Ahafo Region of Ghana.  It became the capital of Kintampo North Municipal in 2004.  Kintampo has a population of 49,046.  It also served as the capital of the former Kintampo District.
-
-William L. Summers: William L. Summers (born March 6, 1942 in Ravenna, Ohio) is an American criminal defense lawyer who served as lead defense counsel for Larry Mahoney in the Carrollton, Kentucky bus collision case.  He was admitted to the practice of law in the State of Ohio in 1969, the State of Kentucky in 1988, and has also been admitted to practice before the U.S. Supreme Court, ten of the eleven U.S. Circuit Courts of Appeal, as well as numerous United States District Courts in the State of Alabama, Kansas, Kentucky, Ohio, and Oklahoma.
-
-Prestonsburg, Kentucky bus disaster: The collision and plunge into Big Sandy River involving a school bus near Prestonsburg, Kentucky on February 28, 1958 was the third deadliest bus crash in United States history.  It is tied for fatalities with the Carrollton, Kentucky bus collision in 1988, and the only deadlier crashes were a 1963 bus-train crash in Chualar, California and the 1976 Yuba City bus disaster, which claimed the lives of 29 people.
-
-Ghotki rail crash: The Ghotki rail crash occurred on 13 July 2005, at around 3:40am local time (2240 July 12 UTC) in Ghotki, Pakistan.  No. 24 Dn train ("Quetta Express") stopping at the station of Sarhad (a town near Ghotki) due to a fault on the brakes was hit from behind by the following "Karachi Express" (No. 16 Dn) train which had been given a clear line.  Initially it was assumed that the driver of "Karachi Express" missed a signal, but subsequent investigations found that the signalling system was faulty.  An emergency brake application could not prevent the collision, a situation aggravated by insufficient braking power, because two coaches had to be isolated from the train braking system.  The collision caused several of the cars to derail.  The derailed cars were subsequently hit by a third train ("Tezgam"), which resulted in a total of seventeen wrecked train cars, which carried over 3000 passengers.  The entire staff of Sarhad railway station fled when the accident occurred.
-
-2008 Burkina Faso bus crash: The 2008 Burkina Faso bus crash was a bus accident on 5:30 am, November 15, 2008, that claimed the lives of more than 60 persons near the town of Boromo in Burkina Faso.  A heavily-loaded truck carrying 80 people collided with an overloaded bus carrying 95 people on National Highway 1, about six kilometers from Boromo.  The bus, was on its way to Côte d'Ivoire.  The run had started from Imasgho, and additional riders were picked up at Koudougou.  The truck was traveling from Banfora.  Following the collision, the bus caught fire and 54 persons were burned to death inside the bus.  Eleven others who escaped died of their injuries.  The victims were transported to the hospital at Souro Bobo.  The truck driver reportedly survived the collision.  Police investigators speculated that the truck driver had fallen asleep at the wheel, based on a lack of skidmarks
-
-Carrollton bus collision: The Carrollton bus collision occurred on May 14, 1988, on Interstate 71 in unincorporated Carroll County, Kentucky.  Involving a former school bus in use by a church youth group and a pickup truck driven by an impaired driver, the head-on collision was the deadliest incident involving drunk driving and the third-deadliest bus crash in United States history (as of 2016).  Of the 67 people on the bus (counting the driver), there were 27 fatalities in the accident, the same number as the 1958 Prestonsburg, Kentucky bus disaster and behind the 1976 Yuba City bus disaster (29) and 1963 Chualar bus crashes (32).
-
-2016 Ghana Music Awards: Ghana Music Awards 2016 was the 17th edition of Ghana Music Awards held on May 7, 2016, at Accra International Conference Center, Accra, Ghana.  BBNZ act, E.L was the biggest winner at the 2016 Ghana Music Awards taking home a total of five awards including the coveted ‘Artiste of the Year’.  Sarkodie and Bisa Kdei won four awards each.  Sarkodie, Stonebwoy, Efya, EL, R2Bees, Wizkid, Joe Mettle and Adomaa performed at the event which was hosted by Chris Attoh, DJ Black and Naa Ashorkor.  E.L is VGMA Artist of the Year 2016.
-
-Mississauga Truck and Bus Collision: Mississauga Truck and Bus Collision is a rebuilder of buses and trucks in Southern Ontario.  Located in Milton, Ontario, MTB has done work for various transit authorities in Ontario, Canada and the United States.  MTB also rebuilds and resells second hand buses to other agencies:
-
-2014 Ukraine train bus collision: The 2014 Ukraine train bus collision occurred on 4 February 2014 when a bus was hit by a train and killed at least 13 people and another 6 were wounded; the bus driver survived.  According to province prosecutor’s office: "The shuttle bus ignored the traffic lights and the sound signals and headed to the crossing".  The train ripped the bus in two, and dragged it along the tracks.  The collision took place in Vyry, Sumy Oblast, in northeastern Ukraine.
-
-Question: What was the population of the town near which the 2016 Ghana bus collision occured?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "event_name": {
-      "type": "string",
-      "description": "Name of the collision event."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "collision_date": {
-      "type": "string",
-      "format": "date",
-      "description": "Date when the collision occurred."
-    },
-    "nearby_town": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "Name of the town near the collision."
-        },
-        "population": {
-          "type": "integer",
-          "description": "Population of the nearby town."
-        }
-      },
-      "required": [
-        "name",
-        "population"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\n2016 Ghana bus collision: At least 71 people were killed and 13 others injured in a head-on collision between a bus and a truck in Ghana on 18 February 2016.  The government-operated bus was heading to Tamale when it collided head-on with the cargo truck, which was carrying tomatoes, near the town of Kintampo on Wednesday evening.  A regional police spokesman said: “It was very serious … we had to use chainsaws to cut through parts of the mangled bus to get bodies and survivors out.  The police affirmed it was one of the worst road accident in Ghana in years.  Even if the cause of the accident is unknow, some sources said that it could have been a problem of brakes, but speeding could also been in cause.  It seems the bus was overload, carrying more than the maximum of 63 passengers.\n\nKintampo, Ghana: Kintampo or Kintapo is a town and tourist destination in the Brong-Ahafo Region of Ghana.  It became the capital of Kintampo North Municipal in 2004.  Kintampo has a population of 49,046.  It also served as the capital of the former Kintampo District.\n\nWilliam L. Summers: William L. Summers (born March 6, 1942 in Ravenna, Ohio) is an American criminal defense lawyer who served as lead defense counsel for Larry Mahoney in the Carrollton, Kentucky bus collision case.  He was admitted to the practice of law in the State of Ohio in 1969, the State of Kentucky in 1988, and has also been admitted to practice before the U.S. Supreme Court, ten of the eleven U.S. Circuit Courts of Appeal, as well as numerous United States District Courts in the State of Alabama, Kansas, Kentucky, Ohio, and Oklahoma.\n\nPrestonsburg, Kentucky bus disaster: The collision and plunge into Big Sandy River involving a school bus near Prestonsburg, Kentucky on February 28, 1958 was the third deadliest bus crash in United States history.  It is tied for fatalities with the Carrollton, Kentucky bus collision in 1988, and the only deadlier crashes were a 1963 bus-train crash in Chualar, California and the 1976 Yuba City bus disaster, which claimed the lives of 29 people.\n\nGhotki rail crash: The Ghotki rail crash occurred on 13 July 2005, at around 3:40am local time (2240 July 12 UTC) in Ghotki, Pakistan.  No. 24 Dn train (\"Quetta Express\") stopping at the station of Sarhad (a town near Ghotki) due to a fault on the brakes was hit from behind by the following \"Karachi Express\" (No. 16 Dn) train which had been given a clear line.  Initially it was assumed that the driver of \"Karachi Express\" missed a signal, but subsequent investigations found that the signalling system was faulty.  An emergency brake application could not prevent the collision, a situation aggravated by insufficient braking power, because two coaches had to be isolated from the train braking system.  The collision caused several of the cars to derail.  The derailed cars were subsequently hit by a third train (\"Tezgam\"), which resulted in a total of seventeen wrecked train cars, which carried over 3000 passengers.  The entire staff of Sarhad railway station fled when the accident occurred.\n\n2008 Burkina Faso bus crash: The 2008 Burkina Faso bus crash was a bus accident on 5:30 am, November 15, 2008, that claimed the lives of more than 60 persons near the town of Boromo in Burkina Faso.  A heavily-loaded truck carrying 80 people collided with an overloaded bus carrying 95 people on National Highway 1, about six kilometers from Boromo.  The bus, was on its way to Côte d'Ivoire.  The run had started from Imasgho, and additional riders were picked up at Koudougou.  The truck was traveling from Banfora.  Following the collision, the bus caught fire and 54 persons were burned to death inside the bus.  Eleven others who escaped died of their injuries.  The victims were transported to the hospital at Souro Bobo.  The truck driver reportedly survived the collision.  Police investigators speculated that the truck driver had fallen asleep at the wheel, based on a lack of skidmarks\n\nCarrollton bus collision: The Carrollton bus collision occurred on May 14, 1988, on Interstate 71 in unincorporated Carroll County, Kentucky.  Involving a former school bus in use by a church youth group and a pickup truck driven by an impaired driver, the head-on collision was the deadliest incident involving drunk driving and the third-deadliest bus crash in United States history (as of 2016).  Of the 67 people on the bus (counting the driver), there were 27 fatalities in the accident, the same number as the 1958 Prestonsburg, Kentucky bus disaster and behind the 1976 Yuba City bus disaster (29) and 1963 Chualar bus crashes (32).\n\n2016 Ghana Music Awards: Ghana Music Awards 2016 was the 17th edition of Ghana Music Awards held on May 7, 2016, at Accra International Conference Center, Accra, Ghana.  BBNZ act, E.L was the biggest winner at the 2016 Ghana Music Awards taking home a total of five awards including the coveted ‘Artiste of the Year’.  Sarkodie and Bisa Kdei won four awards each.  Sarkodie, Stonebwoy, Efya, EL, R2Bees, Wizkid, Joe Mettle and Adomaa performed at the event which was hosted by Chris Attoh, DJ Black and Naa Ashorkor.  E.L is VGMA Artist of the Year 2016.\n\nMississauga Truck and Bus Collision: Mississauga Truck and Bus Collision is a rebuilder of buses and trucks in Southern Ontario.  Located in Milton, Ontario, MTB has done work for various transit authorities in Ontario, Canada and the United States.  MTB also rebuilds and resells second hand buses to other agencies:\n\n2014 Ukraine train bus collision: The 2014 Ukraine train bus collision occurred on 4 February 2014 when a bus was hit by a train and killed at least 13 people and another 6 were wounded; the bus driver survived.  According to province prosecutor’s office: \"The shuttle bus ignored the traffic lights and the sound signals and headed to the crossing\".  The train ripped the bus in two, and dragged it along the tracks.  The collision took place in Vyry, Sumy Oblast, in northeastern Ukraine.\n\nQuestion: What was the population of the town near which the 2016 Ghana bus collision occured?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"event_name\": {\n      \"type\": \"string\",\n      \"description\": \"Name of the collision event.\"\n    },\n    \"collision_date\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"Date when the collision occurred.\"\n    },\n    \"nearby_town\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"Name of the town near the collision.\"\n        },\n        \"population\": {\n          \"type\": \"integer\",\n          \"description\": \"Population of the nearby town.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"population\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"event_name\",\n    \"collision_date\",\n    \"nearby_town\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "event_name",
-    "collision_date",
-    "nearby_town"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "event_name": {
+        "type": "string",
+        "description": "Name of the collision event."
+      },
+      "collision_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Date when the collision occurred."
+      },
+      "nearby_town": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Name of the town near the collision."
+          },
+          "population": {
+            "type": "integer",
+            "description": "Population of the nearby town."
+          }
+        },
+        "required": [
+          "name",
+          "population"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "event_name",
+      "collision_date",
+      "nearby_town"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-American Reunion: American Reunion (also known as American Pie 4: Reunion or American Pie: Reunion in certain countries) is a 2012 ensemble sex comedy film written and directed by Jon Hurwitz and Hayden Schlossberg.  It is the fourth installment in the "American Pie" theatrical series and eighth installment in the "American Pie" franchise overall.
-
-American Pie Presents: Band Camp: American Pie Presents: Band Camp (also known as American Pie: Band Camp) is a 2005 direct-to-DVD sex comedy film.  It is the first installment in the "American Pie Presents" series and the fourth installment in the "American Pie" franchise.  It was directed by Steve Rash and written by Brad Riddell.  The film centers on Matt Stifler, younger brother of Steve Stifler.  In this film, Matt is sent to the infamous band camp, where he is compelled to change his ways.
-
-American Pie Presents: The Naked Mile: American Pie Presents: The Naked Mile (also known as American Pie: The Naked Mile) is a 2006 American sex comedy film released by Universal Pictures.  It is the second installment in the "American Pie Presents" series and the fifth installment in the "American Pie" franchise.  The film begins a story arc that concludes with "" (2007).  John White stars as Erik Stifler, a high school senior who is given a "guilt free pass" by his girlfriend, Tracy Sterling (Jessy Schram), and so visits the Beta House fraternity led by his cousin, Dwight Stifler (Steve Talley), to run a mile naked.  Christopher McDonald co-stars as Erik's father, Harry, and Eugene Levy once again plays Jim's Dad, who turns out to be a family friend of both Erik's and Tracy's.  Also, it is in this film that his name is revealed to be "Noah Levenstein".
-
-American Pie 2: American Pie 2 is a 2001 American sex comedy film and the sequel to the 1999 film "American Pie" and the second film in the "American Pie" film series.  It was written by Adam Herz and David H. Steinberg and directed by James B. Rogers.  The film picks up the story of the five friends from the first film as they reunite during the summer after their first year of college.  It was released in the United States on August 10, 2001, and grossed over $145 million in the US and $142 million overseas on a budget of $30 million.  It was followed by another sequel, "American Wedding".
-
-American Pie Presents: Beta House: American Pie Presents: Beta House is a 2007 American sex comedy film released by Universal Pictures.  It is the third installment in the "American Pie Presents" series and the sixth installment in the "American Pie" franchise.  The film concludes a story arc that begins with "" (2006).  John White stars as Erik Stifler, a college freshman who pledges the Beta House fraternity led by his cousin Dwight Stifler (Steve Talley).  Christopher McDonald co-stars as Erik's father and Eugene Levy plays Beta House alumnus Noah Levenstein.
-
-American Pie Presents: The Book of Love: American Pie Presents: The Book of Love (also known as American Pie: The Book of Love) is a 2009 sex comedy film released directly to DVD.  It is the fourth and final installment in the "American Pie Presents" series and the seventh installment in the "American Pie" franchise.  Directed by John Putch, the film stars Bug Hall, John Patrick Jordan, Kevin M. Horton, Brandon Hardesty, and Eugene Levy.  This was Sherman Hemsley's final film appearance before his death on July 24, 2012.
-
-Chris Owen (actor): Chris Owen (born September 25, 1980) is an American actor and photographer.  He is best known for his role as The Sherminator in the "American Pie film franchise", appearing in "American Pie", "American Pie 2", "" and "American Reunion".  Aside from Eugene Levy, he is the only actor from the theatrical features to appear in the ""American Pie Presents:"" direct-to-video spin-off movies.
-
-American Pie (film): American Pie is a 1999 teen sex comedy film written by Adam Herz and directed by brothers Paul and Chris Weitz, in their directorial film debut.  It is the first film in the "American Pie" theatrical series.  The film was a box-office hit and spawned three direct sequels: "American Pie 2" (2001), "American Wedding" (2003), and "American Reunion" (2012).  The film concentrates on five best friends (Jim, Kevin, Oz, Finch, and Stifler) who attend East Great Falls High.  With the exception of Stifler (who has already lost his virginity), the guys make a pact to lose their virginity before their high school graduation.  The title is borrowed from the song of the same name and refers to a scene in the film, in which the protagonist is caught masturbating with a pie after being told that third base feels like "warm apple pie".  Writer Adam Herz has stated that the title also refers to the quest of losing one's virginity in high school, which is as "American as apple pie."
-
-American Wedding: American Wedding (known as American Pie 3: The Wedding or American Pie: The Wedding, in some countries) is a 2003 American sex comedy film and a sequel to "American Pie" and "American Pie 2".  It is the third (originally intended final) installment in the "American Pie" theatrical series.  It was written by Adam Herz and directed by Jesse Dylan.  Another sequel, "American Reunion", was released nine years later.  This also stands as the last film in the series to be written by Herz, who conceptualized the franchise.
-
-List of American Pie characters: This is a list of characters from the film series "American Pie" consisting of "American Pie" (1999), "American Pie 2" (2001), "American Wedding" (2003), "" (2005), "" (2006), "" (2007), "" (2009), and "American Reunion" (2012).  Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films.  Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.
-
-Question: When was the last film in the series "American Pie" released?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "franchise_name": {
-      "type": "string",
-      "description": "The name of the film franchise."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "last_film_title": {
-      "type": "string",
-      "description": "The title of the last film released in the franchise."
-    },
-    "last_film_release_year": {
-      "type": "integer",
-      "description": "The release year of the last film in the franchise."
+    {
+      "role": "user",
+      "content": "Context:\nAmerican Reunion: American Reunion (also known as American Pie 4: Reunion or American Pie: Reunion in certain countries) is a 2012 ensemble sex comedy film written and directed by Jon Hurwitz and Hayden Schlossberg.  It is the fourth installment in the \"American Pie\" theatrical series and eighth installment in the \"American Pie\" franchise overall.\n\nAmerican Pie Presents: Band Camp: American Pie Presents: Band Camp (also known as American Pie: Band Camp) is a 2005 direct-to-DVD sex comedy film.  It is the first installment in the \"American Pie Presents\" series and the fourth installment in the \"American Pie\" franchise.  It was directed by Steve Rash and written by Brad Riddell.  The film centers on Matt Stifler, younger brother of Steve Stifler.  In this film, Matt is sent to the infamous band camp, where he is compelled to change his ways.\n\nAmerican Pie Presents: The Naked Mile: American Pie Presents: The Naked Mile (also known as American Pie: The Naked Mile) is a 2006 American sex comedy film released by Universal Pictures.  It is the second installment in the \"American Pie Presents\" series and the fifth installment in the \"American Pie\" franchise.  The film begins a story arc that concludes with \"\" (2007).  John White stars as Erik Stifler, a high school senior who is given a \"guilt free pass\" by his girlfriend, Tracy Sterling (Jessy Schram), and so visits the Beta House fraternity led by his cousin, Dwight Stifler (Steve Talley), to run a mile naked.  Christopher McDonald co-stars as Erik's father, Harry, and Eugene Levy once again plays Jim's Dad, who turns out to be a family friend of both Erik's and Tracy's.  Also, it is in this film that his name is revealed to be \"Noah Levenstein\".\n\nAmerican Pie 2: American Pie 2 is a 2001 American sex comedy film and the sequel to the 1999 film \"American Pie\" and the second film in the \"American Pie\" film series.  It was written by Adam Herz and David H. Steinberg and directed by James B. Rogers.  The film picks up the story of the five friends from the first film as they reunite during the summer after their first year of college.  It was released in the United States on August 10, 2001, and grossed over $145 million in the US and $142 million overseas on a budget of $30 million.  It was followed by another sequel, \"American Wedding\".\n\nAmerican Pie Presents: Beta House: American Pie Presents: Beta House is a 2007 American sex comedy film released by Universal Pictures.  It is the third installment in the \"American Pie Presents\" series and the sixth installment in the \"American Pie\" franchise.  The film concludes a story arc that begins with \"\" (2006).  John White stars as Erik Stifler, a college freshman who pledges the Beta House fraternity led by his cousin Dwight Stifler (Steve Talley).  Christopher McDonald co-stars as Erik's father and Eugene Levy plays Beta House alumnus Noah Levenstein.\n\nAmerican Pie Presents: The Book of Love: American Pie Presents: The Book of Love (also known as American Pie: The Book of Love) is a 2009 sex comedy film released directly to DVD.  It is the fourth and final installment in the \"American Pie Presents\" series and the seventh installment in the \"American Pie\" franchise.  Directed by John Putch, the film stars Bug Hall, John Patrick Jordan, Kevin M. Horton, Brandon Hardesty, and Eugene Levy.  This was Sherman Hemsley's final film appearance before his death on July 24, 2012.\n\nChris Owen (actor): Chris Owen (born September 25, 1980) is an American actor and photographer.  He is best known for his role as The Sherminator in the \"American Pie film franchise\", appearing in \"American Pie\", \"American Pie 2\", \"\" and \"American Reunion\".  Aside from Eugene Levy, he is the only actor from the theatrical features to appear in the \"\"American Pie Presents:\"\" direct-to-video spin-off movies.\n\nAmerican Pie (film): American Pie is a 1999 teen sex comedy film written by Adam Herz and directed by brothers Paul and Chris Weitz, in their directorial film debut.  It is the first film in the \"American Pie\" theatrical series.  The film was a box-office hit and spawned three direct sequels: \"American Pie 2\" (2001), \"American Wedding\" (2003), and \"American Reunion\" (2012).  The film concentrates on five best friends (Jim, Kevin, Oz, Finch, and Stifler) who attend East Great Falls High.  With the exception of Stifler (who has already lost his virginity), the guys make a pact to lose their virginity before their high school graduation.  The title is borrowed from the song of the same name and refers to a scene in the film, in which the protagonist is caught masturbating with a pie after being told that third base feels like \"warm apple pie\".  Writer Adam Herz has stated that the title also refers to the quest of losing one's virginity in high school, which is as \"American as apple pie.\"\n\nAmerican Wedding: American Wedding (known as American Pie 3: The Wedding or American Pie: The Wedding, in some countries) is a 2003 American sex comedy film and a sequel to \"American Pie\" and \"American Pie 2\".  It is the third (originally intended final) installment in the \"American Pie\" theatrical series.  It was written by Adam Herz and directed by Jesse Dylan.  Another sequel, \"American Reunion\", was released nine years later.  This also stands as the last film in the series to be written by Herz, who conceptualized the franchise.\n\nList of American Pie characters: This is a list of characters from the film series \"American Pie\" consisting of \"American Pie\" (1999), \"American Pie 2\" (2001), \"American Wedding\" (2003), \"\" (2005), \"\" (2006), \"\" (2007), \"\" (2009), and \"American Reunion\" (2012).  Only one character, Noah Levenstein played by Eugene Levy, has appeared in all eight released films.  Biggs, Hannigan, Scott, Nicholas, Thomas, Coolidge, Cho, Isfield, Cheek, and Owen all play their characters in four films each; other characters appear in fewer films.\n\nQuestion: When was the last film in the series \"American Pie\" released?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"franchise_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the film franchise.\"\n    },\n    \"last_film_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the last film released in the franchise.\"\n    },\n    \"last_film_release_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The release year of the last film in the franchise.\"\n    }\n  },\n  \"required\": [\n    \"franchise_name\",\n    \"last_film_title\",\n    \"last_film_release_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "franchise_name",
-    "last_film_title",
-    "last_film_release_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "franchise_name": {
+        "type": "string",
+        "description": "The name of the film franchise."
+      },
+      "last_film_title": {
+        "type": "string",
+        "description": "The title of the last film released in the franchise."
+      },
+      "last_film_release_year": {
+        "type": "integer",
+        "description": "The release year of the last film in the franchise."
+      }
+    },
+    "required": [
+      "franchise_name",
+      "last_film_title",
+      "last_film_release_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,83 +1,60 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Abrázame Muy Fuerte (album): Abrázame Muy Fuerte (English: "Hold Me Tightly") is the 25th studio album recorded by Mexican singer-songwriter Juan Gabriel.  It was released by BMG U.S. Latin on December 12, 2000.  It is also the main theme song for the Mexican telenovela "Abrázame Muy Fuerte".  In 2002 the album was awarded at the Premio Lo Nuestro for Pop Album of the Year and was nominated for a Grammy Award for Best Latin Pop Album in the 44th Annual Grammy Awards.
-
-Vivir (album): Vivir (English: "Live" ) is the second Spanish studio album recorded by Spanish singer-songwriter Enrique Iglesias.  It was released by Fonovisa on January 28, 1997 (see 1997 in music).  The album was produced again by Spanish songwriter and record producer Rafael Pérez-Botija.  This album was a successful release for the singer.  The album includes three number-one singles on the "Billboard" Hot Latin Tracks charts in United States: "Enamorado Por Primera Vez", "Sólo En Ti" and "Miente".  In the United States, it was certified gold and platinum on May 6, 1997.  This album received nomination a Grammy Award for Best Latin Pop Album at the 40th Annual Grammy Awards, on February 25, 1998.  losing to "Romances" by Luis Miguel.  The album received a Premio Lo Nuestro award for "Pop Album of the Year" at the 9th Lo Nuestro Awards.  To the date the album has sold a million copies in U.S and over 5 million copies worldwide.
-
-Premio Lo Nuestro 2004: Premio Lo Nuestro 2004 was the 16th anniversary of a popular Latin Music Award show in U.S.  The award show took place In Miami, Florida,which airs LIVE on the Univision Network on Thursday, February 26, from 8-11 pm ET / PT (7-10 pm Central and Mountain).  The show was hosted by Adal Ramones.  The artists who performed in the show were:Ricky Martin, Thalía, Ricardo Arjona, Marco Antonio Solís, Sin Bandera, La Oreja de Van Gogh, Montez de Durango, El General and many more.  There was total of 180 nominations in 32 categories.  The nominees list includes Ricky Martin and Ricardo Arjona, with four nominations each; La India, Marc Anthony, Marco Antonio Solís, Conjunto Primavera, Olga Tañón and Joan Sebastian with three nominations each; Shakira and Thalía with two nominations; and Juanes, Alexandre Pires, Maná, Pepe Aguilar, Vicente Fernández, and many more.
-
-Estas Tocando Fuego: Estas Tocando Fuego is the sixteenth studio album by La Mafia.  It was released on October 19, 1991.  The album entered the Billboard Latin Regional Mexican chart at number sixteen.  By March 21, 1992, it reached the number one position and stayed in that position for twenty-three weeks.  "Estas Tocando Fuego" became a phenomenal hit surpassing sales expectations every where.  The record went on to become the first ever million selling album in the history of tejano music.  The band's outstanding performance prompted Sony to present them with the prestigious Premio Cristal, created by the label to honor artist who attain worldwide sales in excess of 500,000 units for a single album.  The album was certified triple platinum, and La Mafia earned Billboard and Premio Lo Nuestro band of the year.  The album tied with Selena's Entre a Mi Mundo for best regional Mexican album of the year at Premio Lo Nuestro 1993.
-
-Magneto (band): Magneto was a popular Mexican boy band of the 1980s and 1990s.  The band formed on February 14, 1983.  In 1986, Magneto was featured in "Siempre en Domingo," a Mexican entertainment show viewed across Latin America and parts of Europe.  Mexican teen pop group Magneto emerged in 1983.  Their first record, Dejalo Que Gire came in 1984, followed by Super 6 Magneto.  The Latin pop outfit suffered several lineup changes before achieving their first gold record in 1986.  Mostly playing dance-pop songs, the five-member ensemble started touring Central America after climbing charts with "Todo Esta Muy Bien," and "Soy Un Soñador."  However, their breakthrough came after issuing a Spanish-language version of Desireless' "Voyage Voyage," a French pop hit from the '80s.  In 1992 the boy band played the lead in their own movie, "Cambiando el Destino".  Magneto won the Lo Nuestro Award for Pop New Artist of the Year, and received two nominations for the Lo Nuestro Awards of 1993: Pop Album ("Magneto") and Pop Group of the Year.  Nevertheless, the original Magneto disbanded in 1996 after a sold-out show at Mexico City's Auditorio Nacional.
-
-Tu Amor o Tu Desprecio: Tu Amor o Tu Desprecio (Eng.: "Your Love or Your Disdain") is the fifth studio album released by Marco Antonio Solís on May 13, 2003.  This album became his third number-one hit as a solo artist on the "Billboard" Top Latin Albums chart, won a Latin grammy for best regional Mexican song and won album of the year at Premio Lo Nuestro 2004.  Más Que Tu Amigo served as the opening theme for the novela Velo de novia starring Susana Gonzalez and Eduardo Santamarina.
-
-Un Hombre Normal: "Un Hombre Normal" is a song by Mexican singer Espinoza Paz, released as a single from his album of the same title.  The song became his fourth top 5 hit on the "Billboard" Latin Songs chart, and the third to peak at No.4, after "Al Diablo Lo Nuestro" (2010) and "El Culpable" (2011).  "Un Hombre Normal" was nominated for a Pop Song of the Year at the Premio Lo Nuestro 2013.
-
-Tierra de Nadie (Ana Gabriel album): Tierra de Nadie (English No man's land) is the fourth studio album by Mexican pop singer Ana Gabriel.  It was released in 1988.  She achieved international recognition with this album and it reached #1 in the Billboard Latin Pop Albums staying in the chart for 73 weeks.  It sold four million worldwide.  The album was given a Premio Lo Nuestro award for "Pop Album of the Year" in 1990.
-
-Premio Lo Nuestro 2003: Premio Lo Nuestro 2003 was the 15th anniversary of the awards.  the show was hosted by Mexican presenters Marco Antonio Regil and Adal Ramones.  Juanes, Thalía, Marc Anthony, Pilar Montenegro, Sin Bandera, Banda el Recodo and other Latin music greats gave electrifying performances.  In the show, there was 36 awards winners with 135 nominations.  In Pop genre, Awards was given for : Album of the Year, Best Male Artist, Best Female Artist, Best Group or duo, Best New Artist and Song of the Year.  In Rock Genre : Best Rock Album and Best rock Performer of the Year.  In Tropical genre : Best Tropical Album of the Year, Best Tropical Male Artist, Best Tropical Female Artist, Best Tropical Group or Duo of the Year, Best Tropical New Artist, Tropical Song of the Year, Best Merengue Performance, Best Salsa Performance and Best Traditional Performance.  Juanes was the biggest winner of night, took home four awards Best Pop Male Artist, Best Music Video, Best Rock Performance, and Pop Song of the Year .  In the Regional Mexican, Pilar Montenegro took three awards for Regional Mexican Song of the Year, Pop Song of the Year ("Quitame Ese Hombre"), and for Best Regional Mexican Female Artist.  In the tropical genre, Celia Cruz took home with four great awards of the night for Best Salsa Performance, Best Tropical Female Artist, Best Tropical Song of the year and Tropical Album of the Year.  At the night, the greatest performance was a medley of top Latin hits from the last 15 years, performed by the artists that made them famous, including Vikki Carr, Son by Four, Los Ilegales, La Mafia, Luis Enrique, Wilfrido Vargas and Olga Tañón.  There was a great tribute to Celia Cruz by the world-famous salsa group "Fania All-Stars", of which Cruz was a member during the 1970s, reunited for an exclusive performance that rocked the house.
-
-Sin Bandera: Sin Bandera (which can be interpreted as "Flagless" or "No Flag") is a Latin pop duo based in Mexico that consisted of Leonel García, and Noel Schajris.  They became one of the most popular artists after their solo debut album "Sin Bandera" was released on March 26, 2002.
-
-Question: Who are the Latin pop duo based in Mexico who became popular after the release of their 2002 debut album and performed at Premio Lo Nuestro 2004?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "duo_name": {
-      "type": "string",
-      "description": "The name of the Latin pop duo."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "genre": {
-      "type": "string",
-      "description": "The music genre of the duo."
-    },
-    "origin_country": {
-      "type": "string",
-      "description": "The country where the duo is based."
-    },
-    "debut_album_details": {
-      "type": "object",
-      "properties": {
-        "album_title": {
-          "type": "string",
-          "description": "The title of their debut album."
-        },
-        "release_year": {
-          "type": "integer",
-          "description": "The release year of their debut album."
-        }
-      },
-      "required": [
-        "album_title",
-        "release_year"
-      ],
-      "additionalProperties": false
-    },
-    "performed_at_premio_lo_nuestro_year": {
-      "type": "integer",
-      "description": "The year the duo performed at Premio Lo Nuestro."
+    {
+      "role": "user",
+      "content": "Context:\nAbrázame Muy Fuerte (album): Abrázame Muy Fuerte (English: \"Hold Me Tightly\") is the 25th studio album recorded by Mexican singer-songwriter Juan Gabriel.  It was released by BMG U.S. Latin on December 12, 2000.  It is also the main theme song for the Mexican telenovela \"Abrázame Muy Fuerte\".  In 2002 the album was awarded at the Premio Lo Nuestro for Pop Album of the Year and was nominated for a Grammy Award for Best Latin Pop Album in the 44th Annual Grammy Awards.\n\nVivir (album): Vivir (English: \"Live\" ) is the second Spanish studio album recorded by Spanish singer-songwriter Enrique Iglesias.  It was released by Fonovisa on January 28, 1997 (see 1997 in music).  The album was produced again by Spanish songwriter and record producer Rafael Pérez-Botija.  This album was a successful release for the singer.  The album includes three number-one singles on the \"Billboard\" Hot Latin Tracks charts in United States: \"Enamorado Por Primera Vez\", \"Sólo En Ti\" and \"Miente\".  In the United States, it was certified gold and platinum on May 6, 1997.  This album received nomination a Grammy Award for Best Latin Pop Album at the 40th Annual Grammy Awards, on February 25, 1998.  losing to \"Romances\" by Luis Miguel.  The album received a Premio Lo Nuestro award for \"Pop Album of the Year\" at the 9th Lo Nuestro Awards.  To the date the album has sold a million copies in U.S and over 5 million copies worldwide.\n\nPremio Lo Nuestro 2004: Premio Lo Nuestro 2004 was the 16th anniversary of a popular Latin Music Award show in U.S.  The award show took place In Miami, Florida,which airs LIVE on the Univision Network on Thursday, February 26, from 8-11 pm ET / PT (7-10 pm Central and Mountain).  The show was hosted by Adal Ramones.  The artists who performed in the show were:Ricky Martin, Thalía, Ricardo Arjona, Marco Antonio Solís, Sin Bandera, La Oreja de Van Gogh, Montez de Durango, El General and many more.  There was total of 180 nominations in 32 categories.  The nominees list includes Ricky Martin and Ricardo Arjona, with four nominations each; La India, Marc Anthony, Marco Antonio Solís, Conjunto Primavera, Olga Tañón and Joan Sebastian with three nominations each; Shakira and Thalía with two nominations; and Juanes, Alexandre Pires, Maná, Pepe Aguilar, Vicente Fernández, and many more.\n\nEstas Tocando Fuego: Estas Tocando Fuego is the sixteenth studio album by La Mafia.  It was released on October 19, 1991.  The album entered the Billboard Latin Regional Mexican chart at number sixteen.  By March 21, 1992, it reached the number one position and stayed in that position for twenty-three weeks.  \"Estas Tocando Fuego\" became a phenomenal hit surpassing sales expectations every where.  The record went on to become the first ever million selling album in the history of tejano music.  The band's outstanding performance prompted Sony to present them with the prestigious Premio Cristal, created by the label to honor artist who attain worldwide sales in excess of 500,000 units for a single album.  The album was certified triple platinum, and La Mafia earned Billboard and Premio Lo Nuestro band of the year.  The album tied with Selena's Entre a Mi Mundo for best regional Mexican album of the year at Premio Lo Nuestro 1993.\n\nMagneto (band): Magneto was a popular Mexican boy band of the 1980s and 1990s.  The band formed on February 14, 1983.  In 1986, Magneto was featured in \"Siempre en Domingo,\" a Mexican entertainment show viewed across Latin America and parts of Europe.  Mexican teen pop group Magneto emerged in 1983.  Their first record, Dejalo Que Gire came in 1984, followed by Super 6 Magneto.  The Latin pop outfit suffered several lineup changes before achieving their first gold record in 1986.  Mostly playing dance-pop songs, the five-member ensemble started touring Central America after climbing charts with \"Todo Esta Muy Bien,\" and \"Soy Un Soñador.\"  However, their breakthrough came after issuing a Spanish-language version of Desireless' \"Voyage Voyage,\" a French pop hit from the '80s.  In 1992 the boy band played the lead in their own movie, \"Cambiando el Destino\".  Magneto won the Lo Nuestro Award for Pop New Artist of the Year, and received two nominations for the Lo Nuestro Awards of 1993: Pop Album (\"Magneto\") and Pop Group of the Year.  Nevertheless, the original Magneto disbanded in 1996 after a sold-out show at Mexico City's Auditorio Nacional.\n\nTu Amor o Tu Desprecio: Tu Amor o Tu Desprecio (Eng.: \"Your Love or Your Disdain\") is the fifth studio album released by Marco Antonio Solís on May 13, 2003.  This album became his third number-one hit as a solo artist on the \"Billboard\" Top Latin Albums chart, won a Latin grammy for best regional Mexican song and won album of the year at Premio Lo Nuestro 2004.  Más Que Tu Amigo served as the opening theme for the novela Velo de novia starring Susana Gonzalez and Eduardo Santamarina.\n\nUn Hombre Normal: \"Un Hombre Normal\" is a song by Mexican singer Espinoza Paz, released as a single from his album of the same title.  The song became his fourth top 5 hit on the \"Billboard\" Latin Songs chart, and the third to peak at No.4, after \"Al Diablo Lo Nuestro\" (2010) and \"El Culpable\" (2011).  \"Un Hombre Normal\" was nominated for a Pop Song of the Year at the Premio Lo Nuestro 2013.\n\nTierra de Nadie (Ana Gabriel album): Tierra de Nadie (English No man's land) is the fourth studio album by Mexican pop singer Ana Gabriel.  It was released in 1988.  She achieved international recognition with this album and it reached #1 in the Billboard Latin Pop Albums staying in the chart for 73 weeks.  It sold four million worldwide.  The album was given a Premio Lo Nuestro award for \"Pop Album of the Year\" in 1990.\n\nPremio Lo Nuestro 2003: Premio Lo Nuestro 2003 was the 15th anniversary of the awards.  the show was hosted by Mexican presenters Marco Antonio Regil and Adal Ramones.  Juanes, Thalía, Marc Anthony, Pilar Montenegro, Sin Bandera, Banda el Recodo and other Latin music greats gave electrifying performances.  In the show, there was 36 awards winners with 135 nominations.  In Pop genre, Awards was given for : Album of the Year, Best Male Artist, Best Female Artist, Best Group or duo, Best New Artist and Song of the Year.  In Rock Genre : Best Rock Album and Best rock Performer of the Year.  In Tropical genre : Best Tropical Album of the Year, Best Tropical Male Artist, Best Tropical Female Artist, Best Tropical Group or Duo of the Year, Best Tropical New Artist, Tropical Song of the Year, Best Merengue Performance, Best Salsa Performance and Best Traditional Performance.  Juanes was the biggest winner of night, took home four awards Best Pop Male Artist, Best Music Video, Best Rock Performance, and Pop Song of the Year .  In the Regional Mexican, Pilar Montenegro took three awards for Regional Mexican Song of the Year, Pop Song of the Year (\"Quitame Ese Hombre\"), and for Best Regional Mexican Female Artist.  In the tropical genre, Celia Cruz took home with four great awards of the night for Best Salsa Performance, Best Tropical Female Artist, Best Tropical Song of the year and Tropical Album of the Year.  At the night, the greatest performance was a medley of top Latin hits from the last 15 years, performed by the artists that made them famous, including Vikki Carr, Son by Four, Los Ilegales, La Mafia, Luis Enrique, Wilfrido Vargas and Olga Tañón.  There was a great tribute to Celia Cruz by the world-famous salsa group \"Fania All-Stars\", of which Cruz was a member during the 1970s, reunited for an exclusive performance that rocked the house.\n\nSin Bandera: Sin Bandera (which can be interpreted as \"Flagless\" or \"No Flag\") is a Latin pop duo based in Mexico that consisted of Leonel García, and Noel Schajris.  They became one of the most popular artists after their solo debut album \"Sin Bandera\" was released on March 26, 2002.\n\nQuestion: Who are the Latin pop duo based in Mexico who became popular after the release of their 2002 debut album and performed at Premio Lo Nuestro 2004?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"duo_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the Latin pop duo.\"\n    },\n    \"genre\": {\n      \"type\": \"string\",\n      \"description\": \"The music genre of the duo.\"\n    },\n    \"origin_country\": {\n      \"type\": \"string\",\n      \"description\": \"The country where the duo is based.\"\n    },\n    \"debut_album_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"album_title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of their debut album.\"\n        },\n        \"release_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The release year of their debut album.\"\n        }\n      },\n      \"required\": [\n        \"album_title\",\n        \"release_year\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"performed_at_premio_lo_nuestro_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the duo performed at Premio Lo Nuestro.\"\n    }\n  },\n  \"required\": [\n    \"duo_name\",\n    \"genre\",\n    \"origin_country\",\n    \"debut_album_details\",\n    \"performed_at_premio_lo_nuestro_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "duo_name",
-    "genre",
-    "origin_country",
-    "debut_album_details",
-    "performed_at_premio_lo_nuestro_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "duo_name": {
+        "type": "string",
+        "description": "The name of the Latin pop duo."
+      },
+      "genre": {
+        "type": "string",
+        "description": "The music genre of the duo."
+      },
+      "origin_country": {
+        "type": "string",
+        "description": "The country where the duo is based."
+      },
+      "debut_album_details": {
+        "type": "object",
+        "properties": {
+          "album_title": {
+            "type": "string",
+            "description": "The title of their debut album."
+          },
+          "release_year": {
+            "type": "integer",
+            "description": "The release year of their debut album."
+          }
+        },
+        "required": [
+          "album_title",
+          "release_year"
+        ],
+        "additionalProperties": false
+      },
+      "performed_at_premio_lo_nuestro_year": {
+        "type": "integer",
+        "description": "The year the duo performed at Premio Lo Nuestro."
+      }
+    },
+    "required": [
+      "duo_name",
+      "genre",
+      "origin_country",
+      "debut_album_details",
+      "performed_at_premio_lo_nuestro_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

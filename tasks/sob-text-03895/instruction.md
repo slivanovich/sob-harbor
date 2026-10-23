@@ -1,86 +1,63 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Flávio Murtosa: Flávio Teixeira (born 14 January 1951), known as Flávio Murtosa or simply Murtosa, is a Brazilian former professional footballer and currently professional football manager.  Murtosa has a long friendship with FIFA World Cup winning manager Luiz Felipe Scolari and works mostly as his assistant coach.  He is currently the assistant coach of Guangzhou Evergrande.
-
-Mário Zagallo: Mário Jorge Lobo Zagallo (] ; born 9 August 1931) is a Brazilian former football player and manager who played as a forward.  He was the first footballer to win the FIFA World Cup both as a manager and as a player, 1958 FIFA World Cup and 1962 FIFA World Cup as a player, the 1970 FIFA World Cup as a manager and the 1994 FIFA World Cup as an assistant manager.
-
-Luiz Felipe Scolari: Luiz Felipe Scolari, (] , ] ; born 9 November 1948), also known as Felipão in Brazil and as Phil Scolari or Big Phil in the English-speaking world, is a FIFA World Cup winner Brazilian football manager and former professional footballer, who is the current manager of Chinese club Guangzhou Evergrande in the Chinese Super League.
-
-Ignacio Trelles: Ignacio "Nacho" Trelles (born 31 July 1916) is a Mexican former football player and coach.  He had five tenures as coach of the Selección de fútbol de México (Mexico national team) in 106 international matches, and was in charge of the Mexico squads at FIFA World Cup tournaments: 1962 and 1966.  He guided Mexico to their first win in a FIFA World Cup when they defeated Czechoslovakia 3–1 in the 1962 FIFA World Cup in Chile.  At the 1962 FIFA World Cup, Mexico finished eleventh, which was their best ranking in a World Cup outside home soil until 2002 where they also ranked eleventh.
-
-2002 FIFA World Cup: The 2002 FIFA World Cup was the 17th staging of the FIFA World Cup which took place from 31 May to 30 June 2002 in South Korea and Japan.  It was the first World Cup to be held in Asia, the first to be held on a continent other than Europe or the Americas, the last World Cup during which the golden goal rule was in force and the only World Cup to be jointly hosted by more than one nation.  Brazil won the tournament for a record fifth time, winning the final against Germany 2–0.  The victory meant Brazil qualified for the 2005 FIFA Confederations Cup for the fifth time, representing the World.  In the third place play-off match against South Korea, Turkey won 3–2 taking third place in only their second ever FIFA World Cup finals.  China PR, Ecuador, Senegal and Slovenia made their first appearances at the finals with Turkey making its first appearance since 1954.  Republic of Ireland, Russia and Sweden returned after missing the 1998 tournament.
-
-FIFA 06: Road to FIFA World Cup: FIFA 06: Road to FIFA World Cup is a video game developed by EA Sports and DICE for the Xbox 360.  The game is an officially licensed product of the 2006 FIFA World Cup finals held in Germany.  "FIFA 06: Road to FIFA World Cup" World Cup mode only includes UEFA qualification groups for the 2006 World Cup.
-
-FIFA Fan Fest: The FIFA Fan Fests are public viewing events organized by FIFA and its partners which allow people to watch the FIFA World Cup with thousands of fans from all around the world.  The Fan Fest first became part of the official program for the 2006 FIFA World Cup in Germany, following the huge success of unofficial public viewing events in South Korea during the 2002 FIFA World Cup.  It was a great success, leading FIFA to expand it to include several cities worldwide for the 2010 FIFA World Cup in South Africa.  The locations are large enough to fit many thousands of people, and feature gigantic LED displays which broadcast the matches live.
-
-Neo Geo Cup '98: The Road to the Victory: Neo Geo Cup '98: The Road to the Victory is a soccer video game based on the FIFA World Cup 1998, despite being released after the 1998 FIFA World Cup.  It features 73 teams' countries.  Each team enters a "Regional Qualifying Round Final" where it plays a team it actually played in the 1998 FIFA World Cup qualification.  For example: Spain would face Yugoslavia, an opponent it actually faced in its qualifying group.  Or Italy would face Russia, an opponent Italy faced in the UEFA play-offs.  If the player beats the opponent, it goes to a group much like the real life World Cup.  In fact, the team faces opponents that were actually in its group.  For example: Mexico would face the Netherlands, Belgium and South Korea.  It is a re-make of "Super Sidekicks 3".  However, animations and designs were exactly the same.  The only difference is teams to reflect the World Cup, kits again to reflect the World Cup, and players to resemble squads from the World Cup (teams that did not qualify use line-ups from friendly games and qualifiers).  Its slogan is "We got the kick".
-
-Manuel Rosas: Manuel Rosas Sánchez (April 17, 1912 in Mexico City – February 20, 1989), nicknamed "Chaquetas", was a Mexican footballer who participated in the 1930 FIFA World Cup.  He was the first player in the history of FIFA World Cup who scored a goal from the penalty kick spot (against Argentina).  With the first goal he scored during the World Cup, he became at the time the youngest player to have scored in the FIFA World Cup, a record later broken by Pelé, although Rosas remains second youngest.  He was also the first Mexican player to score multiple goals in world cup play (the first to score more than two goals was Luis Hernandez, 68 years later) and the first player to score a own goal in the history of FIFA World Cup (against Chile).
-
-2010 FIFA World Cup qualification – UEFA Group 8: The 2010 FIFA World Cup qualification UEFA Group 8 was a UEFA qualifying group for the 2010 FIFA World Cup.  The group comprised 2006 FIFA World Cup winner Italy, Bulgaria, Republic of Ireland, Cyprus, Georgia and Montenegro.
-
-Question: Who is the FIFA World Cup winner known as Big Phil that Flávio Murtosa works as an assistant coach for?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "manager_name": {
-      "type": "string",
-      "description": "The full name of the football manager."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "manager_nicknames": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of nicknames the manager is known by."
-    },
-    "is_world_cup_winner": {
-      "type": "boolean",
-      "description": "Indicates if the manager is a FIFA World Cup winner."
-    },
-    "assistant_coach": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the assistant coach."
-        },
-        "role": {
-          "type": "string",
-          "description": "The role of the assistant coach."
-        }
-      },
-      "required": [
-        "name",
-        "role"
-      ],
-      "additionalProperties": false
-    },
-    "relationship_description": {
-      "type": "string",
-      "description": "A description of the professional relationship between the manager and the assistant coach."
+    {
+      "role": "user",
+      "content": "Context:\nFlávio Murtosa: Flávio Teixeira (born 14 January 1951), known as Flávio Murtosa or simply Murtosa, is a Brazilian former professional footballer and currently professional football manager.  Murtosa has a long friendship with FIFA World Cup winning manager Luiz Felipe Scolari and works mostly as his assistant coach.  He is currently the assistant coach of Guangzhou Evergrande.\n\nMário Zagallo: Mário Jorge Lobo Zagallo (] ; born 9 August 1931) is a Brazilian former football player and manager who played as a forward.  He was the first footballer to win the FIFA World Cup both as a manager and as a player, 1958 FIFA World Cup and 1962 FIFA World Cup as a player, the 1970 FIFA World Cup as a manager and the 1994 FIFA World Cup as an assistant manager.\n\nLuiz Felipe Scolari: Luiz Felipe Scolari, (] , ] ; born 9 November 1948), also known as Felipão in Brazil and as Phil Scolari or Big Phil in the English-speaking world, is a FIFA World Cup winner Brazilian football manager and former professional footballer, who is the current manager of Chinese club Guangzhou Evergrande in the Chinese Super League.\n\nIgnacio Trelles: Ignacio \"Nacho\" Trelles (born 31 July 1916) is a Mexican former football player and coach.  He had five tenures as coach of the Selección de fútbol de México (Mexico national team) in 106 international matches, and was in charge of the Mexico squads at FIFA World Cup tournaments: 1962 and 1966.  He guided Mexico to their first win in a FIFA World Cup when they defeated Czechoslovakia 3–1 in the 1962 FIFA World Cup in Chile.  At the 1962 FIFA World Cup, Mexico finished eleventh, which was their best ranking in a World Cup outside home soil until 2002 where they also ranked eleventh.\n\n2002 FIFA World Cup: The 2002 FIFA World Cup was the 17th staging of the FIFA World Cup which took place from 31 May to 30 June 2002 in South Korea and Japan.  It was the first World Cup to be held in Asia, the first to be held on a continent other than Europe or the Americas, the last World Cup during which the golden goal rule was in force and the only World Cup to be jointly hosted by more than one nation.  Brazil won the tournament for a record fifth time, winning the final against Germany 2–0.  The victory meant Brazil qualified for the 2005 FIFA Confederations Cup for the fifth time, representing the World.  In the third place play-off match against South Korea, Turkey won 3–2 taking third place in only their second ever FIFA World Cup finals.  China PR, Ecuador, Senegal and Slovenia made their first appearances at the finals with Turkey making its first appearance since 1954.  Republic of Ireland, Russia and Sweden returned after missing the 1998 tournament.\n\nFIFA 06: Road to FIFA World Cup: FIFA 06: Road to FIFA World Cup is a video game developed by EA Sports and DICE for the Xbox 360.  The game is an officially licensed product of the 2006 FIFA World Cup finals held in Germany.  \"FIFA 06: Road to FIFA World Cup\" World Cup mode only includes UEFA qualification groups for the 2006 World Cup.\n\nFIFA Fan Fest: The FIFA Fan Fests are public viewing events organized by FIFA and its partners which allow people to watch the FIFA World Cup with thousands of fans from all around the world.  The Fan Fest first became part of the official program for the 2006 FIFA World Cup in Germany, following the huge success of unofficial public viewing events in South Korea during the 2002 FIFA World Cup.  It was a great success, leading FIFA to expand it to include several cities worldwide for the 2010 FIFA World Cup in South Africa.  The locations are large enough to fit many thousands of people, and feature gigantic LED displays which broadcast the matches live.\n\nNeo Geo Cup '98: The Road to the Victory: Neo Geo Cup '98: The Road to the Victory is a soccer video game based on the FIFA World Cup 1998, despite being released after the 1998 FIFA World Cup.  It features 73 teams' countries.  Each team enters a \"Regional Qualifying Round Final\" where it plays a team it actually played in the 1998 FIFA World Cup qualification.  For example: Spain would face Yugoslavia, an opponent it actually faced in its qualifying group.  Or Italy would face Russia, an opponent Italy faced in the UEFA play-offs.  If the player beats the opponent, it goes to a group much like the real life World Cup.  In fact, the team faces opponents that were actually in its group.  For example: Mexico would face the Netherlands, Belgium and South Korea.  It is a re-make of \"Super Sidekicks 3\".  However, animations and designs were exactly the same.  The only difference is teams to reflect the World Cup, kits again to reflect the World Cup, and players to resemble squads from the World Cup (teams that did not qualify use line-ups from friendly games and qualifiers).  Its slogan is \"We got the kick\".\n\nManuel Rosas: Manuel Rosas Sánchez (April 17, 1912 in Mexico City – February 20, 1989), nicknamed \"Chaquetas\", was a Mexican footballer who participated in the 1930 FIFA World Cup.  He was the first player in the history of FIFA World Cup who scored a goal from the penalty kick spot (against Argentina).  With the first goal he scored during the World Cup, he became at the time the youngest player to have scored in the FIFA World Cup, a record later broken by Pelé, although Rosas remains second youngest.  He was also the first Mexican player to score multiple goals in world cup play (the first to score more than two goals was Luis Hernandez, 68 years later) and the first player to score a own goal in the history of FIFA World Cup (against Chile).\n\n2010 FIFA World Cup qualification – UEFA Group 8: The 2010 FIFA World Cup qualification UEFA Group 8 was a UEFA qualifying group for the 2010 FIFA World Cup.  The group comprised 2006 FIFA World Cup winner Italy, Bulgaria, Republic of Ireland, Cyprus, Georgia and Montenegro.\n\nQuestion: Who is the FIFA World Cup winner known as Big Phil that Flávio Murtosa works as an assistant coach for?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"manager_name\": {\n      \"type\": \"string\",\n      \"description\": \"The full name of the football manager.\"\n    },\n    \"manager_nicknames\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of nicknames the manager is known by.\"\n    },\n    \"is_world_cup_winner\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the manager is a FIFA World Cup winner.\"\n    },\n    \"assistant_coach\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the assistant coach.\"\n        },\n        \"role\": {\n          \"type\": \"string\",\n          \"description\": \"The role of the assistant coach.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"role\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"relationship_description\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the professional relationship between the manager and the assistant coach.\"\n    }\n  },\n  \"required\": [\n    \"manager_name\",\n    \"manager_nicknames\",\n    \"is_world_cup_winner\",\n    \"assistant_coach\",\n    \"relationship_description\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "manager_name",
-    "manager_nicknames",
-    "is_world_cup_winner",
-    "assistant_coach",
-    "relationship_description"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "manager_name": {
+        "type": "string",
+        "description": "The full name of the football manager."
+      },
+      "manager_nicknames": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of nicknames the manager is known by."
+      },
+      "is_world_cup_winner": {
+        "type": "boolean",
+        "description": "Indicates if the manager is a FIFA World Cup winner."
+      },
+      "assistant_coach": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the assistant coach."
+          },
+          "role": {
+            "type": "string",
+            "description": "The role of the assistant coach."
+          }
+        },
+        "required": [
+          "name",
+          "role"
+        ],
+        "additionalProperties": false
+      },
+      "relationship_description": {
+        "type": "string",
+        "description": "A description of the professional relationship between the manager and the assistant coach."
+      }
+    },
+    "required": [
+      "manager_name",
+      "manager_nicknames",
+      "is_world_cup_winner",
+      "assistant_coach",
+      "relationship_description"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

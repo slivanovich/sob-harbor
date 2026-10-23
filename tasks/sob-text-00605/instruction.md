@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Buffalo Grove Lime Kiln: Buffalo Grove Lime Kiln is one of two old lime kilns in Illinois listed on the National Register of Historic Places.  The other is the Griggsville Landing Lime Kiln in Pike County.  Buffalo Grove Lime Kiln is located near the Ogle County city of Polo.  When in use, the kiln would have produced raw quicklime.  The lime kiln was added to the National Register in 2002.
-
-Florence MacMoyer: Florence MacMoyer (fl.  1662 – 12 February 1713), a native of Ballymoyer, County Armagh, Ireland was the last hereditary keeper of the Book of Armagh, a 9th-century Irish manuscript written mainly in Latin.  The document is valuable for containing early texts relating to St Patrick and some of the oldest surviving specimens of Old Irish, and for being one of the earliest manuscripts produced by an insular church to contain a near complete copy of the New Testament.
-
-John L. Dagg: John Leadley Dagg (1794–1884), born in Loudoun County, Virginia, lived to be over 90 years old.  He died in June 1884, as one of the most respected men in American Baptist life, and remains one of the most profound thinkers produced by his denomination.  Dagg overcame extraordinary problems – a limited education, near-blindness, and physical disability – to become a great pastor in Philadelphia and elsewhere and then an educator both in Alabama and as president at Mercer University in Georgia.  He was a convinced Calvinist of an evangelical kind who wrote a winsome English prose.  His magnum opus, "Manual of Theology" (1857), was the first comprehensive systematic theology written by a Baptist in America, and it became foundationally influential for Baptists in the South.
-
-Spook Bridge: Spook Bridge, located on the county line between Brooks County and Lowndes County in the U.S. state of Georgia, is an abandoned open spandrel arch bridge crossing the Withlacoochee River on a closed section of Old Quitman Highway (also known as Blue Springs Road, formerly U.S. Route 84).  It is considered Lowndes County's most famous relic and is decaying, becoming a dangerous site, due to its abandonment.  For decades, it has served as the center of urban legends and small town curiosity in the nearby cities of Quitman and Valdosta.  The bridge has developed a reputation for being a popular "hangout" for teenagers and is rumored to be haunted due to its isolated and overgrown environment.  There is presently a Feature Film being produced by RKDS Entertainment & Media, LLC which includes stories dating back from the 1870s to present day 2016.  Production began on June 18, 2016.  The film will include scenes from the inside of Brooks County Courthouse, Kingfisher Plantation, The Old County Jail, Neely Service Center, Royal Cafe, The Quitman Free Press, Downtown Quitman, Brooks County and at the Old abandoned bridge itself, SPOOK BRIDGE, as the star of the film.  The movie is scheduled for release in 2017.
-
-Russell de Gree Flagg: Russell de Gree Flagg (1892-ca.1980, fl.  1905-ca.1975) was an American luthier.  Grandson of Essex County, New York, violin maker Henry Lewis Flagg, Russell de Gree Flag studied violin making with Charles Eastbrook.  Flagg's violins and violas were mostly patterned after Stradivarius, although he did produce instruments patterned after Guarneri and Amati as well.  Flagg used commercial oil varnish, typically orange-red or red-brown in hue.  A resident of Rutland, VT, he began to use old wood recovered from local covered bridges beginning in 1933 .  Having produced 150 violins and 15 violas by 1940, he ultimately produced over 200 violins and approximately 70 violas in addition to much repair work.
-
-Armenia Mountain Wind Farm: Armenia Mountain Wind Farm is a wind farm in Tioga County and Armenia Township in Bradford County in the Northern Tier region of Pennsylvania.  The wind farm has 67 GE 1.5 MW Wind Turbines that began commercial operation in January 2010.  Armenia Mountain has a combined total nameplate capacity of 101 megawatts and produces enough electricity to power over 40,000 homes.  Power produced by the wind farm is sold to Old Dominion Electric Cooperative and to Delmarva Power & Light Company.
-
-Old Overholt: Old Overholt, said to be America's oldest continually-maintained brand of whiskey, was founded in West Overton, Pennsylvania in 1810.  Old Overholt is a rye whiskey distilled by A. Overholt & Co., currently a subsidiary of Beam Suntory, which is a subsidiary of Suntory Holdings of Osaka, Japan.  It is produced at the Jim Beam distillery in Clermont, Kentucky.  It is one of the most commonly available straight rye whiskies in the U.S., where it is available at most liquor stores.  It is aged for three years and bottled at 80 proof (40% alcohol by volume).  Old Overholt has been called a "foundation stone of American whiskey" because of its long history.
-
-Birger Sandzén Memorial Gallery: The Birger Sandzén Memorial Gallery is located in Lindsborg in McPherson County, Kansas.  The memorial art gallery is located in "Little Sweden," a town founded by Swedish immigrants.  The gallery is dedicated to Birger Sandzén, who was a Swedish-born painter.  He produced most of his work in the United States, where he worked as an art professor at Bethany College in Lindsborg.  Sandzén painted many landscape scenes, including depictions of the American Old West, the Rockies, and Yellowstone National Park.  The gallery has oils, watercolors, and prints by Sandzén.
-
-Schiller Piano Company: The old Schiller Piano Company, also known as Conover Square, is located in Oregon, Illinois the county seat of Ogle County.  The company was founded in 1890 and remained in operation until 1971.  The company produced many thousands of pianos through the years and in 1936 the company merged with the Cable Piano Company and produced pianos under the name Cable and Conover.  The company's 120000 sqft , stucco clad factory and its iron water tower base still stands in Oregon and both are considered contributing properties to the U.S. National Register of Historic Places Oregon Commercial Historic District.  In 1975 the facility was converted into the Conover Square Shopping Mall and has remained so ever since.
-
-Clermont, Kentucky: Clermont is a USGS-designated populated place (one of 32) in Bullitt County, Kentucky, United States, south of Louisville.  It is an unincorporated community.
-
-Question: Which county is Old Overholt produced in?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "product_name": {
-      "type": "string",
-      "description": "The name of the product."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "production_location": {
-      "type": "string",
-      "description": "The specific town or place where the product is produced."
-    },
-    "production_county": {
-      "type": "string",
-      "description": "The county where the product is produced."
-    },
-    "production_state": {
-      "type": "string",
-      "description": "The state where the product is produced."
-    },
-    "distillery_name": {
-      "type": "string",
-      "description": "The name of the distillery producing the product."
+    {
+      "role": "user",
+      "content": "Context:\nBuffalo Grove Lime Kiln: Buffalo Grove Lime Kiln is one of two old lime kilns in Illinois listed on the National Register of Historic Places.  The other is the Griggsville Landing Lime Kiln in Pike County.  Buffalo Grove Lime Kiln is located near the Ogle County city of Polo.  When in use, the kiln would have produced raw quicklime.  The lime kiln was added to the National Register in 2002.\n\nFlorence MacMoyer: Florence MacMoyer (fl.  1662 – 12 February 1713), a native of Ballymoyer, County Armagh, Ireland was the last hereditary keeper of the Book of Armagh, a 9th-century Irish manuscript written mainly in Latin.  The document is valuable for containing early texts relating to St Patrick and some of the oldest surviving specimens of Old Irish, and for being one of the earliest manuscripts produced by an insular church to contain a near complete copy of the New Testament.\n\nJohn L. Dagg: John Leadley Dagg (1794–1884), born in Loudoun County, Virginia, lived to be over 90 years old.  He died in June 1884, as one of the most respected men in American Baptist life, and remains one of the most profound thinkers produced by his denomination.  Dagg overcame extraordinary problems – a limited education, near-blindness, and physical disability – to become a great pastor in Philadelphia and elsewhere and then an educator both in Alabama and as president at Mercer University in Georgia.  He was a convinced Calvinist of an evangelical kind who wrote a winsome English prose.  His magnum opus, \"Manual of Theology\" (1857), was the first comprehensive systematic theology written by a Baptist in America, and it became foundationally influential for Baptists in the South.\n\nSpook Bridge: Spook Bridge, located on the county line between Brooks County and Lowndes County in the U.S. state of Georgia, is an abandoned open spandrel arch bridge crossing the Withlacoochee River on a closed section of Old Quitman Highway (also known as Blue Springs Road, formerly U.S. Route 84).  It is considered Lowndes County's most famous relic and is decaying, becoming a dangerous site, due to its abandonment.  For decades, it has served as the center of urban legends and small town curiosity in the nearby cities of Quitman and Valdosta.  The bridge has developed a reputation for being a popular \"hangout\" for teenagers and is rumored to be haunted due to its isolated and overgrown environment.  There is presently a Feature Film being produced by RKDS Entertainment & Media, LLC which includes stories dating back from the 1870s to present day 2016.  Production began on June 18, 2016.  The film will include scenes from the inside of Brooks County Courthouse, Kingfisher Plantation, The Old County Jail, Neely Service Center, Royal Cafe, The Quitman Free Press, Downtown Quitman, Brooks County and at the Old abandoned bridge itself, SPOOK BRIDGE, as the star of the film.  The movie is scheduled for release in 2017.\n\nRussell de Gree Flagg: Russell de Gree Flagg (1892-ca.1980, fl.  1905-ca.1975) was an American luthier.  Grandson of Essex County, New York, violin maker Henry Lewis Flagg, Russell de Gree Flag studied violin making with Charles Eastbrook.  Flagg's violins and violas were mostly patterned after Stradivarius, although he did produce instruments patterned after Guarneri and Amati as well.  Flagg used commercial oil varnish, typically orange-red or red-brown in hue.  A resident of Rutland, VT, he began to use old wood recovered from local covered bridges beginning in 1933 .  Having produced 150 violins and 15 violas by 1940, he ultimately produced over 200 violins and approximately 70 violas in addition to much repair work.\n\nArmenia Mountain Wind Farm: Armenia Mountain Wind Farm is a wind farm in Tioga County and Armenia Township in Bradford County in the Northern Tier region of Pennsylvania.  The wind farm has 67 GE 1.5 MW Wind Turbines that began commercial operation in January 2010.  Armenia Mountain has a combined total nameplate capacity of 101 megawatts and produces enough electricity to power over 40,000 homes.  Power produced by the wind farm is sold to Old Dominion Electric Cooperative and to Delmarva Power & Light Company.\n\nOld Overholt: Old Overholt, said to be America's oldest continually-maintained brand of whiskey, was founded in West Overton, Pennsylvania in 1810.  Old Overholt is a rye whiskey distilled by A. Overholt & Co., currently a subsidiary of Beam Suntory, which is a subsidiary of Suntory Holdings of Osaka, Japan.  It is produced at the Jim Beam distillery in Clermont, Kentucky.  It is one of the most commonly available straight rye whiskies in the U.S., where it is available at most liquor stores.  It is aged for three years and bottled at 80 proof (40% alcohol by volume).  Old Overholt has been called a \"foundation stone of American whiskey\" because of its long history.\n\nBirger Sandzén Memorial Gallery: The Birger Sandzén Memorial Gallery is located in Lindsborg in McPherson County, Kansas.  The memorial art gallery is located in \"Little Sweden,\" a town founded by Swedish immigrants.  The gallery is dedicated to Birger Sandzén, who was a Swedish-born painter.  He produced most of his work in the United States, where he worked as an art professor at Bethany College in Lindsborg.  Sandzén painted many landscape scenes, including depictions of the American Old West, the Rockies, and Yellowstone National Park.  The gallery has oils, watercolors, and prints by Sandzén.\n\nSchiller Piano Company: The old Schiller Piano Company, also known as Conover Square, is located in Oregon, Illinois the county seat of Ogle County.  The company was founded in 1890 and remained in operation until 1971.  The company produced many thousands of pianos through the years and in 1936 the company merged with the Cable Piano Company and produced pianos under the name Cable and Conover.  The company's 120000 sqft , stucco clad factory and its iron water tower base still stands in Oregon and both are considered contributing properties to the U.S. National Register of Historic Places Oregon Commercial Historic District.  In 1975 the facility was converted into the Conover Square Shopping Mall and has remained so ever since.\n\nClermont, Kentucky: Clermont is a USGS-designated populated place (one of 32) in Bullitt County, Kentucky, United States, south of Louisville.  It is an unincorporated community.\n\nQuestion: Which county is Old Overholt produced in?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"product_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the product.\"\n    },\n    \"production_location\": {\n      \"type\": \"string\",\n      \"description\": \"The specific town or place where the product is produced.\"\n    },\n    \"production_county\": {\n      \"type\": \"string\",\n      \"description\": \"The county where the product is produced.\"\n    },\n    \"production_state\": {\n      \"type\": \"string\",\n      \"description\": \"The state where the product is produced.\"\n    },\n    \"distillery_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the distillery producing the product.\"\n    }\n  },\n  \"required\": [\n    \"product_name\",\n    \"production_location\",\n    \"production_county\",\n    \"production_state\",\n    \"distillery_name\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "product_name",
-    "production_location",
-    "production_county",
-    "production_state",
-    "distillery_name"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "product_name": {
+        "type": "string",
+        "description": "The name of the product."
+      },
+      "production_location": {
+        "type": "string",
+        "description": "The specific town or place where the product is produced."
+      },
+      "production_county": {
+        "type": "string",
+        "description": "The county where the product is produced."
+      },
+      "production_state": {
+        "type": "string",
+        "description": "The state where the product is produced."
+      },
+      "distillery_name": {
+        "type": "string",
+        "description": "The name of the distillery producing the product."
+      }
+    },
+    "required": [
+      "product_name",
+      "production_location",
+      "production_county",
+      "production_state",
+      "distillery_name"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

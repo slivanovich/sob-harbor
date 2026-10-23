@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-HVDC Inter-Island: The HVDC Inter-Island link is a 610 km long, 1200 MW bipolar high-voltage direct current (HVDC) transmission system connecting the electricity networks of the North and South Islands of New Zealand together.  It is commonly referred to as the Cook Strait cable, which is somewhat of a misnomer, because only a short section of the complete link is in cable, and there are actually three operational HVDC power cables across Cook Strait.  However, the term Cook Strait cable is commonly used in the media and press releases.  The link is owned and operated by state-owned transmission company Transpower New Zealand.
-
-High-voltage direct current: A high-voltage, direct current (HVDC) electric power transmission system (also called a power super highway or an electrical super highway) uses direct current for the bulk transmission of electrical power, in contrast with the more common alternating current (AC) systems.  For long-distance transmission, HVDC systems may be less expensive and suffer lower electrical losses.  For underwater power cables, HVDC avoids the heavy currents required to charge and discharge the cable capacitance each cycle.  For shorter distances, the higher cost of DC conversion equipment compared to an AC system may still be justified, due to other benefits of direct current links.
-
-Cross Sound Cable: The Cross-Sound Cable is a 40 km long bipolar high-voltage direct current (HVDC) submarine power cable between New Haven, Connecticut, USA and Shoreham, Long Island New York, USA.  The Cross-Sound Cable can transmit a maximum power of 330 MW at a voltage of +/- 150 kV DC.  The maximum current for Cross-Sound Cable is 1175 amperes.  The Cross-Sound Cable is not simply a pair of underwater HVDC cables; rather it is a bundle of cables that includes the HVDC transmission lines and fiber-optic cables for phone and Internet data transfer.
-
-Radisson Substation: Radisson Substation is a large electrical substation located near Radisson on the Route de la Baie James highway.  The switching station, owned by Hydro-Québec, is the largest substation in its power grid, covering an area of 100 football fields.  Electrical power heading into the switchyard is collected via several relatively short alternating current (AC) 735 kilovolt (kV) and AC 315 kV power lines coming from hydroelectric plants like the Robert-Bourassa power station, part of the James Bay Project, located 16 km away.  The power from these lines is either raised to AC 735 kV from AC 315 kV, statically inverted to high-voltage direct current (HVDC) +/- 450 kV, or unchanged (735 kV to 735 kV).  The amount of electrical energy passing through the substation is 6,600 megawatts (MW).  Two AC 735 kV lines and one HVDC +/- 450 kV line, part of the James Bay transmission system, transfer this electrical energy over a distance of 1000 km to Montreal and the Northeast United States.
-
-Trans Bay Cable: The Trans Bay Cable is a high-voltage direct current underwater cable interconnection between San Francisco, California and Pittsburg, California.  The 53 mi cable under San Francisco Bay and through the Carquinez Strait can transmit 400 megawatts of power at a DC voltage of ±200 kV, enough to provide 40% of San Francisco's peak power needs.  Owned by SteelRiver Transmission Company, the line connects PG&E's Potrero Substation to its 230 kV transmission line in Pittsburg.  The system was completed in November, 2010.  The Trans Bay Cable project was the first HVDC system to use the "Modular Multi-Level Converter" (MMC) system.
-
-Yunnan–Guangdong HVDC: The Yunnan–Guangdong HVDC is a high-voltage direct current transmission system connecting Chuxiong in the Yunnan to Suidong, Zengcheng in Guangdong, China.  It is the first HVDC link in the world operating at a transmission voltage of 800 kV.  The transmission line is operated by China Southern Power Grid.  In 2007, the order to supply the system was awarded to Siemens Energy.  The first pole was put into operation in December 2009 with the second pole to follow in June 2010.
-
-Lolland: Lolland (] ; formerly spelled "Laaland", literally "low land") is the fourth largest island of Denmark, with an area of 1243 km2 .  Located in the Baltic sea, it is part of Region Sjælland (Region Zealand).  As of 1 January 2013, it has 62,578 inhabitants.
-
-HVDC Troll: The HVDC Troll is a bipolar high-voltage direct current (HVDC) electric power transmission line for the supply of the gas compressor station on the offshore construction work Troll A platform.  It consists of dual set of a 68 km long bipolar submarine cable designed for ±60 kV between the inverter at the Troll A platform and the static rectifier station at Kollsnes in Norway.  The HVDC Troll has a maximum transmission rate of 84 megawatt.
-
-HVDC Tjæreborg: The HVDC Tjæreborg is a 4.3 kilometre long bipolar high-voltage direct current (HVDC) electric power transmission line for demonstrating and testing DC interconnection of a wind park to the Danish power grid.  The line was constructed to connect an existing onshore wind park consisting of 4 windmills in Tjæreborg Enge to the grid through an additional DC line.  Thus the mills can be connected to the grid by both the new HVDC, the old AC or a combination of both lines.
-
-Kontek: The Kontek HVDC is a 170 km long, monopolar 400 kV high-voltage direct current cable between Germany and the Danish island Zealand.  Its name comes from "continent" and the name of the former Danish power transmission company "Elkraft", which operated the power grid on the Danish islands Lolland, Falster and Zealand and had the abbreviation "ek".  As of today, the cable is operated by Energinet.dk in Denmark and 50Hertz Transmission GmbH in Germany.
-
-Question: The Kontek HVDC is a 170 km long,high-voltage direct current cable between Germany and the Danish island Zealand, its name comes from "continent" and the name of the former Danish power transmission company "Elkraft", which operated the power grid on the Danish islands, including Lolland island that is the which largest island of Denmark?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "island_name": {
-      "type": "string",
-      "description": "The name of the island being described."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "country": {
-      "type": "string",
-      "description": "The country to which the island belongs."
-    },
-    "size_ranking": {
-      "type": "integer",
-      "description": "The size ranking of the island within its country (e.g., 1 for largest, 2 for second largest)."
-    },
-    "hvdc_system_context": {
-      "type": "string",
-      "description": "The name of the HVDC system mentioned in the question that provides context for the island."
+    {
+      "role": "user",
+      "content": "Context:\nHVDC Inter-Island: The HVDC Inter-Island link is a 610 km long, 1200 MW bipolar high-voltage direct current (HVDC) transmission system connecting the electricity networks of the North and South Islands of New Zealand together.  It is commonly referred to as the Cook Strait cable, which is somewhat of a misnomer, because only a short section of the complete link is in cable, and there are actually three operational HVDC power cables across Cook Strait.  However, the term Cook Strait cable is commonly used in the media and press releases.  The link is owned and operated by state-owned transmission company Transpower New Zealand.\n\nHigh-voltage direct current: A high-voltage, direct current (HVDC) electric power transmission system (also called a power super highway or an electrical super highway) uses direct current for the bulk transmission of electrical power, in contrast with the more common alternating current (AC) systems.  For long-distance transmission, HVDC systems may be less expensive and suffer lower electrical losses.  For underwater power cables, HVDC avoids the heavy currents required to charge and discharge the cable capacitance each cycle.  For shorter distances, the higher cost of DC conversion equipment compared to an AC system may still be justified, due to other benefits of direct current links.\n\nCross Sound Cable: The Cross-Sound Cable is a 40 km long bipolar high-voltage direct current (HVDC) submarine power cable between New Haven, Connecticut, USA and Shoreham, Long Island New York, USA.  The Cross-Sound Cable can transmit a maximum power of 330 MW at a voltage of +/- 150 kV DC.  The maximum current for Cross-Sound Cable is 1175 amperes.  The Cross-Sound Cable is not simply a pair of underwater HVDC cables; rather it is a bundle of cables that includes the HVDC transmission lines and fiber-optic cables for phone and Internet data transfer.\n\nRadisson Substation: Radisson Substation is a large electrical substation located near Radisson on the Route de la Baie James highway.  The switching station, owned by Hydro-Québec, is the largest substation in its power grid, covering an area of 100 football fields.  Electrical power heading into the switchyard is collected via several relatively short alternating current (AC) 735 kilovolt (kV) and AC 315 kV power lines coming from hydroelectric plants like the Robert-Bourassa power station, part of the James Bay Project, located 16 km away.  The power from these lines is either raised to AC 735 kV from AC 315 kV, statically inverted to high-voltage direct current (HVDC) +/- 450 kV, or unchanged (735 kV to 735 kV).  The amount of electrical energy passing through the substation is 6,600 megawatts (MW).  Two AC 735 kV lines and one HVDC +/- 450 kV line, part of the James Bay transmission system, transfer this electrical energy over a distance of 1000 km to Montreal and the Northeast United States.\n\nTrans Bay Cable: The Trans Bay Cable is a high-voltage direct current underwater cable interconnection between San Francisco, California and Pittsburg, California.  The 53 mi cable under San Francisco Bay and through the Carquinez Strait can transmit 400 megawatts of power at a DC voltage of ±200 kV, enough to provide 40% of San Francisco's peak power needs.  Owned by SteelRiver Transmission Company, the line connects PG&E's Potrero Substation to its 230 kV transmission line in Pittsburg.  The system was completed in November, 2010.  The Trans Bay Cable project was the first HVDC system to use the \"Modular Multi-Level Converter\" (MMC) system.\n\nYunnan–Guangdong HVDC: The Yunnan–Guangdong HVDC is a high-voltage direct current transmission system connecting Chuxiong in the Yunnan to Suidong, Zengcheng in Guangdong, China.  It is the first HVDC link in the world operating at a transmission voltage of 800 kV.  The transmission line is operated by China Southern Power Grid.  In 2007, the order to supply the system was awarded to Siemens Energy.  The first pole was put into operation in December 2009 with the second pole to follow in June 2010.\n\nLolland: Lolland (] ; formerly spelled \"Laaland\", literally \"low land\") is the fourth largest island of Denmark, with an area of 1243 km2 .  Located in the Baltic sea, it is part of Region Sjælland (Region Zealand).  As of 1 January 2013, it has 62,578 inhabitants.\n\nHVDC Troll: The HVDC Troll is a bipolar high-voltage direct current (HVDC) electric power transmission line for the supply of the gas compressor station on the offshore construction work Troll A platform.  It consists of dual set of a 68 km long bipolar submarine cable designed for ±60 kV between the inverter at the Troll A platform and the static rectifier station at Kollsnes in Norway.  The HVDC Troll has a maximum transmission rate of 84 megawatt.\n\nHVDC Tjæreborg: The HVDC Tjæreborg is a 4.3 kilometre long bipolar high-voltage direct current (HVDC) electric power transmission line for demonstrating and testing DC interconnection of a wind park to the Danish power grid.  The line was constructed to connect an existing onshore wind park consisting of 4 windmills in Tjæreborg Enge to the grid through an additional DC line.  Thus the mills can be connected to the grid by both the new HVDC, the old AC or a combination of both lines.\n\nKontek: The Kontek HVDC is a 170 km long, monopolar 400 kV high-voltage direct current cable between Germany and the Danish island Zealand.  Its name comes from \"continent\" and the name of the former Danish power transmission company \"Elkraft\", which operated the power grid on the Danish islands Lolland, Falster and Zealand and had the abbreviation \"ek\".  As of today, the cable is operated by Energinet.dk in Denmark and 50Hertz Transmission GmbH in Germany.\n\nQuestion: The Kontek HVDC is a 170 km long,high-voltage direct current cable between Germany and the Danish island Zealand, its name comes from \"continent\" and the name of the former Danish power transmission company \"Elkraft\", which operated the power grid on the Danish islands, including Lolland island that is the which largest island of Denmark?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"island_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the island being described.\"\n    },\n    \"country\": {\n      \"type\": \"string\",\n      \"description\": \"The country to which the island belongs.\"\n    },\n    \"size_ranking\": {\n      \"type\": \"integer\",\n      \"description\": \"The size ranking of the island within its country (e.g., 1 for largest, 2 for second largest).\"\n    },\n    \"hvdc_system_context\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the HVDC system mentioned in the question that provides context for the island.\"\n    }\n  },\n  \"required\": [\n    \"island_name\",\n    \"country\",\n    \"size_ranking\",\n    \"hvdc_system_context\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "island_name",
-    "country",
-    "size_ranking",
-    "hvdc_system_context"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "island_name": {
+        "type": "string",
+        "description": "The name of the island being described."
+      },
+      "country": {
+        "type": "string",
+        "description": "The country to which the island belongs."
+      },
+      "size_ranking": {
+        "type": "integer",
+        "description": "The size ranking of the island within its country (e.g., 1 for largest, 2 for second largest)."
+      },
+      "hvdc_system_context": {
+        "type": "string",
+        "description": "The name of the HVDC system mentioned in the question that provides context for the island."
+      }
+    },
+    "required": [
+      "island_name",
+      "country",
+      "size_ranking",
+      "hvdc_system_context"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

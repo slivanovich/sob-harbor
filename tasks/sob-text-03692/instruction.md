@@ -1,106 +1,83 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Armed Forces Day (Poland): Armed Forces Day, known also as the Feast of the Polish Armed Forces (Polish: "Święto Wojska Polskiego" ), is a national holiday celebrated annually on 15 August in Poland, commemorating the anniversary of the 1920 victory over Soviet Russia at the Battle of Warsaw during the Polish–Soviet War.  Armed Forces Day is held in conjunction with the Day of the Assumption of the Virgin Mary, itself a separate public holiday.  The event is marked by military parades, equipment reviews, showcases and remembrances by all branches of the Polish Armed Forces across the country.  One of the most prominent events of the day is in the capital Warsaw, which hosts a large military parade through the city's center.  Originally celebrated during the Second Republic, the holiday was barred by authorities during the communist era beginning in 1947, only to be revived again in 1992.
-
-One Who Walks with the Stars: One Who Walks With the Stars (also translated as Walks with Stars Woman or Woman-Who-Walks-with-the-Stars) was an Oglala Lakota woman who was the wife of Crow Dog, a Brulé Lakota warrior.  She killed two soldiers by slashing and clubbing them in the water of the river bank during the Battle of Little Big Horn.
-
-4th Prince Albert Victor's Rajputs: The 4th Prince Albert Victor's Rajputs was an infantry battalion of the British Indian Army.  They could trace their origins to 1798, when they were the 2nd Battalion, 16th Bengal Native Infantry.  Over the years they became known by a number of different titles.  The 33rd Bengal Native Infantry 1824–1861, the 4th Bengal Regiment of Bengal Native Infantry 1861–1890, the 4th (Prince Albert Victor's) Bengal Infantry 1890–1897, the 4th (Prince Albert Victor's) Rajput Regiment 1897–1901 and finally after the Kitchener reforms of the Indian Army the 4th (Prince Albert Victor's) Rajputs.  To honour the visit of the Prince and Princess of Wales to India they took part in the Rawalpindi Parade 1905.  They took part in the First Anglo-Sikh War, the Second Anglo-Afghan War, the Third Anglo-Burmese War and World War I.  After World War I the Indian government reformed the army again moving from single battalion regiments to large multi battalion regiments, the 4th Prince Albert Victor's Rajputs became the 2nd Battalion, 7th Rajput Regiment.  After India gained independence they were one of the regiments allocated to the Indian Army.
-
-Haitian Heritage Month: Haitian Heritage Month is a celebration in the United States of Haitian heritage and culture.  It was first celebrated in Boston, Massachusetts, in 1998.  Tele Kreyol, one of the Boston Haitian Access Television programs, celebrated the whole month of May with a series of programs on Haitian history, culture, and contributions to the world.  The month-long celebration has continued with such activities as parades, flag raisings, and exhibits organized by Haitian-Americans United, Inc. (H.A.U.) in collaboration with several Haitian organizations in the New England area.
-
-Prince of Orange: Prince of Orange is a title originally associated with the sovereign Principality of Orange, in what is now southern France.  Under the Treaty of Utrecht of 1713, Frederick William I of Prussia ceded the Principality of Orange to King Louis XIV of France (while retaining the title as part of his dynastic titulature).  After William III of England died without children, a dispute arose between Johan Willem Friso and Frederick I of Prussia, which was settled in the Treaty of Partition (1732); consequently, Friso's son, William IV had to share use of the title "Prince of Orange" (which had accumulated prestige in the Netherlands and throughout the Protestant world) with Frederick William I of Prussia.  The title is traditionally borne by the heir apparent of the Dutch monarch.  The title descends via absolute primogeniture since 1983, meaning that its holder can be either Prince or Princess of Orange.
-
-The Twelfth: The Twelfth (also called the Glorious Twelfth or Orangemen's Day) is an Ulster Protestant celebration held on 12 July.  It originated during the late 18th century in Ulster.  It celebrates the Glorious Revolution (1688) and victory of Protestant king William of Orange over Catholic king James II at the Battle of the Boyne (1690), which began the Protestant Ascendancy in Ireland.  On and around the Twelfth, large parades are held by the Orange Order and Ulster loyalist marching bands, streets are bedecked with British flags and bunting, and large towering bonfires are lit.  Today the Twelfth is mainly celebrated in Northern Ireland (where it is a public holiday), but smaller celebrations are held in other parts of the world where Orange lodges have been set up.  The Twelfth involves thousands of participants and spectators, although not all Protestants celebrate it.
-
-Orange walk: Orange walks are a series of parades held annually by members of the Orange Order on a regular basis during the summer in Ulster, and mostly in Scotland, and occasionally in :England, and throughout the Commonwealth.  These typically build up to 12 July celebrations which mark Prince William of Orange's victory over King James II at the Battle of the Boyne in 1690.  Although the term "march" or "parade" is widely used in the media, the Order prefers terms such as "walk" or "demonstration".  Orange walks have faced opposition from Catholics, Irish Nationalists, Scottish Nationalists and those on the political left who see the parades as sectarian and triumphalist.  Those who attend the procession, however, regard it as having a vital ceremonial significance.
-
-Count von Gleichen: The title Countess von Gleichen was created by the Duke of Saxe-Coburg and Gotha in 1861 for Laura Seymour, morganatic wife of Prince Victor of Hohenlohe-Langenburg, a German prince and nephew of the British Queen Victoria.  Prince Victor is sometimes also identified as Count Gleichen, "jure uxoris".  After Princess Victor's death her title passed to her only son Count Edward.  In 1917, when British citizens were required to relinquish all German titles, the Gleichen family retained their name but gave up their comital status, instead taking the precedence of children of a British marquess, allowing them to be styled Lord and Lady.  This title and status had earlier been given to Princess Victor when her brother had inherited the title Marquess of Hertford.
-
-Battle of the Boyne: The Battle of the Boyne (Irish: "Cath na Bóinne" ] ) was a battle in 1690 between the forces of the deposed King James II of England, and those of Dutch Prince William of Orange who, with his wife Mary II (his cousin and James's daughter), had acceded to the Crowns of England and Scotland in 1688.  The battle took place across the River Boyne near the town of Drogheda in the east of Ireland, and resulted in a victory for William.  This turned the tide in James's failed attempt to regain the British crown and ultimately aided in ensuring the continued Protestant ascendancy in Ireland.
-
-Banners in Northern Ireland: Banners are a significant part of the Culture of Northern Ireland, particularly for the Protestant/unionist community, and one of the region's most prominent types of folk art.  They are typically carried in parades such as those held on the Twelfth of July, Saint Patrick's Day and other times throughout the year.  Generally these are organised by societies such as the Orange Order, the Ancient Order of Hibernians, the Royal Black Institution and the Apprentice Boys of Derry, and the banners are typically commissioned, and represent, a lodge within one of these societies.  Banners are also carried by trade unions and church groups, and by marching bands. Most banners are painted by professionals and executed on silk, although canvas was a more popular material in the past.  Most have a painting on each side, usually depicting different subjects, and the name and number of the lodge.  Most banners have one subject per side, surrounded by flourishes, scrolls, and other decoration.  Despite being in many ways a sectarian art form, Catholic and Protestant banners are usually very similar in terms of style and composition.  Apart from subject matter, the main difference is colour: Orange Order banners make heavy use of the colour orange and to a lesser extent red, white, blue and purple, while Catholic banners tend to feature a lot of green.
-
-Question: Who was the wife of the prince who was the victor of the battle that is celebrated in part by a series of parades known as "Orange walks"?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "celebration": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the celebration or event."
-        },
-        "type": {
-          "type": "string",
-          "description": "The type of event, e.g., parades."
-        },
-        "commemorated_event": {
-          "type": "string",
-          "description": "The event that the celebration commemorates."
-        }
-      },
-      "required": [
-        "name",
-        "type",
-        "commemorated_event"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "battle": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the battle."
-        },
-        "year": {
-          "type": "integer",
-          "description": "The year the battle took place."
-        },
-        "victor_name": {
-          "type": "string",
-          "description": "The name of the victor of the battle."
-        }
-      },
-      "required": [
-        "name",
-        "year",
-        "victor_name"
-      ],
-      "additionalProperties": false
-    },
-    "victor_prince_wife": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the wife of the victorious prince."
-        }
-      },
-      "required": [
-        "name"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nArmed Forces Day (Poland): Armed Forces Day, known also as the Feast of the Polish Armed Forces (Polish: \"Święto Wojska Polskiego\" ), is a national holiday celebrated annually on 15 August in Poland, commemorating the anniversary of the 1920 victory over Soviet Russia at the Battle of Warsaw during the Polish–Soviet War.  Armed Forces Day is held in conjunction with the Day of the Assumption of the Virgin Mary, itself a separate public holiday.  The event is marked by military parades, equipment reviews, showcases and remembrances by all branches of the Polish Armed Forces across the country.  One of the most prominent events of the day is in the capital Warsaw, which hosts a large military parade through the city's center.  Originally celebrated during the Second Republic, the holiday was barred by authorities during the communist era beginning in 1947, only to be revived again in 1992.\n\nOne Who Walks with the Stars: One Who Walks With the Stars (also translated as Walks with Stars Woman or Woman-Who-Walks-with-the-Stars) was an Oglala Lakota woman who was the wife of Crow Dog, a Brulé Lakota warrior.  She killed two soldiers by slashing and clubbing them in the water of the river bank during the Battle of Little Big Horn.\n\n4th Prince Albert Victor's Rajputs: The 4th Prince Albert Victor's Rajputs was an infantry battalion of the British Indian Army.  They could trace their origins to 1798, when they were the 2nd Battalion, 16th Bengal Native Infantry.  Over the years they became known by a number of different titles.  The 33rd Bengal Native Infantry 1824–1861, the 4th Bengal Regiment of Bengal Native Infantry 1861–1890, the 4th (Prince Albert Victor's) Bengal Infantry 1890–1897, the 4th (Prince Albert Victor's) Rajput Regiment 1897–1901 and finally after the Kitchener reforms of the Indian Army the 4th (Prince Albert Victor's) Rajputs.  To honour the visit of the Prince and Princess of Wales to India they took part in the Rawalpindi Parade 1905.  They took part in the First Anglo-Sikh War, the Second Anglo-Afghan War, the Third Anglo-Burmese War and World War I.  After World War I the Indian government reformed the army again moving from single battalion regiments to large multi battalion regiments, the 4th Prince Albert Victor's Rajputs became the 2nd Battalion, 7th Rajput Regiment.  After India gained independence they were one of the regiments allocated to the Indian Army.\n\nHaitian Heritage Month: Haitian Heritage Month is a celebration in the United States of Haitian heritage and culture.  It was first celebrated in Boston, Massachusetts, in 1998.  Tele Kreyol, one of the Boston Haitian Access Television programs, celebrated the whole month of May with a series of programs on Haitian history, culture, and contributions to the world.  The month-long celebration has continued with such activities as parades, flag raisings, and exhibits organized by Haitian-Americans United, Inc. (H.A.U.) in collaboration with several Haitian organizations in the New England area.\n\nPrince of Orange: Prince of Orange is a title originally associated with the sovereign Principality of Orange, in what is now southern France.  Under the Treaty of Utrecht of 1713, Frederick William I of Prussia ceded the Principality of Orange to King Louis XIV of France (while retaining the title as part of his dynastic titulature).  After William III of England died without children, a dispute arose between Johan Willem Friso and Frederick I of Prussia, which was settled in the Treaty of Partition (1732); consequently, Friso's son, William IV had to share use of the title \"Prince of Orange\" (which had accumulated prestige in the Netherlands and throughout the Protestant world) with Frederick William I of Prussia.  The title is traditionally borne by the heir apparent of the Dutch monarch.  The title descends via absolute primogeniture since 1983, meaning that its holder can be either Prince or Princess of Orange.\n\nThe Twelfth: The Twelfth (also called the Glorious Twelfth or Orangemen's Day) is an Ulster Protestant celebration held on 12 July.  It originated during the late 18th century in Ulster.  It celebrates the Glorious Revolution (1688) and victory of Protestant king William of Orange over Catholic king James II at the Battle of the Boyne (1690), which began the Protestant Ascendancy in Ireland.  On and around the Twelfth, large parades are held by the Orange Order and Ulster loyalist marching bands, streets are bedecked with British flags and bunting, and large towering bonfires are lit.  Today the Twelfth is mainly celebrated in Northern Ireland (where it is a public holiday), but smaller celebrations are held in other parts of the world where Orange lodges have been set up.  The Twelfth involves thousands of participants and spectators, although not all Protestants celebrate it.\n\nOrange walk: Orange walks are a series of parades held annually by members of the Orange Order on a regular basis during the summer in Ulster, and mostly in Scotland, and occasionally in :England, and throughout the Commonwealth.  These typically build up to 12 July celebrations which mark Prince William of Orange's victory over King James II at the Battle of the Boyne in 1690.  Although the term \"march\" or \"parade\" is widely used in the media, the Order prefers terms such as \"walk\" or \"demonstration\".  Orange walks have faced opposition from Catholics, Irish Nationalists, Scottish Nationalists and those on the political left who see the parades as sectarian and triumphalist.  Those who attend the procession, however, regard it as having a vital ceremonial significance.\n\nCount von Gleichen: The title Countess von Gleichen was created by the Duke of Saxe-Coburg and Gotha in 1861 for Laura Seymour, morganatic wife of Prince Victor of Hohenlohe-Langenburg, a German prince and nephew of the British Queen Victoria.  Prince Victor is sometimes also identified as Count Gleichen, \"jure uxoris\".  After Princess Victor's death her title passed to her only son Count Edward.  In 1917, when British citizens were required to relinquish all German titles, the Gleichen family retained their name but gave up their comital status, instead taking the precedence of children of a British marquess, allowing them to be styled Lord and Lady.  This title and status had earlier been given to Princess Victor when her brother had inherited the title Marquess of Hertford.\n\nBattle of the Boyne: The Battle of the Boyne (Irish: \"Cath na Bóinne\" ] ) was a battle in 1690 between the forces of the deposed King James II of England, and those of Dutch Prince William of Orange who, with his wife Mary II (his cousin and James's daughter), had acceded to the Crowns of England and Scotland in 1688.  The battle took place across the River Boyne near the town of Drogheda in the east of Ireland, and resulted in a victory for William.  This turned the tide in James's failed attempt to regain the British crown and ultimately aided in ensuring the continued Protestant ascendancy in Ireland.\n\nBanners in Northern Ireland: Banners are a significant part of the Culture of Northern Ireland, particularly for the Protestant/unionist community, and one of the region's most prominent types of folk art.  They are typically carried in parades such as those held on the Twelfth of July, Saint Patrick's Day and other times throughout the year.  Generally these are organised by societies such as the Orange Order, the Ancient Order of Hibernians, the Royal Black Institution and the Apprentice Boys of Derry, and the banners are typically commissioned, and represent, a lodge within one of these societies.  Banners are also carried by trade unions and church groups, and by marching bands. Most banners are painted by professionals and executed on silk, although canvas was a more popular material in the past.  Most have a painting on each side, usually depicting different subjects, and the name and number of the lodge.  Most banners have one subject per side, surrounded by flourishes, scrolls, and other decoration.  Despite being in many ways a sectarian art form, Catholic and Protestant banners are usually very similar in terms of style and composition.  Apart from subject matter, the main difference is colour: Orange Order banners make heavy use of the colour orange and to a lesser extent red, white, blue and purple, while Catholic banners tend to feature a lot of green.\n\nQuestion: Who was the wife of the prince who was the victor of the battle that is celebrated in part by a series of parades known as \"Orange walks\"?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"celebration\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the celebration or event.\"\n        },\n        \"type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of event, e.g., parades.\"\n        },\n        \"commemorated_event\": {\n          \"type\": \"string\",\n          \"description\": \"The event that the celebration commemorates.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"type\",\n        \"commemorated_event\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"battle\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the battle.\"\n        },\n        \"year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the battle took place.\"\n        },\n        \"victor_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the victor of the battle.\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"year\",\n        \"victor_name\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"victor_prince_wife\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the wife of the victorious prince.\"\n        }\n      },\n      \"required\": [\n        \"name\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"celebration\",\n    \"battle\",\n    \"victor_prince_wife\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "celebration",
-    "battle",
-    "victor_prince_wife"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "celebration": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the celebration or event."
+          },
+          "type": {
+            "type": "string",
+            "description": "The type of event, e.g., parades."
+          },
+          "commemorated_event": {
+            "type": "string",
+            "description": "The event that the celebration commemorates."
+          }
+        },
+        "required": [
+          "name",
+          "type",
+          "commemorated_event"
+        ],
+        "additionalProperties": false
+      },
+      "battle": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the battle."
+          },
+          "year": {
+            "type": "integer",
+            "description": "The year the battle took place."
+          },
+          "victor_name": {
+            "type": "string",
+            "description": "The name of the victor of the battle."
+          }
+        },
+        "required": [
+          "name",
+          "year",
+          "victor_name"
+        ],
+        "additionalProperties": false
+      },
+      "victor_prince_wife": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the wife of the victorious prince."
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "celebration",
+      "battle",
+      "victor_prince_wife"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

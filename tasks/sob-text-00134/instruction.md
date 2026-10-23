@@ -1,85 +1,62 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Born into Brothels: Born into Brothels: Calcutta's Red Light Kids is a 2004 Indian-American documentary film about the children of prostitutes in Sonagachi, Kolkata's red light district.  The widely acclaimed film, written and directed by Zana Briski and Ross Kauffman, won a string of accolades including the Academy Award for Best Documentary Feature in 2004.
-
-Academy Award for Best Film Editing: The Academy Award for Best Film Editing is one of the annual awards of the Academy of Motion Picture Arts and Sciences (AMPAS).  Nominations for this award are closely correlated with the Academy Award for Best Picture.  For 33 consecutive years, 1981 to 2013, every Best Picture winner had also been nominated for the Film Editing Oscar, and about two thirds of the Best Picture winners have also won for Film Editing.  Only the principal, "above the line" editor(s) as listed in the film's credits are named on the award; additional editors, supervising editors, etc. are not currently eligible.  The nominations for this Academy Award are determined by a ballot of the voting members of the Editing Branch of the Academy; there were 220 members of the Editing Branch in 2012.  The members may vote for up to five of the eligible films in the order of their preference; the five films with the largest vote totals are selected as nominees.  The Academy Award itself is selected from the nominated films by a subsequent ballot of all active and life members of the Academy.  This process is essentially the reverse of that of the British Academy of Film and Television Arts (BAFTA); nominations for the BAFTA Award for Best Editing are done by a general ballot of Academy voters, and the winner is selected by members of the editing chapter.
-
-Zana Briski: Zana Briski (born 25 October 1966) is a British photographer and filmmaker, best known for "Born into Brothels", the 2004 winner of the Academy Award for Documentary Feature, which she directed.  She founded Kids with Cameras, a non-profit organization that teaches the art of photography to marginalized children in communities throughout the world.  Her interest in photography began at age 10.
-
-List of Polish Academy Award winners and nominees: This is a list of Polish Academy Award winners and nominees.  This list details the performances of Polish actors, actresses, and films that have either been submitted or nominated for, or have won, an Academy Award.  This list is current as of the 80th Academy Awards ceremony held on February 24, 2008.  There were 12 Academy Awards given to Polish filmmakers or their work (see Foreign Film category), including two Honorary Academy Awards and a Technical Achievement Award.  The category of Cinematography has the strongest presence of Polish filmmakers, with two wins (both by Janusz Kamiński) and five other nominations (including two noms for Kamiński).  As of that, the cinematographer Janusz Kamiński is the most Oscar-awarded Polish filmmaker.  The second most-awarded Pole was designer Anton Grot, who won one Academy Award and was nominated to the Oscars five times more.  The director Roman Polanski won an Oscar and was nominated four more times (additionally, "Knife in the Water", film directed and written by him was also nominated).  The composer Bronislau Kaper was awarded an Oscar and was nominated three times more.
-
-Vikram Jayanti: Vikram Teja Jayanti is a documentary filmmaker responsible for a number of well known full-feature documentary films.  Two of his films, for which he has production credits, have received Academy Awards for Best Full-Feature Documentary; the 1997 blockbuster When We Were Kings and 2005's Born Into Brothels.  A sampling of his other work includes Innocents Abroad, "The Man Who Bought Mustique", "James Ellroy's Feast of Death", "", and "Lincoln".  He and his films have also won a number of awards, including the Special Jury Prize at the Sundance Film Festival, and have been nominated for others.
-
-Killer Films: Killer Films is a New York City-based independent film production company founded by movie producers Christine Vachon and Pamela Koffler in 1995.  The company has produced a number of the most acclaimed American independent films over the past two decades including "Far From Heaven" (nominated for four Academy Awards), "Boys Don't Cry" (Academy Award winner), "One Hour Photo", "Kids", "Hedwig and the Angry Inch", "Happiness", "Velvet Goldmine", "Safe", "I Shot Andy Warhol", "Swoon", "I'm Not There" (Academy Award nominated), "Kill Your Darlings", "Still Alice" (Academy Award winner) and "Carol" (nominated for six Academy Awards).  Killer Films executive produced Todd Haynes' five episode HBO miniseries "Mildred Pierce" featuring Kate Winslet and Guy Pearce, which went on to win five Emmys, a Golden Globe and a Screen Actors Guild Award.
-
-Nick Meyer: Nick Meyer is an American film producer and CEO of Sierra/Affinity.  Meyer was the president of Paramount Vantage until December 2008.  In 2007, with Meyer as co-head of Paramount, the Studio received 19 Academy Award nominations.  Four of the Studio's 2007 feature films were honored: "There Will Be Blood", a Paramount Vantage and Miramax co-production, received eight nominations, winning Best Picture among others; "No Country for Old Men", also a Miramax and Paramount Vantage co-production, received eight nominations; "Into the Wild" earned two nominations; "The Kite Runner" garnered one nomination.  At the 80th Academy Awards, Blood and No Country won a combined six awards, including the Academy Award for Best Picture for No Country, the Academy Award for Best Actor for Daniel Day-Lewis in Blood, and the Academy Award for Best Supporting Actor for Javier Bardem in No Country.
-
-White Horse (film): White Horse is a short documentary by filmmakers Maryann DeLeo and Christophe Bisson that features a man (Maxym Surkov) returning to his Ukraine home for the first time in twenty years.  Evacuated from the city of Pripyat, Ukraine in 1986 due to the Chernobyl disaster, he has not returned since then.  DeLeo is the same filmmaker of the 2004 Academy Award-winning short film "Chernobyl Heart".
-
-Chernobyl Heart: Chernobyl Heart is a 2003 documentary film by Maryann DeLeo.  The film won the Best Documentary Short Subject award at The 76th Academy Awards.
-
-John Malkovich filmography: American actor, director, and producer John Malkovich has appeared in more than 70 motion pictures.  He started acting in the 1980s, appearing in the films "Places in the Heart" (1984) with Sally Field, "Death of a Salesman" (1985), "The Glass Menagerie" (1987), "Empire of the Sun" (1987), and "Dangerous Liaisons" (1988) with Glenn Close.  His role in "Places in the Heart" earned him an Academy Award nomination.  During the 1990s, he starred in the films "Of Mice and Men" (1992) as Lennie Small, "In the Line of Fire" (1993) as Mitch Leary, "Beyond the Clouds" (1995) as The Director, "The Portrait of a Lady" (1996) Gilbert Osmond, "Con Air" (1997) as Cyrus "The Virus" Grissom, "The Man in the Iron Mask" (1998) as Athos, "Being John Malkovich" (1999) as John Horatio Malkovich, and "" (1999) as Charles VII.  His role as Mitch Leary in "In the Line of Fire" earned him his second Academy Award nomination.
-
-Question: Have the films Chernobyl Heart and Born into Brothels both won an Academy Award?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "films_checked": {
-      "type": "array",
-      "description": "Details about each film mentioned in the question.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "film_title": {
-            "type": "string",
-            "description": "The title of the film."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
+    },
+    {
+      "role": "user",
+      "content": "Context:\nBorn into Brothels: Born into Brothels: Calcutta's Red Light Kids is a 2004 Indian-American documentary film about the children of prostitutes in Sonagachi, Kolkata's red light district.  The widely acclaimed film, written and directed by Zana Briski and Ross Kauffman, won a string of accolades including the Academy Award for Best Documentary Feature in 2004.\n\nAcademy Award for Best Film Editing: The Academy Award for Best Film Editing is one of the annual awards of the Academy of Motion Picture Arts and Sciences (AMPAS).  Nominations for this award are closely correlated with the Academy Award for Best Picture.  For 33 consecutive years, 1981 to 2013, every Best Picture winner had also been nominated for the Film Editing Oscar, and about two thirds of the Best Picture winners have also won for Film Editing.  Only the principal, \"above the line\" editor(s) as listed in the film's credits are named on the award; additional editors, supervising editors, etc. are not currently eligible.  The nominations for this Academy Award are determined by a ballot of the voting members of the Editing Branch of the Academy; there were 220 members of the Editing Branch in 2012.  The members may vote for up to five of the eligible films in the order of their preference; the five films with the largest vote totals are selected as nominees.  The Academy Award itself is selected from the nominated films by a subsequent ballot of all active and life members of the Academy.  This process is essentially the reverse of that of the British Academy of Film and Television Arts (BAFTA); nominations for the BAFTA Award for Best Editing are done by a general ballot of Academy voters, and the winner is selected by members of the editing chapter.\n\nZana Briski: Zana Briski (born 25 October 1966) is a British photographer and filmmaker, best known for \"Born into Brothels\", the 2004 winner of the Academy Award for Documentary Feature, which she directed.  She founded Kids with Cameras, a non-profit organization that teaches the art of photography to marginalized children in communities throughout the world.  Her interest in photography began at age 10.\n\nList of Polish Academy Award winners and nominees: This is a list of Polish Academy Award winners and nominees.  This list details the performances of Polish actors, actresses, and films that have either been submitted or nominated for, or have won, an Academy Award.  This list is current as of the 80th Academy Awards ceremony held on February 24, 2008.  There were 12 Academy Awards given to Polish filmmakers or their work (see Foreign Film category), including two Honorary Academy Awards and a Technical Achievement Award.  The category of Cinematography has the strongest presence of Polish filmmakers, with two wins (both by Janusz Kamiński) and five other nominations (including two noms for Kamiński).  As of that, the cinematographer Janusz Kamiński is the most Oscar-awarded Polish filmmaker.  The second most-awarded Pole was designer Anton Grot, who won one Academy Award and was nominated to the Oscars five times more.  The director Roman Polanski won an Oscar and was nominated four more times (additionally, \"Knife in the Water\", film directed and written by him was also nominated).  The composer Bronislau Kaper was awarded an Oscar and was nominated three times more.\n\nVikram Jayanti: Vikram Teja Jayanti is a documentary filmmaker responsible for a number of well known full-feature documentary films.  Two of his films, for which he has production credits, have received Academy Awards for Best Full-Feature Documentary; the 1997 blockbuster When We Were Kings and 2005's Born Into Brothels.  A sampling of his other work includes Innocents Abroad, \"The Man Who Bought Mustique\", \"James Ellroy's Feast of Death\", \"\", and \"Lincoln\".  He and his films have also won a number of awards, including the Special Jury Prize at the Sundance Film Festival, and have been nominated for others.\n\nKiller Films: Killer Films is a New York City-based independent film production company founded by movie producers Christine Vachon and Pamela Koffler in 1995.  The company has produced a number of the most acclaimed American independent films over the past two decades including \"Far From Heaven\" (nominated for four Academy Awards), \"Boys Don't Cry\" (Academy Award winner), \"One Hour Photo\", \"Kids\", \"Hedwig and the Angry Inch\", \"Happiness\", \"Velvet Goldmine\", \"Safe\", \"I Shot Andy Warhol\", \"Swoon\", \"I'm Not There\" (Academy Award nominated), \"Kill Your Darlings\", \"Still Alice\" (Academy Award winner) and \"Carol\" (nominated for six Academy Awards).  Killer Films executive produced Todd Haynes' five episode HBO miniseries \"Mildred Pierce\" featuring Kate Winslet and Guy Pearce, which went on to win five Emmys, a Golden Globe and a Screen Actors Guild Award.\n\nNick Meyer: Nick Meyer is an American film producer and CEO of Sierra/Affinity.  Meyer was the president of Paramount Vantage until December 2008.  In 2007, with Meyer as co-head of Paramount, the Studio received 19 Academy Award nominations.  Four of the Studio's 2007 feature films were honored: \"There Will Be Blood\", a Paramount Vantage and Miramax co-production, received eight nominations, winning Best Picture among others; \"No Country for Old Men\", also a Miramax and Paramount Vantage co-production, received eight nominations; \"Into the Wild\" earned two nominations; \"The Kite Runner\" garnered one nomination.  At the 80th Academy Awards, Blood and No Country won a combined six awards, including the Academy Award for Best Picture for No Country, the Academy Award for Best Actor for Daniel Day-Lewis in Blood, and the Academy Award for Best Supporting Actor for Javier Bardem in No Country.\n\nWhite Horse (film): White Horse is a short documentary by filmmakers Maryann DeLeo and Christophe Bisson that features a man (Maxym Surkov) returning to his Ukraine home for the first time in twenty years.  Evacuated from the city of Pripyat, Ukraine in 1986 due to the Chernobyl disaster, he has not returned since then.  DeLeo is the same filmmaker of the 2004 Academy Award-winning short film \"Chernobyl Heart\".\n\nChernobyl Heart: Chernobyl Heart is a 2003 documentary film by Maryann DeLeo.  The film won the Best Documentary Short Subject award at The 76th Academy Awards.\n\nJohn Malkovich filmography: American actor, director, and producer John Malkovich has appeared in more than 70 motion pictures.  He started acting in the 1980s, appearing in the films \"Places in the Heart\" (1984) with Sally Field, \"Death of a Salesman\" (1985), \"The Glass Menagerie\" (1987), \"Empire of the Sun\" (1987), and \"Dangerous Liaisons\" (1988) with Glenn Close.  His role in \"Places in the Heart\" earned him an Academy Award nomination.  During the 1990s, he starred in the films \"Of Mice and Men\" (1992) as Lennie Small, \"In the Line of Fire\" (1993) as Mitch Leary, \"Beyond the Clouds\" (1995) as The Director, \"The Portrait of a Lady\" (1996) Gilbert Osmond, \"Con Air\" (1997) as Cyrus \"The Virus\" Grissom, \"The Man in the Iron Mask\" (1998) as Athos, \"Being John Malkovich\" (1999) as John Horatio Malkovich, and \"\" (1999) as Charles VII.  His role as Mitch Leary in \"In the Line of Fire\" earned him his second Academy Award nomination.\n\nQuestion: Have the films Chernobyl Heart and Born into Brothels both won an Academy Award?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"films_checked\": {\n      \"type\": \"array\",\n      \"description\": \"Details about each film mentioned in the question.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"film_title\": {\n            \"type\": \"string\",\n            \"description\": \"The title of the film.\"\n          },\n          \"won_academy_award\": {\n            \"type\": \"boolean\",\n            \"description\": \"True if the film won an Academy Award, false otherwise.\"\n          },\n          \"award_category\": {\n            \"type\": \"string\",\n            \"description\": \"The specific category of the Academy Award won.\"\n          },\n          \"award_year\": {\n            \"type\": \"integer\",\n            \"description\": \"The year the Academy Award was won.\"\n          }\n        },\n        \"required\": [\n          \"film_title\",\n          \"won_academy_award\"\n        ],\n        \"additionalProperties\": false\n      }\n    },\n    \"all_films_won_academy_award\": {\n      \"type\": \"boolean\",\n      \"description\": \"True if all films in the query won an Academy Award, false otherwise.\"\n    },\n    \"question_answered\": {\n      \"type\": \"boolean\",\n      \"description\": \"The direct answer to the yes/no question.\"\n    }\n  },\n  \"required\": [\n    \"films_checked\",\n    \"all_films_won_academy_award\",\n    \"question_answered\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "films_checked": {
+        "type": "array",
+        "description": "Details about each film mentioned in the question.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "film_title": {
+              "type": "string",
+              "description": "The title of the film."
+            },
+            "won_academy_award": {
+              "type": "boolean",
+              "description": "True if the film won an Academy Award, false otherwise."
+            },
+            "award_category": {
+              "type": "string",
+              "description": "The specific category of the Academy Award won."
+            },
+            "award_year": {
+              "type": "integer",
+              "description": "The year the Academy Award was won."
+            }
           },
-          "won_academy_award": {
-            "type": "boolean",
-            "description": "True if the film won an Academy Award, false otherwise."
-          },
-          "award_category": {
-            "type": "string",
-            "description": "The specific category of the Academy Award won."
-          },
-          "award_year": {
-            "type": "integer",
-            "description": "The year the Academy Award was won."
-          }
-        },
-        "required": [
-          "film_title",
-          "won_academy_award"
-        ],
-        "additionalProperties": false
+          "required": [
+            "film_title",
+            "won_academy_award"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "all_films_won_academy_award": {
+        "type": "boolean",
+        "description": "True if all films in the query won an Academy Award, false otherwise."
+      },
+      "question_answered": {
+        "type": "boolean",
+        "description": "The direct answer to the yes/no question."
       }
     },
-    "all_films_won_academy_award": {
-      "type": "boolean",
-      "description": "True if all films in the query won an Academy Award, false otherwise."
-    },
-    "question_answered": {
-      "type": "boolean",
-      "description": "The direct answer to the yes/no question."
-    }
+    "required": [
+      "films_checked",
+      "all_films_won_academy_award",
+      "question_answered"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "films_checked",
-    "all_films_won_academy_award",
-    "question_answered"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

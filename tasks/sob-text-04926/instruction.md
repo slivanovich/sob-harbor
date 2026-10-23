@@ -1,110 +1,87 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Island of Terror: Island of Terror is a 1966 British horror film released by Planet Film Productions.  The film was released in the US by Universal Studios on a double bill with "The Projected Man" (1967).  The idea for the film came when Richard Gordon read the Gerry Fernback screenplay "The Night the Silicates Came".  He partnered with Tom Blakey of Planet Films to produce this movie.
-
-Giant from the Unknown: Giant from the Unknown is a 1958 horror film released by Astor Pictures and directed by Richard Cunha.  The film stars Ed Kemmer, Sally Fraser, and Buddy Baer.  It was theatrically released in March, 1958 on a double bill with "She Demons".
-
-The Woman Eater: The Woman Eater (AKA Womaneater on its original UK release) is a low budget 1958 black and white British horror film.  It was produced by Guido Coen, directed by Charles Saunders and stars George Coulouris and Vera Day.  The film recounts the story of a crazed scientist who feeds women to a flesh-eating tree in return for a serum that can bring the dead back to life.The film was released in the UK in 1958 by Eros Films on a double bill with the Swedish crime drama "Blonde in Bondage" (1957).  Columbia Pictures released "The Woman Eater" in the United States in 1959 on a double bill with the 1958 Japanese science fiction film "The H-Man."
-
-Once Upon a Mouse: Once Upon a Mouse is a 1981 American theatrical featurette directed by Jerry Kramer and Gary Rocklen, produced in association with Walt Disney Productions by Kramer/Rocklen Studios.  It was released on July 10, 1981 on a double bill with "The Fox and the Hound.
-
-The Fox and the Hound: The Fox and the Hound is a 1981 American animated drama film produced by Walt Disney Productions and loosely based on the novel of the same name by Daniel P. Mannix.  The 24th Disney animated feature film, the film tells the story of two unlikely friends, a red fox named Tod and a hound dog named Copper, who struggle to preserve their friendship despite their emerging instincts and the surrounding social pressures demanding them to be adversaries.  Directed by Ted Berman, Richard Rich, and Art Stevens, the film features the voices of Mickey Rooney, Kurt Russell, Pearl Bailey, Jack Albertson, Sandy Duncan, Jeanette Nolan, Pat Buttram, John Fiedler, John McIntire, Dick Bakalyan, Paul Winchell, Keith Mitchell, and Corey Feldman.
-
-Attack of the Giant Leeches: Attack of the Giant Leeches is an independently made 1959 black-and-white science fiction-horror film, produced by Gene Corman and directed by Bernard L. Kowalski.  It stars Ken Clark, Yvette Vickers and Jan Shepard.  The screenplay was written by Leo Gordon.  The film was released by American International Pictures on a double bill with "A Bucket of Blood".  Later, in some areas in 1960, "Leeches" played on a double bill with the Roger Corman film "House of Usher".
-
-The Son of Captain Blood: The Son of Captain Blood is a 1962 Italian/Spanish/US international co-production film.  It is the first starring role in a film for Sean Flynn, the son of Errol Flynn, who played the title character in the 1935 film "Captain Blood".  The film was released in Great Britain in 1963 by Warner-Pathe (in some regions on a double bill with Hammer's "The Scarlet Blade").  Paramount Pictures released the film in the US in 1964 on a double bill with the Jerry Lewis film "The Patsy".
-
-The Terrornauts: The Terrornauts is a 1967 science fiction film produced by Amicus Productions.  It went out on a double bill with "They Came from Beyond Space".  This double bill has been called "the two worst films the company ever produced".  The film is based on "The Wailing Asteroid" by Murray Leinster, adapted for screen by John Brunner.
-
-Teenagers from Outer Space: Teenagers from Outer Space (released in the UK as "The Gargon Terror", "The Boy from Outer Space" and originally titled "The Ray Gun Terror") is a 1959 independently made American black-and-white science fiction film released by Warner Bros. The film was produced, written, and directed by Tom Graeff and stars David Love, Dawn Bender, Bryan Grant, Harvey B. Dunn, Tom Graeff, and King Moody.  The film was distributed theatrically in 1959 by Warner Brothers on a double bill with "Gigantis the Fire Monster" (the English-dubbed version of the 1955 Japanese film "Godzilla Raids Again").
-
-Geordie Shore (series 4): The fourth series of Geordie Shore, a British television programme based in Newcastle upon Tyne, began airing on 6 November 2012 on MTV.  The series concluded on 18 December 2012 with a double bill after 8 episodes, the series ended on a double bill to avoid the final episode airing on Christmas Day.  This was the first series to feature Daniel Thomas-Tuck and Scott Timlin and is the highest rated series to date with 4 episodes receiving over 1,000,000 viewers.  The series includes Vicky and Ricci's ongoing arguments continue to the point of the engagement being temporarily called off, James leaving Holly distraught by the announcement of him having a girlfriend, and a huge bust-up between Vicky and Sophie which has the whole house divided.
-
-Question: Who wrote the novel that the film released on a double bill with Once Upon a Mouse was based on?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "author": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the author who wrote the novel."
-        }
-      },
-      "required": [
-        "name"
-      ],
-      "additionalProperties": false
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "novel": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "The title of the novel."
-        }
-      },
-      "required": [
-        "title"
-      ],
-      "additionalProperties": false
-    },
-    "film_adaptation": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "description": "The title of the film based on the novel."
-        },
-        "release_year": {
-          "type": "integer",
-          "description": "The release year of the film adaptation."
-        },
-        "double_bill_partner": {
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": "string",
-              "description": "The title of the film that was on a double bill with the film adaptation."
-            },
-            "release_year": {
-              "type": "integer",
-              "description": "The release year of the double bill partner film."
-            }
-          },
-          "required": [
-            "title",
-            "release_year"
-          ],
-          "additionalProperties": false
-        }
-      },
-      "required": [
-        "title",
-        "release_year",
-        "double_bill_partner"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nIsland of Terror: Island of Terror is a 1966 British horror film released by Planet Film Productions.  The film was released in the US by Universal Studios on a double bill with \"The Projected Man\" (1967).  The idea for the film came when Richard Gordon read the Gerry Fernback screenplay \"The Night the Silicates Came\".  He partnered with Tom Blakey of Planet Films to produce this movie.\n\nGiant from the Unknown: Giant from the Unknown is a 1958 horror film released by Astor Pictures and directed by Richard Cunha.  The film stars Ed Kemmer, Sally Fraser, and Buddy Baer.  It was theatrically released in March, 1958 on a double bill with \"She Demons\".\n\nThe Woman Eater: The Woman Eater (AKA Womaneater on its original UK release) is a low budget 1958 black and white British horror film.  It was produced by Guido Coen, directed by Charles Saunders and stars George Coulouris and Vera Day.  The film recounts the story of a crazed scientist who feeds women to a flesh-eating tree in return for a serum that can bring the dead back to life.The film was released in the UK in 1958 by Eros Films on a double bill with the Swedish crime drama \"Blonde in Bondage\" (1957).  Columbia Pictures released \"The Woman Eater\" in the United States in 1959 on a double bill with the 1958 Japanese science fiction film \"The H-Man.\"\n\nOnce Upon a Mouse: Once Upon a Mouse is a 1981 American theatrical featurette directed by Jerry Kramer and Gary Rocklen, produced in association with Walt Disney Productions by Kramer/Rocklen Studios.  It was released on July 10, 1981 on a double bill with \"The Fox and the Hound.\n\nThe Fox and the Hound: The Fox and the Hound is a 1981 American animated drama film produced by Walt Disney Productions and loosely based on the novel of the same name by Daniel P. Mannix.  The 24th Disney animated feature film, the film tells the story of two unlikely friends, a red fox named Tod and a hound dog named Copper, who struggle to preserve their friendship despite their emerging instincts and the surrounding social pressures demanding them to be adversaries.  Directed by Ted Berman, Richard Rich, and Art Stevens, the film features the voices of Mickey Rooney, Kurt Russell, Pearl Bailey, Jack Albertson, Sandy Duncan, Jeanette Nolan, Pat Buttram, John Fiedler, John McIntire, Dick Bakalyan, Paul Winchell, Keith Mitchell, and Corey Feldman.\n\nAttack of the Giant Leeches: Attack of the Giant Leeches is an independently made 1959 black-and-white science fiction-horror film, produced by Gene Corman and directed by Bernard L. Kowalski.  It stars Ken Clark, Yvette Vickers and Jan Shepard.  The screenplay was written by Leo Gordon.  The film was released by American International Pictures on a double bill with \"A Bucket of Blood\".  Later, in some areas in 1960, \"Leeches\" played on a double bill with the Roger Corman film \"House of Usher\".\n\nThe Son of Captain Blood: The Son of Captain Blood is a 1962 Italian/Spanish/US international co-production film.  It is the first starring role in a film for Sean Flynn, the son of Errol Flynn, who played the title character in the 1935 film \"Captain Blood\".  The film was released in Great Britain in 1963 by Warner-Pathe (in some regions on a double bill with Hammer's \"The Scarlet Blade\").  Paramount Pictures released the film in the US in 1964 on a double bill with the Jerry Lewis film \"The Patsy\".\n\nThe Terrornauts: The Terrornauts is a 1967 science fiction film produced by Amicus Productions.  It went out on a double bill with \"They Came from Beyond Space\".  This double bill has been called \"the two worst films the company ever produced\".  The film is based on \"The Wailing Asteroid\" by Murray Leinster, adapted for screen by John Brunner.\n\nTeenagers from Outer Space: Teenagers from Outer Space (released in the UK as \"The Gargon Terror\", \"The Boy from Outer Space\" and originally titled \"The Ray Gun Terror\") is a 1959 independently made American black-and-white science fiction film released by Warner Bros. The film was produced, written, and directed by Tom Graeff and stars David Love, Dawn Bender, Bryan Grant, Harvey B. Dunn, Tom Graeff, and King Moody.  The film was distributed theatrically in 1959 by Warner Brothers on a double bill with \"Gigantis the Fire Monster\" (the English-dubbed version of the 1955 Japanese film \"Godzilla Raids Again\").\n\nGeordie Shore (series 4): The fourth series of Geordie Shore, a British television programme based in Newcastle upon Tyne, began airing on 6 November 2012 on MTV.  The series concluded on 18 December 2012 with a double bill after 8 episodes, the series ended on a double bill to avoid the final episode airing on Christmas Day.  This was the first series to feature Daniel Thomas-Tuck and Scott Timlin and is the highest rated series to date with 4 episodes receiving over 1,000,000 viewers.  The series includes Vicky and Ricci's ongoing arguments continue to the point of the engagement being temporarily called off, James leaving Holly distraught by the announcement of him having a girlfriend, and a huge bust-up between Vicky and Sophie which has the whole house divided.\n\nQuestion: Who wrote the novel that the film released on a double bill with Once Upon a Mouse was based on?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"author\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the author who wrote the novel.\"\n        }\n      },\n      \"required\": [\n        \"name\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"novel\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the novel.\"\n        }\n      },\n      \"required\": [\n        \"title\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"film_adaptation\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"title\": {\n          \"type\": \"string\",\n          \"description\": \"The title of the film based on the novel.\"\n        },\n        \"release_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The release year of the film adaptation.\"\n        },\n        \"double_bill_partner\": {\n          \"type\": \"object\",\n          \"properties\": {\n            \"title\": {\n              \"type\": \"string\",\n              \"description\": \"The title of the film that was on a double bill with the film adaptation.\"\n            },\n            \"release_year\": {\n              \"type\": \"integer\",\n              \"description\": \"The release year of the double bill partner film.\"\n            }\n          },\n          \"required\": [\n            \"title\",\n            \"release_year\"\n          ],\n          \"additionalProperties\": false\n        }\n      },\n      \"required\": [\n        \"title\",\n        \"release_year\",\n        \"double_bill_partner\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"author\",\n    \"novel\",\n    \"film_adaptation\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "author",
-    "novel",
-    "film_adaptation"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "author": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the author who wrote the novel."
+          }
+        },
+        "required": [
+          "name"
+        ],
+        "additionalProperties": false
+      },
+      "novel": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the novel."
+          }
+        },
+        "required": [
+          "title"
+        ],
+        "additionalProperties": false
+      },
+      "film_adaptation": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "The title of the film based on the novel."
+          },
+          "release_year": {
+            "type": "integer",
+            "description": "The release year of the film adaptation."
+          },
+          "double_bill_partner": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "The title of the film that was on a double bill with the film adaptation."
+              },
+              "release_year": {
+                "type": "integer",
+                "description": "The release year of the double bill partner film."
+              }
+            },
+            "required": [
+              "title",
+              "release_year"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "title",
+          "release_year",
+          "double_bill_partner"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "author",
+      "novel",
+      "film_adaptation"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

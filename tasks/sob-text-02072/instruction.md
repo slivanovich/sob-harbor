@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-1957 European Cup Final: The 1957 European Cup Final was a football match which took place at the Santiago Bernabéu Stadium in Madrid, Spain, on 30 May 1957.  It was contested between Real Madrid of Spain and Fiorentina of Italy.  Real Madrid won 2–0 after goals from Alfredo Di Stéfano and Francisco Gento in the second half.  It was the first of four finals (also counting the Champions League era, followed by the 1965, 1984 and 2012 finals) where one of the teams played in its home stadium, and also the first final where the winning team played at their home stadium.
-
-GSP Stadium: The Pancyprian Gymnastic Association Stadium (GSP Stadium) (Greek: Στάδιο Γυμναστικός Σύλλογος "Τα Παγκύπρια" ) is a football stadium in Nicosia, Cyprus.  Although small by international standards, it is the largest stadium in Cyprus, with a capacity of 22,859 and was opened in 1999.  It serves as the home stadium for the two Nicosia's biggest clubs APOEL and Omonia.  It is also the home stadium of the Cyprus national football team.  A stadium under the same name, the old GSP Stadium, existed from 1902 until 1999 in the centre of Nicosia and had a capacity of 12,000.
-
-Boris Paichadze Dinamo Arena: Boris Paichadze Dinamo Arena, formerly known as Lenin Dinamo Stadium and later Boris Paichadze National Stadium, is a stadium in Tbilisi, Georgia, and the home stadium of Dinamo Tbilisi, Georgia national rugby union team and Georgia national football team.  With a capacity of 54,549, the stadium is the largest in Georgia.  Built in 1976 by the Georgian architect Gia Kurdiani, the Dinamo Arena was named Vladimir Ilyich Lenin Dinamo Stadium after Russian Communist leader but later, in 1995 was renamed to Boris Paichadze National Stadium after the famous Georgian football player Boris Paichadze.  Prior to the construction of Boris Paichadze Dinamo Arena, the home stadium of Dinamo Tbilisi was the Central Stadium with an approximate capacity of 35,000 spectators.  The demand for a much bigger stadium was increased with the successful performance of Dinamo Tbilisi in the mid 1970s.  After the inauguration of the stadium, it became the third-largest in the Soviet Union, with a capacity of 74,354 spectators.
-
-Witbank Stadium: Witbank Stadium is a multi-purpose stadium in Witbank, South Africa.  It is currently used mostly for football matches and serves as the home stadium of Mpumalanga Black Aces F.C..  It was also the home stadium of Mpumalanga's rugby team, the Pumas , before they relocated to Mbombela.
-
-Gillette Stadium: Gillette Stadium is a stadium located in Foxborough, Massachusetts, 28 mi southwest of downtown Boston and 20 mi northeast of downtown Providence, Rhode Island.  It serves as the home stadium and administrative offices for both the NFL's New England Patriots football franchise and MLS's New England Revolution soccer team.  In 2012, it also became the home stadium for the football program of the University of Massachusetts (UMass), while on-campus Warren McGuirk Alumni Stadium was undergoing renovations.  Gillette will continue to host higher attended home games.
-
-UE Llagostera: Unió Esportiva Llagostera-Costa Brava S.A.E. is a Spanish football team based in Llagostera, Girona, in the Autonomous Community of Catalonia.  Founded in 1947, it currently plays in Segunda División B – Group 3.  Its home stadium was "Estadi Municipal de Llagostera", with a capacity for 1,500 spectators, but as that does not meet LFP criteria for home games, the team hade as its home stadium from 2014 to 2017 the Estadi Palamós Costa Brava, 30 km from Llagostera, which holds 3,724 spectators.  Llagostera is the smallest town ever to have a team in one of the two professional football divisions in Spain.
-
-Edgar Zaldívar: Edgar Zaldivar Valverde (born October 17, 1996 in San Luis Potosí City, San Luis Potosí) is a professional Mexican footballer who currently plays for Club Atlas.
-
-Edgar Brown Memorial Stadium: Edgar Brown Memorial Stadium is the home stadium for the Chiawana High School Riverhawks and Pasco High School Bulldogs of Pasco, Washington.  The school's football, soccer and track-and-field teams play their home games at "Edgar Brown", as it is commonly called.
-
-Seinäjoen keskuskenttä: Seinäjoen keskuskenttä is an athletics and football stadium in Seinäjoki, Finland.  It is the home stadium of SJK's reserve team Kerho 07 of Kakkonen and it holds 4,500 spectators.  It also previously served as the home stadium of SJK prior to their move to a new stadium in 2016.
-
-Club Atlas: Atlas Fútbol Club (] ) is a Mexican football club.  Atlas plays in Guadalajara, Mexico, in the Liga MX.  The club's home stadium is Estadio Jalisco in Guadalajara.
-
-Question: What is the home stadium of the team that Edgar Zaldivar plays for?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "player_name": {
-      "type": "string",
-      "description": "The name of the football player."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "player_team": {
-      "type": "string",
-      "description": "The name of the team the player currently plays for."
-    },
-    "team_home_stadium": {
-      "type": "string",
-      "description": "The name of the home stadium for the player's team."
-    },
-    "stadium_location": {
-      "type": "string",
-      "description": "The city where the team's home stadium is located."
+    {
+      "role": "user",
+      "content": "Context:\n1957 European Cup Final: The 1957 European Cup Final was a football match which took place at the Santiago Bernabéu Stadium in Madrid, Spain, on 30 May 1957.  It was contested between Real Madrid of Spain and Fiorentina of Italy.  Real Madrid won 2–0 after goals from Alfredo Di Stéfano and Francisco Gento in the second half.  It was the first of four finals (also counting the Champions League era, followed by the 1965, 1984 and 2012 finals) where one of the teams played in its home stadium, and also the first final where the winning team played at their home stadium.\n\nGSP Stadium: The Pancyprian Gymnastic Association Stadium (GSP Stadium) (Greek: Στάδιο Γυμναστικός Σύλλογος \"Τα Παγκύπρια\" ) is a football stadium in Nicosia, Cyprus.  Although small by international standards, it is the largest stadium in Cyprus, with a capacity of 22,859 and was opened in 1999.  It serves as the home stadium for the two Nicosia's biggest clubs APOEL and Omonia.  It is also the home stadium of the Cyprus national football team.  A stadium under the same name, the old GSP Stadium, existed from 1902 until 1999 in the centre of Nicosia and had a capacity of 12,000.\n\nBoris Paichadze Dinamo Arena: Boris Paichadze Dinamo Arena, formerly known as Lenin Dinamo Stadium and later Boris Paichadze National Stadium, is a stadium in Tbilisi, Georgia, and the home stadium of Dinamo Tbilisi, Georgia national rugby union team and Georgia national football team.  With a capacity of 54,549, the stadium is the largest in Georgia.  Built in 1976 by the Georgian architect Gia Kurdiani, the Dinamo Arena was named Vladimir Ilyich Lenin Dinamo Stadium after Russian Communist leader but later, in 1995 was renamed to Boris Paichadze National Stadium after the famous Georgian football player Boris Paichadze.  Prior to the construction of Boris Paichadze Dinamo Arena, the home stadium of Dinamo Tbilisi was the Central Stadium with an approximate capacity of 35,000 spectators.  The demand for a much bigger stadium was increased with the successful performance of Dinamo Tbilisi in the mid 1970s.  After the inauguration of the stadium, it became the third-largest in the Soviet Union, with a capacity of 74,354 spectators.\n\nWitbank Stadium: Witbank Stadium is a multi-purpose stadium in Witbank, South Africa.  It is currently used mostly for football matches and serves as the home stadium of Mpumalanga Black Aces F.C..  It was also the home stadium of Mpumalanga's rugby team, the Pumas , before they relocated to Mbombela.\n\nGillette Stadium: Gillette Stadium is a stadium located in Foxborough, Massachusetts, 28 mi southwest of downtown Boston and 20 mi northeast of downtown Providence, Rhode Island.  It serves as the home stadium and administrative offices for both the NFL's New England Patriots football franchise and MLS's New England Revolution soccer team.  In 2012, it also became the home stadium for the football program of the University of Massachusetts (UMass), while on-campus Warren McGuirk Alumni Stadium was undergoing renovations.  Gillette will continue to host higher attended home games.\n\nUE Llagostera: Unió Esportiva Llagostera-Costa Brava S.A.E. is a Spanish football team based in Llagostera, Girona, in the Autonomous Community of Catalonia.  Founded in 1947, it currently plays in Segunda División B – Group 3.  Its home stadium was \"Estadi Municipal de Llagostera\", with a capacity for 1,500 spectators, but as that does not meet LFP criteria for home games, the team hade as its home stadium from 2014 to 2017 the Estadi Palamós Costa Brava, 30 km from Llagostera, which holds 3,724 spectators.  Llagostera is the smallest town ever to have a team in one of the two professional football divisions in Spain.\n\nEdgar Zaldívar: Edgar Zaldivar Valverde (born October 17, 1996 in San Luis Potosí City, San Luis Potosí) is a professional Mexican footballer who currently plays for Club Atlas.\n\nEdgar Brown Memorial Stadium: Edgar Brown Memorial Stadium is the home stadium for the Chiawana High School Riverhawks and Pasco High School Bulldogs of Pasco, Washington.  The school's football, soccer and track-and-field teams play their home games at \"Edgar Brown\", as it is commonly called.\n\nSeinäjoen keskuskenttä: Seinäjoen keskuskenttä is an athletics and football stadium in Seinäjoki, Finland.  It is the home stadium of SJK's reserve team Kerho 07 of Kakkonen and it holds 4,500 spectators.  It also previously served as the home stadium of SJK prior to their move to a new stadium in 2016.\n\nClub Atlas: Atlas Fútbol Club (] ) is a Mexican football club.  Atlas plays in Guadalajara, Mexico, in the Liga MX.  The club's home stadium is Estadio Jalisco in Guadalajara.\n\nQuestion: What is the home stadium of the team that Edgar Zaldivar plays for?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"player_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the football player.\"\n    },\n    \"player_team\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the team the player currently plays for.\"\n    },\n    \"team_home_stadium\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the home stadium for the player's team.\"\n    },\n    \"stadium_location\": {\n      \"type\": \"string\",\n      \"description\": \"The city where the team's home stadium is located.\"\n    }\n  },\n  \"required\": [\n    \"player_name\",\n    \"player_team\",\n    \"team_home_stadium\",\n    \"stadium_location\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "player_name",
-    "player_team",
-    "team_home_stadium",
-    "stadium_location"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "player_name": {
+        "type": "string",
+        "description": "The name of the football player."
+      },
+      "player_team": {
+        "type": "string",
+        "description": "The name of the team the player currently plays for."
+      },
+      "team_home_stadium": {
+        "type": "string",
+        "description": "The name of the home stadium for the player's team."
+      },
+      "stadium_location": {
+        "type": "string",
+        "description": "The city where the team's home stadium is located."
+      }
+    },
+    "required": [
+      "player_name",
+      "player_team",
+      "team_home_stadium",
+      "stadium_location"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

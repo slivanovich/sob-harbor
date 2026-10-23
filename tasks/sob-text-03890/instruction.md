@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Marie Antoinette: Marie Antoinette ( ; ] ; born Maria Antonia Josepha Johanna; 2 November 1755 – 16 October 1793) was the last Queen of France before the French Revolution.  She was born an Archduchess of Austria, and was the penultimate child of Empress Maria Theresa and Francis I, Holy Roman Emperor.
-
-Lakshman Joseph de Saram: Lakshman Joseph de Saram is a film composer and classical musician.  Born in Colombo, Sri Lanka and educated at the Royal College, Colombo, the High School of Performing Arts, Manhattan School of Music and Juilliard Pre-College in New York City, Joseph de Saram is influential in the music of South Asian art cinema, having scored many international award-winning films like 'Between Two Worlds' and 'Akasa Kusum.'  His best-known score is to the 2012 film "Bel Ami".  Joseph de Saram is also artistic director of The Chamber Music Society of Colombo.
-
-Louis Joseph, Prince of Condé: Louis Joseph de Bourbon (9 August 1736 – 13 May 1818) was Prince of Condé from 1740 to his death.  A member of the House of Bourbon, he held the prestigious rank of "Prince du Sang".
-
-Alfred de Bougy: Alfred James Louis Joseph de Bougy (5 November 1814 — 4 September 1871), French poet and author, was born in Grenoble.  He died in Évian-les-Bains.  He also wrote under the pen-name of Ethelred Bergeville.
-
-Louis Joseph, Dauphin of France: Louis Joseph de France (Louis Joseph Xavier François; 22 October 1781 – 4 June 1789) was the second child and elder son of King Louis XVI of France and Marie Antoinette.  As son of a king of France, he was a "fils de France" ("Son of France"), and as the eldest son and heir apparent, he was Dauphin of France, (the twenty-sixth "crown prince" of the Capetian and Bourbon monarchies).
-
-Louis Joseph, Duke of Guise: Louis Joseph de Lorraine "Duke of Guise" and Duke of Angoulême, (7 August 1650 – 30 July 1671) was the only son of Louis, Duke of Joyeuse and Marie Françoise de Valois, the only daughter of Louis-Emmanuel d'Angoulême, Count of Alès, Governor of Provence and son of Charles de Valois Duke of Angoulême, a bastard of Charles IX of France.
-
-Louis Joseph, Duke of Vendôme: Louis Joseph de Bourbon, Duke of Vendôme (Louis Joseph; 1 July 165411 June 1712) was a French military commander during the War of the Grand Alliance and War of the Spanish Succession, Marshal of France.
-
-François Joseph, Duke of Guise: François Joseph de Lorraine (Paris, 28 August 1670 – 16 March 1675, Paris), Duke of Guise, Duke of Alençon and Duke of Angoulême, was the only son of Louis Joseph de Lorraine, Duke of Guise and Élisabeth Marguerite d'Orléans, "suo jure" duchess of Alençon.
-
-Army of Condé: The Army of Condé (French: "Armée de Condé" ) was a French field army during the French Revolutionary Wars.  One of several émigré field armies, it was the only one to survive the War of the First Coalition; others had been formed by the Comte d'Artois (brother of King Louis XVI) and Mirabeau-Tonneau.  The émigré armies were formed by aristocrats and nobles who had fled from the violence in France after the August Decrees.  The army was commanded by Louis Joseph de Bourbon, Prince de Condé, the cousin of Louis XVI of France.  Among its members were Condé's grandson, the Duc d'Enghien and the two sons of Louis XVI's younger brother, the Comte d'Artois, and so the army was sometimes also called the Princes' Army.
-
-François-Louis-Joseph Watteau: François Louis Joseph Watteau (18 August 1758, Lille – 1 December 1823, Lille), known like his father as the Watteau of Lille, was a French painter, active in his birthplace.  He was the son of the painter Louis Joseph Watteau (1731–1798) and grandson of Noël Joseph Watteau (1689–1756) – Noël was the brother of Jean-Antoine Watteau, the painter of ""fêtes galantes"".  From 1808 to his death he was deputy curator of the Palais des Beaux-Arts de Lille, which his father had helped to found.
-
-Question: In what year was Louis Joseph de Frances's mother born?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the person whose mother's birth year is being sought."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "mother_name": {
-      "type": "string",
-      "description": "The name of the mother."
-    },
-    "mother_birth_year": {
-      "type": "integer",
-      "description": "The birth year of the mother."
+    {
+      "role": "user",
+      "content": "Context:\nMarie Antoinette: Marie Antoinette ( ; ] ; born Maria Antonia Josepha Johanna; 2 November 1755 – 16 October 1793) was the last Queen of France before the French Revolution.  She was born an Archduchess of Austria, and was the penultimate child of Empress Maria Theresa and Francis I, Holy Roman Emperor.\n\nLakshman Joseph de Saram: Lakshman Joseph de Saram is a film composer and classical musician.  Born in Colombo, Sri Lanka and educated at the Royal College, Colombo, the High School of Performing Arts, Manhattan School of Music and Juilliard Pre-College in New York City, Joseph de Saram is influential in the music of South Asian art cinema, having scored many international award-winning films like 'Between Two Worlds' and 'Akasa Kusum.'  His best-known score is to the 2012 film \"Bel Ami\".  Joseph de Saram is also artistic director of The Chamber Music Society of Colombo.\n\nLouis Joseph, Prince of Condé: Louis Joseph de Bourbon (9 August 1736 – 13 May 1818) was Prince of Condé from 1740 to his death.  A member of the House of Bourbon, he held the prestigious rank of \"Prince du Sang\".\n\nAlfred de Bougy: Alfred James Louis Joseph de Bougy (5 November 1814 — 4 September 1871), French poet and author, was born in Grenoble.  He died in Évian-les-Bains.  He also wrote under the pen-name of Ethelred Bergeville.\n\nLouis Joseph, Dauphin of France: Louis Joseph de France (Louis Joseph Xavier François; 22 October 1781 – 4 June 1789) was the second child and elder son of King Louis XVI of France and Marie Antoinette.  As son of a king of France, he was a \"fils de France\" (\"Son of France\"), and as the eldest son and heir apparent, he was Dauphin of France, (the twenty-sixth \"crown prince\" of the Capetian and Bourbon monarchies).\n\nLouis Joseph, Duke of Guise: Louis Joseph de Lorraine \"Duke of Guise\" and Duke of Angoulême, (7 August 1650 – 30 July 1671) was the only son of Louis, Duke of Joyeuse and Marie Françoise de Valois, the only daughter of Louis-Emmanuel d'Angoulême, Count of Alès, Governor of Provence and son of Charles de Valois Duke of Angoulême, a bastard of Charles IX of France.\n\nLouis Joseph, Duke of Vendôme: Louis Joseph de Bourbon, Duke of Vendôme (Louis Joseph; 1 July 165411 June 1712) was a French military commander during the War of the Grand Alliance and War of the Spanish Succession, Marshal of France.\n\nFrançois Joseph, Duke of Guise: François Joseph de Lorraine (Paris, 28 August 1670 – 16 March 1675, Paris), Duke of Guise, Duke of Alençon and Duke of Angoulême, was the only son of Louis Joseph de Lorraine, Duke of Guise and Élisabeth Marguerite d'Orléans, \"suo jure\" duchess of Alençon.\n\nArmy of Condé: The Army of Condé (French: \"Armée de Condé\" ) was a French field army during the French Revolutionary Wars.  One of several émigré field armies, it was the only one to survive the War of the First Coalition; others had been formed by the Comte d'Artois (brother of King Louis XVI) and Mirabeau-Tonneau.  The émigré armies were formed by aristocrats and nobles who had fled from the violence in France after the August Decrees.  The army was commanded by Louis Joseph de Bourbon, Prince de Condé, the cousin of Louis XVI of France.  Among its members were Condé's grandson, the Duc d'Enghien and the two sons of Louis XVI's younger brother, the Comte d'Artois, and so the army was sometimes also called the Princes' Army.\n\nFrançois-Louis-Joseph Watteau: François Louis Joseph Watteau (18 August 1758, Lille – 1 December 1823, Lille), known like his father as the Watteau of Lille, was a French painter, active in his birthplace.  He was the son of the painter Louis Joseph Watteau (1731–1798) and grandson of Noël Joseph Watteau (1689–1756) – Noël was the brother of Jean-Antoine Watteau, the painter of \"\"fêtes galantes\"\".  From 1808 to his death he was deputy curator of the Palais des Beaux-Arts de Lille, which his father had helped to found.\n\nQuestion: In what year was Louis Joseph de Frances's mother born?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person whose mother's birth year is being sought.\"\n    },\n    \"mother_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the mother.\"\n    },\n    \"mother_birth_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The birth year of the mother.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"mother_name\",\n    \"mother_birth_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "mother_name",
-    "mother_birth_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the person whose mother's birth year is being sought."
+      },
+      "mother_name": {
+        "type": "string",
+        "description": "The name of the mother."
+      },
+      "mother_birth_year": {
+        "type": "integer",
+        "description": "The birth year of the mother."
+      }
+    },
+    "required": [
+      "person_name",
+      "mother_name",
+      "mother_birth_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

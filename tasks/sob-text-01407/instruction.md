@@ -1,86 +1,63 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-2012–13 Los Angeles Clippers season: The 2012–13 Los Angeles Clippers season was the 43rd season of the franchise in the National Basketball Association (NBA), their 35th season in Southern California, and their 29th season in Los Angeles.  During the offseason, the Clippers signed seven-time all-star Grant Hill and re-acquired Lamar Odom from the Dallas Mavericks.  They improved on their 40–26 record from the previous season to finish 56–26, and they won their first Pacific Division title in franchise history.  The title was clinched after defeating the Los Angeles Lakers on April 7, which also completed a season sweep of their crosstown rivals, 4–0.  The franchise had not swept the Lakers since 1974–75, when the Clippers were the Buffalo Braves.  It was also the first time in 20 years since 1992–93 that the Clippers won the season series against the Lakers.  Although this was enough to net them home-court advantage in a playoff series for the first time in franchise history, they lost their first-round series to the Memphis Grizzlies in six games.  Following the season, Hill and Odom both retired and Chauncey Billups re-signed as a free agent with the Detroit Pistons.
-
-Darius Morris: Darius Aaron Morris (born January 3, 1991) is an American professional basketball player for the Rio Grande Valley Vipers of the NBA G League.  Morris was selected as the 41st pick in the 2011 NBA draft by the Los Angeles Lakers and plays the point guard position.  He has also played for the Brooklyn Nets, Philadelphia 76ers, Los Angeles Clippers and Memphis Grizzlies of the NBA as well as the Los Angeles D-Fenders and Rio Grande Valley Vipers of the NBA D-League.  With the Vipers, he established a D-League playoff single-game assists record in 2014.
-
-Lakers–Clippers rivalry: The Lakers–Clippers rivalry is a National Basketball Association (NBA) rivalry between the Los Angeles Lakers and Los Angeles Clippers.  The two Pacific Division teams both play their home games at Staples Center in Los Angeles, inspiring their matchups to sometimes be called the "Hallway Series".  The Lakers relocated from Minneapolis in 1960, while the Clippers moved from San Diego in 1984.  Los Angeles fans have historically favored the Lakers.  But the Clippers have sold out every home game at Staples Center since Feb. 2011 and entered the 2016–17 season with the sixth-longest active sellout streak in the NBA.  The Lakers have won 11 of their 16 NBA championships since moving to Los Angeles.  Meanwhile, the Clippers have made the playoffs only nine times since 1984 and were long considered the laughingstock of the NBA; in the history of the franchise, they have never advanced past the second round of the playoffs.  Some contended that the term "rivalry" was inaccurate until the Clippers became more successful.  For the first time in 20 years, the Clippers won the season series against the Lakers in 2012–13.  This was the first of five straight season series victories for the Clippers, which included season sweeps in both 2014-15 and 2015-16.  With the Clippers' 3-1 series win in 2016-17, the Lakers have now won the season series just four times in the past 13 seasons, with five Clippers wins, four Lakers wins, and four ties.  The Lakers hold a 99–47 advantage in the all-time series against the Clippers.  The two teams have never met in the playoffs.
-
-Memphis Grizzlies: The Memphis Grizzlies are an American professional basketball team based in Memphis, Tennessee.  The Grizzlies compete in the National Basketball Association (NBA) as a member team of the league's Western Conference Southwest Division.  The Grizzlies play their home games at FedExForum.  The team is owned by Robert Pera.  The Grizzlies are currently the only team in the major professional North American sports leagues based in the city of Memphis.
-
-Los Angeles Clippers: The Los Angeles Clippers, often abbreviated by the team as the LA Clippers, are an American professional basketball team based in Los Angeles, California.  The Clippers compete in the National Basketball Association (NBA) as a member of the league's Western Conference Pacific Division.  The Clippers play their home games at Staples Center in downtown Los Angeles, an arena shared with the Los Angeles Lakers of the NBA, the Los Angeles Sparks of the Women's National Basketball Association (WNBA), and the Los Angeles Kings of the National Hockey League (NHL).
-
-List of Los Angeles Clippers seasons: The Los Angeles Clippers are a professional basketball team based in Los Angeles, California.  They play in the National Basketball Association (NBA) and are a member of the NBA Western Conference's Pacific Division.  The Clippers were founded in 1970 as the Buffalo Braves.  They were one of three franchises that joined the NBA as an expansion team in the 1970–71 season.  The Braves moved to San Diego, California after the 1977–78 season, and became known as the San Diego Clippers.  For the 1984–85 NBA season, the Clippers moved north to Los Angeles and became known as the Los Angeles Clippers.
-
-Sports in Los Angeles: The Los Angeles metropolitan area is home to several professional and collegiate sports teams.  The Greater Los Angeles Area has nine major league professional teams: the Anaheim Ducks, the Los Angeles Angels, the Los Angeles Chargers, the Los Angeles Clippers, the Los Angeles Dodgers, LA Galaxy, the Los Angeles Kings, the Los Angeles Lakers, and the Los Angeles Rams.  Los Angeles FC will begin play as the area's tenth major team in 2018.  USC Trojans football, UCLA Bruins men's basketball, USC Trojans baseball, USC Trojans track & field, and Cal State Fullerton Titans baseball are all historically premier organizations in college sports.  Other major sports teams include UCLA Bruins Football, Los Angeles Sparks, Pepperdine Waves baseball, and formerly the Los Angeles Raiders and Los Angeles Aztecs.  Between them, these Los Angeles area sports teams have won a combined 105 Championship Titles.  Los Angeles area colleges have produced upwards of 200 National Championship Teams, primarily from USC Trojans and UCLA Bruins of the Pac-12 Conference.  The 1932 and 1984 Summer Olympics were held in Los Angeles.  In 2028 the city will host the Olympics for a third time.
-
-List of Los Angeles Clippers head coaches: The Los Angeles Clippers are an American professional basketball team based in Los Angeles, California.  They play in the Pacific Division of the Western Conference in the National Basketball Association (NBA).  The Clippers joined the NBA in 1970 as an expansion team.  The team has had three names since its inception: the Buffalo Braves (1970–1978), the San Diego Clippers (1978–1984), and the Los Angeles Clippers (1984–present).  The Clippers are the oldest franchise in the NBA to have never reached the league finals.  The team has played its home games at the Staples Center since 1999.  The Clippers are owned by Steve Ballmer, and Dave Wohl is their general manager.
-
-2011 NBA All-Star Game: The 2011 NBA All-Star Game was an exhibition basketball game that was played on February 20, 2011 at Staples Center in Los Angeles, California, home of the Los Angeles Clippers and the Los Angeles Lakers.  This game was the 60th edition of the National Basketball Association (NBA) All-Star Game and was played during the 2010–11 NBA season.  The Los Angeles Clippers and Los Angeles Lakers served as the hosts.  The Clippers and Lakers were both awarded the All-Star Game in an announcement by commissioner David Stern on June 9, 2009.  This was the second time that the Staples Center had hosted the All-Star Game; the arena had previously hosted the event in 2004.  This will be the fifth time that Los Angeles had hosted the All-Star Game; before Staples Center opened in 1999, the city had previously hosted the event in 1963, 1972, and 1983.  Rihanna, Kanye West and Drake were the halftime performers, while Keri Hilson, Lenny Kravitz and Bruno Mars were the entertainment for pre-show festivities.
-
-Los Angeles Clippers Training Center: The Los Angeles Clippers Training Center is a 42500 sqfoot two-story training facility for the Los Angeles Clippers of the National Basketball Association (NBA).  Located in the planned community of Playa Vista in Los Angeles near Loyola Marymount University, the facility is at least 1 mi away from nearby beaches (Playa Del Rey, Marina Del Rey, and Venice), 3 mi north of Los Angeles International Airport, and 12 mi southwest of Staples Center.  While the team maintains some office functions at Staples Center, the Playa Vista facility serves as the official headquarters of the Clippers.
-
-Question: What year did the Los Angeles Clippers and Memphis Grizzlies face off, resulting in the Los Angeles Clippers to lose their first-round series in six games?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "season": {
-      "type": "string",
-      "description": "The NBA season during which the event occurred."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "teams_involved": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "The names of the teams that faced off in the playoff series."
-    },
-    "playoff_series_details": {
-      "type": "object",
-      "properties": {
-        "round": {
-          "type": "string",
-          "description": "The round of the playoffs."
-        },
-        "opponent": {
-          "type": "string",
-          "description": "The opponent team in the series."
-        },
-        "games_played": {
-          "type": "integer",
-          "description": "The total number of games played in the series."
-        },
-        "clippers_series_result": {
-          "type": "string",
-          "description": "The outcome for the Los Angeles Clippers in the series (e.g., 'lost')."
-        }
-      },
-      "required": [
-        "round",
-        "opponent",
-        "games_played",
-        "clippers_series_result"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\n2012–13 Los Angeles Clippers season: The 2012–13 Los Angeles Clippers season was the 43rd season of the franchise in the National Basketball Association (NBA), their 35th season in Southern California, and their 29th season in Los Angeles.  During the offseason, the Clippers signed seven-time all-star Grant Hill and re-acquired Lamar Odom from the Dallas Mavericks.  They improved on their 40–26 record from the previous season to finish 56–26, and they won their first Pacific Division title in franchise history.  The title was clinched after defeating the Los Angeles Lakers on April 7, which also completed a season sweep of their crosstown rivals, 4–0.  The franchise had not swept the Lakers since 1974–75, when the Clippers were the Buffalo Braves.  It was also the first time in 20 years since 1992–93 that the Clippers won the season series against the Lakers.  Although this was enough to net them home-court advantage in a playoff series for the first time in franchise history, they lost their first-round series to the Memphis Grizzlies in six games.  Following the season, Hill and Odom both retired and Chauncey Billups re-signed as a free agent with the Detroit Pistons.\n\nDarius Morris: Darius Aaron Morris (born January 3, 1991) is an American professional basketball player for the Rio Grande Valley Vipers of the NBA G League.  Morris was selected as the 41st pick in the 2011 NBA draft by the Los Angeles Lakers and plays the point guard position.  He has also played for the Brooklyn Nets, Philadelphia 76ers, Los Angeles Clippers and Memphis Grizzlies of the NBA as well as the Los Angeles D-Fenders and Rio Grande Valley Vipers of the NBA D-League.  With the Vipers, he established a D-League playoff single-game assists record in 2014.\n\nLakers–Clippers rivalry: The Lakers–Clippers rivalry is a National Basketball Association (NBA) rivalry between the Los Angeles Lakers and Los Angeles Clippers.  The two Pacific Division teams both play their home games at Staples Center in Los Angeles, inspiring their matchups to sometimes be called the \"Hallway Series\".  The Lakers relocated from Minneapolis in 1960, while the Clippers moved from San Diego in 1984.  Los Angeles fans have historically favored the Lakers.  But the Clippers have sold out every home game at Staples Center since Feb. 2011 and entered the 2016–17 season with the sixth-longest active sellout streak in the NBA.  The Lakers have won 11 of their 16 NBA championships since moving to Los Angeles.  Meanwhile, the Clippers have made the playoffs only nine times since 1984 and were long considered the laughingstock of the NBA; in the history of the franchise, they have never advanced past the second round of the playoffs.  Some contended that the term \"rivalry\" was inaccurate until the Clippers became more successful.  For the first time in 20 years, the Clippers won the season series against the Lakers in 2012–13.  This was the first of five straight season series victories for the Clippers, which included season sweeps in both 2014-15 and 2015-16.  With the Clippers' 3-1 series win in 2016-17, the Lakers have now won the season series just four times in the past 13 seasons, with five Clippers wins, four Lakers wins, and four ties.  The Lakers hold a 99–47 advantage in the all-time series against the Clippers.  The two teams have never met in the playoffs.\n\nMemphis Grizzlies: The Memphis Grizzlies are an American professional basketball team based in Memphis, Tennessee.  The Grizzlies compete in the National Basketball Association (NBA) as a member team of the league's Western Conference Southwest Division.  The Grizzlies play their home games at FedExForum.  The team is owned by Robert Pera.  The Grizzlies are currently the only team in the major professional North American sports leagues based in the city of Memphis.\n\nLos Angeles Clippers: The Los Angeles Clippers, often abbreviated by the team as the LA Clippers, are an American professional basketball team based in Los Angeles, California.  The Clippers compete in the National Basketball Association (NBA) as a member of the league's Western Conference Pacific Division.  The Clippers play their home games at Staples Center in downtown Los Angeles, an arena shared with the Los Angeles Lakers of the NBA, the Los Angeles Sparks of the Women's National Basketball Association (WNBA), and the Los Angeles Kings of the National Hockey League (NHL).\n\nList of Los Angeles Clippers seasons: The Los Angeles Clippers are a professional basketball team based in Los Angeles, California.  They play in the National Basketball Association (NBA) and are a member of the NBA Western Conference's Pacific Division.  The Clippers were founded in 1970 as the Buffalo Braves.  They were one of three franchises that joined the NBA as an expansion team in the 1970–71 season.  The Braves moved to San Diego, California after the 1977–78 season, and became known as the San Diego Clippers.  For the 1984–85 NBA season, the Clippers moved north to Los Angeles and became known as the Los Angeles Clippers.\n\nSports in Los Angeles: The Los Angeles metropolitan area is home to several professional and collegiate sports teams.  The Greater Los Angeles Area has nine major league professional teams: the Anaheim Ducks, the Los Angeles Angels, the Los Angeles Chargers, the Los Angeles Clippers, the Los Angeles Dodgers, LA Galaxy, the Los Angeles Kings, the Los Angeles Lakers, and the Los Angeles Rams.  Los Angeles FC will begin play as the area's tenth major team in 2018.  USC Trojans football, UCLA Bruins men's basketball, USC Trojans baseball, USC Trojans track & field, and Cal State Fullerton Titans baseball are all historically premier organizations in college sports.  Other major sports teams include UCLA Bruins Football, Los Angeles Sparks, Pepperdine Waves baseball, and formerly the Los Angeles Raiders and Los Angeles Aztecs.  Between them, these Los Angeles area sports teams have won a combined 105 Championship Titles.  Los Angeles area colleges have produced upwards of 200 National Championship Teams, primarily from USC Trojans and UCLA Bruins of the Pac-12 Conference.  The 1932 and 1984 Summer Olympics were held in Los Angeles.  In 2028 the city will host the Olympics for a third time.\n\nList of Los Angeles Clippers head coaches: The Los Angeles Clippers are an American professional basketball team based in Los Angeles, California.  They play in the Pacific Division of the Western Conference in the National Basketball Association (NBA).  The Clippers joined the NBA in 1970 as an expansion team.  The team has had three names since its inception: the Buffalo Braves (1970–1978), the San Diego Clippers (1978–1984), and the Los Angeles Clippers (1984–present).  The Clippers are the oldest franchise in the NBA to have never reached the league finals.  The team has played its home games at the Staples Center since 1999.  The Clippers are owned by Steve Ballmer, and Dave Wohl is their general manager.\n\n2011 NBA All-Star Game: The 2011 NBA All-Star Game was an exhibition basketball game that was played on February 20, 2011 at Staples Center in Los Angeles, California, home of the Los Angeles Clippers and the Los Angeles Lakers.  This game was the 60th edition of the National Basketball Association (NBA) All-Star Game and was played during the 2010–11 NBA season.  The Los Angeles Clippers and Los Angeles Lakers served as the hosts.  The Clippers and Lakers were both awarded the All-Star Game in an announcement by commissioner David Stern on June 9, 2009.  This was the second time that the Staples Center had hosted the All-Star Game; the arena had previously hosted the event in 2004.  This will be the fifth time that Los Angeles had hosted the All-Star Game; before Staples Center opened in 1999, the city had previously hosted the event in 1963, 1972, and 1983.  Rihanna, Kanye West and Drake were the halftime performers, while Keri Hilson, Lenny Kravitz and Bruno Mars were the entertainment for pre-show festivities.\n\nLos Angeles Clippers Training Center: The Los Angeles Clippers Training Center is a 42500 sqfoot two-story training facility for the Los Angeles Clippers of the National Basketball Association (NBA).  Located in the planned community of Playa Vista in Los Angeles near Loyola Marymount University, the facility is at least 1 mi away from nearby beaches (Playa Del Rey, Marina Del Rey, and Venice), 3 mi north of Los Angeles International Airport, and 12 mi southwest of Staples Center.  While the team maintains some office functions at Staples Center, the Playa Vista facility serves as the official headquarters of the Clippers.\n\nQuestion: What year did the Los Angeles Clippers and Memphis Grizzlies face off, resulting in the Los Angeles Clippers to lose their first-round series in six games?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"season\": {\n      \"type\": \"string\",\n      \"description\": \"The NBA season during which the event occurred.\"\n    },\n    \"teams_involved\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"The names of the teams that faced off in the playoff series.\"\n    },\n    \"playoff_series_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"round\": {\n          \"type\": \"string\",\n          \"description\": \"The round of the playoffs.\"\n        },\n        \"opponent\": {\n          \"type\": \"string\",\n          \"description\": \"The opponent team in the series.\"\n        },\n        \"games_played\": {\n          \"type\": \"integer\",\n          \"description\": \"The total number of games played in the series.\"\n        },\n        \"clippers_series_result\": {\n          \"type\": \"string\",\n          \"description\": \"The outcome for the Los Angeles Clippers in the series (e.g., 'lost').\"\n        }\n      },\n      \"required\": [\n        \"round\",\n        \"opponent\",\n        \"games_played\",\n        \"clippers_series_result\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"season\",\n    \"teams_involved\",\n    \"playoff_series_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "season",
-    "teams_involved",
-    "playoff_series_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "season": {
+        "type": "string",
+        "description": "The NBA season during which the event occurred."
+      },
+      "teams_involved": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "The names of the teams that faced off in the playoff series."
+      },
+      "playoff_series_details": {
+        "type": "object",
+        "properties": {
+          "round": {
+            "type": "string",
+            "description": "The round of the playoffs."
+          },
+          "opponent": {
+            "type": "string",
+            "description": "The opponent team in the series."
+          },
+          "games_played": {
+            "type": "integer",
+            "description": "The total number of games played in the series."
+          },
+          "clippers_series_result": {
+            "type": "string",
+            "description": "The outcome for the Los Angeles Clippers in the series (e.g., 'lost')."
+          }
+        },
+        "required": [
+          "round",
+          "opponent",
+          "games_played",
+          "clippers_series_result"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "season",
+      "teams_involved",
+      "playoff_series_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

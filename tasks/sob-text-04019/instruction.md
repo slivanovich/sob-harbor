@@ -1,84 +1,61 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Musical Theatre Salisbury: Musical Theatre Salisbury is a community theatre group in Salisbury, England.  It was founded in 1908.  In 2011, the company changed its name from Salisbury Amateur Operatic Society to better to reflect their major activity, which is to produce two fully staged and costumed musical theatre shows per year in Salisbury.  Their repertoire varies from classic Broadway shows to contemporary musicals, as well as the Gilbert and Sullivan operas and occasional operettas.
-
-Mark Levenson: Mark Levenson, a member of the Dramatists Guild of America, is a musical director for The Second City Detroit (located in Novi, Michigan).  Levenson helped open Second City Detroit in 1993.  In addition to his work with The Second City Detroit, Levenson scored the hit Comedy Central series, Strangers with Candy.  He has also written music for shows on MTV, VH-1, NBC and scored productions at both Lincoln Center for the Performing Arts and John F. Kennedy Center for the Performing Arts.  Levenson composed music for David Sedaris's two Off Broadway shows and numerous recording projects.  He recently toured the country with Stephen Colbert, Amy Sedaris and Paul Dinello in their production of Wigfield, which concluded its run at the U.S. Comedy Arts Festival in Aspen, Colorado.
-
-Adelaide Bishop: Adelaide Bishop (23 June 1928 – 20 June 2008) was an American operatic soprano, musical theatre actress, opera director, stage director, and voice teacher.  She began her career appearing in Broadway musicals as a teenager during the early 1940s.  She became a principal soprano with the New York City Opera (NYCO) in 1948, where she performed through 1960 in a broad repertoire encompassing German, French, Italian, and English operas from a variety of musical periods.  In the late 1950s, she started working actively as a stage director and as a voice teacher, working with many opera companies throughout the United States and serving on the music faculties of several different American universities.  She also served as the artistic director of the Wolf Trap Opera for many years.
-
-Music Man Bongo: The Bongo is a model of bass guitar manufactured by Music Man, a division of Ernie Ball.  It was first introduced at the NAMM Show on March 21, 2003.  Ernie Ball president Sterling Ball designed the instrument in conjunction with the Music Man Research and Development department and BMW's Designworks team.  It boasts an 18-volt 4-band preamp (except on the single-pickup model, which has a 3-band preamp; single-pickup models with piezo bridges have a 4-band preamp) designed by Dudley Gimpel with help from Cliff Hugo and other Music Man artists.  It also sports a sleek, carved basswood body with high-gloss polyester finish and a satin-finish painted 34" scale maple neck with rosewood fingerboard (pau ferro on lined or unlined fretless, ebony on both fretted and fretless "stealth" basses) featuring 24 high-profile wide frets and crescent moon-shaped position inlays.  These basses are generally known for their dual humbucking pickup configuration, as they are the first twin humbucker-equipped models released by Music Man since the introduction of their Sabre and Cutlass bass guitars in the late 1970s.
-
-The Artists' Studio: The Artists' Studio (TAS) was founded by David and Joellyn Young in January 2003 as an independent for-profit community theatre.  The couple each have experience on Broadway with David being a musical director and voice teacher who has traveled with Broadway shows such as Camelot, South Pacific, and The Music Man while Joellyn has most notably been Eva Perón in Evita.  The theatre, located in Fishers, Indiana is primitively based as it was renovated from a night club and a stage was added.  Despite being in Fishers, Noblesville considers TAS to be one of its own places of interest.  The proscenium stage is made of classic design and allows for a variety of different trims to be placed around as well as the movement of the back wall, though there is no fly space.  The remaining space allows for a 220-seat house complete with sound and lighting systems, office space, and classrooms. Cast, crew, and various other members are volunteers with few employed within the productions themselves.
-
-Herbert Greene (Broadway conductor): Herbert Greene (June 16, 1921 – September 25, 1985) was a musician, conductor, arranger and voice teacher prominent on the Broadway stage in New York City.  He won two Tony Awards for the 1958 musical "The Music Man".
-
-Rodgers and Hammerstein: Rodgers and Hammerstein refers to composer Richard Rodgers (1902–1979) and lyricist-dramatist Oscar Hammerstein II (1895–1960), who together were an influential, innovative and successful American musical theatre writing team.  They created a string of popular Broadway musicals in the 1940s and 1950s, initiating what is considered the "golden age" of musical theatre.  Five of their Broadway shows, "Oklahoma! ", "Carousel", "South Pacific", "The King and I" and "The Sound of Music", were outstanding successes, as was the television broadcast of "Cinderella".  Of the other four that the team produced on Broadway during their lifetimes, "Flower Drum Song" was well-received, and none was an outright flop.  Most of their shows have received frequent revivals around the world, both professional and amateur.  Among the many accolades their shows (and film versions) garnered were thirty-four Tony Awards, fifteen Academy Awards, the Pulitzer Prize, and two Grammy Awards.
-
-The Music Man: The Music Man is a musical with book, music, and lyrics by Meredith Willson, based on a story by Willson and Franklin Lacey.  The plot concerns con man Harold Hill, who poses as a boys' band organizer and leader and sells band instruments and uniforms to naive Iowa townsfolk, promising to train the members of the new band.  Harold is no musician, however, and plans to skip town without giving any music lessons.  Prim librarian and piano teacher Marian sees through him, but when Harold helps her younger brother overcome his lisp and social awkwardness, Marian begins to fall in love.  Harold risks being caught to win her.
-
-Majestic Theatre (Broadway): The Majestic Theatre is a Broadway theatre located at 245 West 44th Street in midtown Manhattan.  It is one of the largest Broadway theatres with 1,645 seats, and traditionally has been used as a venue for major musical theatre productions.  Among the notable shows that have premiered at the Majestic are "Carousel" (1945), "South Pacific" (1949), "The Music Man" (1957), "Camelot" (1960), "A Little Night Music" (1973), and "The Wiz" (1975).  It was also the second home of "42nd Street" and the third home of "1776".  The theatre has housed "The Phantom of the Opera" since it opened on January 26, 1988.  With a record-breaking 12,139 performances to date, it is currently the longest-running production in Broadway history.
-
-Milton Rosenstock: Milton Rosenstock (June 9, 1917, New Haven, Connecticut - April 24, 1992, New York City) was an American conductor, composer, and arranger.  Trained at the Juilliard School, he was highly active as a musical director for Broadway musicals from 1942 through 1980; serving in that capacity for 29 productions, including the original productions of "Gentlemen Prefer Blondes" (1949), "Can-Can" (1953), "Bells Are Ringing" (1956), "Stop the World – I Want to Get Off" (1962), "Oliver! " (1963), "Funny Girl" (1964), and "A Funny Thing Happened on the Way to the Forum" (1972).  He also composed the music for the 1973 revue "Nash at Nine" and worked as musical supervisor for the 1989 production of "Meet Me in St. Louis"; the latter of which was his last project on Broadway.  In 1948 he won the Tony Award for Best Conductor and Musical Director for "Finian's Rainbow".  He was nominated twice more for that award: for "The Vamp" (1956) and the original Broadway production of "" (1960).  He served as the music director of the Lyric Chamber Theater during the 1960s and was the music director of the American Ballet Theatre during the late 1960s.  From 1981 until his death eleven years later of heart disease he was principal conductor of the Dance Theater of Harlem.
-
-Question: The Artists' Studio (TAS) was founded by David and Joellyn Young in January 2003 as an independent for-profit community theatre, The couple each have experience on Broadway with David being a musical director and voice teacher who has traveled with Broadway shows such as The Music Man is a musical with book, music, and lyrics by who?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "musical_title": {
-      "type": "string",
-      "description": "The title of the musical."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "primary_creator": {
-      "type": "object",
-      "properties": {
-        "name": {
-          "type": "string",
-          "description": "The name of the primary creator for book, music, and lyrics."
-        },
-        "roles": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "The specific roles performed by the primary creator (e.g., book, music, lyrics)."
-        }
-      },
-      "required": [
-        "name",
-        "roles"
-      ],
-      "additionalProperties": false
-    },
-    "story_contributors": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Names of individuals who contributed to the story the musical is based on."
-    },
-    "is_based_on_story": {
-      "type": "boolean",
-      "description": "Indicates if the musical is based on a story by specific individuals."
+    {
+      "role": "user",
+      "content": "Context:\nMusical Theatre Salisbury: Musical Theatre Salisbury is a community theatre group in Salisbury, England.  It was founded in 1908.  In 2011, the company changed its name from Salisbury Amateur Operatic Society to better to reflect their major activity, which is to produce two fully staged and costumed musical theatre shows per year in Salisbury.  Their repertoire varies from classic Broadway shows to contemporary musicals, as well as the Gilbert and Sullivan operas and occasional operettas.\n\nMark Levenson: Mark Levenson, a member of the Dramatists Guild of America, is a musical director for The Second City Detroit (located in Novi, Michigan).  Levenson helped open Second City Detroit in 1993.  In addition to his work with The Second City Detroit, Levenson scored the hit Comedy Central series, Strangers with Candy.  He has also written music for shows on MTV, VH-1, NBC and scored productions at both Lincoln Center for the Performing Arts and John F. Kennedy Center for the Performing Arts.  Levenson composed music for David Sedaris's two Off Broadway shows and numerous recording projects.  He recently toured the country with Stephen Colbert, Amy Sedaris and Paul Dinello in their production of Wigfield, which concluded its run at the U.S. Comedy Arts Festival in Aspen, Colorado.\n\nAdelaide Bishop: Adelaide Bishop (23 June 1928 – 20 June 2008) was an American operatic soprano, musical theatre actress, opera director, stage director, and voice teacher.  She began her career appearing in Broadway musicals as a teenager during the early 1940s.  She became a principal soprano with the New York City Opera (NYCO) in 1948, where she performed through 1960 in a broad repertoire encompassing German, French, Italian, and English operas from a variety of musical periods.  In the late 1950s, she started working actively as a stage director and as a voice teacher, working with many opera companies throughout the United States and serving on the music faculties of several different American universities.  She also served as the artistic director of the Wolf Trap Opera for many years.\n\nMusic Man Bongo: The Bongo is a model of bass guitar manufactured by Music Man, a division of Ernie Ball.  It was first introduced at the NAMM Show on March 21, 2003.  Ernie Ball president Sterling Ball designed the instrument in conjunction with the Music Man Research and Development department and BMW's Designworks team.  It boasts an 18-volt 4-band preamp (except on the single-pickup model, which has a 3-band preamp; single-pickup models with piezo bridges have a 4-band preamp) designed by Dudley Gimpel with help from Cliff Hugo and other Music Man artists.  It also sports a sleek, carved basswood body with high-gloss polyester finish and a satin-finish painted 34\" scale maple neck with rosewood fingerboard (pau ferro on lined or unlined fretless, ebony on both fretted and fretless \"stealth\" basses) featuring 24 high-profile wide frets and crescent moon-shaped position inlays.  These basses are generally known for their dual humbucking pickup configuration, as they are the first twin humbucker-equipped models released by Music Man since the introduction of their Sabre and Cutlass bass guitars in the late 1970s.\n\nThe Artists' Studio: The Artists' Studio (TAS) was founded by David and Joellyn Young in January 2003 as an independent for-profit community theatre.  The couple each have experience on Broadway with David being a musical director and voice teacher who has traveled with Broadway shows such as Camelot, South Pacific, and The Music Man while Joellyn has most notably been Eva Perón in Evita.  The theatre, located in Fishers, Indiana is primitively based as it was renovated from a night club and a stage was added.  Despite being in Fishers, Noblesville considers TAS to be one of its own places of interest.  The proscenium stage is made of classic design and allows for a variety of different trims to be placed around as well as the movement of the back wall, though there is no fly space.  The remaining space allows for a 220-seat house complete with sound and lighting systems, office space, and classrooms. Cast, crew, and various other members are volunteers with few employed within the productions themselves.\n\nHerbert Greene (Broadway conductor): Herbert Greene (June 16, 1921 – September 25, 1985) was a musician, conductor, arranger and voice teacher prominent on the Broadway stage in New York City.  He won two Tony Awards for the 1958 musical \"The Music Man\".\n\nRodgers and Hammerstein: Rodgers and Hammerstein refers to composer Richard Rodgers (1902–1979) and lyricist-dramatist Oscar Hammerstein II (1895–1960), who together were an influential, innovative and successful American musical theatre writing team.  They created a string of popular Broadway musicals in the 1940s and 1950s, initiating what is considered the \"golden age\" of musical theatre.  Five of their Broadway shows, \"Oklahoma! \", \"Carousel\", \"South Pacific\", \"The King and I\" and \"The Sound of Music\", were outstanding successes, as was the television broadcast of \"Cinderella\".  Of the other four that the team produced on Broadway during their lifetimes, \"Flower Drum Song\" was well-received, and none was an outright flop.  Most of their shows have received frequent revivals around the world, both professional and amateur.  Among the many accolades their shows (and film versions) garnered were thirty-four Tony Awards, fifteen Academy Awards, the Pulitzer Prize, and two Grammy Awards.\n\nThe Music Man: The Music Man is a musical with book, music, and lyrics by Meredith Willson, based on a story by Willson and Franklin Lacey.  The plot concerns con man Harold Hill, who poses as a boys' band organizer and leader and sells band instruments and uniforms to naive Iowa townsfolk, promising to train the members of the new band.  Harold is no musician, however, and plans to skip town without giving any music lessons.  Prim librarian and piano teacher Marian sees through him, but when Harold helps her younger brother overcome his lisp and social awkwardness, Marian begins to fall in love.  Harold risks being caught to win her.\n\nMajestic Theatre (Broadway): The Majestic Theatre is a Broadway theatre located at 245 West 44th Street in midtown Manhattan.  It is one of the largest Broadway theatres with 1,645 seats, and traditionally has been used as a venue for major musical theatre productions.  Among the notable shows that have premiered at the Majestic are \"Carousel\" (1945), \"South Pacific\" (1949), \"The Music Man\" (1957), \"Camelot\" (1960), \"A Little Night Music\" (1973), and \"The Wiz\" (1975).  It was also the second home of \"42nd Street\" and the third home of \"1776\".  The theatre has housed \"The Phantom of the Opera\" since it opened on January 26, 1988.  With a record-breaking 12,139 performances to date, it is currently the longest-running production in Broadway history.\n\nMilton Rosenstock: Milton Rosenstock (June 9, 1917, New Haven, Connecticut - April 24, 1992, New York City) was an American conductor, composer, and arranger.  Trained at the Juilliard School, he was highly active as a musical director for Broadway musicals from 1942 through 1980; serving in that capacity for 29 productions, including the original productions of \"Gentlemen Prefer Blondes\" (1949), \"Can-Can\" (1953), \"Bells Are Ringing\" (1956), \"Stop the World – I Want to Get Off\" (1962), \"Oliver! \" (1963), \"Funny Girl\" (1964), and \"A Funny Thing Happened on the Way to the Forum\" (1972).  He also composed the music for the 1973 revue \"Nash at Nine\" and worked as musical supervisor for the 1989 production of \"Meet Me in St. Louis\"; the latter of which was his last project on Broadway.  In 1948 he won the Tony Award for Best Conductor and Musical Director for \"Finian's Rainbow\".  He was nominated twice more for that award: for \"The Vamp\" (1956) and the original Broadway production of \"\" (1960).  He served as the music director of the Lyric Chamber Theater during the 1960s and was the music director of the American Ballet Theatre during the late 1960s.  From 1981 until his death eleven years later of heart disease he was principal conductor of the Dance Theater of Harlem.\n\nQuestion: The Artists' Studio (TAS) was founded by David and Joellyn Young in January 2003 as an independent for-profit community theatre, The couple each have experience on Broadway with David being a musical director and voice teacher who has traveled with Broadway shows such as The Music Man is a musical with book, music, and lyrics by who?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"musical_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the musical.\"\n    },\n    \"primary_creator\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the primary creator for book, music, and lyrics.\"\n        },\n        \"roles\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"The specific roles performed by the primary creator (e.g., book, music, lyrics).\"\n        }\n      },\n      \"required\": [\n        \"name\",\n        \"roles\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"story_contributors\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"Names of individuals who contributed to the story the musical is based on.\"\n    },\n    \"is_based_on_story\": {\n      \"type\": \"boolean\",\n      \"description\": \"Indicates if the musical is based on a story by specific individuals.\"\n    }\n  },\n  \"required\": [\n    \"musical_title\",\n    \"primary_creator\",\n    \"story_contributors\",\n    \"is_based_on_story\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "musical_title",
-    "primary_creator",
-    "story_contributors",
-    "is_based_on_story"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "musical_title": {
+        "type": "string",
+        "description": "The title of the musical."
+      },
+      "primary_creator": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the primary creator for book, music, and lyrics."
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "The specific roles performed by the primary creator (e.g., book, music, lyrics)."
+          }
+        },
+        "required": [
+          "name",
+          "roles"
+        ],
+        "additionalProperties": false
+      },
+      "story_contributors": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Names of individuals who contributed to the story the musical is based on."
+      },
+      "is_based_on_story": {
+        "type": "boolean",
+        "description": "Indicates if the musical is based on a story by specific individuals."
+      }
+    },
+    "required": [
+      "musical_title",
+      "primary_creator",
+      "story_contributors",
+      "is_based_on_story"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

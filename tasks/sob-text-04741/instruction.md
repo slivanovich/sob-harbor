@@ -1,59 +1,36 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-OpenCable Application Platform: The OpenCable Application Platform, or OCAP, is an operating system layer designed for consumer electronics that connect to a cable television system, the Java-based middleware portion of the platform.  Unlike operating systems on a personal computer, the cable company controls what OCAP programs run on the consumer's machine.  Designed by CableLabs for the cable networks of North America, OCAP programs are intended for interactive services such as eCommerce, online banking, Electronic program guides, and digital video recording.  Cable companies have required OCAP as part of the Cablecard 2.0 specification, a proposal that is controversial and has not been approved by the Federal Communications Commission.  Cable companies have stated that two-way communications by third party devices on their networks will require them to support OCAP.  The Consumer Electronics Association and other groups argue OCAP is intended to block features that compete with cable company provided services and that consumers should be entitled to add, delete and otherwise control programs as on their personal computers.
-
-Video Concert Hall: Video Concert Hall (VCH) was an American television network launched on November 1, 1979, on the USA Network and on Showtime, featuring an unhosted rotation of music videos.  Often credited as being the precursor to MTV, "Video Concert Hall" was reportedly the most popular programming on QUBE, a cable television unit of Warner Communications.  VCH, as it was often called, was created by radio and cable television executive Lloyd G. Crowe (Jerry Crowe) and Charles W. Henderson, a journalist who would later work for TriStar Pictures.  "Video Concert Hall" was produced by Henderson-Crowe Productions and the company Video Concert Hall, Ltd. at studios in Atlanta, Georgia.  Crowe and Henderson served as executive producers of "Video Concert Hall", as well as other top-rated syndicated musical variety TV specials.
-
-QUBE: QUBE was an experimental two-way, multi-programmed cable television system that played a significant role in the history of American interactive television.  It was launched in Columbus, Ohio, on December 1, 1977.  Highly publicized as a revolutionary advancement, the QUBE experiment introduced viewers to several concepts that became central to the future development of TV technology: pay-per-view programs, special-interest cable television networks, and interactive services.
-
-EPB6: EPB6 is a public access cable channel serving the Glasgow area of Barren County, Kentucky via the cable television service of the Glasgow Electric Plant Board, a provider of cable television, internet service, and electrical power.  It is shown on channel 6 of the basic cable tuner of the Glasgow EPB Cable television system.
-
-Cable telephony: Cable telephony is a form of digital telephony over cable TV networks.  A telephone interface installed at the customer's premises converts analog signals from the customer's in-home wiring to a digital signal, which is then sent over the cable connection to the company's switching center.  The signal is then sent on to the public switched telephone network (PSTN).  Cable telephone provides another revenue stream for cable television system operators and gives the consumer the convenience of a single bill for combined television, internet and telephone services.
-
-Cable television headend: A cable television headend is a master facility for receiving television signals for processing and distribution over a cable television system.  The headend facility is normally unstaffed and surrounded by some type of security fencing and is typically a building or large shed housing electronic equipment used to receive and re-transmit video over the local cable infrastructure.  One can also find head ends in power line communication (PLC) substations and Internet communications networks.
-
-PrimeStar: PrimeStar was a U.S. direct broadcast satellite broadcasting company formed in 1991 by a consortium of cable television system operators (TCI Satellite Entertainment Group, Time Warner Cable, Cox Communications, Comcast and MediaOne) and GE Americom, the satellite arm of General Electric, collectively referred to as the "PrimeStar Partners".  PrimeStar was the first medium-powered DBS system in the United States but slowly declined in popularity with the arrival of DirecTV in 1994 and Dish Network in 1996.
-
-PlayCable: PlayCable was an online service introduced in 1981 that allowed local cable television system operators to send games for the Intellivision over cable wires alongside normal television signals.  Through the service, subscribers would use a device, called the PlayCable adapter, to download the games for play on their Intellivision.  It was the first service that allowed users to download games for play on a video game console.  PlayCable was not widely adopted, due in part to high costs for users and operators, as well as limitations of the PlayCable adapter.  The service was discontinued in 1983.
-
-Cable television franchise fee: In the United States cable television industry, a cable television franchise fee is an annual fee charged by a local government to a private cable television company as compensation for using public property it owns as right-of-way for its cable.  In the US, cable television services are provided by private for-profit companies, cable television providers, which sign a franchise agreement with cities and counties to provide cable television to its residents.  The franchise fee is set during initial negotiation of the franchise agreement, usually by a process in which the government requests bids from cable providers to serve their community.  It can be renegotiated when the franchise agreement comes up for renewal, usually at intervals of 10 to 12 years.  Although it is paid to a government, it is not a tax.
-
-Parasat Cable TV: Parasat Cable Television (stylized uppercase as PARASAT and end with satellite dish icon) is a cable television operator billed as Mindanao's only digital television system provider as well as based in Cagayan de Oro City.  Parasat Cable TV started as electronic retail store and repair shop established by Elpidio Paras.  It was known as Paras Industrial Systems.
-
-Question: When was the cable television system that ran VCH founded?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "system_name": {
-      "type": "string",
-      "description": "The name of the cable television system."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "launch_date": {
-      "type": "string",
-      "format": "date",
-      "description": "The date the cable television system was launched."
-    },
-    "location": {
-      "type": "string",
-      "description": "The primary location where the system was launched."
+    {
+      "role": "user",
+      "content": "Context:\nOpenCable Application Platform: The OpenCable Application Platform, or OCAP, is an operating system layer designed for consumer electronics that connect to a cable television system, the Java-based middleware portion of the platform.  Unlike operating systems on a personal computer, the cable company controls what OCAP programs run on the consumer's machine.  Designed by CableLabs for the cable networks of North America, OCAP programs are intended for interactive services such as eCommerce, online banking, Electronic program guides, and digital video recording.  Cable companies have required OCAP as part of the Cablecard 2.0 specification, a proposal that is controversial and has not been approved by the Federal Communications Commission.  Cable companies have stated that two-way communications by third party devices on their networks will require them to support OCAP.  The Consumer Electronics Association and other groups argue OCAP is intended to block features that compete with cable company provided services and that consumers should be entitled to add, delete and otherwise control programs as on their personal computers.\n\nVideo Concert Hall: Video Concert Hall (VCH) was an American television network launched on November 1, 1979, on the USA Network and on Showtime, featuring an unhosted rotation of music videos.  Often credited as being the precursor to MTV, \"Video Concert Hall\" was reportedly the most popular programming on QUBE, a cable television unit of Warner Communications.  VCH, as it was often called, was created by radio and cable television executive Lloyd G. Crowe (Jerry Crowe) and Charles W. Henderson, a journalist who would later work for TriStar Pictures.  \"Video Concert Hall\" was produced by Henderson-Crowe Productions and the company Video Concert Hall, Ltd. at studios in Atlanta, Georgia.  Crowe and Henderson served as executive producers of \"Video Concert Hall\", as well as other top-rated syndicated musical variety TV specials.\n\nQUBE: QUBE was an experimental two-way, multi-programmed cable television system that played a significant role in the history of American interactive television.  It was launched in Columbus, Ohio, on December 1, 1977.  Highly publicized as a revolutionary advancement, the QUBE experiment introduced viewers to several concepts that became central to the future development of TV technology: pay-per-view programs, special-interest cable television networks, and interactive services.\n\nEPB6: EPB6 is a public access cable channel serving the Glasgow area of Barren County, Kentucky via the cable television service of the Glasgow Electric Plant Board, a provider of cable television, internet service, and electrical power.  It is shown on channel 6 of the basic cable tuner of the Glasgow EPB Cable television system.\n\nCable telephony: Cable telephony is a form of digital telephony over cable TV networks.  A telephone interface installed at the customer's premises converts analog signals from the customer's in-home wiring to a digital signal, which is then sent over the cable connection to the company's switching center.  The signal is then sent on to the public switched telephone network (PSTN).  Cable telephone provides another revenue stream for cable television system operators and gives the consumer the convenience of a single bill for combined television, internet and telephone services.\n\nCable television headend: A cable television headend is a master facility for receiving television signals for processing and distribution over a cable television system.  The headend facility is normally unstaffed and surrounded by some type of security fencing and is typically a building or large shed housing electronic equipment used to receive and re-transmit video over the local cable infrastructure.  One can also find head ends in power line communication (PLC) substations and Internet communications networks.\n\nPrimeStar: PrimeStar was a U.S. direct broadcast satellite broadcasting company formed in 1991 by a consortium of cable television system operators (TCI Satellite Entertainment Group, Time Warner Cable, Cox Communications, Comcast and MediaOne) and GE Americom, the satellite arm of General Electric, collectively referred to as the \"PrimeStar Partners\".  PrimeStar was the first medium-powered DBS system in the United States but slowly declined in popularity with the arrival of DirecTV in 1994 and Dish Network in 1996.\n\nPlayCable: PlayCable was an online service introduced in 1981 that allowed local cable television system operators to send games for the Intellivision over cable wires alongside normal television signals.  Through the service, subscribers would use a device, called the PlayCable adapter, to download the games for play on their Intellivision.  It was the first service that allowed users to download games for play on a video game console.  PlayCable was not widely adopted, due in part to high costs for users and operators, as well as limitations of the PlayCable adapter.  The service was discontinued in 1983.\n\nCable television franchise fee: In the United States cable television industry, a cable television franchise fee is an annual fee charged by a local government to a private cable television company as compensation for using public property it owns as right-of-way for its cable.  In the US, cable television services are provided by private for-profit companies, cable television providers, which sign a franchise agreement with cities and counties to provide cable television to its residents.  The franchise fee is set during initial negotiation of the franchise agreement, usually by a process in which the government requests bids from cable providers to serve their community.  It can be renegotiated when the franchise agreement comes up for renewal, usually at intervals of 10 to 12 years.  Although it is paid to a government, it is not a tax.\n\nParasat Cable TV: Parasat Cable Television (stylized uppercase as PARASAT and end with satellite dish icon) is a cable television operator billed as Mindanao's only digital television system provider as well as based in Cagayan de Oro City.  Parasat Cable TV started as electronic retail store and repair shop established by Elpidio Paras.  It was known as Paras Industrial Systems.\n\nQuestion: When was the cable television system that ran VCH founded?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"system_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the cable television system.\"\n    },\n    \"launch_date\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"The date the cable television system was launched.\"\n    },\n    \"location\": {\n      \"type\": \"string\",\n      \"description\": \"The primary location where the system was launched.\"\n    }\n  },\n  \"required\": [\n    \"system_name\",\n    \"launch_date\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "system_name",
-    "launch_date"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "system_name": {
+        "type": "string",
+        "description": "The name of the cable television system."
+      },
+      "launch_date": {
+        "type": "string",
+        "format": "date",
+        "description": "The date the cable television system was launched."
+      },
+      "location": {
+        "type": "string",
+        "description": "The primary location where the system was launched."
+      }
+    },
+    "required": [
+      "system_name",
+      "launch_date"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

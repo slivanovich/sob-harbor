@@ -1,70 +1,47 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Humanz: Humanz is the fifth studio album by British virtual band Gorillaz.  The album was released on 28 April 2017 via Parlophone and Warner Bros.  Records.  The album was announced on the band's official Instagram page on 23 March 2017.  According to a press release, the album was recorded in London, Paris, New York City, Chicago, and Jamaica and produced by Gorillaz, The Twilite Tone and Remi Kabaka, Jr.  It is the band's first studio album since 2010's "The Fall", and features collaborations from several artists including Grace Jones, Kali Uchis, Vince Staples, Popcaan, D.R.A.M., Anthony Hamilton, De La Soul, Danny Brown, Kelela, Mavis Staples, Pusha T, and Benjamin Clementine.
-
-Atrocity Exhibition (album): Atrocity Exhibition is the fourth studio album by American rapper Danny Brown.  It was released on September 27, 2016, by Warp Records.  It is primarily produced by British producer Paul White.  The album features guest appearances from Kendrick Lamar, Ab-Soul, Earl Sweatshirt, B-Real, Kelela and Petite Noir.
-
-Gazing at the Moonlight: Gazing at the Moonlight is the debut studio album by American hip hop recording artist Hopsin.  It was released on October 27, 2009, by Ruthless Records the labels most recent release as of 2017.  The title refers to "Gazing at the Moonlight" hoping and wishing on a dream to come true.  This was Hopsin's only record released with Ruthless Records, to this day as his latest studio album released by the label, this album created bitter tension between Ruthless Records and Hopsin, due to the lack of promotion and financial compensation for the album.
-
-Unconscious State: Unconscious State is the debut studio album by American rapper Jon Connor.  The album was released on July 2, 2013 by Connor's All Varsity Music.  In early 2013, Jon Connor revealed that he was working on various projects including, his debut studio album "Unconscious State" along with his second studio album.  The album featured guest appearances by Danny Brown, Chris Webby, Freddie Gibbs, Royce da 5'9", Talib Kweli, Willie the Kid and Smoke DZA among others.  Production was handled by Connor himself, Mr. Porter, Brix and Optiks among others.  Upon its release the album peaked at number 35 on the US "Billboard" Top R&B/Hip-Hop Albums and number seven on the "Billboard" Heatseekers Albums charts.
-
-666 (Billy Talent album): 666 Live is Billy Talent's 2007 live CD/DVD album.  It has three of the band's European performances from their past tour, which took them around the globe multiple times over eighteen months in support of their latest studio album "Billy Talent II".  The basic version includes footage of six songs each from the shows at London's Brixton Academy, Düsseldorf's Philips Halle and Germany's Rock Am Ring Festival (at the Nürburgring).  A second disc has the audio portion of the entire Düsseldorf concert.  The deluxe edition is a 2-DVD/CD that expands the shows on two DVDs.  The album is produced by Pierre and Francois Lamoureux, who have worked with The Tragically Hip and The Who.
-
-Company of Strangers (Bad Company album): Company of Strangers is the eleventh studio album by the English hard rock band Bad Company, and their first with Robert Hart (in place of Brian Howe who had replaced Paul Rodgers in 1986 as lead vocalist).  The album was released in June 1995.  To date, it is the band's latest studio album of all-new material.
-
-Danny Brown: Daniel Dewan Sewell (born March 16, 1981), better known by his stage name Danny Brown, is an American rapper from Detroit, Michigan.  He is best known for his individuality, being described by MTV as "one of rap's most unique figures in recent memory".  In 2010, after amassing several mixtapes, Brown released his debut studio album, "The Hybrid".  Brown began to gain major recognition after the release of his second studio album, "XXX", which received critical acclaim and earned him such accolades as "Spin", as well as "Metro Times" "Artist of the Year".  In 2013, he entered a US "Billboard" chart, with the release of his third studio album, "Old", which reached number 18 on the US "Billboard" 200 chart and spawned three singles, "Dip", "25 Bucks" and "Smokin & Drinkin".  His latest studio album, "Atrocity Exhibition", was released on September 27, 2016.
-
-XXX (Danny Brown album): XXX (pronounced "triple x" or "30") is the second studio album by American rapper Danny Brown.  It was released on August 15, 2011, by Fool's Gold Records.  The album's production was handled by Frank Dukes, Brandun DeShay, Skywlkr, Nick Speed, Quelle, Paul White, Squadda Bambino and House Shoes.  The album's only guest appearances come from Brown's Bruiser Brigade cohorts Chips and Dopehead.
-
-J-Tull Dot Com: J-Tull Dot Com (1999) is the 20th studio album by the British band Jethro Tull, and their latest studio album consisting of all-original material.
-
-Old (Danny Brown album): Old is the third studio album by American rapper Danny Brown.  It was released on October 8, 2013, by Fool's Gold Records and Alternative Distribution Alliance.  The album is Brown's first project to be officially sold through music outlets and digital retailers, whereas his previous projects were self-released for free and made available online.
-
-Question: Who primarily produced Danny Brown's latest studio album?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "rapper_name": {
-      "type": "string",
-      "description": "The name of the rapper."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "album_title": {
-      "type": "string",
-      "description": "The title of the rapper's latest studio album."
-    },
-    "album_release_date": {
-      "type": "string",
-      "format": "date",
-      "description": "The release date of the album."
-    },
-    "primary_producer": {
-      "type": "string",
-      "description": "The name of the primary producer for the album."
-    },
-    "producer_nationality": {
-      "type": "string",
-      "description": "The nationality of the primary producer."
+    {
+      "role": "user",
+      "content": "Context:\nHumanz: Humanz is the fifth studio album by British virtual band Gorillaz.  The album was released on 28 April 2017 via Parlophone and Warner Bros.  Records.  The album was announced on the band's official Instagram page on 23 March 2017.  According to a press release, the album was recorded in London, Paris, New York City, Chicago, and Jamaica and produced by Gorillaz, The Twilite Tone and Remi Kabaka, Jr.  It is the band's first studio album since 2010's \"The Fall\", and features collaborations from several artists including Grace Jones, Kali Uchis, Vince Staples, Popcaan, D.R.A.M., Anthony Hamilton, De La Soul, Danny Brown, Kelela, Mavis Staples, Pusha T, and Benjamin Clementine.\n\nAtrocity Exhibition (album): Atrocity Exhibition is the fourth studio album by American rapper Danny Brown.  It was released on September 27, 2016, by Warp Records.  It is primarily produced by British producer Paul White.  The album features guest appearances from Kendrick Lamar, Ab-Soul, Earl Sweatshirt, B-Real, Kelela and Petite Noir.\n\nGazing at the Moonlight: Gazing at the Moonlight is the debut studio album by American hip hop recording artist Hopsin.  It was released on October 27, 2009, by Ruthless Records the labels most recent release as of 2017.  The title refers to \"Gazing at the Moonlight\" hoping and wishing on a dream to come true.  This was Hopsin's only record released with Ruthless Records, to this day as his latest studio album released by the label, this album created bitter tension between Ruthless Records and Hopsin, due to the lack of promotion and financial compensation for the album.\n\nUnconscious State: Unconscious State is the debut studio album by American rapper Jon Connor.  The album was released on July 2, 2013 by Connor's All Varsity Music.  In early 2013, Jon Connor revealed that he was working on various projects including, his debut studio album \"Unconscious State\" along with his second studio album.  The album featured guest appearances by Danny Brown, Chris Webby, Freddie Gibbs, Royce da 5'9\", Talib Kweli, Willie the Kid and Smoke DZA among others.  Production was handled by Connor himself, Mr. Porter, Brix and Optiks among others.  Upon its release the album peaked at number 35 on the US \"Billboard\" Top R&B/Hip-Hop Albums and number seven on the \"Billboard\" Heatseekers Albums charts.\n\n666 (Billy Talent album): 666 Live is Billy Talent's 2007 live CD/DVD album.  It has three of the band's European performances from their past tour, which took them around the globe multiple times over eighteen months in support of their latest studio album \"Billy Talent II\".  The basic version includes footage of six songs each from the shows at London's Brixton Academy, Düsseldorf's Philips Halle and Germany's Rock Am Ring Festival (at the Nürburgring).  A second disc has the audio portion of the entire Düsseldorf concert.  The deluxe edition is a 2-DVD/CD that expands the shows on two DVDs.  The album is produced by Pierre and Francois Lamoureux, who have worked with The Tragically Hip and The Who.\n\nCompany of Strangers (Bad Company album): Company of Strangers is the eleventh studio album by the English hard rock band Bad Company, and their first with Robert Hart (in place of Brian Howe who had replaced Paul Rodgers in 1986 as lead vocalist).  The album was released in June 1995.  To date, it is the band's latest studio album of all-new material.\n\nDanny Brown: Daniel Dewan Sewell (born March 16, 1981), better known by his stage name Danny Brown, is an American rapper from Detroit, Michigan.  He is best known for his individuality, being described by MTV as \"one of rap's most unique figures in recent memory\".  In 2010, after amassing several mixtapes, Brown released his debut studio album, \"The Hybrid\".  Brown began to gain major recognition after the release of his second studio album, \"XXX\", which received critical acclaim and earned him such accolades as \"Spin\", as well as \"Metro Times\" \"Artist of the Year\".  In 2013, he entered a US \"Billboard\" chart, with the release of his third studio album, \"Old\", which reached number 18 on the US \"Billboard\" 200 chart and spawned three singles, \"Dip\", \"25 Bucks\" and \"Smokin & Drinkin\".  His latest studio album, \"Atrocity Exhibition\", was released on September 27, 2016.\n\nXXX (Danny Brown album): XXX (pronounced \"triple x\" or \"30\") is the second studio album by American rapper Danny Brown.  It was released on August 15, 2011, by Fool's Gold Records.  The album's production was handled by Frank Dukes, Brandun DeShay, Skywlkr, Nick Speed, Quelle, Paul White, Squadda Bambino and House Shoes.  The album's only guest appearances come from Brown's Bruiser Brigade cohorts Chips and Dopehead.\n\nJ-Tull Dot Com: J-Tull Dot Com (1999) is the 20th studio album by the British band Jethro Tull, and their latest studio album consisting of all-original material.\n\nOld (Danny Brown album): Old is the third studio album by American rapper Danny Brown.  It was released on October 8, 2013, by Fool's Gold Records and Alternative Distribution Alliance.  The album is Brown's first project to be officially sold through music outlets and digital retailers, whereas his previous projects were self-released for free and made available online.\n\nQuestion: Who primarily produced Danny Brown's latest studio album?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"rapper_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the rapper.\"\n    },\n    \"album_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the rapper's latest studio album.\"\n    },\n    \"album_release_date\": {\n      \"type\": \"string\",\n      \"format\": \"date\",\n      \"description\": \"The release date of the album.\"\n    },\n    \"primary_producer\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the primary producer for the album.\"\n    },\n    \"producer_nationality\": {\n      \"type\": \"string\",\n      \"description\": \"The nationality of the primary producer.\"\n    }\n  },\n  \"required\": [\n    \"rapper_name\",\n    \"album_title\",\n    \"album_release_date\",\n    \"primary_producer\",\n    \"producer_nationality\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "rapper_name",
-    "album_title",
-    "album_release_date",
-    "primary_producer",
-    "producer_nationality"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "rapper_name": {
+        "type": "string",
+        "description": "The name of the rapper."
+      },
+      "album_title": {
+        "type": "string",
+        "description": "The title of the rapper's latest studio album."
+      },
+      "album_release_date": {
+        "type": "string",
+        "format": "date",
+        "description": "The release date of the album."
+      },
+      "primary_producer": {
+        "type": "string",
+        "description": "The name of the primary producer for the album."
+      },
+      "producer_nationality": {
+        "type": "string",
+        "description": "The nationality of the primary producer."
+      }
+    },
+    "required": [
+      "rapper_name",
+      "album_title",
+      "album_release_date",
+      "primary_producer",
+      "producer_nationality"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,93 +1,70 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Oblivion (roller coaster): Oblivion is a steel roller coaster located at Alton Towers in England.  The ride opened as the world's first dive coaster on 14 March 1998, amidst a large publicity campaign.  It was the second in a long line of 'Secret Weapon (SW4)' rollercoasters to have opened at Alton Towers.  The ride has a height restriction of 55 in .  With a maximum speed of 68 mph, it is the third fastest roller coaster in the UK, behind Stealth at Thorpe Park and the Big One at Blackpool Pleasure Beach.
-
-Goliath (La Ronde): Goliath is a steel coaster roller coaster at the La Ronde located in Montreal, Quebec, Canada.  Designed by Bolliger & Mabillard, it reaches a maximum height of 174.8 ft , a speed of 68.4 mph , and a track length of 4038.8 ft .  Construction commenced in September 2005, and the roller coaster opened to the public on May 13, 2006.  Goliath was the tallest and fastest roller coaster in Canada until it was surpassed by Behemoth (another Bolliger & Mabillard roller coaster), at Canada's Wonderland's in 2008.  Six Flags announced that Goliath would be hooked up with Virtual Reality for a New Revolution experience for the 2016 season, which was previously made as a world premiere in 2013 by a Montreal VR company.
-
-Corkscrew (Valleyfair): Corkscrew is the name of a roller coaster at Valleyfair in Shakopee, Minnesota featuring one vertical loop and two corkscrews.  Built in 1980, Corkscrew was planned to reflect the design of its sister roller coaster Corkscrew at Cedar Point.  It is notably one of the first roller coasters to feature a double corkscrew, as well as a vertical loop.  The main differences that the Valleyfair model has is the addition of a finale helix and the omission of the camelback before the loop.  Until the hypercoaster Wild Thing (the fifth highest and fastest roller coaster in the world at the time it opened in 1996), Corkscrew was the only outdoor all-steel roller coaster in Minnesota.  Corkscrew is currently the only roller coaster at Valleyfair with inversions.  The coaster's track was painted blue when it open in 1980 but was repainted orange and yellow in 2011.
-
-Fujiyama (roller coaster): Fujiyama is a steel roller coaster at Fuji-Q Highland, Fujiyoshida, Yamanashi, Japan.  When Fujiyama opened in 1996 it was the world's tallest roller coaster at 259 ft , and had the largest drop in the world at 230 ft .  Fujiyama was also the world's fastest roller coaster for a year of its operation, succeeded by Tower of Terror at Dreamworld theme park in Queensland, Australia in 1997.  Despite being the world's fastest roller coaster in operation for a year, Fujiyama set no world records for roller coaster speed.  Steel Phantom at Kennywood set the world record for speed before engineers added additional brakes to slow the ride down because of safety and rider comfort concerns.
-
-Diving Machine G5: Diving Machine G5 is a roller coaster at Janfusun Fancyworld in Taiwan.  It was built in 2000 by Swiss manufacturers Bolliger & Mabillard and was the second dive coaster model to be built, the first being Oblivion at Alton Towers in the United Kingdom.  It is located in the Sky Plaza section of the park.  It is a nearly mirror image of Oblivion.
-
-Cyclone (Revere Beach): The Cyclone was a wooden roller coaster that operated at Revere Beach in Revere, Massachusetts, from 1925 until 1969.  When Cyclone was constructed, it was the tallest roller coaster ever built, as well as being the first roller coaster in the world to reach 100 ft in height.  In addition to being the tallest roller coaster of its day, some also claim that it was the largest and fastest roller coaster in the world, with a length of 3600 ft and top speeds between 45 and 50 mph (some dispute the speed record claim and instead award that honor to the Giant Dipper).  Cyclone held the title of world's tallest roller coaster until 1964 when it was surpassed by Montaña Rusa at La Feria Chapultepec Mágico in Mexico City, Mexico.
-
-Leviathan (roller coaster): Leviathan is a steel roller coaster in the Medieval Faire section of the park at Canada's Wonderland in Vaughan, Ontario, Canada.  It is the first roller coaster designed by Swiss firm Bolliger & Mabillard to exceed a height of 300 ft , putting it in a class of roller coasters commonly referred to as "giga".  At 5486 ft long, 306 ft tall, and with a top speed of 92 mph , Leviathan is the tallest and fastest roller coaster in Canada.  s of 2015 , Leviathan is ranked as the eighth-tallest, and the eighth-fastest roller coaster in the world, and the third-tallest traditional lift-style coaster in the world.  It was the 16th roller coaster to be built at Canada's Wonderland, and the ride's track was completed in February 2012, with the first test run being completed on 15 March 2012.  The coaster opened to season pass holders on 27 April 2012, and to the general public on 6 May 2012.
-
-Roller coaster phobia: Roller coaster phobia is a colloquial and slang term describing an individual's fear of roller coasters.  While roller coasters are the most popular theme park attraction, certain people feel nauseated, afraid, dizzy, or unsafe when riding roller coasters.  In the majority of cases, this fear is related to acrophobia, claustrophobia, or a traumatic event.  Roller coaster phobia can be overcome relatively easily, the best cure being going on the tallest/fastest roller coaster before riding roller coasters of a lesser magnitude.  Roller coaster phobia has been linked to previously experiencing an accident, vertigo, and fear of heights.  In rare cases, riders may be afraid of roller coasters due to a painful ride, tight restraints, being thrown around in the restraints, and excessive g-forces on the body of the rider.
-
-Kingda Ka: Kingda Ka is a steel accelerator roller coaster located at Six Flags Great Adventure in Jackson, New Jersey, United States.  It is the world's tallest roller coaster, the world's second fastest roller coaster, and was the second strata coaster ever built.  It was built by Stakotra, a subcontractor to Intamin.  Riders have to be 54" in order to be able to get on the roller coaster.
-
-Magnum XL-200: Magnum XL-200, colloquially known as simply Magnum, is a steel roller coaster built by Arrow Dynamics at Cedar Point in Sandusky, Ohio.  When built in 1989, it was the tallest, fastest, and steepest complete-circuit roller coaster in the world as well as the first hypercoaster – a roller coaster that exceeds 200 ft in height.  Some have credited Magnum with starting a period in the industry known as the "roller coaster wars", in which amusement parks competed with one another at a rapid pace to build the next tallest and fastest roller coaster.  More than 40 million people had ridden Magnum as of 2009.
-
-Question: Who manufactured the third fastest roller coaster in the UK?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "roller_coaster_name": {
-      "type": "string",
-      "description": "The name of the roller coaster."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "manufacturer_name": {
-      "type": "string",
-      "description": "The name of the manufacturer of the roller coaster."
-    },
-    "speed_rank_uk": {
-      "type": "integer",
-      "description": "The speed rank of the roller coaster within the UK."
-    },
-    "roller_coaster_details": {
-      "type": "object",
-      "properties": {
-        "location": {
-          "type": "string",
-          "description": "The park and country where the roller coaster is located."
-        },
-        "maximum_speed_mph": {
-          "type": "number",
-          "description": "The maximum speed of the roller coaster in miles per hour."
-        },
-        "coaster_type": {
-          "type": "string",
-          "description": "The specific type or model of the roller coaster."
-        },
-        "was_world_first_of_type": {
-          "type": "boolean",
-          "description": "Indicates if this roller coaster was the world's first of its type."
-        }
-      },
-      "required": [
-        "location",
-        "maximum_speed_mph",
-        "coaster_type",
-        "was_world_first_of_type"
-      ],
-      "additionalProperties": false
-    },
-    "manufacturer_origin_country": {
-      "type": "string",
-      "description": "The country of origin of the manufacturer."
+    {
+      "role": "user",
+      "content": "Context:\nOblivion (roller coaster): Oblivion is a steel roller coaster located at Alton Towers in England.  The ride opened as the world's first dive coaster on 14 March 1998, amidst a large publicity campaign.  It was the second in a long line of 'Secret Weapon (SW4)' rollercoasters to have opened at Alton Towers.  The ride has a height restriction of 55 in .  With a maximum speed of 68 mph, it is the third fastest roller coaster in the UK, behind Stealth at Thorpe Park and the Big One at Blackpool Pleasure Beach.\n\nGoliath (La Ronde): Goliath is a steel coaster roller coaster at the La Ronde located in Montreal, Quebec, Canada.  Designed by Bolliger & Mabillard, it reaches a maximum height of 174.8 ft , a speed of 68.4 mph , and a track length of 4038.8 ft .  Construction commenced in September 2005, and the roller coaster opened to the public on May 13, 2006.  Goliath was the tallest and fastest roller coaster in Canada until it was surpassed by Behemoth (another Bolliger & Mabillard roller coaster), at Canada's Wonderland's in 2008.  Six Flags announced that Goliath would be hooked up with Virtual Reality for a New Revolution experience for the 2016 season, which was previously made as a world premiere in 2013 by a Montreal VR company.\n\nCorkscrew (Valleyfair): Corkscrew is the name of a roller coaster at Valleyfair in Shakopee, Minnesota featuring one vertical loop and two corkscrews.  Built in 1980, Corkscrew was planned to reflect the design of its sister roller coaster Corkscrew at Cedar Point.  It is notably one of the first roller coasters to feature a double corkscrew, as well as a vertical loop.  The main differences that the Valleyfair model has is the addition of a finale helix and the omission of the camelback before the loop.  Until the hypercoaster Wild Thing (the fifth highest and fastest roller coaster in the world at the time it opened in 1996), Corkscrew was the only outdoor all-steel roller coaster in Minnesota.  Corkscrew is currently the only roller coaster at Valleyfair with inversions.  The coaster's track was painted blue when it open in 1980 but was repainted orange and yellow in 2011.\n\nFujiyama (roller coaster): Fujiyama is a steel roller coaster at Fuji-Q Highland, Fujiyoshida, Yamanashi, Japan.  When Fujiyama opened in 1996 it was the world's tallest roller coaster at 259 ft , and had the largest drop in the world at 230 ft .  Fujiyama was also the world's fastest roller coaster for a year of its operation, succeeded by Tower of Terror at Dreamworld theme park in Queensland, Australia in 1997.  Despite being the world's fastest roller coaster in operation for a year, Fujiyama set no world records for roller coaster speed.  Steel Phantom at Kennywood set the world record for speed before engineers added additional brakes to slow the ride down because of safety and rider comfort concerns.\n\nDiving Machine G5: Diving Machine G5 is a roller coaster at Janfusun Fancyworld in Taiwan.  It was built in 2000 by Swiss manufacturers Bolliger & Mabillard and was the second dive coaster model to be built, the first being Oblivion at Alton Towers in the United Kingdom.  It is located in the Sky Plaza section of the park.  It is a nearly mirror image of Oblivion.\n\nCyclone (Revere Beach): The Cyclone was a wooden roller coaster that operated at Revere Beach in Revere, Massachusetts, from 1925 until 1969.  When Cyclone was constructed, it was the tallest roller coaster ever built, as well as being the first roller coaster in the world to reach 100 ft in height.  In addition to being the tallest roller coaster of its day, some also claim that it was the largest and fastest roller coaster in the world, with a length of 3600 ft and top speeds between 45 and 50 mph (some dispute the speed record claim and instead award that honor to the Giant Dipper).  Cyclone held the title of world's tallest roller coaster until 1964 when it was surpassed by Montaña Rusa at La Feria Chapultepec Mágico in Mexico City, Mexico.\n\nLeviathan (roller coaster): Leviathan is a steel roller coaster in the Medieval Faire section of the park at Canada's Wonderland in Vaughan, Ontario, Canada.  It is the first roller coaster designed by Swiss firm Bolliger & Mabillard to exceed a height of 300 ft , putting it in a class of roller coasters commonly referred to as \"giga\".  At 5486 ft long, 306 ft tall, and with a top speed of 92 mph , Leviathan is the tallest and fastest roller coaster in Canada.  s of 2015 , Leviathan is ranked as the eighth-tallest, and the eighth-fastest roller coaster in the world, and the third-tallest traditional lift-style coaster in the world.  It was the 16th roller coaster to be built at Canada's Wonderland, and the ride's track was completed in February 2012, with the first test run being completed on 15 March 2012.  The coaster opened to season pass holders on 27 April 2012, and to the general public on 6 May 2012.\n\nRoller coaster phobia: Roller coaster phobia is a colloquial and slang term describing an individual's fear of roller coasters.  While roller coasters are the most popular theme park attraction, certain people feel nauseated, afraid, dizzy, or unsafe when riding roller coasters.  In the majority of cases, this fear is related to acrophobia, claustrophobia, or a traumatic event.  Roller coaster phobia can be overcome relatively easily, the best cure being going on the tallest/fastest roller coaster before riding roller coasters of a lesser magnitude.  Roller coaster phobia has been linked to previously experiencing an accident, vertigo, and fear of heights.  In rare cases, riders may be afraid of roller coasters due to a painful ride, tight restraints, being thrown around in the restraints, and excessive g-forces on the body of the rider.\n\nKingda Ka: Kingda Ka is a steel accelerator roller coaster located at Six Flags Great Adventure in Jackson, New Jersey, United States.  It is the world's tallest roller coaster, the world's second fastest roller coaster, and was the second strata coaster ever built.  It was built by Stakotra, a subcontractor to Intamin.  Riders have to be 54\" in order to be able to get on the roller coaster.\n\nMagnum XL-200: Magnum XL-200, colloquially known as simply Magnum, is a steel roller coaster built by Arrow Dynamics at Cedar Point in Sandusky, Ohio.  When built in 1989, it was the tallest, fastest, and steepest complete-circuit roller coaster in the world as well as the first hypercoaster – a roller coaster that exceeds 200 ft in height.  Some have credited Magnum with starting a period in the industry known as the \"roller coaster wars\", in which amusement parks competed with one another at a rapid pace to build the next tallest and fastest roller coaster.  More than 40 million people had ridden Magnum as of 2009.\n\nQuestion: Who manufactured the third fastest roller coaster in the UK?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"roller_coaster_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the roller coaster.\"\n    },\n    \"manufacturer_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the manufacturer of the roller coaster.\"\n    },\n    \"speed_rank_uk\": {\n      \"type\": \"integer\",\n      \"description\": \"The speed rank of the roller coaster within the UK.\"\n    },\n    \"roller_coaster_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"location\": {\n          \"type\": \"string\",\n          \"description\": \"The park and country where the roller coaster is located.\"\n        },\n        \"maximum_speed_mph\": {\n          \"type\": \"number\",\n          \"description\": \"The maximum speed of the roller coaster in miles per hour.\"\n        },\n        \"coaster_type\": {\n          \"type\": \"string\",\n          \"description\": \"The specific type or model of the roller coaster.\"\n        },\n        \"was_world_first_of_type\": {\n          \"type\": \"boolean\",\n          \"description\": \"Indicates if this roller coaster was the world's first of its type.\"\n        }\n      },\n      \"required\": [\n        \"location\",\n        \"maximum_speed_mph\",\n        \"coaster_type\",\n        \"was_world_first_of_type\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"manufacturer_origin_country\": {\n      \"type\": \"string\",\n      \"description\": \"The country of origin of the manufacturer.\"\n    }\n  },\n  \"required\": [\n    \"roller_coaster_name\",\n    \"manufacturer_name\",\n    \"speed_rank_uk\",\n    \"roller_coaster_details\",\n    \"manufacturer_origin_country\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "roller_coaster_name",
-    "manufacturer_name",
-    "speed_rank_uk",
-    "roller_coaster_details",
-    "manufacturer_origin_country"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "roller_coaster_name": {
+        "type": "string",
+        "description": "The name of the roller coaster."
+      },
+      "manufacturer_name": {
+        "type": "string",
+        "description": "The name of the manufacturer of the roller coaster."
+      },
+      "speed_rank_uk": {
+        "type": "integer",
+        "description": "The speed rank of the roller coaster within the UK."
+      },
+      "roller_coaster_details": {
+        "type": "object",
+        "properties": {
+          "location": {
+            "type": "string",
+            "description": "The park and country where the roller coaster is located."
+          },
+          "maximum_speed_mph": {
+            "type": "number",
+            "description": "The maximum speed of the roller coaster in miles per hour."
+          },
+          "coaster_type": {
+            "type": "string",
+            "description": "The specific type or model of the roller coaster."
+          },
+          "was_world_first_of_type": {
+            "type": "boolean",
+            "description": "Indicates if this roller coaster was the world's first of its type."
+          }
+        },
+        "required": [
+          "location",
+          "maximum_speed_mph",
+          "coaster_type",
+          "was_world_first_of_type"
+        ],
+        "additionalProperties": false
+      },
+      "manufacturer_origin_country": {
+        "type": "string",
+        "description": "The country of origin of the manufacturer."
+      }
+    },
+    "required": [
+      "roller_coaster_name",
+      "manufacturer_name",
+      "speed_rank_uk",
+      "roller_coaster_details",
+      "manufacturer_origin_country"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

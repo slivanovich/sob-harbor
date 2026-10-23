@@ -1,77 +1,54 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Rob Donoghue: Rob Donoghue is a game designer who has worked primarily on role-playing games. Together with Fred Hicks he created the "Fate system" and has been designer or lead designer of numerous award winning role playing games.  He was a lead designer of the role-playing games "Spirit of the Century" and a designer of "The Dresden Files Roleplaying Game", and has also worked closely with Cam Banks on the Cortex Plus games, a lead designer for "", and as a designer for "Marvel Heroic Roleplaying".  He has also contributed to "Dungeons & Dragons" 4e.
-
-Starfinder Roleplaying Game: The Starfinder Roleplaying Game is a science-fiction/science fantasy role-playing game published by Paizo Publishing.  It is built on Paizo's previous game, the "Pathfinder Roleplaying Game", both in its game mechanics and universe, but adapted to a more futuristic style than its fantasy predecessor; game content is intended to be easily convertible between the two systems.  Like its predecessor, the "Starfinder RPG" supports adventure paths and other material written by Paizo and third party publishers.
-
-Mouse Guard Roleplaying Game: The Mouse Guard Roleplaying Game is a tabletop role-playing game created by Luke Crane based on the Mouse Guard comics and his own Burning Wheel system.  It won the 2008 Origins Award for best roleplaying game and numerous Indie RPG awards, as well as being silver winner for three ENnies and shortlisted for the 2009 Diana Jones Award.  Boom!  Studios has announced its imprint Archaia Entertainment will release the second edition of the game in 2015.
-
-Star Wars Roleplaying Game (Wizards of the Coast): The Star Wars Roleplaying Game is a d20 System roleplaying game set in the "Star Wars" universe.  The game was written by Bill Slavicsek, Andy Collins and JD Wiker and published by Wizards of the Coast in late 2000 and revised in 2002.  In 2007, Wizards released the "Saga Edition" of the game, which made major changes in an effort to streamline the rules system.
-
-Evil Hat Productions: Evil Hat Productions is a company that produces role-playing games.  Chief among them is the free indie RPG, "Fate", which has won numerous awards.  In 2005, the company began producing a series of commercial role-playing games using an updated version of the Fate system, each focusing on a different genre.  These include the 1920s pulp adventure "Spirit of the Century" and the hard sci-fi "Diaspora".  In 2010 they released "The Dresden Files RPG", based on the "Dresden Files" series of novels by author Jim Butcher.
-
-The Dresden Files Roleplaying Game: "The Dresden Files" Roleplaying Game is a licensed role-playing game based on "The Dresden Files" and using the Fate system.  It was released in late 2010 in two hardcover volumes: "Your Story" with the rules information and "Our World" with setting information, and won numerous awards at all of the Origins Awards, the ENnies, and the Golden Geek Awards.
-
-Skin Game (The Dresden Files): Skin Game is a novel in "The Dresden Files" series by Jim Butcher.  It is the 15th novel in the series.  It follows the protagonist, Harry Dresden as he teams up with former enemies to rob a vault belonging to Hades, lord of the Underworld.
-
-Harry Dresden: Harry Blackstone Copperfield Dresden is a fictional detective and wizard.  He was created by Jim Butcher and is the protagonist of the contemporary fantasy series The Dresden Files.  The series blends magic and hardboiled detective fiction.  In addition to the fifteen "The Dresden Files" novels, he has appeared in fifteen short stories, as well as a limited series comic and an unlimited series comic.  He was also adapted into a character by the same name for the TV series version of the novel series, also called "The Dresden Files".
-
-Leverage: The Roleplaying Game: Leverage: The Roleplaying Game is a role-playing game based on the "Leverage" television series using the Cortex Plus system.  It is known for its innovative use of flashback scene to reproduce the con or heist genre and was nominated for the 2010 Origins Award for Best Roleplaying Game.
-
-Unknown Armies: Unknown Armies (abbreviated UA), subtitled "A roleplaying game of power and consequences", is an occult-themed roleplaying game by John Scott Tynes and Greg Stolze and published by Atlas Games.  The first edition was paperbound and published in 1998 (with the original subtitle of "A roleplaying game of transcendental horror and furious action"); the revised and expanded 2nd edition was published in a hardbound format in 2002 (with a second printing in 2004 and a third printing in 2007).
-
-Question: What type of system does Rob Donoghue and The Dresden Files Roleplaying Game have in common?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "common_system_name": {
-      "type": "string",
-      "description": "The name of the role-playing game system shared by the entities."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "system_type": {
-      "type": "string",
-      "description": "The general type or category of the system."
-    },
-    "entities_involved": {
-      "type": "array",
-      "description": "A list of entities that share the common system.",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "description": "The name of the entity."
-          },
-          "entity_type": {
-            "type": "string",
-            "description": "The type of the entity (e.g., 'person', 'game')."
-          }
-        },
-        "required": [
-          "name",
-          "entity_type"
-        ],
-        "additionalProperties": false
-      }
+    {
+      "role": "user",
+      "content": "Context:\nRob Donoghue: Rob Donoghue is a game designer who has worked primarily on role-playing games. Together with Fred Hicks he created the \"Fate system\" and has been designer or lead designer of numerous award winning role playing games.  He was a lead designer of the role-playing games \"Spirit of the Century\" and a designer of \"The Dresden Files Roleplaying Game\", and has also worked closely with Cam Banks on the Cortex Plus games, a lead designer for \"\", and as a designer for \"Marvel Heroic Roleplaying\".  He has also contributed to \"Dungeons & Dragons\" 4e.\n\nStarfinder Roleplaying Game: The Starfinder Roleplaying Game is a science-fiction/science fantasy role-playing game published by Paizo Publishing.  It is built on Paizo's previous game, the \"Pathfinder Roleplaying Game\", both in its game mechanics and universe, but adapted to a more futuristic style than its fantasy predecessor; game content is intended to be easily convertible between the two systems.  Like its predecessor, the \"Starfinder RPG\" supports adventure paths and other material written by Paizo and third party publishers.\n\nMouse Guard Roleplaying Game: The Mouse Guard Roleplaying Game is a tabletop role-playing game created by Luke Crane based on the Mouse Guard comics and his own Burning Wheel system.  It won the 2008 Origins Award for best roleplaying game and numerous Indie RPG awards, as well as being silver winner for three ENnies and shortlisted for the 2009 Diana Jones Award.  Boom!  Studios has announced its imprint Archaia Entertainment will release the second edition of the game in 2015.\n\nStar Wars Roleplaying Game (Wizards of the Coast): The Star Wars Roleplaying Game is a d20 System roleplaying game set in the \"Star Wars\" universe.  The game was written by Bill Slavicsek, Andy Collins and JD Wiker and published by Wizards of the Coast in late 2000 and revised in 2002.  In 2007, Wizards released the \"Saga Edition\" of the game, which made major changes in an effort to streamline the rules system.\n\nEvil Hat Productions: Evil Hat Productions is a company that produces role-playing games.  Chief among them is the free indie RPG, \"Fate\", which has won numerous awards.  In 2005, the company began producing a series of commercial role-playing games using an updated version of the Fate system, each focusing on a different genre.  These include the 1920s pulp adventure \"Spirit of the Century\" and the hard sci-fi \"Diaspora\".  In 2010 they released \"The Dresden Files RPG\", based on the \"Dresden Files\" series of novels by author Jim Butcher.\n\nThe Dresden Files Roleplaying Game: \"The Dresden Files\" Roleplaying Game is a licensed role-playing game based on \"The Dresden Files\" and using the Fate system.  It was released in late 2010 in two hardcover volumes: \"Your Story\" with the rules information and \"Our World\" with setting information, and won numerous awards at all of the Origins Awards, the ENnies, and the Golden Geek Awards.\n\nSkin Game (The Dresden Files): Skin Game is a novel in \"The Dresden Files\" series by Jim Butcher.  It is the 15th novel in the series.  It follows the protagonist, Harry Dresden as he teams up with former enemies to rob a vault belonging to Hades, lord of the Underworld.\n\nHarry Dresden: Harry Blackstone Copperfield Dresden is a fictional detective and wizard.  He was created by Jim Butcher and is the protagonist of the contemporary fantasy series The Dresden Files.  The series blends magic and hardboiled detective fiction.  In addition to the fifteen \"The Dresden Files\" novels, he has appeared in fifteen short stories, as well as a limited series comic and an unlimited series comic.  He was also adapted into a character by the same name for the TV series version of the novel series, also called \"The Dresden Files\".\n\nLeverage: The Roleplaying Game: Leverage: The Roleplaying Game is a role-playing game based on the \"Leverage\" television series using the Cortex Plus system.  It is known for its innovative use of flashback scene to reproduce the con or heist genre and was nominated for the 2010 Origins Award for Best Roleplaying Game.\n\nUnknown Armies: Unknown Armies (abbreviated UA), subtitled \"A roleplaying game of power and consequences\", is an occult-themed roleplaying game by John Scott Tynes and Greg Stolze and published by Atlas Games.  The first edition was paperbound and published in 1998 (with the original subtitle of \"A roleplaying game of transcendental horror and furious action\"); the revised and expanded 2nd edition was published in a hardbound format in 2002 (with a second printing in 2004 and a third printing in 2007).\n\nQuestion: What type of system does Rob Donoghue and The Dresden Files Roleplaying Game have in common?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"common_system_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the role-playing game system shared by the entities.\"\n    },\n    \"system_type\": {\n      \"type\": \"string\",\n      \"description\": \"The general type or category of the system.\"\n    },\n    \"entities_involved\": {\n      \"type\": \"array\",\n      \"description\": \"A list of entities that share the common system.\",\n      \"items\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"name\": {\n            \"type\": \"string\",\n            \"description\": \"The name of the entity.\"\n          },\n          \"entity_type\": {\n            \"type\": \"string\",\n            \"description\": \"The type of the entity (e.g., 'person', 'game').\"\n          }\n        },\n        \"required\": [\n          \"name\",\n          \"entity_type\"\n        ],\n        \"additionalProperties\": false\n      }\n    }\n  },\n  \"required\": [\n    \"common_system_name\",\n    \"system_type\",\n    \"entities_involved\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "common_system_name",
-    "system_type",
-    "entities_involved"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "common_system_name": {
+        "type": "string",
+        "description": "The name of the role-playing game system shared by the entities."
+      },
+      "system_type": {
+        "type": "string",
+        "description": "The general type or category of the system."
+      },
+      "entities_involved": {
+        "type": "array",
+        "description": "A list of entities that share the common system.",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the entity."
+            },
+            "entity_type": {
+              "type": "string",
+              "description": "The type of the entity (e.g., 'person', 'game')."
+            }
+          },
+          "required": [
+            "name",
+            "entity_type"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "common_system_name",
+      "system_type",
+      "entities_involved"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

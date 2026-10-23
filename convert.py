@@ -32,16 +32,17 @@ def generate_task(record: dict, output: Path, index: int) -> Path:
     ):
         shutil.copyfile(ROOT / "template" / source, task / target)
     shutil.copyfile(ROOT / "vendor/evaluate.py", task / "tests/evaluate.py")
-    instruction = (
-        "Use the following extraction rules and source material. "
-        "Write your final JSON object to `/tmp/answer.json`. "
-        "The verifier reads that file, not your final chat message.\n\n"
-        + SYSTEM_PROMPT
-        + "\n\n"
-        + build_user_message(record)
-        + "\n"
+    instruction = {
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": build_user_message(record)},
+        ],
+        "json_schema": parse_string(record["json_schema"]),
+        "answer_path": "/tmp/answer.json",
+    }
+    (task / "instruction.md").write_text(
+        json.dumps(instruction, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
-    (task / "instruction.md").write_text(instruction, encoding="utf-8")
     evaluation = build_eval_record(record, None, "harbor-agent", "text", 0, 0, 0)
     (task / "tests/record.json").write_text(
         json.dumps(evaluation, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
@@ -76,8 +77,9 @@ def main() -> None:
     args.output.mkdir(parents=True, exist_ok=False)
     tasks = [generate_task(record, args.output, index).name for index, record in enumerate(rows)]
     catalog = (
-        'name = "sob-text"\nversion = "1.0.0"\n'
-        'description = "SOB text test split with agent-produced JSON and upstream metrics."\n'
+        'name = "sob-text"\nversion = "2.0.0"\n'
+        'description = "SOB text test split for single-response '
+        'JSON Schema constrained generation."\n'
         'task_directory = "sob-text"\nprimary_metric = "reward"\n\ntasks = [\n'
         + "".join(f'  "{name}",\n' for name in tasks)
         + "]\n"

@@ -1,86 +1,63 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Time of the Comet: Time of the Comet (Albanian: "Koha e Kometës" ) is a 2008 Albanian historical drama/black comedy film adapted from a novel by Ismail Kadare titled "Black Year" (Albanian: "Viti i Mbrapshtë" ).  The film was directed by Fatmir Koçi, while Blerim Destani and Masiela Lusha starred in the leading roles.  German bodybuilder and actor Ralf Möller also appeared in the film.
-
-Masiela Lusha: Masiela Lusha ( ; born October 23, 1985) is an American actress, author, producer and humanitarian.  Lusha gained worldwide recognition for playing her first major role as Carmen Consuelo Lopez on the globally syndicated ABC sitcom "George Lopez", a role which earned her two consecutive Young Artist Awards for Leading Young Actress in a Comedy or Drama.  After transitioning into film, she had her breakout role in Sony Picture's "".  Lusha also starred alongside David Hasselhoff and Ian Ziering in SyFy's television movie "".
-
-JoJo videography: American singer-songwriter and actress JoJo has been featured in nineteen music videos, three theatrical films, one television film, and twelve television series including her first appearances on talent shows during her early years.  She released her first music video for her debut single "Leave (Get Out)" was in early 2004 and since then she has released eleven other music videos and one lyric video as a lead artist.  She appears in one music video as featured artist, one music video as a charitable featured artist and made a guest appearances in another five.  JoJo made her television debut as a contestant on the "Kids Say the Darndest Things" hosted by Bill Cosby in 1998 at age 7 and made her first TV series appearance on the "The Bernie Mac Show" as Michelle in mid 2002.  Additionally, she starred in two big budget Hollywood films in 2006, "Aquamarine" as Hailey Rogers and "RV" as Cassie Munroe alongside Robin Williams & Josh Hutcherson as well as in the Lifetime made-for-TV movie "True Confessions of a Hollywood Starlet" in 2008.
-
-Kill Katie Malone: Kill Katie Malone is a 2010 American horror film directed by Carlos Ramos Jr. and starring Masiela Lusha from "The George Lopez Show" and Dean Cain.  The screenplay was written by Mark Onspaugh.
-
-Lucy Perkins: Lucy Perkins is a British based film, television and stage actress.  She has featured in productions such as "Days That Shook the World", "Your So Called Comedy Show","Britain's Finest Actresses", "Helen of Troy" and "The Real CSI".  Perkins' theatre credits include "Trainspotting", "The Cherry Orchard", 'Sweetheart', "Whale Music" and "The Insect Play" Her play 'Re;' which she co-wrote with BitRandom Productions debuted at the Exeter Fringe Festival in 2011.  Her short film "36 Hours" was featured at the 2005 Cannes Film Festival.  Perkins' featured in the short film "Last Train to Demise" directed by Kristian Digby, which won several international awards.
-
-Mandy Rain: Amanda Rose Moseley (born December 20, 1993) better known by her stage name Mandy Rain, is an American recording artist, dancer, and actress.  Rain started her acting career at a young age.  In 2007, Rain auditioned for Star Camp, a Nickelodeon television show that focuses on the making of a super star musical group.  Rain was chosen along with seven other kids to join the show and The Giggle Club.  The band disbanded shortly after the series' finale.  Shortly afterwards, The Giggle Club's producer Nick Cannon decided to groom Rain for a solo career.  Cannon started bringing Rain to recording studios to record songs while he was drafting a show for her called The Diaries of Mandy Rain.  After hearing one of the tracks Rain had recorded, Cannon got inspired by it and decided to start drafting a different show about three private school girls.  After several months, Canon formed School Gyrls.  The original line up featured Rain, Monica Parales, and Jacque Pyles.  In the summer of 2009, School Gyrls starred in a movie Canon had written called School Gyrls which premiered on Nickelodeon on February 21, 2010.  Shortly afterwards, they released a self-titled album "School Gyrls".  Later that year, they also released a holiday album titled "A Very School Gyrls Holla-Day".  Rain and Pyles left the group shortly after the release of the holiday album to focus on their solo careers.
-
-The Roseanne Show: The Roseanne Show is a syndicated talk show hosted by American actress Roseanne Barr following the end of her long-running sitcom.  The show featured Roseanne interviewing a mixture of quirky guests along with Roseanne's signature style of brassy, in-your-face, domestic goddess comedy. "The Roseanne Show" was the first to be recorded digitally.  During the show's run there were also live call-ins from viewers and celebrities.  Sometimes during a taping there was a webchat during the taping and after the show.  The set of the show consisted of a living room, a kitchen, and a garden scene.  The set rotated to present a different interview setting.  The show also featured skits with audience member participation.  Skits included "Judge Roseanne", "The Dr. is In-sane" and a dating game-esque skit.  Some skits also included her producer Mary Pelloni.  Throughout the show's entire two-year run, Dailey Pike was Roseanne's warmup guy and sidekick regular on the show.  In season one, Zach Hope was Roseanne's cyber sidekick.  Later in season two, Michael Fishman, who portrayed D.J. Conner on "Roseanne", replaced Hope as Roseanne's cyber sidekick.
-
-Fatal Instinct (2014 film): Fatal Instinct is a 2014 American action film, written, directed and produced by Luciano Saber, starring Ivan Sergei, Masiela Lusha, Richard Burgi, Drew Fuller, Krista Allen, Peter Dobson, and Anne Winters.  The film premiered in the United States on June 3, 2014, airing on the Showtime network.
-
-Gripsta: Brandi Younger better known as Gripsta, is an Oakland, California born female rap artist/actress discovered by Ice-T at the age of 13.  She was featured on song titled "Funky Gripsta" off of his 1993 album release "Home Invasion" and later signed to Tuff Break/A&M Records in the 1990s.  Her debut single "Pop Goz the 9" was partially leaked in January 1994, its music video was directed by Ice-T.  However Gripsta's debut single was never officially released.  The Tuff Break label on A&M records was dropped before her scheduled release date.  She was later featured on "The Seventh Deadly Sin", Ice-T's 7th album, Released: October 12, 1999 as well as numerous features on record label Def Jam's "The Murda Squad" album.  She worked with many artists under that association including South Central Cartel, Spice One and Sh'killa.  Gripsta was also featured in a principal role in the movie "Dangerous Minds" in which she played one of the many troubled teens that actress Michelle Pfeiffer sought to reform.  Other acting credits include a guest star appearance in the "Leaving the Life" episode of the CBS television show "Promised Land", a semi popular spin-off of CBS more successful show "Touched by an Angel".  Gripsta has since changed her name to Egypt.
-
-Sharknado: The 4th Awakens: Sharknado: The 4th Awakens is a 2016 American disaster comedy sci-fi horror television film and the fourth installment in the "Sharknado" film series, following "Sharknado", "", and "".  The film was directed by Anthony C. Ferrante with Ian Ziering, Tara Reid, David Hasselhoff and Ryan Newman reprising their roles from the previous installments.  New people joining the cast in the film include Tommy Davidson, Masiela Lusha, Imani Hakim, Cheryl Tiegs and Gary Busey.  The film premiered on Syfy in the United States on July 31, 2016.  Though the film title, poster, and intro are a parody of the 2015 film "," it is not a mockbuster.
-
-Question: What show was the actress Masiela Lusha from Sharknado featured in?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actress_name": {
-      "type": "string",
-      "description": "The name of the actress in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "film_context": {
-      "type": "string",
-      "description": "The film mentioned in the question that the actress was featured in."
-    },
-    "tv_show_details": {
-      "type": "object",
-      "properties": {
-        "show_name": {
-          "type": "string",
-          "description": "The name of the television show the actress was featured in."
-        },
-        "role_name": {
-          "type": "string",
-          "description": "The name of the character played by the actress in the TV show."
-        },
-        "network": {
-          "type": "string",
-          "description": "The network that syndicated the TV show."
-        },
-        "awards_received": {
-          "type": "array",
-          "items": {
-            "type": "string"
-          },
-          "description": "Awards received for the role in the TV show."
-        }
-      },
-      "required": [
-        "show_name",
-        "role_name",
-        "network",
-        "awards_received"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nTime of the Comet: Time of the Comet (Albanian: \"Koha e Kometës\" ) is a 2008 Albanian historical drama/black comedy film adapted from a novel by Ismail Kadare titled \"Black Year\" (Albanian: \"Viti i Mbrapshtë\" ).  The film was directed by Fatmir Koçi, while Blerim Destani and Masiela Lusha starred in the leading roles.  German bodybuilder and actor Ralf Möller also appeared in the film.\n\nMasiela Lusha: Masiela Lusha ( ; born October 23, 1985) is an American actress, author, producer and humanitarian.  Lusha gained worldwide recognition for playing her first major role as Carmen Consuelo Lopez on the globally syndicated ABC sitcom \"George Lopez\", a role which earned her two consecutive Young Artist Awards for Leading Young Actress in a Comedy or Drama.  After transitioning into film, she had her breakout role in Sony Picture's \"\".  Lusha also starred alongside David Hasselhoff and Ian Ziering in SyFy's television movie \"\".\n\nJoJo videography: American singer-songwriter and actress JoJo has been featured in nineteen music videos, three theatrical films, one television film, and twelve television series including her first appearances on talent shows during her early years.  She released her first music video for her debut single \"Leave (Get Out)\" was in early 2004 and since then she has released eleven other music videos and one lyric video as a lead artist.  She appears in one music video as featured artist, one music video as a charitable featured artist and made a guest appearances in another five.  JoJo made her television debut as a contestant on the \"Kids Say the Darndest Things\" hosted by Bill Cosby in 1998 at age 7 and made her first TV series appearance on the \"The Bernie Mac Show\" as Michelle in mid 2002.  Additionally, she starred in two big budget Hollywood films in 2006, \"Aquamarine\" as Hailey Rogers and \"RV\" as Cassie Munroe alongside Robin Williams & Josh Hutcherson as well as in the Lifetime made-for-TV movie \"True Confessions of a Hollywood Starlet\" in 2008.\n\nKill Katie Malone: Kill Katie Malone is a 2010 American horror film directed by Carlos Ramos Jr. and starring Masiela Lusha from \"The George Lopez Show\" and Dean Cain.  The screenplay was written by Mark Onspaugh.\n\nLucy Perkins: Lucy Perkins is a British based film, television and stage actress.  She has featured in productions such as \"Days That Shook the World\", \"Your So Called Comedy Show\",\"Britain's Finest Actresses\", \"Helen of Troy\" and \"The Real CSI\".  Perkins' theatre credits include \"Trainspotting\", \"The Cherry Orchard\", 'Sweetheart', \"Whale Music\" and \"The Insect Play\" Her play 'Re;' which she co-wrote with BitRandom Productions debuted at the Exeter Fringe Festival in 2011.  Her short film \"36 Hours\" was featured at the 2005 Cannes Film Festival.  Perkins' featured in the short film \"Last Train to Demise\" directed by Kristian Digby, which won several international awards.\n\nMandy Rain: Amanda Rose Moseley (born December 20, 1993) better known by her stage name Mandy Rain, is an American recording artist, dancer, and actress.  Rain started her acting career at a young age.  In 2007, Rain auditioned for Star Camp, a Nickelodeon television show that focuses on the making of a super star musical group.  Rain was chosen along with seven other kids to join the show and The Giggle Club.  The band disbanded shortly after the series' finale.  Shortly afterwards, The Giggle Club's producer Nick Cannon decided to groom Rain for a solo career.  Cannon started bringing Rain to recording studios to record songs while he was drafting a show for her called The Diaries of Mandy Rain.  After hearing one of the tracks Rain had recorded, Cannon got inspired by it and decided to start drafting a different show about three private school girls.  After several months, Canon formed School Gyrls.  The original line up featured Rain, Monica Parales, and Jacque Pyles.  In the summer of 2009, School Gyrls starred in a movie Canon had written called School Gyrls which premiered on Nickelodeon on February 21, 2010.  Shortly afterwards, they released a self-titled album \"School Gyrls\".  Later that year, they also released a holiday album titled \"A Very School Gyrls Holla-Day\".  Rain and Pyles left the group shortly after the release of the holiday album to focus on their solo careers.\n\nThe Roseanne Show: The Roseanne Show is a syndicated talk show hosted by American actress Roseanne Barr following the end of her long-running sitcom.  The show featured Roseanne interviewing a mixture of quirky guests along with Roseanne's signature style of brassy, in-your-face, domestic goddess comedy. \"The Roseanne Show\" was the first to be recorded digitally.  During the show's run there were also live call-ins from viewers and celebrities.  Sometimes during a taping there was a webchat during the taping and after the show.  The set of the show consisted of a living room, a kitchen, and a garden scene.  The set rotated to present a different interview setting.  The show also featured skits with audience member participation.  Skits included \"Judge Roseanne\", \"The Dr. is In-sane\" and a dating game-esque skit.  Some skits also included her producer Mary Pelloni.  Throughout the show's entire two-year run, Dailey Pike was Roseanne's warmup guy and sidekick regular on the show.  In season one, Zach Hope was Roseanne's cyber sidekick.  Later in season two, Michael Fishman, who portrayed D.J. Conner on \"Roseanne\", replaced Hope as Roseanne's cyber sidekick.\n\nFatal Instinct (2014 film): Fatal Instinct is a 2014 American action film, written, directed and produced by Luciano Saber, starring Ivan Sergei, Masiela Lusha, Richard Burgi, Drew Fuller, Krista Allen, Peter Dobson, and Anne Winters.  The film premiered in the United States on June 3, 2014, airing on the Showtime network.\n\nGripsta: Brandi Younger better known as Gripsta, is an Oakland, California born female rap artist/actress discovered by Ice-T at the age of 13.  She was featured on song titled \"Funky Gripsta\" off of his 1993 album release \"Home Invasion\" and later signed to Tuff Break/A&M Records in the 1990s.  Her debut single \"Pop Goz the 9\" was partially leaked in January 1994, its music video was directed by Ice-T.  However Gripsta's debut single was never officially released.  The Tuff Break label on A&M records was dropped before her scheduled release date.  She was later featured on \"The Seventh Deadly Sin\", Ice-T's 7th album, Released: October 12, 1999 as well as numerous features on record label Def Jam's \"The Murda Squad\" album.  She worked with many artists under that association including South Central Cartel, Spice One and Sh'killa.  Gripsta was also featured in a principal role in the movie \"Dangerous Minds\" in which she played one of the many troubled teens that actress Michelle Pfeiffer sought to reform.  Other acting credits include a guest star appearance in the \"Leaving the Life\" episode of the CBS television show \"Promised Land\", a semi popular spin-off of CBS more successful show \"Touched by an Angel\".  Gripsta has since changed her name to Egypt.\n\nSharknado: The 4th Awakens: Sharknado: The 4th Awakens is a 2016 American disaster comedy sci-fi horror television film and the fourth installment in the \"Sharknado\" film series, following \"Sharknado\", \"\", and \"\".  The film was directed by Anthony C. Ferrante with Ian Ziering, Tara Reid, David Hasselhoff and Ryan Newman reprising their roles from the previous installments.  New people joining the cast in the film include Tommy Davidson, Masiela Lusha, Imani Hakim, Cheryl Tiegs and Gary Busey.  The film premiered on Syfy in the United States on July 31, 2016.  Though the film title, poster, and intro are a parody of the 2015 film \",\" it is not a mockbuster.\n\nQuestion: What show was the actress Masiela Lusha from Sharknado featured in?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actress_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actress in question.\"\n    },\n    \"film_context\": {\n      \"type\": \"string\",\n      \"description\": \"The film mentioned in the question that the actress was featured in.\"\n    },\n    \"tv_show_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"show_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the television show the actress was featured in.\"\n        },\n        \"role_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the character played by the actress in the TV show.\"\n        },\n        \"network\": {\n          \"type\": \"string\",\n          \"description\": \"The network that syndicated the TV show.\"\n        },\n        \"awards_received\": {\n          \"type\": \"array\",\n          \"items\": {\n            \"type\": \"string\"\n          },\n          \"description\": \"Awards received for the role in the TV show.\"\n        }\n      },\n      \"required\": [\n        \"show_name\",\n        \"role_name\",\n        \"network\",\n        \"awards_received\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"actress_name\",\n    \"film_context\",\n    \"tv_show_details\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actress_name",
-    "film_context",
-    "tv_show_details"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actress_name": {
+        "type": "string",
+        "description": "The name of the actress in question."
+      },
+      "film_context": {
+        "type": "string",
+        "description": "The film mentioned in the question that the actress was featured in."
+      },
+      "tv_show_details": {
+        "type": "object",
+        "properties": {
+          "show_name": {
+            "type": "string",
+            "description": "The name of the television show the actress was featured in."
+          },
+          "role_name": {
+            "type": "string",
+            "description": "The name of the character played by the actress in the TV show."
+          },
+          "network": {
+            "type": "string",
+            "description": "The network that syndicated the TV show."
+          },
+          "awards_received": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Awards received for the role in the TV show."
+          }
+        },
+        "required": [
+          "show_name",
+          "role_name",
+          "network",
+          "awards_received"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "actress_name",
+      "film_context",
+      "tv_show_details"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

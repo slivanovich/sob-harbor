@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Military Order of Foreign Wars: The Military Order of Foreign Wars of the United States (MOFW) is one of the oldest veterans' and hereditary associations in the nation with a membership that includes officers and their hereditary descendants from all of the Armed Services.  Membership is composed of active duty, reserve and retired officers of the United States Armed Services, including the Coast Guard, National Guard, and allied officers, and their descendants, who have served during one of the wars in which the United States has or is engaged with a foreign power.
-
-Joint Chiefs of Staff (South Korea): The Joint Chiefs of Staff of the Republic of Korea (Korean: 대한민국 합동참모본부, Hanja: 大韓民國 合同參謀本部) is a group of Chiefs from each major branch of the armed services in the Republic of Korea Armed Forces.  Unlike the United States counterpart, the Chairman of the Joint Chiefs of Staff has Operational Control over all military personnel of the Armed Forces.  The National Command Authority runs from the President and the Minister of National Defense to the Chairman of the Joint Chiefs of Staff and then to Operational Commands of the service branches, bypassing the Headquarters of each service branch.  Currently there are five Operational Commands in the Army, two in the Navy (including the Marine Corps) and one in the Air Force.
-
-Eternal Father, Strong to Save: "Eternal Father, Strong to Save" is a hymn traditionally associated with seafarers, particularly in the maritime armed services.  Written in 1860, its author William Whiting was inspired by the dangers of the sea described in Psalm 107.  It was popularised by the Royal Navy and the United States Navy in the late 19th century, and variations of it were soon adopted by many branches of the armed services in the United Kingdom and the United States.  Services who have adapted the hymn include the Royal Marines, Royal Air Force, the British Army, the United States Coast Guard and the United States Marine Corps, as well as many navies of the British Commonwealth.  Accordingly, it is known by many names, variously referred to as the Hymn of Her Majesty's Armed Forces, the Royal Navy Hymn, the United States Navy Hymn (or just The Navy Hymn), and sometimes by the last line of its first verse, "For Those in Peril on the Sea".  The hymn has a long tradition in civilian maritime contexts as well, being regularly invoked by ship's chaplains and sung during services on ocean crossings.
-
-United States Senate Committee on Armed Services: The Committee on Armed Services (sometimes abbreviated SASC for "Senate Armed Services Committee" on its Web site) is a committee of the United States Senate empowered with legislative oversight of the nation's military, including the Department of Defense, military research and development, nuclear energy (as pertaining to national security), benefits for members of the military, the Selective Service System and other matters related to defense policy.  The Armed Services Committee was created as a result of the Legislative Reorganization Act of 1946 following U.S. victory in the Second World War.  It merged the responsibilities of the Committee on Naval Affairs (established in 1816) and the Committee on Military Affairs (also established in 1816).
-
-James Meredith: James Howard Meredith (born June 25, 1933) is a Civil Rights Movement figure, writer, political adviser and Air Force veteran.  In 1962, he became the first African-American student admitted to the segregated University of Mississippi, after the intervention of the federal government, an event that was a flashpoint in the Civil Rights Movement.  Inspired by President John F. Kennedy's inaugural address, Meredith decided to exercise his constitutional rights and apply to the University of Mississippi.  His goal was to put pressure on the Kennedy administration to enforce civil rights for African Americans.
-
-Women in the military in Europe: European countries have had varying policies that confine women and military service or the extent of their participation in the national armed services of their respective countries, especially combatant roles in armed conflicts or hostile environments.  While most of the countries have always allowed women to participate in military activities involving no direct aggression with the enemy, most began seeing the value of servicewomen in the armed services during the First World War when they began losing unprecedented numbers of servicemen.  In modern times many of the European countries now allow women to voluntarily pursue a career path or profession in the national armed services of their country as well as permit conscription equality, with minimal or no restrictions at all.
-
-Ceylon Armed Services Long Service Medal: The Ceylon Armed Services Long Service Medal (Sinhala: ආරක්ෂක සේවා ධීර්ග සේවා පදක්කම "ārakśaka sēvā dhīrgha sēvā padakkama") was a service medal of Ceylon from 1968 to 1972.  It was granted to all ranks of the regular forces of the Ceylon Army, Royal Ceylon Navy and Royal Ceylon Air Force provided they had completed 12 years of service.  It was replaced by the Sri Lanka Armed Services Long Service Medal in 1972 when Sri Lanka became a republic.
-
-Gwendolyn Elaine Armstrong: Gwendolyn Elaine Armstrong was a black Mississippi pioneer in the Civil Rights Movement.  In September, 1965, she and Raylawni Branch, both local natives, integrated the University of Southern Mississippi at Hattiesburg.  They thus completed the process of breaking the segregation barriers at Mississippi’s universities which had been begun by Clyde Kennard at (then) Mississippi Southern College (1956–61) and carried forward by James Meredith at the University of Mississippi (September, 1962) and Richard Holmes at Mississippi State University (July, 1965).
-
-United States House Committee on Armed Services: The U.S. House Committee on Armed Services, commonly known as the House Armed Services Committee, is a standing committee of the United States House of Representatives.  It is responsible for funding and oversight of the Department of Defense (DOD) and the United States armed forces, as well as substantial portions of the Department of Energy.
-
-Ceylon Armed Services Inauguration Medal: The Ceylon Armed Services Inauguration Medal was awarded to members of the Ceylon armed services who served within their specific service branch during periods in 1949-1951 when their service branch was established:<br>
-
-Question: Gwendolyn Elaine Armstrong, along with a veteran of which branch of the armed services, attempted to integrate universities in the South?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "veteran_name": {
-      "type": "string",
-      "description": "The name of the veteran involved in university integration."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "armed_service_branch": {
-      "type": "string",
-      "description": "The branch of the armed services the veteran served in."
-    },
-    "integration_target_university": {
-      "type": "string",
-      "description": "The university the veteran integrated."
-    },
-    "integration_year": {
-      "type": "integer",
-      "description": "The year the veteran integrated the university."
-    },
-    "related_civil_rights_figure": {
-      "type": "string",
-      "description": "The name of the other civil rights figure mentioned in the question context."
+    {
+      "role": "user",
+      "content": "Context:\nMilitary Order of Foreign Wars: The Military Order of Foreign Wars of the United States (MOFW) is one of the oldest veterans' and hereditary associations in the nation with a membership that includes officers and their hereditary descendants from all of the Armed Services.  Membership is composed of active duty, reserve and retired officers of the United States Armed Services, including the Coast Guard, National Guard, and allied officers, and their descendants, who have served during one of the wars in which the United States has or is engaged with a foreign power.\n\nJoint Chiefs of Staff (South Korea): The Joint Chiefs of Staff of the Republic of Korea (Korean: 대한민국 합동참모본부, Hanja: 大韓民國 合同參謀本部) is a group of Chiefs from each major branch of the armed services in the Republic of Korea Armed Forces.  Unlike the United States counterpart, the Chairman of the Joint Chiefs of Staff has Operational Control over all military personnel of the Armed Forces.  The National Command Authority runs from the President and the Minister of National Defense to the Chairman of the Joint Chiefs of Staff and then to Operational Commands of the service branches, bypassing the Headquarters of each service branch.  Currently there are five Operational Commands in the Army, two in the Navy (including the Marine Corps) and one in the Air Force.\n\nEternal Father, Strong to Save: \"Eternal Father, Strong to Save\" is a hymn traditionally associated with seafarers, particularly in the maritime armed services.  Written in 1860, its author William Whiting was inspired by the dangers of the sea described in Psalm 107.  It was popularised by the Royal Navy and the United States Navy in the late 19th century, and variations of it were soon adopted by many branches of the armed services in the United Kingdom and the United States.  Services who have adapted the hymn include the Royal Marines, Royal Air Force, the British Army, the United States Coast Guard and the United States Marine Corps, as well as many navies of the British Commonwealth.  Accordingly, it is known by many names, variously referred to as the Hymn of Her Majesty's Armed Forces, the Royal Navy Hymn, the United States Navy Hymn (or just The Navy Hymn), and sometimes by the last line of its first verse, \"For Those in Peril on the Sea\".  The hymn has a long tradition in civilian maritime contexts as well, being regularly invoked by ship's chaplains and sung during services on ocean crossings.\n\nUnited States Senate Committee on Armed Services: The Committee on Armed Services (sometimes abbreviated SASC for \"Senate Armed Services Committee\" on its Web site) is a committee of the United States Senate empowered with legislative oversight of the nation's military, including the Department of Defense, military research and development, nuclear energy (as pertaining to national security), benefits for members of the military, the Selective Service System and other matters related to defense policy.  The Armed Services Committee was created as a result of the Legislative Reorganization Act of 1946 following U.S. victory in the Second World War.  It merged the responsibilities of the Committee on Naval Affairs (established in 1816) and the Committee on Military Affairs (also established in 1816).\n\nJames Meredith: James Howard Meredith (born June 25, 1933) is a Civil Rights Movement figure, writer, political adviser and Air Force veteran.  In 1962, he became the first African-American student admitted to the segregated University of Mississippi, after the intervention of the federal government, an event that was a flashpoint in the Civil Rights Movement.  Inspired by President John F. Kennedy's inaugural address, Meredith decided to exercise his constitutional rights and apply to the University of Mississippi.  His goal was to put pressure on the Kennedy administration to enforce civil rights for African Americans.\n\nWomen in the military in Europe: European countries have had varying policies that confine women and military service or the extent of their participation in the national armed services of their respective countries, especially combatant roles in armed conflicts or hostile environments.  While most of the countries have always allowed women to participate in military activities involving no direct aggression with the enemy, most began seeing the value of servicewomen in the armed services during the First World War when they began losing unprecedented numbers of servicemen.  In modern times many of the European countries now allow women to voluntarily pursue a career path or profession in the national armed services of their country as well as permit conscription equality, with minimal or no restrictions at all.\n\nCeylon Armed Services Long Service Medal: The Ceylon Armed Services Long Service Medal (Sinhala: ආරක්ෂක සේවා ධීර්ග සේවා පදක්කම \"ārakśaka sēvā dhīrgha sēvā padakkama\") was a service medal of Ceylon from 1968 to 1972.  It was granted to all ranks of the regular forces of the Ceylon Army, Royal Ceylon Navy and Royal Ceylon Air Force provided they had completed 12 years of service.  It was replaced by the Sri Lanka Armed Services Long Service Medal in 1972 when Sri Lanka became a republic.\n\nGwendolyn Elaine Armstrong: Gwendolyn Elaine Armstrong was a black Mississippi pioneer in the Civil Rights Movement.  In September, 1965, she and Raylawni Branch, both local natives, integrated the University of Southern Mississippi at Hattiesburg.  They thus completed the process of breaking the segregation barriers at Mississippi’s universities which had been begun by Clyde Kennard at (then) Mississippi Southern College (1956–61) and carried forward by James Meredith at the University of Mississippi (September, 1962) and Richard Holmes at Mississippi State University (July, 1965).\n\nUnited States House Committee on Armed Services: The U.S. House Committee on Armed Services, commonly known as the House Armed Services Committee, is a standing committee of the United States House of Representatives.  It is responsible for funding and oversight of the Department of Defense (DOD) and the United States armed forces, as well as substantial portions of the Department of Energy.\n\nCeylon Armed Services Inauguration Medal: The Ceylon Armed Services Inauguration Medal was awarded to members of the Ceylon armed services who served within their specific service branch during periods in 1949-1951 when their service branch was established:<br>\n\nQuestion: Gwendolyn Elaine Armstrong, along with a veteran of which branch of the armed services, attempted to integrate universities in the South?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"veteran_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the veteran involved in university integration.\"\n    },\n    \"armed_service_branch\": {\n      \"type\": \"string\",\n      \"description\": \"The branch of the armed services the veteran served in.\"\n    },\n    \"integration_target_university\": {\n      \"type\": \"string\",\n      \"description\": \"The university the veteran integrated.\"\n    },\n    \"integration_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the veteran integrated the university.\"\n    },\n    \"related_civil_rights_figure\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the other civil rights figure mentioned in the question context.\"\n    }\n  },\n  \"required\": [\n    \"veteran_name\",\n    \"armed_service_branch\",\n    \"integration_target_university\",\n    \"integration_year\",\n    \"related_civil_rights_figure\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "veteran_name",
-    "armed_service_branch",
-    "integration_target_university",
-    "integration_year",
-    "related_civil_rights_figure"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "veteran_name": {
+        "type": "string",
+        "description": "The name of the veteran involved in university integration."
+      },
+      "armed_service_branch": {
+        "type": "string",
+        "description": "The branch of the armed services the veteran served in."
+      },
+      "integration_target_university": {
+        "type": "string",
+        "description": "The university the veteran integrated."
+      },
+      "integration_year": {
+        "type": "integer",
+        "description": "The year the veteran integrated the university."
+      },
+      "related_civil_rights_figure": {
+        "type": "string",
+        "description": "The name of the other civil rights figure mentioned in the question context."
+      }
+    },
+    "required": [
+      "veteran_name",
+      "armed_service_branch",
+      "integration_target_university",
+      "integration_year",
+      "related_civil_rights_figure"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

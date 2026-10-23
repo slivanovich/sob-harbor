@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Paul Williams (The Young and the Restless): Paul Williams is a fictional character on the American CBS soap opera "The Young and the Restless".  Paul was introduced to the show on May 23, 1978, and has been portrayed by Doug Davidson ever since.  He has been a regular for 39 years.  Initially Paul was a "bad boy", who had a romance with Nikki Newman (Melody Thomas Scott), giving her an STD.  The relationship ultimately ended, but the two have remained friends since.  After a year on the series, Bell gave the character a proper backstory, surname and family.  This included his notoriously unstable sister Patty Williams (Stacey Haiduk).  After a failed marriage to April Stevens (Cynthia Eilbacher)—who gave birth to his daughter Heather Stevens (Jennifer Landon)—focus turned towards Paul's career as a private investigator, as well as his relationship and eventual marriage to and later divorce from Lauren Fenmore (Tracey Bregman).  Paul's string of unsuccessful romances with women—including his ill-fated bride Cindy Lake (DeAnna Robbins), and Cassandra Rawlins (Nina Arvesen), the wife of one of his clients—continued.  Over the years, Paul continued to become heavily involved in various storylines as a private investigator.
-
-Thomas Magnum: Thomas Sullivan Magnum IV is the fictional main character and namesake of the popular American television series, "Magnum, P.I.", which aired from 1980 to 1988.  Magnum is portrayed by Tom Selleck.  As the title suggests, he is a private investigator in Hawaii.
-
-Monte Walsh (2003 film): Monte Walsh is a 2003 Western television film directed by Simon Wincer and starring Tom Selleck, Isabella Rosellini, and Keith Carradine.  Loosely based on the 1963 Western novel "Monte Walsh" by Jack Schaefer, the film is about two long-time cowboys whose solitary and predictable lives on the range are inexorably changed when a fellow cowhand becomes involved with rustling and killing.  Set in Wyoming and filmed in Alberta, Canada, "Monte Walsh" is a remake of the 1970 theatrical film "Monte Walsh", starring Lee Marvin.  The script is nearly word-for-word identical to the original (original screenwriters David Zelag Goodman and Lukas Heller are credited) and a lot of set-ups and shots are the same as well, but Selleck plays a much more amiable and kind Walsh, to the point that some of the harsher lines attributed to Marvin's Walsh are given to other characters to soften the title character's personality to match Selleck's more affable style.  In 2003, "Monte Walsh" received an Emmy Award nomination for Outstanding Sound Editing for a Miniseries, Movie or a Special, and in 2004, the film received the Western Heritage Awards Bronze Wrangler for Outstanding Television Feature Film.
-
-Larry Manetti: Lawrence Francis "Larry" Manetti (born July 23, 1947) is an American actor best known for his role as Orville Wilbur Richard "Rick" Wright on the long-running CBS television series "Magnum P.I." which starred Tom Selleck as the title character.  He also starred as Maj. Pappy Boyington's (played by Robert Conrad) pilot partner 1LT Robert A. "Bob/Bobby" Boyle in "Baa Baa Black Sheep".
-
-Magnum, P.I.: Magnum, P.I. is an American crime drama television series starring Tom Selleck as Thomas Magnum, a private investigator living on Oahu, Hawaii.  The series ran from 1980 to 1988 during its first-run broadcast on the American television network CBS.  According to the Nielsen ratings, "Magnum, P.I." consistently ranked in the top twenty U.S. television programs during the first five years of its original run in the United States.
-
-Jesse Stone: Lost in Paradise: Jesse Stone: Lost in Paradise is a 2015 American television crime drama film directed by Robert Harmon and starring Tom Selleck, Mackenzie Foy, William Devane, and Luke Perry.  Written by Tom Selleck and Michael Brandman, the film is about a former police chief who investigates the murder of the apparent fourth victim of a brutal serial killer.  Filmed on location in Lunenburg and Halifax, Nova Scotia, "Jesse Stone: Lost in Paradise" is the latest in a series of nine television films based on the characters of Robert B. Parker's Jesse Stone novels.
-
-Lassiter (film): Lassiter (also known as The Magnificent Thief) is a 1984 American spy adventure action film starring Tom Selleck and Jane Seymour.  The movie was made to cash in on Selleck's popularity as the character Thomas Magnum in the television show "Magnum, P.I.", but it failed to return its budget at the box-office on release.  The "Magnum, P.I." connection is perhaps most clearly seen by the movie poster tagline: "The Magnum Man Hits the Big Screen with a Vengeance".
-
-Tom Selleck: Thomas William Selleck (born January 29, 1945) is an American actor and film producer.  He is known for starring as private investigator Thomas Magnum in the television series "Magnum, P.I." (1980–1988).  He also plays Police Chief Jesse Stone in a series of made-for-TV movies based on Robert B. Parker novels.  Since 2010, he has also been a primary cast member as NYPD Commissioner Frank Reagan in the drama "Blue Bloods" on CBS.
-
-Jesse Stone: No Remorse: Jesse Stone: No Remorse is a 2010 American television crime drama film directed by Robert Harmon and starring Tom Selleck, Kathy Baker, and Kohl Sudduth.  Written by Tom Selleck and Michael Brandman, it is based on the Jesse Stone novels written by Robert B. Parker.  This film is about the police chief of a small New England town who investigates a series of murders in Boston for a state police colleague and uncovers evidence that leads to a notorious mob boss.  Filmed on location in Nova Scotia, the story is set in the fictitious town of Paradise, Massachusetts.
-
-List of Magnum, P.I. episodes: "Magnum, P.I." is an American action drama television series starring Tom Selleck as Thomas Magnum, a private investigator in Hawaii.  The series ran on CBS, which broadcast 162 first-run episodes over eight seasons, from December 11, 1980, to May 8, 1988.
-
-Question: While Tom Selleck is known for starring as private investigator Thomas Magnum in the television series "Magnum, P.I.", what role did Larry Manetti, play on "Magnum, P.I."?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "actor_name": {
-      "type": "string",
-      "description": "The name of the actor."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "series_name": {
-      "type": "string",
-      "description": "The name of the television series."
-    },
-    "character_name": {
-      "type": "string",
-      "description": "The name of the character played by the actor in the series."
-    },
-    "other_star_actor": {
-      "type": "string",
-      "description": "Another prominent actor in the series mentioned in the context."
+    {
+      "role": "user",
+      "content": "Context:\nPaul Williams (The Young and the Restless): Paul Williams is a fictional character on the American CBS soap opera \"The Young and the Restless\".  Paul was introduced to the show on May 23, 1978, and has been portrayed by Doug Davidson ever since.  He has been a regular for 39 years.  Initially Paul was a \"bad boy\", who had a romance with Nikki Newman (Melody Thomas Scott), giving her an STD.  The relationship ultimately ended, but the two have remained friends since.  After a year on the series, Bell gave the character a proper backstory, surname and family.  This included his notoriously unstable sister Patty Williams (Stacey Haiduk).  After a failed marriage to April Stevens (Cynthia Eilbacher)—who gave birth to his daughter Heather Stevens (Jennifer Landon)—focus turned towards Paul's career as a private investigator, as well as his relationship and eventual marriage to and later divorce from Lauren Fenmore (Tracey Bregman).  Paul's string of unsuccessful romances with women—including his ill-fated bride Cindy Lake (DeAnna Robbins), and Cassandra Rawlins (Nina Arvesen), the wife of one of his clients—continued.  Over the years, Paul continued to become heavily involved in various storylines as a private investigator.\n\nThomas Magnum: Thomas Sullivan Magnum IV is the fictional main character and namesake of the popular American television series, \"Magnum, P.I.\", which aired from 1980 to 1988.  Magnum is portrayed by Tom Selleck.  As the title suggests, he is a private investigator in Hawaii.\n\nMonte Walsh (2003 film): Monte Walsh is a 2003 Western television film directed by Simon Wincer and starring Tom Selleck, Isabella Rosellini, and Keith Carradine.  Loosely based on the 1963 Western novel \"Monte Walsh\" by Jack Schaefer, the film is about two long-time cowboys whose solitary and predictable lives on the range are inexorably changed when a fellow cowhand becomes involved with rustling and killing.  Set in Wyoming and filmed in Alberta, Canada, \"Monte Walsh\" is a remake of the 1970 theatrical film \"Monte Walsh\", starring Lee Marvin.  The script is nearly word-for-word identical to the original (original screenwriters David Zelag Goodman and Lukas Heller are credited) and a lot of set-ups and shots are the same as well, but Selleck plays a much more amiable and kind Walsh, to the point that some of the harsher lines attributed to Marvin's Walsh are given to other characters to soften the title character's personality to match Selleck's more affable style.  In 2003, \"Monte Walsh\" received an Emmy Award nomination for Outstanding Sound Editing for a Miniseries, Movie or a Special, and in 2004, the film received the Western Heritage Awards Bronze Wrangler for Outstanding Television Feature Film.\n\nLarry Manetti: Lawrence Francis \"Larry\" Manetti (born July 23, 1947) is an American actor best known for his role as Orville Wilbur Richard \"Rick\" Wright on the long-running CBS television series \"Magnum P.I.\" which starred Tom Selleck as the title character.  He also starred as Maj. Pappy Boyington's (played by Robert Conrad) pilot partner 1LT Robert A. \"Bob/Bobby\" Boyle in \"Baa Baa Black Sheep\".\n\nMagnum, P.I.: Magnum, P.I. is an American crime drama television series starring Tom Selleck as Thomas Magnum, a private investigator living on Oahu, Hawaii.  The series ran from 1980 to 1988 during its first-run broadcast on the American television network CBS.  According to the Nielsen ratings, \"Magnum, P.I.\" consistently ranked in the top twenty U.S. television programs during the first five years of its original run in the United States.\n\nJesse Stone: Lost in Paradise: Jesse Stone: Lost in Paradise is a 2015 American television crime drama film directed by Robert Harmon and starring Tom Selleck, Mackenzie Foy, William Devane, and Luke Perry.  Written by Tom Selleck and Michael Brandman, the film is about a former police chief who investigates the murder of the apparent fourth victim of a brutal serial killer.  Filmed on location in Lunenburg and Halifax, Nova Scotia, \"Jesse Stone: Lost in Paradise\" is the latest in a series of nine television films based on the characters of Robert B. Parker's Jesse Stone novels.\n\nLassiter (film): Lassiter (also known as The Magnificent Thief) is a 1984 American spy adventure action film starring Tom Selleck and Jane Seymour.  The movie was made to cash in on Selleck's popularity as the character Thomas Magnum in the television show \"Magnum, P.I.\", but it failed to return its budget at the box-office on release.  The \"Magnum, P.I.\" connection is perhaps most clearly seen by the movie poster tagline: \"The Magnum Man Hits the Big Screen with a Vengeance\".\n\nTom Selleck: Thomas William Selleck (born January 29, 1945) is an American actor and film producer.  He is known for starring as private investigator Thomas Magnum in the television series \"Magnum, P.I.\" (1980–1988).  He also plays Police Chief Jesse Stone in a series of made-for-TV movies based on Robert B. Parker novels.  Since 2010, he has also been a primary cast member as NYPD Commissioner Frank Reagan in the drama \"Blue Bloods\" on CBS.\n\nJesse Stone: No Remorse: Jesse Stone: No Remorse is a 2010 American television crime drama film directed by Robert Harmon and starring Tom Selleck, Kathy Baker, and Kohl Sudduth.  Written by Tom Selleck and Michael Brandman, it is based on the Jesse Stone novels written by Robert B. Parker.  This film is about the police chief of a small New England town who investigates a series of murders in Boston for a state police colleague and uncovers evidence that leads to a notorious mob boss.  Filmed on location in Nova Scotia, the story is set in the fictitious town of Paradise, Massachusetts.\n\nList of Magnum, P.I. episodes: \"Magnum, P.I.\" is an American action drama television series starring Tom Selleck as Thomas Magnum, a private investigator in Hawaii.  The series ran on CBS, which broadcast 162 first-run episodes over eight seasons, from December 11, 1980, to May 8, 1988.\n\nQuestion: While Tom Selleck is known for starring as private investigator Thomas Magnum in the television series \"Magnum, P.I.\", what role did Larry Manetti, play on \"Magnum, P.I.\"?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"actor_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the actor.\"\n    },\n    \"series_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the television series.\"\n    },\n    \"character_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the character played by the actor in the series.\"\n    },\n    \"other_star_actor\": {\n      \"type\": \"string\",\n      \"description\": \"Another prominent actor in the series mentioned in the context.\"\n    }\n  },\n  \"required\": [\n    \"actor_name\",\n    \"series_name\",\n    \"character_name\",\n    \"other_star_actor\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "actor_name",
-    "series_name",
-    "character_name",
-    "other_star_actor"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "actor_name": {
+        "type": "string",
+        "description": "The name of the actor."
+      },
+      "series_name": {
+        "type": "string",
+        "description": "The name of the television series."
+      },
+      "character_name": {
+        "type": "string",
+        "description": "The name of the character played by the actor in the series."
+      },
+      "other_star_actor": {
+        "type": "string",
+        "description": "Another prominent actor in the series mentioned in the context."
+      }
+    },
+    "required": [
+      "actor_name",
+      "series_name",
+      "character_name",
+      "other_star_actor"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

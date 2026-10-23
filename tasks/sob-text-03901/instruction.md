@@ -1,72 +1,49 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Davina McCall: Davina Lucy Pascale McCall (born 16 October 1967) is an English television presenter and model.  She was the presenter of "Big Brother" during its run on Channel 4 between 2000 and 2010.  She has also hosted Channel 4's "The Million Pound Drop", "Five Minutes to a Fortune" and "The Jump" as well as ITV's "Long Lost Family" and "This Time Next Year".
-
-Malin Gramer: Malin Gramer, (born 26 April 1978) is a Swedish actress and television presenter.  Gramer starred in the film Trekant in 2004 in which she had the lead role.  She has presented the kids show Lattjo Lajban broadcast on TV4, and the game show Lyckochansen at TV3.  In 2011 Gramer presented Fråga Olle, which was broadcast on Kanal5 and in 2013 she also hosted Min man kan on the same channel.  Since 2013 she is also presenting Paradise Hotel on TV3, while she has also co-hosted Talang Sverige 2014 along with Adam Alsing, she also presented the show Jagad av hundar.
-
-Ray Shah: Ray Shah (born 31 January 1978) came to prominence in public life as a contestant on the Channel 4 reality programme Big Brother, in which he finished second.  Since his exit from the Big Brother house, Shah entered a career in the entertainment industry in Ireland.  He has been presenter on Dublin's Q102 radio station.  He also presented his own television show "On The Box" on Dublin's City Channel.  Guests on this show have included Dave Couse and former Eurovision contestant Mickey Joe Harte.
-
-Five Minutes to a Fortune: Five Minutes to a Fortune is a British game show, which aired on Channel 4 from 6 April 2013 to 5 May 2013 and was hosted by Davina McCall.  It offered pairs of contestants the chance to win a top prize of £50,000 (or £100,000 for celebrity specials).  The show aired weekdays at 5:00pm but was unable to generate high ratings to compete with ITV's "The Chase" and BBC's "Pointless", both of which air roughly in the same timeslot.
-
-Ed Hall (television presenter): Ed Hall (born 16 March 1974) in Ascot, Berkshire is a British television presenter best known for being a co-presenter on BBC daytime television show "To Buy or Not to Buy".  He began his broadcast career as a reporter for "The Sunday Show".  He has also presented the Channel 4 paintball show "XFire" and acted as an interviewer for the first two series of "Techno Games".
-
-Clive Holland: Clive Holland is an English television and radio presenter.  From 2009 to 2013 he presented the BBC One daytime show "Cowboy Trap".  He has also presented other programmes such as GMTV and Channel 4’s "‘Big Big’ Holiday Show" and on stage at the Ideal Home Show, the RHS Hampton Court Flower Show and London Fashion Week.
-
-Nelufar Hedayat: Nelufar Hedayat (born 1 January 1988) is a journalist and presenter for Fusion Media Network who has worked across the BBC, Channel 4 and international broadcasters.  Nelufar’s work has often focused on cultural upheaval experienced by women, children and families in conflict and hostile places.  In the six years Nelufar worked for the BBC, she has presented, co-produced and written documentaries for television and radio, including the award winning Women, Weddings, War and Me, Shot for Going to School and Music, Money & Hip Hop Honeys.  She has also presented and hosted the flagship live news programme Newsround for 3 years winning an award for her short film The Kids of Kabul.
-
-Terry Christian: Terence "Terry" Christian (born 8 May 1960) is an English broadcaster, journalist and author.  He has presented television series including Channel 4's late night Youth Entertainment show "The Word" and ITV1 moral issues talk show "It's My Life".  He also presented two series of "Turn On Terry" with regular guest Tony Wilson and numerous other programmes for ITV, MTV, VH1, Channel 4 as well as a variety of different local and national radio programmes on stations including Radio 4, BBC6 Music, Talksport, Century Radio, Key 103, Signal and BBC's Radio Derby and Manchester.
-
-Chantelle Fiddy: Chantelle Fiddy is a British journalist, columnist, event promoter and music industry professional.  She is well known as a commentator on London's grime scene and as a social activist as the former editor of Ctrl.Alt.Shift.  She is currently contributing editor at RWD Magazine and urban editor at Mixmag.  Her work has also appeared in i-D, Dazed & Confused, Sunday Times Style, The Guardian and The London Paper.  She has also worked in television and radio.  She was a featured presenter in Channel 4's 'Generation Next' series and has appeared as a guest on BBC Radio 1's Review Show.  She also presented a 40-minute documentary on Lady Sovereign for BBC 1Xtra.  Fiddy is one of the tastemakers who puts together the BBC's 'Sound of' List.  In 2013 Fiddy starred in the BBC documentary series VIP People, with pop star A*M*E, and went behind-the-scenes on how to make a fanzine and how to become a successful recording artist.  Fiddy is soon to feature in the latest "Channel 4" style series by "Ewen Spencer".
-
-Rick Edwards: Richard Philip "Rick" Edwards (born 20 May 1979 in Enfield, London) is an English television presenter who works mainly for Channel 4, E4 and ITV2.  Edwards presented T4 for four years, and has also presented "Tool Academy", "Freshly Squeezed", "E4 Music" and much of Channel 4's 2012 Paralympics coverage.
-
-Question: Five Minutes to a Fortune in 2013 was hosted by a presenter who also presented what show during its run on Channel 4?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "host_name": {
-      "type": "string",
-      "description": "The name of the presenter who hosted 'Five Minutes to a Fortune'."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "show_in_question": {
-      "type": "string",
-      "description": "The name of the show mentioned in the question."
-    },
-    "channel_of_show_in_question": {
-      "type": "string",
-      "description": "The channel on which the show in question aired."
-    },
-    "other_shows_on_channel_by_host": {
-      "type": "array",
-      "description": "A list of other shows hosted by the same presenter on the specified channel.",
-      "items": {
-        "type": "string"
+    {
+      "role": "user",
+      "content": "Context:\nDavina McCall: Davina Lucy Pascale McCall (born 16 October 1967) is an English television presenter and model.  She was the presenter of \"Big Brother\" during its run on Channel 4 between 2000 and 2010.  She has also hosted Channel 4's \"The Million Pound Drop\", \"Five Minutes to a Fortune\" and \"The Jump\" as well as ITV's \"Long Lost Family\" and \"This Time Next Year\".\n\nMalin Gramer: Malin Gramer, (born 26 April 1978) is a Swedish actress and television presenter.  Gramer starred in the film Trekant in 2004 in which she had the lead role.  She has presented the kids show Lattjo Lajban broadcast on TV4, and the game show Lyckochansen at TV3.  In 2011 Gramer presented Fråga Olle, which was broadcast on Kanal5 and in 2013 she also hosted Min man kan on the same channel.  Since 2013 she is also presenting Paradise Hotel on TV3, while she has also co-hosted Talang Sverige 2014 along with Adam Alsing, she also presented the show Jagad av hundar.\n\nRay Shah: Ray Shah (born 31 January 1978) came to prominence in public life as a contestant on the Channel 4 reality programme Big Brother, in which he finished second.  Since his exit from the Big Brother house, Shah entered a career in the entertainment industry in Ireland.  He has been presenter on Dublin's Q102 radio station.  He also presented his own television show \"On The Box\" on Dublin's City Channel.  Guests on this show have included Dave Couse and former Eurovision contestant Mickey Joe Harte.\n\nFive Minutes to a Fortune: Five Minutes to a Fortune is a British game show, which aired on Channel 4 from 6 April 2013 to 5 May 2013 and was hosted by Davina McCall.  It offered pairs of contestants the chance to win a top prize of £50,000 (or £100,000 for celebrity specials).  The show aired weekdays at 5:00pm but was unable to generate high ratings to compete with ITV's \"The Chase\" and BBC's \"Pointless\", both of which air roughly in the same timeslot.\n\nEd Hall (television presenter): Ed Hall (born 16 March 1974) in Ascot, Berkshire is a British television presenter best known for being a co-presenter on BBC daytime television show \"To Buy or Not to Buy\".  He began his broadcast career as a reporter for \"The Sunday Show\".  He has also presented the Channel 4 paintball show \"XFire\" and acted as an interviewer for the first two series of \"Techno Games\".\n\nClive Holland: Clive Holland is an English television and radio presenter.  From 2009 to 2013 he presented the BBC One daytime show \"Cowboy Trap\".  He has also presented other programmes such as GMTV and Channel 4’s \"‘Big Big’ Holiday Show\" and on stage at the Ideal Home Show, the RHS Hampton Court Flower Show and London Fashion Week.\n\nNelufar Hedayat: Nelufar Hedayat (born 1 January 1988) is a journalist and presenter for Fusion Media Network who has worked across the BBC, Channel 4 and international broadcasters.  Nelufar’s work has often focused on cultural upheaval experienced by women, children and families in conflict and hostile places.  In the six years Nelufar worked for the BBC, she has presented, co-produced and written documentaries for television and radio, including the award winning Women, Weddings, War and Me, Shot for Going to School and Music, Money & Hip Hop Honeys.  She has also presented and hosted the flagship live news programme Newsround for 3 years winning an award for her short film The Kids of Kabul.\n\nTerry Christian: Terence \"Terry\" Christian (born 8 May 1960) is an English broadcaster, journalist and author.  He has presented television series including Channel 4's late night Youth Entertainment show \"The Word\" and ITV1 moral issues talk show \"It's My Life\".  He also presented two series of \"Turn On Terry\" with regular guest Tony Wilson and numerous other programmes for ITV, MTV, VH1, Channel 4 as well as a variety of different local and national radio programmes on stations including Radio 4, BBC6 Music, Talksport, Century Radio, Key 103, Signal and BBC's Radio Derby and Manchester.\n\nChantelle Fiddy: Chantelle Fiddy is a British journalist, columnist, event promoter and music industry professional.  She is well known as a commentator on London's grime scene and as a social activist as the former editor of Ctrl.Alt.Shift.  She is currently contributing editor at RWD Magazine and urban editor at Mixmag.  Her work has also appeared in i-D, Dazed & Confused, Sunday Times Style, The Guardian and The London Paper.  She has also worked in television and radio.  She was a featured presenter in Channel 4's 'Generation Next' series and has appeared as a guest on BBC Radio 1's Review Show.  She also presented a 40-minute documentary on Lady Sovereign for BBC 1Xtra.  Fiddy is one of the tastemakers who puts together the BBC's 'Sound of' List.  In 2013 Fiddy starred in the BBC documentary series VIP People, with pop star A*M*E, and went behind-the-scenes on how to make a fanzine and how to become a successful recording artist.  Fiddy is soon to feature in the latest \"Channel 4\" style series by \"Ewen Spencer\".\n\nRick Edwards: Richard Philip \"Rick\" Edwards (born 20 May 1979 in Enfield, London) is an English television presenter who works mainly for Channel 4, E4 and ITV2.  Edwards presented T4 for four years, and has also presented \"Tool Academy\", \"Freshly Squeezed\", \"E4 Music\" and much of Channel 4's 2012 Paralympics coverage.\n\nQuestion: Five Minutes to a Fortune in 2013 was hosted by a presenter who also presented what show during its run on Channel 4?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"host_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the presenter who hosted 'Five Minutes to a Fortune'.\"\n    },\n    \"show_in_question\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the show mentioned in the question.\"\n    },\n    \"channel_of_show_in_question\": {\n      \"type\": \"string\",\n      \"description\": \"The channel on which the show in question aired.\"\n    },\n    \"other_shows_on_channel_by_host\": {\n      \"type\": \"array\",\n      \"description\": \"A list of other shows hosted by the same presenter on the specified channel.\",\n      \"items\": {\n        \"type\": \"string\"\n      }\n    },\n    \"answer_show\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the show that answers the question.\"\n    }\n  },\n  \"required\": [\n    \"host_name\",\n    \"show_in_question\",\n    \"channel_of_show_in_question\",\n    \"other_shows_on_channel_by_host\",\n    \"answer_show\"\n  ],\n  \"additionalProperties\": false\n}"
+    }
+  ],
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "host_name": {
+        "type": "string",
+        "description": "The name of the presenter who hosted 'Five Minutes to a Fortune'."
+      },
+      "show_in_question": {
+        "type": "string",
+        "description": "The name of the show mentioned in the question."
+      },
+      "channel_of_show_in_question": {
+        "type": "string",
+        "description": "The channel on which the show in question aired."
+      },
+      "other_shows_on_channel_by_host": {
+        "type": "array",
+        "description": "A list of other shows hosted by the same presenter on the specified channel.",
+        "items": {
+          "type": "string"
+        }
+      },
+      "answer_show": {
+        "type": "string",
+        "description": "The name of the show that answers the question."
       }
     },
-    "answer_show": {
-      "type": "string",
-      "description": "The name of the show that answers the question."
-    }
+    "required": [
+      "host_name",
+      "show_in_question",
+      "channel_of_show_in_question",
+      "other_shows_on_channel_by_host",
+      "answer_show"
+    ],
+    "additionalProperties": false
   },
-  "required": [
-    "host_name",
-    "show_in_question",
-    "channel_of_show_in_question",
-    "other_shows_on_channel_by_host",
-    "answer_show"
-  ],
-  "additionalProperties": false
+  "answer_path": "/tmp/answer.json"
 }

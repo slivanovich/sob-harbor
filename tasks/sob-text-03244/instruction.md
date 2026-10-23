@@ -1,69 +1,46 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-George Lashwood: George Lashwood (25 April 1863 - 20 January 1942) was a popular English singer of the Edwardian era, who performed in music halls throughout the country, especially in London's East End and at seaside locations such as Blackpool.  Born Edward George Wright, Lashwood was known as "the Beau Brummell of the music halls".
-
-Emma (novel): Emma, by Jane Austen, is a novel about youthful hubris and the perils of misconstrued romance.  The novel was first published in December 1815.  As in her other novels, Austen explores the concerns and difficulties of genteel women living in Georgian–Regency England; she also creates a lively comedy of manners among her characters.
-
-Beau Brummell: George Bryan "Beau" Brummell (7 June 1778 – 30 March 1840) was an iconic figure in Regency England, the arbiter of men's fashion, and a friend of the Prince Regent, the future King George IV.  He established the mode of dress for men that rejected overly ornate fashions for one of understated, but perfectly fitted and tailored bespoke garments.  This look was based on dark coats, full-length trousers rather than knee breeches and stockings, and above all immaculate shirt linen and an elaborately knotted cravat.
-
-Clare Darcy: Clare Darcy was the pseudonym used by the American novelist Mary Deasy (1914–1978) for her Regency Romance novels, i.e., novels set in Regency England.  She was born on May 20, 1914 in Cincinnati, Ohio, and died in Ohio in May 1978.  A number of the manuscripts of her Regency novels (as well as of her other works), along with notebooks, scrapbooks, photographs, correspondence, book reviews, etc., are in the collection of the Howard Gottlieb Archival Research Center at Boston University, whose website (see link below) provides further information about the Deasy/Darcy collection.
-
-Nicolas Jenson: Nicholas Jenson (c.1420 – 1480) was a French engraver, pioneer, printer and type designer who carried out most of his work in Venice, Italy.  Jenson acted as Master of the French Royal Mint at Tours, and is credited with being the creator of one of the finest early Roman type faces.  Nicholas Jenson has been something of an iconic figure among students of early printing since the nineteenth century when the aesthete William Morris praised the beauty and perfection of his roman font.  Jenson is an important figure in the early history of printing and a pivotal force in the emergence of Venice as one of the first great centers of the printing press.
-
-Cunningham of Drumquhassle: The Cunninghams of Drumquhassle were a family of the landed gentry in Scotland from the early 16th century to the mid-17th.  They are linked to the Cunninghams of Kilmaurs in Ayrshire, being descended through junior lines via the Cunninghams of Polmaise.  At their greatest extent, their lands included Mugdock-Mitchell and the house at Killermont (in modern-day Bearsden), covering the part of parishes of Strathblane and New Kilpatrick.  John Cunningham, the third laird held several positions of responsibility within the Scottish court, including Master of the Royal Household for James VI and a Collector General of tax during the regency of the Earl of Lennox, but his involvement in the power struggles between the Scottish nobility and the court of Elizabeth I of England also led to his demise and he was executed for treason in 1585.  Over the next century, the family lost its land and power – in the mid-17th century, the Cunninghams sold their country house in Drumquhassle in rural Stirlingshire and it passed to the Govane family.
-
-Slochd Summit: The Slochd Summit ( ; Scottish Gaelic: "An Sloc" ) is a mountain pass on the A9 road and the Highland Main Line Railway in the Scottish Highlands between Inverness and Aviemore.  An old military road also goes through the pass.  National Cycle Network route 7 also goes over the summit, largely following the old A9.
-
-Beau Brummell (disambiguation): Beau Brummell (1778-1840) was an arbiter of fashion in Regency England.
-
-William Jay (minister): The Rev. William Jay (6 May 1769 – 27 December 1853) was an English nonconformist divine who preached for sixty years at Argyle Chapel in Bath.  He is considered to be one of the most eminent English Congregationalist preachers of Regency England; one of the first Independents or Congregationalists to articulate the Great Awakening or Religious Revival championed by George Whitefield and John Wesley.
-
-Mike Neville (newsreader): Michael Neville, MBE (born James Armstrong Briggs, 17 October 1936 – 6 September 2017) was a British broadcaster, best known as a presenter on regional TV news in North East England.  In a 43-year career with the BBC and ITV franchisee Tyne Tees Television, he became an iconic figure in the region and is remembered for his solid presentational style and witty banter.  In 1990, Neville was awarded the MBE for services to broadcasting.
-
-Question: What iconic figure or Regency England also goes by the name of George Lashwood?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "iconic_figure_name": {
-      "type": "string",
-      "description": "The name of the iconic figure from Regency England."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "figure_era": {
-      "type": "string",
-      "description": "The historical era the iconic figure is associated with."
-    },
-    "figure_role": {
-      "type": "string",
-      "description": "A description of the iconic figure's primary role or significance."
-    },
-    "associated_person_name": {
-      "type": "string",
-      "description": "The name of the person who was compared to or associated with the iconic figure."
-    },
-    "association_detail": {
-      "type": "string",
-      "description": "The specific detail describing how the associated person was linked to the iconic figure, explaining the 'also goes by' aspect."
+    {
+      "role": "user",
+      "content": "Context:\nGeorge Lashwood: George Lashwood (25 April 1863 - 20 January 1942) was a popular English singer of the Edwardian era, who performed in music halls throughout the country, especially in London's East End and at seaside locations such as Blackpool.  Born Edward George Wright, Lashwood was known as \"the Beau Brummell of the music halls\".\n\nEmma (novel): Emma, by Jane Austen, is a novel about youthful hubris and the perils of misconstrued romance.  The novel was first published in December 1815.  As in her other novels, Austen explores the concerns and difficulties of genteel women living in Georgian–Regency England; she also creates a lively comedy of manners among her characters.\n\nBeau Brummell: George Bryan \"Beau\" Brummell (7 June 1778 – 30 March 1840) was an iconic figure in Regency England, the arbiter of men's fashion, and a friend of the Prince Regent, the future King George IV.  He established the mode of dress for men that rejected overly ornate fashions for one of understated, but perfectly fitted and tailored bespoke garments.  This look was based on dark coats, full-length trousers rather than knee breeches and stockings, and above all immaculate shirt linen and an elaborately knotted cravat.\n\nClare Darcy: Clare Darcy was the pseudonym used by the American novelist Mary Deasy (1914–1978) for her Regency Romance novels, i.e., novels set in Regency England.  She was born on May 20, 1914 in Cincinnati, Ohio, and died in Ohio in May 1978.  A number of the manuscripts of her Regency novels (as well as of her other works), along with notebooks, scrapbooks, photographs, correspondence, book reviews, etc., are in the collection of the Howard Gottlieb Archival Research Center at Boston University, whose website (see link below) provides further information about the Deasy/Darcy collection.\n\nNicolas Jenson: Nicholas Jenson (c.1420 – 1480) was a French engraver, pioneer, printer and type designer who carried out most of his work in Venice, Italy.  Jenson acted as Master of the French Royal Mint at Tours, and is credited with being the creator of one of the finest early Roman type faces.  Nicholas Jenson has been something of an iconic figure among students of early printing since the nineteenth century when the aesthete William Morris praised the beauty and perfection of his roman font.  Jenson is an important figure in the early history of printing and a pivotal force in the emergence of Venice as one of the first great centers of the printing press.\n\nCunningham of Drumquhassle: The Cunninghams of Drumquhassle were a family of the landed gentry in Scotland from the early 16th century to the mid-17th.  They are linked to the Cunninghams of Kilmaurs in Ayrshire, being descended through junior lines via the Cunninghams of Polmaise.  At their greatest extent, their lands included Mugdock-Mitchell and the house at Killermont (in modern-day Bearsden), covering the part of parishes of Strathblane and New Kilpatrick.  John Cunningham, the third laird held several positions of responsibility within the Scottish court, including Master of the Royal Household for James VI and a Collector General of tax during the regency of the Earl of Lennox, but his involvement in the power struggles between the Scottish nobility and the court of Elizabeth I of England also led to his demise and he was executed for treason in 1585.  Over the next century, the family lost its land and power – in the mid-17th century, the Cunninghams sold their country house in Drumquhassle in rural Stirlingshire and it passed to the Govane family.\n\nSlochd Summit: The Slochd Summit ( ; Scottish Gaelic: \"An Sloc\" ) is a mountain pass on the A9 road and the Highland Main Line Railway in the Scottish Highlands between Inverness and Aviemore.  An old military road also goes through the pass.  National Cycle Network route 7 also goes over the summit, largely following the old A9.\n\nBeau Brummell (disambiguation): Beau Brummell (1778-1840) was an arbiter of fashion in Regency England.\n\nWilliam Jay (minister): The Rev. William Jay (6 May 1769 – 27 December 1853) was an English nonconformist divine who preached for sixty years at Argyle Chapel in Bath.  He is considered to be one of the most eminent English Congregationalist preachers of Regency England; one of the first Independents or Congregationalists to articulate the Great Awakening or Religious Revival championed by George Whitefield and John Wesley.\n\nMike Neville (newsreader): Michael Neville, MBE (born James Armstrong Briggs, 17 October 1936 – 6 September 2017) was a British broadcaster, best known as a presenter on regional TV news in North East England.  In a 43-year career with the BBC and ITV franchisee Tyne Tees Television, he became an iconic figure in the region and is remembered for his solid presentational style and witty banter.  In 1990, Neville was awarded the MBE for services to broadcasting.\n\nQuestion: What iconic figure or Regency England also goes by the name of George Lashwood?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"iconic_figure_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the iconic figure from Regency England.\"\n    },\n    \"figure_era\": {\n      \"type\": \"string\",\n      \"description\": \"The historical era the iconic figure is associated with.\"\n    },\n    \"figure_role\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the iconic figure's primary role or significance.\"\n    },\n    \"associated_person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person who was compared to or associated with the iconic figure.\"\n    },\n    \"association_detail\": {\n      \"type\": \"string\",\n      \"description\": \"The specific detail describing how the associated person was linked to the iconic figure, explaining the 'also goes by' aspect.\"\n    }\n  },\n  \"required\": [\n    \"iconic_figure_name\",\n    \"figure_era\",\n    \"figure_role\",\n    \"associated_person_name\",\n    \"association_detail\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "iconic_figure_name",
-    "figure_era",
-    "figure_role",
-    "associated_person_name",
-    "association_detail"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "iconic_figure_name": {
+        "type": "string",
+        "description": "The name of the iconic figure from Regency England."
+      },
+      "figure_era": {
+        "type": "string",
+        "description": "The historical era the iconic figure is associated with."
+      },
+      "figure_role": {
+        "type": "string",
+        "description": "A description of the iconic figure's primary role or significance."
+      },
+      "associated_person_name": {
+        "type": "string",
+        "description": "The name of the person who was compared to or associated with the iconic figure."
+      },
+      "association_detail": {
+        "type": "string",
+        "description": "The specific detail describing how the associated person was linked to the iconic figure, explaining the 'also goes by' aspect."
+      }
+    },
+    "required": [
+      "iconic_figure_name",
+      "figure_era",
+      "figure_role",
+      "associated_person_name",
+      "association_detail"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

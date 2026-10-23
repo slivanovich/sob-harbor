@@ -1,81 +1,58 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Mayu Iwatani: Mayu Iwatani (岩谷 麻由 , Iwatani Mayu , ring name: 岩谷 麻優) (born February 19, 1993) is a Japanese professional wrestler.  Since making her debut in January 2011, she has worked for the World Wonder Ring Stardom promotion, becoming a one-time World of Stardom Champion, two-time Wonder of Stardom Champion, one-time High Speed Champion, one-time Goddess of Stardom Champion and a three-time Artist of Stardom Champion, while also having won the 2015 and 2016 Cinderella Tournaments.  Iwatani is the only wrestler remaining in Stardom, who has been with the promotion since its inception.  Dave Meltzer of the "Wrestling Observer Newsletter" has called Iwatani and her fellow Stardom workers Io Shirai and Kairi Hojo "three of the best wrestlers in the world".
-
-Pierra Menta: The Pierra Menta has been an annual competition of ski mountaineering at Arêches-Beaufort in the region of Beaufort, Savoie south-eastern France since 1986.  The Pierra Menta is one of the three best known races of the Alps ("les grandes trois de ski de montagne") besides the Patrouille des Glaciers and the Trofeo Mezzalama.
-
-Nishonoseki stable: Nishonoseki stable (二所ノ関部屋 , Nishonoseki-beya ) was a stable of sumo wrestlers, part of the Nishonoseki group of stables ("ichimon") named after it.  It first appeared in the late eighteenth century and was re-established in 1935 by the 32nd Yokozuna Tamanishiki while still active.  The former ōzeki Saganohana produced the stable's greatest wrestler, "yokozuna" Taihō, who won a record for the time of 32 "yūshō" or tournament championships between 1961 and 1971.  The stable's last head coach, former "sekiwake" Kongo, took charge in 1976, when he was adopted by the widow of the previous head.  He has also been on the board of directors of the Japan Sumo Association.  The heya's fortunes declined in later years.  It had no "sekitori" wrestlers after the retirement of Daizen in 2003 and at the end had just three active wrestlers, all in "sandanme" or below (and one of whom, Kasachikara, was 41 years old, and the second oldest active wrestler in sumo).  The naturalisation of a Chinese born rikishi, Ryūtei, opened up another spot in the heya for a foreigner, and a Mongolian "rikishi" was recruited in March 2010, Kengo, but he retired in May 2011 having missed several tournaments due to suffering a traumatic brain injury.
-
-Best of the Super Juniors: The Best of the Super Juniors (often abbreviated BOSJ) is an annual professional wrestling tournament held by New Japan Pro-Wrestling (NJPW), typically in May or June.  Originally known as Top of the Super Juniors, the first tournament was held in 1988 with annual tournaments taking place since 1991.  The wrestlers in the tournament are typically junior heavyweight wrestlers from promotions all over the world.  NJPW has held 28 Super Juniors tournaments.  Two wrestlers have won the tournament three times, Jushin Thunder Liger and Koji Kanemoto, while only one wrestler has won the tournament in two consecutive years as Tiger Mask IV won the tournament in both 2004 and 2005.  Kanemoto holds the record for the most finals appearances, having wrestled eight finals between 1997 and 2009.  Liger has participated in the most tournaments as he has wrestled in all tournaments except the 1995 and 2000 tournaments.  His participation in the 2017 tournament marked his 26th and last Super Junior tournament.
-
-Jaguar Yokota: Rimi Yokota (横田 利美 , Yokota Rimi ) (born July 25, 1961) is a Japanese professional wrestler and later wrestling trainer, who wrestled under the name Jaguar Yokota (ジャガー横田 ) .  She is widely considered one of the greatest female wrestlers of all time, and, during her heyday in the early 1980s, was considered one of the best wrestlers in the world, irrespective of gender.
-
-Kairi Hojo: Kaori Housako (宝迫 香織 , Hōsako Kaori , born September 23, 1988) is a Japanese professional wrestler and actress, currently signed to WWE and assigned to its developmental branch NXT under the ring name Kairi Sane (カイリ・セイン , Kairi Sein ) .
-
-Nygma (wrestler): Nygma (born January 21, 1974) is a Mexican "Luchador", or professional wrestler best known from his appearances in the Mexican professional wrestling promotion Asistencia Asesoría y Administración (AAA) which he has worked for with only short breaks since 1995/1996.  Nygma has been a member of "Los Vatos Locos", a Kiss look-alike group of wrestlers, with whom he held the Mexican National Atómicos Championship.  Nygma was also a part of the Cibernético led group "Los Bizarros".  Currently, he is part of a team called "Los Exóticos", a group of "Exotico", or transvestite wrestlers.  Currently Nygma is a part.  Nygma’s real name is not a matter of public record, as is often the case with masked wrestlers in Mexico where their private lives are kept a secret from the wrestling fans.
-
-The Wrestlers (Luks): The Wrestlers is a 1905 oil painting by George Luks held at the Museum of Fine Arts, Boston in Massachusetts, United States.  "The Wrestlers" is Luks' best-known work.  The painting depicts two nude men wrestling.  He painted it in order to shock members of the Pennsylvania Academy of the Fine Arts whom he called "pink-and-white idiots".  "The Wrestlers" was displayed at the 1908 Ashcan School exhibition.  A 1910 article in "New York World" about the Exhibition of Independent Artists included an image of Luks' "The Wrestlers" despite the fact that the painting did not appear in that exhibition.  In a 1908 diary entry, painter John French Sloan writes that "The Wrestlers" is among the best paintings he ever encountered.  In 1992, art critic Carol Clark identified "The Wrestlers" as one of Luks' best works, calling it "raw, roughly painted" and reflective of Luks' experiences in New York.  In 1996, Allen Guttmann compared Luks' "The Wrestlers" to Thomas Eakins' "Wrestlers" and Max Slevogt's "Wrestling School", writing that all three paintings depict pairs of nude wrestling men lying on the ground in grappling holds.  In the 2009 "Dictionary of Modern and Contemporary Art", Ian Chilvers and John Glaves-Smith write that "The Wrestlers" emulates the "bravura painterly technique of artists such as Manet".
-
-Rayo de Jalisco Sr.: Máximino "Max" Linares Moreno (born November 22, 1932) is a retired Mexican "luchador" (professional wrestler), better known under the ring name Rayo de Jalisco ("The Lightning Bolt from Jalisco").  He is considered to be one of the best wrestlers of his generation.
-
-Lady Apache: Sandra González Calderón (born June 26, 1970) is a Mexican professional wrestler or "luchadora", best known under the ring name Lady Apache.  González's ring name comes from the "family name" of Mario Balbuena González who wrestles under the name Gran Apache; whom she was married to when she made her wrestling debut in 1986 but later divorced.  Through her marriage to Gran Apache she was the step mother of Faby Apache and Mari Apache, both professional wrestlers.  González' second husband was Jesus Alvarado Nieves, better known as "Brazo de Oro", a professional wrestler, head of the wrestlers union and CMLL booker.  Her third and current husband is Edgar Luna Pozos, AAA's Electroshock, she is also the sister-in-law to Charly Manson (Jesus Luna Pozos).  As Lady Apache, González has mainly worked for Consejo Mundial de Lucha Libre (CMLL) and Asistencia Asesoría y Administración (AAA), Mexico's two largest professional wrestling promotions during her career, switching back and forth several times.  González is a three time CMLL World Women's Champion, a two time Mexican National Women's Champion, two time "AAA Reina de Reinas" (Spanish for "Queen of Queens") and one half of the AAA World Mixed Tag Team Championship with husband Electroshock.  On August 20, 2010 it was announced that Lady Apache was pregnant and for that reason had to stop wrestling for at least seven months.  She made her return to the wrestling ring at a CMLL event on July 31, 2011.
-
-Question: What wrestler besides Kairi Hojo and 岩谷 麻優 is known as part of the three best wrestlers in the world?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "wrestler_name": {
-      "type": "string",
-      "description": "The name of the wrestler identified as one of the best."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "recognition_source": {
-      "type": "object",
-      "properties": {
-        "person": {
-          "type": "string",
-          "description": "The person who made the recognition."
-        },
-        "publication": {
-          "type": "string",
-          "description": "The publication associated with the recognition."
-        }
-      },
-      "required": [
-        "person",
-        "publication"
-      ],
-      "additionalProperties": false
-    },
-    "recognition_statement": {
-      "type": "string",
-      "description": "The specific statement of recognition made."
-    },
-    "fellow_recognized_wrestlers": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "Other wrestlers mentioned alongside the identified wrestler in the same recognition."
+    {
+      "role": "user",
+      "content": "Context:\nMayu Iwatani: Mayu Iwatani (岩谷 麻由 , Iwatani Mayu , ring name: 岩谷 麻優) (born February 19, 1993) is a Japanese professional wrestler.  Since making her debut in January 2011, she has worked for the World Wonder Ring Stardom promotion, becoming a one-time World of Stardom Champion, two-time Wonder of Stardom Champion, one-time High Speed Champion, one-time Goddess of Stardom Champion and a three-time Artist of Stardom Champion, while also having won the 2015 and 2016 Cinderella Tournaments.  Iwatani is the only wrestler remaining in Stardom, who has been with the promotion since its inception.  Dave Meltzer of the \"Wrestling Observer Newsletter\" has called Iwatani and her fellow Stardom workers Io Shirai and Kairi Hojo \"three of the best wrestlers in the world\".\n\nPierra Menta: The Pierra Menta has been an annual competition of ski mountaineering at Arêches-Beaufort in the region of Beaufort, Savoie south-eastern France since 1986.  The Pierra Menta is one of the three best known races of the Alps (\"les grandes trois de ski de montagne\") besides the Patrouille des Glaciers and the Trofeo Mezzalama.\n\nNishonoseki stable: Nishonoseki stable (二所ノ関部屋 , Nishonoseki-beya ) was a stable of sumo wrestlers, part of the Nishonoseki group of stables (\"ichimon\") named after it.  It first appeared in the late eighteenth century and was re-established in 1935 by the 32nd Yokozuna Tamanishiki while still active.  The former ōzeki Saganohana produced the stable's greatest wrestler, \"yokozuna\" Taihō, who won a record for the time of 32 \"yūshō\" or tournament championships between 1961 and 1971.  The stable's last head coach, former \"sekiwake\" Kongo, took charge in 1976, when he was adopted by the widow of the previous head.  He has also been on the board of directors of the Japan Sumo Association.  The heya's fortunes declined in later years.  It had no \"sekitori\" wrestlers after the retirement of Daizen in 2003 and at the end had just three active wrestlers, all in \"sandanme\" or below (and one of whom, Kasachikara, was 41 years old, and the second oldest active wrestler in sumo).  The naturalisation of a Chinese born rikishi, Ryūtei, opened up another spot in the heya for a foreigner, and a Mongolian \"rikishi\" was recruited in March 2010, Kengo, but he retired in May 2011 having missed several tournaments due to suffering a traumatic brain injury.\n\nBest of the Super Juniors: The Best of the Super Juniors (often abbreviated BOSJ) is an annual professional wrestling tournament held by New Japan Pro-Wrestling (NJPW), typically in May or June.  Originally known as Top of the Super Juniors, the first tournament was held in 1988 with annual tournaments taking place since 1991.  The wrestlers in the tournament are typically junior heavyweight wrestlers from promotions all over the world.  NJPW has held 28 Super Juniors tournaments.  Two wrestlers have won the tournament three times, Jushin Thunder Liger and Koji Kanemoto, while only one wrestler has won the tournament in two consecutive years as Tiger Mask IV won the tournament in both 2004 and 2005.  Kanemoto holds the record for the most finals appearances, having wrestled eight finals between 1997 and 2009.  Liger has participated in the most tournaments as he has wrestled in all tournaments except the 1995 and 2000 tournaments.  His participation in the 2017 tournament marked his 26th and last Super Junior tournament.\n\nJaguar Yokota: Rimi Yokota (横田 利美 , Yokota Rimi ) (born July 25, 1961) is a Japanese professional wrestler and later wrestling trainer, who wrestled under the name Jaguar Yokota (ジャガー横田 ) .  She is widely considered one of the greatest female wrestlers of all time, and, during her heyday in the early 1980s, was considered one of the best wrestlers in the world, irrespective of gender.\n\nKairi Hojo: Kaori Housako (宝迫 香織 , Hōsako Kaori , born September 23, 1988) is a Japanese professional wrestler and actress, currently signed to WWE and assigned to its developmental branch NXT under the ring name Kairi Sane (カイリ・セイン , Kairi Sein ) .\n\nNygma (wrestler): Nygma (born January 21, 1974) is a Mexican \"Luchador\", or professional wrestler best known from his appearances in the Mexican professional wrestling promotion Asistencia Asesoría y Administración (AAA) which he has worked for with only short breaks since 1995/1996.  Nygma has been a member of \"Los Vatos Locos\", a Kiss look-alike group of wrestlers, with whom he held the Mexican National Atómicos Championship.  Nygma was also a part of the Cibernético led group \"Los Bizarros\".  Currently, he is part of a team called \"Los Exóticos\", a group of \"Exotico\", or transvestite wrestlers.  Currently Nygma is a part.  Nygma’s real name is not a matter of public record, as is often the case with masked wrestlers in Mexico where their private lives are kept a secret from the wrestling fans.\n\nThe Wrestlers (Luks): The Wrestlers is a 1905 oil painting by George Luks held at the Museum of Fine Arts, Boston in Massachusetts, United States.  \"The Wrestlers\" is Luks' best-known work.  The painting depicts two nude men wrestling.  He painted it in order to shock members of the Pennsylvania Academy of the Fine Arts whom he called \"pink-and-white idiots\".  \"The Wrestlers\" was displayed at the 1908 Ashcan School exhibition.  A 1910 article in \"New York World\" about the Exhibition of Independent Artists included an image of Luks' \"The Wrestlers\" despite the fact that the painting did not appear in that exhibition.  In a 1908 diary entry, painter John French Sloan writes that \"The Wrestlers\" is among the best paintings he ever encountered.  In 1992, art critic Carol Clark identified \"The Wrestlers\" as one of Luks' best works, calling it \"raw, roughly painted\" and reflective of Luks' experiences in New York.  In 1996, Allen Guttmann compared Luks' \"The Wrestlers\" to Thomas Eakins' \"Wrestlers\" and Max Slevogt's \"Wrestling School\", writing that all three paintings depict pairs of nude wrestling men lying on the ground in grappling holds.  In the 2009 \"Dictionary of Modern and Contemporary Art\", Ian Chilvers and John Glaves-Smith write that \"The Wrestlers\" emulates the \"bravura painterly technique of artists such as Manet\".\n\nRayo de Jalisco Sr.: Máximino \"Max\" Linares Moreno (born November 22, 1932) is a retired Mexican \"luchador\" (professional wrestler), better known under the ring name Rayo de Jalisco (\"The Lightning Bolt from Jalisco\").  He is considered to be one of the best wrestlers of his generation.\n\nLady Apache: Sandra González Calderón (born June 26, 1970) is a Mexican professional wrestler or \"luchadora\", best known under the ring name Lady Apache.  González's ring name comes from the \"family name\" of Mario Balbuena González who wrestles under the name Gran Apache; whom she was married to when she made her wrestling debut in 1986 but later divorced.  Through her marriage to Gran Apache she was the step mother of Faby Apache and Mari Apache, both professional wrestlers.  González' second husband was Jesus Alvarado Nieves, better known as \"Brazo de Oro\", a professional wrestler, head of the wrestlers union and CMLL booker.  Her third and current husband is Edgar Luna Pozos, AAA's Electroshock, she is also the sister-in-law to Charly Manson (Jesus Luna Pozos).  As Lady Apache, González has mainly worked for Consejo Mundial de Lucha Libre (CMLL) and Asistencia Asesoría y Administración (AAA), Mexico's two largest professional wrestling promotions during her career, switching back and forth several times.  González is a three time CMLL World Women's Champion, a two time Mexican National Women's Champion, two time \"AAA Reina de Reinas\" (Spanish for \"Queen of Queens\") and one half of the AAA World Mixed Tag Team Championship with husband Electroshock.  On August 20, 2010 it was announced that Lady Apache was pregnant and for that reason had to stop wrestling for at least seven months.  She made her return to the wrestling ring at a CMLL event on July 31, 2011.\n\nQuestion: What wrestler besides Kairi Hojo and 岩谷 麻優 is known as part of the three best wrestlers in the world?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"wrestler_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the wrestler identified as one of the best.\"\n    },\n    \"recognition_source\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"person\": {\n          \"type\": \"string\",\n          \"description\": \"The person who made the recognition.\"\n        },\n        \"publication\": {\n          \"type\": \"string\",\n          \"description\": \"The publication associated with the recognition.\"\n        }\n      },\n      \"required\": [\n        \"person\",\n        \"publication\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"recognition_statement\": {\n      \"type\": \"string\",\n      \"description\": \"The specific statement of recognition made.\"\n    },\n    \"fellow_recognized_wrestlers\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"Other wrestlers mentioned alongside the identified wrestler in the same recognition.\"\n    }\n  },\n  \"required\": [\n    \"wrestler_name\",\n    \"recognition_source\",\n    \"recognition_statement\",\n    \"fellow_recognized_wrestlers\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "wrestler_name",
-    "recognition_source",
-    "recognition_statement",
-    "fellow_recognized_wrestlers"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "wrestler_name": {
+        "type": "string",
+        "description": "The name of the wrestler identified as one of the best."
+      },
+      "recognition_source": {
+        "type": "object",
+        "properties": {
+          "person": {
+            "type": "string",
+            "description": "The person who made the recognition."
+          },
+          "publication": {
+            "type": "string",
+            "description": "The publication associated with the recognition."
+          }
+        },
+        "required": [
+          "person",
+          "publication"
+        ],
+        "additionalProperties": false
+      },
+      "recognition_statement": {
+        "type": "string",
+        "description": "The specific statement of recognition made."
+      },
+      "fellow_recognized_wrestlers": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "Other wrestlers mentioned alongside the identified wrestler in the same recognition."
+      }
+    },
+    "required": [
+      "wrestler_name",
+      "recognition_source",
+      "recognition_statement",
+      "fellow_recognized_wrestlers"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

@@ -1,74 +1,51 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-1977–78 UCLA Bruins men's basketball team: The 1977–78 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1977–78 NCAA Division I men's basketball season.  Gary Cunningham, who would be the highest winning percentage coach of all time at UCLA, began his first of two years.  The Bruins started the season ranked 6th in the nation (AP Poll).  The Bruins started the season 4–0 before losing at Notre Dame.  UCLA's team finished 1st in the Pac-8 regular season.  They went undefeated in conference play for the first time since John Wooden's 1972–73 team in the last Pac-8 year, as the conference would add the two Arizona universities, becoming the Pac-10.  UCLA participated the NCAA Tournament where they lost to Arkansas.
-
-1981–82 UCLA Bruins men's basketball team: The 1981–82 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1981–82 NCAA Division I men's basketball season.  Larry Farmer was the new head coach, the fourth since the legendary John Wooden.  The Bruins started the season ranked 2nd in the nation (AP Poll).  On December 19, the Bruins hosted #7 DePaul, winning 87-75.  UCLA's team finished 2nd in the Pac-10 regular season and finished 19th in the AP poll.
-
-UCLA Bruins men's basketball: The UCLA Bruins men's basketball program represents the University of California, Los Angeles (UCLA) in men's college basketball.  Established in 1919, UCLA has won a record 11 NCAA Men's Division I Basketball Championships (tied with the UConn Huskies women's basketball team for most all-time among college basketball teams).  UCLA teams coached by John Wooden won 10 national titles in 12 seasons, from 1964 to 1975, including seven straight from 1967 to 1973.  UCLA went undefeated a record four times, in 1964, 1967, 1972, and 1973.  Coach Jim Harrick led the team to another NCAA title in 1995.  Former coach Ben Howland led UCLA to three consecutive Final Four appearances from 2006 to 2008.  UCLA won 13 consecutive regular season conference titles between 1967 and 1979, an NCAA record they currently share with Kansas, whose streak is currently active.  On March 30, 2013, Steve Alford was named the school's 13th head men's basketball coach.
-
-1987–88 UCLA Bruins men's basketball team: The 1987–88 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1987–88 NCAA Division I men's basketball season.  UCLA hosted the #12 Temple Owls and the #4 North Carolina Tarheels.  UCLA lost their home game to the #3 Wildcats 76-78 in overtime.  The Bruins finished tied for second place in the Pac-10 behind Arizona.  In the Pac-10 Tournament UCLA was upset in their first game vs. Washington St. The Bruins did not play in any post season tournaments after that for the first time in four years.  Walt Hazzard who had played for UCLA under John Wooden, coached for his fourth and final year at UCLA (the longest tenure at this point of any post-Wooden coach).
-
-1988–89 UCLA Bruins men's basketball team: The 1988–89 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1988–89 NCAA Division I men's basketball season.  Jim Harrick began his first year as head coach for the Bruins, being the 6th coach since the legendary John Wooden.  The Bruins were ranked as high as 20th in the AP Poll during the season.  The Bruins finished tied for third place in the Pac-10.  They went on to the NCAA Tournament where they advanced to the second round before losing to North Carolina 88-81.
-
-UCLA Bruins men's basketball retired numbers: The men's college basketball program of the University of California, Los Angeles (UCLA) was founded in 1920 and is known competitively as the UCLA Bruins.  The Bruins have won 11 National Collegiate Athletic Association (NCAA) Men's Division I Basketball Championships, the most of any school.  UCLA players have been assigned jersey numbers ranging from 0 to 78 in the team's history.  The school no longer issues 10 retired numbers in honor of former players.  To qualify, a player must have been a three-time consensus All-American, a consensus national player of the year, or been inducted into the Naismith Memorial Basketball Hall of Fame.  The retired numbers are displayed in the rafters of the Bruins' home arena, Pauley Pavilion.  UCLA's legendary coach John Wooden generally opposed having numbers retired.
-
-1971–72 UCLA Bruins men's basketball team: The 1971–72 UCLA Bruins men's basketball team won the National Collegiate Champion on March 25, 1972, in the Los Angeles Sports Arena with an 81–76 victory over Florida State.  It became the eighth championship in nine years under head coach John Wooden, who was coaching his 25th year at UCLA.  The 1971–72 UCLA basketball team had a record of 30–0, in the process winning its games by an average margin of more than 30 points.  The season was also part of UCLA's NCAA record 88-game winning streak.  The UCLA streak contributed to a personal winning streak that lasted almost five years.  It began "The Walton Years" for Coach Wooden.
-
-John Wooden: John Robert Wooden (October 14, 1910 – June 4, 2010) was an American basketball player and head coach at the University of California at Los Angeles.  Nicknamed the "Wizard of Westwood," he won ten NCAA national championships in a 12-year period as head coach at UCLA, including a record seven in a row.  No other team has won more than two in a row.  Within this period, his teams won an NCAA men's basketball record 88 consecutive games.  Wooden was named national coach of the year six times.  He also won a Helms national championship at Purdue as a player 1931–1932 for a total of 11 national titles, a feat matched only by Geno Auriemma of NCAA women's basketball.
-
-1983–84 UCLA Bruins men's basketball team: The 1983–84 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1983–84 NCAA Division I men's basketball season.  The Bruins started the season ranked 9th in the nation (AP Poll).  On January 28, the Bruins hosted #2 Depaul, losing 68-84.  UCLA beat the #13 (AP Poll) Washington Huskies 73-59, on March 1 for their biggest win of the season.  UCLA's team finished 4th in the Pac-10 and was unranked in the final AP and coaches polls.  This was Larry Farmer's third and final year as head coach of the UCLA Bruins.  The team did not qualify for the NCAA Men's Division I Basketball Championship, and declined an invitation to the National Invitation Tournament.
-
-1991–92 UCLA Bruins men's basketball team: The 1991–92 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1991–92 NCAA Division I men's basketball season.  Jim Harrick coached his fourth year for the Bruins.  The Bruins started the season ranked 11th in the AP Poll and beat the #2 Indiana Hoosiers, 87-72, in their season opener at the Hall of Fame Tip-Off Classic (Springfield, MA).  This UCLA squad won their first 14 games, which was their best start since John Wooden's 1972–73 team.  For the first time since the 1986–87 season, the Bruins were Pac-10 conference champions with a 16–2 conference record (there was no Pac-10 tournament that year).  The Bruins were given a #1 seed in the NCAA Tournament that year, but lost to Indiana in the Elite Eight, 79-106.  UCLA finished ranked 3rd and 4th in the UPI and AP Polls respectively.
-
-Question: what does 1977–78 UCLA Bruins men's basketball team and John Wooden have in common?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "entity_1_name": {
-      "type": "string",
-      "description": "The name of the first entity being compared."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "entity_2_name": {
-      "type": "string",
-      "description": "The name of the second entity being compared."
-    },
-    "common_affiliation_type": {
-      "type": "string",
-      "description": "The type of common affiliation found between the entities."
-    },
-    "common_affiliation_name": {
-      "type": "string",
-      "description": "The name of the common institution or organization they are affiliated with."
-    },
-    "entity_1_role_with_affiliation": {
-      "type": "string",
-      "description": "How the first entity relates to the common affiliation."
-    },
-    "entity_2_role_with_affiliation": {
-      "type": "string",
-      "description": "How the second entity relates to the common affiliation."
+    {
+      "role": "user",
+      "content": "Context:\n1977–78 UCLA Bruins men's basketball team: The 1977–78 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1977–78 NCAA Division I men's basketball season.  Gary Cunningham, who would be the highest winning percentage coach of all time at UCLA, began his first of two years.  The Bruins started the season ranked 6th in the nation (AP Poll).  The Bruins started the season 4–0 before losing at Notre Dame.  UCLA's team finished 1st in the Pac-8 regular season.  They went undefeated in conference play for the first time since John Wooden's 1972–73 team in the last Pac-8 year, as the conference would add the two Arizona universities, becoming the Pac-10.  UCLA participated the NCAA Tournament where they lost to Arkansas.\n\n1981–82 UCLA Bruins men's basketball team: The 1981–82 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1981–82 NCAA Division I men's basketball season.  Larry Farmer was the new head coach, the fourth since the legendary John Wooden.  The Bruins started the season ranked 2nd in the nation (AP Poll).  On December 19, the Bruins hosted #7 DePaul, winning 87-75.  UCLA's team finished 2nd in the Pac-10 regular season and finished 19th in the AP poll.\n\nUCLA Bruins men's basketball: The UCLA Bruins men's basketball program represents the University of California, Los Angeles (UCLA) in men's college basketball.  Established in 1919, UCLA has won a record 11 NCAA Men's Division I Basketball Championships (tied with the UConn Huskies women's basketball team for most all-time among college basketball teams).  UCLA teams coached by John Wooden won 10 national titles in 12 seasons, from 1964 to 1975, including seven straight from 1967 to 1973.  UCLA went undefeated a record four times, in 1964, 1967, 1972, and 1973.  Coach Jim Harrick led the team to another NCAA title in 1995.  Former coach Ben Howland led UCLA to three consecutive Final Four appearances from 2006 to 2008.  UCLA won 13 consecutive regular season conference titles between 1967 and 1979, an NCAA record they currently share with Kansas, whose streak is currently active.  On March 30, 2013, Steve Alford was named the school's 13th head men's basketball coach.\n\n1987–88 UCLA Bruins men's basketball team: The 1987–88 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1987–88 NCAA Division I men's basketball season.  UCLA hosted the #12 Temple Owls and the #4 North Carolina Tarheels.  UCLA lost their home game to the #3 Wildcats 76-78 in overtime.  The Bruins finished tied for second place in the Pac-10 behind Arizona.  In the Pac-10 Tournament UCLA was upset in their first game vs. Washington St. The Bruins did not play in any post season tournaments after that for the first time in four years.  Walt Hazzard who had played for UCLA under John Wooden, coached for his fourth and final year at UCLA (the longest tenure at this point of any post-Wooden coach).\n\n1988–89 UCLA Bruins men's basketball team: The 1988–89 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1988–89 NCAA Division I men's basketball season.  Jim Harrick began his first year as head coach for the Bruins, being the 6th coach since the legendary John Wooden.  The Bruins were ranked as high as 20th in the AP Poll during the season.  The Bruins finished tied for third place in the Pac-10.  They went on to the NCAA Tournament where they advanced to the second round before losing to North Carolina 88-81.\n\nUCLA Bruins men's basketball retired numbers: The men's college basketball program of the University of California, Los Angeles (UCLA) was founded in 1920 and is known competitively as the UCLA Bruins.  The Bruins have won 11 National Collegiate Athletic Association (NCAA) Men's Division I Basketball Championships, the most of any school.  UCLA players have been assigned jersey numbers ranging from 0 to 78 in the team's history.  The school no longer issues 10 retired numbers in honor of former players.  To qualify, a player must have been a three-time consensus All-American, a consensus national player of the year, or been inducted into the Naismith Memorial Basketball Hall of Fame.  The retired numbers are displayed in the rafters of the Bruins' home arena, Pauley Pavilion.  UCLA's legendary coach John Wooden generally opposed having numbers retired.\n\n1971–72 UCLA Bruins men's basketball team: The 1971–72 UCLA Bruins men's basketball team won the National Collegiate Champion on March 25, 1972, in the Los Angeles Sports Arena with an 81–76 victory over Florida State.  It became the eighth championship in nine years under head coach John Wooden, who was coaching his 25th year at UCLA.  The 1971–72 UCLA basketball team had a record of 30–0, in the process winning its games by an average margin of more than 30 points.  The season was also part of UCLA's NCAA record 88-game winning streak.  The UCLA streak contributed to a personal winning streak that lasted almost five years.  It began \"The Walton Years\" for Coach Wooden.\n\nJohn Wooden: John Robert Wooden (October 14, 1910 – June 4, 2010) was an American basketball player and head coach at the University of California at Los Angeles.  Nicknamed the \"Wizard of Westwood,\" he won ten NCAA national championships in a 12-year period as head coach at UCLA, including a record seven in a row.  No other team has won more than two in a row.  Within this period, his teams won an NCAA men's basketball record 88 consecutive games.  Wooden was named national coach of the year six times.  He also won a Helms national championship at Purdue as a player 1931–1932 for a total of 11 national titles, a feat matched only by Geno Auriemma of NCAA women's basketball.\n\n1983–84 UCLA Bruins men's basketball team: The 1983–84 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1983–84 NCAA Division I men's basketball season.  The Bruins started the season ranked 9th in the nation (AP Poll).  On January 28, the Bruins hosted #2 Depaul, losing 68-84.  UCLA beat the #13 (AP Poll) Washington Huskies 73-59, on March 1 for their biggest win of the season.  UCLA's team finished 4th in the Pac-10 and was unranked in the final AP and coaches polls.  This was Larry Farmer's third and final year as head coach of the UCLA Bruins.  The team did not qualify for the NCAA Men's Division I Basketball Championship, and declined an invitation to the National Invitation Tournament.\n\n1991–92 UCLA Bruins men's basketball team: The 1991–92 UCLA Bruins men's basketball team represented the University of California, Los Angeles in the 1991–92 NCAA Division I men's basketball season.  Jim Harrick coached his fourth year for the Bruins.  The Bruins started the season ranked 11th in the AP Poll and beat the #2 Indiana Hoosiers, 87-72, in their season opener at the Hall of Fame Tip-Off Classic (Springfield, MA).  This UCLA squad won their first 14 games, which was their best start since John Wooden's 1972–73 team.  For the first time since the 1986–87 season, the Bruins were Pac-10 conference champions with a 16–2 conference record (there was no Pac-10 tournament that year).  The Bruins were given a #1 seed in the NCAA Tournament that year, but lost to Indiana in the Elite Eight, 79-106.  UCLA finished ranked 3rd and 4th in the UPI and AP Polls respectively.\n\nQuestion: what does 1977–78 UCLA Bruins men's basketball team and John Wooden have in common?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"entity_1_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the first entity being compared.\"\n    },\n    \"entity_2_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the second entity being compared.\"\n    },\n    \"common_affiliation_type\": {\n      \"type\": \"string\",\n      \"description\": \"The type of common affiliation found between the entities.\"\n    },\n    \"common_affiliation_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the common institution or organization they are affiliated with.\"\n    },\n    \"entity_1_role_with_affiliation\": {\n      \"type\": \"string\",\n      \"description\": \"How the first entity relates to the common affiliation.\"\n    },\n    \"entity_2_role_with_affiliation\": {\n      \"type\": \"string\",\n      \"description\": \"How the second entity relates to the common affiliation.\"\n    }\n  },\n  \"required\": [\n    \"entity_1_name\",\n    \"entity_2_name\",\n    \"common_affiliation_type\",\n    \"common_affiliation_name\",\n    \"entity_1_role_with_affiliation\",\n    \"entity_2_role_with_affiliation\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "entity_1_name",
-    "entity_2_name",
-    "common_affiliation_type",
-    "common_affiliation_name",
-    "entity_1_role_with_affiliation",
-    "entity_2_role_with_affiliation"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "entity_1_name": {
+        "type": "string",
+        "description": "The name of the first entity being compared."
+      },
+      "entity_2_name": {
+        "type": "string",
+        "description": "The name of the second entity being compared."
+      },
+      "common_affiliation_type": {
+        "type": "string",
+        "description": "The type of common affiliation found between the entities."
+      },
+      "common_affiliation_name": {
+        "type": "string",
+        "description": "The name of the common institution or organization they are affiliated with."
+      },
+      "entity_1_role_with_affiliation": {
+        "type": "string",
+        "description": "How the first entity relates to the common affiliation."
+      },
+      "entity_2_role_with_affiliation": {
+        "type": "string",
+        "description": "How the second entity relates to the common affiliation."
+      }
+    },
+    "required": [
+      "entity_1_name",
+      "entity_2_name",
+      "common_affiliation_type",
+      "common_affiliation_name",
+      "entity_1_role_with_affiliation",
+      "entity_2_role_with_affiliation"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

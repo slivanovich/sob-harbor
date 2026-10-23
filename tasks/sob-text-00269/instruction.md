@@ -1,107 +1,84 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Emperor and Galilean: Emperor and Galilean (in Norwegian: "Kejser og Galilæer" ) is a play written by Henrik Ibsen.  Although it is one of the writer's lesser known plays, on several occasions Henrik Ibsen called "Emperor and Galilean" his major work.  "Emperor and Galilean" is written in two complementary parts with five acts in each part and is Ibsen's longest play.
-
-Peer Gynt Prize: The Peer Gynt Prize or the Peer Gynt Award ("Årets Peer Gynt" or "Per Gynt-prisen") is a private Norwegian prize presented annually by the private commercial company "Peer Gynt AS" during the Peer Gynt Festival, also organised by the same company.  The Peer Gynt Prize is named after the main character in "Peer Gynt" (1867), a five-act play in verse by Norwegian dramatist Henrik Ibsen.  The prize is awarded to people or institutions who has marked themselves in a positive way nationally and internationally.  However, the prize has received criticism for misrepresenting the Peer Gynt character, who is portrayed in Ibsen's play as quintessentially immoral and selfish.
-
-Brian Johnston (literary researcher): Brian Johnston (14 April 1932 – 2 March 2013) was a British literary researcher, especially renowned for his works on the Norwegian dramatist Henrik Ibsen (1828–1906), including his three influential books, "The Ibsen Cycle" (1975, revised 1992), "To the Third Empire: Ibsen's Early Plays" (1980), and "Text and Supertext in Ibsen's Drama" (1988).
-
-Love's Comedy: Love's Comedy (Norwegian: "Kjærlighedens Komedie" ) is a comedy by Henrik Ibsen.  It was first published on 31 December 1862.  As a result of being branded an "immoral" work in the press, the Christiania Theatre would not dare to stage it at first.  "The play aroused a storm of hostility," Ibsen wrote in its preface three years later, "more violent and more widespread than most books could boast of having evoked in a community the vast majority of whose members commonly regard matters of literature as being of small concern."  The only person who approved of it at the time, Ibsen later said, was his wife.  He revised the play in 1866, in preparation for its publication "as a Christmas book," as he put it.  His decision to make it more appealing to Danish readers by removing many of its specifically Norwegian words has been taken as an early instance of the expression of his contempt for the contemporary Norwegian campaign to purge the language of its foreign influences.
-
-Peer Gynt: Peer Gynt ( ; ] ) is a five-act play in verse by the Norwegian dramatist Henrik Ibsen published in 1867.  It was illustrated by Arthur Rackham as a children's book in 1936.  Written in Danish—the common written language of Denmark and Norway in Ibsen's lifetime—it is one of the most widely performed Norwegian plays.  Ibsen believed "Per Gynt", the Norwegian fairy tale on which the play is loosely based, to be rooted in fact, and several of the characters are modelled after Ibsen's own family, notably his parents Knud Ibsen and Marichen Altenburg.  He was also generally inspired by Peter Christen Asbjørnsen's collection of Norwegian fairy tales, published in 1845 ("Huldre-Eventyr og Folkesagn").
-
-LoMsk: LoMsk is a Norwegian folk rock band from Lom in Gudbrandsdalen established in 1982.  Their sound is inspired by the folk traditions of the area which they mix with rock influences.  Lars Bakke writes most of the materials for the band and his lyrics are influenced by Nynorsk Norwegian dialect and his tunes by traditional Norwegian traditional melodies, often taking inspiration from local legends and stories.  Their concept album "Bukkerittet" is based on Henrik Ibsen's "Peer Gynt" and their album "Amerikabrevet" on the theme of Norwegian emigration.  The band was nominated for a 2007 Spellemannprisen award equivalent to the Grammies.  In 2012, the band reunited for their 30th anniversary concert.
-
-Ásmegin: Ásmegin is a Norwegian folk/viking metal band formed in 1998.  The name comes from Old Norse and means "By the Might of the Æsir" or "By the Might of the Gods".  Ásmegin's lyrics are written in Norwegian as well as some in Old Norse and older Norwegian.  Some of the tracks on "Hin vordende Sod og Sø" are modeled after the Norwegian play Peer Gynt by Henrik Ibsen.
-
-The League of Youth: The League of Youth (Norwegian: "De unges Forbund" ) is a play by Henrik Ibsen finished in early May 1869.  It was Ibsen's first play in colloquial prose and marks a turning point in his style towards realism and away from verse.  It was widely considered Ibsen's most popular play in nineteenth-century Norway.  Though rooted in serious events of the time, the play was lauded for its natural and witty dialogue, cynical humour and farcical intrigue.
-
-When We Dead Awaken: When We Dead Awaken (Norwegian: "Når vi døde vågner" ) is the last play written by Norwegian dramatist Henrik Ibsen.  Published in December 1899, Ibsen wrote the play between February and November of that year.  The first performance was at the Haymarket Theatre in London, a day or two before publication.
-
-Daniel Haakonsen: Daniel Haakonsen (15 May 1917 – 27 May 1989) was a Norwegian literary historian.  He was born in Bergen, and was married to Vigdis Ystad.  He was appointed professor at the University of Oslo from 1966 to 1984.  His main literary research was on Henrik Ibsen.  He published analysis of several of Ibsen's plays, and the biography "Henrik Ibsen – mennesket og kunstneren" from 1981.
-
-Question: The Norwegian folk rock band from Lom in Gudbrandsdalen established in 1982 based their concept album "Bukkerittet" on what five-act play in verse by the Norwegian dramatist Henrik Ibsen published in 1867?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "play_title": {
-      "type": "string",
-      "description": "The title of the play."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "play_author": {
-      "type": "string",
-      "description": "The author of the play."
-    },
-    "play_details": {
-      "type": "object",
-      "properties": {
-        "publication_year": {
-          "type": "integer",
-          "description": "The year the play was published."
-        },
-        "number_of_acts": {
-          "type": "integer",
-          "description": "The number of acts in the play."
-        },
-        "genre": {
-          "type": "string",
-          "description": "The genre or style of the play (e.g., 'verse play', 'comedy')."
-        }
-      },
-      "required": [
-        "publication_year",
-        "number_of_acts",
-        "genre"
-      ],
-      "additionalProperties": false
-    },
-    "band_information": {
-      "type": "object",
-      "properties": {
-        "band_name": {
-          "type": "string",
-          "description": "The name of the band."
-        },
-        "album_name": {
-          "type": "string",
-          "description": "The name of the concept album."
-        },
-        "band_origin": {
-          "type": "string",
-          "description": "The origin location of the band."
-        },
-        "establishment_year": {
-          "type": "integer",
-          "description": "The year the band was established."
-        }
-      },
-      "required": [
-        "band_name",
-        "album_name",
-        "band_origin",
-        "establishment_year"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nEmperor and Galilean: Emperor and Galilean (in Norwegian: \"Kejser og Galilæer\" ) is a play written by Henrik Ibsen.  Although it is one of the writer's lesser known plays, on several occasions Henrik Ibsen called \"Emperor and Galilean\" his major work.  \"Emperor and Galilean\" is written in two complementary parts with five acts in each part and is Ibsen's longest play.\n\nPeer Gynt Prize: The Peer Gynt Prize or the Peer Gynt Award (\"Årets Peer Gynt\" or \"Per Gynt-prisen\") is a private Norwegian prize presented annually by the private commercial company \"Peer Gynt AS\" during the Peer Gynt Festival, also organised by the same company.  The Peer Gynt Prize is named after the main character in \"Peer Gynt\" (1867), a five-act play in verse by Norwegian dramatist Henrik Ibsen.  The prize is awarded to people or institutions who has marked themselves in a positive way nationally and internationally.  However, the prize has received criticism for misrepresenting the Peer Gynt character, who is portrayed in Ibsen's play as quintessentially immoral and selfish.\n\nBrian Johnston (literary researcher): Brian Johnston (14 April 1932 – 2 March 2013) was a British literary researcher, especially renowned for his works on the Norwegian dramatist Henrik Ibsen (1828–1906), including his three influential books, \"The Ibsen Cycle\" (1975, revised 1992), \"To the Third Empire: Ibsen's Early Plays\" (1980), and \"Text and Supertext in Ibsen's Drama\" (1988).\n\nLove's Comedy: Love's Comedy (Norwegian: \"Kjærlighedens Komedie\" ) is a comedy by Henrik Ibsen.  It was first published on 31 December 1862.  As a result of being branded an \"immoral\" work in the press, the Christiania Theatre would not dare to stage it at first.  \"The play aroused a storm of hostility,\" Ibsen wrote in its preface three years later, \"more violent and more widespread than most books could boast of having evoked in a community the vast majority of whose members commonly regard matters of literature as being of small concern.\"  The only person who approved of it at the time, Ibsen later said, was his wife.  He revised the play in 1866, in preparation for its publication \"as a Christmas book,\" as he put it.  His decision to make it more appealing to Danish readers by removing many of its specifically Norwegian words has been taken as an early instance of the expression of his contempt for the contemporary Norwegian campaign to purge the language of its foreign influences.\n\nPeer Gynt: Peer Gynt ( ; ] ) is a five-act play in verse by the Norwegian dramatist Henrik Ibsen published in 1867.  It was illustrated by Arthur Rackham as a children's book in 1936.  Written in Danish—the common written language of Denmark and Norway in Ibsen's lifetime—it is one of the most widely performed Norwegian plays.  Ibsen believed \"Per Gynt\", the Norwegian fairy tale on which the play is loosely based, to be rooted in fact, and several of the characters are modelled after Ibsen's own family, notably his parents Knud Ibsen and Marichen Altenburg.  He was also generally inspired by Peter Christen Asbjørnsen's collection of Norwegian fairy tales, published in 1845 (\"Huldre-Eventyr og Folkesagn\").\n\nLoMsk: LoMsk is a Norwegian folk rock band from Lom in Gudbrandsdalen established in 1982.  Their sound is inspired by the folk traditions of the area which they mix with rock influences.  Lars Bakke writes most of the materials for the band and his lyrics are influenced by Nynorsk Norwegian dialect and his tunes by traditional Norwegian traditional melodies, often taking inspiration from local legends and stories.  Their concept album \"Bukkerittet\" is based on Henrik Ibsen's \"Peer Gynt\" and their album \"Amerikabrevet\" on the theme of Norwegian emigration.  The band was nominated for a 2007 Spellemannprisen award equivalent to the Grammies.  In 2012, the band reunited for their 30th anniversary concert.\n\nÁsmegin: Ásmegin is a Norwegian folk/viking metal band formed in 1998.  The name comes from Old Norse and means \"By the Might of the Æsir\" or \"By the Might of the Gods\".  Ásmegin's lyrics are written in Norwegian as well as some in Old Norse and older Norwegian.  Some of the tracks on \"Hin vordende Sod og Sø\" are modeled after the Norwegian play Peer Gynt by Henrik Ibsen.\n\nThe League of Youth: The League of Youth (Norwegian: \"De unges Forbund\" ) is a play by Henrik Ibsen finished in early May 1869.  It was Ibsen's first play in colloquial prose and marks a turning point in his style towards realism and away from verse.  It was widely considered Ibsen's most popular play in nineteenth-century Norway.  Though rooted in serious events of the time, the play was lauded for its natural and witty dialogue, cynical humour and farcical intrigue.\n\nWhen We Dead Awaken: When We Dead Awaken (Norwegian: \"Når vi døde vågner\" ) is the last play written by Norwegian dramatist Henrik Ibsen.  Published in December 1899, Ibsen wrote the play between February and November of that year.  The first performance was at the Haymarket Theatre in London, a day or two before publication.\n\nDaniel Haakonsen: Daniel Haakonsen (15 May 1917 – 27 May 1989) was a Norwegian literary historian.  He was born in Bergen, and was married to Vigdis Ystad.  He was appointed professor at the University of Oslo from 1966 to 1984.  His main literary research was on Henrik Ibsen.  He published analysis of several of Ibsen's plays, and the biography \"Henrik Ibsen – mennesket og kunstneren\" from 1981.\n\nQuestion: The Norwegian folk rock band from Lom in Gudbrandsdalen established in 1982 based their concept album \"Bukkerittet\" on what five-act play in verse by the Norwegian dramatist Henrik Ibsen published in 1867?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"play_title\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the play.\"\n    },\n    \"play_author\": {\n      \"type\": \"string\",\n      \"description\": \"The author of the play.\"\n    },\n    \"play_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"publication_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the play was published.\"\n        },\n        \"number_of_acts\": {\n          \"type\": \"integer\",\n          \"description\": \"The number of acts in the play.\"\n        },\n        \"genre\": {\n          \"type\": \"string\",\n          \"description\": \"The genre or style of the play (e.g., 'verse play', 'comedy').\"\n        }\n      },\n      \"required\": [\n        \"publication_year\",\n        \"number_of_acts\",\n        \"genre\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"band_information\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"band_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the band.\"\n        },\n        \"album_name\": {\n          \"type\": \"string\",\n          \"description\": \"The name of the concept album.\"\n        },\n        \"band_origin\": {\n          \"type\": \"string\",\n          \"description\": \"The origin location of the band.\"\n        },\n        \"establishment_year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year the band was established.\"\n        }\n      },\n      \"required\": [\n        \"band_name\",\n        \"album_name\",\n        \"band_origin\",\n        \"establishment_year\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"play_title\",\n    \"play_author\",\n    \"play_details\",\n    \"band_information\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "play_title",
-    "play_author",
-    "play_details",
-    "band_information"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "play_title": {
+        "type": "string",
+        "description": "The title of the play."
+      },
+      "play_author": {
+        "type": "string",
+        "description": "The author of the play."
+      },
+      "play_details": {
+        "type": "object",
+        "properties": {
+          "publication_year": {
+            "type": "integer",
+            "description": "The year the play was published."
+          },
+          "number_of_acts": {
+            "type": "integer",
+            "description": "The number of acts in the play."
+          },
+          "genre": {
+            "type": "string",
+            "description": "The genre or style of the play (e.g., 'verse play', 'comedy')."
+          }
+        },
+        "required": [
+          "publication_year",
+          "number_of_acts",
+          "genre"
+        ],
+        "additionalProperties": false
+      },
+      "band_information": {
+        "type": "object",
+        "properties": {
+          "band_name": {
+            "type": "string",
+            "description": "The name of the band."
+          },
+          "album_name": {
+            "type": "string",
+            "description": "The name of the concept album."
+          },
+          "band_origin": {
+            "type": "string",
+            "description": "The origin location of the band."
+          },
+          "establishment_year": {
+            "type": "integer",
+            "description": "The year the band was established."
+          }
+        },
+        "required": [
+          "band_name",
+          "album_name",
+          "band_origin",
+          "establishment_year"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "play_title",
+      "play_author",
+      "play_details",
+      "band_information"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

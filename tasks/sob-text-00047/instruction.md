@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-The Kingdom Come: Thy Kingdom Come is the fifth studio album by West Coast hip hop artist King T.  It was released in 2002 on Greedy Green Entertainment and Mo Beatz.  The album was originally titled The Kingdom Come and was slated for a release on June 30, 1998, on Aftermath Entertainment.  The 2002 release contains all of the same tracks as the 1998 version, except 2 tracks.  The 1998 version was to be King Tee's first release of new material in three years after allying with Dr. Dre and appearing on his compilation, "Dr. Dre Presents the Aftermath".  King Tee's album was later put on hold.  His shelved album had already been rated three and a half stars out of five by "The Source", which was "not good enough" for Dr. Dre, but King Tee maintained a positive relationship with Dr. Dre.  He even appeared on Dr. Dre's album, "2001", in 1999.  By 2002, "The Kingdom Come" was released to mixed opinions and was a commercial failure.  It had no charting singles, and it did not chart as an album.  The album has been released in some places under the original name "Thy Kingdom Come" with an alternative album cover.  The song "Speak On It" also appeared on , an album by King T's protégé Young Maylay.
-
-War Music (Slim the Mobster album): War Music is the street album by American rapper Slim the Mobster, hosted by DJ Whoo Kid.  The album is Slim's debut on Aftermath Entertainment with Gang Module, and is due out for release on November 9, 2011.  It was originally due out on the 25 October, but was delayed until the 8th of November.  On the 7th of November, Slim confirmed it had been pushed back an extra day so that Dr. Dre could "finish mastering" the song he featured on.  Confirmed features include Dr. Dre, Eminem, Snoop Dogg, Kendrick Lamar, 50 Cent, Mobb Deep, Nikki Grier and Sly.  With production coming from Sid Roams, Jake One, Dr. Dre, Sha Money XL, Nottz, Siege Monstrosity, DJ Silk and Boi-1da among others.
-
-Imagine (Snoop Dogg song): "Imagine" is a song by American rapper Snoop Dogg, featuring guest vocals from rapper Dr. Dre and singer D'Angelo, taken from Snoop Dogg's eighth studio album "Tha Blue Carpet Treatment" (2006).  The song was written by Snoop Dogg, Dr. Dre and Mark Batson, with production handled by Dr. Dre and Mark Batson.
-
-Dr. Dre Presents the Aftermath: Dr. Dre Presents... The Aftermath is a compilation album produced and released by American rapper and producer, Dr. Dre.  The album was released on November 26, 1996, a week after the release of the lead single, "East Coast, West Coast, Killas" featuring Group Therapy.  The album is Dre's first release after leaving Death Row Records, and was the first release on his then newly established Aftermath Entertainment.  In spite of Dr. Dre's name being on the album, and it being certified platinum, it received mixed reviews and was not amongst the year's more commercially successful releases.  The album was later followed by the second single, the Dr. Dre solo track "Been There, Done That".
-
-Bad Intentions (song): "Bad Intentions" is a single by American rapper Dr. Dre, featuring vocals from fellow rapper Knoc-turn'al, recorded for and taken from the soundtrack to the film "The Wash".  The song was produced by Mahogany Music and co-produced by Dre himself.  It contains a sample from "Hollywood Hot" by Eleventh Hour.  The single was released on January 7, 2002.  The song debuted on the UK Singles Chart at number four, staying in the charts for sixteen weeks.  The music video for "Bad Intentions" depicts Dr. Dre and Knoc-turn'al filming a fictional music video at a burlesque house named "Bad Intentions".  Rapper Jay-Z also used the beat as a diss towards fellow rapper Nas during their feud.
-
-The Slim Shady LP: The Slim Shady LP is the second studio album and the major-label debut by American rapper Eminem.  It was released on February 23, 1999, under Interscope Records and Dr. Dre's Aftermath Entertainment.  Recorded in Ferndale, Michigan, in the US, following Eminem's recruitment by Dr. Dre and Jimmy Iovine, the album features production from Dr. Dre, the Bass Brothers, and Eminem himself.  The majority of the album's lyrical content is written from the perspective of the rapper's alter ego Slim Shady, whom the rapper created on the "Slim Shady EP" (1997).  The lyrics are noted for their over-the-top depictions of violence and heavy use of profanity.
-
-Gylan Kain: Gylan Kain is an American poet and playwright.  He is a founding member, in 1968, of the Original Last Poets (along with Felipe Luciano and David Nelson).  He is known for creating the aggressive, rhythmic delivery of spoken word aka performance poetry as it is known today.  He often performs with hand drums or backing musicians such as saxophonists and bass guitarists.  His work has often been sampled without pre-consent by well-known artists including Dr. Dre and The Prodigy.  One of his performances was sampled into the club hit "Voodoo People" by The Prodigy.  Dr. Dre sampled an excerpt of Kain performing his poem, "The Shalimar" on Dre's track entitled "Intro" from the album entitled "The Chronic."  After legal action was successfully taken to procure compensation for work sampled by The Prodigy, spokespersons for The Prodigy claimed that efforts had been made to procure permission from Kain for use of his work but those efforts had been unsuccessful because Kain, who values privacy, could not be located in time.  Dr. Dre has yet to compensate Kain for work sampled without prior consent.  This has led some fans to criticize Dr. Dre as an hypocrite for exploiting the work of an influential Black artist after building a reputation as an empowering force in the black American community as a founding member of N.W.A.
-
-Forgot About Dre: "Forgot About Dre" is a Grammy Award-winning single from rapper Dr. Dre's "2001", featuring vocals from rapper Eminem.  The track reached No. 25 on the "Billboard" Hot 100, No. 14 on the U.S. R&B chart, No. 32 on the U.S. Pop chart, and No. 7 on the UK Singles Chart.  Released as the album's second single on January 29, 2000, like "Still D.R.E.", the song addresses Dre's critics in a defiant manner, as Dre announces his return to the hip-hop scene and reminds listeners of his significant influence on the genre.  "Forgot About Dre" won Best Rap Performance by a Duo or Group at the 2001 Grammy Awards.
-
-Still D.R.E.: "Still D.R.E." is a song by American rapper Dr. Dre, featuring fellow American rapper Snoop Dogg.  It was released on October 13, 1999 as the lead single from Dre's multi-platinum second studio album, "2001" (1999).
-
-Bitch Please II: "Bitch Please II" is a song by American rapper Eminem, featuring guest vocals from American rappers Dr. Dre, Snoop Dogg, Xzibit, and Nate Dogg, taken from Eminem's "The Marshall Mathers LP" (2000).  The song was written by Eminem, Dr. Dre, Snoop Dogg, Xzibit and Nate Dogg with, production handled by Dr. Dre and Mel-Man.
-
-Question: Which American rapper worked with Dr. Dre on a song with a similar theme to "Forgot About Dre?"
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "song_with_similar_theme": {
-      "type": "string",
-      "description": "The title of the song by Dr. Dre that shares a similar theme."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "theme_description": {
-      "type": "string",
-      "description": "A description of the shared theme between the songs."
-    },
-    "collaborating_rapper": {
-      "type": "string",
-      "description": "The name of the American rapper who collaborated with Dr. Dre on the identified song."
-    },
-    "dr_dre_album": {
-      "type": "string",
-      "description": "The album from which the identified song was released."
+    {
+      "role": "user",
+      "content": "Context:\nThe Kingdom Come: Thy Kingdom Come is the fifth studio album by West Coast hip hop artist King T.  It was released in 2002 on Greedy Green Entertainment and Mo Beatz.  The album was originally titled The Kingdom Come and was slated for a release on June 30, 1998, on Aftermath Entertainment.  The 2002 release contains all of the same tracks as the 1998 version, except 2 tracks.  The 1998 version was to be King Tee's first release of new material in three years after allying with Dr. Dre and appearing on his compilation, \"Dr. Dre Presents the Aftermath\".  King Tee's album was later put on hold.  His shelved album had already been rated three and a half stars out of five by \"The Source\", which was \"not good enough\" for Dr. Dre, but King Tee maintained a positive relationship with Dr. Dre.  He even appeared on Dr. Dre's album, \"2001\", in 1999.  By 2002, \"The Kingdom Come\" was released to mixed opinions and was a commercial failure.  It had no charting singles, and it did not chart as an album.  The album has been released in some places under the original name \"Thy Kingdom Come\" with an alternative album cover.  The song \"Speak On It\" also appeared on , an album by King T's protégé Young Maylay.\n\nWar Music (Slim the Mobster album): War Music is the street album by American rapper Slim the Mobster, hosted by DJ Whoo Kid.  The album is Slim's debut on Aftermath Entertainment with Gang Module, and is due out for release on November 9, 2011.  It was originally due out on the 25 October, but was delayed until the 8th of November.  On the 7th of November, Slim confirmed it had been pushed back an extra day so that Dr. Dre could \"finish mastering\" the song he featured on.  Confirmed features include Dr. Dre, Eminem, Snoop Dogg, Kendrick Lamar, 50 Cent, Mobb Deep, Nikki Grier and Sly.  With production coming from Sid Roams, Jake One, Dr. Dre, Sha Money XL, Nottz, Siege Monstrosity, DJ Silk and Boi-1da among others.\n\nImagine (Snoop Dogg song): \"Imagine\" is a song by American rapper Snoop Dogg, featuring guest vocals from rapper Dr. Dre and singer D'Angelo, taken from Snoop Dogg's eighth studio album \"Tha Blue Carpet Treatment\" (2006).  The song was written by Snoop Dogg, Dr. Dre and Mark Batson, with production handled by Dr. Dre and Mark Batson.\n\nDr. Dre Presents the Aftermath: Dr. Dre Presents... The Aftermath is a compilation album produced and released by American rapper and producer, Dr. Dre.  The album was released on November 26, 1996, a week after the release of the lead single, \"East Coast, West Coast, Killas\" featuring Group Therapy.  The album is Dre's first release after leaving Death Row Records, and was the first release on his then newly established Aftermath Entertainment.  In spite of Dr. Dre's name being on the album, and it being certified platinum, it received mixed reviews and was not amongst the year's more commercially successful releases.  The album was later followed by the second single, the Dr. Dre solo track \"Been There, Done That\".\n\nBad Intentions (song): \"Bad Intentions\" is a single by American rapper Dr. Dre, featuring vocals from fellow rapper Knoc-turn'al, recorded for and taken from the soundtrack to the film \"The Wash\".  The song was produced by Mahogany Music and co-produced by Dre himself.  It contains a sample from \"Hollywood Hot\" by Eleventh Hour.  The single was released on January 7, 2002.  The song debuted on the UK Singles Chart at number four, staying in the charts for sixteen weeks.  The music video for \"Bad Intentions\" depicts Dr. Dre and Knoc-turn'al filming a fictional music video at a burlesque house named \"Bad Intentions\".  Rapper Jay-Z also used the beat as a diss towards fellow rapper Nas during their feud.\n\nThe Slim Shady LP: The Slim Shady LP is the second studio album and the major-label debut by American rapper Eminem.  It was released on February 23, 1999, under Interscope Records and Dr. Dre's Aftermath Entertainment.  Recorded in Ferndale, Michigan, in the US, following Eminem's recruitment by Dr. Dre and Jimmy Iovine, the album features production from Dr. Dre, the Bass Brothers, and Eminem himself.  The majority of the album's lyrical content is written from the perspective of the rapper's alter ego Slim Shady, whom the rapper created on the \"Slim Shady EP\" (1997).  The lyrics are noted for their over-the-top depictions of violence and heavy use of profanity.\n\nGylan Kain: Gylan Kain is an American poet and playwright.  He is a founding member, in 1968, of the Original Last Poets (along with Felipe Luciano and David Nelson).  He is known for creating the aggressive, rhythmic delivery of spoken word aka performance poetry as it is known today.  He often performs with hand drums or backing musicians such as saxophonists and bass guitarists.  His work has often been sampled without pre-consent by well-known artists including Dr. Dre and The Prodigy.  One of his performances was sampled into the club hit \"Voodoo People\" by The Prodigy.  Dr. Dre sampled an excerpt of Kain performing his poem, \"The Shalimar\" on Dre's track entitled \"Intro\" from the album entitled \"The Chronic.\"  After legal action was successfully taken to procure compensation for work sampled by The Prodigy, spokespersons for The Prodigy claimed that efforts had been made to procure permission from Kain for use of his work but those efforts had been unsuccessful because Kain, who values privacy, could not be located in time.  Dr. Dre has yet to compensate Kain for work sampled without prior consent.  This has led some fans to criticize Dr. Dre as an hypocrite for exploiting the work of an influential Black artist after building a reputation as an empowering force in the black American community as a founding member of N.W.A.\n\nForgot About Dre: \"Forgot About Dre\" is a Grammy Award-winning single from rapper Dr. Dre's \"2001\", featuring vocals from rapper Eminem.  The track reached No. 25 on the \"Billboard\" Hot 100, No. 14 on the U.S. R&B chart, No. 32 on the U.S. Pop chart, and No. 7 on the UK Singles Chart.  Released as the album's second single on January 29, 2000, like \"Still D.R.E.\", the song addresses Dre's critics in a defiant manner, as Dre announces his return to the hip-hop scene and reminds listeners of his significant influence on the genre.  \"Forgot About Dre\" won Best Rap Performance by a Duo or Group at the 2001 Grammy Awards.\n\nStill D.R.E.: \"Still D.R.E.\" is a song by American rapper Dr. Dre, featuring fellow American rapper Snoop Dogg.  It was released on October 13, 1999 as the lead single from Dre's multi-platinum second studio album, \"2001\" (1999).\n\nBitch Please II: \"Bitch Please II\" is a song by American rapper Eminem, featuring guest vocals from American rappers Dr. Dre, Snoop Dogg, Xzibit, and Nate Dogg, taken from Eminem's \"The Marshall Mathers LP\" (2000).  The song was written by Eminem, Dr. Dre, Snoop Dogg, Xzibit and Nate Dogg with, production handled by Dr. Dre and Mel-Man.\n\nQuestion: Which American rapper worked with Dr. Dre on a song with a similar theme to \"Forgot About Dre?\"\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"song_with_similar_theme\": {\n      \"type\": \"string\",\n      \"description\": \"The title of the song by Dr. Dre that shares a similar theme.\"\n    },\n    \"theme_description\": {\n      \"type\": \"string\",\n      \"description\": \"A description of the shared theme between the songs.\"\n    },\n    \"collaborating_rapper\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the American rapper who collaborated with Dr. Dre on the identified song.\"\n    },\n    \"dr_dre_album\": {\n      \"type\": \"string\",\n      \"description\": \"The album from which the identified song was released.\"\n    }\n  },\n  \"required\": [\n    \"song_with_similar_theme\",\n    \"theme_description\",\n    \"collaborating_rapper\",\n    \"dr_dre_album\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "song_with_similar_theme",
-    "theme_description",
-    "collaborating_rapper",
-    "dr_dre_album"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "song_with_similar_theme": {
+        "type": "string",
+        "description": "The title of the song by Dr. Dre that shares a similar theme."
+      },
+      "theme_description": {
+        "type": "string",
+        "description": "A description of the shared theme between the songs."
+      },
+      "collaborating_rapper": {
+        "type": "string",
+        "description": "The name of the American rapper who collaborated with Dr. Dre on the identified song."
+      },
+      "dr_dre_album": {
+        "type": "string",
+        "description": "The album from which the identified song was released."
+      }
+    },
+    "required": [
+      "song_with_similar_theme",
+      "theme_description",
+      "collaborating_rapper",
+      "dr_dre_album"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

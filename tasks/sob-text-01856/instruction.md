@@ -1,78 +1,55 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Denny Lambert: Denny Lambert (born January 7, 1970) is a former professional Canadian ice hockey player and member of the Batchewana First Nation.  Lambert was drafted in the Ontario Hockey League where he played for the Sault Ste. Marie Greyhounds for three years.  He then played 2 seasons in the International Hockey League with the San Diego Gulls before being drafted to the National Hockey League (NHL) for the Mighty Ducks of Anaheim.  He was then signed as a free agent with the Ottawa Senators in July 1996 and went on to play for the Nashville Predators (1998-1999) and the Atlanta Thrashers.  He rejoined the Mighty Ducks of Anaheim (2001-2002) for his final NHL season before finishing off his career in the American Hockey League with the Milwaukee Admirals.  He also coached the Sault Ste. Marie Greyhounds of the Ontario Hockey League from 2008–2011.  He went on to be a First Nations Police Officer with the Anishinabek Police Service.  Denny graduated from the Ontario Police College in November 2012.  He is currently hired by the Gatineau Olympiques of the Quebec Major Jr.  Hockey League as an associate coach as of 2016. <http://www.batchewana.ca/election/dlambert.html> <http://www.saultstar.com/2012/01/18/lambert-passing-on-wisdom>
-
-Matt Ruchty: Matt Ruchty (born November 27, 1969) is a retired Canadian professional ice hockey left winger.  He was drafted by the New Jersey Devils 65th overall in 1988, but only played two exhibition games in the National Hockey League (NHL).  Ruchty was a career minor-leaguer, playing in the American Hockey League (AHL), International Hockey League (IHL), Continental Hockey League (CoHL), West Coast Hockey League (WCHL), United Hockey League (UHL) and ECHL.  Although best known for his toughness and accumulation of penalty minutes, Ruchty proved to be an integral part of the Calder Cup-winning Albany River Rats during the 94-95 season, scoring a career-high 49 points in 78 regular season games and notching an additional 15 points in 12 playoff contests.
-
-All-American Hockey League: The All-American Hockey League was a minor league hockey organization formed in 1972 with teams based in the Upper Midwest and Great lakes regions of the United States as the Continental Hockey League.  In 1986 the league folded, and Danville, Dayton, and Troy went on to form the All-American Hockey League.  In 1987, the All-American Hockey League merged with the Atlantic Coast Hockey League.  After a single season in the AAHL, Carolina, Johnstown, and Virginia left the league to form the East Coast Hockey League.  The AAHL only lasted one more season and folded after the 1988-1989 season.
-
-Niclas Lundgren: Niclas Lundgren (born October 15, 1989) is a Swedish ice hockey defenceman.  He is currently playing with Linköpings HC of the Swedish Hockey League (SHL).
-
-Niclas Bergfors: Niclas Bergfors (born 7 March 1987) is a Swedish professional ice hockey right winger currently playing for Djurgårdens IF Hockey of the Swedish Hockey League (SHL).  He was drafted by the National Hockey League (NHL)'s New Jersey Devils in the first round, 23rd overall, at the 2005 NHL Entry Draft, playing for the organization for four-and-a-half seasons before joining the Atlanta Thrashers 2010, Florida Panthers in 2011 and Nashville Predators via free agency in 2011.  He later joined the KHL's Ak Bars Kazan in late 2011 before signing with Severstal Cherepovets.  In 2013, he joined Admiral Vladivostok, where he played for three seasons before joining Amur Khabarovsk in a mid-season trade.
-
-New Jersey Devils: The New Jersey Devils are a professional ice hockey team based in Newark, New Jersey.  They are members of the Metropolitan Division of the Eastern Conference of the National Hockey League (NHL).  The club was founded as the Kansas City Scouts in Kansas City, Missouri, in 1974.  The Scouts moved to Denver, Colorado in 1976 and became the Colorado Rockies.  In 1982, they moved to East Rutherford, New Jersey and took their current name.  For their first 25 seasons in New Jersey, the Devils were based at the Meadowlands Sports Complex in East Rutherford and played their home games at Brendan Byrne Arena (later renamed to Continental Airlines Arena).  Beginning with the 2007–08 season, the Devils relocated to Newark and now play their home games at the Prudential Center.
-
-Jack Campbell (ice hockey): Jack Campbell (born January 9, 1992) is an American ice hockey goaltender currently playing with the Ontario Reign in the American Hockey League (AHL) while under contract to the Los Angeles Kings of the National Hockey League (NHL).  Campbell was one of the top goaltenders eligible for the 2010 NHL Entry Draft, ranked second among North American goaltenders both in Central Scouting's midterm and final rankings.  He was drafted in the first round, 11th overall, by the National Hockey League (NHL)'s Dallas Stars, the first goaltender selected in the Draft.  He was also drafted in the seventh round, 170th overall, by Dinamo Minsk of the 2010 Kontinental Hockey League Junior Draft.
-
-Niclas Wallin: Niclas Wallin (born 20 February 1975) is a Swedish former professional ice hockey player who played in the National Hockey League (NHL).  He won the Stanley Cup with the Carolina Hurricanes in 2006.
-
-Flyers Cup: The Flyers Cup is an annual high school ice hockey tournament held by the Philadelphia Flyers.  The invitational tournament is the scholastic hockey championship for eastern Pennsylvania high schools and is conducted through three tiers of play, AAA, AA, and A with AAA representing private schools, AA large public schools and A small public schools based on male student enrollment.  There are 53 participating teams consisting of 13 AAA, 20 AA, and 20 A chosen from teams participating in the following leagues: the Eastern High School Hockey League, the Inter-County Scholastic Hockey League, the Lehigh Valley Scholastic Hockey League, the Lower Bucks County Scholastic Hockey League, the South Jersey High School Ice Hockey League, the Suburban High School Hockey League, and the Central Pennsylvania Ice Hockey League.  Teams are invited to participate based on their skill level as demonstrated by the strength of their overall schedule and season performance.  The winner of the Flyers Cup at each tier level plays the respective western champion as determined by the Penguins Cup, held by the Pittsburgh Penguins, for the Pennsylvania State High School Ice Hockey Championship.
-
-Niclas Burström: Niclas Burström (born January 25, 1991) is a Swedish professional ice hockey defenceman who currently plays for HC Vityaz in the Kontinental Hockey League (KHL).
-
-Question: Where was the Hockey League which drafted Niclas Bergfors based?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "player_name": {
-      "type": "string",
-      "description": "The name of the ice hockey player."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "drafting_league": {
-      "type": "string",
-      "description": "The name of the league that drafted the player."
-    },
-    "drafting_team": {
-      "type": "string",
-      "description": "The name of the team that drafted the player."
-    },
-    "team_location": {
-      "type": "object",
-      "properties": {
-        "city": {
-          "type": "string",
-          "description": "The city where the drafting team is based."
-        },
-        "state": {
-          "type": "string",
-          "description": "The state where the drafting team is based."
-        }
-      },
-      "required": [
-        "city",
-        "state"
-      ],
-      "additionalProperties": false
+    {
+      "role": "user",
+      "content": "Context:\nDenny Lambert: Denny Lambert (born January 7, 1970) is a former professional Canadian ice hockey player and member of the Batchewana First Nation.  Lambert was drafted in the Ontario Hockey League where he played for the Sault Ste. Marie Greyhounds for three years.  He then played 2 seasons in the International Hockey League with the San Diego Gulls before being drafted to the National Hockey League (NHL) for the Mighty Ducks of Anaheim.  He was then signed as a free agent with the Ottawa Senators in July 1996 and went on to play for the Nashville Predators (1998-1999) and the Atlanta Thrashers.  He rejoined the Mighty Ducks of Anaheim (2001-2002) for his final NHL season before finishing off his career in the American Hockey League with the Milwaukee Admirals.  He also coached the Sault Ste. Marie Greyhounds of the Ontario Hockey League from 2008–2011.  He went on to be a First Nations Police Officer with the Anishinabek Police Service.  Denny graduated from the Ontario Police College in November 2012.  He is currently hired by the Gatineau Olympiques of the Quebec Major Jr.  Hockey League as an associate coach as of 2016. <http://www.batchewana.ca/election/dlambert.html> <http://www.saultstar.com/2012/01/18/lambert-passing-on-wisdom>\n\nMatt Ruchty: Matt Ruchty (born November 27, 1969) is a retired Canadian professional ice hockey left winger.  He was drafted by the New Jersey Devils 65th overall in 1988, but only played two exhibition games in the National Hockey League (NHL).  Ruchty was a career minor-leaguer, playing in the American Hockey League (AHL), International Hockey League (IHL), Continental Hockey League (CoHL), West Coast Hockey League (WCHL), United Hockey League (UHL) and ECHL.  Although best known for his toughness and accumulation of penalty minutes, Ruchty proved to be an integral part of the Calder Cup-winning Albany River Rats during the 94-95 season, scoring a career-high 49 points in 78 regular season games and notching an additional 15 points in 12 playoff contests.\n\nAll-American Hockey League: The All-American Hockey League was a minor league hockey organization formed in 1972 with teams based in the Upper Midwest and Great lakes regions of the United States as the Continental Hockey League.  In 1986 the league folded, and Danville, Dayton, and Troy went on to form the All-American Hockey League.  In 1987, the All-American Hockey League merged with the Atlantic Coast Hockey League.  After a single season in the AAHL, Carolina, Johnstown, and Virginia left the league to form the East Coast Hockey League.  The AAHL only lasted one more season and folded after the 1988-1989 season.\n\nNiclas Lundgren: Niclas Lundgren (born October 15, 1989) is a Swedish ice hockey defenceman.  He is currently playing with Linköpings HC of the Swedish Hockey League (SHL).\n\nNiclas Bergfors: Niclas Bergfors (born 7 March 1987) is a Swedish professional ice hockey right winger currently playing for Djurgårdens IF Hockey of the Swedish Hockey League (SHL).  He was drafted by the National Hockey League (NHL)'s New Jersey Devils in the first round, 23rd overall, at the 2005 NHL Entry Draft, playing for the organization for four-and-a-half seasons before joining the Atlanta Thrashers 2010, Florida Panthers in 2011 and Nashville Predators via free agency in 2011.  He later joined the KHL's Ak Bars Kazan in late 2011 before signing with Severstal Cherepovets.  In 2013, he joined Admiral Vladivostok, where he played for three seasons before joining Amur Khabarovsk in a mid-season trade.\n\nNew Jersey Devils: The New Jersey Devils are a professional ice hockey team based in Newark, New Jersey.  They are members of the Metropolitan Division of the Eastern Conference of the National Hockey League (NHL).  The club was founded as the Kansas City Scouts in Kansas City, Missouri, in 1974.  The Scouts moved to Denver, Colorado in 1976 and became the Colorado Rockies.  In 1982, they moved to East Rutherford, New Jersey and took their current name.  For their first 25 seasons in New Jersey, the Devils were based at the Meadowlands Sports Complex in East Rutherford and played their home games at Brendan Byrne Arena (later renamed to Continental Airlines Arena).  Beginning with the 2007–08 season, the Devils relocated to Newark and now play their home games at the Prudential Center.\n\nJack Campbell (ice hockey): Jack Campbell (born January 9, 1992) is an American ice hockey goaltender currently playing with the Ontario Reign in the American Hockey League (AHL) while under contract to the Los Angeles Kings of the National Hockey League (NHL).  Campbell was one of the top goaltenders eligible for the 2010 NHL Entry Draft, ranked second among North American goaltenders both in Central Scouting's midterm and final rankings.  He was drafted in the first round, 11th overall, by the National Hockey League (NHL)'s Dallas Stars, the first goaltender selected in the Draft.  He was also drafted in the seventh round, 170th overall, by Dinamo Minsk of the 2010 Kontinental Hockey League Junior Draft.\n\nNiclas Wallin: Niclas Wallin (born 20 February 1975) is a Swedish former professional ice hockey player who played in the National Hockey League (NHL).  He won the Stanley Cup with the Carolina Hurricanes in 2006.\n\nFlyers Cup: The Flyers Cup is an annual high school ice hockey tournament held by the Philadelphia Flyers.  The invitational tournament is the scholastic hockey championship for eastern Pennsylvania high schools and is conducted through three tiers of play, AAA, AA, and A with AAA representing private schools, AA large public schools and A small public schools based on male student enrollment.  There are 53 participating teams consisting of 13 AAA, 20 AA, and 20 A chosen from teams participating in the following leagues: the Eastern High School Hockey League, the Inter-County Scholastic Hockey League, the Lehigh Valley Scholastic Hockey League, the Lower Bucks County Scholastic Hockey League, the South Jersey High School Ice Hockey League, the Suburban High School Hockey League, and the Central Pennsylvania Ice Hockey League.  Teams are invited to participate based on their skill level as demonstrated by the strength of their overall schedule and season performance.  The winner of the Flyers Cup at each tier level plays the respective western champion as determined by the Penguins Cup, held by the Pittsburgh Penguins, for the Pennsylvania State High School Ice Hockey Championship.\n\nNiclas Burström: Niclas Burström (born January 25, 1991) is a Swedish professional ice hockey defenceman who currently plays for HC Vityaz in the Kontinental Hockey League (KHL).\n\nQuestion: Where was the Hockey League which drafted Niclas Bergfors based?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"player_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the ice hockey player.\"\n    },\n    \"drafting_league\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the league that drafted the player.\"\n    },\n    \"drafting_team\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the team that drafted the player.\"\n    },\n    \"team_location\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"city\": {\n          \"type\": \"string\",\n          \"description\": \"The city where the drafting team is based.\"\n        },\n        \"state\": {\n          \"type\": \"string\",\n          \"description\": \"The state where the drafting team is based.\"\n        }\n      },\n      \"required\": [\n        \"city\",\n        \"state\"\n      ],\n      \"additionalProperties\": false\n    }\n  },\n  \"required\": [\n    \"player_name\",\n    \"drafting_league\",\n    \"drafting_team\",\n    \"team_location\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "player_name",
-    "drafting_league",
-    "drafting_team",
-    "team_location"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "player_name": {
+        "type": "string",
+        "description": "The name of the ice hockey player."
+      },
+      "drafting_league": {
+        "type": "string",
+        "description": "The name of the league that drafted the player."
+      },
+      "drafting_team": {
+        "type": "string",
+        "description": "The name of the team that drafted the player."
+      },
+      "team_location": {
+        "type": "object",
+        "properties": {
+          "city": {
+            "type": "string",
+            "description": "The city where the drafting team is based."
+          },
+          "state": {
+            "type": "string",
+            "description": "The state where the drafting team is based."
+          }
+        },
+        "required": [
+          "city",
+          "state"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "required": [
+      "player_name",
+      "drafting_league",
+      "drafting_team",
+      "team_location"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

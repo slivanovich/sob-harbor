@@ -1,91 +1,68 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-James Reilly (Irish politician): James Reilly (born 16 August 1955) is an Irish Fine Gael politician and medical doctor.  Between the February 2016 general election and the 6 May 2016 formation of a new government, he was the Acting Minister for Children and Youth Affairs, having held that ministry since July 2014 in the previous government, and was also deputy leader of Fine Gael from 2010 to 2017.  He was the Minister for Health from March 2011 to July 2014.  Reilly was a Teachta Dála (TD) for the Dublin North constituency since the 2007 general election until he lost his seat in the 2016 general election.  Reilly was nominated by Taoiseach Enda Kenny to Seanad Éireann in May 2016.  James Reilly was re-appointed as deputy leader of Fine Gael on 4 July 2016.
-
-Fine Gael leadership election, 2002: The 2002 Fine Gael leadership election began in May 2002, when Michael Noonan resigned as party leader due to the party's poor performance in the 2002 general election.  Noonan had only been party leader for little over fifteen months.  His successor was elected by the members of the Fine Gael parliamentary party on 5 June 2002.  After one ballot the election was won by Enda Kenny.  Kenny defeated Richard Bruton, Gay Mitchell and Phil Hogan.
-
-Leader of Fine Gael: The Leader of Fine Gael is the most senior politician within the Fine Gael political party in Ireland.  Since 2 June 2017, the office had been held by Leo Varadkar following the resignation of Enda Kenny.
-
-Gay Mitchell: Gabriel "Gay" Mitchell (born 30 December 1951) is an Irish former Fine Gael politician.  He was a Member of the European Parliament (MEP) for the Dublin constituency from 2004 to 2014.  He was a Teachta Dála (TD) for the Dublin South-Central constituency from 1981 to 2007.  He was defeated by Enda Kenny in the 2002 Fine Gael leadership election.  Mitchell was the Fine Gael candidate at the 2011 Irish presidential election.
-
-Fine Gael: Fine Gael ( ; English: "Family" or "Tribe of the Irish") is a liberal-conservative and Christian democratic political party in Ireland.  Fine Gael is currently the governing and largest party in Ireland in terms of members of the Oireachtas and Irish members of European Parliament.  The party has a membership of 35,000, and is the senior partner governing in a minority coalition with several independent politicians, with party leader Leo Varadkar serving as Taoiseach .  Varadkar succeeded Enda Kenny as party leader on 2 June 2017 and as Taoiseach on 14 June; Kenny had been leader since 2002, and Taoiseach since 2011.
-
-Fine Gael leadership election, 2017: The 2017 Fine Gael leadership election was triggered in May 2017, when Enda Kenny resigned as party leader.  Voting began by members of Fine Gael and Young Fine Gael on 29 May 2017.  On 2 June Leo Varadkar was announced as the victor, beating rival Simon Coveney 60% to 40%.  With Fine Gael being the governing party at the time, this election effectively appointed a new Taoiseach for Ireland.
-
-Government of the 32nd Dáil: The 32nd Dáil was elected at the 2016 general election.  When it met on 10 March 2016, the Dáil failed to elect a Taoiseach, resulting in the formal resignation of Enda Kenny who continued in a caretaker capacity pending the appointment of the 30th Government of Ireland.  After two further failed attempts to elect a Taoiseach Enda Kenny was eventually elected at the fourth time of asking on the Friday, 6 May 2016 and his cabinet was announced later that day.  This was the first occasion on which an outgoing Fine Gael Taoiseach was re-elected.
-
-Fine Gael leadership election, 1990: The Fine Gael leadership election of November 1990 was held to find a successor to Alan Dukes who resigned following a collapse in the party's support and the poor showing of the Fine Gael candidate, Austin Currie, in the presidential election.
-
-Simon Coveney: Simon Anthony Coveney (born 16 June 1972) is an Irish Fine Gael politician who has served as Minister for Foreign Affairs and Trade and Deputy Leader of Fine Gael since June 2017.  He has been a Teachta Dála (TD) since 1998, currently for the Cork South-Central constituency.  He previously served as Minister for Housing, Planning, Community and Local Government from 2016 to 2017, Minister for Agriculture, Food and the Marine from 2011 to 2016 and Minister for Defence from 2014 to 2016.  He served as Member of the European Parliament (MEP) for the South constituency from 2004 to 2007.
-
-Government of the 31st Dáil: The Government of the 31st Dáil is the previous Government of Ireland, formed after the 2011 general election to Dáil Éireann on 25 February 2011.  Fine Gael entered into discussions with the Labour Party which culminated in a joint programme for government.  The 31st Dáil first met on 9 March 2011 when it nominated Seán Barrett to be the Ceann Comhairle.  Following this, the house nominated Enda Kenny, the leader of Fine Gael, to be the 13th Taoiseach.  Kenny then went to the Áras an Uachtaráin where President Mary McAleese appointed him as Taoiseach.  On the nomination of the Taoiseach, and following the Dáil's approval the 29th Government of Ireland was appointed by the President.
-
-Question: What postition did Simon Coveney take over after losing to Enda Kenny in 2017 at the Fine Gael leadership election?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "person_name": {
-      "type": "string",
-      "description": "The name of the person in question."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "election_details": {
-      "type": "object",
-      "properties": {
-        "year": {
-          "type": "integer",
-          "description": "The year of the leadership election."
-        },
-        "election_type": {
-          "type": "string",
-          "description": "The type of election."
-        },
-        "opponent_in_election_as_stated_in_question": {
-          "type": "string",
-          "description": "The opponent mentioned in the user's question, which may be incorrect."
-        },
-        "actual_winner_of_election": {
-          "type": "string",
-          "description": "The actual winner of the leadership election according to the context."
-        },
-        "person_outcome": {
-          "type": "string",
-          "description": "The outcome for the person in question in the election."
-        }
-      },
-      "required": [
-        "year",
-        "election_type",
-        "opponent_in_election_as_stated_in_question",
-        "actual_winner_of_election",
-        "person_outcome"
-      ],
-      "additionalProperties": false
-    },
-    "positions_taken_after_election": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      },
-      "description": "A list of positions taken by the person after the specified election."
+    {
+      "role": "user",
+      "content": "Context:\nJames Reilly (Irish politician): James Reilly (born 16 August 1955) is an Irish Fine Gael politician and medical doctor.  Between the February 2016 general election and the 6 May 2016 formation of a new government, he was the Acting Minister for Children and Youth Affairs, having held that ministry since July 2014 in the previous government, and was also deputy leader of Fine Gael from 2010 to 2017.  He was the Minister for Health from March 2011 to July 2014.  Reilly was a Teachta Dála (TD) for the Dublin North constituency since the 2007 general election until he lost his seat in the 2016 general election.  Reilly was nominated by Taoiseach Enda Kenny to Seanad Éireann in May 2016.  James Reilly was re-appointed as deputy leader of Fine Gael on 4 July 2016.\n\nFine Gael leadership election, 2002: The 2002 Fine Gael leadership election began in May 2002, when Michael Noonan resigned as party leader due to the party's poor performance in the 2002 general election.  Noonan had only been party leader for little over fifteen months.  His successor was elected by the members of the Fine Gael parliamentary party on 5 June 2002.  After one ballot the election was won by Enda Kenny.  Kenny defeated Richard Bruton, Gay Mitchell and Phil Hogan.\n\nLeader of Fine Gael: The Leader of Fine Gael is the most senior politician within the Fine Gael political party in Ireland.  Since 2 June 2017, the office had been held by Leo Varadkar following the resignation of Enda Kenny.\n\nGay Mitchell: Gabriel \"Gay\" Mitchell (born 30 December 1951) is an Irish former Fine Gael politician.  He was a Member of the European Parliament (MEP) for the Dublin constituency from 2004 to 2014.  He was a Teachta Dála (TD) for the Dublin South-Central constituency from 1981 to 2007.  He was defeated by Enda Kenny in the 2002 Fine Gael leadership election.  Mitchell was the Fine Gael candidate at the 2011 Irish presidential election.\n\nFine Gael: Fine Gael ( ; English: \"Family\" or \"Tribe of the Irish\") is a liberal-conservative and Christian democratic political party in Ireland.  Fine Gael is currently the governing and largest party in Ireland in terms of members of the Oireachtas and Irish members of European Parliament.  The party has a membership of 35,000, and is the senior partner governing in a minority coalition with several independent politicians, with party leader Leo Varadkar serving as Taoiseach .  Varadkar succeeded Enda Kenny as party leader on 2 June 2017 and as Taoiseach on 14 June; Kenny had been leader since 2002, and Taoiseach since 2011.\n\nFine Gael leadership election, 2017: The 2017 Fine Gael leadership election was triggered in May 2017, when Enda Kenny resigned as party leader.  Voting began by members of Fine Gael and Young Fine Gael on 29 May 2017.  On 2 June Leo Varadkar was announced as the victor, beating rival Simon Coveney 60% to 40%.  With Fine Gael being the governing party at the time, this election effectively appointed a new Taoiseach for Ireland.\n\nGovernment of the 32nd Dáil: The 32nd Dáil was elected at the 2016 general election.  When it met on 10 March 2016, the Dáil failed to elect a Taoiseach, resulting in the formal resignation of Enda Kenny who continued in a caretaker capacity pending the appointment of the 30th Government of Ireland.  After two further failed attempts to elect a Taoiseach Enda Kenny was eventually elected at the fourth time of asking on the Friday, 6 May 2016 and his cabinet was announced later that day.  This was the first occasion on which an outgoing Fine Gael Taoiseach was re-elected.\n\nFine Gael leadership election, 1990: The Fine Gael leadership election of November 1990 was held to find a successor to Alan Dukes who resigned following a collapse in the party's support and the poor showing of the Fine Gael candidate, Austin Currie, in the presidential election.\n\nSimon Coveney: Simon Anthony Coveney (born 16 June 1972) is an Irish Fine Gael politician who has served as Minister for Foreign Affairs and Trade and Deputy Leader of Fine Gael since June 2017.  He has been a Teachta Dála (TD) since 1998, currently for the Cork South-Central constituency.  He previously served as Minister for Housing, Planning, Community and Local Government from 2016 to 2017, Minister for Agriculture, Food and the Marine from 2011 to 2016 and Minister for Defence from 2014 to 2016.  He served as Member of the European Parliament (MEP) for the South constituency from 2004 to 2007.\n\nGovernment of the 31st Dáil: The Government of the 31st Dáil is the previous Government of Ireland, formed after the 2011 general election to Dáil Éireann on 25 February 2011.  Fine Gael entered into discussions with the Labour Party which culminated in a joint programme for government.  The 31st Dáil first met on 9 March 2011 when it nominated Seán Barrett to be the Ceann Comhairle.  Following this, the house nominated Enda Kenny, the leader of Fine Gael, to be the 13th Taoiseach.  Kenny then went to the Áras an Uachtaráin where President Mary McAleese appointed him as Taoiseach.  On the nomination of the Taoiseach, and following the Dáil's approval the 29th Government of Ireland was appointed by the President.\n\nQuestion: What postition did Simon Coveney take over after losing to Enda Kenny in 2017 at the Fine Gael leadership election?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"person_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the person in question.\"\n    },\n    \"election_details\": {\n      \"type\": \"object\",\n      \"properties\": {\n        \"year\": {\n          \"type\": \"integer\",\n          \"description\": \"The year of the leadership election.\"\n        },\n        \"election_type\": {\n          \"type\": \"string\",\n          \"description\": \"The type of election.\"\n        },\n        \"opponent_in_election_as_stated_in_question\": {\n          \"type\": \"string\",\n          \"description\": \"The opponent mentioned in the user's question, which may be incorrect.\"\n        },\n        \"actual_winner_of_election\": {\n          \"type\": \"string\",\n          \"description\": \"The actual winner of the leadership election according to the context.\"\n        },\n        \"person_outcome\": {\n          \"type\": \"string\",\n          \"description\": \"The outcome for the person in question in the election.\"\n        }\n      },\n      \"required\": [\n        \"year\",\n        \"election_type\",\n        \"opponent_in_election_as_stated_in_question\",\n        \"actual_winner_of_election\",\n        \"person_outcome\"\n      ],\n      \"additionalProperties\": false\n    },\n    \"positions_taken_after_election\": {\n      \"type\": \"array\",\n      \"items\": {\n        \"type\": \"string\"\n      },\n      \"description\": \"A list of positions taken by the person after the specified election.\"\n    }\n  },\n  \"required\": [\n    \"person_name\",\n    \"election_details\",\n    \"positions_taken_after_election\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "person_name",
-    "election_details",
-    "positions_taken_after_election"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "person_name": {
+        "type": "string",
+        "description": "The name of the person in question."
+      },
+      "election_details": {
+        "type": "object",
+        "properties": {
+          "year": {
+            "type": "integer",
+            "description": "The year of the leadership election."
+          },
+          "election_type": {
+            "type": "string",
+            "description": "The type of election."
+          },
+          "opponent_in_election_as_stated_in_question": {
+            "type": "string",
+            "description": "The opponent mentioned in the user's question, which may be incorrect."
+          },
+          "actual_winner_of_election": {
+            "type": "string",
+            "description": "The actual winner of the leadership election according to the context."
+          },
+          "person_outcome": {
+            "type": "string",
+            "description": "The outcome for the person in question in the election."
+          }
+        },
+        "required": [
+          "year",
+          "election_type",
+          "opponent_in_election_as_stated_in_question",
+          "actual_winner_of_election",
+          "person_outcome"
+        ],
+        "additionalProperties": false
+      },
+      "positions_taken_after_election": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        },
+        "description": "A list of positions taken by the person after the specified election."
+      }
+    },
+    "required": [
+      "person_name",
+      "election_details",
+      "positions_taken_after_election"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }

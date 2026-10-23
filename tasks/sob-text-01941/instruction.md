@@ -1,64 +1,41 @@
-Use the following extraction rules and source material. Write your final JSON object to `/tmp/answer.json`. The verifier reads that file, not your final chat message.
-
-Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.
-
-Rules:
-- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.
-- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.
-- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.
-- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.
-- Include all required fields: Every field listed as required in the schema must appear in the JSON.
-- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing.
-
-Context:
-Green Sergeant's Covered Bridge: Green Sergeant's Covered Bridge is a wooden covered bridge over the Wickecheoke Creek near the border between the Hunterdon Plateau and Amwell Valley located in Delaware Township, Hunterdon County, New Jersey, United States.  As the last historic covered bridge in the state of New Jersey, it is listed on the National Register of Historic Places (the Scarborough Bridge in Cherry Hill is the only other covered bridge in New Jersey).  The bridge was first constructed in 1872, but after being damaged in 1960, it was dismantled and replaced with a modern bridge.  In 1961, due to public outcry, the bridge was rebuilt from the original materials.
-
-Maple Street Covered Bridge: The Maple Street Covered Bridge, also called the Lower Covered Bridge and the Fairfax Covered Bridge, is a covered bridge that carries Maple Street across Mill Brook off State Route 104 in Fairfax, Vermont.  Built in 1865, it is the town's only historic covered bridge, and is a rare two-lane covered bridge in the state.  It was listed on the National Register of Historic Places in 1974.
-
-Gifford Covered Bridge: The Gifford Covered Bridge, also called the C.K. Smith Covered Bridge, is a wooden covered bridge that crosses the Second Branch of the White River in Randolph, Vermont on Hyde Road.  It was listed on the National Register of Historic Places in 1974.  It is one of two bridges in the state that was uncovered when first built, its trusses boxed for shelter.
-
-Bowers Covered Bridge: The Bowers Covered Bridge is a historic covered bridge, carrying Bible Hill Road across Mill Brook in West Windsor, Vermont.  Built in 1919, it has a laminated-arch deck covered by a post-and-beam superstructure, similar to Best's Covered Bridge, Windsor's other historic covered bridge.  It was listed on the National Register of Historic Places in 1973.  It was rebuilt after being swept off its foundation in 2011 by Hurricane Irene, but has been damaged by vehicle strikes several times since then, and is being considered for closure.
-
-Hurricane Irene: Hurricane Irene was a large and destructive tropical cyclone, which affected much of the Caribbean and East Coast of the United States during late August 2011.  Irene is ranked as the ninth-costliest hurricane in United States history.  The ninth named storm, first hurricane, and first major hurricane of the 2011 Atlantic hurricane season, Irene originated from a well-defined Atlantic tropical wave that began showing signs of organization east of the Lesser Antilles.  Due to development of atmospheric convection and a closed center of circulation, the system was designated as Tropical Storm Irene on August 20, 2011.  After intensifying, Irene made landfall in St. Croix as a strong tropical storm later that day.  Early on August 21, the storm made a second landfall in Puerto Rico.  While crossing the island, Irene strengthened into a Category 1 hurricane.  The storm paralleled offshore of Hispaniola, continuing to slowly intensify in the process.  Shortly before making four landfalls in the Bahamas, Irene peaked as a 120 mph Category 3 hurricane.
-
-Arthur A. Smith Covered Bridge: The Arthur A. Smith Covered Bridge is a historic covered bridge in Colrain, Massachusetts.  It is the only Burr truss bridge in the state, and is one of a few 19th century covered bridges in the state.  The bridge was built in 1869 in the Shattuckville section of Colrain, and was severely damaged during a flood in 1878.  It then sat abandoned until 1896, when the town voted to rehabilitate it and moved it to its present location, spanning the North River on Lyonsville Road.  The area was then known as the "Arthur A. Smith Flats", after a prominent local resident who lived in the area.  The bridge was strengthened in 1920 with the addition of laminated beam arches.  It was listed on the National Register of Historic Places in 1983.  In 1991 it was taken out of service and moved to adjacent land.  Following restoration work in 2005–07 it was placed back in service, and was only modestly damaged by Hurricane Irene.
-
-Braley Covered Bridge: The Braley Covered Bridge, also called the Johnson Covered Bridge and Upper Blaisdell Covered Bridge, is a wooden covered bridge that crosses the Second Branch of the White River in Randolph, Vermont on Braley Covered Bridge Road.  It was listed on the National Register of Historic Places in 1974.  The bridge was built in 1904 as an uncovered kingspost truss bridge, and was covered in 1909.
-
-JH Russell Covered Bridge: The J.H. Russell Covered Bridge was north of Annapolis, Indiana.  The single-span Modified Queen Truss covered bridge structure was built by Pearly Weaver and George Weaver in 1897 and destroyed by deterioration.  It was one of five bridges in Parke County to be on private land.  The others were the State Sanitorium Covered Bridge, Lusk Covered Bridge 1840, Lusk Covered Bridge 1847, and the Clinton Toll Bridge.  Also it was one of two Queen Truss tupe covered bridges, the other being the Turkey Run Covered Bridge
-
-Kurtz's Mill Covered Bridge: The Kurtz's Mill Covered Bridge is a covered bridge that spans Mill Creek in the Lancaster County Park in Lancaster County, Pennsylvania, United States.  The bridge is also known as the County Park Covered Bridge, Baer's Mill Covered Bridge, Isaac Baer’s Mill Bridge, Keystone Mill Covered Bridge, Binder Tongue Carrier Covered Bridge, and Mill 2A Covered Bridge.  The bridge is accessible to road traffic from within the park.
-
-Kintersburg Covered Bridge: The Kintersburg Covered Bridge is a covered bridge spanning Crooked Creek in Rayne Township, Indiana County, Pennsylvania, United States.  Built in 1877, it is one of four covered bridges in the county, and is the only one with a Howe truss design.  It is 62 ft .  The Howe design is rather rare in covered bridges.  The Kintersburg Bridge is one of only five in the state of Pennsylvania with that design.  The other four are the McConnell's Mill Covered Bridge in Lawrence County, Mean's Ford Covered Bridge in Bucks County, St. Mary's Covered Bridge in Huntingdon County, and the Thomas Mill Covered Bridge in Philadelphia County.
-
-Question: Arthur A. Smith Covered Bridge was modestly damaged by a hurricane in what year?
-
-Respond with JSON matching this schema:
 {
-  "type": "object",
-  "properties": {
-    "bridge_name": {
-      "type": "string",
-      "description": "The name of the covered bridge."
+  "messages": [
+    {
+      "role": "system",
+      "content": "Answer the question using only the provided context. Return a valid JSON object that strictly follows the given JSON schema. Do not output anything except the JSON object.\n\nRules:\n- No explanations: Do not include reasoning, analysis, or any sentences outside the JSON.\n- No markdown: Do not wrap the JSON in code blocks or add formatting like ``` or 'json'.\n- No extra text: Do not add prefixes or suffixes such as 'Answer:' or 'Output:'.\n- Follow the schema exactly: Use only the keys defined in the schema and ensure correct data types.\n- Include all required fields: Every field listed as required in the schema must appear in the JSON.\n- If unknown, return null: If the context does not contain the answer, set the field value to null instead of guessing."
     },
-    "hurricane_name": {
-      "type": "string",
-      "description": "The name of the hurricane that caused damage."
-    },
-    "damage_extent": {
-      "type": "string",
-      "description": "The description of the damage extent to the bridge."
-    },
-    "damage_year": {
-      "type": "integer",
-      "description": "The year the damage occurred due to the hurricane."
+    {
+      "role": "user",
+      "content": "Context:\nGreen Sergeant's Covered Bridge: Green Sergeant's Covered Bridge is a wooden covered bridge over the Wickecheoke Creek near the border between the Hunterdon Plateau and Amwell Valley located in Delaware Township, Hunterdon County, New Jersey, United States.  As the last historic covered bridge in the state of New Jersey, it is listed on the National Register of Historic Places (the Scarborough Bridge in Cherry Hill is the only other covered bridge in New Jersey).  The bridge was first constructed in 1872, but after being damaged in 1960, it was dismantled and replaced with a modern bridge.  In 1961, due to public outcry, the bridge was rebuilt from the original materials.\n\nMaple Street Covered Bridge: The Maple Street Covered Bridge, also called the Lower Covered Bridge and the Fairfax Covered Bridge, is a covered bridge that carries Maple Street across Mill Brook off State Route 104 in Fairfax, Vermont.  Built in 1865, it is the town's only historic covered bridge, and is a rare two-lane covered bridge in the state.  It was listed on the National Register of Historic Places in 1974.\n\nGifford Covered Bridge: The Gifford Covered Bridge, also called the C.K. Smith Covered Bridge, is a wooden covered bridge that crosses the Second Branch of the White River in Randolph, Vermont on Hyde Road.  It was listed on the National Register of Historic Places in 1974.  It is one of two bridges in the state that was uncovered when first built, its trusses boxed for shelter.\n\nBowers Covered Bridge: The Bowers Covered Bridge is a historic covered bridge, carrying Bible Hill Road across Mill Brook in West Windsor, Vermont.  Built in 1919, it has a laminated-arch deck covered by a post-and-beam superstructure, similar to Best's Covered Bridge, Windsor's other historic covered bridge.  It was listed on the National Register of Historic Places in 1973.  It was rebuilt after being swept off its foundation in 2011 by Hurricane Irene, but has been damaged by vehicle strikes several times since then, and is being considered for closure.\n\nHurricane Irene: Hurricane Irene was a large and destructive tropical cyclone, which affected much of the Caribbean and East Coast of the United States during late August 2011.  Irene is ranked as the ninth-costliest hurricane in United States history.  The ninth named storm, first hurricane, and first major hurricane of the 2011 Atlantic hurricane season, Irene originated from a well-defined Atlantic tropical wave that began showing signs of organization east of the Lesser Antilles.  Due to development of atmospheric convection and a closed center of circulation, the system was designated as Tropical Storm Irene on August 20, 2011.  After intensifying, Irene made landfall in St. Croix as a strong tropical storm later that day.  Early on August 21, the storm made a second landfall in Puerto Rico.  While crossing the island, Irene strengthened into a Category 1 hurricane.  The storm paralleled offshore of Hispaniola, continuing to slowly intensify in the process.  Shortly before making four landfalls in the Bahamas, Irene peaked as a 120 mph Category 3 hurricane.\n\nArthur A. Smith Covered Bridge: The Arthur A. Smith Covered Bridge is a historic covered bridge in Colrain, Massachusetts.  It is the only Burr truss bridge in the state, and is one of a few 19th century covered bridges in the state.  The bridge was built in 1869 in the Shattuckville section of Colrain, and was severely damaged during a flood in 1878.  It then sat abandoned until 1896, when the town voted to rehabilitate it and moved it to its present location, spanning the North River on Lyonsville Road.  The area was then known as the \"Arthur A. Smith Flats\", after a prominent local resident who lived in the area.  The bridge was strengthened in 1920 with the addition of laminated beam arches.  It was listed on the National Register of Historic Places in 1983.  In 1991 it was taken out of service and moved to adjacent land.  Following restoration work in 2005–07 it was placed back in service, and was only modestly damaged by Hurricane Irene.\n\nBraley Covered Bridge: The Braley Covered Bridge, also called the Johnson Covered Bridge and Upper Blaisdell Covered Bridge, is a wooden covered bridge that crosses the Second Branch of the White River in Randolph, Vermont on Braley Covered Bridge Road.  It was listed on the National Register of Historic Places in 1974.  The bridge was built in 1904 as an uncovered kingspost truss bridge, and was covered in 1909.\n\nJH Russell Covered Bridge: The J.H. Russell Covered Bridge was north of Annapolis, Indiana.  The single-span Modified Queen Truss covered bridge structure was built by Pearly Weaver and George Weaver in 1897 and destroyed by deterioration.  It was one of five bridges in Parke County to be on private land.  The others were the State Sanitorium Covered Bridge, Lusk Covered Bridge 1840, Lusk Covered Bridge 1847, and the Clinton Toll Bridge.  Also it was one of two Queen Truss tupe covered bridges, the other being the Turkey Run Covered Bridge\n\nKurtz's Mill Covered Bridge: The Kurtz's Mill Covered Bridge is a covered bridge that spans Mill Creek in the Lancaster County Park in Lancaster County, Pennsylvania, United States.  The bridge is also known as the County Park Covered Bridge, Baer's Mill Covered Bridge, Isaac Baer’s Mill Bridge, Keystone Mill Covered Bridge, Binder Tongue Carrier Covered Bridge, and Mill 2A Covered Bridge.  The bridge is accessible to road traffic from within the park.\n\nKintersburg Covered Bridge: The Kintersburg Covered Bridge is a covered bridge spanning Crooked Creek in Rayne Township, Indiana County, Pennsylvania, United States.  Built in 1877, it is one of four covered bridges in the county, and is the only one with a Howe truss design.  It is 62 ft .  The Howe design is rather rare in covered bridges.  The Kintersburg Bridge is one of only five in the state of Pennsylvania with that design.  The other four are the McConnell's Mill Covered Bridge in Lawrence County, Mean's Ford Covered Bridge in Bucks County, St. Mary's Covered Bridge in Huntingdon County, and the Thomas Mill Covered Bridge in Philadelphia County.\n\nQuestion: Arthur A. Smith Covered Bridge was modestly damaged by a hurricane in what year?\n\nRespond with JSON matching this schema:\n{\n  \"type\": \"object\",\n  \"properties\": {\n    \"bridge_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the covered bridge.\"\n    },\n    \"hurricane_name\": {\n      \"type\": \"string\",\n      \"description\": \"The name of the hurricane that caused damage.\"\n    },\n    \"damage_extent\": {\n      \"type\": \"string\",\n      \"description\": \"The description of the damage extent to the bridge.\"\n    },\n    \"damage_year\": {\n      \"type\": \"integer\",\n      \"description\": \"The year the damage occurred due to the hurricane.\"\n    }\n  },\n  \"required\": [\n    \"bridge_name\",\n    \"hurricane_name\",\n    \"damage_extent\",\n    \"damage_year\"\n  ],\n  \"additionalProperties\": false\n}"
     }
-  },
-  "required": [
-    "bridge_name",
-    "hurricane_name",
-    "damage_extent",
-    "damage_year"
   ],
-  "additionalProperties": false
+  "json_schema": {
+    "type": "object",
+    "properties": {
+      "bridge_name": {
+        "type": "string",
+        "description": "The name of the covered bridge."
+      },
+      "hurricane_name": {
+        "type": "string",
+        "description": "The name of the hurricane that caused damage."
+      },
+      "damage_extent": {
+        "type": "string",
+        "description": "The description of the damage extent to the bridge."
+      },
+      "damage_year": {
+        "type": "integer",
+        "description": "The year the damage occurred due to the hurricane."
+      }
+    },
+    "required": [
+      "bridge_name",
+      "hurricane_name",
+      "damage_extent",
+      "damage_year"
+    ],
+    "additionalProperties": false
+  },
+  "answer_path": "/tmp/answer.json"
 }
